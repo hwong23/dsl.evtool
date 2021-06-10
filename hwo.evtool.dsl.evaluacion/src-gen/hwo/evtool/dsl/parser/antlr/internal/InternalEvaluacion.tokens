@@ -2,8 +2,8 @@
 '['=16
 ']'=17
 'boolean'=20
-'entity'=11
-'extends'=12
+'comopnente'=11
+'hereda'=12
 'int'=19
 'string'=18
 '{'=13

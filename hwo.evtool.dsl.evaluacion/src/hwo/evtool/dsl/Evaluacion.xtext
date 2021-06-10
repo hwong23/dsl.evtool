@@ -5,21 +5,21 @@ Model:
 	entities+=CmpnntEvaluacion*;
 
 CmpnntEvaluacion:
-	'entity' name=ID ('extends' superType=[CmpnntEvaluacion])? '{'
-		attributes+=Attribute*
+	'comopnente' name=ID ('hereda' superType=[CmpnntEvaluacion])? '{'
+		attributes+=Criterio*
 	'}';
 
-Attribute:
-	type=AttributeType name=ID ';';
+Criterio:
+	'criterio' name=ID type=CriterioType ';';
 
-AttributeType:
+CriterioType:
 	elementType=ElementType (array?='[' (length=INT)? ']')?;
 
 ElementType:
-	BasicType | EntityType;
+	BasicType | ComponenteType;
 
 BasicType:
 	typeName=('string' | 'int' | 'boolean');
 
-EntityType:
+ComponenteType:
 	entity=[CmpnntEvaluacion];

@@ -7,23 +7,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Attribute Type</b></em>'.
+ * A representation of the model object '<em><b>Criterio Type</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.AttributeType#getElementType <em>Element Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.AttributeType#isArray <em>Array</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.AttributeType#getLength <em>Length</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#isArray <em>Array</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getLength <em>Length</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getAttributeType()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType()
  * @model
  * @generated
  */
-public interface AttributeType extends EObject
+public interface CriterioType extends EObject
 {
   /**
    * Returns the value of the '<em><b>Element Type</b></em>' containment reference.
@@ -31,14 +31,14 @@ public interface AttributeType extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Element Type</em>' containment reference.
    * @see #setElementType(ElementType)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getAttributeType_ElementType()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_ElementType()
    * @model containment="true"
    * @generated
    */
   ElementType getElementType();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.AttributeType#getElementType <em>Element Type</em>}' containment reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getElementType <em>Element Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Element Type</em>' containment reference.
@@ -53,14 +53,14 @@ public interface AttributeType extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Array</em>' attribute.
    * @see #setArray(boolean)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getAttributeType_Array()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Array()
    * @model
    * @generated
    */
   boolean isArray();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.AttributeType#isArray <em>Array</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#isArray <em>Array</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Array</em>' attribute.
@@ -75,14 +75,14 @@ public interface AttributeType extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Length</em>' attribute.
    * @see #setLength(int)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getAttributeType_Length()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Length()
    * @model
    * @generated
    */
   int getLength();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.AttributeType#getLength <em>Length</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getLength <em>Length</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Length</em>' attribute.
@@ -91,4 +91,4 @@ public interface AttributeType extends EObject
    */
   void setLength(int value);
 
-} // AttributeType
+} // CriterioType

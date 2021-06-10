@@ -132,14 +132,14 @@ public interface EvaluacionPackage extends EPackage
   int CMPNNT_EVALUACION_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AttributeImpl <em>Attribute</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl <em>Criterio</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.AttributeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAttribute()
+   * @see hwo.evtool.dsl.evaluacion.impl.CriterioImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterio()
    * @generated
    */
-  int ATTRIBUTE = 2;
+  int CRITERIO = 2;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -148,7 +148,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE__TYPE = 0;
+  int CRITERIO__TYPE = 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -157,26 +157,26 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE__NAME = 1;
+  int CRITERIO__NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Attribute</em>' class.
+   * The number of structural features of the '<em>Criterio</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_FEATURE_COUNT = 2;
+  int CRITERIO_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl <em>Attribute Type</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl <em>Criterio Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAttributeType()
+   * @see hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioType()
    * @generated
    */
-  int ATTRIBUTE_TYPE = 3;
+  int CRITERIO_TYPE = 3;
 
   /**
    * The feature id for the '<em><b>Element Type</b></em>' containment reference.
@@ -185,7 +185,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__ELEMENT_TYPE = 0;
+  int CRITERIO_TYPE__ELEMENT_TYPE = 0;
 
   /**
    * The feature id for the '<em><b>Array</b></em>' attribute.
@@ -194,7 +194,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__ARRAY = 1;
+  int CRITERIO_TYPE__ARRAY = 1;
 
   /**
    * The feature id for the '<em><b>Length</b></em>' attribute.
@@ -203,16 +203,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE__LENGTH = 2;
+  int CRITERIO_TYPE__LENGTH = 2;
 
   /**
-   * The number of structural features of the '<em>Attribute Type</em>' class.
+   * The number of structural features of the '<em>Criterio Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_TYPE_FEATURE_COUNT = 3;
+  int CRITERIO_TYPE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ElementTypeImpl <em>Element Type</em>}' class.
@@ -262,14 +262,14 @@ public interface EvaluacionPackage extends EPackage
   int BASIC_TYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EntityTypeImpl <em>Entity Type</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl <em>Componente Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.EntityTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEntityType()
+   * @see hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComponenteType()
    * @generated
    */
-  int ENTITY_TYPE = 6;
+  int COMPONENTE_TYPE = 6;
 
   /**
    * The feature id for the '<em><b>Entity</b></em>' reference.
@@ -278,16 +278,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ENTITY_TYPE__ENTITY = ELEMENT_TYPE_FEATURE_COUNT + 0;
+  int COMPONENTE_TYPE__ENTITY = ELEMENT_TYPE_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Entity Type</em>' class.
+   * The number of structural features of the '<em>Componente Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ENTITY_TYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 1;
+  int COMPONENTE_TYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 1;
 
 
   /**
@@ -355,79 +355,79 @@ public interface EvaluacionPackage extends EPackage
   EReference getCmpnntEvaluacion_Attributes();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Attribute <em>Attribute</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Criterio <em>Criterio</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Attribute
+   * @return the meta object for class '<em>Criterio</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Criterio
    * @generated
    */
-  EClass getAttribute();
+  EClass getCriterio();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Attribute#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Criterio#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Attribute#getType()
-   * @see #getAttribute()
+   * @see hwo.evtool.dsl.evaluacion.Criterio#getType()
+   * @see #getCriterio()
    * @generated
    */
-  EReference getAttribute_Type();
+  EReference getCriterio_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Attribute#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Criterio#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Attribute#getName()
-   * @see #getAttribute()
+   * @see hwo.evtool.dsl.evaluacion.Criterio#getName()
+   * @see #getCriterio()
    * @generated
    */
-  EAttribute getAttribute_Name();
+  EAttribute getCriterio_Name();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.AttributeType <em>Attribute Type</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CriterioType <em>Criterio Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribute Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.AttributeType
+   * @return the meta object for class '<em>Criterio Type</em>'.
+   * @see hwo.evtool.dsl.evaluacion.CriterioType
    * @generated
    */
-  EClass getAttributeType();
+  EClass getCriterioType();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.AttributeType#getElementType <em>Element Type</em>}'.
+   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.CriterioType#getElementType <em>Element Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Element Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.AttributeType#getElementType()
-   * @see #getAttributeType()
+   * @see hwo.evtool.dsl.evaluacion.CriterioType#getElementType()
+   * @see #getCriterioType()
    * @generated
    */
-  EReference getAttributeType_ElementType();
+  EReference getCriterioType_ElementType();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.AttributeType#isArray <em>Array</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CriterioType#isArray <em>Array</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Array</em>'.
-   * @see hwo.evtool.dsl.evaluacion.AttributeType#isArray()
-   * @see #getAttributeType()
+   * @see hwo.evtool.dsl.evaluacion.CriterioType#isArray()
+   * @see #getCriterioType()
    * @generated
    */
-  EAttribute getAttributeType_Array();
+  EAttribute getCriterioType_Array();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.AttributeType#getLength <em>Length</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CriterioType#getLength <em>Length</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Length</em>'.
-   * @see hwo.evtool.dsl.evaluacion.AttributeType#getLength()
-   * @see #getAttributeType()
+   * @see hwo.evtool.dsl.evaluacion.CriterioType#getLength()
+   * @see #getCriterioType()
    * @generated
    */
-  EAttribute getAttributeType_Length();
+  EAttribute getCriterioType_Length();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.ElementType <em>Element Type</em>}'.
@@ -461,25 +461,25 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getBasicType_TypeName();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.EntityType <em>Entity Type</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.ComponenteType <em>Componente Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Entity Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.EntityType
+   * @return the meta object for class '<em>Componente Type</em>'.
+   * @see hwo.evtool.dsl.evaluacion.ComponenteType
    * @generated
    */
-  EClass getEntityType();
+  EClass getComponenteType();
 
   /**
-   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.EntityType#getEntity <em>Entity</em>}'.
+   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.ComponenteType#getEntity <em>Entity</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Entity</em>'.
-   * @see hwo.evtool.dsl.evaluacion.EntityType#getEntity()
-   * @see #getEntityType()
+   * @see hwo.evtool.dsl.evaluacion.ComponenteType#getEntity()
+   * @see #getComponenteType()
    * @generated
    */
-  EReference getEntityType_Entity();
+  EReference getComponenteType_Entity();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -557,14 +557,14 @@ public interface EvaluacionPackage extends EPackage
     EReference CMPNNT_EVALUACION__ATTRIBUTES = eINSTANCE.getCmpnntEvaluacion_Attributes();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AttributeImpl <em>Attribute</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl <em>Criterio</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.AttributeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAttribute()
+     * @see hwo.evtool.dsl.evaluacion.impl.CriterioImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterio()
      * @generated
      */
-    EClass ATTRIBUTE = eINSTANCE.getAttribute();
+    EClass CRITERIO = eINSTANCE.getCriterio();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
@@ -572,7 +572,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+    EReference CRITERIO__TYPE = eINSTANCE.getCriterio_Type();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -580,17 +580,17 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
+    EAttribute CRITERIO__NAME = eINSTANCE.getCriterio_Name();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl <em>Attribute Type</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl <em>Criterio Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAttributeType()
+     * @see hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioType()
      * @generated
      */
-    EClass ATTRIBUTE_TYPE = eINSTANCE.getAttributeType();
+    EClass CRITERIO_TYPE = eINSTANCE.getCriterioType();
 
     /**
      * The meta object literal for the '<em><b>Element Type</b></em>' containment reference feature.
@@ -598,7 +598,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ATTRIBUTE_TYPE__ELEMENT_TYPE = eINSTANCE.getAttributeType_ElementType();
+    EReference CRITERIO_TYPE__ELEMENT_TYPE = eINSTANCE.getCriterioType_ElementType();
 
     /**
      * The meta object literal for the '<em><b>Array</b></em>' attribute feature.
@@ -606,7 +606,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATTRIBUTE_TYPE__ARRAY = eINSTANCE.getAttributeType_Array();
+    EAttribute CRITERIO_TYPE__ARRAY = eINSTANCE.getCriterioType_Array();
 
     /**
      * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
@@ -614,7 +614,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATTRIBUTE_TYPE__LENGTH = eINSTANCE.getAttributeType_Length();
+    EAttribute CRITERIO_TYPE__LENGTH = eINSTANCE.getCriterioType_Length();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ElementTypeImpl <em>Element Type</em>}' class.
@@ -645,14 +645,14 @@ public interface EvaluacionPackage extends EPackage
     EAttribute BASIC_TYPE__TYPE_NAME = eINSTANCE.getBasicType_TypeName();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EntityTypeImpl <em>Entity Type</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl <em>Componente Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.EntityTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEntityType()
+     * @see hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComponenteType()
      * @generated
      */
-    EClass ENTITY_TYPE = eINSTANCE.getEntityType();
+    EClass COMPONENTE_TYPE = eINSTANCE.getComponenteType();
 
     /**
      * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
@@ -660,7 +660,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ENTITY_TYPE__ENTITY = eINSTANCE.getEntityType_Entity();
+    EReference COMPONENTE_TYPE__ENTITY = eINSTANCE.getComponenteType_Entity();
 
   }
 

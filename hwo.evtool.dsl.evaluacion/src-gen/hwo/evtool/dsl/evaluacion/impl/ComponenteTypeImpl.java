@@ -4,7 +4,7 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.CmpnntEvaluacion;
-import hwo.evtool.dsl.evaluacion.EntityType;
+import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,18 +16,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Entity Type</b></em>'.
+ * An implementation of the model object '<em><b>Componente Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EntityTypeImpl#getEntity <em>Entity</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl#getEntity <em>Entity</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EntityTypeImpl extends ElementTypeImpl implements EntityType
+public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteType
 {
   /**
    * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
@@ -44,7 +44,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EntityTypeImpl()
+  protected ComponenteTypeImpl()
   {
     super();
   }
@@ -57,7 +57,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.ENTITY_TYPE;
+    return EvaluacionPackage.Literals.COMPONENTE_TYPE;
   }
 
   /**
@@ -75,7 +75,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
       if (entity != oldEntity)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvaluacionPackage.ENTITY_TYPE__ENTITY, oldEntity, entity));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvaluacionPackage.COMPONENTE_TYPE__ENTITY, oldEntity, entity));
       }
     }
     return entity;
@@ -102,7 +102,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
     CmpnntEvaluacion oldEntity = entity;
     entity = newEntity;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ENTITY_TYPE__ENTITY, oldEntity, entity));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPONENTE_TYPE__ENTITY, oldEntity, entity));
   }
 
   /**
@@ -115,7 +115,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ENTITY_TYPE__ENTITY:
+      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
         if (resolve) return getEntity();
         return basicGetEntity();
     }
@@ -132,7 +132,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ENTITY_TYPE__ENTITY:
+      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
         setEntity((CmpnntEvaluacion)newValue);
         return;
     }
@@ -149,7 +149,7 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ENTITY_TYPE__ENTITY:
+      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
         setEntity((CmpnntEvaluacion)null);
         return;
     }
@@ -166,10 +166,10 @@ public class EntityTypeImpl extends ElementTypeImpl implements EntityType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ENTITY_TYPE__ENTITY:
+      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
         return entity != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //EntityTypeImpl
+} //ComponenteTypeImpl

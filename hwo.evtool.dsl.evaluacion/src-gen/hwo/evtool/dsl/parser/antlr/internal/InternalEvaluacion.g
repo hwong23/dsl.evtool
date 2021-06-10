@@ -112,9 +112,9 @@ ruleCmpnntEvaluacion returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='entity'
+		otherlv_0='comopnente'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCmpnntEvaluacionAccess().getEntityKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getCmpnntEvaluacionAccess().getComopnenteKeyword_0());
 		}
 		(
 			(
@@ -135,9 +135,9 @@ ruleCmpnntEvaluacion returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_2='extends'
+			otherlv_2='hereda'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getCmpnntEvaluacionAccess().getExtendsKeyword_2_0());
+				newLeafNode(otherlv_2, grammarAccess.getCmpnntEvaluacionAccess().getHeredaKeyword_2_0());
 			}
 			(
 				(
@@ -160,9 +160,9 @@ ruleCmpnntEvaluacion returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCmpnntEvaluacionAccess().getAttributesAttributeParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getCmpnntEvaluacionAccess().getAttributesCriterioParserRuleCall_4_0());
 				}
-				lv_attributes_5_0=ruleAttribute
+				lv_attributes_5_0=ruleCriterio
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCmpnntEvaluacionRule());
@@ -171,7 +171,7 @@ ruleCmpnntEvaluacion returns [EObject current=null]
 						$current,
 						"attributes",
 						lv_attributes_5_0,
-						"hwo.evtool.dsl.Evaluacion.Attribute");
+						"hwo.evtool.dsl.Evaluacion.Criterio");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -183,15 +183,15 @@ ruleCmpnntEvaluacion returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleAttribute
-entryRuleAttribute returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getAttributeRule()); }
-	iv_ruleAttribute=ruleAttribute
-	{ $current=$iv_ruleAttribute.current; }
+// Entry rule entryRuleCriterio
+entryRuleCriterio returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCriterioRule()); }
+	iv_ruleCriterio=ruleCriterio
+	{ $current=$iv_ruleCriterio.current; }
 	EOF;
 
-// Rule Attribute
-ruleAttribute returns [EObject current=null]
+// Rule Criterio
+ruleCriterio returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -202,18 +202,18 @@ ruleAttribute returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAttributeAccess().getTypeAttributeTypeParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getCriterioAccess().getTypeCriterioTypeParserRuleCall_0_0());
 				}
-				lv_type_0_0=ruleAttributeType
+				lv_type_0_0=ruleCriterioType
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAttributeRule());
+						$current = createModelElementForParent(grammarAccess.getCriterioRule());
 					}
 					set(
 						$current,
 						"type",
 						lv_type_0_0,
-						"hwo.evtool.dsl.Evaluacion.AttributeType");
+						"hwo.evtool.dsl.Evaluacion.CriterioType");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -222,11 +222,11 @@ ruleAttribute returns [EObject current=null]
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getCriterioAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getAttributeRule());
+						$current = createModelElement(grammarAccess.getCriterioRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -238,20 +238,20 @@ ruleAttribute returns [EObject current=null]
 		)
 		otherlv_2=';'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getAttributeAccess().getSemicolonKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getCriterioAccess().getSemicolonKeyword_2());
 		}
 	)
 ;
 
-// Entry rule entryRuleAttributeType
-entryRuleAttributeType returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getAttributeTypeRule()); }
-	iv_ruleAttributeType=ruleAttributeType
-	{ $current=$iv_ruleAttributeType.current; }
+// Entry rule entryRuleCriterioType
+entryRuleCriterioType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCriterioTypeRule()); }
+	iv_ruleCriterioType=ruleCriterioType
+	{ $current=$iv_ruleCriterioType.current; }
 	EOF;
 
-// Rule AttributeType
-ruleAttributeType returns [EObject current=null]
+// Rule CriterioType
+ruleCriterioType returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -262,12 +262,12 @@ ruleAttributeType returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getAttributeTypeAccess().getElementTypeElementTypeParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getCriterioTypeAccess().getElementTypeElementTypeParserRuleCall_0_0());
 				}
 				lv_elementType_0_0=ruleElementType
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getAttributeTypeRule());
+						$current = createModelElementForParent(grammarAccess.getCriterioTypeRule());
 					}
 					set(
 						$current,
@@ -283,11 +283,11 @@ ruleAttributeType returns [EObject current=null]
 				(
 					lv_array_1_0='['
 					{
-						newLeafNode(lv_array_1_0, grammarAccess.getAttributeTypeAccess().getArrayLeftSquareBracketKeyword_1_0_0());
+						newLeafNode(lv_array_1_0, grammarAccess.getCriterioTypeAccess().getArrayLeftSquareBracketKeyword_1_0_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getAttributeTypeRule());
+							$current = createModelElement(grammarAccess.getCriterioTypeRule());
 						}
 						setWithLastConsumed($current, "array", lv_array_1_0 != null, "[");
 					}
@@ -297,11 +297,11 @@ ruleAttributeType returns [EObject current=null]
 				(
 					lv_length_2_0=RULE_INT
 					{
-						newLeafNode(lv_length_2_0, grammarAccess.getAttributeTypeAccess().getLengthINTTerminalRuleCall_1_1_0());
+						newLeafNode(lv_length_2_0, grammarAccess.getCriterioTypeAccess().getLengthINTTerminalRuleCall_1_1_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getAttributeTypeRule());
+							$current = createModelElement(grammarAccess.getCriterioTypeRule());
 						}
 						setWithLastConsumed(
 							$current,
@@ -313,7 +313,7 @@ ruleAttributeType returns [EObject current=null]
 			)?
 			otherlv_3=']'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getAttributeTypeAccess().getRightSquareBracketKeyword_1_2());
+				newLeafNode(otherlv_3, grammarAccess.getCriterioTypeAccess().getRightSquareBracketKeyword_1_2());
 			}
 		)?
 	)
@@ -345,11 +345,11 @@ ruleElementType returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getElementTypeAccess().getEntityTypeParserRuleCall_1());
+			newCompositeNode(grammarAccess.getElementTypeAccess().getComponenteTypeParserRuleCall_1());
 		}
-		this_EntityType_1=ruleEntityType
+		this_ComponenteType_1=ruleComponenteType
 		{
-			$current = $this_EntityType_1.current;
+			$current = $this_ComponenteType_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -410,15 +410,15 @@ ruleBasicType returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleEntityType
-entryRuleEntityType returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getEntityTypeRule()); }
-	iv_ruleEntityType=ruleEntityType
-	{ $current=$iv_ruleEntityType.current; }
+// Entry rule entryRuleComponenteType
+entryRuleComponenteType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getComponenteTypeRule()); }
+	iv_ruleComponenteType=ruleComponenteType
+	{ $current=$iv_ruleComponenteType.current; }
 	EOF;
 
-// Rule EntityType
-ruleEntityType returns [EObject current=null]
+// Rule ComponenteType
+ruleComponenteType returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -429,12 +429,12 @@ ruleEntityType returns [EObject current=null]
 		(
 			{
 				if ($current==null) {
-					$current = createModelElement(grammarAccess.getEntityTypeRule());
+					$current = createModelElement(grammarAccess.getComponenteTypeRule());
 				}
 			}
 			otherlv_0=RULE_ID
 			{
-				newLeafNode(otherlv_0, grammarAccess.getEntityTypeAccess().getEntityCmpnntEvaluacionCrossReference_0());
+				newLeafNode(otherlv_0, grammarAccess.getComponenteTypeAccess().getEntityCmpnntEvaluacionCrossReference_0());
 			}
 		)
 	)

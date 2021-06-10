@@ -67,11 +67,11 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
     {
       case EvaluacionPackage.MODEL: return createModel();
       case EvaluacionPackage.CMPNNT_EVALUACION: return createCmpnntEvaluacion();
-      case EvaluacionPackage.ATTRIBUTE: return createAttribute();
-      case EvaluacionPackage.ATTRIBUTE_TYPE: return createAttributeType();
+      case EvaluacionPackage.CRITERIO: return createCriterio();
+      case EvaluacionPackage.CRITERIO_TYPE: return createCriterioType();
       case EvaluacionPackage.ELEMENT_TYPE: return createElementType();
       case EvaluacionPackage.BASIC_TYPE: return createBasicType();
-      case EvaluacionPackage.ENTITY_TYPE: return createEntityType();
+      case EvaluacionPackage.COMPONENTE_TYPE: return createComponenteType();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -107,10 +107,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Attribute createAttribute()
+  public Criterio createCriterio()
   {
-    AttributeImpl attribute = new AttributeImpl();
-    return attribute;
+    CriterioImpl criterio = new CriterioImpl();
+    return criterio;
   }
 
   /**
@@ -119,10 +119,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public AttributeType createAttributeType()
+  public CriterioType createCriterioType()
   {
-    AttributeTypeImpl attributeType = new AttributeTypeImpl();
-    return attributeType;
+    CriterioTypeImpl criterioType = new CriterioTypeImpl();
+    return criterioType;
   }
 
   /**
@@ -155,10 +155,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public EntityType createEntityType()
+  public ComponenteType createComponenteType()
   {
-    EntityTypeImpl entityType = new EntityTypeImpl();
-    return entityType;
+    ComponenteTypeImpl componenteType = new ComponenteTypeImpl();
+    return componenteType;
   }
 
   /**

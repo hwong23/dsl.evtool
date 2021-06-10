@@ -6,21 +6,21 @@ package hwo.evtool.dsl.evaluacion;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Entity Type</b></em>'.
+ * A representation of the model object '<em><b>Componente Type</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.EntityType#getEntity <em>Entity</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.ComponenteType#getEntity <em>Entity</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEntityType()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponenteType()
  * @model
  * @generated
  */
-public interface EntityType extends ElementType
+public interface ComponenteType extends ElementType
 {
   /**
    * Returns the value of the '<em><b>Entity</b></em>' reference.
@@ -28,14 +28,14 @@ public interface EntityType extends ElementType
    * <!-- end-user-doc -->
    * @return the value of the '<em>Entity</em>' reference.
    * @see #setEntity(CmpnntEvaluacion)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEntityType_Entity()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponenteType_Entity()
    * @model
    * @generated
    */
   CmpnntEvaluacion getEntity();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.EntityType#getEntity <em>Entity</em>}' reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComponenteType#getEntity <em>Entity</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Entity</em>' reference.
@@ -44,4 +44,4 @@ public interface EntityType extends ElementType
    */
   void setEntity(CmpnntEvaluacion value);
 
-} // EntityType
+} // ComponenteType

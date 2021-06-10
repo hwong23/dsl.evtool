@@ -42,22 +42,22 @@ public interface EvaluacionFactory extends EFactory
   CmpnntEvaluacion createCmpnntEvaluacion();
 
   /**
-   * Returns a new object of class '<em>Attribute</em>'.
+   * Returns a new object of class '<em>Criterio</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribute</em>'.
+   * @return a new object of class '<em>Criterio</em>'.
    * @generated
    */
-  Attribute createAttribute();
+  Criterio createCriterio();
 
   /**
-   * Returns a new object of class '<em>Attribute Type</em>'.
+   * Returns a new object of class '<em>Criterio Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribute Type</em>'.
+   * @return a new object of class '<em>Criterio Type</em>'.
    * @generated
    */
-  AttributeType createAttributeType();
+  CriterioType createCriterioType();
 
   /**
    * Returns a new object of class '<em>Element Type</em>'.
@@ -78,13 +78,13 @@ public interface EvaluacionFactory extends EFactory
   BasicType createBasicType();
 
   /**
-   * Returns a new object of class '<em>Entity Type</em>'.
+   * Returns a new object of class '<em>Componente Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity Type</em>'.
+   * @return a new object of class '<em>Componente Type</em>'.
    * @generated
    */
-  EntityType createEntityType();
+  ComponenteType createComponenteType();
 
   /**
    * Returns the package supported by this factory.

@@ -3,7 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.AttributeType;
+import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.ElementType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
@@ -18,20 +18,20 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Attribute Type</b></em>'.
+ * An implementation of the model object '<em><b>Criterio Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl#getElementType <em>Element Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl#isArray <em>Array</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.AttributeTypeImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getElementType <em>Element Type</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#isArray <em>Array</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements AttributeType
+public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements CriterioType
 {
   /**
    * The cached value of the '{@link #getElementType() <em>Element Type</em>}' containment reference.
@@ -88,7 +88,7 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AttributeTypeImpl()
+  protected CriterioTypeImpl()
   {
     super();
   }
@@ -101,7 +101,7 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.ATTRIBUTE_TYPE;
+    return EvaluacionPackage.Literals.CRITERIO_TYPE;
   }
 
   /**
@@ -126,7 +126,7 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
     elementType = newElementType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE, oldElementType, newElementType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, oldElementType, newElementType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -144,14 +144,14 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
     {
       NotificationChain msgs = null;
       if (elementType != null)
-        msgs = ((InternalEObject)elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE, null, msgs);
+        msgs = ((InternalEObject)elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, null, msgs);
       if (newElementType != null)
-        msgs = ((InternalEObject)newElementType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE, null, msgs);
+        msgs = ((InternalEObject)newElementType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, null, msgs);
       msgs = basicSetElementType(newElementType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE, newElementType, newElementType));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, newElementType, newElementType));
   }
 
   /**
@@ -176,7 +176,7 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
     boolean oldArray = array;
     array = newArray;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE_TYPE__ARRAY, oldArray, array));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__ARRAY, oldArray, array));
   }
 
   /**
@@ -201,7 +201,7 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
     int oldLength = length;
     length = newLength;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE_TYPE__LENGTH, oldLength, length));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__LENGTH, oldLength, length));
   }
 
   /**
@@ -214,7 +214,7 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE:
+      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
         return basicSetElementType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -230,11 +230,11 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE:
+      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
         return getElementType();
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ARRAY:
+      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
         return isArray();
-      case EvaluacionPackage.ATTRIBUTE_TYPE__LENGTH:
+      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
         return getLength();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -250,13 +250,13 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE:
+      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
         setElementType((ElementType)newValue);
         return;
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ARRAY:
+      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
         setArray((Boolean)newValue);
         return;
-      case EvaluacionPackage.ATTRIBUTE_TYPE__LENGTH:
+      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
         setLength((Integer)newValue);
         return;
     }
@@ -273,13 +273,13 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE:
+      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
         setElementType((ElementType)null);
         return;
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ARRAY:
+      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
         setArray(ARRAY_EDEFAULT);
         return;
-      case EvaluacionPackage.ATTRIBUTE_TYPE__LENGTH:
+      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
         setLength(LENGTH_EDEFAULT);
         return;
     }
@@ -296,11 +296,11 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ELEMENT_TYPE:
+      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
         return elementType != null;
-      case EvaluacionPackage.ATTRIBUTE_TYPE__ARRAY:
+      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
         return array != ARRAY_EDEFAULT;
-      case EvaluacionPackage.ATTRIBUTE_TYPE__LENGTH:
+      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
         return length != LENGTH_EDEFAULT;
     }
     return super.eIsSet(featureID);
@@ -325,4 +325,4 @@ public class AttributeTypeImpl extends MinimalEObjectImpl.Container implements A
     return result.toString();
   }
 
-} //AttributeTypeImpl
+} //CriterioTypeImpl

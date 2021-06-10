@@ -35,20 +35,20 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getBasicTypeAccess().getTypeNameAlternatives_0(), "rule__BasicType__TypeNameAlternatives_0");
 			builder.put(grammarAccess.getCmpnntEvaluacionAccess().getGroup(), "rule__CmpnntEvaluacion__Group__0");
 			builder.put(grammarAccess.getCmpnntEvaluacionAccess().getGroup_2(), "rule__CmpnntEvaluacion__Group_2__0");
-			builder.put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
-			builder.put(grammarAccess.getAttributeTypeAccess().getGroup(), "rule__AttributeType__Group__0");
-			builder.put(grammarAccess.getAttributeTypeAccess().getGroup_1(), "rule__AttributeType__Group_1__0");
+			builder.put(grammarAccess.getCriterioAccess().getGroup(), "rule__Criterio__Group__0");
+			builder.put(grammarAccess.getCriterioTypeAccess().getGroup(), "rule__CriterioType__Group__0");
+			builder.put(grammarAccess.getCriterioTypeAccess().getGroup_1(), "rule__CriterioType__Group_1__0");
 			builder.put(grammarAccess.getModelAccess().getEntitiesAssignment(), "rule__Model__EntitiesAssignment");
 			builder.put(grammarAccess.getCmpnntEvaluacionAccess().getNameAssignment_1(), "rule__CmpnntEvaluacion__NameAssignment_1");
 			builder.put(grammarAccess.getCmpnntEvaluacionAccess().getSuperTypeAssignment_2_1(), "rule__CmpnntEvaluacion__SuperTypeAssignment_2_1");
 			builder.put(grammarAccess.getCmpnntEvaluacionAccess().getAttributesAssignment_4(), "rule__CmpnntEvaluacion__AttributesAssignment_4");
-			builder.put(grammarAccess.getAttributeAccess().getTypeAssignment_0(), "rule__Attribute__TypeAssignment_0");
-			builder.put(grammarAccess.getAttributeAccess().getNameAssignment_1(), "rule__Attribute__NameAssignment_1");
-			builder.put(grammarAccess.getAttributeTypeAccess().getElementTypeAssignment_0(), "rule__AttributeType__ElementTypeAssignment_0");
-			builder.put(grammarAccess.getAttributeTypeAccess().getArrayAssignment_1_0(), "rule__AttributeType__ArrayAssignment_1_0");
-			builder.put(grammarAccess.getAttributeTypeAccess().getLengthAssignment_1_1(), "rule__AttributeType__LengthAssignment_1_1");
+			builder.put(grammarAccess.getCriterioAccess().getTypeAssignment_0(), "rule__Criterio__TypeAssignment_0");
+			builder.put(grammarAccess.getCriterioAccess().getNameAssignment_1(), "rule__Criterio__NameAssignment_1");
+			builder.put(grammarAccess.getCriterioTypeAccess().getElementTypeAssignment_0(), "rule__CriterioType__ElementTypeAssignment_0");
+			builder.put(grammarAccess.getCriterioTypeAccess().getArrayAssignment_1_0(), "rule__CriterioType__ArrayAssignment_1_0");
+			builder.put(grammarAccess.getCriterioTypeAccess().getLengthAssignment_1_1(), "rule__CriterioType__LengthAssignment_1_1");
 			builder.put(grammarAccess.getBasicTypeAccess().getTypeNameAssignment(), "rule__BasicType__TypeNameAssignment");
-			builder.put(grammarAccess.getEntityTypeAccess().getEntityAssignment(), "rule__EntityType__EntityAssignment");
+			builder.put(grammarAccess.getComponenteTypeAccess().getEntityAssignment(), "rule__ComponenteType__EntityAssignment");
 		}
 	}
 	

@@ -41,32 +41,32 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	public class CmpnntEvaluacionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.CmpnntEvaluacion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cEntityKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cComopnenteKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cHeredaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final CrossReference cSuperTypeCmpnntEvaluacionCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
 		private final RuleCall cSuperTypeCmpnntEvaluacionIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeCmpnntEvaluacionCrossReference_2_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cAttributesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAttributesAttributeParserRuleCall_4_0 = (RuleCall)cAttributesAssignment_4.eContents().get(0);
+		private final RuleCall cAttributesCriterioParserRuleCall_4_0 = (RuleCall)cAttributesAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//CmpnntEvaluacion:
-		//    'entity' name=ID ('extends' superType=[CmpnntEvaluacion])? '{'
-		//        attributes+=Attribute*
+		//    'comopnente' name=ID ('hereda' superType=[CmpnntEvaluacion])? '{'
+		//        attributes+=Criterio*
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'entity' name=ID ('extends' superType=[CmpnntEvaluacion])? '{'
-		//    attributes+=Attribute*
+		//'comopnente' name=ID ('hereda' superType=[CmpnntEvaluacion])? '{'
+		//    attributes+=Criterio*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
-		//'entity'
-		public Keyword getEntityKeyword_0() { return cEntityKeyword_0; }
+		//'comopnente'
+		public Keyword getComopnenteKeyword_0() { return cComopnenteKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -74,11 +74,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//('extends' superType=[CmpnntEvaluacion])?
+		//('hereda' superType=[CmpnntEvaluacion])?
 		public Group getGroup_2() { return cGroup_2; }
 		
-		//'extends'
-		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
+		//'hereda'
+		public Keyword getHeredaKeyword_2_0() { return cHeredaKeyword_2_0; }
 		
 		//superType=[CmpnntEvaluacion]
 		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
@@ -92,36 +92,36 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//attributes+=Attribute*
+		//attributes+=Criterio*
 		public Assignment getAttributesAssignment_4() { return cAttributesAssignment_4; }
 		
-		//Attribute
-		public RuleCall getAttributesAttributeParserRuleCall_4_0() { return cAttributesAttributeParserRuleCall_4_0; }
+		//Criterio
+		public RuleCall getAttributesCriterioParserRuleCall_4_0() { return cAttributesCriterioParserRuleCall_4_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
-	public class AttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Attribute");
+	public class CriterioElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Criterio");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTypeAttributeTypeParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
+		private final RuleCall cTypeCriterioTypeParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//Attribute:
-		//    type=AttributeType name=ID ';';
+		//Criterio:
+		//    type=CriterioType name=ID ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//type=AttributeType name=ID ';'
+		//type=CriterioType name=ID ';'
 		public Group getGroup() { return cGroup; }
 		
-		//type=AttributeType
+		//type=CriterioType
 		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 		
-		//AttributeType
-		public RuleCall getTypeAttributeTypeParserRuleCall_0_0() { return cTypeAttributeTypeParserRuleCall_0_0; }
+		//CriterioType
+		public RuleCall getTypeCriterioTypeParserRuleCall_0_0() { return cTypeCriterioTypeParserRuleCall_0_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -132,8 +132,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//';'
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
-	public class AttributeTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.AttributeType");
+	public class CriterioTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.CriterioType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cElementTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cElementTypeElementTypeParserRuleCall_0_0 = (RuleCall)cElementTypeAssignment_0.eContents().get(0);
@@ -144,7 +144,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cLengthINTTerminalRuleCall_1_1_0 = (RuleCall)cLengthAssignment_1_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
-		//AttributeType:
+		//CriterioType:
 		//    elementType=ElementType (array?='[' (length=INT)? ']')?;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -179,20 +179,20 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ElementType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBasicTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cEntityTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cComponenteTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//ElementType:
-		//    BasicType | EntityType;
+		//    BasicType | ComponenteType;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//BasicType | EntityType
+		//BasicType | ComponenteType
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//BasicType
 		public RuleCall getBasicTypeParserRuleCall_0() { return cBasicTypeParserRuleCall_0; }
 		
-		//EntityType
-		public RuleCall getEntityTypeParserRuleCall_1() { return cEntityTypeParserRuleCall_1; }
+		//ComponenteType
+		public RuleCall getComponenteTypeParserRuleCall_1() { return cComponenteTypeParserRuleCall_1; }
 	}
 	public class BasicTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.BasicType");
@@ -221,13 +221,13 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'boolean'
 		public Keyword getTypeNameBooleanKeyword_0_2() { return cTypeNameBooleanKeyword_0_2; }
 	}
-	public class EntityTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.EntityType");
+	public class ComponenteTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ComponenteType");
 		private final Assignment cEntityAssignment = (Assignment)rule.eContents().get(1);
 		private final CrossReference cEntityCmpnntEvaluacionCrossReference_0 = (CrossReference)cEntityAssignment.eContents().get(0);
 		private final RuleCall cEntityCmpnntEvaluacionIDTerminalRuleCall_0_1 = (RuleCall)cEntityCmpnntEvaluacionCrossReference_0.eContents().get(1);
 		
-		//EntityType:
+		//ComponenteType:
 		//    entity=[CmpnntEvaluacion];
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -244,11 +244,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	private final ModelElements pModel;
 	private final CmpnntEvaluacionElements pCmpnntEvaluacion;
-	private final AttributeElements pAttribute;
-	private final AttributeTypeElements pAttributeType;
+	private final CriterioElements pCriterio;
+	private final CriterioTypeElements pCriterioType;
 	private final ElementTypeElements pElementType;
 	private final BasicTypeElements pBasicType;
-	private final EntityTypeElements pEntityType;
+	private final ComponenteTypeElements pComponenteType;
 	
 	private final Grammar grammar;
 	
@@ -261,11 +261,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pCmpnntEvaluacion = new CmpnntEvaluacionElements();
-		this.pAttribute = new AttributeElements();
-		this.pAttributeType = new AttributeTypeElements();
+		this.pCriterio = new CriterioElements();
+		this.pCriterioType = new CriterioTypeElements();
 		this.pElementType = new ElementTypeElements();
 		this.pBasicType = new BasicTypeElements();
-		this.pEntityType = new EntityTypeElements();
+		this.pComponenteType = new ComponenteTypeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -306,8 +306,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//CmpnntEvaluacion:
-	//    'entity' name=ID ('extends' superType=[CmpnntEvaluacion])? '{'
-	//        attributes+=Attribute*
+	//    'comopnente' name=ID ('hereda' superType=[CmpnntEvaluacion])? '{'
+	//        attributes+=Criterio*
 	//    '}';
 	public CmpnntEvaluacionElements getCmpnntEvaluacionAccess() {
 		return pCmpnntEvaluacion;
@@ -317,28 +317,28 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getCmpnntEvaluacionAccess().getRule();
 	}
 	
-	//Attribute:
-	//    type=AttributeType name=ID ';';
-	public AttributeElements getAttributeAccess() {
-		return pAttribute;
+	//Criterio:
+	//    type=CriterioType name=ID ';';
+	public CriterioElements getCriterioAccess() {
+		return pCriterio;
 	}
 	
-	public ParserRule getAttributeRule() {
-		return getAttributeAccess().getRule();
+	public ParserRule getCriterioRule() {
+		return getCriterioAccess().getRule();
 	}
 	
-	//AttributeType:
+	//CriterioType:
 	//    elementType=ElementType (array?='[' (length=INT)? ']')?;
-	public AttributeTypeElements getAttributeTypeAccess() {
-		return pAttributeType;
+	public CriterioTypeElements getCriterioTypeAccess() {
+		return pCriterioType;
 	}
 	
-	public ParserRule getAttributeTypeRule() {
-		return getAttributeTypeAccess().getRule();
+	public ParserRule getCriterioTypeRule() {
+		return getCriterioTypeAccess().getRule();
 	}
 	
 	//ElementType:
-	//    BasicType | EntityType;
+	//    BasicType | ComponenteType;
 	public ElementTypeElements getElementTypeAccess() {
 		return pElementType;
 	}
@@ -357,14 +357,14 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getBasicTypeAccess().getRule();
 	}
 	
-	//EntityType:
+	//ComponenteType:
 	//    entity=[CmpnntEvaluacion];
-	public EntityTypeElements getEntityTypeAccess() {
-		return pEntityType;
+	public ComponenteTypeElements getComponenteTypeAccess() {
+		return pComponenteType;
 	}
 	
-	public ParserRule getEntityTypeRule() {
-		return getEntityTypeAccess().getRule();
+	public ParserRule getComponenteTypeRule() {
+		return getComponenteTypeAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

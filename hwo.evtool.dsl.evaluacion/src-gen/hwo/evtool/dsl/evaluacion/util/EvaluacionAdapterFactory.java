@@ -86,14 +86,14 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createCmpnntEvaluacionAdapter();
       }
       @Override
-      public Adapter caseAttribute(Attribute object)
+      public Adapter caseCriterio(Criterio object)
       {
-        return createAttributeAdapter();
+        return createCriterioAdapter();
       }
       @Override
-      public Adapter caseAttributeType(AttributeType object)
+      public Adapter caseCriterioType(CriterioType object)
       {
-        return createAttributeTypeAdapter();
+        return createCriterioTypeAdapter();
       }
       @Override
       public Adapter caseElementType(ElementType object)
@@ -106,9 +106,9 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createBasicTypeAdapter();
       }
       @Override
-      public Adapter caseEntityType(EntityType object)
+      public Adapter caseComponenteType(ComponenteType object)
       {
-        return createEntityTypeAdapter();
+        return createComponenteTypeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -163,31 +163,31 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Attribute <em>Attribute</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Criterio <em>Criterio</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Attribute
+   * @see hwo.evtool.dsl.evaluacion.Criterio
    * @generated
    */
-  public Adapter createAttributeAdapter()
+  public Adapter createCriterioAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.AttributeType <em>Attribute Type</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.CriterioType <em>Criterio Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.AttributeType
+   * @see hwo.evtool.dsl.evaluacion.CriterioType
    * @generated
    */
-  public Adapter createAttributeTypeAdapter()
+  public Adapter createCriterioTypeAdapter()
   {
     return null;
   }
@@ -223,16 +223,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.EntityType <em>Entity Type</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ComponenteType <em>Componente Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.EntityType
+   * @see hwo.evtool.dsl.evaluacion.ComponenteType
    * @generated
    */
-  public Adapter createEntityTypeAdapter()
+  public Adapter createComponenteTypeAdapter()
   {
     return null;
   }

@@ -87,17 +87,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.ATTRIBUTE:
+      case EvaluacionPackage.CRITERIO:
       {
-        Attribute attribute = (Attribute)theEObject;
-        T result = caseAttribute(attribute);
+        Criterio criterio = (Criterio)theEObject;
+        T result = caseCriterio(criterio);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.ATTRIBUTE_TYPE:
+      case EvaluacionPackage.CRITERIO_TYPE:
       {
-        AttributeType attributeType = (AttributeType)theEObject;
-        T result = caseAttributeType(attributeType);
+        CriterioType criterioType = (CriterioType)theEObject;
+        T result = caseCriterioType(criterioType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -116,11 +116,11 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.ENTITY_TYPE:
+      case EvaluacionPackage.COMPONENTE_TYPE:
       {
-        EntityType entityType = (EntityType)theEObject;
-        T result = caseEntityType(entityType);
-        if (result == null) result = caseElementType(entityType);
+        ComponenteType componenteType = (ComponenteType)theEObject;
+        T result = caseComponenteType(componenteType);
+        if (result == null) result = caseElementType(componenteType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -161,33 +161,33 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Criterio</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Criterio</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAttribute(Attribute object)
+  public T caseCriterio(Criterio object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribute Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribute Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAttributeType(AttributeType object)
+  public T caseCriterioType(CriterioType object)
   {
     return null;
   }
@@ -225,17 +225,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Componente Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Componente Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEntityType(EntityType object)
+  public T caseComponenteType(ComponenteType object)
   {
     return null;
   }

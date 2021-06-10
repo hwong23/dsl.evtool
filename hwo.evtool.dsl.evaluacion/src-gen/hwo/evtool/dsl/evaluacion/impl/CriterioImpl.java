@@ -3,8 +3,8 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Attribute;
-import hwo.evtool.dsl.evaluacion.AttributeType;
+import hwo.evtool.dsl.evaluacion.Criterio;
+import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,19 +18,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Attribute</b></em>'.
+ * An implementation of the model object '<em><b>Criterio</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.AttributeImpl#getType <em>Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.AttributeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl#getType <em>Type</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AttributeImpl extends MinimalEObjectImpl.Container implements Attribute
+public class CriterioImpl extends MinimalEObjectImpl.Container implements Criterio
 {
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
@@ -40,7 +40,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * @generated
    * @ordered
    */
-  protected AttributeType type;
+  protected CriterioType type;
 
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -67,7 +67,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AttributeImpl()
+  protected CriterioImpl()
   {
     super();
   }
@@ -80,7 +80,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.ATTRIBUTE;
+    return EvaluacionPackage.Literals.CRITERIO;
   }
 
   /**
@@ -89,7 +89,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * @generated
    */
   @Override
-  public AttributeType getType()
+  public CriterioType getType()
   {
     return type;
   }
@@ -99,13 +99,13 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetType(AttributeType newType, NotificationChain msgs)
+  public NotificationChain basicSetType(CriterioType newType, NotificationChain msgs)
   {
-    AttributeType oldType = type;
+    CriterioType oldType = type;
     type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE__TYPE, oldType, newType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -117,20 +117,20 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * @generated
    */
   @Override
-  public void setType(AttributeType newType)
+  public void setType(CriterioType newType)
   {
     if (newType != type)
     {
       NotificationChain msgs = null;
       if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.ATTRIBUTE__TYPE, null, msgs);
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO__TYPE, null, msgs);
       if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.ATTRIBUTE__TYPE, null, msgs);
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO__TYPE, null, msgs);
       msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE__TYPE, newType, newType));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO__TYPE, newType, newType));
   }
 
   /**
@@ -155,7 +155,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ATTRIBUTE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO__NAME, oldName, name));
   }
 
   /**
@@ -168,7 +168,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE__TYPE:
+      case EvaluacionPackage.CRITERIO__TYPE:
         return basicSetType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -184,9 +184,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE__TYPE:
+      case EvaluacionPackage.CRITERIO__TYPE:
         return getType();
-      case EvaluacionPackage.ATTRIBUTE__NAME:
+      case EvaluacionPackage.CRITERIO__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -202,10 +202,10 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE__TYPE:
-        setType((AttributeType)newValue);
+      case EvaluacionPackage.CRITERIO__TYPE:
+        setType((CriterioType)newValue);
         return;
-      case EvaluacionPackage.ATTRIBUTE__NAME:
+      case EvaluacionPackage.CRITERIO__NAME:
         setName((String)newValue);
         return;
     }
@@ -222,10 +222,10 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE__TYPE:
-        setType((AttributeType)null);
+      case EvaluacionPackage.CRITERIO__TYPE:
+        setType((CriterioType)null);
         return;
-      case EvaluacionPackage.ATTRIBUTE__NAME:
+      case EvaluacionPackage.CRITERIO__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -242,9 +242,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ATTRIBUTE__TYPE:
+      case EvaluacionPackage.CRITERIO__TYPE:
         return type != null;
-      case EvaluacionPackage.ATTRIBUTE__NAME:
+      case EvaluacionPackage.CRITERIO__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -267,4 +267,4 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     return result.toString();
   }
 
-} //AttributeImpl
+} //CriterioImpl

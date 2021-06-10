@@ -112,10 +112,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEvaluacion.g:14:7: ( 'entity' )
-            // InternalEvaluacion.g:14:9: 'entity'
+            // InternalEvaluacion.g:14:7: ( 'comopnente' )
+            // InternalEvaluacion.g:14:9: 'comopnente'
             {
-            match("entity"); 
+            match("comopnente"); 
 
 
             }
@@ -173,10 +173,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEvaluacion.g:17:7: ( 'extends' )
-            // InternalEvaluacion.g:17:9: 'extends'
+            // InternalEvaluacion.g:17:7: ( 'hereda' )
+            // InternalEvaluacion.g:17:9: 'hereda'
             {
-            match("extends"); 
+            match("hereda"); 
 
 
             }
@@ -879,75 +879,79 @@ public class InternalEvaluacionLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\4\23\5\uffff\1\21\2\uffff\3\21\2\uffff\1\23\1\uffff\4\23\12\uffff\1\23\1\50\4\23\1\uffff\7\23\1\64\1\23\1\66\1\23\1\uffff\1\70\1\uffff\1\71\2\uffff";
+        "\1\uffff\4\24\2\uffff\1\24\3\uffff\1\22\2\uffff\3\22\2\uffff\1\24\1\uffff\3\24\2\uffff\1\24\10\uffff\1\24\1\51\4\24\1\uffff\7\24\1\65\2\24\1\70\1\uffff\1\71\1\24\2\uffff\2\24\1\75\1\uffff";
     static final String DFA12_eofS =
-        "\72\uffff";
+        "\76\uffff";
     static final String DFA12_minS =
-        "\1\0\1\164\1\156\1\157\1\156\5\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\162\1\uffff\1\164\1\157\2\164\12\uffff\1\151\1\60\1\154\1\151\1\145\1\156\1\uffff\1\145\1\164\1\156\1\147\1\141\1\171\1\144\1\60\1\156\1\60\1\163\1\uffff\1\60\1\uffff\1\60\2\uffff";
+        "\1\0\1\164\1\156\2\157\2\uffff\1\145\3\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\162\1\uffff\1\164\1\157\1\155\2\uffff\1\162\10\uffff\1\151\1\60\1\154\1\157\1\145\1\156\1\uffff\1\145\1\160\1\144\1\147\1\141\1\156\1\141\1\60\1\156\1\145\1\60\1\uffff\1\60\1\156\2\uffff\1\164\1\145\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\164\1\156\1\157\1\170\5\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\162\1\uffff\1\164\1\157\2\164\12\uffff\1\151\1\172\1\154\1\151\1\145\1\156\1\uffff\1\145\1\164\1\156\1\147\1\141\1\171\1\144\1\172\1\156\1\172\1\163\1\uffff\1\172\1\uffff\1\172\2\uffff";
+        "\1\uffff\1\164\1\156\2\157\2\uffff\1\145\3\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\162\1\uffff\1\164\1\157\1\155\2\uffff\1\162\10\uffff\1\151\1\172\1\154\1\157\1\145\1\156\1\uffff\1\145\1\160\1\144\1\147\1\141\1\156\1\141\1\172\1\156\1\145\1\172\1\uffff\1\172\1\156\2\uffff\1\164\1\145\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\5\uffff\1\5\1\6\1\10\1\11\1\12\1\uffff\1\13\1\14\3\uffff\1\20\1\21\1\uffff\1\13\4\uffff\1\5\1\6\1\10\1\11\1\12\1\14\1\15\1\16\1\17\1\20\6\uffff\1\2\13\uffff\1\1\1\uffff\1\4\1\uffff\1\3\1\7";
+        "\5\uffff\1\5\1\6\1\uffff\1\10\1\11\1\12\1\uffff\1\13\1\14\3\uffff\1\20\1\21\1\uffff\1\13\3\uffff\1\5\1\6\1\uffff\1\10\1\11\1\12\1\14\1\15\1\16\1\17\1\20\6\uffff\1\2\13\uffff\1\1\2\uffff\1\7\1\3\3\uffff\1\4";
     static final String DFA12_specialS =
-        "\1\2\14\uffff\1\1\1\0\53\uffff}>";
+        "\1\1\15\uffff\1\0\1\2\56\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\21\2\20\2\21\1\20\22\21\1\20\1\21\1\15\4\21\1\16\7\21\1\17\12\14\1\21\1\7\5\21\32\13\1\11\1\21\1\10\1\12\1\13\1\21\1\13\1\3\2\13\1\4\3\13\1\2\11\13\1\1\7\13\1\5\1\21\1\6\uff82\21",
-            "\1\22",
-            "\1\24",
+            "\11\22\2\21\2\22\1\21\22\22\1\21\1\22\1\16\4\22\1\17\7\22\1\20\12\15\1\22\1\10\5\22\32\14\1\12\1\22\1\11\1\13\1\14\1\22\1\14\1\3\1\4\4\14\1\7\1\2\11\14\1\1\7\14\1\5\1\22\1\6\uff82\22",
+            "\1\23",
             "\1\25",
-            "\1\26\11\uffff\1\27",
+            "\1\26",
+            "\1\27",
+            "",
+            "",
+            "\1\32",
             "",
             "",
             "",
+            "\32\24\4\uffff\1\24\1\uffff\32\24",
             "",
             "",
-            "\32\23\4\uffff\1\23\1\uffff\32\23",
+            "\0\37",
+            "\0\37",
+            "\1\40\4\uffff\1\41",
             "",
-            "",
-            "\0\36",
-            "\0\36",
-            "\1\37\4\uffff\1\40",
-            "",
-            "",
-            "\1\42",
             "",
             "\1\43",
+            "",
             "\1\44",
             "\1\45",
             "\1\46",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\47",
-            "\12\23\7\uffff\32\23\4\uffff\1\23\1\uffff\32\23",
-            "\1\51",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\50",
+            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
             "\1\52",
             "\1\53",
             "\1\54",
-            "",
             "\1\55",
+            "",
             "\1\56",
             "\1\57",
             "\1\60",
             "\1\61",
             "\1\62",
             "\1\63",
-            "\12\23\7\uffff\32\23\4\uffff\1\23\1\uffff\32\23",
-            "\1\65",
-            "\12\23\7\uffff\32\23\4\uffff\1\23\1\uffff\32\23",
+            "\1\64",
+            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\66",
             "\1\67",
+            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
             "",
-            "\12\23\7\uffff\32\23\4\uffff\1\23\1\uffff\32\23",
+            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
+            "\1\72",
             "",
-            "\12\23\7\uffff\32\23\4\uffff\1\23\1\uffff\32\23",
             "",
+            "\1\73",
+            "\1\74",
+            "\12\24\7\uffff\32\24\4\uffff\1\24\1\uffff\32\24",
             ""
     };
 
@@ -991,23 +995,13 @@ public class InternalEvaluacionLexer extends Lexer {
                         int LA12_14 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_14>='\u0000' && LA12_14<='\uFFFF')) ) {s = 30;}
+                        if ( ((LA12_14>='\u0000' && LA12_14<='\uFFFF')) ) {s = 31;}
 
-                        else s = 17;
+                        else s = 18;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_13 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_13>='\u0000' && LA12_13<='\uFFFF')) ) {s = 30;}
-
-                        else s = 17;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1017,33 +1011,45 @@ public class InternalEvaluacionLexer extends Lexer {
 
                         else if ( (LA12_0=='b') ) {s = 3;}
 
-                        else if ( (LA12_0=='e') ) {s = 4;}
+                        else if ( (LA12_0=='c') ) {s = 4;}
 
                         else if ( (LA12_0=='{') ) {s = 5;}
 
                         else if ( (LA12_0=='}') ) {s = 6;}
 
-                        else if ( (LA12_0==';') ) {s = 7;}
+                        else if ( (LA12_0=='h') ) {s = 7;}
 
-                        else if ( (LA12_0==']') ) {s = 8;}
+                        else if ( (LA12_0==';') ) {s = 8;}
 
-                        else if ( (LA12_0=='[') ) {s = 9;}
+                        else if ( (LA12_0==']') ) {s = 9;}
 
-                        else if ( (LA12_0=='^') ) {s = 10;}
+                        else if ( (LA12_0=='[') ) {s = 10;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='a'||(LA12_0>='c' && LA12_0<='d')||(LA12_0>='f' && LA12_0<='h')||(LA12_0>='j' && LA12_0<='r')||(LA12_0>='t' && LA12_0<='z')) ) {s = 11;}
+                        else if ( (LA12_0=='^') ) {s = 11;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 12;}
+                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='a'||(LA12_0>='d' && LA12_0<='g')||(LA12_0>='j' && LA12_0<='r')||(LA12_0>='t' && LA12_0<='z')) ) {s = 12;}
 
-                        else if ( (LA12_0=='\"') ) {s = 13;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 13;}
 
-                        else if ( (LA12_0=='\'') ) {s = 14;}
+                        else if ( (LA12_0=='\"') ) {s = 14;}
 
-                        else if ( (LA12_0=='/') ) {s = 15;}
+                        else if ( (LA12_0=='\'') ) {s = 15;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 16;}
+                        else if ( (LA12_0=='/') ) {s = 16;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||LA12_0==':'||(LA12_0>='<' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 17;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 17;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||LA12_0==':'||(LA12_0>='<' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 18;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_15 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_15>='\u0000' && LA12_15<='\uFFFF')) ) {s = 31;}
+
+                        else s = 18;
 
                         if ( s>=0 ) return s;
                         break;
