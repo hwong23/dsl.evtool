@@ -1,0 +1,25 @@
+grammar hwo.evtool.dsl.Evaluacion with org.eclipse.xtext.common.Terminals
+generate evaluacion "http://www.evtool.hwo/dsl/Evaluacion"
+
+Model:
+	entities+=CmpnntEvaluacion*;
+
+CmpnntEvaluacion:
+	'entity' name=ID ('extends' superType=[CmpnntEvaluacion])? '{'
+		attributes+=Attribute*
+	'}';
+
+Attribute:
+	type=AttributeType name=ID ';';
+
+AttributeType:
+	elementType=ElementType (array?='[' (length=INT)? ']')?;
+
+ElementType:
+	BasicType | EntityType;
+
+BasicType:
+	typeName=('string' | 'int' | 'boolean');
+
+EntityType:
+	entity=[CmpnntEvaluacion];
