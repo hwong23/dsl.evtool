@@ -6,6 +6,7 @@ package hwo.evtool.dsl.evaluacion.impl;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.ValorCriterio;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl#getType <em>Type</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl#getValor <em>Valor</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,6 +63,16 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getValor() <em>Valor</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValor()
+   * @generated
+   * @ordered
+   */
+  protected ValorCriterio valor;
 
   /**
    * <!-- begin-user-doc -->
@@ -164,12 +176,64 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
    * @generated
    */
   @Override
+  public ValorCriterio getValor()
+  {
+    return valor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetValor(ValorCriterio newValor, NotificationChain msgs)
+  {
+    ValorCriterio oldValor = valor;
+    valor = newValor;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO__VALOR, oldValor, newValor);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setValor(ValorCriterio newValor)
+  {
+    if (newValor != valor)
+    {
+      NotificationChain msgs = null;
+      if (valor != null)
+        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO__VALOR, null, msgs);
+      if (newValor != null)
+        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO__VALOR, null, msgs);
+      msgs = basicSetValor(newValor, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO__VALOR, newValor, newValor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
       case EvaluacionPackage.CRITERIO__TYPE:
         return basicSetType(null, msgs);
+      case EvaluacionPackage.CRITERIO__VALOR:
+        return basicSetValor(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -188,6 +252,8 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
         return getType();
       case EvaluacionPackage.CRITERIO__NAME:
         return getName();
+      case EvaluacionPackage.CRITERIO__VALOR:
+        return getValor();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -207,6 +273,9 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
         return;
       case EvaluacionPackage.CRITERIO__NAME:
         setName((String)newValue);
+        return;
+      case EvaluacionPackage.CRITERIO__VALOR:
+        setValor((ValorCriterio)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -228,6 +297,9 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
       case EvaluacionPackage.CRITERIO__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case EvaluacionPackage.CRITERIO__VALOR:
+        setValor((ValorCriterio)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -246,6 +318,8 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
         return type != null;
       case EvaluacionPackage.CRITERIO__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case EvaluacionPackage.CRITERIO__VALOR:
+        return valor != null;
     }
     return super.eIsSet(featureID);
   }

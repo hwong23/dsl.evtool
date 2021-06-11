@@ -81,14 +81,19 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseCmpnntEvaluacion(CmpnntEvaluacion object)
+      public Adapter caseCmpntEvaluacion(CmpntEvaluacion object)
       {
-        return createCmpnntEvaluacionAdapter();
+        return createCmpntEvaluacionAdapter();
       }
       @Override
       public Adapter caseCriterio(Criterio object)
       {
         return createCriterioAdapter();
+      }
+      @Override
+      public Adapter caseValorCriterio(ValorCriterio object)
+      {
+        return createValorCriterioAdapter();
       }
       @Override
       public Adapter caseCriterioType(CriterioType object)
@@ -148,16 +153,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion <em>Cmpnnt Evaluacion</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion <em>Cmpnt Evaluacion</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.CmpnntEvaluacion
+   * @see hwo.evtool.dsl.evaluacion.CmpntEvaluacion
    * @generated
    */
-  public Adapter createCmpnntEvaluacionAdapter()
+  public Adapter createCmpntEvaluacionAdapter()
   {
     return null;
   }
@@ -173,6 +178,21 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCriterioAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ValorCriterio <em>Valor Criterio</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see hwo.evtool.dsl.evaluacion.ValorCriterio
+   * @generated
+   */
+  public Adapter createValorCriterioAdapter()
   {
     return null;
   }

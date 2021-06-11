@@ -27,7 +27,7 @@ public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Entities</em>' containment reference list.
@@ -35,6 +35,6 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<CmpnntEvaluacion> getEntities();
+  EList<CmpntEvaluacion> getEntities();
 
 } // Model

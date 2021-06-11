@@ -80,10 +80,10 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.CMPNNT_EVALUACION:
+      case EvaluacionPackage.CMPNT_EVALUACION:
       {
-        CmpnntEvaluacion cmpnntEvaluacion = (CmpnntEvaluacion)theEObject;
-        T result = caseCmpnntEvaluacion(cmpnntEvaluacion);
+        CmpntEvaluacion cmpntEvaluacion = (CmpntEvaluacion)theEObject;
+        T result = caseCmpntEvaluacion(cmpntEvaluacion);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -91,6 +91,13 @@ public class EvaluacionSwitch<T> extends Switch<T>
       {
         Criterio criterio = (Criterio)theEObject;
         T result = caseCriterio(criterio);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvaluacionPackage.VALOR_CRITERIO:
+      {
+        ValorCriterio valorCriterio = (ValorCriterio)theEObject;
+        T result = caseValorCriterio(valorCriterio);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -112,7 +119,6 @@ public class EvaluacionSwitch<T> extends Switch<T>
       {
         BasicType basicType = (BasicType)theEObject;
         T result = caseBasicType(basicType);
-        if (result == null) result = caseElementType(basicType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -145,17 +151,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Cmpnnt Evaluacion</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Cmpnt Evaluacion</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Cmpnnt Evaluacion</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Cmpnt Evaluacion</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCmpnntEvaluacion(CmpnntEvaluacion object)
+  public T caseCmpntEvaluacion(CmpntEvaluacion object)
   {
     return null;
   }
@@ -172,6 +178,22 @@ public class EvaluacionSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCriterio(Criterio object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Valor Criterio</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Valor Criterio</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseValorCriterio(ValorCriterio object)
   {
     return null;
   }

@@ -13,7 +13,7 @@ package hwo.evtool.dsl.evaluacion;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.ComponenteType#getEntity <em>Entity</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.ComponenteType#getComponente <em>Componente</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponenteType()
@@ -23,25 +23,25 @@ package hwo.evtool.dsl.evaluacion;
 public interface ComponenteType extends ElementType
 {
   /**
-   * Returns the value of the '<em><b>Entity</b></em>' reference.
+   * Returns the value of the '<em><b>Componente</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Entity</em>' reference.
-   * @see #setEntity(CmpnntEvaluacion)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponenteType_Entity()
+   * @return the value of the '<em>Componente</em>' reference.
+   * @see #setComponente(CmpntEvaluacion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponenteType_Componente()
    * @model
    * @generated
    */
-  CmpnntEvaluacion getEntity();
+  CmpntEvaluacion getComponente();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComponenteType#getEntity <em>Entity</em>}' reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComponenteType#getComponente <em>Componente</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Entity</em>' reference.
-   * @see #getEntity()
+   * @param value the new value of the '<em>Componente</em>' reference.
+   * @see #getComponente()
    * @generated
    */
-  void setEntity(CmpnntEvaluacion value);
+  void setComponente(CmpntEvaluacion value);
 
 } // ComponenteType

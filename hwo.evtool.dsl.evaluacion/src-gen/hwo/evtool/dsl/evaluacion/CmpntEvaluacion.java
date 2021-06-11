@@ -9,23 +9,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Cmpnnt Evaluacion</b></em>'.
+ * A representation of the model object '<em><b>Cmpnt Evaluacion</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getSuperType <em>Super Type</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getAttributes <em>Attributes</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpnntEvaluacion()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion()
  * @model
  * @generated
  */
-public interface CmpnntEvaluacion extends EObject
+public interface CmpntEvaluacion extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -33,14 +33,14 @@ public interface CmpnntEvaluacion extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpnntEvaluacion_Name()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -54,22 +54,22 @@ public interface CmpnntEvaluacion extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Super Type</em>' reference.
-   * @see #setSuperType(CmpnntEvaluacion)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpnntEvaluacion_SuperType()
+   * @see #setSuperType(CmpntEvaluacion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion_SuperType()
    * @model
    * @generated
    */
-  CmpnntEvaluacion getSuperType();
+  CmpntEvaluacion getSuperType();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CmpnntEvaluacion#getSuperType <em>Super Type</em>}' reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getSuperType <em>Super Type</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Super Type</em>' reference.
    * @see #getSuperType()
    * @generated
    */
-  void setSuperType(CmpnntEvaluacion value);
+  void setSuperType(CmpntEvaluacion value);
 
   /**
    * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
@@ -77,10 +77,10 @@ public interface CmpnntEvaluacion extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Attributes</em>' containment reference list.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpnntEvaluacion_Attributes()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion_Attributes()
    * @model containment="true"
    * @generated
    */
   EList<Criterio> getAttributes();
 
-} // CmpnntEvaluacion
+} // CmpntEvaluacion

@@ -3,7 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.CmpnntEvaluacion;
+import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl#getEntity <em>Entity</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl#getComponente <em>Componente</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,14 +30,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteType
 {
   /**
-   * The cached value of the '{@link #getEntity() <em>Entity</em>}' reference.
+   * The cached value of the '{@link #getComponente() <em>Componente</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEntity()
+   * @see #getComponente()
    * @generated
    * @ordered
    */
-  protected CmpnntEvaluacion entity;
+  protected CmpntEvaluacion componente;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,19 +66,19 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
    * @generated
    */
   @Override
-  public CmpnntEvaluacion getEntity()
+  public CmpntEvaluacion getComponente()
   {
-    if (entity != null && entity.eIsProxy())
+    if (componente != null && componente.eIsProxy())
     {
-      InternalEObject oldEntity = (InternalEObject)entity;
-      entity = (CmpnntEvaluacion)eResolveProxy(oldEntity);
-      if (entity != oldEntity)
+      InternalEObject oldComponente = (InternalEObject)componente;
+      componente = (CmpntEvaluacion)eResolveProxy(oldComponente);
+      if (componente != oldComponente)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvaluacionPackage.COMPONENTE_TYPE__ENTITY, oldEntity, entity));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvaluacionPackage.COMPONENTE_TYPE__COMPONENTE, oldComponente, componente));
       }
     }
-    return entity;
+    return componente;
   }
 
   /**
@@ -86,9 +86,9 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
    * <!-- end-user-doc -->
    * @generated
    */
-  public CmpnntEvaluacion basicGetEntity()
+  public CmpntEvaluacion basicGetComponente()
   {
-    return entity;
+    return componente;
   }
 
   /**
@@ -97,12 +97,12 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
    * @generated
    */
   @Override
-  public void setEntity(CmpnntEvaluacion newEntity)
+  public void setComponente(CmpntEvaluacion newComponente)
   {
-    CmpnntEvaluacion oldEntity = entity;
-    entity = newEntity;
+    CmpntEvaluacion oldComponente = componente;
+    componente = newComponente;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPONENTE_TYPE__ENTITY, oldEntity, entity));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPONENTE_TYPE__COMPONENTE, oldComponente, componente));
   }
 
   /**
@@ -115,9 +115,9 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
-        if (resolve) return getEntity();
-        return basicGetEntity();
+      case EvaluacionPackage.COMPONENTE_TYPE__COMPONENTE:
+        if (resolve) return getComponente();
+        return basicGetComponente();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -132,8 +132,8 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
-        setEntity((CmpnntEvaluacion)newValue);
+      case EvaluacionPackage.COMPONENTE_TYPE__COMPONENTE:
+        setComponente((CmpntEvaluacion)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,8 +149,8 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
-        setEntity((CmpnntEvaluacion)null);
+      case EvaluacionPackage.COMPONENTE_TYPE__COMPONENTE:
+        setComponente((CmpntEvaluacion)null);
         return;
     }
     super.eUnset(featureID);
@@ -166,8 +166,8 @@ public class ComponenteTypeImpl extends ElementTypeImpl implements ComponenteTyp
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPONENTE_TYPE__ENTITY:
-        return entity != null;
+      case EvaluacionPackage.COMPONENTE_TYPE__COMPONENTE:
+        return componente != null;
     }
     return super.eIsSet(featureID);
   }

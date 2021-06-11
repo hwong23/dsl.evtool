@@ -3,8 +3,8 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.BasicType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.ValorCriterio;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,45 +15,45 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Basic Type</b></em>'.
+ * An implementation of the model object '<em><b>Valor Criterio</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.BasicTypeImpl#getTypeName <em>Type Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ValorCriterioImpl#getValorCriterio <em>Valor Criterio</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class BasicTypeImpl extends MinimalEObjectImpl.Container implements BasicType
+public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements ValorCriterio
 {
   /**
-   * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+   * The default value of the '{@link #getValorCriterio() <em>Valor Criterio</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTypeName()
+   * @see #getValorCriterio()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_NAME_EDEFAULT = null;
+  protected static final String VALOR_CRITERIO_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+   * The cached value of the '{@link #getValorCriterio() <em>Valor Criterio</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTypeName()
+   * @see #getValorCriterio()
    * @generated
    * @ordered
    */
-  protected String typeName = TYPE_NAME_EDEFAULT;
+  protected String valorCriterio = VALOR_CRITERIO_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected BasicTypeImpl()
+  protected ValorCriterioImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.BASIC_TYPE;
+    return EvaluacionPackage.Literals.VALOR_CRITERIO;
   }
 
   /**
@@ -75,9 +75,9 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
    * @generated
    */
   @Override
-  public String getTypeName()
+  public String getValorCriterio()
   {
-    return typeName;
+    return valorCriterio;
   }
 
   /**
@@ -86,12 +86,12 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
    * @generated
    */
   @Override
-  public void setTypeName(String newTypeName)
+  public void setValorCriterio(String newValorCriterio)
   {
-    String oldTypeName = typeName;
-    typeName = newTypeName;
+    String oldValorCriterio = valorCriterio;
+    valorCriterio = newValorCriterio;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.BASIC_TYPE__TYPE_NAME, oldTypeName, typeName));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO, oldValorCriterio, valorCriterio));
   }
 
   /**
@@ -104,8 +104,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        return getTypeName();
+      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
+        return getValorCriterio();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +120,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        setTypeName((String)newValue);
+      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
+        setValorCriterio((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +137,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        setTypeName(TYPE_NAME_EDEFAULT);
+      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
+        setValorCriterio(VALOR_CRITERIO_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +154,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        return TYPE_NAME_EDEFAULT == null ? typeName != null : !TYPE_NAME_EDEFAULT.equals(typeName);
+      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
+        return VALOR_CRITERIO_EDEFAULT == null ? valorCriterio != null : !VALOR_CRITERIO_EDEFAULT.equals(valorCriterio);
     }
     return super.eIsSet(featureID);
   }
@@ -171,10 +171,10 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (typeName: ");
-    result.append(typeName);
+    result.append(" (valorCriterio: ");
+    result.append(valorCriterio);
     result.append(')');
     return result.toString();
   }
 
-} //BasicTypeImpl
+} //ValorCriterioImpl

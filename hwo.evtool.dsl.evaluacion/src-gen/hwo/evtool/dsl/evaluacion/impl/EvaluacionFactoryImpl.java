@@ -66,8 +66,9 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
     switch (eClass.getClassifierID())
     {
       case EvaluacionPackage.MODEL: return createModel();
-      case EvaluacionPackage.CMPNNT_EVALUACION: return createCmpnntEvaluacion();
+      case EvaluacionPackage.CMPNT_EVALUACION: return createCmpntEvaluacion();
       case EvaluacionPackage.CRITERIO: return createCriterio();
+      case EvaluacionPackage.VALOR_CRITERIO: return createValorCriterio();
       case EvaluacionPackage.CRITERIO_TYPE: return createCriterioType();
       case EvaluacionPackage.ELEMENT_TYPE: return createElementType();
       case EvaluacionPackage.BASIC_TYPE: return createBasicType();
@@ -95,10 +96,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public CmpnntEvaluacion createCmpnntEvaluacion()
+  public CmpntEvaluacion createCmpntEvaluacion()
   {
-    CmpnntEvaluacionImpl cmpnntEvaluacion = new CmpnntEvaluacionImpl();
-    return cmpnntEvaluacion;
+    CmpntEvaluacionImpl cmpntEvaluacion = new CmpntEvaluacionImpl();
+    return cmpntEvaluacion;
   }
 
   /**
@@ -111,6 +112,18 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     CriterioImpl criterio = new CriterioImpl();
     return criterio;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ValorCriterio createValorCriterio()
+  {
+    ValorCriterioImpl valorCriterio = new ValorCriterioImpl();
+    return valorCriterio;
   }
 
   /**

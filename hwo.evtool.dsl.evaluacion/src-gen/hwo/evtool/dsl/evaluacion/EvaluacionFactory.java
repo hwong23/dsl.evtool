@@ -33,13 +33,13 @@ public interface EvaluacionFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Cmpnnt Evaluacion</em>'.
+   * Returns a new object of class '<em>Cmpnt Evaluacion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Cmpnnt Evaluacion</em>'.
+   * @return a new object of class '<em>Cmpnt Evaluacion</em>'.
    * @generated
    */
-  CmpnntEvaluacion createCmpnntEvaluacion();
+  CmpntEvaluacion createCmpntEvaluacion();
 
   /**
    * Returns a new object of class '<em>Criterio</em>'.
@@ -49,6 +49,15 @@ public interface EvaluacionFactory extends EFactory
    * @generated
    */
   Criterio createCriterio();
+
+  /**
+   * Returns a new object of class '<em>Valor Criterio</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Valor Criterio</em>'.
+   * @generated
+   */
+  ValorCriterio createValorCriterio();
 
   /**
    * Returns a new object of class '<em>Criterio Type</em>'.

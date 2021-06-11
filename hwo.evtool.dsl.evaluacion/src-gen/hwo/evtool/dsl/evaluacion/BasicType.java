@@ -3,6 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +21,7 @@ package hwo.evtool.dsl.evaluacion;
  * @model
  * @generated
  */
-public interface BasicType extends ElementType
+public interface BasicType extends EObject
 {
   /**
    * Returns the value of the '<em><b>Type Name</b></em>' attribute.

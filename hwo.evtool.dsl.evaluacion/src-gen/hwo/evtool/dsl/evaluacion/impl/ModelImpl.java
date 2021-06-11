@@ -3,7 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.CmpnntEvaluacion;
+import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Model;
 
@@ -44,7 +44,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<CmpnntEvaluacion> entities;
+  protected EList<CmpntEvaluacion> entities;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,11 +73,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<CmpnntEvaluacion> getEntities()
+  public EList<CmpntEvaluacion> getEntities()
   {
     if (entities == null)
     {
-      entities = new EObjectContainmentEList<CmpnntEvaluacion>(CmpnntEvaluacion.class, this, EvaluacionPackage.MODEL__ENTITIES);
+      entities = new EObjectContainmentEList<CmpntEvaluacion>(CmpntEvaluacion.class, this, EvaluacionPackage.MODEL__ENTITIES);
     }
     return entities;
   }
@@ -127,7 +127,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case EvaluacionPackage.MODEL__ENTITIES:
         getEntities().clear();
-        getEntities().addAll((Collection<? extends CmpnntEvaluacion>)newValue);
+        getEntities().addAll((Collection<? extends CmpntEvaluacion>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
