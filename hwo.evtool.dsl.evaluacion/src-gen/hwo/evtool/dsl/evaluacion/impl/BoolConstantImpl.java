@@ -3,57 +3,56 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
+import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.ValorCriterio;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Valor Criterio</b></em>'.
+ * An implementation of the model object '<em><b>Bool Constant</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ValorCriterioImpl#getValorCriterio <em>Valor Criterio</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.BoolConstantImpl#getValor <em>Valor</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements ValorCriterio
+public class BoolConstantImpl extends AtomoImpl implements BoolConstant
 {
   /**
-   * The default value of the '{@link #getValorCriterio() <em>Valor Criterio</em>}' attribute.
+   * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValorCriterio()
+   * @see #getValor()
    * @generated
    * @ordered
    */
-  protected static final String VALOR_CRITERIO_EDEFAULT = null;
+  protected static final String VALOR_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getValorCriterio() <em>Valor Criterio</em>}' attribute.
+   * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValorCriterio()
+   * @see #getValor()
    * @generated
    * @ordered
    */
-  protected String valorCriterio = VALOR_CRITERIO_EDEFAULT;
+  protected String valor = VALOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ValorCriterioImpl()
+  protected BoolConstantImpl()
   {
     super();
   }
@@ -66,7 +65,7 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.VALOR_CRITERIO;
+    return EvaluacionPackage.Literals.BOOL_CONSTANT;
   }
 
   /**
@@ -75,9 +74,9 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    */
   @Override
-  public String getValorCriterio()
+  public String getValor()
   {
-    return valorCriterio;
+    return valor;
   }
 
   /**
@@ -86,12 +85,12 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
    * @generated
    */
   @Override
-  public void setValorCriterio(String newValorCriterio)
+  public void setValor(String newValor)
   {
-    String oldValorCriterio = valorCriterio;
-    valorCriterio = newValorCriterio;
+    String oldValor = valor;
+    valor = newValor;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO, oldValorCriterio, valorCriterio));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.BOOL_CONSTANT__VALOR, oldValor, valor));
   }
 
   /**
@@ -104,8 +103,8 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
-        return getValorCriterio();
+      case EvaluacionPackage.BOOL_CONSTANT__VALOR:
+        return getValor();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +119,8 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
-        setValorCriterio((String)newValue);
+      case EvaluacionPackage.BOOL_CONSTANT__VALOR:
+        setValor((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +136,8 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
-        setValorCriterio(VALOR_CRITERIO_EDEFAULT);
+      case EvaluacionPackage.BOOL_CONSTANT__VALOR:
+        setValor(VALOR_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +153,8 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case EvaluacionPackage.VALOR_CRITERIO__VALOR_CRITERIO:
-        return VALOR_CRITERIO_EDEFAULT == null ? valorCriterio != null : !VALOR_CRITERIO_EDEFAULT.equals(valorCriterio);
+      case EvaluacionPackage.BOOL_CONSTANT__VALOR:
+        return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
     }
     return super.eIsSet(featureID);
   }
@@ -171,10 +170,10 @@ public class ValorCriterioImpl extends MinimalEObjectImpl.Container implements V
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (valorCriterio: ");
-    result.append(valorCriterio);
+    result.append(" (valor: ");
+    result.append(valor);
     result.append(')');
     return result.toString();
   }
 
-} //ValorCriterioImpl
+} //BoolConstantImpl

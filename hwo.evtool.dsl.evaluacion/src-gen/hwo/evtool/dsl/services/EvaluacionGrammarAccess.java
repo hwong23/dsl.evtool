@@ -6,6 +6,7 @@ package hwo.evtool.dsl.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
@@ -110,14 +111,24 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Keyword cCriterioKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
-		private final Assignment cValorAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cValorValorCriterioParserRuleCall_1_2_0 = (RuleCall)cValorAssignment_1_2.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Assignment cExpresionAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cExpresionExpresionParserRuleCall_1_3_0 = (RuleCall)cExpresionAssignment_1_3.eContents().get(0);
+		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
+		private final Keyword cColonKeyword_1_4_0 = (Keyword)cGroup_1_4.eContents().get(0);
+		private final Assignment cSoporteAssignment_1_4_1 = (Assignment)cGroup_1_4.eContents().get(1);
+		private final RuleCall cSoporteExpresionParserRuleCall_1_4_1_0 = (RuleCall)cSoporteAssignment_1_4_1.eContents().get(0);
 		
 		//Criterio:
-		//    type=CriterioType | 'criterio' name = ID valor = ValorCriterio;
+		//    type=CriterioType | 'criterio' name = ID
+		//    '=' expresion = Expresion
+		//    (':' soporte = Expresion)?
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//type=CriterioType | 'criterio' name = ID valor = ValorCriterio
+		//type=CriterioType | 'criterio' name = ID
+		//'=' expresion = Expresion
+		//(':' soporte = Expresion)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//type=CriterioType
@@ -126,7 +137,9 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//CriterioType
 		public RuleCall getTypeCriterioTypeParserRuleCall_0_0() { return cTypeCriterioTypeParserRuleCall_0_0; }
 		
-		//'criterio' name = ID valor = ValorCriterio
+		//'criterio' name = ID
+		//   '=' expresion = Expresion
+		//   (':' soporte = Expresion)?
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//'criterio'
@@ -138,34 +151,109 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
 		
-		//valor = ValorCriterio
-		public Assignment getValorAssignment_1_2() { return cValorAssignment_1_2; }
+		//'='
+		public Keyword getEqualsSignKeyword_1_2() { return cEqualsSignKeyword_1_2; }
 		
-		//ValorCriterio
-		public RuleCall getValorValorCriterioParserRuleCall_1_2_0() { return cValorValorCriterioParserRuleCall_1_2_0; }
+		//expresion = Expresion
+		public Assignment getExpresionAssignment_1_3() { return cExpresionAssignment_1_3; }
+		
+		//Expresion
+		public RuleCall getExpresionExpresionParserRuleCall_1_3_0() { return cExpresionExpresionParserRuleCall_1_3_0; }
+		
+		//(':' soporte = Expresion)?
+		public Group getGroup_1_4() { return cGroup_1_4; }
+		
+		//':'
+		public Keyword getColonKeyword_1_4_0() { return cColonKeyword_1_4_0; }
+		
+		//soporte = Expresion
+		public Assignment getSoporteAssignment_1_4_1() { return cSoporteAssignment_1_4_1; }
+		
+		//Expresion
+		public RuleCall getSoporteExpresionParserRuleCall_1_4_1_0() { return cSoporteExpresionParserRuleCall_1_4_1_0; }
 	}
-	public class ValorCriterioElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ValorCriterio");
-		private final Assignment cValorCriterioAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cValorCriterioAlternatives_0 = (Alternatives)cValorCriterioAssignment.eContents().get(0);
-		private final Keyword cValorCriterioSKeyword_0_0 = (Keyword)cValorCriterioAlternatives_0.eContents().get(0);
-		private final Keyword cValorCriterioNKeyword_0_1 = (Keyword)cValorCriterioAlternatives_0.eContents().get(1);
+	public class ExpresionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Expresion");
+		private final RuleCall cAtomoParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		//ValorCriterio:
-		//    valorCriterio = ('S' | 'N');
+		//Expresion:
+		//    Atomo;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//valorCriterio = ('S' | 'N')
-		public Assignment getValorCriterioAssignment() { return cValorCriterioAssignment; }
+		//Atomo
+		public RuleCall getAtomoParserRuleCall() { return cAtomoParserRuleCall; }
+	}
+	public class AtomoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Atomo");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cIntConstantAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Assignment cValorAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cValorINTTerminalRuleCall_0_1_0 = (RuleCall)cValorAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Action cStringConstantAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cValorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cValorSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cValorAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Action cBoolConstantAction_2_0 = (Action)cGroup_2.eContents().get(0);
+		private final Assignment cValorAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final Alternatives cValorAlternatives_2_1_0 = (Alternatives)cValorAssignment_2_1.eContents().get(0);
+		private final Keyword cValorSKeyword_2_1_0_0 = (Keyword)cValorAlternatives_2_1_0.eContents().get(0);
+		private final Keyword cValorNKeyword_2_1_0_1 = (Keyword)cValorAlternatives_2_1_0.eContents().get(1);
+		
+		//Atomo:
+		//    {IntConstant} valor=INT |
+		//    {StringConstant} valor=STRING |
+		//    {BoolConstant} valor= ('S' | 'N')
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{IntConstant} valor=INT |
+		//{StringConstant} valor=STRING |
+		//{BoolConstant} valor= ('S' | 'N')
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//{IntConstant} valor=INT
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//{IntConstant}
+		public Action getIntConstantAction_0_0() { return cIntConstantAction_0_0; }
+		
+		//valor=INT
+		public Assignment getValorAssignment_0_1() { return cValorAssignment_0_1; }
+		
+		//INT
+		public RuleCall getValorINTTerminalRuleCall_0_1_0() { return cValorINTTerminalRuleCall_0_1_0; }
+		
+		//{StringConstant} valor=STRING
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//{StringConstant}
+		public Action getStringConstantAction_1_0() { return cStringConstantAction_1_0; }
+		
+		//valor=STRING
+		public Assignment getValorAssignment_1_1() { return cValorAssignment_1_1; }
+		
+		//STRING
+		public RuleCall getValorSTRINGTerminalRuleCall_1_1_0() { return cValorSTRINGTerminalRuleCall_1_1_0; }
+		
+		//{BoolConstant} valor= ('S' | 'N')
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//{BoolConstant}
+		public Action getBoolConstantAction_2_0() { return cBoolConstantAction_2_0; }
+		
+		//valor= ('S' | 'N')
+		public Assignment getValorAssignment_2_1() { return cValorAssignment_2_1; }
 		
 		//('S' | 'N')
-		public Alternatives getValorCriterioAlternatives_0() { return cValorCriterioAlternatives_0; }
+		public Alternatives getValorAlternatives_2_1_0() { return cValorAlternatives_2_1_0; }
 		
 		//'S'
-		public Keyword getValorCriterioSKeyword_0_0() { return cValorCriterioSKeyword_0_0; }
+		public Keyword getValorSKeyword_2_1_0_0() { return cValorSKeyword_2_1_0_0; }
 		
 		//'N'
-		public Keyword getValorCriterioNKeyword_0_1() { return cValorCriterioNKeyword_0_1; }
+		public Keyword getValorNKeyword_2_1_0_1() { return cValorNKeyword_2_1_0_1; }
 	}
 	public class CriterioTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.CriterioType");
@@ -215,40 +303,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cComponenteTypeParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
 		//ElementType:
-		////    BasicType | ComponenteType;
 		//    ComponenteType;
 		@Override public ParserRule getRule() { return rule; }
 		
-		////    BasicType | ComponenteType;
-		//    ComponenteType
+		//ComponenteType
 		public RuleCall getComponenteTypeParserRuleCall() { return cComponenteTypeParserRuleCall; }
-	}
-	public class BasicTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.BasicType");
-		private final Assignment cTypeNameAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cTypeNameAlternatives_0 = (Alternatives)cTypeNameAssignment.eContents().get(0);
-		private final Keyword cTypeNameStringKeyword_0_0 = (Keyword)cTypeNameAlternatives_0.eContents().get(0);
-		private final Keyword cTypeNameIntKeyword_0_1 = (Keyword)cTypeNameAlternatives_0.eContents().get(1);
-		private final Keyword cTypeNameBooleanKeyword_0_2 = (Keyword)cTypeNameAlternatives_0.eContents().get(2);
-		
-		//BasicType:
-		//    typeName=('string' | 'int' | 'boolean');
-		@Override public ParserRule getRule() { return rule; }
-		
-		//typeName=('string' | 'int' | 'boolean')
-		public Assignment getTypeNameAssignment() { return cTypeNameAssignment; }
-		
-		//('string' | 'int' | 'boolean')
-		public Alternatives getTypeNameAlternatives_0() { return cTypeNameAlternatives_0; }
-		
-		//'string'
-		public Keyword getTypeNameStringKeyword_0_0() { return cTypeNameStringKeyword_0_0; }
-		
-		//'int'
-		public Keyword getTypeNameIntKeyword_0_1() { return cTypeNameIntKeyword_0_1; }
-		
-		//'boolean'
-		public Keyword getTypeNameBooleanKeyword_0_2() { return cTypeNameBooleanKeyword_0_2; }
 	}
 	public class ComponenteTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ComponenteType");
@@ -274,10 +333,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final ModelElements pModel;
 	private final CmpntEvaluacionElements pCmpntEvaluacion;
 	private final CriterioElements pCriterio;
-	private final ValorCriterioElements pValorCriterio;
+	private final ExpresionElements pExpresion;
+	private final AtomoElements pAtomo;
 	private final CriterioTypeElements pCriterioType;
 	private final ElementTypeElements pElementType;
-	private final BasicTypeElements pBasicType;
 	private final ComponenteTypeElements pComponenteType;
 	
 	private final Grammar grammar;
@@ -292,10 +351,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.pModel = new ModelElements();
 		this.pCmpntEvaluacion = new CmpntEvaluacionElements();
 		this.pCriterio = new CriterioElements();
-		this.pValorCriterio = new ValorCriterioElements();
+		this.pExpresion = new ExpresionElements();
+		this.pAtomo = new AtomoElements();
 		this.pCriterioType = new CriterioTypeElements();
 		this.pElementType = new ElementTypeElements();
-		this.pBasicType = new BasicTypeElements();
 		this.pComponenteType = new ComponenteTypeElements();
 	}
 	
@@ -349,7 +408,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Criterio:
-	//    type=CriterioType | 'criterio' name = ID valor = ValorCriterio;
+	//    type=CriterioType | 'criterio' name = ID
+	//    '=' expresion = Expresion
+	//    (':' soporte = Expresion)?
+	//;
 	public CriterioElements getCriterioAccess() {
 		return pCriterio;
 	}
@@ -358,14 +420,27 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getCriterioAccess().getRule();
 	}
 	
-	//ValorCriterio:
-	//    valorCriterio = ('S' | 'N');
-	public ValorCriterioElements getValorCriterioAccess() {
-		return pValorCriterio;
+	//Expresion:
+	//    Atomo;
+	public ExpresionElements getExpresionAccess() {
+		return pExpresion;
 	}
 	
-	public ParserRule getValorCriterioRule() {
-		return getValorCriterioAccess().getRule();
+	public ParserRule getExpresionRule() {
+		return getExpresionAccess().getRule();
+	}
+	
+	//Atomo:
+	//    {IntConstant} valor=INT |
+	//    {StringConstant} valor=STRING |
+	//    {BoolConstant} valor= ('S' | 'N')
+	//;
+	public AtomoElements getAtomoAccess() {
+		return pAtomo;
+	}
+	
+	public ParserRule getAtomoRule() {
+		return getAtomoAccess().getRule();
 	}
 	
 	//CriterioType:
@@ -379,7 +454,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//ElementType:
-	////    BasicType | ComponenteType;
 	//    ComponenteType;
 	public ElementTypeElements getElementTypeAccess() {
 		return pElementType;
@@ -387,16 +461,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	public ParserRule getElementTypeRule() {
 		return getElementTypeAccess().getRule();
-	}
-	
-	//BasicType:
-	//    typeName=('string' | 'int' | 'boolean');
-	public BasicTypeElements getBasicTypeAccess() {
-		return pBasicType;
-	}
-	
-	public ParserRule getBasicTypeRule() {
-		return getBasicTypeAccess().getRule();
 	}
 	
 	//ComponenteType:

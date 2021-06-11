@@ -242,38 +242,92 @@ ruleCriterio returns [EObject current=null]
 					}
 				)
 			)
+			otherlv_3='='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getCriterioAccess().getEqualsSignKeyword_1_2());
+			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCriterioAccess().getValorValorCriterioParserRuleCall_1_2_0());
+						newCompositeNode(grammarAccess.getCriterioAccess().getExpresionExpresionParserRuleCall_1_3_0());
 					}
-					lv_valor_3_0=ruleValorCriterio
+					lv_expresion_4_0=ruleExpresion
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCriterioRule());
 						}
 						set(
 							$current,
-							"valor",
-							lv_valor_3_0,
-							"hwo.evtool.dsl.Evaluacion.ValorCriterio");
+							"expresion",
+							lv_expresion_4_0,
+							"hwo.evtool.dsl.Evaluacion.Expresion");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
+			(
+				otherlv_5=':'
+				{
+					newLeafNode(otherlv_5, grammarAccess.getCriterioAccess().getColonKeyword_1_4_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getCriterioAccess().getSoporteExpresionParserRuleCall_1_4_1_0());
+						}
+						lv_soporte_6_0=ruleExpresion
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getCriterioRule());
+							}
+							set(
+								$current,
+								"soporte",
+								lv_soporte_6_0,
+								"hwo.evtool.dsl.Evaluacion.Expresion");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+			)?
 		)
 	)
 ;
 
-// Entry rule entryRuleValorCriterio
-entryRuleValorCriterio returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getValorCriterioRule()); }
-	iv_ruleValorCriterio=ruleValorCriterio
-	{ $current=$iv_ruleValorCriterio.current; }
+// Entry rule entryRuleExpresion
+entryRuleExpresion returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getExpresionRule()); }
+	iv_ruleExpresion=ruleExpresion
+	{ $current=$iv_ruleExpresion.current; }
 	EOF;
 
-// Rule ValorCriterio
-ruleValorCriterio returns [EObject current=null]
+// Rule Expresion
+ruleExpresion returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	{
+		newCompositeNode(grammarAccess.getExpresionAccess().getAtomoParserRuleCall());
+	}
+	this_Atomo_0=ruleAtomo
+	{
+		$current = $this_Atomo_0.current;
+		afterParserOrEnumRuleCall();
+	}
+;
+
+// Entry rule entryRuleAtomo
+entryRuleAtomo returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAtomoRule()); }
+	iv_ruleAtomo=ruleAtomo
+	{ $current=$iv_ruleAtomo.current; }
+	EOF;
+
+// Rule Atomo
+ruleAtomo returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -283,27 +337,94 @@ ruleValorCriterio returns [EObject current=null]
 	(
 		(
 			(
-				lv_valorCriterio_0_1='S'
 				{
-					newLeafNode(lv_valorCriterio_0_1, grammarAccess.getValorCriterioAccess().getValorCriterioSKeyword_0_0());
+					$current = forceCreateModelElement(
+						grammarAccess.getAtomoAccess().getIntConstantAction_0_0(),
+						$current);
 				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getValorCriterioRule());
+			)
+			(
+				(
+					lv_valor_1_0=RULE_INT
+					{
+						newLeafNode(lv_valor_1_0, grammarAccess.getAtomoAccess().getValorINTTerminalRuleCall_0_1_0());
 					}
-					setWithLastConsumed($current, "valorCriterio", lv_valorCriterio_0_1, null);
-				}
-				    |
-				lv_valorCriterio_0_2='N'
-				{
-					newLeafNode(lv_valorCriterio_0_2, grammarAccess.getValorCriterioAccess().getValorCriterioNKeyword_0_1());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getValorCriterioRule());
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAtomoRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"valor",
+							lv_valor_1_0,
+							"org.eclipse.xtext.common.Terminals.INT");
 					}
-					setWithLastConsumed($current, "valorCriterio", lv_valorCriterio_0_2, null);
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getAtomoAccess().getStringConstantAction_1_0(),
+						$current);
 				}
+			)
+			(
+				(
+					lv_valor_3_0=RULE_STRING
+					{
+						newLeafNode(lv_valor_3_0, grammarAccess.getAtomoAccess().getValorSTRINGTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAtomoRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"valor",
+							lv_valor_3_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getAtomoAccess().getBoolConstantAction_2_0(),
+						$current);
+				}
+			)
+			(
+				(
+					(
+						lv_valor_5_1='S'
+						{
+							newLeafNode(lv_valor_5_1, grammarAccess.getAtomoAccess().getValorSKeyword_2_1_0_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAtomoRule());
+							}
+							setWithLastConsumed($current, "valor", lv_valor_5_1, null);
+						}
+						    |
+						lv_valor_5_2='N'
+						{
+							newLeafNode(lv_valor_5_2, grammarAccess.getAtomoAccess().getValorNKeyword_2_1_0_1());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAtomoRule());
+							}
+							setWithLastConsumed($current, "valor", lv_valor_5_2, null);
+						}
+					)
+				)
 			)
 		)
 	)

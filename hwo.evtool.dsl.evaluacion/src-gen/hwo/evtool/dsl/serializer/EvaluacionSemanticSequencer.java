@@ -4,14 +4,15 @@
 package hwo.evtool.dsl.serializer;
 
 import com.google.inject.Inject;
-import hwo.evtool.dsl.evaluacion.BasicType;
+import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.Model;
-import hwo.evtool.dsl.evaluacion.ValorCriterio;
+import hwo.evtool.dsl.evaluacion.StringConstant;
 import hwo.evtool.dsl.services.EvaluacionGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -38,8 +39,8 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == EvaluacionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case EvaluacionPackage.BASIC_TYPE:
-				sequence_BasicType(context, (BasicType) semanticObject); 
+			case EvaluacionPackage.BOOL_CONSTANT:
+				sequence_Atomo(context, (BoolConstant) semanticObject); 
 				return; 
 			case EvaluacionPackage.CMPNT_EVALUACION:
 				sequence_CmpntEvaluacion(context, (CmpntEvaluacion) semanticObject); 
@@ -53,11 +54,14 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.CRITERIO_TYPE:
 				sequence_CriterioType(context, (CriterioType) semanticObject); 
 				return; 
+			case EvaluacionPackage.INT_CONSTANT:
+				sequence_Atomo(context, (IntConstant) semanticObject); 
+				return; 
 			case EvaluacionPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
-			case EvaluacionPackage.VALOR_CRITERIO:
-				sequence_ValorCriterio(context, (ValorCriterio) semanticObject); 
+			case EvaluacionPackage.STRING_CONSTANT:
+				sequence_Atomo(context, (StringConstant) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -66,13 +70,52 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     BasicType returns BasicType
+	 *     Expresion returns BoolConstant
+	 *     Atomo returns BoolConstant
 	 *
 	 * Constraint:
-	 *     (typeName='string' | typeName='int' | typeName='boolean')
+	 *     (valor='S' | valor='N')
 	 */
-	protected void sequence_BasicType(ISerializationContext context, BasicType semanticObject) {
+	protected void sequence_Atomo(ISerializationContext context, BoolConstant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Expresion returns IntConstant
+	 *     Atomo returns IntConstant
+	 *
+	 * Constraint:
+	 *     valor=INT
+	 */
+	protected void sequence_Atomo(ISerializationContext context, IntConstant semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.INT_CONSTANT__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.INT_CONSTANT__VALOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtomoAccess().getValorINTTerminalRuleCall_0_1_0(), semanticObject.getValor());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Expresion returns StringConstant
+	 *     Atomo returns StringConstant
+	 *
+	 * Constraint:
+	 *     valor=STRING
+	 */
+	protected void sequence_Atomo(ISerializationContext context, StringConstant semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.STRING_CONSTANT__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.STRING_CONSTANT__VALOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtomoAccess().getValorSTRINGTerminalRuleCall_1_1_0(), semanticObject.getValor());
+		feeder.finish();
 	}
 	
 	
@@ -124,7 +167,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Criterio returns Criterio
 	 *
 	 * Constraint:
-	 *     (type=CriterioType | (name=ID valor=ValorCriterio))
+	 *     (type=CriterioType | (name=ID expresion=Expresion soporte=Expresion?))
 	 */
 	protected void sequence_Criterio(ISerializationContext context, Criterio semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -139,18 +182,6 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     entities+=CmpntEvaluacion+
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     ValorCriterio returns ValorCriterio
-	 *
-	 * Constraint:
-	 *     (valorCriterio='S' | valorCriterio='N')
-	 */
-	protected void sequence_ValorCriterio(ISerializationContext context, ValorCriterio semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

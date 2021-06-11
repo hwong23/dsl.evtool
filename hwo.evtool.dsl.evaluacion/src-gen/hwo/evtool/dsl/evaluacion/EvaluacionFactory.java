@@ -51,13 +51,22 @@ public interface EvaluacionFactory extends EFactory
   Criterio createCriterio();
 
   /**
-   * Returns a new object of class '<em>Valor Criterio</em>'.
+   * Returns a new object of class '<em>Expresion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Valor Criterio</em>'.
+   * @return a new object of class '<em>Expresion</em>'.
    * @generated
    */
-  ValorCriterio createValorCriterio();
+  Expresion createExpresion();
+
+  /**
+   * Returns a new object of class '<em>Atomo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atomo</em>'.
+   * @generated
+   */
+  Atomo createAtomo();
 
   /**
    * Returns a new object of class '<em>Criterio Type</em>'.
@@ -78,15 +87,6 @@ public interface EvaluacionFactory extends EFactory
   ElementType createElementType();
 
   /**
-   * Returns a new object of class '<em>Basic Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Basic Type</em>'.
-   * @generated
-   */
-  BasicType createBasicType();
-
-  /**
    * Returns a new object of class '<em>Componente Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -94,6 +94,33 @@ public interface EvaluacionFactory extends EFactory
    * @generated
    */
   ComponenteType createComponenteType();
+
+  /**
+   * Returns a new object of class '<em>Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Constant</em>'.
+   * @generated
+   */
+  IntConstant createIntConstant();
+
+  /**
+   * Returns a new object of class '<em>String Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Constant</em>'.
+   * @generated
+   */
+  StringConstant createStringConstant();
+
+  /**
+   * Returns a new object of class '<em>Bool Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bool Constant</em>'.
+   * @generated
+   */
+  BoolConstant createBoolConstant();
 
   /**
    * Returns the package supported by this factory.

@@ -3,57 +3,56 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.BasicType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.IntConstant;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Basic Type</b></em>'.
+ * An implementation of the model object '<em><b>Int Constant</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.BasicTypeImpl#getTypeName <em>Type Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl#getValor <em>Valor</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class BasicTypeImpl extends MinimalEObjectImpl.Container implements BasicType
+public class IntConstantImpl extends AtomoImpl implements IntConstant
 {
   /**
-   * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+   * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTypeName()
+   * @see #getValor()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_NAME_EDEFAULT = null;
+  protected static final int VALOR_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
+   * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTypeName()
+   * @see #getValor()
    * @generated
    * @ordered
    */
-  protected String typeName = TYPE_NAME_EDEFAULT;
+  protected int valor = VALOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected BasicTypeImpl()
+  protected IntConstantImpl()
   {
     super();
   }
@@ -66,7 +65,7 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.BASIC_TYPE;
+    return EvaluacionPackage.Literals.INT_CONSTANT;
   }
 
   /**
@@ -75,9 +74,9 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
    * @generated
    */
   @Override
-  public String getTypeName()
+  public int getValor()
   {
-    return typeName;
+    return valor;
   }
 
   /**
@@ -86,12 +85,12 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
    * @generated
    */
   @Override
-  public void setTypeName(String newTypeName)
+  public void setValor(int newValor)
   {
-    String oldTypeName = typeName;
-    typeName = newTypeName;
+    int oldValor = valor;
+    valor = newValor;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.BASIC_TYPE__TYPE_NAME, oldTypeName, typeName));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.INT_CONSTANT__VALOR, oldValor, valor));
   }
 
   /**
@@ -104,8 +103,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        return getTypeName();
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        return getValor();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +119,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        setTypeName((String)newValue);
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        setValor((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +136,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        setTypeName(TYPE_NAME_EDEFAULT);
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        setValor(VALOR_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +153,8 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
   {
     switch (featureID)
     {
-      case EvaluacionPackage.BASIC_TYPE__TYPE_NAME:
-        return TYPE_NAME_EDEFAULT == null ? typeName != null : !TYPE_NAME_EDEFAULT.equals(typeName);
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        return valor != VALOR_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -171,10 +170,10 @@ public class BasicTypeImpl extends MinimalEObjectImpl.Container implements Basic
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (typeName: ");
-    result.append(typeName);
+    result.append(" (valor: ");
+    result.append(valor);
     result.append(')');
     return result.toString();
   }
 
-} //BasicTypeImpl
+} //IntConstantImpl

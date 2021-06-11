@@ -10,22 +10,28 @@ CmpntEvaluacion:
 	'}';
 
 Criterio:
-	type=CriterioType | 'criterio' name = ID valor = ValorCriterio;
+	type=CriterioType | 'criterio' name = ID 
+	'=' expresion = Expresion
+	(':' soporte = Expresion)?
+;
 
+Expresion:
+	Atomo;
 
-ValorCriterio:
-	valorCriterio = ('S' | 'N');
+Atomo:
+	{IntConstant} valor=INT |
+	{StringConstant} valor=STRING |
+	{BoolConstant} valor= ('S' | 'N')
+;
 
 
 CriterioType:
 	elementType = ElementType (array?='[' (length=INT)? ']')?;
 
 ElementType:
-//	BasicType | ComponenteType;
 	ComponenteType;
-
-BasicType:
-	typeName=('string' | 'int' | 'boolean');
 
 ComponenteType:
 	componente = [CmpntEvaluacion];
+
+	

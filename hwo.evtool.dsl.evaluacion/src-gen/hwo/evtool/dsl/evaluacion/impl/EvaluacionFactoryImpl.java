@@ -68,11 +68,14 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.MODEL: return createModel();
       case EvaluacionPackage.CMPNT_EVALUACION: return createCmpntEvaluacion();
       case EvaluacionPackage.CRITERIO: return createCriterio();
-      case EvaluacionPackage.VALOR_CRITERIO: return createValorCriterio();
+      case EvaluacionPackage.EXPRESION: return createExpresion();
+      case EvaluacionPackage.ATOMO: return createAtomo();
       case EvaluacionPackage.CRITERIO_TYPE: return createCriterioType();
       case EvaluacionPackage.ELEMENT_TYPE: return createElementType();
-      case EvaluacionPackage.BASIC_TYPE: return createBasicType();
       case EvaluacionPackage.COMPONENTE_TYPE: return createComponenteType();
+      case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
+      case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
+      case EvaluacionPackage.BOOL_CONSTANT: return createBoolConstant();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -120,10 +123,22 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public ValorCriterio createValorCriterio()
+  public Expresion createExpresion()
   {
-    ValorCriterioImpl valorCriterio = new ValorCriterioImpl();
-    return valorCriterio;
+    ExpresionImpl expresion = new ExpresionImpl();
+    return expresion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Atomo createAtomo()
+  {
+    AtomoImpl atomo = new AtomoImpl();
+    return atomo;
   }
 
   /**
@@ -156,10 +171,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public BasicType createBasicType()
+  public ComponenteType createComponenteType()
   {
-    BasicTypeImpl basicType = new BasicTypeImpl();
-    return basicType;
+    ComponenteTypeImpl componenteType = new ComponenteTypeImpl();
+    return componenteType;
   }
 
   /**
@@ -168,10 +183,34 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public ComponenteType createComponenteType()
+  public IntConstant createIntConstant()
   {
-    ComponenteTypeImpl componenteType = new ComponenteTypeImpl();
-    return componenteType;
+    IntConstantImpl intConstant = new IntConstantImpl();
+    return intConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public StringConstant createStringConstant()
+  {
+    StringConstantImpl stringConstant = new StringConstantImpl();
+    return stringConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public BoolConstant createBoolConstant()
+  {
+    BoolConstantImpl boolConstant = new BoolConstantImpl();
+    return boolConstant;
   }
 
   /**
