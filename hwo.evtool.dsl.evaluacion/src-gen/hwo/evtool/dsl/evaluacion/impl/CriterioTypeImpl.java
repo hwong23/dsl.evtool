@@ -4,8 +4,8 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.CriterioType;
-import hwo.evtool.dsl.evaluacion.ElementType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.Expresion;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,64 +23,54 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getElementType <em>Element Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#isArray <em>Array</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getExpresion <em>Expresion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getSoporte <em>Soporte</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements CriterioType
+public class CriterioTypeImpl extends CriterioImpl implements CriterioType
 {
   /**
-   * The cached value of the '{@link #getElementType() <em>Element Type</em>}' containment reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElementType()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected ElementType elementType;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The default value of the '{@link #isArray() <em>Array</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isArray()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final boolean ARRAY_EDEFAULT = false;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #isArray() <em>Array</em>}' attribute.
+   * The cached value of the '{@link #getExpresion() <em>Expresion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isArray()
+   * @see #getExpresion()
    * @generated
    * @ordered
    */
-  protected boolean array = ARRAY_EDEFAULT;
+  protected Expresion expresion;
 
   /**
-   * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
+   * The cached value of the '{@link #getSoporte() <em>Soporte</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLength()
+   * @see #getSoporte()
    * @generated
    * @ordered
    */
-  protected static final int LENGTH_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLength()
-   * @generated
-   * @ordered
-   */
-  protected int length = LENGTH_EDEFAULT;
+  protected Expresion soporte;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,9 +99,9 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
    * @generated
    */
   @Override
-  public ElementType getElementType()
+  public String getName()
   {
-    return elementType;
+    return name;
   }
 
   /**
@@ -120,13 +109,38 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElementType(ElementType newElementType, NotificationChain msgs)
+  @Override
+  public void setName(String newName)
   {
-    ElementType oldElementType = elementType;
-    elementType = newElementType;
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Expresion getExpresion()
+  {
+    return expresion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExpresion(Expresion newExpresion, NotificationChain msgs)
+  {
+    Expresion oldExpresion = expresion;
+    expresion = newExpresion;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, oldElementType, newElementType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__EXPRESION, oldExpresion, newExpresion);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -138,20 +152,20 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
    * @generated
    */
   @Override
-  public void setElementType(ElementType newElementType)
+  public void setExpresion(Expresion newExpresion)
   {
-    if (newElementType != elementType)
+    if (newExpresion != expresion)
     {
       NotificationChain msgs = null;
-      if (elementType != null)
-        msgs = ((InternalEObject)elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, null, msgs);
-      if (newElementType != null)
-        msgs = ((InternalEObject)newElementType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, null, msgs);
-      msgs = basicSetElementType(newElementType, msgs);
+      if (expresion != null)
+        msgs = ((InternalEObject)expresion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__EXPRESION, null, msgs);
+      if (newExpresion != null)
+        msgs = ((InternalEObject)newExpresion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__EXPRESION, null, msgs);
+      msgs = basicSetExpresion(newExpresion, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE, newElementType, newElementType));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__EXPRESION, newExpresion, newExpresion));
   }
 
   /**
@@ -160,9 +174,9 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
    * @generated
    */
   @Override
-  public boolean isArray()
+  public Expresion getSoporte()
   {
-    return array;
+    return soporte;
   }
 
   /**
@@ -170,13 +184,16 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setArray(boolean newArray)
+  public NotificationChain basicSetSoporte(Expresion newSoporte, NotificationChain msgs)
   {
-    boolean oldArray = array;
-    array = newArray;
+    Expresion oldSoporte = soporte;
+    soporte = newSoporte;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__ARRAY, oldArray, array));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__SOPORTE, oldSoporte, newSoporte);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -185,23 +202,20 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
    * @generated
    */
   @Override
-  public int getLength()
+  public void setSoporte(Expresion newSoporte)
   {
-    return length;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setLength(int newLength)
-  {
-    int oldLength = length;
-    length = newLength;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__LENGTH, oldLength, length));
+    if (newSoporte != soporte)
+    {
+      NotificationChain msgs = null;
+      if (soporte != null)
+        msgs = ((InternalEObject)soporte).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__SOPORTE, null, msgs);
+      if (newSoporte != null)
+        msgs = ((InternalEObject)newSoporte).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.CRITERIO_TYPE__SOPORTE, null, msgs);
+      msgs = basicSetSoporte(newSoporte, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__SOPORTE, newSoporte, newSoporte));
   }
 
   /**
@@ -214,8 +228,10 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
-        return basicSetElementType(null, msgs);
+      case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
+        return basicSetExpresion(null, msgs);
+      case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
+        return basicSetSoporte(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -230,12 +246,12 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
-        return getElementType();
-      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
-        return isArray();
-      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
-        return getLength();
+      case EvaluacionPackage.CRITERIO_TYPE__NAME:
+        return getName();
+      case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
+        return getExpresion();
+      case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
+        return getSoporte();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -250,14 +266,14 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
-        setElementType((ElementType)newValue);
+      case EvaluacionPackage.CRITERIO_TYPE__NAME:
+        setName((String)newValue);
         return;
-      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
-        setArray((Boolean)newValue);
+      case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
+        setExpresion((Expresion)newValue);
         return;
-      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
-        setLength((Integer)newValue);
+      case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
+        setSoporte((Expresion)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -273,14 +289,14 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
-        setElementType((ElementType)null);
+      case EvaluacionPackage.CRITERIO_TYPE__NAME:
+        setName(NAME_EDEFAULT);
         return;
-      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
-        setArray(ARRAY_EDEFAULT);
+      case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
+        setExpresion((Expresion)null);
         return;
-      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
-        setLength(LENGTH_EDEFAULT);
+      case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
+        setSoporte((Expresion)null);
         return;
     }
     super.eUnset(featureID);
@@ -296,12 +312,12 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__ELEMENT_TYPE:
-        return elementType != null;
-      case EvaluacionPackage.CRITERIO_TYPE__ARRAY:
-        return array != ARRAY_EDEFAULT;
-      case EvaluacionPackage.CRITERIO_TYPE__LENGTH:
-        return length != LENGTH_EDEFAULT;
+      case EvaluacionPackage.CRITERIO_TYPE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
+        return expresion != null;
+      case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
+        return soporte != null;
     }
     return super.eIsSet(featureID);
   }
@@ -317,10 +333,8 @@ public class CriterioTypeImpl extends MinimalEObjectImpl.Container implements Cr
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (array: ");
-    result.append(array);
-    result.append(", length: ");
-    result.append(length);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

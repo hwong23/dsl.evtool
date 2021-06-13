@@ -3,7 +3,6 @@
  */
 package hwo.evtool.dsl.evaluacion;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,81 +13,81 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getElementType <em>Element Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#isArray <em>Array</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getLength <em>Length</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getExpresion <em>Expresion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CriterioType#getSoporte <em>Soporte</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType()
  * @model
  * @generated
  */
-public interface CriterioType extends EObject
+public interface CriterioType extends Criterio
 {
   /**
-   * Returns the value of the '<em><b>Element Type</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Element Type</em>' containment reference.
-   * @see #setElementType(ElementType)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_ElementType()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Expresion</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Expresion</em>' containment reference.
+   * @see #setExpresion(Expresion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Expresion()
    * @model containment="true"
    * @generated
    */
-  ElementType getElementType();
+  Expresion getExpresion();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getElementType <em>Element Type</em>}' containment reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getExpresion <em>Expresion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Element Type</em>' containment reference.
-   * @see #getElementType()
+   * @param value the new value of the '<em>Expresion</em>' containment reference.
+   * @see #getExpresion()
    * @generated
    */
-  void setElementType(ElementType value);
+  void setExpresion(Expresion value);
 
   /**
-   * Returns the value of the '<em><b>Array</b></em>' attribute.
+   * Returns the value of the '<em><b>Soporte</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Array</em>' attribute.
-   * @see #setArray(boolean)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Array()
-   * @model
+   * @return the value of the '<em>Soporte</em>' containment reference.
+   * @see #setSoporte(Expresion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Soporte()
+   * @model containment="true"
    * @generated
    */
-  boolean isArray();
+  Expresion getSoporte();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#isArray <em>Array</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getSoporte <em>Soporte</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Array</em>' attribute.
-   * @see #isArray()
+   * @param value the new value of the '<em>Soporte</em>' containment reference.
+   * @see #getSoporte()
    * @generated
    */
-  void setArray(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Length</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Length</em>' attribute.
-   * @see #setLength(int)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterioType_Length()
-   * @model
-   * @generated
-   */
-  int getLength();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CriterioType#getLength <em>Length</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Length</em>' attribute.
-   * @see #getLength()
-   * @generated
-   */
-  void setLength(int value);
+  void setSoporte(Expresion value);
 
 } // CriterioType

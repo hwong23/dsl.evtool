@@ -12,8 +12,10 @@
         eType="#//Criterio" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Criterio">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//CriterioType"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ComplejoType"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CriterioType" eSuperTypes="#//Criterio">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" eType="#//Expresion"
         containment="true"/>
@@ -22,7 +24,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Atomo" eSuperTypes="#//Expresion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CriterioType">
+  <eClassifiers xsi:type="ecore:EClass" name="ComplejoType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementType" eType="#//ElementType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="array" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

@@ -91,6 +91,11 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createCriterioAdapter();
       }
       @Override
+      public Adapter caseCriterioType(CriterioType object)
+      {
+        return createCriterioTypeAdapter();
+      }
+      @Override
       public Adapter caseExpresion(Expresion object)
       {
         return createExpresionAdapter();
@@ -101,9 +106,9 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createAtomoAdapter();
       }
       @Override
-      public Adapter caseCriterioType(CriterioType object)
+      public Adapter caseComplejoType(ComplejoType object)
       {
-        return createCriterioTypeAdapter();
+        return createComplejoTypeAdapter();
       }
       @Override
       public Adapter caseElementType(ElementType object)
@@ -198,6 +203,21 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.CriterioType <em>Criterio Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see hwo.evtool.dsl.evaluacion.CriterioType
+   * @generated
+   */
+  public Adapter createCriterioTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Expresion <em>Expresion</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -228,16 +248,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.CriterioType <em>Criterio Type</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ComplejoType <em>Complejo Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.CriterioType
+   * @see hwo.evtool.dsl.evaluacion.ComplejoType
    * @generated
    */
-  public Adapter createCriterioTypeAdapter()
+  public Adapter createComplejoTypeAdapter()
   {
     return null;
   }

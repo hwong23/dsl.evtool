@@ -6,6 +6,7 @@ package hwo.evtool.dsl.serializer;
 import com.google.inject.Inject;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
+import hwo.evtool.dsl.evaluacion.ComplejoType;
 import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
@@ -44,6 +45,9 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case EvaluacionPackage.CMPNT_EVALUACION:
 				sequence_CmpntEvaluacion(context, (CmpntEvaluacion) semanticObject); 
+				return; 
+			case EvaluacionPackage.COMPLEJO_TYPE:
+				sequence_ComplejoType(context, (ComplejoType) semanticObject); 
 				return; 
 			case EvaluacionPackage.COMPONENTE_TYPE:
 				sequence_ComponenteType(context, (ComponenteType) semanticObject); 
@@ -133,6 +137,18 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     ComplejoType returns ComplejoType
+	 *
+	 * Constraint:
+	 *     (elementType=ElementType (array?='[' length=INT?)?)
+	 */
+	protected void sequence_ComplejoType(ISerializationContext context, ComplejoType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ElementType returns ComponenteType
 	 *     ComponenteType returns ComponenteType
 	 *
@@ -152,10 +168,11 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Criterio returns CriterioType
 	 *     CriterioType returns CriterioType
 	 *
 	 * Constraint:
-	 *     (elementType=ElementType (array?='[' length=INT?)?)
+	 *     (name=ID expresion=Expresion soporte=Expresion?)
 	 */
 	protected void sequence_CriterioType(ISerializationContext context, CriterioType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -167,10 +184,16 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Criterio returns Criterio
 	 *
 	 * Constraint:
-	 *     (type=CriterioType | (name=ID expresion=Expresion soporte=Expresion?))
+	 *     type=ComplejoType
 	 */
 	protected void sequence_Criterio(ISerializationContext context, Criterio semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCriterioAccess().getTypeComplejoTypeParserRuleCall_0_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	

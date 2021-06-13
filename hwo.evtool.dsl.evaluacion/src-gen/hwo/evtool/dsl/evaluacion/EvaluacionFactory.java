@@ -51,6 +51,15 @@ public interface EvaluacionFactory extends EFactory
   Criterio createCriterio();
 
   /**
+   * Returns a new object of class '<em>Criterio Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Criterio Type</em>'.
+   * @generated
+   */
+  CriterioType createCriterioType();
+
+  /**
    * Returns a new object of class '<em>Expresion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -69,13 +78,13 @@ public interface EvaluacionFactory extends EFactory
   Atomo createAtomo();
 
   /**
-   * Returns a new object of class '<em>Criterio Type</em>'.
+   * Returns a new object of class '<em>Complejo Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Criterio Type</em>'.
+   * @return a new object of class '<em>Complejo Type</em>'.
    * @generated
    */
-  CriterioType createCriterioType();
+  ComplejoType createComplejoType();
 
   /**
    * Returns a new object of class '<em>Element Type</em>'.

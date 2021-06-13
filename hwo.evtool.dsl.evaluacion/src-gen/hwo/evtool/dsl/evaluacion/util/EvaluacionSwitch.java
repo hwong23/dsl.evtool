@@ -94,6 +94,14 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EvaluacionPackage.CRITERIO_TYPE:
+      {
+        CriterioType criterioType = (CriterioType)theEObject;
+        T result = caseCriterioType(criterioType);
+        if (result == null) result = caseCriterio(criterioType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EvaluacionPackage.EXPRESION:
       {
         Expresion expresion = (Expresion)theEObject;
@@ -109,10 +117,10 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.CRITERIO_TYPE:
+      case EvaluacionPackage.COMPLEJO_TYPE:
       {
-        CriterioType criterioType = (CriterioType)theEObject;
-        T result = caseCriterioType(criterioType);
+        ComplejoType complejoType = (ComplejoType)theEObject;
+        T result = caseComplejoType(complejoType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -211,6 +219,22 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCriterioType(CriterioType object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Expresion</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -243,17 +267,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Complejo Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Complejo Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCriterioType(CriterioType object)
+  public T caseComplejoType(ComplejoType object)
   {
     return null;
   }

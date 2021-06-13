@@ -3,6 +3,12 @@
  */
 package hwo.evtool.dsl.validation;
 
+import java.io.Console;
+
+import org.eclipse.xtext.validation.Check;
+
+import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
+import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 /**
  * This class contains custom validation rules. 
@@ -21,5 +27,13 @@ public class EvaluacionValidator extends AbstractEvaluacionValidator {
 //					INVALID_NAME);
 //		}
 //	}
-	
+
+		@Check
+		public void checkComponentesNameMayusculas (CmpntEvaluacion compn) {
+			if (true)
+				warning(
+					"Componentes deben iniciar con mayúsculas", 
+					EvaluacionPackage.eINSTANCE.getCmpntEvaluacion_Name()
+					);
+		}
 }

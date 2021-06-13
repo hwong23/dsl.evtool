@@ -16,16 +16,18 @@
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//Criterio">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Criterio/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Criterio/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Criterio/expresion"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Criterio/soporte"/>
+    </genClasses>
+    <genClasses ecoreClass="Evaluacion.ecore#//CriterioType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CriterioType/expresion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CriterioType/soporte"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//Expresion"/>
     <genClasses ecoreClass="Evaluacion.ecore#//Atomo"/>
-    <genClasses ecoreClass="Evaluacion.ecore#//CriterioType">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CriterioType/elementType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioType/array"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioType/length"/>
+    <genClasses ecoreClass="Evaluacion.ecore#//ComplejoType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//ComplejoType/elementType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//ComplejoType/array"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//ComplejoType/length"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//ElementType"/>
     <genClasses ecoreClass="Evaluacion.ecore#//ComponenteType">
