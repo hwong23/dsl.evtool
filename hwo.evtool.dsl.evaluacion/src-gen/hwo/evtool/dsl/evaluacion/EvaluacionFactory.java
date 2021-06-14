@@ -24,13 +24,13 @@ public interface EvaluacionFactory extends EFactory
   EvaluacionFactory eINSTANCE = hwo.evtool.dsl.evaluacion.impl.EvaluacionFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Evaluaccion Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Evaluaccion Model</em>'.
    * @generated
    */
-  Model createModel();
+  EvaluaccionModel createEvaluaccionModel();
 
   /**
    * Returns a new object of class '<em>Cmpnt Evaluacion</em>'.

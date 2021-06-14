@@ -49,25 +49,25 @@ import hwo.evtool.dsl.services.EvaluacionGrammarAccess;
 	}
 }
 
-// Entry rule entryRuleModel
-entryRuleModel
+// Entry rule entryRuleEvaluaccionModel
+entryRuleEvaluaccionModel
 :
-{ before(grammarAccess.getModelRule()); }
-	 ruleModel
-{ after(grammarAccess.getModelRule()); } 
+{ before(grammarAccess.getEvaluaccionModelRule()); }
+	 ruleEvaluaccionModel
+{ after(grammarAccess.getEvaluaccionModelRule()); } 
 	 EOF 
 ;
 
-// Rule Model
-ruleModel 
+// Rule EvaluaccionModel
+ruleEvaluaccionModel 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getModelAccess().getEntitiesAssignment()); }
-		(rule__Model__EntitiesAssignment)*
-		{ after(grammarAccess.getModelAccess().getEntitiesAssignment()); }
+		{ before(grammarAccess.getEvaluaccionModelAccess().getEntitiesAssignment()); }
+		(rule__EvaluaccionModel__EntitiesAssignment)*
+		{ after(grammarAccess.getEvaluaccionModelAccess().getEntitiesAssignment()); }
 	)
 ;
 finally {
@@ -1045,15 +1045,15 @@ finally {
 }
 
 
-rule__Model__EntitiesAssignment
+rule__EvaluaccionModel__EntitiesAssignment
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); }
+		{ before(grammarAccess.getEvaluaccionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); }
 		ruleCmpntEvaluacion
-		{ after(grammarAccess.getModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); }
+		{ after(grammarAccess.getEvaluaccionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); }
 	)
 ;
 finally {

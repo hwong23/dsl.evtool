@@ -6,8 +6,8 @@
     complianceLevel="8.0" copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="Evaluacion" basePackage="hwo.evtool.dsl" disposableProviderFactory="true"
       fileExtensions="evtool" ecorePackage="Evaluacion.ecore#/">
-    <genClasses ecoreClass="Evaluacion.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Model/entities"/>
+    <genClasses ecoreClass="Evaluacion.ecore#//EvaluaccionModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//EvaluaccionModel/entities"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CmpntEvaluacion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CmpntEvaluacion/name"/>

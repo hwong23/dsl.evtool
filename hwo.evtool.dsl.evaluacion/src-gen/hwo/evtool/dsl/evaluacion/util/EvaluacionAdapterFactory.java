@@ -76,9 +76,9 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
     new EvaluacionSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter caseEvaluaccionModel(EvaluaccionModel object)
       {
-        return createModelAdapter();
+        return createEvaluaccionModelAdapter();
       }
       @Override
       public Adapter caseCmpntEvaluacion(CmpntEvaluacion object)
@@ -158,16 +158,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.EvaluaccionModel <em>Evaluaccion Model</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Model
+   * @see hwo.evtool.dsl.evaluacion.EvaluaccionModel
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createEvaluaccionModelAdapter()
   {
     return null;
   }

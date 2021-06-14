@@ -4,8 +4,8 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
+import hwo.evtool.dsl.evaluacion.EvaluaccionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.Model;
 
 import java.util.Collection;
 
@@ -23,18 +23,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Evaluaccion Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ModelImpl#getEntities <em>Entities</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EvaluaccionModelImpl#getEntities <em>Entities</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class EvaluaccionModelImpl extends MinimalEObjectImpl.Container implements EvaluaccionModel
 {
   /**
    * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
@@ -51,7 +51,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected EvaluaccionModelImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.MODEL;
+    return EvaluacionPackage.Literals.EVALUACCION_MODEL;
   }
 
   /**
@@ -77,7 +77,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     if (entities == null)
     {
-      entities = new EObjectContainmentEList<CmpntEvaluacion>(CmpntEvaluacion.class, this, EvaluacionPackage.MODEL__ENTITIES);
+      entities = new EObjectContainmentEList<CmpntEvaluacion>(CmpntEvaluacion.class, this, EvaluacionPackage.EVALUACCION_MODEL__ENTITIES);
     }
     return entities;
   }
@@ -92,7 +92,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case EvaluacionPackage.MODEL__ENTITIES:
+      case EvaluacionPackage.EVALUACCION_MODEL__ENTITIES:
         return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -108,7 +108,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case EvaluacionPackage.MODEL__ENTITIES:
+      case EvaluacionPackage.EVALUACCION_MODEL__ENTITIES:
         return getEntities();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -125,7 +125,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case EvaluacionPackage.MODEL__ENTITIES:
+      case EvaluacionPackage.EVALUACCION_MODEL__ENTITIES:
         getEntities().clear();
         getEntities().addAll((Collection<? extends CmpntEvaluacion>)newValue);
         return;
@@ -143,7 +143,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case EvaluacionPackage.MODEL__ENTITIES:
+      case EvaluacionPackage.EVALUACCION_MODEL__ENTITIES:
         getEntities().clear();
         return;
     }
@@ -160,10 +160,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case EvaluacionPackage.MODEL__ENTITIES:
+      case EvaluacionPackage.EVALUACCION_MODEL__ENTITIES:
         return entities != null && !entities.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+} //EvaluaccionModelImpl

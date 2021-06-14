@@ -73,10 +73,10 @@ public class EvaluacionSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case EvaluacionPackage.MODEL:
+      case EvaluacionPackage.EVALUACCION_MODEL:
       {
-        Model model = (Model)theEObject;
-        T result = caseModel(model);
+        EvaluaccionModel evaluaccionModel = (EvaluaccionModel)theEObject;
+        T result = caseEvaluaccionModel(evaluaccionModel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -171,17 +171,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Evaluaccion Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Evaluaccion Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModel(Model object)
+  public T caseEvaluaccionModel(EvaluaccionModel object)
   {
     return null;
   }

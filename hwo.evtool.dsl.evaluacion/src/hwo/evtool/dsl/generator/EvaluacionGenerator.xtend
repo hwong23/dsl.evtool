@@ -7,6 +7,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import static extension org.eclipse.xtext.nodemodel.util.NodeModelUtils.*
+import hwo.evtool.dsl.evaluacion.EvaluaccionModel
 
 /**
  * Generates code from your model files on save.
@@ -21,5 +23,17 @@ class EvaluacionGenerator extends AbstractGenerator {
 //				.filter(Greeting)
 //				.map[name]
 //				.join(', '))
+	resource.allContents.toIterable.filter(EvaluaccionModel).forEach [
+			fsa.generateFile
+				('''«resource.URI.lastSegment».evaluated''',
+					interpretExpressions)
+		]
+	}
+
+	def interpretExpressions(EvaluaccionModel model) {
+		model.entities.map [
+	
+		'''«getNode.getTokenText» ~>'''
+		].join("\n")
 	}
 }
