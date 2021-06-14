@@ -11,8 +11,8 @@ import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.ElementType;
-import hwo.evtool.dsl.evaluacion.EvaluaccionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
+import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Expresion;
 import hwo.evtool.dsl.evaluacion.IntConstant;
@@ -38,7 +38,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass evaluaccionModelEClass = null;
+  private EClass evaluacionModelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -186,9 +186,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getEvaluaccionModel()
+  public EClass getEvaluacionModel()
   {
-    return evaluaccionModelEClass;
+    return evaluacionModelEClass;
   }
 
   /**
@@ -197,9 +197,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getEvaluaccionModel_Entities()
+  public EReference getEvaluacionModel_Entities()
   {
-    return (EReference)evaluaccionModelEClass.getEStructuralFeatures().get(0);
+    return (EReference)evaluacionModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -508,8 +508,8 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     isCreated = true;
 
     // Create classes and their features
-    evaluaccionModelEClass = createEClass(EVALUACCION_MODEL);
-    createEReference(evaluaccionModelEClass, EVALUACCION_MODEL__ENTITIES);
+    evaluacionModelEClass = createEClass(EVALUACION_MODEL);
+    createEReference(evaluacionModelEClass, EVALUACION_MODEL__ENTITIES);
 
     cmpntEvaluacionEClass = createEClass(CMPNT_EVALUACION);
     createEAttribute(cmpntEvaluacionEClass, CMPNT_EVALUACION__NAME);
@@ -585,8 +585,8 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     boolConstantEClass.getESuperTypes().add(this.getAtomo());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(evaluaccionModelEClass, EvaluaccionModel.class, "EvaluaccionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEvaluaccionModel_Entities(), this.getCmpntEvaluacion(), null, "entities", null, 0, -1, EvaluaccionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(evaluacionModelEClass, EvaluacionModel.class, "EvaluacionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEvaluacionModel_Entities(), this.getCmpntEvaluacion(), null, "entities", null, 0, -1, EvaluacionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cmpntEvaluacionEClass, CmpntEvaluacion.class, "CmpntEvaluacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCmpntEvaluacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

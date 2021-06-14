@@ -4,7 +4,7 @@
 package hwo.evtool.dsl.tests
 
 import com.google.inject.Inject
-import hwo.evtool.dsl.evaluacion.Model
+import hwo.evtool.dsl.evaluacion.EvaluacionModel
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.extensions.InjectionExtension
 import org.eclipse.xtext.testing.util.ParseHelper
@@ -16,7 +16,7 @@ import org.junit.jupiter.api.^extension.ExtendWith
 @InjectWith(EvaluacionInjectorProvider)
 class EvaluacionParsingTest {
 	@Inject
-	ParseHelper<Model> parseHelper
+	ParseHelper<EvaluacionModel> parseHelper
 	
 	@Test
 	def void loadModel() {

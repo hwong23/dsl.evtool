@@ -43,7 +43,7 @@ import hwo.evtool.dsl.services.EvaluacionGrammarAccess;
 
     @Override
     protected String getFirstRuleName() {
-    	return "EvaluaccionModel";
+    	return "EvaluacionModel";
    	}
 
    	@Override
@@ -60,15 +60,15 @@ import hwo.evtool.dsl.services.EvaluacionGrammarAccess;
     }
 }
 
-// Entry rule entryRuleEvaluaccionModel
-entryRuleEvaluaccionModel returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getEvaluaccionModelRule()); }
-	iv_ruleEvaluaccionModel=ruleEvaluaccionModel
-	{ $current=$iv_ruleEvaluaccionModel.current; }
+// Entry rule entryRuleEvaluacionModel
+entryRuleEvaluacionModel returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getEvaluacionModelRule()); }
+	iv_ruleEvaluacionModel=ruleEvaluacionModel
+	{ $current=$iv_ruleEvaluacionModel.current; }
 	EOF;
 
-// Rule EvaluaccionModel
-ruleEvaluaccionModel returns [EObject current=null]
+// Rule EvaluacionModel
+ruleEvaluacionModel returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -78,12 +78,12 @@ ruleEvaluaccionModel returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getEvaluaccionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0());
+				newCompositeNode(grammarAccess.getEvaluacionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0());
 			}
 			lv_entities_0_0=ruleCmpntEvaluacion
 			{
 				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getEvaluaccionModelRule());
+					$current = createModelElementForParent(grammarAccess.getEvaluacionModelRule());
 				}
 				add(
 					$current,

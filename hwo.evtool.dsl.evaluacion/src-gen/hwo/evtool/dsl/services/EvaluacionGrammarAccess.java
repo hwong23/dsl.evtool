@@ -24,12 +24,12 @@ import org.eclipse.xtext.service.GrammarProvider;
 @Singleton
 public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGrammarElementFinder {
 	
-	public class EvaluaccionModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.EvaluaccionModel");
+	public class EvaluacionModelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.EvaluacionModel");
 		private final Assignment cEntitiesAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cEntitiesCmpntEvaluacionParserRuleCall_0 = (RuleCall)cEntitiesAssignment.eContents().get(0);
 		
-		//EvaluaccionModel:
+		//EvaluacionModel:
 		//    entities+=CmpntEvaluacion*;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -340,7 +340,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	
-	private final EvaluaccionModelElements pEvaluaccionModel;
+	private final EvaluacionModelElements pEvaluacionModel;
 	private final CmpntEvaluacionElements pCmpntEvaluacion;
 	private final CriterioElements pCriterio;
 	private final CriterioTypeElements pCriterioType;
@@ -359,7 +359,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 			TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pEvaluaccionModel = new EvaluaccionModelElements();
+		this.pEvaluacionModel = new EvaluacionModelElements();
 		this.pCmpntEvaluacion = new CmpntEvaluacionElements();
 		this.pCriterio = new CriterioElements();
 		this.pCriterioType = new CriterioTypeElements();
@@ -397,14 +397,14 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 
 	
-	//EvaluaccionModel:
+	//EvaluacionModel:
 	//    entities+=CmpntEvaluacion*;
-	public EvaluaccionModelElements getEvaluaccionModelAccess() {
-		return pEvaluaccionModel;
+	public EvaluacionModelElements getEvaluacionModelAccess() {
+		return pEvaluacionModel;
 	}
 	
-	public ParserRule getEvaluaccionModelRule() {
-		return getEvaluaccionModelAccess().getRule();
+	public ParserRule getEvaluacionModelRule() {
+		return getEvaluacionModelAccess().getRule();
 	}
 	
 	//CmpntEvaluacion:

@@ -58,14 +58,14 @@ public interface EvaluacionPackage extends EPackage
   EvaluacionPackage eINSTANCE = hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluaccionModelImpl <em>Evaluaccion Model</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl <em>Model</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluaccionModelImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluaccionModel()
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluacionModel()
    * @generated
    */
-  int EVALUACCION_MODEL = 0;
+  int EVALUACION_MODEL = 0;
 
   /**
    * The feature id for the '<em><b>Entities</b></em>' containment reference list.
@@ -74,16 +74,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVALUACCION_MODEL__ENTITIES = 0;
+  int EVALUACION_MODEL__ENTITIES = 0;
 
   /**
-   * The number of structural features of the '<em>Evaluaccion Model</em>' class.
+   * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVALUACCION_MODEL_FEATURE_COUNT = 1;
+  int EVALUACION_MODEL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl <em>Cmpnt Evaluacion</em>}' class.
@@ -431,25 +431,25 @@ public interface EvaluacionPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.EvaluaccionModel <em>Evaluaccion Model</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.EvaluacionModel <em>Model</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Evaluaccion Model</em>'.
-   * @see hwo.evtool.dsl.evaluacion.EvaluaccionModel
+   * @return the meta object for class '<em>Model</em>'.
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionModel
    * @generated
    */
-  EClass getEvaluaccionModel();
+  EClass getEvaluacionModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.EvaluaccionModel#getEntities <em>Entities</em>}'.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.EvaluacionModel#getEntities <em>Entities</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Entities</em>'.
-   * @see hwo.evtool.dsl.evaluacion.EvaluaccionModel#getEntities()
-   * @see #getEvaluaccionModel()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionModel#getEntities()
+   * @see #getEvaluacionModel()
    * @generated
    */
-  EReference getEvaluaccionModel_Entities();
+  EReference getEvaluacionModel_Entities();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion <em>Cmpnt Evaluacion</em>}'.
@@ -739,14 +739,14 @@ public interface EvaluacionPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluaccionModelImpl <em>Evaluaccion Model</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl <em>Model</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluaccionModelImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluaccionModel()
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluacionModel()
      * @generated
      */
-    EClass EVALUACCION_MODEL = eINSTANCE.getEvaluaccionModel();
+    EClass EVALUACION_MODEL = eINSTANCE.getEvaluacionModel();
 
     /**
      * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
@@ -754,7 +754,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EVALUACCION_MODEL__ENTITIES = eINSTANCE.getEvaluaccionModel_Entities();
+    EReference EVALUACION_MODEL__ENTITIES = eINSTANCE.getEvaluacionModel_Entities();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl <em>Cmpnt Evaluacion</em>}' class.

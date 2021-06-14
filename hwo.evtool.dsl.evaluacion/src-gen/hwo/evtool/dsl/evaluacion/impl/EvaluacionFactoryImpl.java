@@ -65,7 +65,7 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     switch (eClass.getClassifierID())
     {
-      case EvaluacionPackage.EVALUACCION_MODEL: return createEvaluaccionModel();
+      case EvaluacionPackage.EVALUACION_MODEL: return createEvaluacionModel();
       case EvaluacionPackage.CMPNT_EVALUACION: return createCmpntEvaluacion();
       case EvaluacionPackage.CRITERIO: return createCriterio();
       case EvaluacionPackage.CRITERIO_TYPE: return createCriterioType();
@@ -88,10 +88,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public EvaluaccionModel createEvaluaccionModel()
+  public EvaluacionModel createEvaluacionModel()
   {
-    EvaluaccionModelImpl evaluaccionModel = new EvaluaccionModelImpl();
-    return evaluaccionModel;
+    EvaluacionModelImpl evaluacionModel = new EvaluacionModelImpl();
+    return evaluacionModel;
   }
 
   /**

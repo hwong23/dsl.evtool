@@ -10,7 +10,7 @@ import hwo.evtool.dsl.evaluacion.ComplejoType;
 import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
-import hwo.evtool.dsl.evaluacion.EvaluaccionModel;
+import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.StringConstant;
@@ -58,8 +58,8 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.CRITERIO_TYPE:
 				sequence_CriterioType(context, (CriterioType) semanticObject); 
 				return; 
-			case EvaluacionPackage.EVALUACCION_MODEL:
-				sequence_EvaluaccionModel(context, (EvaluaccionModel) semanticObject); 
+			case EvaluacionPackage.EVALUACION_MODEL:
+				sequence_EvaluacionModel(context, (EvaluacionModel) semanticObject); 
 				return; 
 			case EvaluacionPackage.INT_CONSTANT:
 				sequence_Atomo(context, (IntConstant) semanticObject); 
@@ -199,12 +199,12 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     EvaluaccionModel returns EvaluaccionModel
+	 *     EvaluacionModel returns EvaluacionModel
 	 *
 	 * Constraint:
 	 *     entities+=CmpntEvaluacion+
 	 */
-	protected void sequence_EvaluaccionModel(ISerializationContext context, EvaluaccionModel semanticObject) {
+	protected void sequence_EvaluacionModel(ISerializationContext context, EvaluacionModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

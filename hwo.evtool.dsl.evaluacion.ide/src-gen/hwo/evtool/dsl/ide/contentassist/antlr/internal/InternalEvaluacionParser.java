@@ -79,20 +79,20 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
 
 
-    // $ANTLR start "entryRuleEvaluaccionModel"
-    // InternalEvaluacion.g:53:1: entryRuleEvaluaccionModel : ruleEvaluaccionModel EOF ;
-    public final void entryRuleEvaluaccionModel() throws RecognitionException {
+    // $ANTLR start "entryRuleEvaluacionModel"
+    // InternalEvaluacion.g:53:1: entryRuleEvaluacionModel : ruleEvaluacionModel EOF ;
+    public final void entryRuleEvaluacionModel() throws RecognitionException {
         try {
-            // InternalEvaluacion.g:54:1: ( ruleEvaluaccionModel EOF )
-            // InternalEvaluacion.g:55:1: ruleEvaluaccionModel EOF
+            // InternalEvaluacion.g:54:1: ( ruleEvaluacionModel EOF )
+            // InternalEvaluacion.g:55:1: ruleEvaluacionModel EOF
             {
-             before(grammarAccess.getEvaluaccionModelRule()); 
+             before(grammarAccess.getEvaluacionModelRule()); 
             pushFollow(FOLLOW_1);
-            ruleEvaluaccionModel();
+            ruleEvaluacionModel();
 
             state._fsp--;
 
-             after(grammarAccess.getEvaluaccionModelRule()); 
+             after(grammarAccess.getEvaluacionModelRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -106,24 +106,24 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleEvaluaccionModel"
+    // $ANTLR end "entryRuleEvaluacionModel"
 
 
-    // $ANTLR start "ruleEvaluaccionModel"
-    // InternalEvaluacion.g:62:1: ruleEvaluaccionModel : ( ( rule__EvaluaccionModel__EntitiesAssignment )* ) ;
-    public final void ruleEvaluaccionModel() throws RecognitionException {
+    // $ANTLR start "ruleEvaluacionModel"
+    // InternalEvaluacion.g:62:1: ruleEvaluacionModel : ( ( rule__EvaluacionModel__EntitiesAssignment )* ) ;
+    public final void ruleEvaluacionModel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:66:2: ( ( ( rule__EvaluaccionModel__EntitiesAssignment )* ) )
-            // InternalEvaluacion.g:67:2: ( ( rule__EvaluaccionModel__EntitiesAssignment )* )
+            // InternalEvaluacion.g:66:2: ( ( ( rule__EvaluacionModel__EntitiesAssignment )* ) )
+            // InternalEvaluacion.g:67:2: ( ( rule__EvaluacionModel__EntitiesAssignment )* )
             {
-            // InternalEvaluacion.g:67:2: ( ( rule__EvaluaccionModel__EntitiesAssignment )* )
-            // InternalEvaluacion.g:68:3: ( rule__EvaluaccionModel__EntitiesAssignment )*
+            // InternalEvaluacion.g:67:2: ( ( rule__EvaluacionModel__EntitiesAssignment )* )
+            // InternalEvaluacion.g:68:3: ( rule__EvaluacionModel__EntitiesAssignment )*
             {
-             before(grammarAccess.getEvaluaccionModelAccess().getEntitiesAssignment()); 
-            // InternalEvaluacion.g:69:3: ( rule__EvaluaccionModel__EntitiesAssignment )*
+             before(grammarAccess.getEvaluacionModelAccess().getEntitiesAssignment()); 
+            // InternalEvaluacion.g:69:3: ( rule__EvaluacionModel__EntitiesAssignment )*
             loop1:
             do {
                 int alt1=2;
@@ -136,10 +136,10 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalEvaluacion.g:69:4: rule__EvaluaccionModel__EntitiesAssignment
+            	    // InternalEvaluacion.g:69:4: rule__EvaluacionModel__EntitiesAssignment
             	    {
             	    pushFollow(FOLLOW_3);
-            	    rule__EvaluaccionModel__EntitiesAssignment();
+            	    rule__EvaluacionModel__EntitiesAssignment();
 
             	    state._fsp--;
 
@@ -152,7 +152,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-             after(grammarAccess.getEvaluaccionModelAccess().getEntitiesAssignment()); 
+             after(grammarAccess.getEvaluacionModelAccess().getEntitiesAssignment()); 
 
             }
 
@@ -171,7 +171,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleEvaluaccionModel"
+    // $ANTLR end "ruleEvaluacionModel"
 
 
     // $ANTLR start "entryRuleCmpntEvaluacion"
@@ -3177,9 +3177,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__ComplejoType__Group_1__2__Impl"
 
 
-    // $ANTLR start "rule__EvaluaccionModel__EntitiesAssignment"
-    // InternalEvaluacion.g:1048:1: rule__EvaluaccionModel__EntitiesAssignment : ( ruleCmpntEvaluacion ) ;
-    public final void rule__EvaluaccionModel__EntitiesAssignment() throws RecognitionException {
+    // $ANTLR start "rule__EvaluacionModel__EntitiesAssignment"
+    // InternalEvaluacion.g:1048:1: rule__EvaluacionModel__EntitiesAssignment : ( ruleCmpntEvaluacion ) ;
+    public final void rule__EvaluacionModel__EntitiesAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3190,13 +3190,13 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1053:2: ( ruleCmpntEvaluacion )
             // InternalEvaluacion.g:1054:3: ruleCmpntEvaluacion
             {
-             before(grammarAccess.getEvaluaccionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); 
+             before(grammarAccess.getEvaluacionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
             ruleCmpntEvaluacion();
 
             state._fsp--;
 
-             after(grammarAccess.getEvaluaccionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); 
+             after(grammarAccess.getEvaluacionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0()); 
 
             }
 
@@ -3215,7 +3215,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__EvaluaccionModel__EntitiesAssignment"
+    // $ANTLR end "rule__EvaluacionModel__EntitiesAssignment"
 
 
     // $ANTLR start "rule__CmpntEvaluacion__NameAssignment_1"

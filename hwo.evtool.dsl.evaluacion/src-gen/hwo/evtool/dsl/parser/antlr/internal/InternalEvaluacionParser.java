@@ -71,7 +71,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
         @Override
         protected String getFirstRuleName() {
-        	return "EvaluaccionModel";
+        	return "EvaluacionModel";
        	}
 
        	@Override
@@ -82,25 +82,25 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
 
-    // $ANTLR start "entryRuleEvaluaccionModel"
-    // InternalEvaluacion.g:64:1: entryRuleEvaluaccionModel returns [EObject current=null] : iv_ruleEvaluaccionModel= ruleEvaluaccionModel EOF ;
-    public final EObject entryRuleEvaluaccionModel() throws RecognitionException {
+    // $ANTLR start "entryRuleEvaluacionModel"
+    // InternalEvaluacion.g:64:1: entryRuleEvaluacionModel returns [EObject current=null] : iv_ruleEvaluacionModel= ruleEvaluacionModel EOF ;
+    public final EObject entryRuleEvaluacionModel() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleEvaluaccionModel = null;
+        EObject iv_ruleEvaluacionModel = null;
 
 
         try {
-            // InternalEvaluacion.g:64:57: (iv_ruleEvaluaccionModel= ruleEvaluaccionModel EOF )
-            // InternalEvaluacion.g:65:2: iv_ruleEvaluaccionModel= ruleEvaluaccionModel EOF
+            // InternalEvaluacion.g:64:56: (iv_ruleEvaluacionModel= ruleEvaluacionModel EOF )
+            // InternalEvaluacion.g:65:2: iv_ruleEvaluacionModel= ruleEvaluacionModel EOF
             {
-             newCompositeNode(grammarAccess.getEvaluaccionModelRule()); 
+             newCompositeNode(grammarAccess.getEvaluacionModelRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleEvaluaccionModel=ruleEvaluaccionModel();
+            iv_ruleEvaluacionModel=ruleEvaluacionModel();
 
             state._fsp--;
 
-             current =iv_ruleEvaluaccionModel; 
+             current =iv_ruleEvaluacionModel; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -115,12 +115,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleEvaluaccionModel"
+    // $ANTLR end "entryRuleEvaluacionModel"
 
 
-    // $ANTLR start "ruleEvaluaccionModel"
-    // InternalEvaluacion.g:71:1: ruleEvaluaccionModel returns [EObject current=null] : ( (lv_entities_0_0= ruleCmpntEvaluacion ) )* ;
-    public final EObject ruleEvaluaccionModel() throws RecognitionException {
+    // $ANTLR start "ruleEvaluacionModel"
+    // InternalEvaluacion.g:71:1: ruleEvaluacionModel returns [EObject current=null] : ( (lv_entities_0_0= ruleCmpntEvaluacion ) )* ;
+    public final EObject ruleEvaluacionModel() throws RecognitionException {
         EObject current = null;
 
         EObject lv_entities_0_0 = null;
@@ -152,7 +152,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
             	    // InternalEvaluacion.g:80:4: lv_entities_0_0= ruleCmpntEvaluacion
             	    {
 
-            	    				newCompositeNode(grammarAccess.getEvaluaccionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0());
+            	    				newCompositeNode(grammarAccess.getEvaluacionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0());
             	    			
             	    pushFollow(FOLLOW_3);
             	    lv_entities_0_0=ruleCmpntEvaluacion();
@@ -161,7 +161,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
             	    				if (current==null) {
-            	    					current = createModelElementForParent(grammarAccess.getEvaluaccionModelRule());
+            	    					current = createModelElementForParent(grammarAccess.getEvaluacionModelRule());
             	    				}
             	    				add(
             	    					current,
@@ -198,7 +198,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleEvaluaccionModel"
+    // $ANTLR end "ruleEvaluacionModel"
 
 
     // $ANTLR start "entryRuleCmpntEvaluacion"

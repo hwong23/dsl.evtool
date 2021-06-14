@@ -9,21 +9,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Evaluaccion Model</b></em>'.
+ * A representation of the model object '<em><b>Model</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.EvaluaccionModel#getEntities <em>Entities</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.EvaluacionModel#getEntities <em>Entities</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaccionModel()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluacionModel()
  * @model
  * @generated
  */
-public interface EvaluaccionModel extends EObject
+public interface EvaluacionModel extends EObject
 {
   /**
    * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
@@ -31,10 +31,10 @@ public interface EvaluaccionModel extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Entities</em>' containment reference list.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaccionModel_Entities()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluacionModel_Entities()
    * @model containment="true"
    * @generated
    */
   EList<CmpntEvaluacion> getEntities();
 
-} // EvaluaccionModel
+} // EvaluacionModel
