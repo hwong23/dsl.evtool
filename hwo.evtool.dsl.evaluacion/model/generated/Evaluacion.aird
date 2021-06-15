@@ -5,7 +5,7 @@
     <semanticResources>Evaluacion.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_0FGjwM1uEeuhvIH37OnDhQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_edw9AM1wEeuhvIH37OnDhQ" name="evaluacion diagram" repPath="#_ediTgM1wEeuhvIH37OnDhQ" changeId="75bb51e8-299a-4316-9276-4b7871b8dd0e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_edw9AM1wEeuhvIH37OnDhQ" name="evaluacion diagram" repPath="#_ediTgM1wEeuhvIH37OnDhQ" changeId="cb2e94c1-03bb-404b-b92d-7995497e618f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="Evaluacion.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -312,19 +312,18 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Qr06Us10Eeu9xZwuilj78A" type="4001" element="_QrimcM10Eeu9xZwuilj78A" source="_kRiSd81wEeuhvIH37OnDhQ" target="_kRiScM1wEeuhvIH37OnDhQ">
           <children xmi:type="notation:Node" xmi:id="_Qr1hYM10Eeu9xZwuilj78A" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qr1hYc10Eeu9xZwuilj78A" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qr1hYc10Eeu9xZwuilj78A" x="11" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Qr1hYs10Eeu9xZwuilj78A" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qr1hY810Eeu9xZwuilj78A" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qr1hY810Eeu9xZwuilj78A" x="4" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Qr1hZM10Eeu9xZwuilj78A" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qr1hZc10Eeu9xZwuilj78A" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Qr1hZc10Eeu9xZwuilj78A" x="-4" y="4"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Qr06U810Eeu9xZwuilj78A" routing="Tree"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_Qr06VM10Eeu9xZwuilj78A" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Qr06Vc10Eeu9xZwuilj78A" points="[0, -49, 3, 73]$[0, -101, 3, 21]$[1, -101, 4, 21]$[1, -119, 4, 3]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qr1hZs10Eeu9xZwuilj78A" id="(0.5084745762711864,0.08163265306122448)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qr1hZ810Eeu9xZwuilj78A" id="(0.4745762711864407,0.9693877551020408)"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Qr06Vc10Eeu9xZwuilj78A" points="[0, -6, -7, 119]$[0, -60, -7, 65]$[0, -60, -7, 65]$[0, -76, -7, 49]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Qr1hZs10Eeu9xZwuilj78A" id="(0.3880597014925373,0.061224489795918366)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>

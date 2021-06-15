@@ -19,17 +19,20 @@ import hwo.evtool.dsl.evaluacion.CmpntEvaluacion
 class EvaluacionGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
-	resource.allContents.toIterable.filter(CmpntEvaluacion).forEach [
-			fsa.generateFile
-				('''«resource.URI.lastSegment».evaluated''',
-					interpretExpressions)
-		]
-	}
+//	resource.allContents.toIterable.filter(CmpntEvaluacion).forEach [
+//			fsa.generateFile
+//				('''«resource.URI.lastSegment».evaluated''',
+//					interpretExpressions)
+//		]
+	for (e : resource.allContents.toIterable.filter(CmpntEvaluacion)) {
+        fsa.generateFile (
+            "componentes/" + e.name + ".java",
+            e.compile
+        )
+    }
+}
+	
+	def CharSequence compile(CmpntEvaluacion evaluacion)
 
 	def interpretExpressions(CmpntEvaluacion model) {
 		model.attributes.map [
