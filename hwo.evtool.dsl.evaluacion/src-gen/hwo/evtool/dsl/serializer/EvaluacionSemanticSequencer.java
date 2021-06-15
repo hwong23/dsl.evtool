@@ -4,10 +4,10 @@
 package hwo.evtool.dsl.serializer;
 
 import com.google.inject.Inject;
+import hwo.evtool.dsl.evaluacion.Atributos;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.ComplejoType;
-import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
@@ -39,6 +39,9 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == EvaluacionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case EvaluacionPackage.ATRIBUTOS:
+				sequence_Atributos(context, (Atributos) semanticObject); 
+				return; 
 			case EvaluacionPackage.BOOL_CONSTANT:
 				sequence_Atomo(context, (BoolConstant) semanticObject); 
 				return; 
@@ -47,9 +50,6 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case EvaluacionPackage.COMPLEJO_TYPE:
 				sequence_ComplejoType(context, (ComplejoType) semanticObject); 
-				return; 
-			case EvaluacionPackage.CRITERIO:
-				sequence_Criterio(context, (Criterio) semanticObject); 
 				return; 
 			case EvaluacionPackage.CRITERIO_TYPE:
 				sequence_CriterioType(context, (CriterioType) semanticObject); 
@@ -121,10 +121,22 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Atributos returns Atributos
+	 *
+	 * Constraint:
+	 *     criterios+=Criterio
+	 */
+	protected void sequence_Atributos(ISerializationContext context, Atributos semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     CmpntEvaluacion returns CmpntEvaluacion
 	 *
 	 * Constraint:
-	 *     (name=ID superType=[CmpntEvaluacion|ID]? attributes+=Criterio*)
+	 *     (name=ID superType=[CmpntEvaluacion|ID]? atributos+=Atributos*)
 	 */
 	protected void sequence_CmpntEvaluacion(ISerializationContext context, CmpntEvaluacion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -133,6 +145,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Criterio returns ComplejoType
 	 *     ComplejoType returns ComplejoType
 	 *
 	 * Constraint:
@@ -164,28 +177,10 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Criterio returns Criterio
-	 *
-	 * Constraint:
-	 *     type=ComplejoType
-	 */
-	protected void sequence_Criterio(ISerializationContext context, Criterio semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCriterioAccess().getTypeComplejoTypeParserRuleCall_0_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     EvaluacionModel returns EvaluacionModel
 	 *
 	 * Constraint:
-	 *     entities+=CmpntEvaluacion+
+	 *     componentes+=CmpntEvaluacion+
 	 */
 	protected void sequence_EvaluacionModel(ISerializationContext context, EvaluacionModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

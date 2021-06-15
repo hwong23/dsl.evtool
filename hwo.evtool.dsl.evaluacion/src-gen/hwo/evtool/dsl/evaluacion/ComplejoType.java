@@ -3,7 +3,6 @@
  */
 package hwo.evtool.dsl.evaluacion;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ComplejoType extends EObject
+public interface ComplejoType extends Criterio
 {
   /**
    * Returns the value of the '<em><b>Componente</b></em>' reference.

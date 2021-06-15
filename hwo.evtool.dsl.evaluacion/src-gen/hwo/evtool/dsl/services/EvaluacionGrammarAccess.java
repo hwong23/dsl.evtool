@@ -26,18 +26,18 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	public class EvaluacionModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.EvaluacionModel");
-		private final Assignment cEntitiesAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cEntitiesCmpntEvaluacionParserRuleCall_0 = (RuleCall)cEntitiesAssignment.eContents().get(0);
+		private final Assignment cComponentesAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cComponentesCmpntEvaluacionParserRuleCall_0 = (RuleCall)cComponentesAssignment.eContents().get(0);
 		
 		//EvaluacionModel:
-		//    entities+=CmpntEvaluacion*;
+		//    componentes+=CmpntEvaluacion*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//entities+=CmpntEvaluacion*
-		public Assignment getEntitiesAssignment() { return cEntitiesAssignment; }
+		//componentes+=CmpntEvaluacion*
+		public Assignment getComponentesAssignment() { return cComponentesAssignment; }
 		
 		//CmpntEvaluacion
-		public RuleCall getEntitiesCmpntEvaluacionParserRuleCall_0() { return cEntitiesCmpntEvaluacionParserRuleCall_0; }
+		public RuleCall getComponentesCmpntEvaluacionParserRuleCall_0() { return cComponentesCmpntEvaluacionParserRuleCall_0; }
 	}
 	public class CmpntEvaluacionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.CmpntEvaluacion");
@@ -51,18 +51,19 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final CrossReference cSuperTypeCmpntEvaluacionCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
 		private final RuleCall cSuperTypeCmpntEvaluacionIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeCmpntEvaluacionCrossReference_2_1_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cAttributesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAttributesCriterioParserRuleCall_4_0 = (RuleCall)cAttributesAssignment_4.eContents().get(0);
+		private final Assignment cAtributosAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cAtributosAtributosParserRuleCall_4_0 = (RuleCall)cAtributosAssignment_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//CmpntEvaluacion:
 		//    'componente' name = ID ('hereda' superType=[CmpntEvaluacion])? '{'
-		//        attributes+=Criterio*
-		//    '}';
+		//        atributos+=Atributos*
+		//    '}'
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'componente' name = ID ('hereda' superType=[CmpntEvaluacion])? '{'
-		//    attributes+=Criterio*
+		//    atributos+=Atributos*
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -93,35 +94,47 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//attributes+=Criterio*
-		public Assignment getAttributesAssignment_4() { return cAttributesAssignment_4; }
+		//atributos+=Atributos*
+		public Assignment getAtributosAssignment_4() { return cAtributosAssignment_4; }
 		
-		//Criterio
-		public RuleCall getAttributesCriterioParserRuleCall_4_0() { return cAttributesCriterioParserRuleCall_4_0; }
+		//Atributos
+		public RuleCall getAtributosAtributosParserRuleCall_4_0() { return cAtributosAtributosParserRuleCall_4_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
-	public class CriterioElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Criterio");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cTypeAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cTypeComplejoTypeParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
-		private final RuleCall cCriterioTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+	public class AtributosElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Atributos");
+		private final Assignment cCriteriosAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cCriteriosCriterioParserRuleCall_0 = (RuleCall)cCriteriosAssignment.eContents().get(0);
 		
-		//Criterio:
-		//    type = ComplejoType | CriterioType
+		//Atributos:
+		//    criterios+=Criterio
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//type = ComplejoType | CriterioType
+		//criterios+=Criterio
+		public Assignment getCriteriosAssignment() { return cCriteriosAssignment; }
+		
+		//Criterio
+		public RuleCall getCriteriosCriterioParserRuleCall_0() { return cCriteriosCriterioParserRuleCall_0; }
+	}
+	public class CriterioElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Criterio");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cComplejoTypeParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cCriterioTypeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Criterio:
+		//    ComplejoType | CriterioType
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ComplejoType | CriterioType
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//type = ComplejoType
-		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
-		
 		//ComplejoType
-		public RuleCall getTypeComplejoTypeParserRuleCall_0_0() { return cTypeComplejoTypeParserRuleCall_0_0; }
+		public RuleCall getComplejoTypeParserRuleCall_0() { return cComplejoTypeParserRuleCall_0; }
 		
 		//CriterioType
 		public RuleCall getCriterioTypeParserRuleCall_1() { return cCriterioTypeParserRuleCall_1; }
@@ -288,6 +301,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	private final EvaluacionModelElements pEvaluacionModel;
 	private final CmpntEvaluacionElements pCmpntEvaluacion;
+	private final AtributosElements pAtributos;
 	private final CriterioElements pCriterio;
 	private final CriterioTypeElements pCriterioType;
 	private final ExpresionElements pExpresion;
@@ -305,6 +319,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.gaTerminals = gaTerminals;
 		this.pEvaluacionModel = new EvaluacionModelElements();
 		this.pCmpntEvaluacion = new CmpntEvaluacionElements();
+		this.pAtributos = new AtributosElements();
 		this.pCriterio = new CriterioElements();
 		this.pCriterioType = new CriterioTypeElements();
 		this.pExpresion = new ExpresionElements();
@@ -340,7 +355,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 
 	
 	//EvaluacionModel:
-	//    entities+=CmpntEvaluacion*;
+	//    componentes+=CmpntEvaluacion*;
 	public EvaluacionModelElements getEvaluacionModelAccess() {
 		return pEvaluacionModel;
 	}
@@ -351,8 +366,9 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	//CmpntEvaluacion:
 	//    'componente' name = ID ('hereda' superType=[CmpntEvaluacion])? '{'
-	//        attributes+=Criterio*
-	//    '}';
+	//        atributos+=Atributos*
+	//    '}'
+	//;
 	public CmpntEvaluacionElements getCmpntEvaluacionAccess() {
 		return pCmpntEvaluacion;
 	}
@@ -361,8 +377,19 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getCmpntEvaluacionAccess().getRule();
 	}
 	
+	//Atributos:
+	//    criterios+=Criterio
+	//;
+	public AtributosElements getAtributosAccess() {
+		return pAtributos;
+	}
+	
+	public ParserRule getAtributosRule() {
+		return getAtributosAccess().getRule();
+	}
+	
 	//Criterio:
-	//    type = ComplejoType | CriterioType
+	//    ComplejoType | CriterioType
 	//;
 	public CriterioElements getCriterioAccess() {
 		return pCriterio;
