@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Criterio</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Criterio#getType <em>Type</em>}</li>
- * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio()
  * @model
@@ -23,26 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Criterio extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' containment reference.
-   * @see #setType(ComplejoType)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio_Type()
-   * @model containment="true"
-   * @generated
-   */
-  ComplejoType getType();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Criterio#getType <em>Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' containment reference.
-   * @see #getType()
-   * @generated
-   */
-  void setType(ComplejoType value);
-
 } // Criterio

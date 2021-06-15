@@ -7,16 +7,17 @@
   <genPackages prefix="Evaluacion" basePackage="hwo.evtool.dsl" disposableProviderFactory="true"
       fileExtensions="evtool" ecorePackage="Evaluacion.ecore#/">
     <genClasses ecoreClass="Evaluacion.ecore#//EvaluacionModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//EvaluacionModel/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//EvaluacionModel/componentes"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CmpntEvaluacion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CmpntEvaluacion/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CmpntEvaluacion/superType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CmpntEvaluacion/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CmpntEvaluacion/atributos"/>
     </genClasses>
-    <genClasses ecoreClass="Evaluacion.ecore#//Criterio">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Criterio/type"/>
+    <genClasses ecoreClass="Evaluacion.ecore#//Atributos">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Atributos/criterios"/>
     </genClasses>
+    <genClasses ecoreClass="Evaluacion.ecore#//Criterio"/>
     <genClasses ecoreClass="Evaluacion.ecore#//CriterioType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioType/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CriterioType/expresion"/>

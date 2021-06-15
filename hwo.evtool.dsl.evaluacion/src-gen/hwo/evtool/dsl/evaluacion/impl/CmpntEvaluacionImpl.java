@@ -3,8 +3,8 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
+import hwo.evtool.dsl.evaluacion.Atributos;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
-import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import java.util.Collection;
@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl#getName <em>Name</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl#getAtributos <em>Atributos</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,14 +71,14 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
   protected CmpntEvaluacion superType;
 
   /**
-   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
+   * The cached value of the '{@link #getAtributos() <em>Atributos</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttributes()
+   * @see #getAtributos()
    * @generated
    * @ordered
    */
-  protected EList<Criterio> attributes;
+  protected EList<Atributos> atributos;
 
   /**
    * <!-- begin-user-doc -->
@@ -177,13 +177,13 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
    * @generated
    */
   @Override
-  public EList<Criterio> getAttributes()
+  public EList<Atributos> getAtributos()
   {
-    if (attributes == null)
+    if (atributos == null)
     {
-      attributes = new EObjectContainmentEList<Criterio>(Criterio.class, this, EvaluacionPackage.CMPNT_EVALUACION__ATTRIBUTES);
+      atributos = new EObjectContainmentEList<Atributos>(Atributos.class, this, EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS);
     }
-    return attributes;
+    return atributos;
   }
 
   /**
@@ -196,8 +196,8 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CMPNT_EVALUACION__ATTRIBUTES:
-        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+      case EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS:
+        return ((InternalEList<?>)getAtributos()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -217,8 +217,8 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
       case EvaluacionPackage.CMPNT_EVALUACION__SUPER_TYPE:
         if (resolve) return getSuperType();
         return basicGetSuperType();
-      case EvaluacionPackage.CMPNT_EVALUACION__ATTRIBUTES:
-        return getAttributes();
+      case EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS:
+        return getAtributos();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -240,9 +240,9 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
       case EvaluacionPackage.CMPNT_EVALUACION__SUPER_TYPE:
         setSuperType((CmpntEvaluacion)newValue);
         return;
-      case EvaluacionPackage.CMPNT_EVALUACION__ATTRIBUTES:
-        getAttributes().clear();
-        getAttributes().addAll((Collection<? extends Criterio>)newValue);
+      case EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS:
+        getAtributos().clear();
+        getAtributos().addAll((Collection<? extends Atributos>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -264,8 +264,8 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
       case EvaluacionPackage.CMPNT_EVALUACION__SUPER_TYPE:
         setSuperType((CmpntEvaluacion)null);
         return;
-      case EvaluacionPackage.CMPNT_EVALUACION__ATTRIBUTES:
-        getAttributes().clear();
+      case EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS:
+        getAtributos().clear();
         return;
     }
     super.eUnset(featureID);
@@ -285,8 +285,8 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EvaluacionPackage.CMPNT_EVALUACION__SUPER_TYPE:
         return superType != null;
-      case EvaluacionPackage.CMPNT_EVALUACION__ATTRIBUTES:
-        return attributes != null && !attributes.isEmpty();
+      case EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS:
+        return atributos != null && !atributos.isEmpty();
     }
     return super.eIsSet(featureID);
   }

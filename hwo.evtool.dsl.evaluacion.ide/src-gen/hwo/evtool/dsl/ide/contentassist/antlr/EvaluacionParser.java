@@ -41,11 +41,11 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAtomoAccess().getGroup_0(), "rule__Atomo__Group_0__0");
 			builder.put(grammarAccess.getAtomoAccess().getGroup_1(), "rule__Atomo__Group_1__0");
 			builder.put(grammarAccess.getAtomoAccess().getGroup_2(), "rule__Atomo__Group_2__0");
-			builder.put(grammarAccess.getEvaluacionModelAccess().getEntitiesAssignment(), "rule__EvaluacionModel__EntitiesAssignment");
+			builder.put(grammarAccess.getEvaluacionModelAccess().getComponentesAssignment(), "rule__EvaluacionModel__ComponentesAssignment");
 			builder.put(grammarAccess.getCmpntEvaluacionAccess().getNameAssignment_1(), "rule__CmpntEvaluacion__NameAssignment_1");
 			builder.put(grammarAccess.getCmpntEvaluacionAccess().getSuperTypeAssignment_2_1(), "rule__CmpntEvaluacion__SuperTypeAssignment_2_1");
-			builder.put(grammarAccess.getCmpntEvaluacionAccess().getAttributesAssignment_4(), "rule__CmpntEvaluacion__AttributesAssignment_4");
-			builder.put(grammarAccess.getCriterioAccess().getTypeAssignment_0(), "rule__Criterio__TypeAssignment_0");
+			builder.put(grammarAccess.getCmpntEvaluacionAccess().getAtributosAssignment_4(), "rule__CmpntEvaluacion__AtributosAssignment_4");
+			builder.put(grammarAccess.getAtributosAccess().getCriteriosAssignment(), "rule__Atributos__CriteriosAssignment");
 			builder.put(grammarAccess.getCriterioTypeAccess().getNameAssignment_1(), "rule__CriterioType__NameAssignment_1");
 			builder.put(grammarAccess.getCriterioTypeAccess().getExpresionAssignment_3(), "rule__CriterioType__ExpresionAssignment_3");
 			builder.put(grammarAccess.getCriterioTypeAccess().getSoporteAssignment_4_1(), "rule__CriterioType__SoporteAssignment_4_1");

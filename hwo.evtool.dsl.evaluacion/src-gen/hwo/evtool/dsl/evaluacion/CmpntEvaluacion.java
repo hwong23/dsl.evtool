@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getName <em>Name</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getSuperType <em>Super Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getAttributes <em>Attributes</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getAtributos <em>Atributos</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion()
@@ -72,15 +72,15 @@ public interface CmpntEvaluacion extends EObject
   void setSuperType(CmpntEvaluacion value);
 
   /**
-   * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Criterio}.
+   * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Atributos}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Attributes</em>' containment reference list.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion_Attributes()
+   * @return the value of the '<em>Atributos</em>' containment reference list.
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCmpntEvaluacion_Atributos()
    * @model containment="true"
    * @generated
    */
-  EList<Criterio> getAttributes();
+  EList<Atributos> getAtributos();
 
 } // CmpntEvaluacion

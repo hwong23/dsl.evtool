@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements ComplejoType
+public class ComplejoTypeImpl extends CriterioImpl implements ComplejoType
 {
   /**
    * The cached value of the '{@link #getComponente() <em>Componente</em>}' reference.

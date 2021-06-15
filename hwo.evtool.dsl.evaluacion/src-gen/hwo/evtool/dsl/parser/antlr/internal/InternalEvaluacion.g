@@ -78,17 +78,17 @@ ruleEvaluacionModel returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getEvaluacionModelAccess().getEntitiesCmpntEvaluacionParserRuleCall_0());
+				newCompositeNode(grammarAccess.getEvaluacionModelAccess().getComponentesCmpntEvaluacionParserRuleCall_0());
 			}
-			lv_entities_0_0=ruleCmpntEvaluacion
+			lv_componentes_0_0=ruleCmpntEvaluacion
 			{
 				if ($current==null) {
 					$current = createModelElementForParent(grammarAccess.getEvaluacionModelRule());
 				}
 				add(
 					$current,
-					"entities",
-					lv_entities_0_0,
+					"componentes",
+					lv_componentes_0_0,
 					"hwo.evtool.dsl.Evaluacion.CmpntEvaluacion");
 				afterParserOrEnumRuleCall();
 			}
@@ -160,18 +160,18 @@ ruleCmpntEvaluacion returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCmpntEvaluacionAccess().getAttributesCriterioParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getCmpntEvaluacionAccess().getAtributosAtributosParserRuleCall_4_0());
 				}
-				lv_attributes_5_0=ruleCriterio
+				lv_atributos_5_0=ruleAtributos
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCmpntEvaluacionRule());
 					}
 					add(
 						$current,
-						"attributes",
-						lv_attributes_5_0,
-						"hwo.evtool.dsl.Evaluacion.Criterio");
+						"atributos",
+						lv_atributos_5_0,
+						"hwo.evtool.dsl.Evaluacion.Atributos");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -180,6 +180,42 @@ ruleCmpntEvaluacion returns [EObject current=null]
 		{
 			newLeafNode(otherlv_6, grammarAccess.getCmpntEvaluacionAccess().getRightCurlyBracketKeyword_5());
 		}
+	)
+;
+
+// Entry rule entryRuleAtributos
+entryRuleAtributos returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAtributosRule()); }
+	iv_ruleAtributos=ruleAtributos
+	{ $current=$iv_ruleAtributos.current; }
+	EOF;
+
+// Rule Atributos
+ruleAtributos returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getAtributosAccess().getCriteriosCriterioParserRuleCall_0());
+			}
+			lv_criterios_0_0=ruleCriterio
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getAtributosRule());
+				}
+				add(
+					$current,
+					"criterios",
+					lv_criterios_0_0,
+					"hwo.evtool.dsl.Evaluacion.Criterio");
+				afterParserOrEnumRuleCall();
+			}
+		)
 	)
 ;
 
@@ -199,25 +235,14 @@ ruleCriterio returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCriterioAccess().getTypeComplejoTypeParserRuleCall_0_0());
-				}
-				lv_type_0_0=ruleComplejoType
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCriterioRule());
-					}
-					set(
-						$current,
-						"type",
-						lv_type_0_0,
-						"hwo.evtool.dsl.Evaluacion.ComplejoType");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getCriterioAccess().getComplejoTypeParserRuleCall_0());
+		}
+		this_ComplejoType_0=ruleComplejoType
+		{
+			$current = $this_ComplejoType_0.current;
+			afterParserOrEnumRuleCall();
+		}
 		    |
 		{
 			newCompositeNode(grammarAccess.getCriterioAccess().getCriterioTypeParserRuleCall_1());
