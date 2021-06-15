@@ -7,7 +7,6 @@ import com.google.inject.Inject;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.ComplejoType;
-import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
 import hwo.evtool.dsl.evaluacion.EvaluacionModel;
@@ -48,9 +47,6 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case EvaluacionPackage.COMPLEJO_TYPE:
 				sequence_ComplejoType(context, (ComplejoType) semanticObject); 
-				return; 
-			case EvaluacionPackage.COMPONENTE_TYPE:
-				sequence_ComponenteType(context, (ComponenteType) semanticObject); 
 				return; 
 			case EvaluacionPackage.CRITERIO:
 				sequence_Criterio(context, (Criterio) semanticObject); 
@@ -140,28 +136,15 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ComplejoType returns ComplejoType
 	 *
 	 * Constraint:
-	 *     (elementType=ElementType (array?='[' length=INT?)?)
-	 */
-	protected void sequence_ComplejoType(ISerializationContext context, ComplejoType semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     ElementType returns ComponenteType
-	 *     ComponenteType returns ComponenteType
-	 *
-	 * Constraint:
 	 *     componente=[CmpntEvaluacion|ID]
 	 */
-	protected void sequence_ComponenteType(ISerializationContext context, ComponenteType semanticObject) {
+	protected void sequence_ComplejoType(ISerializationContext context, ComplejoType semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.COMPONENTE_TYPE__COMPONENTE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.COMPONENTE_TYPE__COMPONENTE));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getComponenteTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.COMPONENTE_TYPE__COMPONENTE, false));
+		feeder.accept(grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE, false));
 		feeder.finish();
 	}
 	

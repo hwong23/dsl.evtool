@@ -267,65 +267,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	public class ComplejoTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ComplejoType");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cElementTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cElementTypeElementTypeParserRuleCall_0_0 = (RuleCall)cElementTypeAssignment_0.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Assignment cArrayAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cArrayLeftSquareBracketKeyword_1_0_0 = (Keyword)cArrayAssignment_1_0.eContents().get(0);
-		private final Assignment cLengthAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cLengthINTTerminalRuleCall_1_1_0 = (RuleCall)cLengthAssignment_1_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		
-		//ComplejoType:
-		//    elementType = ElementType (array?='[' (length=INT)? ']')?;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//elementType = ElementType (array?='[' (length=INT)? ']')?
-		public Group getGroup() { return cGroup; }
-		
-		//elementType = ElementType
-		public Assignment getElementTypeAssignment_0() { return cElementTypeAssignment_0; }
-		
-		//ElementType
-		public RuleCall getElementTypeElementTypeParserRuleCall_0_0() { return cElementTypeElementTypeParserRuleCall_0_0; }
-		
-		//(array?='[' (length=INT)? ']')?
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//array?='['
-		public Assignment getArrayAssignment_1_0() { return cArrayAssignment_1_0; }
-		
-		//'['
-		public Keyword getArrayLeftSquareBracketKeyword_1_0_0() { return cArrayLeftSquareBracketKeyword_1_0_0; }
-		
-		//(length=INT)?
-		public Assignment getLengthAssignment_1_1() { return cLengthAssignment_1_1; }
-		
-		//INT
-		public RuleCall getLengthINTTerminalRuleCall_1_1_0() { return cLengthINTTerminalRuleCall_1_1_0; }
-		
-		//']'
-		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
-	}
-	public class ElementTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ElementType");
-		private final RuleCall cComponenteTypeParserRuleCall = (RuleCall)rule.eContents().get(1);
-		
-		//ElementType:
-		//    ComponenteType;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//ComponenteType
-		public RuleCall getComponenteTypeParserRuleCall() { return cComponenteTypeParserRuleCall; }
-	}
-	public class ComponenteTypeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.ComponenteType");
 		private final Assignment cComponenteAssignment = (Assignment)rule.eContents().get(1);
 		private final CrossReference cComponenteCmpntEvaluacionCrossReference_0 = (CrossReference)cComponenteAssignment.eContents().get(0);
 		private final RuleCall cComponenteCmpntEvaluacionIDTerminalRuleCall_0_1 = (RuleCall)cComponenteCmpntEvaluacionCrossReference_0.eContents().get(1);
 		
-		//ComponenteType:
+		//ComplejoType:
 		//    componente = [CmpntEvaluacion];
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -347,8 +293,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final ExpresionElements pExpresion;
 	private final AtomoElements pAtomo;
 	private final ComplejoTypeElements pComplejoType;
-	private final ElementTypeElements pElementType;
-	private final ComponenteTypeElements pComponenteType;
 	
 	private final Grammar grammar;
 	
@@ -366,8 +310,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.pExpresion = new ExpresionElements();
 		this.pAtomo = new AtomoElements();
 		this.pComplejoType = new ComplejoTypeElements();
-		this.pElementType = new ElementTypeElements();
-		this.pComponenteType = new ComponenteTypeElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -467,33 +409,13 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//ComplejoType:
-	//    elementType = ElementType (array?='[' (length=INT)? ']')?;
+	//    componente = [CmpntEvaluacion];
 	public ComplejoTypeElements getComplejoTypeAccess() {
 		return pComplejoType;
 	}
 	
 	public ParserRule getComplejoTypeRule() {
 		return getComplejoTypeAccess().getRule();
-	}
-	
-	//ElementType:
-	//    ComponenteType;
-	public ElementTypeElements getElementTypeAccess() {
-		return pElementType;
-	}
-	
-	public ParserRule getElementTypeRule() {
-		return getElementTypeAccess().getRule();
-	}
-	
-	//ComponenteType:
-	//    componente = [CmpntEvaluacion];
-	public ComponenteTypeElements getComponenteTypeAccess() {
-		return pComponenteType;
-	}
-	
-	public ParserRule getComponenteTypeRule() {
-		return getComponenteTypeAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

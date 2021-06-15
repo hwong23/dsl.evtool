@@ -472,115 +472,14 @@ ruleComplejoType returns [EObject current=null]
 }:
 	(
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getComplejoTypeAccess().getElementTypeElementTypeParserRuleCall_0_0());
-				}
-				lv_elementType_0_0=ruleElementType
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getComplejoTypeRule());
-					}
-					set(
-						$current,
-						"elementType",
-						lv_elementType_0_0,
-						"hwo.evtool.dsl.Evaluacion.ElementType");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				(
-					lv_array_1_0='['
-					{
-						newLeafNode(lv_array_1_0, grammarAccess.getComplejoTypeAccess().getArrayLeftSquareBracketKeyword_1_0_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getComplejoTypeRule());
-						}
-						setWithLastConsumed($current, "array", lv_array_1_0 != null, "[");
-					}
-				)
-			)
-			(
-				(
-					lv_length_2_0=RULE_INT
-					{
-						newLeafNode(lv_length_2_0, grammarAccess.getComplejoTypeAccess().getLengthINTTerminalRuleCall_1_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getComplejoTypeRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"length",
-							lv_length_2_0,
-							"org.eclipse.xtext.common.Terminals.INT");
-					}
-				)
-			)?
-			otherlv_3=']'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getComplejoTypeAccess().getRightSquareBracketKeyword_1_2());
-			}
-		)?
-	)
-;
-
-// Entry rule entryRuleElementType
-entryRuleElementType returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getElementTypeRule()); }
-	iv_ruleElementType=ruleElementType
-	{ $current=$iv_ruleElementType.current; }
-	EOF;
-
-// Rule ElementType
-ruleElementType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	{
-		newCompositeNode(grammarAccess.getElementTypeAccess().getComponenteTypeParserRuleCall());
-	}
-	this_ComponenteType_0=ruleComponenteType
-	{
-		$current = $this_ComponenteType_0.current;
-		afterParserOrEnumRuleCall();
-	}
-;
-
-// Entry rule entryRuleComponenteType
-entryRuleComponenteType returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getComponenteTypeRule()); }
-	iv_ruleComponenteType=ruleComponenteType
-	{ $current=$iv_ruleComponenteType.current; }
-	EOF;
-
-// Rule ComponenteType
-ruleComponenteType returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
 			{
 				if ($current==null) {
-					$current = createModelElement(grammarAccess.getComponenteTypeRule());
+					$current = createModelElement(grammarAccess.getComplejoTypeRule());
 				}
 			}
 			otherlv_0=RULE_ID
 			{
-				newLeafNode(otherlv_0, grammarAccess.getComponenteTypeAccess().getComponenteCmpntEvaluacionCrossReference_0());
+				newLeafNode(otherlv_0, grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_0());
 			}
 		)
 	)

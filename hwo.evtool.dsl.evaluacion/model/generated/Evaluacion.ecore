@@ -25,13 +25,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Expresion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Atomo" eSuperTypes="#//Expresion"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComplejoType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementType" eType="#//ElementType"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="array" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponenteType" eSuperTypes="#//ElementType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="componente" eType="#//CmpntEvaluacion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Atomo">

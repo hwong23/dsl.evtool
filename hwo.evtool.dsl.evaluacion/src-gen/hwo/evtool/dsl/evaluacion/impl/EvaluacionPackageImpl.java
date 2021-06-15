@@ -7,10 +7,8 @@ import hwo.evtool.dsl.evaluacion.Atomo;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.ComplejoType;
-import hwo.evtool.dsl.evaluacion.ComponenteType;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioType;
-import hwo.evtool.dsl.evaluacion.ElementType;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
 import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
@@ -81,20 +79,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   private EClass complejoTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass elementTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass componenteTypeEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -351,64 +335,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getComplejoType_ElementType()
+  public EReference getComplejoType_Componente()
   {
     return (EReference)complejoTypeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getComplejoType_Array()
-  {
-    return (EAttribute)complejoTypeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getComplejoType_Length()
-  {
-    return (EAttribute)complejoTypeEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getElementType()
-  {
-    return elementTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getComponenteType()
-  {
-    return componenteTypeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getComponenteType_Componente()
-  {
-    return (EReference)componenteTypeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -529,14 +458,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     atomoEClass = createEClass(ATOMO);
 
     complejoTypeEClass = createEClass(COMPLEJO_TYPE);
-    createEReference(complejoTypeEClass, COMPLEJO_TYPE__ELEMENT_TYPE);
-    createEAttribute(complejoTypeEClass, COMPLEJO_TYPE__ARRAY);
-    createEAttribute(complejoTypeEClass, COMPLEJO_TYPE__LENGTH);
-
-    elementTypeEClass = createEClass(ELEMENT_TYPE);
-
-    componenteTypeEClass = createEClass(COMPONENTE_TYPE);
-    createEReference(componenteTypeEClass, COMPONENTE_TYPE__COMPONENTE);
+    createEReference(complejoTypeEClass, COMPLEJO_TYPE__COMPONENTE);
 
     intConstantEClass = createEClass(INT_CONSTANT);
     createEAttribute(intConstantEClass, INT_CONSTANT__VALOR);
@@ -579,7 +501,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     // Add supertypes to classes
     criterioTypeEClass.getESuperTypes().add(this.getCriterio());
     atomoEClass.getESuperTypes().add(this.getExpresion());
-    componenteTypeEClass.getESuperTypes().add(this.getElementType());
     intConstantEClass.getESuperTypes().add(this.getAtomo());
     stringConstantEClass.getESuperTypes().add(this.getAtomo());
     boolConstantEClass.getESuperTypes().add(this.getAtomo());
@@ -606,14 +527,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(complejoTypeEClass, ComplejoType.class, "ComplejoType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getComplejoType_ElementType(), this.getElementType(), null, "elementType", null, 0, 1, ComplejoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getComplejoType_Array(), ecorePackage.getEBoolean(), "array", null, 0, 1, ComplejoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getComplejoType_Length(), ecorePackage.getEInt(), "length", null, 0, 1, ComplejoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(elementTypeEClass, ElementType.class, "ElementType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(componenteTypeEClass, ComponenteType.class, "ComponenteType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getComponenteType_Componente(), this.getCmpntEvaluacion(), null, "componente", null, 0, 1, ComponenteType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComplejoType_Componente(), this.getCmpntEvaluacion(), null, "componente", null, 0, 1, ComplejoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intConstantEClass, IntConstant.class, "IntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIntConstant_Valor(), ecorePackage.getEInt(), "valor", null, 0, 1, IntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

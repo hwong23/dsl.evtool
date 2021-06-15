@@ -14,9 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.ComplejoType#getElementType <em>Element Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.ComplejoType#isArray <em>Array</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.ComplejoType#getLength <em>Length</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.ComplejoType#getComponente <em>Componente</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComplejoType()
@@ -26,69 +24,25 @@ import org.eclipse.emf.ecore.EObject;
 public interface ComplejoType extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Element Type</b></em>' containment reference.
+   * Returns the value of the '<em><b>Componente</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Element Type</em>' containment reference.
-   * @see #setElementType(ElementType)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComplejoType_ElementType()
-   * @model containment="true"
-   * @generated
-   */
-  ElementType getElementType();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getElementType <em>Element Type</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Element Type</em>' containment reference.
-   * @see #getElementType()
-   * @generated
-   */
-  void setElementType(ElementType value);
-
-  /**
-   * Returns the value of the '<em><b>Array</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Array</em>' attribute.
-   * @see #setArray(boolean)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComplejoType_Array()
+   * @return the value of the '<em>Componente</em>' reference.
+   * @see #setComponente(CmpntEvaluacion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComplejoType_Componente()
    * @model
    * @generated
    */
-  boolean isArray();
+  CmpntEvaluacion getComponente();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComplejoType#isArray <em>Array</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getComponente <em>Componente</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Array</em>' attribute.
-   * @see #isArray()
+   * @param value the new value of the '<em>Componente</em>' reference.
+   * @see #getComponente()
    * @generated
    */
-  void setArray(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Length</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Length</em>' attribute.
-   * @see #setLength(int)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComplejoType_Length()
-   * @model
-   * @generated
-   */
-  int getLength();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getLength <em>Length</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Length</em>' attribute.
-   * @see #getLength()
-   * @generated
-   */
-  void setLength(int value);
+  void setComponente(CmpntEvaluacion value);
 
 } // ComplejoType

@@ -87,24 +87,6 @@ public interface EvaluacionFactory extends EFactory
   ComplejoType createComplejoType();
 
   /**
-   * Returns a new object of class '<em>Element Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element Type</em>'.
-   * @generated
-   */
-  ElementType createElementType();
-
-  /**
-   * Returns a new object of class '<em>Componente Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Componente Type</em>'.
-   * @generated
-   */
-  ComponenteType createComponenteType();
-
-  /**
    * Returns a new object of class '<em>Int Constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

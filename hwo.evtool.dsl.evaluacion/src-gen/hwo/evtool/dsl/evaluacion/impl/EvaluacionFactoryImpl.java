@@ -72,8 +72,6 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.EXPRESION: return createExpresion();
       case EvaluacionPackage.ATOMO: return createAtomo();
       case EvaluacionPackage.COMPLEJO_TYPE: return createComplejoType();
-      case EvaluacionPackage.ELEMENT_TYPE: return createElementType();
-      case EvaluacionPackage.COMPONENTE_TYPE: return createComponenteType();
       case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
       case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
       case EvaluacionPackage.BOOL_CONSTANT: return createBoolConstant();
@@ -164,30 +162,6 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     ComplejoTypeImpl complejoType = new ComplejoTypeImpl();
     return complejoType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public ElementType createElementType()
-  {
-    ElementTypeImpl elementType = new ElementTypeImpl();
-    return elementType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public ComponenteType createComponenteType()
-  {
-    ComponenteTypeImpl componenteType = new ComponenteTypeImpl();
-    return componenteType;
   }
 
   /**

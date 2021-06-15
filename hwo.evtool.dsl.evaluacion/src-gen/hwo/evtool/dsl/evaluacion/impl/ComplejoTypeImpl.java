@@ -3,12 +3,11 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
+import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.ComplejoType;
-import hwo.evtool.dsl.evaluacion.ElementType;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -24,9 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl#getElementType <em>Element Type</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl#isArray <em>Array</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl#getLength <em>Length</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl#getComponente <em>Componente</em>}</li>
  * </ul>
  *
  * @generated
@@ -34,54 +31,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements ComplejoType
 {
   /**
-   * The cached value of the '{@link #getElementType() <em>Element Type</em>}' containment reference.
+   * The cached value of the '{@link #getComponente() <em>Componente</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElementType()
+   * @see #getComponente()
    * @generated
    * @ordered
    */
-  protected ElementType elementType;
-
-  /**
-   * The default value of the '{@link #isArray() <em>Array</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isArray()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ARRAY_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isArray() <em>Array</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isArray()
-   * @generated
-   * @ordered
-   */
-  protected boolean array = ARRAY_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLength()
-   * @generated
-   * @ordered
-   */
-  protected static final int LENGTH_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLength()
-   * @generated
-   * @ordered
-   */
-  protected int length = LENGTH_EDEFAULT;
+  protected CmpntEvaluacion componente;
 
   /**
    * <!-- begin-user-doc -->
@@ -110,26 +67,29 @@ public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements Co
    * @generated
    */
   @Override
-  public ElementType getElementType()
+  public CmpntEvaluacion getComponente()
   {
-    return elementType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetElementType(ElementType newElementType, NotificationChain msgs)
-  {
-    ElementType oldElementType = elementType;
-    elementType = newElementType;
-    if (eNotificationRequired())
+    if (componente != null && componente.eIsProxy())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE, oldElementType, newElementType);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      InternalEObject oldComponente = (InternalEObject)componente;
+      componente = (CmpntEvaluacion)eResolveProxy(oldComponente);
+      if (componente != oldComponente)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EvaluacionPackage.COMPLEJO_TYPE__COMPONENTE, oldComponente, componente));
+      }
     }
-    return msgs;
+    return componente;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CmpntEvaluacion basicGetComponente()
+  {
+    return componente;
   }
 
   /**
@@ -138,86 +98,12 @@ public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements Co
    * @generated
    */
   @Override
-  public void setElementType(ElementType newElementType)
+  public void setComponente(CmpntEvaluacion newComponente)
   {
-    if (newElementType != elementType)
-    {
-      NotificationChain msgs = null;
-      if (elementType != null)
-        msgs = ((InternalEObject)elementType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE, null, msgs);
-      if (newElementType != null)
-        msgs = ((InternalEObject)newElementType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE, null, msgs);
-      msgs = basicSetElementType(newElementType, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE, newElementType, newElementType));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public boolean isArray()
-  {
-    return array;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setArray(boolean newArray)
-  {
-    boolean oldArray = array;
-    array = newArray;
+    CmpntEvaluacion oldComponente = componente;
+    componente = newComponente;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPLEJO_TYPE__ARRAY, oldArray, array));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int getLength()
-  {
-    return length;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setLength(int newLength)
-  {
-    int oldLength = length;
-    length = newLength;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPLEJO_TYPE__LENGTH, oldLength, length));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE:
-        return basicSetElementType(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPLEJO_TYPE__COMPONENTE, oldComponente, componente));
   }
 
   /**
@@ -230,12 +116,9 @@ public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements Co
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE:
-        return getElementType();
-      case EvaluacionPackage.COMPLEJO_TYPE__ARRAY:
-        return isArray();
-      case EvaluacionPackage.COMPLEJO_TYPE__LENGTH:
-        return getLength();
+      case EvaluacionPackage.COMPLEJO_TYPE__COMPONENTE:
+        if (resolve) return getComponente();
+        return basicGetComponente();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -250,14 +133,8 @@ public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements Co
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE:
-        setElementType((ElementType)newValue);
-        return;
-      case EvaluacionPackage.COMPLEJO_TYPE__ARRAY:
-        setArray((Boolean)newValue);
-        return;
-      case EvaluacionPackage.COMPLEJO_TYPE__LENGTH:
-        setLength((Integer)newValue);
+      case EvaluacionPackage.COMPLEJO_TYPE__COMPONENTE:
+        setComponente((CmpntEvaluacion)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -273,14 +150,8 @@ public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements Co
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE:
-        setElementType((ElementType)null);
-        return;
-      case EvaluacionPackage.COMPLEJO_TYPE__ARRAY:
-        setArray(ARRAY_EDEFAULT);
-        return;
-      case EvaluacionPackage.COMPLEJO_TYPE__LENGTH:
-        setLength(LENGTH_EDEFAULT);
+      case EvaluacionPackage.COMPLEJO_TYPE__COMPONENTE:
+        setComponente((CmpntEvaluacion)null);
         return;
     }
     super.eUnset(featureID);
@@ -296,33 +167,10 @@ public class ComplejoTypeImpl extends MinimalEObjectImpl.Container implements Co
   {
     switch (featureID)
     {
-      case EvaluacionPackage.COMPLEJO_TYPE__ELEMENT_TYPE:
-        return elementType != null;
-      case EvaluacionPackage.COMPLEJO_TYPE__ARRAY:
-        return array != ARRAY_EDEFAULT;
-      case EvaluacionPackage.COMPLEJO_TYPE__LENGTH:
-        return length != LENGTH_EDEFAULT;
+      case EvaluacionPackage.COMPLEJO_TYPE__COMPONENTE:
+        return componente != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (array: ");
-    result.append(array);
-    result.append(", length: ");
-    result.append(length);
-    result.append(')');
-    return result.toString();
   }
 
 } //ComplejoTypeImpl

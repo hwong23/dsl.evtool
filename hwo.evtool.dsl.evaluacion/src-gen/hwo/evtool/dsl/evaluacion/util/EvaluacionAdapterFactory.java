@@ -111,16 +111,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createComplejoTypeAdapter();
       }
       @Override
-      public Adapter caseElementType(ElementType object)
-      {
-        return createElementTypeAdapter();
-      }
-      @Override
-      public Adapter caseComponenteType(ComponenteType object)
-      {
-        return createComponenteTypeAdapter();
-      }
-      @Override
       public Adapter caseIntConstant(IntConstant object)
       {
         return createIntConstantAdapter();
@@ -258,36 +248,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createComplejoTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ElementType <em>Element Type</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.ElementType
-   * @generated
-   */
-  public Adapter createElementTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ComponenteType <em>Componente Type</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.ComponenteType
-   * @generated
-   */
-  public Adapter createComponenteTypeAdapter()
   {
     return null;
   }

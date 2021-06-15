@@ -263,31 +263,13 @@ public interface EvaluacionPackage extends EPackage
   int COMPLEJO_TYPE = 6;
 
   /**
-   * The feature id for the '<em><b>Element Type</b></em>' containment reference.
+   * The feature id for the '<em><b>Componente</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPLEJO_TYPE__ELEMENT_TYPE = 0;
-
-  /**
-   * The feature id for the '<em><b>Array</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPLEJO_TYPE__ARRAY = 1;
-
-  /**
-   * The feature id for the '<em><b>Length</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPLEJO_TYPE__LENGTH = 2;
+  int COMPLEJO_TYPE__COMPONENTE = 0;
 
   /**
    * The number of structural features of the '<em>Complejo Type</em>' class.
@@ -296,54 +278,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPLEJO_TYPE_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ElementTypeImpl <em>Element Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.ElementTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getElementType()
-   * @generated
-   */
-  int ELEMENT_TYPE = 7;
-
-  /**
-   * The number of structural features of the '<em>Element Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ELEMENT_TYPE_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl <em>Componente Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComponenteType()
-   * @generated
-   */
-  int COMPONENTE_TYPE = 8;
-
-  /**
-   * The feature id for the '<em><b>Componente</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPONENTE_TYPE__COMPONENTE = ELEMENT_TYPE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Componente Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COMPONENTE_TYPE_FEATURE_COUNT = ELEMENT_TYPE_FEATURE_COUNT + 1;
+  int COMPLEJO_TYPE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl <em>Int Constant</em>}' class.
@@ -353,7 +288,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getIntConstant()
    * @generated
    */
-  int INT_CONSTANT = 9;
+  int INT_CONSTANT = 7;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -381,7 +316,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getStringConstant()
    * @generated
    */
-  int STRING_CONSTANT = 10;
+  int STRING_CONSTANT = 8;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -409,7 +344,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getBoolConstant()
    * @generated
    */
-  int BOOL_CONSTANT = 11;
+  int BOOL_CONSTANT = 9;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -589,68 +524,15 @@ public interface EvaluacionPackage extends EPackage
   EClass getComplejoType();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getElementType <em>Element Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Element Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComplejoType#getElementType()
-   * @see #getComplejoType()
-   * @generated
-   */
-  EReference getComplejoType_ElementType();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.ComplejoType#isArray <em>Array</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Array</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComplejoType#isArray()
-   * @see #getComplejoType()
-   * @generated
-   */
-  EAttribute getComplejoType_Array();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getLength <em>Length</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Length</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComplejoType#getLength()
-   * @see #getComplejoType()
-   * @generated
-   */
-  EAttribute getComplejoType_Length();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.ElementType <em>Element Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Element Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ElementType
-   * @generated
-   */
-  EClass getElementType();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.ComponenteType <em>Componente Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Componente Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComponenteType
-   * @generated
-   */
-  EClass getComponenteType();
-
-  /**
-   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.ComponenteType#getComponente <em>Componente</em>}'.
+   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getComponente <em>Componente</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference '<em>Componente</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComponenteType#getComponente()
-   * @see #getComponenteType()
+   * @see hwo.evtool.dsl.evaluacion.ComplejoType#getComponente()
+   * @see #getComplejoType()
    * @generated
    */
-  EReference getComponenteType_Componente();
+  EReference getComplejoType_Componente();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.IntConstant <em>Int Constant</em>}'.
@@ -873,56 +755,12 @@ public interface EvaluacionPackage extends EPackage
     EClass COMPLEJO_TYPE = eINSTANCE.getComplejoType();
 
     /**
-     * The meta object literal for the '<em><b>Element Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference COMPLEJO_TYPE__ELEMENT_TYPE = eINSTANCE.getComplejoType_ElementType();
-
-    /**
-     * The meta object literal for the '<em><b>Array</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COMPLEJO_TYPE__ARRAY = eINSTANCE.getComplejoType_Array();
-
-    /**
-     * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COMPLEJO_TYPE__LENGTH = eINSTANCE.getComplejoType_Length();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ElementTypeImpl <em>Element Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.ElementTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getElementType()
-     * @generated
-     */
-    EClass ELEMENT_TYPE = eINSTANCE.getElementType();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl <em>Componente Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.ComponenteTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComponenteType()
-     * @generated
-     */
-    EClass COMPONENTE_TYPE = eINSTANCE.getComponenteType();
-
-    /**
      * The meta object literal for the '<em><b>Componente</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMPONENTE_TYPE__COMPONENTE = eINSTANCE.getComponenteType_Componente();
+    EReference COMPLEJO_TYPE__COMPONENTE = eINSTANCE.getComplejoType_Componente();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl <em>Int Constant</em>}' class.
