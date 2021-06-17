@@ -15,9 +15,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="criterios" upperBound="-1"
         eType="#//Criterio" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Criterio"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CriterioType" eSuperTypes="#//Criterio">
+  <eClassifiers xsi:type="ecore:EClass" name="Criterio">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CriterioType" eSuperTypes="#//Criterio">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" eType="#//Expresion"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="soporte" eType="#//Expresion"

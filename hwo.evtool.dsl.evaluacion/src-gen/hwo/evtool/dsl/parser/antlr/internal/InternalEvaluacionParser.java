@@ -341,7 +341,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==RULE_ID||LA3_0==15) ) {
+                if ( (LA3_0==15) ) {
                     alt3=1;
                 }
 
@@ -568,11 +568,31 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_ID) ) {
-                alt4=1;
-            }
-            else if ( (LA4_0==15) ) {
-                alt4=2;
+            if ( (LA4_0==15) ) {
+                int LA4_1 = input.LA(2);
+
+                if ( (LA4_1==RULE_ID) ) {
+                    int LA4_2 = input.LA(3);
+
+                    if ( (LA4_2==16) ) {
+                        alt4=2;
+                    }
+                    else if ( (LA4_2==RULE_ID) ) {
+                        alt4=1;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 4, 2, input);
+
+                        throw nvae;
+                    }
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 4, 1, input);
+
+                    throw nvae;
+                }
             }
             else {
                 NoViableAltException nvae =
@@ -1244,34 +1264,72 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComplejoType"
-    // InternalEvaluacion.g:491:1: ruleComplejoType returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    // InternalEvaluacion.g:491:1: ruleComplejoType returns [EObject current=null] : (otherlv_0= 'criterio' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ) ;
     public final EObject ruleComplejoType() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
 
 
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:497:2: ( ( (otherlv_0= RULE_ID ) ) )
-            // InternalEvaluacion.g:498:2: ( (otherlv_0= RULE_ID ) )
+            // InternalEvaluacion.g:497:2: ( (otherlv_0= 'criterio' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalEvaluacion.g:498:2: (otherlv_0= 'criterio' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) )
             {
-            // InternalEvaluacion.g:498:2: ( (otherlv_0= RULE_ID ) )
-            // InternalEvaluacion.g:499:3: (otherlv_0= RULE_ID )
+            // InternalEvaluacion.g:498:2: (otherlv_0= 'criterio' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) ) )
+            // InternalEvaluacion.g:499:3: otherlv_0= 'criterio' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= RULE_ID ) )
             {
-            // InternalEvaluacion.g:499:3: (otherlv_0= RULE_ID )
-            // InternalEvaluacion.g:500:4: otherlv_0= RULE_ID
+            otherlv_0=(Token)match(input,15,FOLLOW_4); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getComplejoTypeAccess().getCriterioKeyword_0());
+            		
+            // InternalEvaluacion.g:503:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalEvaluacion.g:504:4: (lv_name_1_0= RULE_ID )
+            {
+            // InternalEvaluacion.g:504:4: (lv_name_1_0= RULE_ID )
+            // InternalEvaluacion.g:505:5: lv_name_1_0= RULE_ID
+            {
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
+
+            					newLeafNode(lv_name_1_0, grammarAccess.getComplejoTypeAccess().getNameIDTerminalRuleCall_1_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getComplejoTypeRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"name",
+            						lv_name_1_0,
+            						"org.eclipse.xtext.common.Terminals.ID");
+            				
+
+            }
+
+
+            }
+
+            // InternalEvaluacion.g:521:3: ( (otherlv_2= RULE_ID ) )
+            // InternalEvaluacion.g:522:4: (otherlv_2= RULE_ID )
+            {
+            // InternalEvaluacion.g:522:4: (otherlv_2= RULE_ID )
+            // InternalEvaluacion.g:523:5: otherlv_2= RULE_ID
             {
 
-            				if (current==null) {
-            					current = createModelElement(grammarAccess.getComplejoTypeRule());
-            				}
-            			
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_2); 
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getComplejoTypeRule());
+            					}
+            				
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
 
-            				newLeafNode(otherlv_0, grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_0());
-            			
+            					newLeafNode(otherlv_2, grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_2_0());
+            				
+
+            }
+
 
             }
 
@@ -1307,7 +1365,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000003000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000000000C010L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000000000C000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000000C0060L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020002L});

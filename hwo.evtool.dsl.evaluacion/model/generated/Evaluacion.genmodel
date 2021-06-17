@@ -17,9 +17,10 @@
     <genClasses ecoreClass="Evaluacion.ecore#//Atributos">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//Atributos/criterios"/>
     </genClasses>
-    <genClasses ecoreClass="Evaluacion.ecore#//Criterio"/>
+    <genClasses ecoreClass="Evaluacion.ecore#//Criterio">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Criterio/name"/>
+    </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CriterioType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioType/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CriterioType/expresion"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//CriterioType/soporte"/>
     </genClasses>

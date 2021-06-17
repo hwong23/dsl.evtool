@@ -37,7 +37,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 		public class «CmpntEvaluacion.name» {
 			«FOR attribute : evaluacion.atributos»
 			«FOR criterio : attribute.criterios» 
-			private «criterio»
+			private String «criterio.name» = «» 
 			«ENDFOR»
 			«ENDFOR»
 

@@ -496,16 +496,40 @@ ruleComplejoType returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='criterio'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getComplejoTypeAccess().getCriterioKeyword_0());
+		}
 		(
-			{
-				if ($current==null) {
-					$current = createModelElement(grammarAccess.getComplejoTypeRule());
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getComplejoTypeAccess().getNameIDTerminalRuleCall_1_0());
 				}
-			}
-			otherlv_0=RULE_ID
-			{
-				newLeafNode(otherlv_0, grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_0());
-			}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getComplejoTypeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getComplejoTypeRule());
+					}
+				}
+				otherlv_2=RULE_ID
+				{
+					newLeafNode(otherlv_2, grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_2_0());
+				}
+			)
 		)
 	)
 ;

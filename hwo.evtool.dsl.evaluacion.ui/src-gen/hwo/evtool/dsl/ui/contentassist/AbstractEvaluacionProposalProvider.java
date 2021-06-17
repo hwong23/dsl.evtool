@@ -52,6 +52,9 @@ public abstract class AbstractEvaluacionProposalProvider extends TerminalsPropos
 			// subclasses may override
 		}
 	}
+	public void completeComplejoType_Name(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
+	}
 	public void completeComplejoType_Componente(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		lookupCrossReference(((CrossReference)assignment.getTerminal()), context, acceptor);
 	}

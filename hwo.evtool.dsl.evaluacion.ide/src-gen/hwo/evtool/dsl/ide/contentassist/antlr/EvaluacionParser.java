@@ -41,6 +41,7 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAtomoAccess().getGroup_0(), "rule__Atomo__Group_0__0");
 			builder.put(grammarAccess.getAtomoAccess().getGroup_1(), "rule__Atomo__Group_1__0");
 			builder.put(grammarAccess.getAtomoAccess().getGroup_2(), "rule__Atomo__Group_2__0");
+			builder.put(grammarAccess.getComplejoTypeAccess().getGroup(), "rule__ComplejoType__Group__0");
 			builder.put(grammarAccess.getEvaluacionModelAccess().getComponentesAssignment(), "rule__EvaluacionModel__ComponentesAssignment");
 			builder.put(grammarAccess.getCmpntEvaluacionAccess().getNameAssignment_1(), "rule__CmpntEvaluacion__NameAssignment_1");
 			builder.put(grammarAccess.getCmpntEvaluacionAccess().getSuperTypeAssignment_2_1(), "rule__CmpntEvaluacion__SuperTypeAssignment_2_1");
@@ -52,7 +53,8 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_0_1(), "rule__Atomo__ValorAssignment_0_1");
 			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_1_1(), "rule__Atomo__ValorAssignment_1_1");
 			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_2_1(), "rule__Atomo__ValorAssignment_2_1");
-			builder.put(grammarAccess.getComplejoTypeAccess().getComponenteAssignment(), "rule__ComplejoType__ComponenteAssignment");
+			builder.put(grammarAccess.getComplejoTypeAccess().getNameAssignment_1(), "rule__ComplejoType__NameAssignment_1");
+			builder.put(grammarAccess.getComplejoTypeAccess().getComponenteAssignment_2(), "rule__ComplejoType__ComponenteAssignment_2");
 		}
 	}
 	

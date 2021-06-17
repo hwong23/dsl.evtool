@@ -149,15 +149,18 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     ComplejoType returns ComplejoType
 	 *
 	 * Constraint:
-	 *     componente=[CmpntEvaluacion|ID]
+	 *     (name=ID componente=[CmpntEvaluacion|ID])
 	 */
 	protected void sequence_ComplejoType(ISerializationContext context, ComplejoType semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO__NAME));
 			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE, false));
+		feeder.accept(grammarAccess.getComplejoTypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_2_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE, false));
 		feeder.finish();
 	}
 	

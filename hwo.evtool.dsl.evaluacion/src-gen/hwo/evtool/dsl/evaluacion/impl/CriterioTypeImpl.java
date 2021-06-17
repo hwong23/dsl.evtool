@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getName <em>Name</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getExpresion <em>Expresion</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl#getSoporte <em>Soporte</em>}</li>
  * </ul>
@@ -32,26 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class CriterioTypeImpl extends CriterioImpl implements CriterioType
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getExpresion() <em>Expresion</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -91,31 +70,6 @@ public class CriterioTypeImpl extends CriterioImpl implements CriterioType
   protected EClass eStaticClass()
   {
     return EvaluacionPackage.Literals.CRITERIO_TYPE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_TYPE__NAME, oldName, name));
   }
 
   /**
@@ -246,8 +200,6 @@ public class CriterioTypeImpl extends CriterioImpl implements CriterioType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__NAME:
-        return getName();
       case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
         return getExpresion();
       case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
@@ -266,9 +218,6 @@ public class CriterioTypeImpl extends CriterioImpl implements CriterioType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__NAME:
-        setName((String)newValue);
-        return;
       case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
         setExpresion((Expresion)newValue);
         return;
@@ -289,9 +238,6 @@ public class CriterioTypeImpl extends CriterioImpl implements CriterioType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
         setExpresion((Expresion)null);
         return;
@@ -312,31 +258,12 @@ public class CriterioTypeImpl extends CriterioImpl implements CriterioType
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CRITERIO_TYPE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EvaluacionPackage.CRITERIO_TYPE__EXPRESION:
         return expresion != null;
       case EvaluacionPackage.CRITERIO_TYPE__SOPORTE:
         return soporte != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //CriterioTypeImpl

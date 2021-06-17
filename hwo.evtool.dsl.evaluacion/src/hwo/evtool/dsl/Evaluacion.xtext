@@ -15,7 +15,7 @@ Atributos:
 ;
 
 Criterio:
-	ComplejoType | CriterioType
+	(ComplejoType | CriterioType)
 ;	
 
 CriterioType:
@@ -35,8 +35,4 @@ Atomo:
 
 
 ComplejoType:
-	componente = [CmpntEvaluacion];
-
-
-
-	
+	'criterio' name = ID componente = [CmpntEvaluacion];
