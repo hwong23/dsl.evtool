@@ -8,7 +8,6 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import static extension org.eclipse.xtext.nodemodel.util.NodeModelUtils.*
-import hwo.evtool.dsl.evaluacion.EvaluacionModel
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion
 
 /**
@@ -32,12 +31,23 @@ class EvaluacionGenerator extends AbstractGenerator {
     }
 }
 	
-	def CharSequence compile(CmpntEvaluacion evaluacion)
+	def CharSequence compile(CmpntEvaluacion e) '''
+	    package «e.eContainer.eClass.name»;
+	        
+	    public class «e.name» {
+	    	«FOR f : e.attributes»
+	    		«f.eContents.map[
+	    			getNode.getTokenText
+	    			getNode.class.name
+				].join("\n")»
+	    	«ENDFOR»
+	    }
+	'''
 
 	def interpretExpressions(CmpntEvaluacion model) {
 		model.attributes.map [
 	
-		'''«getNode.getTokenText» ~>'''
+		'''«getNode.getTokenText»'''
 		].join("\n")
 	}
 }
