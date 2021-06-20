@@ -42,6 +42,15 @@ public interface EvaluacionFactory extends EFactory
   CmpntEvaluacion createCmpntEvaluacion();
 
   /**
+   * Returns a new object of class '<em>Atributos</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atributos</em>'.
+   * @generated
+   */
+  Atributos createAtributos();
+
+  /**
    * Returns a new object of class '<em>Criterio</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

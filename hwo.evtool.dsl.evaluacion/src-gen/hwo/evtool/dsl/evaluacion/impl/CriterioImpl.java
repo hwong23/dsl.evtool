@@ -6,6 +6,11 @@ package hwo.evtool.dsl.evaluacion.impl;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
+<<<<<<< HEAD
+=======
+import org.eclipse.emf.common.notify.Notification;
+
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -14,11 +19,43 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Criterio</b></em>'.
  * <!-- end-user-doc -->
+<<<<<<< HEAD
+=======
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl#getName <em>Name</em>}</li>
+ * </ul>
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
  *
  * @generated
  */
 public class CriterioImpl extends MinimalEObjectImpl.Container implements Criterio
 {
+  /**
+<<<<<<< HEAD
+=======
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -29,6 +66,8 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
     super();
   }
 
+<<<<<<< HEAD
+=======
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -40,4 +79,113 @@ public class CriterioImpl extends MinimalEObjectImpl.Container implements Criter
     return EvaluacionPackage.Literals.CRITERIO;
   }
 
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.CRITERIO__NAME:
+        return getName();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.CRITERIO__NAME:
+        setName((String)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.CRITERIO__NAME:
+        setName(NAME_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.CRITERIO__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+    }
+    return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
+
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 } //CriterioImpl

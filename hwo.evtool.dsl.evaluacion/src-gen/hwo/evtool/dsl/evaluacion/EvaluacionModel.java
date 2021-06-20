@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.EvaluacionModel#getEntities <em>Entities</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.EvaluacionModel#getComponentes <em>Componentes</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluacionModel()
@@ -26,15 +26,15 @@ import org.eclipse.emf.ecore.EObject;
 public interface EvaluacionModel extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Componentes</b></em>' containment reference list.
    * The list contents are of type {@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Entities</em>' containment reference list.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluacionModel_Entities()
+   * @return the value of the '<em>Componentes</em>' containment reference list.
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluacionModel_Componentes()
    * @model containment="true"
    * @generated
    */
-  EList<CmpntEvaluacion> getEntities();
+  EList<CmpntEvaluacion> getComponentes();
 
 } // EvaluacionModel

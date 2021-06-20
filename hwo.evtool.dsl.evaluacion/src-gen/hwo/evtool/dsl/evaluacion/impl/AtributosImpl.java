@@ -3,8 +3,8 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
-import hwo.evtool.dsl.evaluacion.EvaluacionModel;
+import hwo.evtool.dsl.evaluacion.Atributos;
+import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import java.util.Collection;
@@ -23,35 +23,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Atributos</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl#getComponentes <em>Componentes</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.AtributosImpl#getCriterios <em>Criterios</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements EvaluacionModel
+public class AtributosImpl extends MinimalEObjectImpl.Container implements Atributos
 {
   /**
-   * The cached value of the '{@link #getComponentes() <em>Componentes</em>}' containment reference list.
+   * The cached value of the '{@link #getCriterios() <em>Criterios</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getComponentes()
+   * @see #getCriterios()
    * @generated
    * @ordered
    */
-  protected EList<CmpntEvaluacion> componentes;
+  protected EList<Criterio> criterios;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EvaluacionModelImpl()
+  protected AtributosImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.EVALUACION_MODEL;
+    return EvaluacionPackage.Literals.ATRIBUTOS;
   }
 
   /**
@@ -73,13 +73,13 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
    * @generated
    */
   @Override
-  public EList<CmpntEvaluacion> getComponentes()
+  public EList<Criterio> getCriterios()
   {
-    if (componentes == null)
+    if (criterios == null)
     {
-      componentes = new EObjectContainmentEList<CmpntEvaluacion>(CmpntEvaluacion.class, this, EvaluacionPackage.EVALUACION_MODEL__COMPONENTES);
+      criterios = new EObjectContainmentEList<Criterio>(Criterio.class, this, EvaluacionPackage.ATRIBUTOS__CRITERIOS);
     }
-    return componentes;
+    return criterios;
   }
 
   /**
@@ -92,8 +92,8 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACION_MODEL__COMPONENTES:
-        return ((InternalEList<?>)getComponentes()).basicRemove(otherEnd, msgs);
+      case EvaluacionPackage.ATRIBUTOS__CRITERIOS:
+        return ((InternalEList<?>)getCriterios()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +108,8 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACION_MODEL__COMPONENTES:
-        return getComponentes();
+      case EvaluacionPackage.ATRIBUTOS__CRITERIOS:
+        return getCriterios();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +125,9 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACION_MODEL__COMPONENTES:
-        getComponentes().clear();
-        getComponentes().addAll((Collection<? extends CmpntEvaluacion>)newValue);
+      case EvaluacionPackage.ATRIBUTOS__CRITERIOS:
+        getCriterios().clear();
+        getCriterios().addAll((Collection<? extends Criterio>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +143,8 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACION_MODEL__COMPONENTES:
-        getComponentes().clear();
+      case EvaluacionPackage.ATRIBUTOS__CRITERIOS:
+        getCriterios().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,10 +160,10 @@ public class EvaluacionModelImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACION_MODEL__COMPONENTES:
-        return componentes != null && !componentes.isEmpty();
+      case EvaluacionPackage.ATRIBUTOS__CRITERIOS:
+        return criterios != null && !criterios.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //EvaluacionModelImpl
+} //AtributosImpl

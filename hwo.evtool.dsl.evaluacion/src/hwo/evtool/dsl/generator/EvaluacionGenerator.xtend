@@ -33,6 +33,7 @@ class EvaluacionGenerator extends AbstractGenerator {
     }
 }
 	
+<<<<<<< HEAD
 	def CharSequence compile(CmpntEvaluacion e) '''
 	    package «e.eContainer.eClass.name»;
 	        
@@ -41,10 +42,33 @@ class EvaluacionGenerator extends AbstractGenerator {
 	    		«f.compile»
 	    	«ENDFOR»
 	    }
+=======
+	def CharSequence compile(CmpntEvaluacion evaluacion) '''
+		package entities;
+		
+		public class «CmpntEvaluacion.name» {
+			«FOR attribute : evaluacion.atributos»
+			«FOR criterio : attribute.criterios» 
+			private String «criterio.name» = «» 
+			«ENDFOR»
+			«ENDFOR»
+
+«««			«FOR attribute : CmpntEvaluacion.attributes»
+«««			public «attribute.type.compile» get«attribute.name.toFirstUpper»() {
+«««				return «attribute.name»;
+«««			}
+«««			
+«««			public void set«attribute.name.toFirstUpper»(«attribute.type.compile» _arg) {
+«««				this.«attribute.name» = _arg;
+«««			}
+«««			
+«««			«ENDFOR»
+		}
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 	'''
 
 	def interpretExpressions(CmpntEvaluacion model) {
-		model.attributes.map [
+		model.atributos.map [
 	
 		'''«getNode.getTokenText»'''
 		].join("\n")

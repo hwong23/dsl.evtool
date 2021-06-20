@@ -2,15 +2,24 @@ grammar hwo.evtool.dsl.Evaluacion with org.eclipse.xtext.common.Terminals
 generate evaluacion "http://www.evtool.hwo/dsl/Evaluacion"
 
 EvaluacionModel:
-	entities+=CmpntEvaluacion*;
+	componentes+=CmpntEvaluacion*;
 
 CmpntEvaluacion:
 	'componente' name = ID ('hereda' superType=[CmpntEvaluacion])? '{'
-		attributes+=Criterio*
-	'}';
+		atributos+=Atributos*
+	'}'
+;
+
+Atributos:
+	criterios+=Criterio
+;
 
 Criterio:
+<<<<<<< HEAD
 	CriterioComplejoType | CriterioSimpleType
+=======
+	(ComplejoType | CriterioType)
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 ;	
 
 CriterioSimpleType:	
@@ -28,6 +37,12 @@ Atomo:
 	{BoolConstant} valor= ('S' | 'N')
 ;
 
+<<<<<<< HEAD
 CriterioComplejoType:
 	componente = [CmpntEvaluacion];
 
+=======
+
+ComplejoType:
+	'criterio' name = ID componente = [CmpntEvaluacion];
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e

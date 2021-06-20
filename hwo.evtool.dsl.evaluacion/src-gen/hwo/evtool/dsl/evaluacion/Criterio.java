@@ -10,6 +10,15 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Criterio</b></em>'.
  * <!-- end-user-doc -->
  *
+<<<<<<< HEAD
+=======
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Criterio#getName <em>Name</em>}</li>
+ * </ul>
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio()
  * @model
@@ -17,4 +26,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Criterio extends EObject
 {
+<<<<<<< HEAD
+=======
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Criterio#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 } // Criterio

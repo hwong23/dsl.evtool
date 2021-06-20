@@ -4,10 +4,16 @@
 package hwo.evtool.dsl.serializer;
 
 import com.google.inject.Inject;
+import hwo.evtool.dsl.evaluacion.Atributos;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
+<<<<<<< HEAD
 import hwo.evtool.dsl.evaluacion.CriterioComplejoType;
 import hwo.evtool.dsl.evaluacion.CriterioSimpleType;
+=======
+import hwo.evtool.dsl.evaluacion.ComplejoType;
+import hwo.evtool.dsl.evaluacion.CriterioType;
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.IntConstant;
@@ -38,6 +44,9 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == EvaluacionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case EvaluacionPackage.ATRIBUTOS:
+				sequence_Atributos(context, (Atributos) semanticObject); 
+				return; 
 			case EvaluacionPackage.BOOL_CONSTANT:
 				sequence_Atomo(context, (BoolConstant) semanticObject); 
 				return; 
@@ -47,8 +56,13 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.CRITERIO_COMPLEJO_TYPE:
 				sequence_CriterioComplejoType(context, (CriterioComplejoType) semanticObject); 
 				return; 
+<<<<<<< HEAD
 			case EvaluacionPackage.CRITERIO_SIMPLE_TYPE:
 				sequence_CriterioSimpleType(context, (CriterioSimpleType) semanticObject); 
+=======
+			case EvaluacionPackage.CRITERIO_TYPE:
+				sequence_CriterioType(context, (CriterioType) semanticObject); 
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 				return; 
 			case EvaluacionPackage.EVALUACION_MODEL:
 				sequence_EvaluacionModel(context, (EvaluacionModel) semanticObject); 
@@ -117,10 +131,22 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Atributos returns Atributos
+	 *
+	 * Constraint:
+	 *     criterios+=Criterio
+	 */
+	protected void sequence_Atributos(ISerializationContext context, Atributos semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     CmpntEvaluacion returns CmpntEvaluacion
 	 *
 	 * Constraint:
-	 *     (name=ID superType=[CmpntEvaluacion|ID]? attributes+=Criterio*)
+	 *     (name=ID superType=[CmpntEvaluacion|ID]? atributos+=Atributos*)
 	 */
 	protected void sequence_CmpntEvaluacion(ISerializationContext context, CmpntEvaluacion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -129,19 +155,35 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+<<<<<<< HEAD
 	 *     Criterio returns CriterioComplejoType
 	 *     CriterioComplejoType returns CriterioComplejoType
+=======
+	 *     Criterio returns ComplejoType
+	 *     ComplejoType returns ComplejoType
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 	 *
 	 * Constraint:
-	 *     componente=[CmpntEvaluacion|ID]
+	 *     (name=ID componente=[CmpntEvaluacion|ID])
 	 */
 	protected void sequence_CriterioComplejoType(ISerializationContext context, CriterioComplejoType semanticObject) {
 		if (errorAcceptor != null) {
+<<<<<<< HEAD
 			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO_COMPLEJO_TYPE__COMPONENTE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO_COMPLEJO_TYPE__COMPONENTE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getCriterioComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.CRITERIO_COMPLEJO_TYPE__COMPONENTE, false));
+=======
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO__NAME));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getComplejoTypeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_2_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE, false));
+>>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 		feeder.finish();
 	}
 	
@@ -164,7 +206,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     EvaluacionModel returns EvaluacionModel
 	 *
 	 * Constraint:
-	 *     entities+=CmpntEvaluacion+
+	 *     componentes+=CmpntEvaluacion+
 	 */
 	protected void sequence_EvaluacionModel(ISerializationContext context, EvaluacionModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
