@@ -94,11 +94,11 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.CRITERIO_TYPE:
+      case EvaluacionPackage.CRITERIO_SIMPLE_TYPE:
       {
-        CriterioType criterioType = (CriterioType)theEObject;
-        T result = caseCriterioType(criterioType);
-        if (result == null) result = caseCriterio(criterioType);
+        CriterioSimpleType criterioSimpleType = (CriterioSimpleType)theEObject;
+        T result = caseCriterioSimpleType(criterioSimpleType);
+        if (result == null) result = caseCriterio(criterioSimpleType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -117,10 +117,11 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.COMPLEJO_TYPE:
+      case EvaluacionPackage.CRITERIO_COMPLEJO_TYPE:
       {
-        ComplejoType complejoType = (ComplejoType)theEObject;
-        T result = caseComplejoType(complejoType);
+        CriterioComplejoType criterioComplejoType = (CriterioComplejoType)theEObject;
+        T result = caseCriterioComplejoType(criterioComplejoType);
+        if (result == null) result = caseCriterio(criterioComplejoType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -204,17 +205,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Criterio Simple Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Criterio Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Criterio Simple Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCriterioType(CriterioType object)
+  public T caseCriterioSimpleType(CriterioSimpleType object)
   {
     return null;
   }
@@ -252,17 +253,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Complejo Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Criterio Complejo Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Complejo Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Criterio Complejo Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseComplejoType(ComplejoType object)
+  public T caseCriterioComplejoType(CriterioComplejoType object)
   {
     return null;
   }

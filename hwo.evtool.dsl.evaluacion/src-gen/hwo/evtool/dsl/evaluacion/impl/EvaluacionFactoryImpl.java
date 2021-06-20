@@ -68,10 +68,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.EVALUACION_MODEL: return createEvaluacionModel();
       case EvaluacionPackage.CMPNT_EVALUACION: return createCmpntEvaluacion();
       case EvaluacionPackage.CRITERIO: return createCriterio();
-      case EvaluacionPackage.CRITERIO_TYPE: return createCriterioType();
+      case EvaluacionPackage.CRITERIO_SIMPLE_TYPE: return createCriterioSimpleType();
       case EvaluacionPackage.EXPRESION: return createExpresion();
       case EvaluacionPackage.ATOMO: return createAtomo();
-      case EvaluacionPackage.COMPLEJO_TYPE: return createComplejoType();
+      case EvaluacionPackage.CRITERIO_COMPLEJO_TYPE: return createCriterioComplejoType();
       case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
       case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
       case EvaluacionPackage.BOOL_CONSTANT: return createBoolConstant();
@@ -122,10 +122,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public CriterioType createCriterioType()
+  public CriterioSimpleType createCriterioSimpleType()
   {
-    CriterioTypeImpl criterioType = new CriterioTypeImpl();
-    return criterioType;
+    CriterioSimpleTypeImpl criterioSimpleType = new CriterioSimpleTypeImpl();
+    return criterioSimpleType;
   }
 
   /**
@@ -158,10 +158,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public ComplejoType createComplejoType()
+  public CriterioComplejoType createCriterioComplejoType()
   {
-    ComplejoTypeImpl complejoType = new ComplejoTypeImpl();
-    return complejoType;
+    CriterioComplejoTypeImpl criterioComplejoType = new CriterioComplejoTypeImpl();
+    return criterioComplejoType;
   }
 
   /**

@@ -3,8 +3,6 @@
  */
 package hwo.evtool.dsl.validation;
 
-import java.io.Console;
-
 import org.eclipse.xtext.validation.Check;
 
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
@@ -30,7 +28,7 @@ public class EvaluacionValidator extends AbstractEvaluacionValidator {
 
 		@Check
 		public void checkComponentesNameMayusculas (CmpntEvaluacion compn) {
-			if (true)
+			if ( !Character.isUpperCase(compn.getName().charAt(0)) )
 				warning(
 					"Componentes deben iniciar con mayúsculas", 
 					EvaluacionPackage.eINSTANCE.getCmpntEvaluacion_Name()

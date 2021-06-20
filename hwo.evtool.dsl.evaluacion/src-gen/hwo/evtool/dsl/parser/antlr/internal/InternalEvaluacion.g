@@ -199,46 +199,35 @@ ruleCriterio returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getCriterioAccess().getTypeComplejoTypeParserRuleCall_0_0());
-				}
-				lv_type_0_0=ruleComplejoType
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCriterioRule());
-					}
-					set(
-						$current,
-						"type",
-						lv_type_0_0,
-						"hwo.evtool.dsl.Evaluacion.ComplejoType");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getCriterioAccess().getCriterioComplejoTypeParserRuleCall_0());
+		}
+		this_CriterioComplejoType_0=ruleCriterioComplejoType
+		{
+			$current = $this_CriterioComplejoType_0.current;
+			afterParserOrEnumRuleCall();
+		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getCriterioAccess().getCriterioTypeParserRuleCall_1());
+			newCompositeNode(grammarAccess.getCriterioAccess().getCriterioSimpleTypeParserRuleCall_1());
 		}
-		this_CriterioType_1=ruleCriterioType
+		this_CriterioSimpleType_1=ruleCriterioSimpleType
 		{
-			$current = $this_CriterioType_1.current;
+			$current = $this_CriterioSimpleType_1.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRuleCriterioType
-entryRuleCriterioType returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCriterioTypeRule()); }
-	iv_ruleCriterioType=ruleCriterioType
-	{ $current=$iv_ruleCriterioType.current; }
+// Entry rule entryRuleCriterioSimpleType
+entryRuleCriterioSimpleType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCriterioSimpleTypeRule()); }
+	iv_ruleCriterioSimpleType=ruleCriterioSimpleType
+	{ $current=$iv_ruleCriterioSimpleType.current; }
 	EOF;
 
-// Rule CriterioType
-ruleCriterioType returns [EObject current=null]
+// Rule CriterioSimpleType
+ruleCriterioSimpleType returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -248,17 +237,17 @@ ruleCriterioType returns [EObject current=null]
 	(
 		otherlv_0='criterio'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCriterioTypeAccess().getCriterioKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getCriterioSimpleTypeAccess().getCriterioKeyword_0());
 		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getCriterioTypeAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getCriterioSimpleTypeAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCriterioTypeRule());
+						$current = createModelElement(grammarAccess.getCriterioSimpleTypeRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -270,17 +259,17 @@ ruleCriterioType returns [EObject current=null]
 		)
 		otherlv_2='='
 		{
-			newLeafNode(otherlv_2, grammarAccess.getCriterioTypeAccess().getEqualsSignKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getCriterioSimpleTypeAccess().getEqualsSignKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCriterioTypeAccess().getExpresionExpresionParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getCriterioSimpleTypeAccess().getExpresionExpresionParserRuleCall_3_0());
 				}
 				lv_expresion_3_0=ruleExpresion
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getCriterioTypeRule());
+						$current = createModelElementForParent(grammarAccess.getCriterioSimpleTypeRule());
 					}
 					set(
 						$current,
@@ -294,17 +283,17 @@ ruleCriterioType returns [EObject current=null]
 		(
 			otherlv_4=':'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getCriterioTypeAccess().getColonKeyword_4_0());
+				newLeafNode(otherlv_4, grammarAccess.getCriterioSimpleTypeAccess().getColonKeyword_4_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCriterioTypeAccess().getSoporteExpresionParserRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getCriterioSimpleTypeAccess().getSoporteExpresionParserRuleCall_4_1_0());
 					}
 					lv_soporte_5_0=ruleExpresion
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCriterioTypeRule());
+							$current = createModelElementForParent(grammarAccess.getCriterioSimpleTypeRule());
 						}
 						set(
 							$current,
@@ -455,15 +444,15 @@ ruleAtomo returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleComplejoType
-entryRuleComplejoType returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getComplejoTypeRule()); }
-	iv_ruleComplejoType=ruleComplejoType
-	{ $current=$iv_ruleComplejoType.current; }
+// Entry rule entryRuleCriterioComplejoType
+entryRuleCriterioComplejoType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCriterioComplejoTypeRule()); }
+	iv_ruleCriterioComplejoType=ruleCriterioComplejoType
+	{ $current=$iv_ruleCriterioComplejoType.current; }
 	EOF;
 
-// Rule ComplejoType
-ruleComplejoType returns [EObject current=null]
+// Rule CriterioComplejoType
+ruleCriterioComplejoType returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -474,12 +463,12 @@ ruleComplejoType returns [EObject current=null]
 		(
 			{
 				if ($current==null) {
-					$current = createModelElement(grammarAccess.getComplejoTypeRule());
+					$current = createModelElement(grammarAccess.getCriterioComplejoTypeRule());
 				}
 			}
 			otherlv_0=RULE_ID
 			{
-				newLeafNode(otherlv_0, grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_0());
+				newLeafNode(otherlv_0, grammarAccess.getCriterioComplejoTypeAccess().getComponenteCmpntEvaluacionCrossReference_0());
 			}
 		)
 	)

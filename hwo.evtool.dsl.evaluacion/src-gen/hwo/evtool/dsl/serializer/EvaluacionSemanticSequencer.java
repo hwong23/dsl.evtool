@@ -6,9 +6,8 @@ package hwo.evtool.dsl.serializer;
 import com.google.inject.Inject;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
-import hwo.evtool.dsl.evaluacion.ComplejoType;
-import hwo.evtool.dsl.evaluacion.Criterio;
-import hwo.evtool.dsl.evaluacion.CriterioType;
+import hwo.evtool.dsl.evaluacion.CriterioComplejoType;
+import hwo.evtool.dsl.evaluacion.CriterioSimpleType;
 import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.IntConstant;
@@ -45,14 +44,11 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.CMPNT_EVALUACION:
 				sequence_CmpntEvaluacion(context, (CmpntEvaluacion) semanticObject); 
 				return; 
-			case EvaluacionPackage.COMPLEJO_TYPE:
-				sequence_ComplejoType(context, (ComplejoType) semanticObject); 
+			case EvaluacionPackage.CRITERIO_COMPLEJO_TYPE:
+				sequence_CriterioComplejoType(context, (CriterioComplejoType) semanticObject); 
 				return; 
-			case EvaluacionPackage.CRITERIO:
-				sequence_Criterio(context, (Criterio) semanticObject); 
-				return; 
-			case EvaluacionPackage.CRITERIO_TYPE:
-				sequence_CriterioType(context, (CriterioType) semanticObject); 
+			case EvaluacionPackage.CRITERIO_SIMPLE_TYPE:
+				sequence_CriterioSimpleType(context, (CriterioSimpleType) semanticObject); 
 				return; 
 			case EvaluacionPackage.EVALUACION_MODEL:
 				sequence_EvaluacionModel(context, (EvaluacionModel) semanticObject); 
@@ -133,50 +129,33 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     ComplejoType returns ComplejoType
+	 *     Criterio returns CriterioComplejoType
+	 *     CriterioComplejoType returns CriterioComplejoType
 	 *
 	 * Constraint:
 	 *     componente=[CmpntEvaluacion|ID]
 	 */
-	protected void sequence_ComplejoType(ISerializationContext context, ComplejoType semanticObject) {
+	protected void sequence_CriterioComplejoType(ISerializationContext context, CriterioComplejoType semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO_COMPLEJO_TYPE__COMPONENTE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO_COMPLEJO_TYPE__COMPONENTE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.COMPLEJO_TYPE__COMPONENTE, false));
+		feeder.accept(grammarAccess.getCriterioComplejoTypeAccess().getComponenteCmpntEvaluacionIDTerminalRuleCall_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.CRITERIO_COMPLEJO_TYPE__COMPONENTE, false));
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Criterio returns CriterioType
-	 *     CriterioType returns CriterioType
+	 *     Criterio returns CriterioSimpleType
+	 *     CriterioSimpleType returns CriterioSimpleType
 	 *
 	 * Constraint:
 	 *     (name=ID expresion=Expresion soporte=Expresion?)
 	 */
-	protected void sequence_CriterioType(ISerializationContext context, CriterioType semanticObject) {
+	protected void sequence_CriterioSimpleType(ISerializationContext context, CriterioSimpleType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Criterio returns Criterio
-	 *
-	 * Constraint:
-	 *     type=ComplejoType
-	 */
-	protected void sequence_Criterio(ISerializationContext context, Criterio semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCriterioAccess().getTypeComplejoTypeParserRuleCall_0_0(), semanticObject.getType());
-		feeder.finish();
 	}
 	
 	

@@ -10,10 +10,10 @@ CmpntEvaluacion:
 	'}';
 
 Criterio:
-	type = ComplejoType | CriterioType 
+	CriterioComplejoType | CriterioSimpleType
 ;	
 
-CriterioType:
+CriterioSimpleType:	
 	'criterio' name = ID 
 	'=' expresion = Expresion
 	(':' soporte = Expresion)?
@@ -28,10 +28,6 @@ Atomo:
 	{BoolConstant} valor= ('S' | 'N')
 ;
 
-
-ComplejoType:
+CriterioComplejoType:
 	componente = [CmpntEvaluacion];
 
-
-
-	

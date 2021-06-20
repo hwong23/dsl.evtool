@@ -9,6 +9,8 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import static extension org.eclipse.xtext.nodemodel.util.NodeModelUtils.*
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion
+import hwo.evtool.dsl.evaluacion.Expresion
+import hwo.evtool.dsl.evaluacion.Atomo
 
 /**
  * Generates code from your model files on save.
@@ -36,10 +38,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	        
 	    public class «e.name» {
 	    	«FOR f : e.attributes»
-	    		«f.eContents.map[
-	    			getNode.getTokenText
-	    			getNode.class.name
-				].join("\n")»
+	    		«f.compile»
 	    	«ENDFOR»
 	    }
 	'''
