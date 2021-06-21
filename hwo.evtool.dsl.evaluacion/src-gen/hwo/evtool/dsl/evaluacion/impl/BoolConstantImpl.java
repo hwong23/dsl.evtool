@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class BoolConstantImpl extends AtomoImpl implements BoolConstant
+public class BoolConstantImpl extends ExpresionImpl implements BoolConstant
 {
   /**
    * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.

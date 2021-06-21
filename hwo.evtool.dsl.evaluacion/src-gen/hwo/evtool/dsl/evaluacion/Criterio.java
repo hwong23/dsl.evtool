@@ -10,15 +10,14 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Criterio</b></em>'.
  * <!-- end-user-doc -->
  *
-<<<<<<< HEAD
-=======
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.Criterio#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Criterio#getExpresion <em>Expresion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Criterio#getSoporte <em>Soporte</em>}</li>
  * </ul>
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio()
  * @model
@@ -26,8 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Criterio extends EObject
 {
-<<<<<<< HEAD
-=======
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -50,5 +47,48 @@ public interface Criterio extends EObject
    */
   void setName(String value);
 
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+  /**
+   * Returns the value of the '<em><b>Expresion</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Expresion</em>' containment reference.
+   * @see #setExpresion(Expresion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio_Expresion()
+   * @model containment="true"
+   * @generated
+   */
+  Expresion getExpresion();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Criterio#getExpresion <em>Expresion</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Expresion</em>' containment reference.
+   * @see #getExpresion()
+   * @generated
+   */
+  void setExpresion(Expresion value);
+
+  /**
+   * Returns the value of the '<em><b>Soporte</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Soporte</em>' containment reference.
+   * @see #setSoporte(Expresion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCriterio_Soporte()
+   * @model containment="true"
+   * @generated
+   */
+  Expresion getSoporte();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Criterio#getSoporte <em>Soporte</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Soporte</em>' containment reference.
+   * @see #getSoporte()
+   * @generated
+   */
+  void setSoporte(Expresion value);
+
 } // Criterio

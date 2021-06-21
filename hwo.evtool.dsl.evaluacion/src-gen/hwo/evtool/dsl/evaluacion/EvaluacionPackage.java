@@ -132,34 +132,6 @@ public interface EvaluacionPackage extends EPackage
   int CMPNT_EVALUACION_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AtributosImpl <em>Atributos</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.AtributosImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtributos()
-   * @generated
-   */
-  int ATRIBUTOS = 2;
-
-  /**
-   * The feature id for the '<em><b>Criterios</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATRIBUTOS__CRITERIOS = 0;
-
-  /**
-   * The number of structural features of the '<em>Atributos</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATRIBUTOS_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl <em>Criterio</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -167,11 +139,9 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterio()
    * @generated
    */
-  int CRITERIO = 3;
+  int CRITERIO = 2;
 
   /**
-<<<<<<< HEAD
-=======
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -181,64 +151,13 @@ public interface EvaluacionPackage extends EPackage
   int CRITERIO__NAME = 0;
 
   /**
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-   * The number of structural features of the '<em>Criterio</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-<<<<<<< HEAD
-  int CRITERIO_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioSimpleTypeImpl <em>Criterio Simple Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.CriterioSimpleTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioSimpleType()
-   * @generated
-   */
-  int CRITERIO_SIMPLE_TYPE = 3;
-=======
-  int CRITERIO_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl <em>Criterio Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioType()
-   * @generated
-   */
-  int CRITERIO_TYPE = 4;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-<<<<<<< HEAD
-  int CRITERIO_SIMPLE_TYPE__NAME = CRITERIO_FEATURE_COUNT + 0;
-=======
-  int CRITERIO_TYPE__NAME = CRITERIO__NAME;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-
-  /**
    * The feature id for the '<em><b>Expresion</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-<<<<<<< HEAD
-  int CRITERIO_SIMPLE_TYPE__EXPRESION = CRITERIO_FEATURE_COUNT + 1;
-=======
-  int CRITERIO_TYPE__EXPRESION = CRITERIO_FEATURE_COUNT + 0;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+  int CRITERIO__EXPRESION = 1;
 
   /**
    * The feature id for the '<em><b>Soporte</b></em>' containment reference.
@@ -247,24 +166,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-<<<<<<< HEAD
-  int CRITERIO_SIMPLE_TYPE__SOPORTE = CRITERIO_FEATURE_COUNT + 2;
-=======
-  int CRITERIO_TYPE__SOPORTE = CRITERIO_FEATURE_COUNT + 1;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+  int CRITERIO__SOPORTE = 2;
 
   /**
-   * The number of structural features of the '<em>Criterio Simple Type</em>' class.
+   * The number of structural features of the '<em>Criterio</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-<<<<<<< HEAD
-  int CRITERIO_SIMPLE_TYPE_FEATURE_COUNT = CRITERIO_FEATURE_COUNT + 3;
-=======
-  int CRITERIO_TYPE_FEATURE_COUNT = CRITERIO_FEATURE_COUNT + 2;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+  int CRITERIO_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl <em>Expresion</em>}' class.
@@ -274,7 +185,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getExpresion()
    * @generated
    */
-  int EXPRESION = 5;
+  int EXPRESION = 3;
 
   /**
    * The number of structural features of the '<em>Expresion</em>' class.
@@ -286,25 +197,6 @@ public interface EvaluacionPackage extends EPackage
   int EXPRESION_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AtomoImpl <em>Atomo</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.AtomoImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtomo()
-   * @generated
-   */
-  int ATOMO = 6;
-
-  /**
-   * The number of structural features of the '<em>Atomo</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATOMO_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioComplejoTypeImpl <em>Criterio Complejo Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -312,10 +204,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioComplejoType()
    * @generated
    */
-<<<<<<< HEAD
-  int CRITERIO_COMPLEJO_TYPE = 6;
-=======
-  int COMPLEJO_TYPE = 7;
+  int CRITERIO_COMPLEJO_TYPE = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -324,8 +213,25 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPLEJO_TYPE__NAME = CRITERIO__NAME;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+  int CRITERIO_COMPLEJO_TYPE__NAME = CRITERIO__NAME;
+
+  /**
+   * The feature id for the '<em><b>Expresion</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRITERIO_COMPLEJO_TYPE__EXPRESION = CRITERIO__EXPRESION;
+
+  /**
+   * The feature id for the '<em><b>Soporte</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRITERIO_COMPLEJO_TYPE__SOPORTE = CRITERIO__SOPORTE;
 
   /**
    * The feature id for the '<em><b>Componente</b></em>' reference.
@@ -334,11 +240,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-<<<<<<< HEAD
   int CRITERIO_COMPLEJO_TYPE__COMPONENTE = CRITERIO_FEATURE_COUNT + 0;
-=======
-  int COMPLEJO_TYPE__COMPONENTE = CRITERIO_FEATURE_COUNT + 0;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 
   /**
    * The number of structural features of the '<em>Criterio Complejo Type</em>' class.
@@ -347,11 +249,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-<<<<<<< HEAD
   int CRITERIO_COMPLEJO_TYPE_FEATURE_COUNT = CRITERIO_FEATURE_COUNT + 1;
-=======
-  int COMPLEJO_TYPE_FEATURE_COUNT = CRITERIO_FEATURE_COUNT + 1;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl <em>Int Constant</em>}' class.
@@ -361,7 +259,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getIntConstant()
    * @generated
    */
-  int INT_CONSTANT = 8;
+  int INT_CONSTANT = 5;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -370,7 +268,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
+  int INT_CONSTANT__VALOR = EXPRESION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Int Constant</em>' class.
@@ -379,7 +277,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
+  int INT_CONSTANT_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.StringConstantImpl <em>String Constant</em>}' class.
@@ -389,7 +287,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getStringConstant()
    * @generated
    */
-  int STRING_CONSTANT = 9;
+  int STRING_CONSTANT = 6;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -398,7 +296,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
+  int STRING_CONSTANT__VALOR = EXPRESION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>String Constant</em>' class.
@@ -407,7 +305,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
+  int STRING_CONSTANT_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.BoolConstantImpl <em>Bool Constant</em>}' class.
@@ -417,7 +315,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getBoolConstant()
    * @generated
    */
-  int BOOL_CONSTANT = 10;
+  int BOOL_CONSTANT = 7;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -426,7 +324,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOOL_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
+  int BOOL_CONSTANT__VALOR = EXPRESION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Bool Constant</em>' class.
@@ -435,7 +333,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BOOL_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
+  int BOOL_CONSTANT_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
 
   /**
@@ -503,27 +401,6 @@ public interface EvaluacionPackage extends EPackage
   EReference getCmpntEvaluacion_Atributos();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Atributos <em>Atributos</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Atributos</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atributos
-   * @generated
-   */
-  EClass getAtributos();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.Atributos#getCriterios <em>Criterios</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Criterios</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atributos#getCriterios()
-   * @see #getAtributos()
-   * @generated
-   */
-  EReference getAtributos_Criterios();
-
-  /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Criterio <em>Criterio</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -534,9 +411,6 @@ public interface EvaluacionPackage extends EPackage
   EClass getCriterio();
 
   /**
-<<<<<<< HEAD
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CriterioSimpleType <em>Criterio Simple Type</em>}'.
-=======
    * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Criterio#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -548,52 +422,26 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getCriterio_Name();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CriterioType <em>Criterio Type</em>}'.
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Criterio Simple Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioSimpleType
-   * @generated
-   */
-  EClass getCriterioSimpleType();
-
-  /**
-<<<<<<< HEAD
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CriterioSimpleType#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioSimpleType#getName()
-   * @see #getCriterioSimpleType()
-   * @generated
-   */
-  EAttribute getCriterioSimpleType_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.CriterioSimpleType#getExpresion <em>Expresion</em>}'.
-=======
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.CriterioType#getExpresion <em>Expresion</em>}'.
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Criterio#getExpresion <em>Expresion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Expresion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioSimpleType#getExpresion()
-   * @see #getCriterioSimpleType()
+   * @see hwo.evtool.dsl.evaluacion.Criterio#getExpresion()
+   * @see #getCriterio()
    * @generated
    */
-  EReference getCriterioSimpleType_Expresion();
+  EReference getCriterio_Expresion();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.CriterioSimpleType#getSoporte <em>Soporte</em>}'.
+   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Criterio#getSoporte <em>Soporte</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Soporte</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioSimpleType#getSoporte()
-   * @see #getCriterioSimpleType()
+   * @see hwo.evtool.dsl.evaluacion.Criterio#getSoporte()
+   * @see #getCriterio()
    * @generated
    */
-  EReference getCriterioSimpleType_Soporte();
+  EReference getCriterio_Soporte();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Expresion <em>Expresion</em>}'.
@@ -604,16 +452,6 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    */
   EClass getExpresion();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Atomo <em>Atomo</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Atomo</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atomo
-   * @generated
-   */
-  EClass getAtomo();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CriterioComplejoType <em>Criterio Complejo Type</em>}'.
@@ -775,24 +613,6 @@ public interface EvaluacionPackage extends EPackage
     EReference CMPNT_EVALUACION__ATRIBUTOS = eINSTANCE.getCmpntEvaluacion_Atributos();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AtributosImpl <em>Atributos</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.AtributosImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtributos()
-     * @generated
-     */
-    EClass ATRIBUTOS = eINSTANCE.getAtributos();
-
-    /**
-     * The meta object literal for the '<em><b>Criterios</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ATRIBUTOS__CRITERIOS = eINSTANCE.getAtributos_Criterios();
-
-    /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl <em>Criterio</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -803,9 +623,6 @@ public interface EvaluacionPackage extends EPackage
     EClass CRITERIO = eINSTANCE.getCriterio();
 
     /**
-<<<<<<< HEAD
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioSimpleTypeImpl <em>Criterio Simple Type</em>}' class.
-=======
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -814,34 +631,12 @@ public interface EvaluacionPackage extends EPackage
     EAttribute CRITERIO__NAME = eINSTANCE.getCriterio_Name();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl <em>Criterio Type</em>}' class.
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.CriterioSimpleTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioSimpleType()
-     * @generated
-     */
-    EClass CRITERIO_SIMPLE_TYPE = eINSTANCE.getCriterioSimpleType();
-
-    /**
-<<<<<<< HEAD
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CRITERIO_SIMPLE_TYPE__NAME = eINSTANCE.getCriterioSimpleType_Name();
-
-    /**
-=======
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
      * The meta object literal for the '<em><b>Expresion</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CRITERIO_SIMPLE_TYPE__EXPRESION = eINSTANCE.getCriterioSimpleType_Expresion();
+    EReference CRITERIO__EXPRESION = eINSTANCE.getCriterio_Expresion();
 
     /**
      * The meta object literal for the '<em><b>Soporte</b></em>' containment reference feature.
@@ -849,7 +644,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CRITERIO_SIMPLE_TYPE__SOPORTE = eINSTANCE.getCriterioSimpleType_Soporte();
+    EReference CRITERIO__SOPORTE = eINSTANCE.getCriterio_Soporte();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl <em>Expresion</em>}' class.
@@ -860,16 +655,6 @@ public interface EvaluacionPackage extends EPackage
      * @generated
      */
     EClass EXPRESION = eINSTANCE.getExpresion();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AtomoImpl <em>Atomo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.AtomoImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtomo()
-     * @generated
-     */
-    EClass ATOMO = eINSTANCE.getAtomo();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioComplejoTypeImpl <em>Criterio Complejo Type</em>}' class.

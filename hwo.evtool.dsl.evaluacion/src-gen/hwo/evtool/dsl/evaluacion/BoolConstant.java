@@ -20,7 +20,7 @@ package hwo.evtool.dsl.evaluacion;
  * @model
  * @generated
  */
-public interface BoolConstant extends Atomo
+public interface BoolConstant extends Expresion
 {
   /**
    * Returns the value of the '<em><b>Valor</b></em>' attribute.

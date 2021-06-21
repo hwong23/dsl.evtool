@@ -86,29 +86,14 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createCmpntEvaluacionAdapter();
       }
       @Override
-      public Adapter caseAtributos(Atributos object)
-      {
-        return createAtributosAdapter();
-      }
-      @Override
       public Adapter caseCriterio(Criterio object)
       {
         return createCriterioAdapter();
       }
       @Override
-      public Adapter caseCriterioSimpleType(CriterioSimpleType object)
-      {
-        return createCriterioSimpleTypeAdapter();
-      }
-      @Override
       public Adapter caseExpresion(Expresion object)
       {
         return createExpresionAdapter();
-      }
-      @Override
-      public Adapter caseAtomo(Atomo object)
-      {
-        return createAtomoAdapter();
       }
       @Override
       public Adapter caseCriterioComplejoType(CriterioComplejoType object)
@@ -183,21 +168,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Atributos <em>Atributos</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Atributos
-   * @generated
-   */
-  public Adapter createAtributosAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Criterio <em>Criterio</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -213,21 +183,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.CriterioSimpleType <em>Criterio Simple Type</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.CriterioSimpleType
-   * @generated
-   */
-  public Adapter createCriterioSimpleTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Expresion <em>Expresion</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -238,21 +193,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpresionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Atomo <em>Atomo</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Atomo
-   * @generated
-   */
-  public Adapter createAtomoAdapter()
   {
     return null;
   }

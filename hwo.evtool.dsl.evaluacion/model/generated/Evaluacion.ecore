@@ -9,43 +9,26 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//CmpntEvaluacion"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
-        eType="#//Atributos" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atributos">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="criterios" upperBound="-1"
         eType="#//Criterio" containment="true"/>
   </eClassifiers>
-<<<<<<< HEAD
-  <eClassifiers xsi:type="ecore:EClass" name="Criterio"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CriterioSimpleType" eSuperTypes="#//Criterio">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-=======
   <eClassifiers xsi:type="ecore:EClass" name="Criterio">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CriterioType" eSuperTypes="#//Criterio">
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" eType="#//Expresion"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="soporte" eType="#//Expresion"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Atomo" eSuperTypes="#//Expresion"/>
-<<<<<<< HEAD
   <eClassifiers xsi:type="ecore:EClass" name="CriterioComplejoType" eSuperTypes="#//Criterio">
-=======
-  <eClassifiers xsi:type="ecore:EClass" name="ComplejoType" eSuperTypes="#//Criterio">
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
     <eStructuralFeatures xsi:type="ecore:EReference" name="componente" eType="#//CmpntEvaluacion"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Atomo">
+  <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringConstant" eSuperTypes="#//Atomo">
+  <eClassifiers xsi:type="ecore:EClass" name="StringConstant" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BoolConstant" eSuperTypes="#//Atomo">
+  <eClassifiers xsi:type="ecore:EClass" name="BoolConstant" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

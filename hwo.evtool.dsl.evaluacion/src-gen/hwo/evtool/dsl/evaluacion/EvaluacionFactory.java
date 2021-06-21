@@ -42,15 +42,6 @@ public interface EvaluacionFactory extends EFactory
   CmpntEvaluacion createCmpntEvaluacion();
 
   /**
-   * Returns a new object of class '<em>Atributos</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributos</em>'.
-   * @generated
-   */
-  Atributos createAtributos();
-
-  /**
    * Returns a new object of class '<em>Criterio</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -60,15 +51,6 @@ public interface EvaluacionFactory extends EFactory
   Criterio createCriterio();
 
   /**
-   * Returns a new object of class '<em>Criterio Simple Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Criterio Simple Type</em>'.
-   * @generated
-   */
-  CriterioSimpleType createCriterioSimpleType();
-
-  /**
    * Returns a new object of class '<em>Expresion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -76,15 +58,6 @@ public interface EvaluacionFactory extends EFactory
    * @generated
    */
   Expresion createExpresion();
-
-  /**
-   * Returns a new object of class '<em>Atomo</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atomo</em>'.
-   * @generated
-   */
-  Atomo createAtomo();
 
   /**
    * Returns a new object of class '<em>Criterio Complejo Type</em>'.

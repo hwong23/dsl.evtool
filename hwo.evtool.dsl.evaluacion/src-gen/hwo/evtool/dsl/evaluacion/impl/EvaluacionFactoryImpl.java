@@ -67,11 +67,8 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
     {
       case EvaluacionPackage.EVALUACION_MODEL: return createEvaluacionModel();
       case EvaluacionPackage.CMPNT_EVALUACION: return createCmpntEvaluacion();
-      case EvaluacionPackage.ATRIBUTOS: return createAtributos();
       case EvaluacionPackage.CRITERIO: return createCriterio();
-      case EvaluacionPackage.CRITERIO_SIMPLE_TYPE: return createCriterioSimpleType();
       case EvaluacionPackage.EXPRESION: return createExpresion();
-      case EvaluacionPackage.ATOMO: return createAtomo();
       case EvaluacionPackage.CRITERIO_COMPLEJO_TYPE: return createCriterioComplejoType();
       case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
       case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
@@ -111,18 +108,6 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Atributos createAtributos()
-  {
-    AtributosImpl atributos = new AtributosImpl();
-    return atributos;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Criterio createCriterio()
   {
     CriterioImpl criterio = new CriterioImpl();
@@ -135,34 +120,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public CriterioSimpleType createCriterioSimpleType()
-  {
-    CriterioSimpleTypeImpl criterioSimpleType = new CriterioSimpleTypeImpl();
-    return criterioSimpleType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Expresion createExpresion()
   {
     ExpresionImpl expresion = new ExpresionImpl();
     return expresion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Atomo createAtomo()
-  {
-    AtomoImpl atomo = new AtomoImpl();
-    return atomo;
   }
 
   /**

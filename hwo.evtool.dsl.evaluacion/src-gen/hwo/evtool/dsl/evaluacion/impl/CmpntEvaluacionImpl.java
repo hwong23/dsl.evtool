@@ -3,8 +3,8 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Atributos;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
+import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import java.util.Collection;
@@ -78,7 +78,7 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
    * @generated
    * @ordered
    */
-  protected EList<Atributos> atributos;
+  protected EList<Criterio> atributos;
 
   /**
    * <!-- begin-user-doc -->
@@ -177,11 +177,11 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
    * @generated
    */
   @Override
-  public EList<Atributos> getAtributos()
+  public EList<Criterio> getAtributos()
   {
     if (atributos == null)
     {
-      atributos = new EObjectContainmentEList<Atributos>(Atributos.class, this, EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS);
+      atributos = new EObjectContainmentEList<Criterio>(Criterio.class, this, EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS);
     }
     return atributos;
   }
@@ -242,7 +242,7 @@ public class CmpntEvaluacionImpl extends MinimalEObjectImpl.Container implements
         return;
       case EvaluacionPackage.CMPNT_EVALUACION__ATRIBUTOS:
         getAtributos().clear();
-        getAtributos().addAll((Collection<? extends Atributos>)newValue);
+        getAtributos().addAll((Collection<? extends Criterio>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

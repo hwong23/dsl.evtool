@@ -73,7 +73,7 @@ public interface CmpntEvaluacion extends EObject
 
   /**
    * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Atributos}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Criterio}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Atributos</em>' containment reference list.
@@ -81,6 +81,6 @@ public interface CmpntEvaluacion extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Atributos> getAtributos();
+  EList<Criterio> getAtributos();
 
 } // CmpntEvaluacion

@@ -231,17 +231,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:477:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalEvaluacion.g:477:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalEvaluacion.g:427:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalEvaluacion.g:427:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalEvaluacion.g:477:11: ( '^' )?
-=======
-            // InternalEvaluacion.g:537:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalEvaluacion.g:537:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            {
-            // InternalEvaluacion.g:537:11: ( '^' )?
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:427:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -250,11 +243,7 @@ public class InternalEvaluacionLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-<<<<<<< HEAD
-                    // InternalEvaluacion.g:477:11: '^'
-=======
-                    // InternalEvaluacion.g:537:11: '^'
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    // InternalEvaluacion.g:427:11: '^'
                     {
                     match('^'); 
 
@@ -272,11 +261,7 @@ public class InternalEvaluacionLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-<<<<<<< HEAD
-            // InternalEvaluacion.g:477:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-=======
-            // InternalEvaluacion.g:537:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:427:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -325,17 +310,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:479:10: ( ( '0' .. '9' )+ )
-            // InternalEvaluacion.g:479:12: ( '0' .. '9' )+
+            // InternalEvaluacion.g:429:10: ( ( '0' .. '9' )+ )
+            // InternalEvaluacion.g:429:12: ( '0' .. '9' )+
             {
-            // InternalEvaluacion.g:479:12: ( '0' .. '9' )+
-=======
-            // InternalEvaluacion.g:539:10: ( ( '0' .. '9' )+ )
-            // InternalEvaluacion.g:539:12: ( '0' .. '9' )+
-            {
-            // InternalEvaluacion.g:539:12: ( '0' .. '9' )+
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:429:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -349,11 +327,7 @@ public class InternalEvaluacionLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-<<<<<<< HEAD
-            	    // InternalEvaluacion.g:479:13: '0' .. '9'
-=======
-            	    // InternalEvaluacion.g:539:13: '0' .. '9'
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            	    // InternalEvaluacion.g:429:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -385,17 +359,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:481:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalEvaluacion.g:481:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalEvaluacion.g:431:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalEvaluacion.g:431:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalEvaluacion.g:481:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-=======
-            // InternalEvaluacion.g:541:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalEvaluacion.g:541:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            {
-            // InternalEvaluacion.g:541:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:431:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -413,17 +380,10 @@ public class InternalEvaluacionLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-<<<<<<< HEAD
-                    // InternalEvaluacion.g:481:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalEvaluacion.g:431:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalEvaluacion.g:481:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
-=======
-                    // InternalEvaluacion.g:541:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
-                    {
-                    match('\"'); 
-                    // InternalEvaluacion.g:541:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    // InternalEvaluacion.g:431:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -439,11 +399,7 @@ public class InternalEvaluacionLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-<<<<<<< HEAD
-                    	    // InternalEvaluacion.g:481:21: '\\\\' .
-=======
-                    	    // InternalEvaluacion.g:541:21: '\\\\' .
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    	    // InternalEvaluacion.g:431:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -451,11 +407,7 @@ public class InternalEvaluacionLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-<<<<<<< HEAD
-                    	    // InternalEvaluacion.g:481:28: ~ ( ( '\\\\' | '\"' ) )
-=======
-                    	    // InternalEvaluacion.g:541:28: ~ ( ( '\\\\' | '\"' ) )
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    	    // InternalEvaluacion.g:431:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -480,17 +432,10 @@ public class InternalEvaluacionLexer extends Lexer {
                     }
                     break;
                 case 2 :
-<<<<<<< HEAD
-                    // InternalEvaluacion.g:481:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalEvaluacion.g:431:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalEvaluacion.g:481:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
-=======
-                    // InternalEvaluacion.g:541:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
-                    {
-                    match('\''); 
-                    // InternalEvaluacion.g:541:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    // InternalEvaluacion.g:431:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -506,11 +451,7 @@ public class InternalEvaluacionLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-<<<<<<< HEAD
-                    	    // InternalEvaluacion.g:481:54: '\\\\' .
-=======
-                    	    // InternalEvaluacion.g:541:54: '\\\\' .
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    	    // InternalEvaluacion.g:431:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -518,11 +459,7 @@ public class InternalEvaluacionLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-<<<<<<< HEAD
-                    	    // InternalEvaluacion.g:481:61: ~ ( ( '\\\\' | '\\'' ) )
-=======
-                    	    // InternalEvaluacion.g:541:61: ~ ( ( '\\\\' | '\\'' ) )
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    	    // InternalEvaluacion.g:431:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -565,21 +502,12 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:483:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalEvaluacion.g:483:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalEvaluacion.g:433:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalEvaluacion.g:433:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalEvaluacion.g:483:24: ( options {greedy=false; } : . )*
-=======
-            // InternalEvaluacion.g:543:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalEvaluacion.g:543:19: '/*' ( options {greedy=false; } : . )* '*/'
-            {
-            match("/*"); 
-
-            // InternalEvaluacion.g:543:24: ( options {greedy=false; } : . )*
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:433:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -604,11 +532,7 @@ public class InternalEvaluacionLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-<<<<<<< HEAD
-            	    // InternalEvaluacion.g:483:52: .
-=======
-            	    // InternalEvaluacion.g:543:52: .
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            	    // InternalEvaluacion.g:433:52: .
             	    {
             	    matchAny(); 
 
@@ -638,21 +562,12 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:485:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalEvaluacion.g:485:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalEvaluacion.g:435:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalEvaluacion.g:435:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalEvaluacion.g:485:24: (~ ( ( '\\n' | '\\r' ) ) )*
-=======
-            // InternalEvaluacion.g:545:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalEvaluacion.g:545:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
-            {
-            match("//"); 
-
-            // InternalEvaluacion.g:545:24: (~ ( ( '\\n' | '\\r' ) ) )*
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:435:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -665,11 +580,7 @@ public class InternalEvaluacionLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-<<<<<<< HEAD
-            	    // InternalEvaluacion.g:485:24: ~ ( ( '\\n' | '\\r' ) )
-=======
-            	    // InternalEvaluacion.g:545:24: ~ ( ( '\\n' | '\\r' ) )
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            	    // InternalEvaluacion.g:435:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -689,11 +600,7 @@ public class InternalEvaluacionLexer extends Lexer {
                 }
             } while (true);
 
-<<<<<<< HEAD
-            // InternalEvaluacion.g:485:40: ( ( '\\r' )? '\\n' )?
-=======
-            // InternalEvaluacion.g:545:40: ( ( '\\r' )? '\\n' )?
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:435:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -702,15 +609,9 @@ public class InternalEvaluacionLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-<<<<<<< HEAD
-                    // InternalEvaluacion.g:485:41: ( '\\r' )? '\\n'
+                    // InternalEvaluacion.g:435:41: ( '\\r' )? '\\n'
                     {
-                    // InternalEvaluacion.g:485:41: ( '\\r' )?
-=======
-                    // InternalEvaluacion.g:545:41: ( '\\r' )? '\\n'
-                    {
-                    // InternalEvaluacion.g:545:41: ( '\\r' )?
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                    // InternalEvaluacion.g:435:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -719,11 +620,7 @@ public class InternalEvaluacionLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-<<<<<<< HEAD
-                            // InternalEvaluacion.g:485:41: '\\r'
-=======
-                            // InternalEvaluacion.g:545:41: '\\r'
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+                            // InternalEvaluacion.g:435:41: '\\r'
                             {
                             match('\r'); 
 
@@ -755,17 +652,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:487:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalEvaluacion.g:487:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalEvaluacion.g:437:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalEvaluacion.g:437:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalEvaluacion.g:487:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-=======
-            // InternalEvaluacion.g:547:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalEvaluacion.g:547:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            {
-            // InternalEvaluacion.g:547:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:437:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -819,13 +709,8 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // InternalEvaluacion.g:489:16: ( . )
-            // InternalEvaluacion.g:489:18: .
-=======
-            // InternalEvaluacion.g:549:16: ( . )
-            // InternalEvaluacion.g:549:18: .
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+            // InternalEvaluacion.g:439:16: ( . )
+            // InternalEvaluacion.g:439:18: .
             {
             matchAny(); 
 

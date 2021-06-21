@@ -3,13 +3,10 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Atomo;
-import hwo.evtool.dsl.evaluacion.Atributos;
 import hwo.evtool.dsl.evaluacion.BoolConstant;
 import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
 import hwo.evtool.dsl.evaluacion.Criterio;
 import hwo.evtool.dsl.evaluacion.CriterioComplejoType;
-import hwo.evtool.dsl.evaluacion.CriterioSimpleType;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
 import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
@@ -51,13 +48,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass atributosEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass criterioEClass = null;
 
   /**
@@ -65,21 +55,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass criterioSimpleTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass expresionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass atomoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -244,43 +220,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getAtributos()
-  {
-    return atributosEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-<<<<<<< HEAD
-  public EClass getCriterioSimpleType()
-  {
-    return criterioSimpleTypeEClass;
-=======
-  public EReference getAtributos_Criterios()
-  {
-    return (EReference)atributosEClass.getEStructuralFeatures().get(0);
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-<<<<<<< HEAD
-  public EAttribute getCriterioSimpleType_Name()
-  {
-    return (EAttribute)criterioSimpleTypeEClass.getEStructuralFeatures().get(0);
-=======
   public EClass getCriterio()
   {
     return criterioEClass;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
   }
 
   /**
@@ -289,11 +231,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-<<<<<<< HEAD
-  public EReference getCriterioSimpleType_Expresion()
-  {
-    return (EReference)criterioSimpleTypeEClass.getEStructuralFeatures().get(1);
-=======
   public EAttribute getCriterio_Name()
   {
     return (EAttribute)criterioEClass.getEStructuralFeatures().get(0);
@@ -305,10 +242,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getCriterioType()
+  public EReference getCriterio_Expresion()
   {
-    return criterioTypeEClass;
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+    return (EReference)criterioEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -317,24 +253,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getCriterioSimpleType_Soporte()
+  public EReference getCriterio_Soporte()
   {
-<<<<<<< HEAD
-    return (EReference)criterioSimpleTypeEClass.getEStructuralFeatures().get(2);
-=======
-    return (EReference)criterioTypeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getCriterioType_Soporte()
-  {
-    return (EReference)criterioTypeEClass.getEStructuralFeatures().get(1);
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+    return (EReference)criterioEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -346,17 +267,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
   public EClass getExpresion()
   {
     return expresionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getAtomo()
-  {
-    return atomoEClass;
   }
 
   /**
@@ -486,27 +396,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEReference(cmpntEvaluacionEClass, CMPNT_EVALUACION__SUPER_TYPE);
     createEReference(cmpntEvaluacionEClass, CMPNT_EVALUACION__ATRIBUTOS);
 
-    atributosEClass = createEClass(ATRIBUTOS);
-    createEReference(atributosEClass, ATRIBUTOS__CRITERIOS);
-
     criterioEClass = createEClass(CRITERIO);
-<<<<<<< HEAD
-
-    criterioSimpleTypeEClass = createEClass(CRITERIO_SIMPLE_TYPE);
-    createEAttribute(criterioSimpleTypeEClass, CRITERIO_SIMPLE_TYPE__NAME);
-    createEReference(criterioSimpleTypeEClass, CRITERIO_SIMPLE_TYPE__EXPRESION);
-    createEReference(criterioSimpleTypeEClass, CRITERIO_SIMPLE_TYPE__SOPORTE);
-=======
     createEAttribute(criterioEClass, CRITERIO__NAME);
-
-    criterioTypeEClass = createEClass(CRITERIO_TYPE);
-    createEReference(criterioTypeEClass, CRITERIO_TYPE__EXPRESION);
-    createEReference(criterioTypeEClass, CRITERIO_TYPE__SOPORTE);
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+    createEReference(criterioEClass, CRITERIO__EXPRESION);
+    createEReference(criterioEClass, CRITERIO__SOPORTE);
 
     expresionEClass = createEClass(EXPRESION);
-
-    atomoEClass = createEClass(ATOMO);
 
     criterioComplejoTypeEClass = createEClass(CRITERIO_COMPLEJO_TYPE);
     createEReference(criterioComplejoTypeEClass, CRITERIO_COMPLEJO_TYPE__COMPONENTE);
@@ -550,16 +445,10 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    criterioSimpleTypeEClass.getESuperTypes().add(this.getCriterio());
-    atomoEClass.getESuperTypes().add(this.getExpresion());
-<<<<<<< HEAD
     criterioComplejoTypeEClass.getESuperTypes().add(this.getCriterio());
-=======
-    complejoTypeEClass.getESuperTypes().add(this.getCriterio());
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
-    intConstantEClass.getESuperTypes().add(this.getAtomo());
-    stringConstantEClass.getESuperTypes().add(this.getAtomo());
-    boolConstantEClass.getESuperTypes().add(this.getAtomo());
+    intConstantEClass.getESuperTypes().add(this.getExpresion());
+    stringConstantEClass.getESuperTypes().add(this.getExpresion());
+    boolConstantEClass.getESuperTypes().add(this.getExpresion());
 
     // Initialize classes and features; add operations and parameters
     initEClass(evaluacionModelEClass, EvaluacionModel.class, "EvaluacionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -568,29 +457,14 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(cmpntEvaluacionEClass, CmpntEvaluacion.class, "CmpntEvaluacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCmpntEvaluacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCmpntEvaluacion_SuperType(), this.getCmpntEvaluacion(), null, "superType", null, 0, 1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCmpntEvaluacion_Atributos(), this.getAtributos(), null, "atributos", null, 0, -1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(atributosEClass, Atributos.class, "Atributos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAtributos_Criterios(), this.getCriterio(), null, "criterios", null, 0, -1, Atributos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCmpntEvaluacion_Atributos(), this.getCriterio(), null, "atributos", null, 0, -1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(criterioEClass, Criterio.class, "Criterio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-<<<<<<< HEAD
-
-    initEClass(criterioSimpleTypeEClass, CriterioSimpleType.class, "CriterioSimpleType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCriterioSimpleType_Name(), ecorePackage.getEString(), "name", null, 0, 1, CriterioSimpleType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCriterioSimpleType_Expresion(), this.getExpresion(), null, "expresion", null, 0, 1, CriterioSimpleType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCriterioSimpleType_Soporte(), this.getExpresion(), null, "soporte", null, 0, 1, CriterioSimpleType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-=======
     initEAttribute(getCriterio_Name(), ecorePackage.getEString(), "name", null, 0, 1, Criterio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(criterioTypeEClass, CriterioType.class, "CriterioType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCriterioType_Expresion(), this.getExpresion(), null, "expresion", null, 0, 1, CriterioType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCriterioType_Soporte(), this.getExpresion(), null, "soporte", null, 0, 1, CriterioType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
->>>>>>> 1597f52b3c0a8e8ddefe8648e2341669de25f26e
+    initEReference(getCriterio_Expresion(), this.getExpresion(), null, "expresion", null, 0, 1, Criterio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCriterio_Soporte(), this.getExpresion(), null, "soporte", null, 0, 1, Criterio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expresionEClass, Expresion.class, "Expresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(criterioComplejoTypeEClass, CriterioComplejoType.class, "CriterioComplejoType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCriterioComplejoType_Componente(), this.getCmpntEvaluacion(), null, "componente", null, 0, 1, CriterioComplejoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
