@@ -27,7 +27,7 @@ public class EvaluacionParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "EvaluacionModel";
+		return "MaquinaEstados";
 	}
 
 	public EvaluacionGrammarAccess getGrammarAccess() {

@@ -65,14 +65,11 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     switch (eClass.getClassifierID())
     {
-      case EvaluacionPackage.EVALUACION_MODEL: return createEvaluacionModel();
-      case EvaluacionPackage.CMPNT_EVALUACION: return createCmpntEvaluacion();
-      case EvaluacionPackage.CRITERIO: return createCriterio();
-      case EvaluacionPackage.EXPRESION: return createExpresion();
-      case EvaluacionPackage.CRITERIO_COMPLEJO_TYPE: return createCriterioComplejoType();
-      case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
-      case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
-      case EvaluacionPackage.BOOL_CONSTANT: return createBoolConstant();
+      case EvaluacionPackage.MAQUINA_ESTADOS: return createMaquinaEstados();
+      case EvaluacionPackage.EVENTO: return createEvento();
+      case EvaluacionPackage.COMMANDO: return createCommando();
+      case EvaluacionPackage.ESTADO: return createEstado();
+      case EvaluacionPackage.TRANSICION: return createTransicion();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -84,10 +81,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public EvaluacionModel createEvaluacionModel()
+  public MaquinaEstados createMaquinaEstados()
   {
-    EvaluacionModelImpl evaluacionModel = new EvaluacionModelImpl();
-    return evaluacionModel;
+    MaquinaEstadosImpl maquinaEstados = new MaquinaEstadosImpl();
+    return maquinaEstados;
   }
 
   /**
@@ -96,10 +93,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public CmpntEvaluacion createCmpntEvaluacion()
+  public Evento createEvento()
   {
-    CmpntEvaluacionImpl cmpntEvaluacion = new CmpntEvaluacionImpl();
-    return cmpntEvaluacion;
+    EventoImpl evento = new EventoImpl();
+    return evento;
   }
 
   /**
@@ -108,10 +105,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Criterio createCriterio()
+  public Commando createCommando()
   {
-    CriterioImpl criterio = new CriterioImpl();
-    return criterio;
+    CommandoImpl commando = new CommandoImpl();
+    return commando;
   }
 
   /**
@@ -120,10 +117,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Expresion createExpresion()
+  public Estado createEstado()
   {
-    ExpresionImpl expresion = new ExpresionImpl();
-    return expresion;
+    EstadoImpl estado = new EstadoImpl();
+    return estado;
   }
 
   /**
@@ -132,46 +129,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public CriterioComplejoType createCriterioComplejoType()
+  public Transicion createTransicion()
   {
-    CriterioComplejoTypeImpl criterioComplejoType = new CriterioComplejoTypeImpl();
-    return criterioComplejoType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IntConstant createIntConstant()
-  {
-    IntConstantImpl intConstant = new IntConstantImpl();
-    return intConstant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public StringConstant createStringConstant()
-  {
-    StringConstantImpl stringConstant = new StringConstantImpl();
-    return stringConstant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public BoolConstant createBoolConstant()
-  {
-    BoolConstantImpl boolConstant = new BoolConstantImpl();
-    return boolConstant;
+    TransicionImpl transicion = new TransicionImpl();
+    return transicion;
   }
 
   /**

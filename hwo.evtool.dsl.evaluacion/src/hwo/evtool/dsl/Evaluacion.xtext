@@ -1,28 +1,36 @@
 grammar hwo.evtool.dsl.Evaluacion with org.eclipse.xtext.common.Terminals
 generate evaluacion "http://www.evtool.hwo/dsl/Evaluacion"
 
-EvaluacionModel:
-	componentes+=CmpntEvaluacion*;
-
-CmpntEvaluacion:
-	'componente' name = ID ('hereda' superType=[CmpntEvaluacion])? '{'
-		atributos+=Criterio*
-	'}'
+MaquinaEstados :
+	{MaquinaEstados}
+	('eventos'
+		events+=Evento+
+	)?
+	('resetEvents'
+		resetEvents+=[Evento]+
+	)?
+	('commands'
+		commands+=Commando+
+	)?
+	states+=Estado*
 ;
 
-Criterio:
-	CriterioComplejoType | 
-	'criterio' name = ID 
-	'=' expresion = Expresion
-	(':' soporte = Expresion)?
-;
-	
-Expresion:
-	{IntConstant} valor=INT |
-	{StringConstant} valor=STRING |
-	{BoolConstant} valor= ('S' | 'N')
+Evento:
+	name=ID code=ID
 ;
 
+Commando:
+	name=ID '=' code=STRING
+	(':' comentario=STRING)?
+;
 
-CriterioComplejoType:
-	componente = [CmpntEvaluacion];
+Estado:
+	'state' name=ID
+		('actions' '{' actions+=[Commando]+ '}')?
+		transitions+=Transicion*
+;
+
+Transicion:
+	event=[Evento] '=>' state=[Estado]
+;
+
