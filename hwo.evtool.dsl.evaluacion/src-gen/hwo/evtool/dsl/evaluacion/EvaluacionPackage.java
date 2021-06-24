@@ -150,14 +150,14 @@ public interface EvaluacionPackage extends EPackage
   int EVENTO_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CommandoImpl <em>Commando</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ComandoImpl <em>Comando</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.CommandoImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCommando()
+   * @see hwo.evtool.dsl.evaluacion.impl.ComandoImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComando()
    * @generated
    */
-  int COMMANDO = 2;
+  int COMANDO = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -166,16 +166,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMMANDO__NAME = 0;
+  int COMANDO__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Code</b></em>' attribute.
+   * The feature id for the '<em><b>Argumento</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMANDO__CODE = 1;
+  int COMANDO__ARGUMENTO = 1;
 
   /**
    * The feature id for the '<em><b>Comentario</b></em>' attribute.
@@ -184,16 +184,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMMANDO__COMENTARIO = 2;
+  int COMANDO__COMENTARIO = 2;
 
   /**
-   * The number of structural features of the '<em>Commando</em>' class.
+   * The number of structural features of the '<em>Comando</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMMANDO_FEATURE_COUNT = 3;
+  int COMANDO_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
@@ -366,47 +366,47 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getEvento_Code();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Commando <em>Commando</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Comando <em>Comando</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Commando</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Commando
+   * @return the meta object for class '<em>Comando</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Comando
    * @generated
    */
-  EClass getCommando();
+  EClass getComando();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Commando#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Comando#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Commando#getName()
-   * @see #getCommando()
+   * @see hwo.evtool.dsl.evaluacion.Comando#getName()
+   * @see #getComando()
    * @generated
    */
-  EAttribute getCommando_Name();
+  EAttribute getComando_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Commando#getCode <em>Code</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Code</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Commando#getCode()
-   * @see #getCommando()
+   * @return the meta object for the attribute '<em>Argumento</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Comando#getArgumento()
+   * @see #getComando()
    * @generated
    */
-  EAttribute getCommando_Code();
+  EAttribute getComando_Argumento();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Commando#getComentario <em>Comentario</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Comando#getComentario <em>Comentario</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Comentario</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Commando#getComentario()
-   * @see #getCommando()
+   * @see hwo.evtool.dsl.evaluacion.Comando#getComentario()
+   * @see #getComando()
    * @generated
    */
-  EAttribute getCommando_Comentario();
+  EAttribute getComando_Comentario();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Estado <em>Estado</em>}'.
@@ -575,14 +575,14 @@ public interface EvaluacionPackage extends EPackage
     EAttribute EVENTO__CODE = eINSTANCE.getEvento_Code();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CommandoImpl <em>Commando</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ComandoImpl <em>Comando</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.CommandoImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCommando()
+     * @see hwo.evtool.dsl.evaluacion.impl.ComandoImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComando()
      * @generated
      */
-    EClass COMMANDO = eINSTANCE.getCommando();
+    EClass COMANDO = eINSTANCE.getComando();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -590,15 +590,15 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMMANDO__NAME = eINSTANCE.getCommando_Name();
+    EAttribute COMANDO__NAME = eINSTANCE.getComando_Name();
 
     /**
-     * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Argumento</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMMANDO__CODE = eINSTANCE.getCommando_Code();
+    EAttribute COMANDO__ARGUMENTO = eINSTANCE.getComando_Argumento();
 
     /**
      * The meta object literal for the '<em><b>Comentario</b></em>' attribute feature.
@@ -606,7 +606,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMMANDO__COMENTARIO = eINSTANCE.getCommando_Comentario();
+    EAttribute COMANDO__COMENTARIO = eINSTANCE.getComando_Comentario();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.

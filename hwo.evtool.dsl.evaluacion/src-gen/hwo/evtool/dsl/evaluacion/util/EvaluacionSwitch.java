@@ -87,10 +87,10 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.COMMANDO:
+      case EvaluacionPackage.COMANDO:
       {
-        Commando commando = (Commando)theEObject;
-        T result = caseCommando(commando);
+        Comando comando = (Comando)theEObject;
+        T result = caseComando(comando);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -145,17 +145,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Commando</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Comando</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Commando</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Comando</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCommando(Commando object)
+  public T caseComando(Comando object)
   {
     return null;
   }

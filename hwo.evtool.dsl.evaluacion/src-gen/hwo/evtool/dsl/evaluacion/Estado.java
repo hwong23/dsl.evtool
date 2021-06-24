@@ -51,7 +51,7 @@ public interface Estado extends EObject
 
   /**
    * Returns the value of the '<em><b>Actions</b></em>' reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Commando}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Comando}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Actions</em>' reference list.
@@ -59,7 +59,7 @@ public interface Estado extends EObject
    * @model
    * @generated
    */
-  EList<Commando> getActions();
+  EList<Comando> getActions();
 
   /**
    * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.

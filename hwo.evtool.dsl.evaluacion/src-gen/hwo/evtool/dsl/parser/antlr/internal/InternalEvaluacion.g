@@ -128,16 +128,16 @@ ruleMaquinaEstados returns [EObject current=null]
 			)+
 		)?
 		(
-			otherlv_5='commands'
+			otherlv_5='comandos'
 			{
-				newLeafNode(otherlv_5, grammarAccess.getMaquinaEstadosAccess().getCommandsKeyword_3_0());
+				newLeafNode(otherlv_5, grammarAccess.getMaquinaEstadosAccess().getComandosKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMaquinaEstadosAccess().getCommandsCommandoParserRuleCall_3_1_0());
+						newCompositeNode(grammarAccess.getMaquinaEstadosAccess().getCommandsComandoParserRuleCall_3_1_0());
 					}
-					lv_commands_6_0=ruleCommando
+					lv_commands_6_0=ruleComando
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMaquinaEstadosRule());
@@ -146,7 +146,7 @@ ruleMaquinaEstados returns [EObject current=null]
 							$current,
 							"commands",
 							lv_commands_6_0,
-							"hwo.evtool.dsl.Evaluacion.Commando");
+							"hwo.evtool.dsl.Evaluacion.Comando");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -229,15 +229,15 @@ ruleEvento returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleCommando
-entryRuleCommando returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCommandoRule()); }
-	iv_ruleCommando=ruleCommando
-	{ $current=$iv_ruleCommando.current; }
+// Entry rule entryRuleComando
+entryRuleComando returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getComandoRule()); }
+	iv_ruleComando=ruleComando
+	{ $current=$iv_ruleComando.current; }
 	EOF;
 
-// Rule Commando
-ruleCommando returns [EObject current=null]
+// Rule Comando
+ruleComando returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -249,11 +249,11 @@ ruleCommando returns [EObject current=null]
 			(
 				lv_name_0_0=RULE_ID
 				{
-					newLeafNode(lv_name_0_0, grammarAccess.getCommandoAccess().getNameIDTerminalRuleCall_0_0());
+					newLeafNode(lv_name_0_0, grammarAccess.getComandoAccess().getNameIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCommandoRule());
+						$current = createModelElement(grammarAccess.getComandoRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -265,22 +265,22 @@ ruleCommando returns [EObject current=null]
 		)
 		otherlv_1='='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getCommandoAccess().getEqualsSignKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getComandoAccess().getEqualsSignKeyword_1());
 		}
 		(
 			(
-				lv_code_2_0=RULE_STRING
+				lv_argumento_2_0=RULE_STRING
 				{
-					newLeafNode(lv_code_2_0, grammarAccess.getCommandoAccess().getCodeSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_argumento_2_0, grammarAccess.getComandoAccess().getArgumentoSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCommandoRule());
+						$current = createModelElement(grammarAccess.getComandoRule());
 					}
 					setWithLastConsumed(
 						$current,
-						"code",
-						lv_code_2_0,
+						"argumento",
+						lv_argumento_2_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
@@ -288,17 +288,17 @@ ruleCommando returns [EObject current=null]
 		(
 			otherlv_3=':'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getCommandoAccess().getColonKeyword_3_0());
+				newLeafNode(otherlv_3, grammarAccess.getComandoAccess().getColonKeyword_3_0());
 			}
 			(
 				(
 					lv_comentario_4_0=RULE_STRING
 					{
-						newLeafNode(lv_comentario_4_0, grammarAccess.getCommandoAccess().getComentarioSTRINGTerminalRuleCall_3_1_0());
+						newLeafNode(lv_comentario_4_0, grammarAccess.getComandoAccess().getComentarioSTRINGTerminalRuleCall_3_1_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getCommandoRule());
+							$current = createModelElement(grammarAccess.getComandoRule());
 						}
 						setWithLastConsumed(
 							$current,
@@ -368,7 +368,7 @@ ruleEstado returns [EObject current=null]
 					}
 					otherlv_4=RULE_ID
 					{
-						newLeafNode(otherlv_4, grammarAccess.getEstadoAccess().getActionsCommandoCrossReference_2_2_0());
+						newLeafNode(otherlv_4, grammarAccess.getEstadoAccess().getActionsComandoCrossReference_2_2_0());
 					}
 				)
 			)+

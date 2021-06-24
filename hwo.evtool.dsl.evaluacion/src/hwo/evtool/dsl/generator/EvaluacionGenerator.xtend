@@ -8,7 +8,7 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import hwo.evtool.dsl.evaluacion.Estado
-import hwo.evtool.dsl.evaluacion.Commando
+import hwo.evtool.dsl.evaluacion.Comando
 
 /**
  * Generates code from your model files on save.
@@ -21,7 +21,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 	for (e : resource.allContents.toIterable.filter(Estado)) {
         fsa.generateFile (
-            "componentes/" + e.name + ".java",
+            "componentes/" + e.eResource.className + ".java",
             e.compile
         )
     }
@@ -33,16 +33,36 @@ class EvaluacionGenerator extends AbstractGenerator {
 //	)
 
 
-		
 	def CharSequence compile(Estado e) '''
-		«FOR c : e.actions»
-			«c.declareCommand»
-		«ENDFOR»
-	'''
-
-	protected def declareCommand(Commando command) '''
-		protected void do«command.name.toFirstUpper»() {
-			System.out.println("Executing command «command.name» («command.code»)");
+		public class «e.eResource.className» {
+			«FOR c : e.actions»
+				«c.declareStrings»
+			«ENDFOR»
+		
+			public static void main(String[] args) {
+				new «e.eResource.className»().run();
+			}
+			
+			protected void run() {
+				«FOR c : e.actions»
+					«c.declareCommand»
+				«ENDFOR»
+			}
 		}
+	'''
+		
+	protected def className(Resource res) {
+		var name = res.URI.lastSegment
+		return name.substring(0, name.indexOf('.')).toFirstUpper
+	}
+
+
+	protected def declareCommand(Comando c) '''
+		System.out.println("command:" + «c.name»[0] + " comentario:" + «c.name»[1]);
+	'''
+	
+	
+	protected def declareStrings(Comando c) '''
+		String[] «c.name» = {"«c.argumento»","«c.comentario»"}; 
 	'''
 }

@@ -7,23 +7,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Commando</b></em>'.
+ * A representation of the model object '<em><b>Comando</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Commando#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Commando#getCode <em>Code</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Commando#getComentario <em>Comentario</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Comando#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Comando#getComentario <em>Comentario</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCommando()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando()
  * @model
  * @generated
  */
-public interface Commando extends EObject
+public interface Comando extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -31,14 +31,14 @@ public interface Commando extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCommando_Name()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Commando#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -48,26 +48,26 @@ public interface Commando extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Code</b></em>' attribute.
+   * Returns the value of the '<em><b>Argumento</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Code</em>' attribute.
-   * @see #setCode(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCommando_Code()
+   * @return the value of the '<em>Argumento</em>' attribute.
+   * @see #setArgumento(String)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Argumento()
    * @model
    * @generated
    */
-  String getCode();
+  String getArgumento();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Commando#getCode <em>Code</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Code</em>' attribute.
-   * @see #getCode()
+   * @param value the new value of the '<em>Argumento</em>' attribute.
+   * @see #getArgumento()
    * @generated
    */
-  void setCode(String value);
+  void setArgumento(String value);
 
   /**
    * Returns the value of the '<em><b>Comentario</b></em>' attribute.
@@ -75,14 +75,14 @@ public interface Commando extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Comentario</em>' attribute.
    * @see #setComentario(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCommando_Comentario()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Comentario()
    * @model
    * @generated
    */
   String getComentario();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Commando#getComentario <em>Comentario</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getComentario <em>Comentario</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Comentario</em>' attribute.
@@ -91,4 +91,4 @@ public interface Commando extends EObject
    */
   void setComentario(String value);
 
-} // Commando
+} // Comando

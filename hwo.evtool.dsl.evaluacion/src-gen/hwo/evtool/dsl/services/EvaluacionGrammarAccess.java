@@ -37,9 +37,9 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final CrossReference cResetEventsEventoCrossReference_2_1_0 = (CrossReference)cResetEventsAssignment_2_1.eContents().get(0);
 		private final RuleCall cResetEventsEventoIDTerminalRuleCall_2_1_0_1 = (RuleCall)cResetEventsEventoCrossReference_2_1_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommandsKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cComandosKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cCommandsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cCommandsCommandoParserRuleCall_3_1_0 = (RuleCall)cCommandsAssignment_3_1.eContents().get(0);
+		private final RuleCall cCommandsComandoParserRuleCall_3_1_0 = (RuleCall)cCommandsAssignment_3_1.eContents().get(0);
 		private final Assignment cStatesAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cStatesEstadoParserRuleCall_4_0 = (RuleCall)cStatesAssignment_4.eContents().get(0);
 		
@@ -51,8 +51,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//    ('resetEvents'
 		//        resetEvents+=[Evento]+
 		//    )?
-		//    ('commands'
-		//        commands+=Commando+
+		//    ('comandos'
+		//        commands+=Comando+
 		//    )?
 		//    states+=Estado*
 		//;
@@ -65,8 +65,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//('resetEvents'
 		//    resetEvents+=[Evento]+
 		//)?
-		//('commands'
-		//    commands+=Commando+
+		//('comandos'
+		//    commands+=Comando+
 		//)?
 		//states+=Estado*
 		public Group getGroup() { return cGroup; }
@@ -105,19 +105,19 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getResetEventsEventoIDTerminalRuleCall_2_1_0_1() { return cResetEventsEventoIDTerminalRuleCall_2_1_0_1; }
 		
-		//('commands'
-		//    commands+=Commando+
+		//('comandos'
+		//    commands+=Comando+
 		//)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'commands'
-		public Keyword getCommandsKeyword_3_0() { return cCommandsKeyword_3_0; }
+		//'comandos'
+		public Keyword getComandosKeyword_3_0() { return cComandosKeyword_3_0; }
 		
-		//commands+=Commando+
+		//commands+=Comando+
 		public Assignment getCommandsAssignment_3_1() { return cCommandsAssignment_3_1; }
 		
-		//Commando
-		public RuleCall getCommandsCommandoParserRuleCall_3_1_0() { return cCommandsCommandoParserRuleCall_3_1_0; }
+		//Comando
+		public RuleCall getCommandsComandoParserRuleCall_3_1_0() { return cCommandsComandoParserRuleCall_3_1_0; }
 		
 		//states+=Estado*
 		public Assignment getStatesAssignment_4() { return cStatesAssignment_4; }
@@ -153,26 +153,26 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getCodeIDTerminalRuleCall_1_0() { return cCodeIDTerminalRuleCall_1_0; }
 	}
-	public class CommandoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Commando");
+	public class ComandoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Comando");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cCodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCodeSTRINGTerminalRuleCall_2_0 = (RuleCall)cCodeAssignment_2.eContents().get(0);
+		private final Assignment cArgumentoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cArgumentoSTRINGTerminalRuleCall_2_0 = (RuleCall)cArgumentoAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cComentarioAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cComentarioSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cComentarioAssignment_3_1.eContents().get(0);
 		
-		//Commando:
-		//    name=ID '=' code=STRING
+		//Comando:
+		//    name=ID '=' argumento=STRING
 		//    (':' comentario=STRING)?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=ID '=' code=STRING
+		//name=ID '=' argumento=STRING
 		//(':' comentario=STRING)?
 		public Group getGroup() { return cGroup; }
 		
@@ -185,11 +185,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 		
-		//code=STRING
-		public Assignment getCodeAssignment_2() { return cCodeAssignment_2; }
+		//argumento=STRING
+		public Assignment getArgumentoAssignment_2() { return cArgumentoAssignment_2; }
 		
 		//STRING
-		public RuleCall getCodeSTRINGTerminalRuleCall_2_0() { return cCodeSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getArgumentoSTRINGTerminalRuleCall_2_0() { return cArgumentoSTRINGTerminalRuleCall_2_0; }
 		
 		//(':' comentario=STRING)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -213,21 +213,21 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Keyword cActionsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Assignment cActionsAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final CrossReference cActionsCommandoCrossReference_2_2_0 = (CrossReference)cActionsAssignment_2_2.eContents().get(0);
-		private final RuleCall cActionsCommandoIDTerminalRuleCall_2_2_0_1 = (RuleCall)cActionsCommandoCrossReference_2_2_0.eContents().get(1);
+		private final CrossReference cActionsComandoCrossReference_2_2_0 = (CrossReference)cActionsAssignment_2_2.eContents().get(0);
+		private final RuleCall cActionsComandoIDTerminalRuleCall_2_2_0_1 = (RuleCall)cActionsComandoCrossReference_2_2_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		private final Assignment cTransitionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cTransitionsTransicionParserRuleCall_3_0 = (RuleCall)cTransitionsAssignment_3.eContents().get(0);
 		
 		//Estado:
 		//    'state' name=ID
-		//        ('actions' '{' actions+=[Commando]+ '}')?
+		//        ('actions' '{' actions+=[Comando]+ '}')?
 		//        transitions+=Transicion*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'state' name=ID
-		//    ('actions' '{' actions+=[Commando]+ '}')?
+		//    ('actions' '{' actions+=[Comando]+ '}')?
 		//    transitions+=Transicion*
 		public Group getGroup() { return cGroup; }
 		
@@ -240,7 +240,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//('actions' '{' actions+=[Commando]+ '}')?
+		//('actions' '{' actions+=[Comando]+ '}')?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//'actions'
@@ -249,14 +249,14 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_1() { return cLeftCurlyBracketKeyword_2_1; }
 		
-		//actions+=[Commando]+
+		//actions+=[Comando]+
 		public Assignment getActionsAssignment_2_2() { return cActionsAssignment_2_2; }
 		
-		//[Commando]
-		public CrossReference getActionsCommandoCrossReference_2_2_0() { return cActionsCommandoCrossReference_2_2_0; }
+		//[Comando]
+		public CrossReference getActionsComandoCrossReference_2_2_0() { return cActionsComandoCrossReference_2_2_0; }
 		
 		//ID
-		public RuleCall getActionsCommandoIDTerminalRuleCall_2_2_0_1() { return cActionsCommandoIDTerminalRuleCall_2_2_0_1; }
+		public RuleCall getActionsComandoIDTerminalRuleCall_2_2_0_1() { return cActionsComandoIDTerminalRuleCall_2_2_0_1; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
@@ -311,7 +311,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	private final MaquinaEstadosElements pMaquinaEstados;
 	private final EventoElements pEvento;
-	private final CommandoElements pCommando;
+	private final ComandoElements pComando;
 	private final EstadoElements pEstado;
 	private final TransicionElements pTransicion;
 	
@@ -326,7 +326,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.gaTerminals = gaTerminals;
 		this.pMaquinaEstados = new MaquinaEstadosElements();
 		this.pEvento = new EventoElements();
-		this.pCommando = new CommandoElements();
+		this.pComando = new ComandoElements();
 		this.pEstado = new EstadoElements();
 		this.pTransicion = new TransicionElements();
 	}
@@ -366,8 +366,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//    ('resetEvents'
 	//        resetEvents+=[Evento]+
 	//    )?
-	//    ('commands'
-	//        commands+=Commando+
+	//    ('comandos'
+	//        commands+=Comando+
 	//    )?
 	//    states+=Estado*
 	//;
@@ -390,21 +390,21 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getEventoAccess().getRule();
 	}
 	
-	//Commando:
-	//    name=ID '=' code=STRING
+	//Comando:
+	//    name=ID '=' argumento=STRING
 	//    (':' comentario=STRING)?
 	//;
-	public CommandoElements getCommandoAccess() {
-		return pCommando;
+	public ComandoElements getComandoAccess() {
+		return pComando;
 	}
 	
-	public ParserRule getCommandoRule() {
-		return getCommandoAccess().getRule();
+	public ParserRule getComandoRule() {
+		return getComandoAccess().getRule();
 	}
 	
 	//Estado:
 	//    'state' name=ID
-	//        ('actions' '{' actions+=[Commando]+ '}')?
+	//        ('actions' '{' actions+=[Comando]+ '}')?
 	//        transitions+=Transicion*
 	//;
 	public EstadoElements getEstadoAccess() {

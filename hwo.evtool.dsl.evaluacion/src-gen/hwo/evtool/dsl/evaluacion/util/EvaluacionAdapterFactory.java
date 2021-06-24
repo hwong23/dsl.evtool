@@ -86,9 +86,9 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createEventoAdapter();
       }
       @Override
-      public Adapter caseCommando(Commando object)
+      public Adapter caseComando(Comando object)
       {
-        return createCommandoAdapter();
+        return createComandoAdapter();
       }
       @Override
       public Adapter caseEstado(Estado object)
@@ -153,16 +153,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Commando <em>Commando</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Comando <em>Comando</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Commando
+   * @see hwo.evtool.dsl.evaluacion.Comando
    * @generated
    */
-  public Adapter createCommandoAdapter()
+  public Adapter createComandoAdapter()
   {
     return null;
   }

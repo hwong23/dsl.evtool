@@ -4,7 +4,7 @@
 package hwo.evtool.dsl.serializer;
 
 import com.google.inject.Inject;
-import hwo.evtool.dsl.evaluacion.Commando;
+import hwo.evtool.dsl.evaluacion.Comando;
 import hwo.evtool.dsl.evaluacion.Estado;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evento;
@@ -36,8 +36,8 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == EvaluacionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case EvaluacionPackage.COMMANDO:
-				sequence_Commando(context, (Commando) semanticObject); 
+			case EvaluacionPackage.COMANDO:
+				sequence_Comando(context, (Comando) semanticObject); 
 				return; 
 			case EvaluacionPackage.ESTADO:
 				sequence_Estado(context, (Estado) semanticObject); 
@@ -58,12 +58,12 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Commando returns Commando
+	 *     Comando returns Comando
 	 *
 	 * Constraint:
-	 *     (name=ID code=STRING comentario=STRING?)
+	 *     (name=ID argumento=STRING comentario=STRING?)
 	 */
-	protected void sequence_Commando(ISerializationContext context, Commando semanticObject) {
+	protected void sequence_Comando(ISerializationContext context, Comando semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -73,7 +73,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Estado returns Estado
 	 *
 	 * Constraint:
-	 *     (name=ID actions+=[Commando|ID]* transitions+=Transicion*)
+	 *     (name=ID actions+=[Comando|ID]* transitions+=Transicion*)
 	 */
 	protected void sequence_Estado(ISerializationContext context, Estado semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -106,7 +106,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     MaquinaEstados returns MaquinaEstados
 	 *
 	 * Constraint:
-	 *     (events+=Evento* resetEvents+=[Evento|ID]* commands+=Commando* states+=Estado*)
+	 *     (events+=Evento* resetEvents+=[Evento|ID]* commands+=Comando* states+=Estado*)
 	 */
 	protected void sequence_MaquinaEstados(ISerializationContext context, MaquinaEstados semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

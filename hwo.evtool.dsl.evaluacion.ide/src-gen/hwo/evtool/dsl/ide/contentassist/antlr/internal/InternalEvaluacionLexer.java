@@ -91,10 +91,10 @@ public class InternalEvaluacionLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalEvaluacion.g:13:7: ( 'commands' )
-            // InternalEvaluacion.g:13:9: 'commands'
+            // InternalEvaluacion.g:13:7: ( 'comandos' )
+            // InternalEvaluacion.g:13:9: 'comandos'
             {
-            match("commands"); 
+            match("comandos"); 
 
 
             }
@@ -884,9 +884,9 @@ public class InternalEvaluacionLexer extends Lexer {
     static final String DFA12_eofS =
         "\103\uffff";
     static final String DFA12_minS =
-        "\1\0\1\166\1\145\1\157\1\76\1\uffff\1\164\1\143\2\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\145\1\uffff\1\163\1\155\3\uffff\1\141\1\164\7\uffff\1\156\1\145\1\155\1\164\1\151\2\164\1\141\1\145\2\157\1\105\1\156\1\60\1\156\1\163\1\166\1\144\1\uffff\1\163\1\60\1\145\1\163\1\60\1\uffff\1\156\1\60\1\uffff\1\164\1\uffff\1\163\1\60\1\uffff";
+        "\1\0\1\166\1\145\1\157\1\76\1\uffff\1\164\1\143\2\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\145\1\uffff\1\163\1\155\3\uffff\1\141\1\164\7\uffff\1\156\1\145\1\141\1\164\1\151\2\164\1\156\1\145\2\157\1\105\1\144\1\60\1\156\1\163\1\166\1\157\1\uffff\1\163\1\60\1\145\1\163\1\60\1\uffff\1\156\1\60\1\uffff\1\164\1\uffff\1\163\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\166\1\145\1\157\1\76\1\uffff\1\164\1\143\2\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\145\1\uffff\1\163\1\155\3\uffff\1\141\1\164\7\uffff\1\156\1\145\1\155\1\164\1\151\2\164\1\141\1\145\2\157\1\105\1\156\1\172\1\156\1\163\1\166\1\144\1\uffff\1\163\1\172\1\145\1\163\1\172\1\uffff\1\156\1\172\1\uffff\1\164\1\uffff\1\163\1\172\1\uffff";
+        "\1\uffff\1\166\1\145\1\157\1\76\1\uffff\1\164\1\143\2\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\145\1\uffff\1\163\1\155\3\uffff\1\141\1\164\7\uffff\1\156\1\145\1\141\1\164\1\151\2\164\1\156\1\145\2\157\1\105\1\144\1\172\1\156\1\163\1\166\1\157\1\uffff\1\163\1\172\1\145\1\163\1\172\1\uffff\1\156\1\172\1\uffff\1\164\1\uffff\1\163\1\172\1\uffff";
     static final String DFA12_acceptS =
         "\5\uffff\1\5\2\uffff\1\10\1\11\1\uffff\1\13\1\14\3\uffff\1\20\1\21\1\uffff\1\13\2\uffff\1\12\1\4\1\5\2\uffff\1\10\1\11\1\14\1\15\1\16\1\17\1\20\22\uffff\1\6\5\uffff\1\1\2\uffff\1\7\1\uffff\1\3\2\uffff\1\2";
     static final String DFA12_specialS =

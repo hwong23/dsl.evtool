@@ -42,13 +42,13 @@ public interface EvaluacionFactory extends EFactory
   Evento createEvento();
 
   /**
-   * Returns a new object of class '<em>Commando</em>'.
+   * Returns a new object of class '<em>Comando</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Commando</em>'.
+   * @return a new object of class '<em>Comando</em>'.
    * @generated
    */
-  Commando createCommando();
+  Comando createComando();
 
   /**
    * Returns a new object of class '<em>Estado</em>'.

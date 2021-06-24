@@ -3,7 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Commando;
+import hwo.evtool.dsl.evaluacion.Comando;
 import hwo.evtool.dsl.evaluacion.Estado;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
@@ -45,7 +45,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass commandoEClass = null;
+  private EClass comandoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -218,9 +218,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getCommando()
+  public EClass getComando()
   {
-    return commandoEClass;
+    return comandoEClass;
   }
 
   /**
@@ -229,9 +229,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCommando_Name()
+  public EAttribute getComando_Name()
   {
-    return (EAttribute)commandoEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)comandoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -240,9 +240,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCommando_Code()
+  public EAttribute getComando_Argumento()
   {
-    return (EAttribute)commandoEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)comandoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -251,9 +251,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCommando_Comentario()
+  public EAttribute getComando_Comentario()
   {
-    return (EAttribute)commandoEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)comandoEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -374,10 +374,10 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEAttribute(eventoEClass, EVENTO__NAME);
     createEAttribute(eventoEClass, EVENTO__CODE);
 
-    commandoEClass = createEClass(COMMANDO);
-    createEAttribute(commandoEClass, COMMANDO__NAME);
-    createEAttribute(commandoEClass, COMMANDO__CODE);
-    createEAttribute(commandoEClass, COMMANDO__COMENTARIO);
+    comandoEClass = createEClass(COMANDO);
+    createEAttribute(comandoEClass, COMANDO__NAME);
+    createEAttribute(comandoEClass, COMANDO__ARGUMENTO);
+    createEAttribute(comandoEClass, COMANDO__COMENTARIO);
 
     estadoEClass = createEClass(ESTADO);
     createEAttribute(estadoEClass, ESTADO__NAME);
@@ -423,21 +423,21 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(maquinaEstadosEClass, MaquinaEstados.class, "MaquinaEstados", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMaquinaEstados_Events(), this.getEvento(), null, "events", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMaquinaEstados_ResetEvents(), this.getEvento(), null, "resetEvents", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMaquinaEstados_Commands(), this.getCommando(), null, "commands", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMaquinaEstados_Commands(), this.getComando(), null, "commands", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMaquinaEstados_States(), this.getEstado(), null, "states", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventoEClass, Evento.class, "Evento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvento_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvento_Code(), ecorePackage.getEString(), "code", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(commandoEClass, Commando.class, "Commando", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCommando_Name(), ecorePackage.getEString(), "name", null, 0, 1, Commando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCommando_Code(), ecorePackage.getEString(), "code", null, 0, 1, Commando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCommando_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Commando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(comandoEClass, Comando.class, "Comando", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComando_Name(), ecorePackage.getEString(), "name", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComando_Argumento(), ecorePackage.getEString(), "argumento", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComando_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEstado_Name(), ecorePackage.getEString(), "name", null, 0, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEstado_Actions(), this.getCommando(), null, "actions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEstado_Actions(), this.getComando(), null, "actions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEstado_Transitions(), this.getTransicion(), null, "transitions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transicionEClass, Transicion.class, "Transicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
