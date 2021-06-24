@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="evaluacion" nsURI="http://www.evtool.hwo/dsl/Evaluacion" nsPrefix="evaluacion">
-  <eClassifiers xsi:type="ecore:EClass" name="EvaluacionModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="componentes" upperBound="-1"
-        eType="#//CmpntEvaluacion" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MaquinaEstados">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1"
+        eType="#//Evento" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resetEvents" unique="false"
+        upperBound="-1" eType="#//Evento"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
+        eType="#//Commando" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
+        eType="#//Estado" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CmpntEvaluacion">
+  <eClassifiers xsi:type="ecore:EClass" name="Evento">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//CmpntEvaluacion"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
-        eType="#//Atributos" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atributos">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="criterios" upperBound="-1"
-        eType="#//Criterio" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Criterio">
+  <eClassifiers xsi:type="ecore:EClass" name="Commando">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comentario" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CriterioType" eSuperTypes="#//Criterio">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" eType="#//Expresion"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="soporte" eType="#//Expresion"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Estado">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" unique="false"
+        upperBound="-1" eType="#//Commando"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
+        eType="#//Transicion" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expresion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Atomo" eSuperTypes="#//Expresion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ComplejoType" eSuperTypes="#//Criterio">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="componente" eType="#//CmpntEvaluacion"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Atomo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StringConstant" eSuperTypes="#//Atomo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BoolConstant" eSuperTypes="#//Atomo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Transicion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Evento"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Estado"/>
   </eClassifiers>
 </ecore:EPackage>

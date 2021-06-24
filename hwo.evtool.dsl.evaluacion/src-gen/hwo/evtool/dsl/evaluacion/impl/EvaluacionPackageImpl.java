@@ -3,19 +3,13 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Atomo;
-import hwo.evtool.dsl.evaluacion.Atributos;
-import hwo.evtool.dsl.evaluacion.BoolConstant;
-import hwo.evtool.dsl.evaluacion.CmpntEvaluacion;
-import hwo.evtool.dsl.evaluacion.ComplejoType;
-import hwo.evtool.dsl.evaluacion.Criterio;
-import hwo.evtool.dsl.evaluacion.CriterioType;
+import hwo.evtool.dsl.evaluacion.Commando;
+import hwo.evtool.dsl.evaluacion.Estado;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
-import hwo.evtool.dsl.evaluacion.EvaluacionModel;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.Expresion;
-import hwo.evtool.dsl.evaluacion.IntConstant;
-import hwo.evtool.dsl.evaluacion.StringConstant;
+import hwo.evtool.dsl.evaluacion.Evento;
+import hwo.evtool.dsl.evaluacion.MaquinaEstados;
+import hwo.evtool.dsl.evaluacion.Transicion;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -37,77 +31,35 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass evaluacionModelEClass = null;
+  private EClass maquinaEstadosEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass cmpntEvaluacionEClass = null;
+  private EClass eventoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass atributosEClass = null;
+  private EClass commandoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass criterioEClass = null;
+  private EClass estadoEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass criterioTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass expresionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass atomoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass complejoTypeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intConstantEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass stringConstantEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass boolConstantEClass = null;
+  private EClass transicionEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -178,9 +130,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getEvaluacionModel()
+  public EClass getMaquinaEstados()
   {
-    return evaluacionModelEClass;
+    return maquinaEstadosEClass;
   }
 
   /**
@@ -189,9 +141,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getEvaluacionModel_Componentes()
+  public EReference getMaquinaEstados_Events()
   {
-    return (EReference)evaluacionModelEClass.getEStructuralFeatures().get(0);
+    return (EReference)maquinaEstadosEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -200,9 +152,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getCmpntEvaluacion()
+  public EReference getMaquinaEstados_ResetEvents()
   {
-    return cmpntEvaluacionEClass;
+    return (EReference)maquinaEstadosEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -211,9 +163,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCmpntEvaluacion_Name()
+  public EReference getMaquinaEstados_Commands()
   {
-    return (EAttribute)cmpntEvaluacionEClass.getEStructuralFeatures().get(0);
+    return (EReference)maquinaEstadosEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -222,9 +174,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getCmpntEvaluacion_SuperType()
+  public EReference getMaquinaEstados_States()
   {
-    return (EReference)cmpntEvaluacionEClass.getEStructuralFeatures().get(1);
+    return (EReference)maquinaEstadosEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -233,9 +185,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getCmpntEvaluacion_Atributos()
+  public EClass getEvento()
   {
-    return (EReference)cmpntEvaluacionEClass.getEStructuralFeatures().get(2);
+    return eventoEClass;
   }
 
   /**
@@ -244,9 +196,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getAtributos()
+  public EAttribute getEvento_Name()
   {
-    return atributosEClass;
+    return (EAttribute)eventoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -255,9 +207,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getAtributos_Criterios()
+  public EAttribute getEvento_Code()
   {
-    return (EReference)atributosEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)eventoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -266,9 +218,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getCriterio()
+  public EClass getCommando()
   {
-    return criterioEClass;
+    return commandoEClass;
   }
 
   /**
@@ -277,9 +229,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCriterio_Name()
+  public EAttribute getCommando_Name()
   {
-    return (EAttribute)criterioEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)commandoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -288,9 +240,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getCriterioType()
+  public EAttribute getCommando_Code()
   {
-    return criterioTypeEClass;
+    return (EAttribute)commandoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -299,9 +251,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getCriterioType_Expresion()
+  public EAttribute getCommando_Comentario()
   {
-    return (EReference)criterioTypeEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)commandoEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -310,9 +262,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getCriterioType_Soporte()
+  public EClass getEstado()
   {
-    return (EReference)criterioTypeEClass.getEStructuralFeatures().get(1);
+    return estadoEClass;
   }
 
   /**
@@ -321,9 +273,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getExpresion()
+  public EAttribute getEstado_Name()
   {
-    return expresionEClass;
+    return (EAttribute)estadoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -332,9 +284,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getAtomo()
+  public EReference getEstado_Actions()
   {
-    return atomoEClass;
+    return (EReference)estadoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -343,9 +295,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getComplejoType()
+  public EReference getEstado_Transitions()
   {
-    return complejoTypeEClass;
+    return (EReference)estadoEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -354,9 +306,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getComplejoType_Componente()
+  public EClass getTransicion()
   {
-    return (EReference)complejoTypeEClass.getEStructuralFeatures().get(0);
+    return transicionEClass;
   }
 
   /**
@@ -365,9 +317,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getIntConstant()
+  public EReference getTransicion_Event()
   {
-    return intConstantEClass;
+    return (EReference)transicionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -376,53 +328,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getIntConstant_Valor()
+  public EReference getTransicion_State()
   {
-    return (EAttribute)intConstantEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getStringConstant()
-  {
-    return stringConstantEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getStringConstant_Valor()
-  {
-    return (EAttribute)stringConstantEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getBoolConstant()
-  {
-    return boolConstantEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getBoolConstant_Valor()
-  {
-    return (EAttribute)boolConstantEClass.getEStructuralFeatures().get(0);
+    return (EReference)transicionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -456,39 +364,29 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     isCreated = true;
 
     // Create classes and their features
-    evaluacionModelEClass = createEClass(EVALUACION_MODEL);
-    createEReference(evaluacionModelEClass, EVALUACION_MODEL__COMPONENTES);
+    maquinaEstadosEClass = createEClass(MAQUINA_ESTADOS);
+    createEReference(maquinaEstadosEClass, MAQUINA_ESTADOS__EVENTS);
+    createEReference(maquinaEstadosEClass, MAQUINA_ESTADOS__RESET_EVENTS);
+    createEReference(maquinaEstadosEClass, MAQUINA_ESTADOS__COMMANDS);
+    createEReference(maquinaEstadosEClass, MAQUINA_ESTADOS__STATES);
 
-    cmpntEvaluacionEClass = createEClass(CMPNT_EVALUACION);
-    createEAttribute(cmpntEvaluacionEClass, CMPNT_EVALUACION__NAME);
-    createEReference(cmpntEvaluacionEClass, CMPNT_EVALUACION__SUPER_TYPE);
-    createEReference(cmpntEvaluacionEClass, CMPNT_EVALUACION__ATRIBUTOS);
+    eventoEClass = createEClass(EVENTO);
+    createEAttribute(eventoEClass, EVENTO__NAME);
+    createEAttribute(eventoEClass, EVENTO__CODE);
 
-    atributosEClass = createEClass(ATRIBUTOS);
-    createEReference(atributosEClass, ATRIBUTOS__CRITERIOS);
+    commandoEClass = createEClass(COMMANDO);
+    createEAttribute(commandoEClass, COMMANDO__NAME);
+    createEAttribute(commandoEClass, COMMANDO__CODE);
+    createEAttribute(commandoEClass, COMMANDO__COMENTARIO);
 
-    criterioEClass = createEClass(CRITERIO);
-    createEAttribute(criterioEClass, CRITERIO__NAME);
+    estadoEClass = createEClass(ESTADO);
+    createEAttribute(estadoEClass, ESTADO__NAME);
+    createEReference(estadoEClass, ESTADO__ACTIONS);
+    createEReference(estadoEClass, ESTADO__TRANSITIONS);
 
-    criterioTypeEClass = createEClass(CRITERIO_TYPE);
-    createEReference(criterioTypeEClass, CRITERIO_TYPE__EXPRESION);
-    createEReference(criterioTypeEClass, CRITERIO_TYPE__SOPORTE);
-
-    expresionEClass = createEClass(EXPRESION);
-
-    atomoEClass = createEClass(ATOMO);
-
-    complejoTypeEClass = createEClass(COMPLEJO_TYPE);
-    createEReference(complejoTypeEClass, COMPLEJO_TYPE__COMPONENTE);
-
-    intConstantEClass = createEClass(INT_CONSTANT);
-    createEAttribute(intConstantEClass, INT_CONSTANT__VALOR);
-
-    stringConstantEClass = createEClass(STRING_CONSTANT);
-    createEAttribute(stringConstantEClass, STRING_CONSTANT__VALOR);
-
-    boolConstantEClass = createEClass(BOOL_CONSTANT);
-    createEAttribute(boolConstantEClass, BOOL_CONSTANT__VALOR);
+    transicionEClass = createEClass(TRANSICION);
+    createEReference(transicionEClass, TRANSICION__EVENT);
+    createEReference(transicionEClass, TRANSICION__STATE);
   }
 
   /**
@@ -520,47 +418,31 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    criterioTypeEClass.getESuperTypes().add(this.getCriterio());
-    atomoEClass.getESuperTypes().add(this.getExpresion());
-    complejoTypeEClass.getESuperTypes().add(this.getCriterio());
-    intConstantEClass.getESuperTypes().add(this.getAtomo());
-    stringConstantEClass.getESuperTypes().add(this.getAtomo());
-    boolConstantEClass.getESuperTypes().add(this.getAtomo());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(evaluacionModelEClass, EvaluacionModel.class, "EvaluacionModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEvaluacionModel_Componentes(), this.getCmpntEvaluacion(), null, "componentes", null, 0, -1, EvaluacionModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(maquinaEstadosEClass, MaquinaEstados.class, "MaquinaEstados", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMaquinaEstados_Events(), this.getEvento(), null, "events", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMaquinaEstados_ResetEvents(), this.getEvento(), null, "resetEvents", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMaquinaEstados_Commands(), this.getCommando(), null, "commands", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMaquinaEstados_States(), this.getEstado(), null, "states", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cmpntEvaluacionEClass, CmpntEvaluacion.class, "CmpntEvaluacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCmpntEvaluacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCmpntEvaluacion_SuperType(), this.getCmpntEvaluacion(), null, "superType", null, 0, 1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCmpntEvaluacion_Atributos(), this.getAtributos(), null, "atributos", null, 0, -1, CmpntEvaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(eventoEClass, Evento.class, "Evento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEvento_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvento_Code(), ecorePackage.getEString(), "code", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(atributosEClass, Atributos.class, "Atributos", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAtributos_Criterios(), this.getCriterio(), null, "criterios", null, 0, -1, Atributos.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(commandoEClass, Commando.class, "Commando", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCommando_Name(), ecorePackage.getEString(), "name", null, 0, 1, Commando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCommando_Code(), ecorePackage.getEString(), "code", null, 0, 1, Commando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCommando_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Commando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(criterioEClass, Criterio.class, "Criterio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCriterio_Name(), ecorePackage.getEString(), "name", null, 0, 1, Criterio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEstado_Name(), ecorePackage.getEString(), "name", null, 0, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEstado_Actions(), this.getCommando(), null, "actions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEstado_Transitions(), this.getTransicion(), null, "transitions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(criterioTypeEClass, CriterioType.class, "CriterioType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCriterioType_Expresion(), this.getExpresion(), null, "expresion", null, 0, 1, CriterioType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCriterioType_Soporte(), this.getExpresion(), null, "soporte", null, 0, 1, CriterioType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(expresionEClass, Expresion.class, "Expresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(complejoTypeEClass, ComplejoType.class, "ComplejoType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getComplejoType_Componente(), this.getCmpntEvaluacion(), null, "componente", null, 0, 1, ComplejoType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intConstantEClass, IntConstant.class, "IntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntConstant_Valor(), ecorePackage.getEInt(), "valor", null, 0, 1, IntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(stringConstantEClass, StringConstant.class, "StringConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStringConstant_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, StringConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(boolConstantEClass, BoolConstant.class, "BoolConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getBoolConstant_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, BoolConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(transicionEClass, Transicion.class, "Transicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTransicion_Event(), this.getEvento(), null, "event", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransicion_State(), this.getEstado(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

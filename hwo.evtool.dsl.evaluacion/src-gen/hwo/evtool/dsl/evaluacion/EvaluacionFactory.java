@@ -24,103 +24,49 @@ public interface EvaluacionFactory extends EFactory
   EvaluacionFactory eINSTANCE = hwo.evtool.dsl.evaluacion.impl.EvaluacionFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Maquina Estados</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Maquina Estados</em>'.
    * @generated
    */
-  EvaluacionModel createEvaluacionModel();
+  MaquinaEstados createMaquinaEstados();
 
   /**
-   * Returns a new object of class '<em>Cmpnt Evaluacion</em>'.
+   * Returns a new object of class '<em>Evento</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Cmpnt Evaluacion</em>'.
+   * @return a new object of class '<em>Evento</em>'.
    * @generated
    */
-  CmpntEvaluacion createCmpntEvaluacion();
+  Evento createEvento();
 
   /**
-   * Returns a new object of class '<em>Atributos</em>'.
+   * Returns a new object of class '<em>Commando</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atributos</em>'.
+   * @return a new object of class '<em>Commando</em>'.
    * @generated
    */
-  Atributos createAtributos();
+  Commando createCommando();
 
   /**
-   * Returns a new object of class '<em>Criterio</em>'.
+   * Returns a new object of class '<em>Estado</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Criterio</em>'.
+   * @return a new object of class '<em>Estado</em>'.
    * @generated
    */
-  Criterio createCriterio();
+  Estado createEstado();
 
   /**
-   * Returns a new object of class '<em>Criterio Type</em>'.
+   * Returns a new object of class '<em>Transicion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Criterio Type</em>'.
+   * @return a new object of class '<em>Transicion</em>'.
    * @generated
    */
-  CriterioType createCriterioType();
-
-  /**
-   * Returns a new object of class '<em>Expresion</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expresion</em>'.
-   * @generated
-   */
-  Expresion createExpresion();
-
-  /**
-   * Returns a new object of class '<em>Atomo</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atomo</em>'.
-   * @generated
-   */
-  Atomo createAtomo();
-
-  /**
-   * Returns a new object of class '<em>Complejo Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Complejo Type</em>'.
-   * @generated
-   */
-  ComplejoType createComplejoType();
-
-  /**
-   * Returns a new object of class '<em>Int Constant</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Constant</em>'.
-   * @generated
-   */
-  IntConstant createIntConstant();
-
-  /**
-   * Returns a new object of class '<em>String Constant</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>String Constant</em>'.
-   * @generated
-   */
-  StringConstant createStringConstant();
-
-  /**
-   * Returns a new object of class '<em>Bool Constant</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Bool Constant</em>'.
-   * @generated
-   */
-  BoolConstant createBoolConstant();
+  Transicion createTransicion();
 
   /**
    * Returns the package supported by this factory.

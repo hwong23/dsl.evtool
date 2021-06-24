@@ -58,42 +58,69 @@ public interface EvaluacionPackage extends EPackage
   EvaluacionPackage eINSTANCE = hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.MaquinaEstadosImpl <em>Maquina Estados</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluacionModel()
+   * @see hwo.evtool.dsl.evaluacion.impl.MaquinaEstadosImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getMaquinaEstados()
    * @generated
    */
-  int EVALUACION_MODEL = 0;
+  int MAQUINA_ESTADOS = 0;
 
   /**
-   * The feature id for the '<em><b>Componentes</b></em>' containment reference list.
+   * The feature id for the '<em><b>Events</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVALUACION_MODEL__COMPONENTES = 0;
+  int MAQUINA_ESTADOS__EVENTS = 0;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The feature id for the '<em><b>Reset Events</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EVALUACION_MODEL_FEATURE_COUNT = 1;
+  int MAQUINA_ESTADOS__RESET_EVENTS = 1;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl <em>Cmpnt Evaluacion</em>}' class.
+   * The feature id for the '<em><b>Commands</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCmpntEvaluacion()
+   * @generated
+   * @ordered
+   */
+  int MAQUINA_ESTADOS__COMMANDS = 2;
+
+  /**
+   * The feature id for the '<em><b>States</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAQUINA_ESTADOS__STATES = 3;
+
+  /**
+   * The number of structural features of the '<em>Maquina Estados</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAQUINA_ESTADOS_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EventoImpl <em>Evento</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see hwo.evtool.dsl.evaluacion.impl.EventoImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvento()
    * @generated
    */
-  int CMPNT_EVALUACION = 1;
+  int EVENTO = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,72 +129,35 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CMPNT_EVALUACION__NAME = 0;
+  int EVENTO__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * The feature id for the '<em><b>Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CMPNT_EVALUACION__SUPER_TYPE = 1;
+  int EVENTO__CODE = 1;
 
   /**
-   * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
+   * The number of structural features of the '<em>Evento</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CMPNT_EVALUACION__ATRIBUTOS = 2;
+  int EVENTO_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>Cmpnt Evaluacion</em>' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CommandoImpl <em>Commando</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CMPNT_EVALUACION_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AtributosImpl <em>Atributos</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.AtributosImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtributos()
+   * @see hwo.evtool.dsl.evaluacion.impl.CommandoImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCommando()
    * @generated
    */
-  int ATRIBUTOS = 2;
-
-  /**
-   * The feature id for the '<em><b>Criterios</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATRIBUTOS__CRITERIOS = 0;
-
-  /**
-   * The number of structural features of the '<em>Atributos</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATRIBUTOS_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl <em>Criterio</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.CriterioImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterio()
-   * @generated
-   */
-  int CRITERIO = 3;
+  int COMMANDO = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -176,26 +166,44 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CRITERIO__NAME = 0;
+  int COMMANDO__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Criterio</em>' class.
+   * The feature id for the '<em><b>Code</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CRITERIO_FEATURE_COUNT = 1;
+  int COMMANDO__CODE = 1;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl <em>Criterio Type</em>}' class.
+   * The feature id for the '<em><b>Comentario</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioType()
+   * @generated
+   * @ordered
+   */
+  int COMMANDO__COMENTARIO = 2;
+
+  /**
+   * The number of structural features of the '<em>Commando</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMMANDO_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see hwo.evtool.dsl.evaluacion.impl.EstadoImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEstado()
    * @generated
    */
-  int CRITERIO_TYPE = 4;
+  int ESTADO = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -204,436 +212,276 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CRITERIO_TYPE__NAME = CRITERIO__NAME;
+  int ESTADO__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Expresion</b></em>' containment reference.
+   * The feature id for the '<em><b>Actions</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CRITERIO_TYPE__EXPRESION = CRITERIO_FEATURE_COUNT + 0;
+  int ESTADO__ACTIONS = 1;
 
   /**
-   * The feature id for the '<em><b>Soporte</b></em>' containment reference.
+   * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CRITERIO_TYPE__SOPORTE = CRITERIO_FEATURE_COUNT + 1;
+  int ESTADO__TRANSITIONS = 2;
 
   /**
-   * The number of structural features of the '<em>Criterio Type</em>' class.
+   * The number of structural features of the '<em>Estado</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CRITERIO_TYPE_FEATURE_COUNT = CRITERIO_FEATURE_COUNT + 2;
+  int ESTADO_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl <em>Expresion</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.TransicionImpl <em>Transicion</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.ExpresionImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getExpresion()
+   * @see hwo.evtool.dsl.evaluacion.impl.TransicionImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTransicion()
    * @generated
    */
-  int EXPRESION = 5;
+  int TRANSICION = 4;
 
   /**
-   * The number of structural features of the '<em>Expresion</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESION_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AtomoImpl <em>Atomo</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.AtomoImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtomo()
-   * @generated
-   */
-  int ATOMO = 6;
-
-  /**
-   * The number of structural features of the '<em>Atomo</em>' class.
+   * The feature id for the '<em><b>Event</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATOMO_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 0;
+  int TRANSICION__EVENT = 0;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl <em>Complejo Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComplejoType()
-   * @generated
-   */
-  int COMPLEJO_TYPE = 7;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>State</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPLEJO_TYPE__NAME = CRITERIO__NAME;
+  int TRANSICION__STATE = 1;
 
   /**
-   * The feature id for the '<em><b>Componente</b></em>' reference.
+   * The number of structural features of the '<em>Transicion</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPLEJO_TYPE__COMPONENTE = CRITERIO_FEATURE_COUNT + 0;
+  int TRANSICION_FEATURE_COUNT = 2;
+
 
   /**
-   * The number of structural features of the '<em>Complejo Type</em>' class.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.MaquinaEstados <em>Maquina Estados</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Maquina Estados</em>'.
+   * @see hwo.evtool.dsl.evaluacion.MaquinaEstados
    * @generated
-   * @ordered
    */
-  int COMPLEJO_TYPE_FEATURE_COUNT = CRITERIO_FEATURE_COUNT + 1;
+  EClass getMaquinaEstados();
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl <em>Int Constant</em>}' class.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.MaquinaEstados#getEvents <em>Events</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.IntConstantImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getIntConstant()
+   * @return the meta object for the containment reference list '<em>Events</em>'.
+   * @see hwo.evtool.dsl.evaluacion.MaquinaEstados#getEvents()
+   * @see #getMaquinaEstados()
    * @generated
    */
-  int INT_CONSTANT = 8;
+  EReference getMaquinaEstados_Events();
 
   /**
-   * The feature id for the '<em><b>Valor</b></em>' attribute.
+   * Returns the meta object for the reference list '{@link hwo.evtool.dsl.evaluacion.MaquinaEstados#getResetEvents <em>Reset Events</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Reset Events</em>'.
+   * @see hwo.evtool.dsl.evaluacion.MaquinaEstados#getResetEvents()
+   * @see #getMaquinaEstados()
    * @generated
-   * @ordered
    */
-  int INT_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
+  EReference getMaquinaEstados_ResetEvents();
 
   /**
-   * The number of structural features of the '<em>Int Constant</em>' class.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.MaquinaEstados#getCommands <em>Commands</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Commands</em>'.
+   * @see hwo.evtool.dsl.evaluacion.MaquinaEstados#getCommands()
+   * @see #getMaquinaEstados()
    * @generated
-   * @ordered
    */
-  int INT_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
+  EReference getMaquinaEstados_Commands();
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.StringConstantImpl <em>String Constant</em>}' class.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.MaquinaEstados#getStates <em>States</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.StringConstantImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getStringConstant()
+   * @return the meta object for the containment reference list '<em>States</em>'.
+   * @see hwo.evtool.dsl.evaluacion.MaquinaEstados#getStates()
+   * @see #getMaquinaEstados()
    * @generated
    */
-  int STRING_CONSTANT = 9;
+  EReference getMaquinaEstados_States();
 
   /**
-   * The feature id for the '<em><b>Valor</b></em>' attribute.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Evento <em>Evento</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>String Constant</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.BoolConstantImpl <em>Bool Constant</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.BoolConstantImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getBoolConstant()
+   * @return the meta object for class '<em>Evento</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Evento
    * @generated
    */
-  int BOOL_CONSTANT = 10;
+  EClass getEvento();
 
   /**
-   * The feature id for the '<em><b>Valor</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOL_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Bool Constant</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BOOL_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
-
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.EvaluacionModel <em>Model</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionModel
-   * @generated
-   */
-  EClass getEvaluacionModel();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.EvaluacionModel#getComponentes <em>Componentes</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Componentes</em>'.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionModel#getComponentes()
-   * @see #getEvaluacionModel()
-   * @generated
-   */
-  EReference getEvaluacionModel_Componentes();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion <em>Cmpnt Evaluacion</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Cmpnt Evaluacion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CmpntEvaluacion
-   * @generated
-   */
-  EClass getCmpntEvaluacion();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Evento#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getName()
-   * @see #getCmpntEvaluacion()
+   * @see hwo.evtool.dsl.evaluacion.Evento#getName()
+   * @see #getEvento()
    * @generated
    */
-  EAttribute getCmpntEvaluacion_Name();
+  EAttribute getEvento_Name();
 
   /**
-   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getSuperType <em>Super Type</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Evento#getCode <em>Code</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Super Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getSuperType()
-   * @see #getCmpntEvaluacion()
+   * @return the meta object for the attribute '<em>Code</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Evento#getCode()
+   * @see #getEvento()
    * @generated
    */
-  EReference getCmpntEvaluacion_SuperType();
+  EAttribute getEvento_Code();
 
   /**
-   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getAtributos <em>Atributos</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Commando <em>Commando</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Atributos</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CmpntEvaluacion#getAtributos()
-   * @see #getCmpntEvaluacion()
+   * @return the meta object for class '<em>Commando</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Commando
    * @generated
    */
-  EReference getCmpntEvaluacion_Atributos();
+  EClass getCommando();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Atributos <em>Atributos</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Atributos</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atributos
-   * @generated
-   */
-  EClass getAtributos();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.Atributos#getCriterios <em>Criterios</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Criterios</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atributos#getCriterios()
-   * @see #getAtributos()
-   * @generated
-   */
-  EReference getAtributos_Criterios();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Criterio <em>Criterio</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Criterio</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Criterio
-   * @generated
-   */
-  EClass getCriterio();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Criterio#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Commando#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Criterio#getName()
-   * @see #getCriterio()
+   * @see hwo.evtool.dsl.evaluacion.Commando#getName()
+   * @see #getCommando()
    * @generated
    */
-  EAttribute getCriterio_Name();
+  EAttribute getCommando_Name();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CriterioType <em>Criterio Type</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Commando#getCode <em>Code</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Criterio Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioType
+   * @return the meta object for the attribute '<em>Code</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Commando#getCode()
+   * @see #getCommando()
    * @generated
    */
-  EClass getCriterioType();
+  EAttribute getCommando_Code();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.CriterioType#getExpresion <em>Expresion</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Commando#getComentario <em>Comentario</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Expresion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioType#getExpresion()
-   * @see #getCriterioType()
+   * @return the meta object for the attribute '<em>Comentario</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Commando#getComentario()
+   * @see #getCommando()
    * @generated
    */
-  EReference getCriterioType_Expresion();
+  EAttribute getCommando_Comentario();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.CriterioType#getSoporte <em>Soporte</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Estado <em>Estado</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Soporte</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CriterioType#getSoporte()
-   * @see #getCriterioType()
+   * @return the meta object for class '<em>Estado</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Estado
    * @generated
    */
-  EReference getCriterioType_Soporte();
+  EClass getEstado();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Expresion <em>Expresion</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Estado#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Expresion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Expresion
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Estado#getName()
+   * @see #getEstado()
    * @generated
    */
-  EClass getExpresion();
+  EAttribute getEstado_Name();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Atomo <em>Atomo</em>}'.
+   * Returns the meta object for the reference list '{@link hwo.evtool.dsl.evaluacion.Estado#getActions <em>Actions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Atomo</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atomo
+   * @return the meta object for the reference list '<em>Actions</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Estado#getActions()
+   * @see #getEstado()
    * @generated
    */
-  EClass getAtomo();
+  EReference getEstado_Actions();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.ComplejoType <em>Complejo Type</em>}'.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.Estado#getTransitions <em>Transitions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Complejo Type</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComplejoType
+   * @return the meta object for the containment reference list '<em>Transitions</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Estado#getTransitions()
+   * @see #getEstado()
    * @generated
    */
-  EClass getComplejoType();
+  EReference getEstado_Transitions();
 
   /**
-   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.ComplejoType#getComponente <em>Componente</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Transicion <em>Transicion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Componente</em>'.
-   * @see hwo.evtool.dsl.evaluacion.ComplejoType#getComponente()
-   * @see #getComplejoType()
+   * @return the meta object for class '<em>Transicion</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Transicion
    * @generated
    */
-  EReference getComplejoType_Componente();
+  EClass getTransicion();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.IntConstant <em>Int Constant</em>}'.
+   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.Transicion#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Int Constant</em>'.
-   * @see hwo.evtool.dsl.evaluacion.IntConstant
+   * @return the meta object for the reference '<em>Event</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Transicion#getEvent()
+   * @see #getTransicion()
    * @generated
    */
-  EClass getIntConstant();
+  EReference getTransicion_Event();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.IntConstant#getValor <em>Valor</em>}'.
+   * Returns the meta object for the reference '{@link hwo.evtool.dsl.evaluacion.Transicion#getState <em>State</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Valor</em>'.
-   * @see hwo.evtool.dsl.evaluacion.IntConstant#getValor()
-   * @see #getIntConstant()
+   * @return the meta object for the reference '<em>State</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Transicion#getState()
+   * @see #getTransicion()
    * @generated
    */
-  EAttribute getIntConstant_Valor();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.StringConstant <em>String Constant</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>String Constant</em>'.
-   * @see hwo.evtool.dsl.evaluacion.StringConstant
-   * @generated
-   */
-  EClass getStringConstant();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.StringConstant#getValor <em>Valor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Valor</em>'.
-   * @see hwo.evtool.dsl.evaluacion.StringConstant#getValor()
-   * @see #getStringConstant()
-   * @generated
-   */
-  EAttribute getStringConstant_Valor();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.BoolConstant <em>Bool Constant</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Bool Constant</em>'.
-   * @see hwo.evtool.dsl.evaluacion.BoolConstant
-   * @generated
-   */
-  EClass getBoolConstant();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.BoolConstant#getValor <em>Valor</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Valor</em>'.
-   * @see hwo.evtool.dsl.evaluacion.BoolConstant#getValor()
-   * @see #getBoolConstant()
-   * @generated
-   */
-  EAttribute getBoolConstant_Valor();
+  EReference getTransicion_State();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -659,84 +507,56 @@ public interface EvaluacionPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.MaquinaEstadosImpl <em>Maquina Estados</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionModelImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluacionModel()
+     * @see hwo.evtool.dsl.evaluacion.impl.MaquinaEstadosImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getMaquinaEstados()
      * @generated
      */
-    EClass EVALUACION_MODEL = eINSTANCE.getEvaluacionModel();
+    EClass MAQUINA_ESTADOS = eINSTANCE.getMaquinaEstados();
 
     /**
-     * The meta object literal for the '<em><b>Componentes</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Events</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EVALUACION_MODEL__COMPONENTES = eINSTANCE.getEvaluacionModel_Componentes();
+    EReference MAQUINA_ESTADOS__EVENTS = eINSTANCE.getMaquinaEstados_Events();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl <em>Cmpnt Evaluacion</em>}' class.
+     * The meta object literal for the '<em><b>Reset Events</b></em>' reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.CmpntEvaluacionImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCmpntEvaluacion()
      * @generated
      */
-    EClass CMPNT_EVALUACION = eINSTANCE.getCmpntEvaluacion();
+    EReference MAQUINA_ESTADOS__RESET_EVENTS = eINSTANCE.getMaquinaEstados_ResetEvents();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Commands</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CMPNT_EVALUACION__NAME = eINSTANCE.getCmpntEvaluacion_Name();
+    EReference MAQUINA_ESTADOS__COMMANDS = eINSTANCE.getMaquinaEstados_Commands();
 
     /**
-     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CMPNT_EVALUACION__SUPER_TYPE = eINSTANCE.getCmpntEvaluacion_SuperType();
+    EReference MAQUINA_ESTADOS__STATES = eINSTANCE.getMaquinaEstados_States();
 
     /**
-     * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EventoImpl <em>Evento</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evaluacion.impl.EventoImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvento()
      * @generated
      */
-    EReference CMPNT_EVALUACION__ATRIBUTOS = eINSTANCE.getCmpntEvaluacion_Atributos();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AtributosImpl <em>Atributos</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.AtributosImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtributos()
-     * @generated
-     */
-    EClass ATRIBUTOS = eINSTANCE.getAtributos();
-
-    /**
-     * The meta object literal for the '<em><b>Criterios</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ATRIBUTOS__CRITERIOS = eINSTANCE.getAtributos_Criterios();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioImpl <em>Criterio</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.CriterioImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterio()
-     * @generated
-     */
-    EClass CRITERIO = eINSTANCE.getCriterio();
+    EClass EVENTO = eINSTANCE.getEvento();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -744,125 +564,109 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CRITERIO__NAME = eINSTANCE.getCriterio_Name();
+    EAttribute EVENTO__NAME = eINSTANCE.getEvento_Name();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl <em>Criterio Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.CriterioTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCriterioType()
-     * @generated
-     */
-    EClass CRITERIO_TYPE = eINSTANCE.getCriterioType();
-
-    /**
-     * The meta object literal for the '<em><b>Expresion</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CRITERIO_TYPE__EXPRESION = eINSTANCE.getCriterioType_Expresion();
+    EAttribute EVENTO__CODE = eINSTANCE.getEvento_Code();
 
     /**
-     * The meta object literal for the '<em><b>Soporte</b></em>' containment reference feature.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CommandoImpl <em>Commando</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evaluacion.impl.CommandoImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCommando()
+     * @generated
+     */
+    EClass COMMANDO = eINSTANCE.getCommando();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CRITERIO_TYPE__SOPORTE = eINSTANCE.getCriterioType_Soporte();
+    EAttribute COMMANDO__NAME = eINSTANCE.getCommando_Name();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl <em>Expresion</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.ExpresionImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getExpresion()
-     * @generated
-     */
-    EClass EXPRESION = eINSTANCE.getExpresion();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AtomoImpl <em>Atomo</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.AtomoImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getAtomo()
-     * @generated
-     */
-    EClass ATOMO = eINSTANCE.getAtomo();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl <em>Complejo Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.ComplejoTypeImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComplejoType()
-     * @generated
-     */
-    EClass COMPLEJO_TYPE = eINSTANCE.getComplejoType();
-
-    /**
-     * The meta object literal for the '<em><b>Componente</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMPLEJO_TYPE__COMPONENTE = eINSTANCE.getComplejoType_Componente();
+    EAttribute COMMANDO__CODE = eINSTANCE.getCommando_Code();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl <em>Int Constant</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.IntConstantImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getIntConstant()
-     * @generated
-     */
-    EClass INT_CONSTANT = eINSTANCE.getIntConstant();
-
-    /**
-     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Comentario</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INT_CONSTANT__VALOR = eINSTANCE.getIntConstant_Valor();
+    EAttribute COMMANDO__COMENTARIO = eINSTANCE.getCommando_Comentario();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.StringConstantImpl <em>String Constant</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.StringConstantImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getStringConstant()
+     * @see hwo.evtool.dsl.evaluacion.impl.EstadoImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEstado()
      * @generated
      */
-    EClass STRING_CONSTANT = eINSTANCE.getStringConstant();
+    EClass ESTADO = eINSTANCE.getEstado();
 
     /**
-     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STRING_CONSTANT__VALOR = eINSTANCE.getStringConstant_Valor();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.BoolConstantImpl <em>Bool Constant</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.BoolConstantImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getBoolConstant()
-     * @generated
-     */
-    EClass BOOL_CONSTANT = eINSTANCE.getBoolConstant();
-
-    /**
-     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BOOL_CONSTANT__VALOR = eINSTANCE.getBoolConstant_Valor();
+    EAttribute ESTADO__NAME = eINSTANCE.getEstado_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Actions</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ESTADO__ACTIONS = eINSTANCE.getEstado_Actions();
+
+    /**
+     * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ESTADO__TRANSITIONS = eINSTANCE.getEstado_Transitions();
+
+    /**
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.TransicionImpl <em>Transicion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evaluacion.impl.TransicionImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTransicion()
+     * @generated
+     */
+    EClass TRANSICION = eINSTANCE.getTransicion();
+
+    /**
+     * The meta object literal for the '<em><b>Event</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSICION__EVENT = eINSTANCE.getTransicion_Event();
+
+    /**
+     * The meta object literal for the '<em><b>State</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRANSICION__STATE = eINSTANCE.getTransicion_State();
 
   }
 
