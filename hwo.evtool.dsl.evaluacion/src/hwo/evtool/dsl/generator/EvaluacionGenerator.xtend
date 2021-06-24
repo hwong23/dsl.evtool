@@ -61,7 +61,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 		System.out.println("command:" + «c.name»[0] + " comentario:" + «c.name»[1]);
 	'''
 	
-	
+		
 	protected def declareStrings(Comando c) '''
 		String[] «c.name» = {"«c.argumento»","«c.comentario»"}; 
 	'''
