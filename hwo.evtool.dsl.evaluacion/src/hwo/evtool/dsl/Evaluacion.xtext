@@ -9,8 +9,8 @@ MaquinaEstados :
 	('resetEvents'
 		resetEvents+=[Evento]+
 	)?
-	('commands'
-		commands+=Commando+
+	('comandos'
+		commands+=Comando+
 	)?
 	states+=Estado*
 ;
@@ -19,14 +19,14 @@ Evento:
 	name=ID code=ID
 ;
 
-Commando:
-	name=ID '=' code=STRING
+Comando:
+	name=ID '=' argumento=STRING
 	(':' comentario=STRING)?
 ;
 
 Estado:
 	'state' name=ID
-		('actions' '{' actions+=[Commando]+ '}')?
+		('actions' '{' actions+=[Comando]+ '}')?
 		transitions+=Transicion*
 ;
 

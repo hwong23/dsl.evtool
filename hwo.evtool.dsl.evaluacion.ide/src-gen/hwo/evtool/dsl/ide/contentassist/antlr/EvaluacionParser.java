@@ -36,8 +36,8 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_2(), "rule__MaquinaEstados__Group_2__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_3(), "rule__MaquinaEstados__Group_3__0");
 			builder.put(grammarAccess.getEventoAccess().getGroup(), "rule__Evento__Group__0");
-			builder.put(grammarAccess.getCommandoAccess().getGroup(), "rule__Commando__Group__0");
-			builder.put(grammarAccess.getCommandoAccess().getGroup_3(), "rule__Commando__Group_3__0");
+			builder.put(grammarAccess.getComandoAccess().getGroup(), "rule__Comando__Group__0");
+			builder.put(grammarAccess.getComandoAccess().getGroup_3(), "rule__Comando__Group_3__0");
 			builder.put(grammarAccess.getEstadoAccess().getGroup(), "rule__Estado__Group__0");
 			builder.put(grammarAccess.getEstadoAccess().getGroup_2(), "rule__Estado__Group_2__0");
 			builder.put(grammarAccess.getTransicionAccess().getGroup(), "rule__Transicion__Group__0");
@@ -47,9 +47,9 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getStatesAssignment_4(), "rule__MaquinaEstados__StatesAssignment_4");
 			builder.put(grammarAccess.getEventoAccess().getNameAssignment_0(), "rule__Evento__NameAssignment_0");
 			builder.put(grammarAccess.getEventoAccess().getCodeAssignment_1(), "rule__Evento__CodeAssignment_1");
-			builder.put(grammarAccess.getCommandoAccess().getNameAssignment_0(), "rule__Commando__NameAssignment_0");
-			builder.put(grammarAccess.getCommandoAccess().getCodeAssignment_2(), "rule__Commando__CodeAssignment_2");
-			builder.put(grammarAccess.getCommandoAccess().getComentarioAssignment_3_1(), "rule__Commando__ComentarioAssignment_3_1");
+			builder.put(grammarAccess.getComandoAccess().getNameAssignment_0(), "rule__Comando__NameAssignment_0");
+			builder.put(grammarAccess.getComandoAccess().getArgumentoAssignment_2(), "rule__Comando__ArgumentoAssignment_2");
+			builder.put(grammarAccess.getComandoAccess().getComentarioAssignment_3_1(), "rule__Comando__ComentarioAssignment_3_1");
 			builder.put(grammarAccess.getEstadoAccess().getNameAssignment_1(), "rule__Estado__NameAssignment_1");
 			builder.put(grammarAccess.getEstadoAccess().getActionsAssignment_2_2(), "rule__Estado__ActionsAssignment_2_2");
 			builder.put(grammarAccess.getEstadoAccess().getTransitionsAssignment_3(), "rule__Estado__TransitionsAssignment_3");

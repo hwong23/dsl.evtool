@@ -67,7 +67,7 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
     {
       case EvaluacionPackage.MAQUINA_ESTADOS: return createMaquinaEstados();
       case EvaluacionPackage.EVENTO: return createEvento();
-      case EvaluacionPackage.COMMANDO: return createCommando();
+      case EvaluacionPackage.COMANDO: return createComando();
       case EvaluacionPackage.ESTADO: return createEstado();
       case EvaluacionPackage.TRANSICION: return createTransicion();
       default:
@@ -105,10 +105,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Commando createCommando()
+  public Comando createComando()
   {
-    CommandoImpl commando = new CommandoImpl();
-    return commando;
+    ComandoImpl comando = new ComandoImpl();
+    return comando;
   }
 
   /**

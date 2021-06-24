@@ -3,7 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Commando;
+import hwo.evtool.dsl.evaluacion.Comando;
 import hwo.evtool.dsl.evaluacion.Estado;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Transicion;
@@ -70,7 +70,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
    * @generated
    * @ordered
    */
-  protected EList<Commando> actions;
+  protected EList<Comando> actions;
 
   /**
    * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
@@ -134,11 +134,11 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
    * @generated
    */
   @Override
-  public EList<Commando> getActions()
+  public EList<Comando> getActions()
   {
     if (actions == null)
     {
-      actions = new EObjectResolvingEList<Commando>(Commando.class, this, EvaluacionPackage.ESTADO__ACTIONS);
+      actions = new EObjectResolvingEList<Comando>(Comando.class, this, EvaluacionPackage.ESTADO__ACTIONS);
     }
     return actions;
   }
@@ -210,7 +210,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
         return;
       case EvaluacionPackage.ESTADO__ACTIONS:
         getActions().clear();
-        getActions().addAll((Collection<? extends Commando>)newValue);
+        getActions().addAll((Collection<? extends Comando>)newValue);
         return;
       case EvaluacionPackage.ESTADO__TRANSITIONS:
         getTransitions().clear();

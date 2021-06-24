@@ -16,10 +16,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Evento/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Evento/code"/>
     </genClasses>
-    <genClasses ecoreClass="Evaluacion.ecore#//Commando">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Commando/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Commando/code"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Commando/comentario"/>
+    <genClasses ecoreClass="Evaluacion.ecore#//Comando">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Comando/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Comando/argumento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Comando/comentario"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//Estado">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Estado/name"/>
