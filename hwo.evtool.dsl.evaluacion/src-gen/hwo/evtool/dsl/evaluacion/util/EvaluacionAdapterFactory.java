@@ -96,6 +96,11 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createAtomoAdapter();
       }
       @Override
+      public Adapter casePuntuacion(Puntuacion object)
+      {
+        return createPuntuacionAdapter();
+      }
+      @Override
       public Adapter caseEstado(Estado object)
       {
         return createEstadoAdapter();
@@ -198,6 +203,21 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAtomoAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Puntuacion <em>Puntuacion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see hwo.evtool.dsl.evaluacion.Puntuacion
+   * @generated
+   */
+  public Adapter createPuntuacionAdapter()
   {
     return null;
   }

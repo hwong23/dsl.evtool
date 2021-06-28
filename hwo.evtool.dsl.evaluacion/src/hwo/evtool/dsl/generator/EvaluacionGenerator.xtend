@@ -11,6 +11,7 @@ import hwo.evtool.dsl.evaluacion.Estado
 import hwo.evtool.dsl.evaluacion.Comando
 import com.google.inject.Inject
 import org.eclipse.xtext.naming.IQualifiedNameProvider
+import hwo.evtool.dsl.evaluacion.*
 
 /**
  * Generates code from your model files on save.
@@ -67,12 +68,11 @@ class EvaluacionGenerator extends AbstractGenerator {
 		
 	protected def declareStrings(Comando c) '''
 		«IF c.argumento.eClass.name.equals("IntConstant")»
-		Int[] «c.name» = {«c.argumento.valor»,"«c.comentario»"};
+		String[] «c.name» = {"«(c.argumento as IntConstant).valor.nota»","«(c.argumento as IntConstant).valor.calificacion»","«c.comentario»","«c.argumento.eClass.name»"};
 		«ELSEIF c.argumento.eClass.name.equals("StringConstant")»
-		String[] «c.name» = {"«c.argumento.valor»","«c.comentario»"};
+		String[] «c.name» = {"«(c.argumento as StringConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
 		«ELSEIF c.argumento.eClass.name.equals("SiNoConstant")»
-		Bool[] «c.name» = {«c.argumento.valor»,"«c.comentario»"};
+		String[] «c.name» = {"«(c.argumento as SiNoConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
 		«ENDIF»
-		
 	'''
 }

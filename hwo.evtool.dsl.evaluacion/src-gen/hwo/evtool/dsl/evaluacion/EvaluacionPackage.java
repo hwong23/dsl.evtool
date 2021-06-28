@@ -206,22 +206,50 @@ public interface EvaluacionPackage extends EPackage
   int ATOMO = 3;
 
   /**
-   * The feature id for the '<em><b>Valor</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ATOMO__VALOR = 0;
-
-  /**
    * The number of structural features of the '<em>Atomo</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATOMO_FEATURE_COUNT = 1;
+  int ATOMO_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.PuntuacionImpl <em>Puntuacion</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see hwo.evtool.dsl.evaluacion.impl.PuntuacionImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getPuntuacion()
+   * @generated
+   */
+  int PUNTUACION = 4;
+
+  /**
+   * The feature id for the '<em><b>Nota</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PUNTUACION__NOTA = 0;
+
+  /**
+   * The feature id for the '<em><b>Calificacion</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PUNTUACION__CALIFICACION = 1;
+
+  /**
+   * The number of structural features of the '<em>Puntuacion</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PUNTUACION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
@@ -231,7 +259,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEstado()
    * @generated
    */
-  int ESTADO = 4;
+  int ESTADO = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -277,7 +305,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTransicion()
    * @generated
    */
-  int TRANSICION = 5;
+  int TRANSICION = 6;
 
   /**
    * The feature id for the '<em><b>Event</b></em>' reference.
@@ -314,16 +342,16 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getIntConstant()
    * @generated
    */
-  int INT_CONSTANT = 6;
+  int INT_CONSTANT = 7;
 
   /**
-   * The feature id for the '<em><b>Valor</b></em>' attribute.
+   * The feature id for the '<em><b>Valor</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INT_CONSTANT__VALOR = ATOMO__VALOR;
+  int INT_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Int Constant</em>' class.
@@ -332,7 +360,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INT_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 0;
+  int INT_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.StringConstantImpl <em>String Constant</em>}' class.
@@ -342,7 +370,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getStringConstant()
    * @generated
    */
-  int STRING_CONSTANT = 7;
+  int STRING_CONSTANT = 8;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -351,7 +379,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_CONSTANT__VALOR = ATOMO__VALOR;
+  int STRING_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>String Constant</em>' class.
@@ -360,7 +388,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 0;
+  int STRING_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.SiNoConstantImpl <em>Si No Constant</em>}' class.
@@ -370,7 +398,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getSiNoConstant()
    * @generated
    */
-  int SI_NO_CONSTANT = 8;
+  int SI_NO_CONSTANT = 9;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -379,7 +407,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SI_NO_CONSTANT__VALOR = ATOMO__VALOR;
+  int SI_NO_CONSTANT__VALOR = ATOMO_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Si No Constant</em>' class.
@@ -388,7 +416,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SI_NO_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 0;
+  int SI_NO_CONSTANT_FEATURE_COUNT = ATOMO_FEATURE_COUNT + 1;
 
 
   /**
@@ -531,15 +559,36 @@ public interface EvaluacionPackage extends EPackage
   EClass getAtomo();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Atomo#getValor <em>Valor</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Puntuacion <em>Puntuacion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Valor</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Atomo#getValor()
-   * @see #getAtomo()
+   * @return the meta object for class '<em>Puntuacion</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Puntuacion
    * @generated
    */
-  EAttribute getAtomo_Valor();
+  EClass getPuntuacion();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Puntuacion#getNota <em>Nota</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Nota</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Puntuacion#getNota()
+   * @see #getPuntuacion()
+   * @generated
+   */
+  EAttribute getPuntuacion_Nota();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Puntuacion#getCalificacion <em>Calificacion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Calificacion</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Puntuacion#getCalificacion()
+   * @see #getPuntuacion()
+   * @generated
+   */
+  EAttribute getPuntuacion_Calificacion();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Estado <em>Estado</em>}'.
@@ -627,6 +676,17 @@ public interface EvaluacionPackage extends EPackage
   EClass getIntConstant();
 
   /**
+   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.IntConstant#getValor <em>Valor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Valor</em>'.
+   * @see hwo.evtool.dsl.evaluacion.IntConstant#getValor()
+   * @see #getIntConstant()
+   * @generated
+   */
+  EReference getIntConstant_Valor();
+
+  /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.StringConstant <em>String Constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -637,6 +697,17 @@ public interface EvaluacionPackage extends EPackage
   EClass getStringConstant();
 
   /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.StringConstant#getValor <em>Valor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Valor</em>'.
+   * @see hwo.evtool.dsl.evaluacion.StringConstant#getValor()
+   * @see #getStringConstant()
+   * @generated
+   */
+  EAttribute getStringConstant_Valor();
+
+  /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.SiNoConstant <em>Si No Constant</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -645,6 +716,17 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    */
   EClass getSiNoConstant();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.SiNoConstant#getValor <em>Valor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Valor</em>'.
+   * @see hwo.evtool.dsl.evaluacion.SiNoConstant#getValor()
+   * @see #getSiNoConstant()
+   * @generated
+   */
+  EAttribute getSiNoConstant_Valor();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -782,12 +864,30 @@ public interface EvaluacionPackage extends EPackage
     EClass ATOMO = eINSTANCE.getAtomo();
 
     /**
-     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.PuntuacionImpl <em>Puntuacion</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evaluacion.impl.PuntuacionImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getPuntuacion()
+     * @generated
+     */
+    EClass PUNTUACION = eINSTANCE.getPuntuacion();
+
+    /**
+     * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ATOMO__VALOR = eINSTANCE.getAtomo_Valor();
+    EAttribute PUNTUACION__NOTA = eINSTANCE.getPuntuacion_Nota();
+
+    /**
+     * The meta object literal for the '<em><b>Calificacion</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PUNTUACION__CALIFICACION = eINSTANCE.getPuntuacion_Calificacion();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
@@ -860,6 +960,14 @@ public interface EvaluacionPackage extends EPackage
     EClass INT_CONSTANT = eINSTANCE.getIntConstant();
 
     /**
+     * The meta object literal for the '<em><b>Valor</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INT_CONSTANT__VALOR = eINSTANCE.getIntConstant_Valor();
+
+    /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.StringConstantImpl <em>String Constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -870,6 +978,14 @@ public interface EvaluacionPackage extends EPackage
     EClass STRING_CONSTANT = eINSTANCE.getStringConstant();
 
     /**
+     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_CONSTANT__VALOR = eINSTANCE.getStringConstant_Valor();
+
+    /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.SiNoConstantImpl <em>Si No Constant</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -878,6 +994,14 @@ public interface EvaluacionPackage extends EPackage
      * @generated
      */
     EClass SI_NO_CONSTANT = eINSTANCE.getSiNoConstant();
+
+    /**
+     * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SI_NO_CONSTANT__VALOR = eINSTANCE.getSiNoConstant_Valor();
 
   }
 

@@ -279,26 +279,34 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	public class PuntuacionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Puntuacion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cNotaAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNotaINTTerminalRuleCall_0_0 = (RuleCall)cNotaAssignment_0.eContents().get(0);
 		private final Keyword cSolidusKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cCalificacionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCalificacionINTTerminalRuleCall_2_0 = (RuleCall)cCalificacionAssignment_2.eContents().get(0);
 		
 		//Puntuacion:
-		//    INT '/' INT
+		//    nota=INT '/' calificacion=INT
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INT '/' INT
+		//nota=INT '/' calificacion=INT
 		public Group getGroup() { return cGroup; }
 		
+		//nota=INT
+		public Assignment getNotaAssignment_0() { return cNotaAssignment_0; }
+		
 		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		public RuleCall getNotaINTTerminalRuleCall_0_0() { return cNotaINTTerminalRuleCall_0_0; }
 		
 		//'/'
 		public Keyword getSolidusKeyword_1() { return cSolidusKeyword_1; }
 		
+		//calificacion=INT
+		public Assignment getCalificacionAssignment_2() { return cCalificacionAssignment_2; }
+		
 		//INT
-		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
+		public RuleCall getCalificacionINTTerminalRuleCall_2_0() { return cCalificacionINTTerminalRuleCall_2_0; }
 	}
 	public class EstadoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Estado");
@@ -517,7 +525,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Puntuacion:
-	//    INT '/' INT
+	//    nota=INT '/' calificacion=INT
 	//;
 	public PuntuacionElements getPuntuacionAccess() {
 		return pPuntuacion;

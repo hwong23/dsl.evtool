@@ -60,6 +60,15 @@ public interface EvaluacionFactory extends EFactory
   Atomo createAtomo();
 
   /**
+   * Returns a new object of class '<em>Puntuacion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Puntuacion</em>'.
+   * @generated
+   */
+  Puntuacion createPuntuacion();
+
+  /**
    * Returns a new object of class '<em>Estado</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

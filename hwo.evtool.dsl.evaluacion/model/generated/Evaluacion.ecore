@@ -21,8 +21,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="comentario" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atomo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Atomo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Puntuacion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nota" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calificacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Estado">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -35,7 +37,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Evento"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Estado"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Atomo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StringConstant" eSuperTypes="#//Atomo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SiNoConstant" eSuperTypes="#//Atomo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Atomo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="#//Puntuacion"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringConstant" eSuperTypes="#//Atomo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SiNoConstant" eSuperTypes="#//Atomo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

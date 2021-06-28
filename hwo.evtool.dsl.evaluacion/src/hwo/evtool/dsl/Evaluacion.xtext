@@ -31,7 +31,7 @@ Atomo:
 ;
 
 Puntuacion:
-	INT '/' INT
+	nota=INT '/' calificacion=INT
 ;
 
 Estado:

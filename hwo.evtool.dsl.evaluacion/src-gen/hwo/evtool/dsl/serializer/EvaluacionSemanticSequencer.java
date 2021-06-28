@@ -10,6 +10,7 @@ import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evento;
 import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
+import hwo.evtool.dsl.evaluacion.Puntuacion;
 import hwo.evtool.dsl.evaluacion.SiNoConstant;
 import hwo.evtool.dsl.evaluacion.StringConstant;
 import hwo.evtool.dsl.evaluacion.Transicion;
@@ -54,6 +55,9 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.MAQUINA_ESTADOS:
 				sequence_MaquinaEstados(context, (MaquinaEstados) semanticObject); 
 				return; 
+			case EvaluacionPackage.PUNTUACION:
+				sequence_Puntuacion(context, (Puntuacion) semanticObject); 
+				return; 
 			case EvaluacionPackage.SI_NO_CONSTANT:
 				sequence_Atomo(context, (SiNoConstant) semanticObject); 
 				return; 
@@ -77,8 +81,8 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_Atomo(ISerializationContext context, IntConstant semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.INT_CONSTANT__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.INT_CONSTANT__VALOR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAtomoAccess().getValorPuntuacionParserRuleCall_0_1_0(), semanticObject.getValor());
@@ -107,8 +111,8 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_Atomo(ISerializationContext context, StringConstant semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.STRING_CONSTANT__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.STRING_CONSTANT__VALOR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAtomoAccess().getValorSTRINGTerminalRuleCall_1_1_0(), semanticObject.getValor());
@@ -170,6 +174,27 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_MaquinaEstados(ISerializationContext context, MaquinaEstados semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Puntuacion returns Puntuacion
+	 *
+	 * Constraint:
+	 *     (nota=INT calificacion=INT)
+	 */
+	protected void sequence_Puntuacion(ISerializationContext context, Puntuacion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.PUNTUACION__NOTA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.PUNTUACION__NOTA));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.PUNTUACION__CALIFICACION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.PUNTUACION__CALIFICACION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPuntuacionAccess().getNotaINTTerminalRuleCall_0_0(), semanticObject.getNota());
+		feeder.accept(grammarAccess.getPuntuacionAccess().getCalificacionINTTerminalRuleCall_2_0(), semanticObject.getCalificacion());
+		feeder.finish();
 	}
 	
 	
