@@ -9,9 +9,6 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import hwo.evtool.dsl.evaluacion.Estado
 import hwo.evtool.dsl.evaluacion.Comando
-import com.google.inject.Inject
-import org.eclipse.xtext.naming.IQualifiedNameProvider
-import hwo.evtool.dsl.evaluacion.*
 
 /**
  * Generates code from your model files on save.
@@ -19,7 +16,6 @@ import hwo.evtool.dsl.evaluacion.*
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class EvaluacionGenerator extends AbstractGenerator {
-	@Inject extension IQualifiedNameProvider
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {	
 		for (e : resource.allContents.toIterable.filter(Estado)) {
