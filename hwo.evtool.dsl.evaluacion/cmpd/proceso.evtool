@@ -1,0 +1,19 @@
+eventos
+	evaluar Code2
+
+comandos 
+	cmd_evaluarC1 = 2 / 3 : "Compilado1" 
+	cmd_evaluarC2 = "2.0" : "Comentario2"
+	cmd_evalC4 = N 
+
+state 
+	Evaluado 
+	evaluar => Init 
+	
+state
+	Init actions {
+		cmd_evaluarC1
+		cmd_evaluarC2
+		cmd_evalC4
+	} 
+	evaluar => Evaluado 
