@@ -9,6 +9,9 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import hwo.evtool.dsl.evaluacion.Estado
 import hwo.evtool.dsl.evaluacion.Comando
+import hwo.evtool.dsl.evaluacion.IntConstant
+import hwo.evtool.dsl.evaluacion.StringConstant
+import hwo.evtool.dsl.evaluacion.SiNoConstant
 
 /**
  * Generates code from your model files on save.
@@ -34,6 +37,8 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 
 	def CharSequence compile(Estado e) '''
+		package «e.class.name»;
+		
 		public class «e.eResource.className» {
 			«FOR c : e.actions»
 				«c.declareStrings»
