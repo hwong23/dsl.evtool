@@ -24,18 +24,24 @@ class EvaluacionGenerator extends AbstractGenerator {
 		for (e : resource.allContents.toIterable.filter(Estado)) {
 	        fsa.generateFile (
 				"componentes/" + e.eResource.className + ".java",
-	            // "componentes/" + e.eContainer.fullyQualifiedName.toString + ".java",
 	            e.compile
 	        )
     	}
+//		for (i : resource.allContents.toIterable.filter(IntConstant)) {
+//        	fsa.generateFile (
+//				"componentes/" +i.eClass.name + ".java",
+//            	i.compile
+//        	)
+//		}
 	}
 
+	def CharSequence compile(IntConstant e) '''
+		package hwo.evtool.dsl.evaluacion; 
+		
+		public class «e.eResource.className» {
+		}
+	'''
 	
-//	fsa.generateFile(resource.className + ".java", 
-//		toJavaCode(resource.contents.head as MaquinaEstados)
-//	)
-
-
 	def CharSequence compile(Estado e) '''
 		package hwo.evtool.dsl.evaluacion; 
 		
@@ -69,11 +75,11 @@ class EvaluacionGenerator extends AbstractGenerator {
 		
 	protected def declareStrings(Comando c) '''
 		«IF c.argumento.eClass.name.equals("IntConstant")»
-		String[] «c.name» = {"«(c.argumento as IntConstant).valor.nota»","«(c.argumento as IntConstant).valor.calificacion»","«c.comentario»","«c.argumento.eClass.name»"};
+		String[] «c.name» = {"«c.name»","«(c.argumento as IntConstant).valor.nota»","«(c.argumento as IntConstant).valor.calificacion»","«c.comentario»","«c.argumento.eClass.name»"};
 		«ELSEIF c.argumento.eClass.name.equals("StringConstant")»
-		String[] «c.name» = {"«(c.argumento as StringConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
+		String[] «c.name» = {"«c.name»","«(c.argumento as StringConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
 		«ELSEIF c.argumento.eClass.name.equals("SiNoConstant")»
-		String[] «c.name» = {"«(c.argumento as SiNoConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
+		String[] «c.name» = {"«c.name»","«(c.argumento as SiNoConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
 		«ENDIF»
 	'''
 }
