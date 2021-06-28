@@ -5,18 +5,41 @@ package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.IntConstant;
+import hwo.evtool.dsl.evaluacion.Puntuacion;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Int Constant</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl#getValor <em>Valor</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class IntConstantImpl extends AtomoImpl implements IntConstant
 {
+  /**
+   * The cached value of the '{@link #getValor() <em>Valor</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValor()
+   * @generated
+   * @ordered
+   */
+  protected Puntuacion valor;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -36,6 +59,138 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   protected EClass eStaticClass()
   {
     return EvaluacionPackage.Literals.INT_CONSTANT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Puntuacion getValor()
+  {
+    return valor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetValor(Puntuacion newValor, NotificationChain msgs)
+  {
+    Puntuacion oldValor = valor;
+    valor = newValor;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.INT_CONSTANT__VALOR, oldValor, newValor);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setValor(Puntuacion newValor)
+  {
+    if (newValor != valor)
+    {
+      NotificationChain msgs = null;
+      if (valor != null)
+        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.INT_CONSTANT__VALOR, null, msgs);
+      if (newValor != null)
+        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.INT_CONSTANT__VALOR, null, msgs);
+      msgs = basicSetValor(newValor, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.INT_CONSTANT__VALOR, newValor, newValor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        return basicSetValor(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        return getValor();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        setValor((Puntuacion)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        setValor((Puntuacion)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.INT_CONSTANT__VALOR:
+        return valor != null;
+    }
+    return super.eIsSet(featureID);
   }
 
 } //IntConstantImpl

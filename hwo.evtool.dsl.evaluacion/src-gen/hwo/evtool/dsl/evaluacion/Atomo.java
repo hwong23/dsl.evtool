@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Atomo</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Atomo#getValor <em>Valor</em>}</li>
- * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getAtomo()
  * @model
@@ -23,26 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Atomo extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Valor</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Valor</em>' attribute.
-   * @see #setValor(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getAtomo_Valor()
-   * @model
-   * @generated
-   */
-  String getValor();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Atomo#getValor <em>Valor</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Valor</em>' attribute.
-   * @see #getValor()
-   * @generated
-   */
-  void setValor(String value);
-
 } // Atomo

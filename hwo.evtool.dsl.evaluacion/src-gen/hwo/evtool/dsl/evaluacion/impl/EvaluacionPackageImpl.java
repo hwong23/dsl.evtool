@@ -11,6 +11,7 @@ import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evento;
 import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
+import hwo.evtool.dsl.evaluacion.Puntuacion;
 import hwo.evtool.dsl.evaluacion.SiNoConstant;
 import hwo.evtool.dsl.evaluacion.StringConstant;
 import hwo.evtool.dsl.evaluacion.Transicion;
@@ -57,6 +58,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   private EClass atomoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass puntuacionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -305,9 +313,31 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getAtomo_Valor()
+  public EClass getPuntuacion()
   {
-    return (EAttribute)atomoEClass.getEStructuralFeatures().get(0);
+    return puntuacionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPuntuacion_Nota()
+  {
+    return (EAttribute)puntuacionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPuntuacion_Calificacion()
+  {
+    return (EAttribute)puntuacionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -404,6 +434,17 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
+  public EReference getIntConstant_Valor()
+  {
+    return (EReference)intConstantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getStringConstant()
   {
     return stringConstantEClass;
@@ -415,9 +456,31 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
+  public EAttribute getStringConstant_Valor()
+  {
+    return (EAttribute)stringConstantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getSiNoConstant()
   {
     return siNoConstantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSiNoConstant_Valor()
+  {
+    return (EAttribute)siNoConstantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -467,7 +530,10 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEAttribute(comandoEClass, COMANDO__COMENTARIO);
 
     atomoEClass = createEClass(ATOMO);
-    createEAttribute(atomoEClass, ATOMO__VALOR);
+
+    puntuacionEClass = createEClass(PUNTUACION);
+    createEAttribute(puntuacionEClass, PUNTUACION__NOTA);
+    createEAttribute(puntuacionEClass, PUNTUACION__CALIFICACION);
 
     estadoEClass = createEClass(ESTADO);
     createEAttribute(estadoEClass, ESTADO__NAME);
@@ -479,10 +545,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEReference(transicionEClass, TRANSICION__STATE);
 
     intConstantEClass = createEClass(INT_CONSTANT);
+    createEReference(intConstantEClass, INT_CONSTANT__VALOR);
 
     stringConstantEClass = createEClass(STRING_CONSTANT);
+    createEAttribute(stringConstantEClass, STRING_CONSTANT__VALOR);
 
     siNoConstantEClass = createEClass(SI_NO_CONSTANT);
+    createEAttribute(siNoConstantEClass, SI_NO_CONSTANT__VALOR);
   }
 
   /**
@@ -535,7 +604,10 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEAttribute(getComando_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAtomo_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, Atomo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(puntuacionEClass, Puntuacion.class, "Puntuacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPuntuacion_Nota(), ecorePackage.getEInt(), "nota", null, 0, 1, Puntuacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPuntuacion_Calificacion(), ecorePackage.getEInt(), "calificacion", null, 0, 1, Puntuacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEstado_Name(), ecorePackage.getEString(), "name", null, 0, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -547,10 +619,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEReference(getTransicion_State(), this.getEstado(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intConstantEClass, IntConstant.class, "IntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIntConstant_Valor(), this.getPuntuacion(), null, "valor", null, 0, 1, IntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stringConstantEClass, StringConstant.class, "StringConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStringConstant_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, StringConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(siNoConstantEClass, SiNoConstant.class, "SiNoConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSiNoConstant_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, SiNoConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

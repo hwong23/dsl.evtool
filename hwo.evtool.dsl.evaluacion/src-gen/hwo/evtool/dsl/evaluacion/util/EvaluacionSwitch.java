@@ -101,6 +101,13 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EvaluacionPackage.PUNTUACION:
+      {
+        Puntuacion puntuacion = (Puntuacion)theEObject;
+        T result = casePuntuacion(puntuacion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EvaluacionPackage.ESTADO:
       {
         Estado estado = (Estado)theEObject;
@@ -203,6 +210,22 @@ public class EvaluacionSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAtomo(Atomo object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Puntuacion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Puntuacion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePuntuacion(Puntuacion object)
   {
     return null;
   }

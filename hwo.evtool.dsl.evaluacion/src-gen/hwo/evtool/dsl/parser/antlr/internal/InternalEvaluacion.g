@@ -426,14 +426,14 @@ ruleAtomo returns [EObject current=null]
 ;
 
 // Entry rule entryRulePuntuacion
-entryRulePuntuacion returns [String current=null]:
+entryRulePuntuacion returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getPuntuacionRule()); }
 	iv_rulePuntuacion=rulePuntuacion
-	{ $current=$iv_rulePuntuacion.current.getText(); }
+	{ $current=$iv_rulePuntuacion.current; }
 	EOF;
 
 // Rule Puntuacion
-rulePuntuacion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+rulePuntuacion returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -441,25 +441,46 @@ rulePuntuacion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
 	leaveRule();
 }:
 	(
-		this_INT_0=RULE_INT
+		(
+			(
+				lv_nota_0_0=RULE_INT
+				{
+					newLeafNode(lv_nota_0_0, grammarAccess.getPuntuacionAccess().getNotaINTTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPuntuacionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"nota",
+						lv_nota_0_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		otherlv_1='/'
 		{
-			$current.merge(this_INT_0);
+			newLeafNode(otherlv_1, grammarAccess.getPuntuacionAccess().getSolidusKeyword_1());
 		}
-		{
-			newLeafNode(this_INT_0, grammarAccess.getPuntuacionAccess().getINTTerminalRuleCall_0());
-		}
-		kw='/'
-		{
-			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getPuntuacionAccess().getSolidusKeyword_1());
-		}
-		this_INT_2=RULE_INT
-		{
-			$current.merge(this_INT_2);
-		}
-		{
-			newLeafNode(this_INT_2, grammarAccess.getPuntuacionAccess().getINTTerminalRuleCall_2());
-		}
+		(
+			(
+				lv_calificacion_2_0=RULE_INT
+				{
+					newLeafNode(lv_calificacion_2_0, grammarAccess.getPuntuacionAccess().getCalificacionINTTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getPuntuacionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"calificacion",
+						lv_calificacion_2_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
 	)
 ;
 

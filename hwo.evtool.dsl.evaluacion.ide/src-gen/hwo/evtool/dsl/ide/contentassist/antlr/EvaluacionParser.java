@@ -59,6 +59,8 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_0_1(), "rule__Atomo__ValorAssignment_0_1");
 			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_1_1(), "rule__Atomo__ValorAssignment_1_1");
 			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_2_1(), "rule__Atomo__ValorAssignment_2_1");
+			builder.put(grammarAccess.getPuntuacionAccess().getNotaAssignment_0(), "rule__Puntuacion__NotaAssignment_0");
+			builder.put(grammarAccess.getPuntuacionAccess().getCalificacionAssignment_2(), "rule__Puntuacion__CalificacionAssignment_2");
 			builder.put(grammarAccess.getEstadoAccess().getNameAssignment_1(), "rule__Estado__NameAssignment_1");
 			builder.put(grammarAccess.getEstadoAccess().getActionsAssignment_2_2(), "rule__Estado__ActionsAssignment_2_2");
 			builder.put(grammarAccess.getEstadoAccess().getTransitionsAssignment_3(), "rule__Estado__TransitionsAssignment_3");

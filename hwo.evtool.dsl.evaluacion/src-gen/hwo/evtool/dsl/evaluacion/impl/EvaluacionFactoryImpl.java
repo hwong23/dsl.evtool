@@ -69,6 +69,7 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.EVENTO: return createEvento();
       case EvaluacionPackage.COMANDO: return createComando();
       case EvaluacionPackage.ATOMO: return createAtomo();
+      case EvaluacionPackage.PUNTUACION: return createPuntuacion();
       case EvaluacionPackage.ESTADO: return createEstado();
       case EvaluacionPackage.TRANSICION: return createTransicion();
       case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
@@ -125,6 +126,18 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     AtomoImpl atomo = new AtomoImpl();
     return atomo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Puntuacion createPuntuacion()
+  {
+    PuntuacionImpl puntuacion = new PuntuacionImpl();
+    return puntuacion;
   }
 
   /**
