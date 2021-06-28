@@ -37,7 +37,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 
 	def CharSequence compile(Estado e) '''
-		package «e.class.name»;
+		package hwo.evtool.dsl.evaluacion; 
 		
 		public class «e.eResource.className» {
 			«FOR c : e.actions»
