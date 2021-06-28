@@ -94,6 +94,13 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EvaluacionPackage.ATOMO:
+      {
+        Atomo atomo = (Atomo)theEObject;
+        T result = caseAtomo(atomo);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EvaluacionPackage.ESTADO:
       {
         Estado estado = (Estado)theEObject;
@@ -105,6 +112,30 @@ public class EvaluacionSwitch<T> extends Switch<T>
       {
         Transicion transicion = (Transicion)theEObject;
         T result = caseTransicion(transicion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvaluacionPackage.INT_CONSTANT:
+      {
+        IntConstant intConstant = (IntConstant)theEObject;
+        T result = caseIntConstant(intConstant);
+        if (result == null) result = caseAtomo(intConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvaluacionPackage.STRING_CONSTANT:
+      {
+        StringConstant stringConstant = (StringConstant)theEObject;
+        T result = caseStringConstant(stringConstant);
+        if (result == null) result = caseAtomo(stringConstant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvaluacionPackage.SI_NO_CONSTANT:
+      {
+        SiNoConstant siNoConstant = (SiNoConstant)theEObject;
+        T result = caseSiNoConstant(siNoConstant);
+        if (result == null) result = caseAtomo(siNoConstant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -161,6 +192,22 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Atomo</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Atomo</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAtomo(Atomo object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Estado</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -188,6 +235,54 @@ public class EvaluacionSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTransicion(Transicion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntConstant(IntConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringConstant(StringConstant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Si No Constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Si No Constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSiNoConstant(SiNoConstant object)
   {
     return null;
   }

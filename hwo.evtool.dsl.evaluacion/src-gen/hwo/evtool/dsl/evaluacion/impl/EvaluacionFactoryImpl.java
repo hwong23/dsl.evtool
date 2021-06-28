@@ -68,8 +68,12 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.MAQUINA_ESTADOS: return createMaquinaEstados();
       case EvaluacionPackage.EVENTO: return createEvento();
       case EvaluacionPackage.COMANDO: return createComando();
+      case EvaluacionPackage.ATOMO: return createAtomo();
       case EvaluacionPackage.ESTADO: return createEstado();
       case EvaluacionPackage.TRANSICION: return createTransicion();
+      case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
+      case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
+      case EvaluacionPackage.SI_NO_CONSTANT: return createSiNoConstant();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -117,6 +121,18 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
+  public Atomo createAtomo()
+  {
+    AtomoImpl atomo = new AtomoImpl();
+    return atomo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Estado createEstado()
   {
     EstadoImpl estado = new EstadoImpl();
@@ -133,6 +149,42 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     TransicionImpl transicion = new TransicionImpl();
     return transicion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IntConstant createIntConstant()
+  {
+    IntConstantImpl intConstant = new IntConstantImpl();
+    return intConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public StringConstant createStringConstant()
+  {
+    StringConstantImpl stringConstant = new StringConstantImpl();
+    return stringConstant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public SiNoConstant createSiNoConstant()
+  {
+    SiNoConstantImpl siNoConstant = new SiNoConstantImpl();
+    return siNoConstant;
   }
 
   /**

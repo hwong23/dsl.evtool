@@ -20,8 +20,18 @@ Evento:
 ;
 
 Comando:
-	name=ID '=' argumento=STRING
+	name=ID '=' argumento=Atomo
 	(':' comentario=STRING)?
+;
+
+Atomo:
+	{IntConstant} valor=Puntuacion |  
+	{StringConstant} valor=STRING |
+	{SiNoConstant} valor=('S' | 'N')  
+;
+
+Puntuacion:
+	INT '/' INT
 ;
 
 Estado:

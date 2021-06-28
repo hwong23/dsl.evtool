@@ -3,12 +3,15 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
+import hwo.evtool.dsl.evaluacion.Atomo;
 import hwo.evtool.dsl.evaluacion.Comando;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -51,24 +54,14 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getArgumento() <em>Argumento</em>}' attribute.
+   * The cached value of the '{@link #getArgumento() <em>Argumento</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getArgumento()
    * @generated
    * @ordered
    */
-  protected static final String ARGUMENTO_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getArgumento() <em>Argumento</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getArgumento()
-   * @generated
-   * @ordered
-   */
-  protected String argumento = ARGUMENTO_EDEFAULT;
+  protected Atomo argumento;
 
   /**
    * The default value of the '{@link #getComentario() <em>Comentario</em>}' attribute.
@@ -142,7 +135,7 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
    * @generated
    */
   @Override
-  public String getArgumento()
+  public Atomo getArgumento()
   {
     return argumento;
   }
@@ -152,13 +145,38 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setArgumento(String newArgumento)
+  public NotificationChain basicSetArgumento(Atomo newArgumento, NotificationChain msgs)
   {
-    String oldArgumento = argumento;
+    Atomo oldArgumento = argumento;
     argumento = newArgumento;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMANDO__ARGUMENTO, oldArgumento, argumento));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMANDO__ARGUMENTO, oldArgumento, newArgumento);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setArgumento(Atomo newArgumento)
+  {
+    if (newArgumento != argumento)
+    {
+      NotificationChain msgs = null;
+      if (argumento != null)
+        msgs = ((InternalEObject)argumento).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.COMANDO__ARGUMENTO, null, msgs);
+      if (newArgumento != null)
+        msgs = ((InternalEObject)newArgumento).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.COMANDO__ARGUMENTO, null, msgs);
+      msgs = basicSetArgumento(newArgumento, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMANDO__ARGUMENTO, newArgumento, newArgumento));
   }
 
   /**
@@ -184,6 +202,22 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
     comentario = newComentario;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMANDO__COMENTARIO, oldComentario, comentario));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case EvaluacionPackage.COMANDO__ARGUMENTO:
+        return basicSetArgumento(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -220,7 +254,7 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
         setName((String)newValue);
         return;
       case EvaluacionPackage.COMANDO__ARGUMENTO:
-        setArgumento((String)newValue);
+        setArgumento((Atomo)newValue);
         return;
       case EvaluacionPackage.COMANDO__COMENTARIO:
         setComentario((String)newValue);
@@ -243,7 +277,7 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
         setName(NAME_EDEFAULT);
         return;
       case EvaluacionPackage.COMANDO__ARGUMENTO:
-        setArgumento(ARGUMENTO_EDEFAULT);
+        setArgumento((Atomo)null);
         return;
       case EvaluacionPackage.COMANDO__COMENTARIO:
         setComentario(COMENTARIO_EDEFAULT);
@@ -265,7 +299,7 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
       case EvaluacionPackage.COMANDO__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EvaluacionPackage.COMANDO__ARGUMENTO:
-        return ARGUMENTO_EDEFAULT == null ? argumento != null : !ARGUMENTO_EDEFAULT.equals(argumento);
+        return argumento != null;
       case EvaluacionPackage.COMANDO__COMENTARIO:
         return COMENTARIO_EDEFAULT == null ? comentario != null : !COMENTARIO_EDEFAULT.equals(comentario);
     }
@@ -285,8 +319,6 @@ public class ComandoImpl extends MinimalEObjectImpl.Container implements Comando
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", argumento: ");
-    result.append(argumento);
     result.append(", comentario: ");
     result.append(comentario);
     result.append(')');

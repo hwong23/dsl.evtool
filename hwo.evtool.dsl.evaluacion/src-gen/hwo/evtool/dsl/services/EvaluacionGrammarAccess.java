@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Action;
+import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.Grammar;
@@ -160,19 +161,19 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cArgumentoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cArgumentoSTRINGTerminalRuleCall_2_0 = (RuleCall)cArgumentoAssignment_2.eContents().get(0);
+		private final RuleCall cArgumentoAtomoParserRuleCall_2_0 = (RuleCall)cArgumentoAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cComentarioAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cComentarioSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cComentarioAssignment_3_1.eContents().get(0);
 		
 		//Comando:
-		//    name=ID '=' argumento=STRING
+		//    name=ID '=' argumento=Atomo
 		//    (':' comentario=STRING)?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=ID '=' argumento=STRING
+		//name=ID '=' argumento=Atomo
 		//(':' comentario=STRING)?
 		public Group getGroup() { return cGroup; }
 		
@@ -185,11 +186,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 		
-		//argumento=STRING
+		//argumento=Atomo
 		public Assignment getArgumentoAssignment_2() { return cArgumentoAssignment_2; }
 		
-		//STRING
-		public RuleCall getArgumentoSTRINGTerminalRuleCall_2_0() { return cArgumentoSTRINGTerminalRuleCall_2_0; }
+		//Atomo
+		public RuleCall getArgumentoAtomoParserRuleCall_2_0() { return cArgumentoAtomoParserRuleCall_2_0; }
 		
 		//(':' comentario=STRING)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -202,6 +203,102 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		
 		//STRING
 		public RuleCall getComentarioSTRINGTerminalRuleCall_3_1_0() { return cComentarioSTRINGTerminalRuleCall_3_1_0; }
+	}
+	public class AtomoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Atomo");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cIntConstantAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Assignment cValorAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cValorPuntuacionParserRuleCall_0_1_0 = (RuleCall)cValorAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Action cStringConstantAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cValorAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cValorSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cValorAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Action cSiNoConstantAction_2_0 = (Action)cGroup_2.eContents().get(0);
+		private final Assignment cValorAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final Alternatives cValorAlternatives_2_1_0 = (Alternatives)cValorAssignment_2_1.eContents().get(0);
+		private final Keyword cValorSKeyword_2_1_0_0 = (Keyword)cValorAlternatives_2_1_0.eContents().get(0);
+		private final Keyword cValorNKeyword_2_1_0_1 = (Keyword)cValorAlternatives_2_1_0.eContents().get(1);
+		
+		//Atomo:
+		//    {IntConstant} valor=Puntuacion |
+		//    {StringConstant} valor=STRING |
+		//    {SiNoConstant} valor=('S' | 'N')
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{IntConstant} valor=Puntuacion |
+		//{StringConstant} valor=STRING |
+		//{SiNoConstant} valor=('S' | 'N')
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//{IntConstant} valor=Puntuacion
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//{IntConstant}
+		public Action getIntConstantAction_0_0() { return cIntConstantAction_0_0; }
+		
+		//valor=Puntuacion
+		public Assignment getValorAssignment_0_1() { return cValorAssignment_0_1; }
+		
+		//Puntuacion
+		public RuleCall getValorPuntuacionParserRuleCall_0_1_0() { return cValorPuntuacionParserRuleCall_0_1_0; }
+		
+		//{StringConstant} valor=STRING
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//{StringConstant}
+		public Action getStringConstantAction_1_0() { return cStringConstantAction_1_0; }
+		
+		//valor=STRING
+		public Assignment getValorAssignment_1_1() { return cValorAssignment_1_1; }
+		
+		//STRING
+		public RuleCall getValorSTRINGTerminalRuleCall_1_1_0() { return cValorSTRINGTerminalRuleCall_1_1_0; }
+		
+		//{SiNoConstant} valor=('S' | 'N')
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//{SiNoConstant}
+		public Action getSiNoConstantAction_2_0() { return cSiNoConstantAction_2_0; }
+		
+		//valor=('S' | 'N')
+		public Assignment getValorAssignment_2_1() { return cValorAssignment_2_1; }
+		
+		//('S' | 'N')
+		public Alternatives getValorAlternatives_2_1_0() { return cValorAlternatives_2_1_0; }
+		
+		//'S'
+		public Keyword getValorSKeyword_2_1_0_0() { return cValorSKeyword_2_1_0_0; }
+		
+		//'N'
+		public Keyword getValorNKeyword_2_1_0_1() { return cValorNKeyword_2_1_0_1; }
+	}
+	public class PuntuacionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Puntuacion");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cSolidusKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		
+		//Puntuacion:
+		//    INT '/' INT
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//INT '/' INT
+		public Group getGroup() { return cGroup; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		
+		//'/'
+		public Keyword getSolidusKeyword_1() { return cSolidusKeyword_1; }
+		
+		//INT
+		public RuleCall getINTTerminalRuleCall_2() { return cINTTerminalRuleCall_2; }
 	}
 	public class EstadoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Estado");
@@ -312,6 +409,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final MaquinaEstadosElements pMaquinaEstados;
 	private final EventoElements pEvento;
 	private final ComandoElements pComando;
+	private final AtomoElements pAtomo;
+	private final PuntuacionElements pPuntuacion;
 	private final EstadoElements pEstado;
 	private final TransicionElements pTransicion;
 	
@@ -327,6 +426,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.pMaquinaEstados = new MaquinaEstadosElements();
 		this.pEvento = new EventoElements();
 		this.pComando = new ComandoElements();
+		this.pAtomo = new AtomoElements();
+		this.pPuntuacion = new PuntuacionElements();
 		this.pEstado = new EstadoElements();
 		this.pTransicion = new TransicionElements();
 	}
@@ -391,7 +492,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Comando:
-	//    name=ID '=' argumento=STRING
+	//    name=ID '=' argumento=Atomo
 	//    (':' comentario=STRING)?
 	//;
 	public ComandoElements getComandoAccess() {
@@ -400,6 +501,30 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	public ParserRule getComandoRule() {
 		return getComandoAccess().getRule();
+	}
+	
+	//Atomo:
+	//    {IntConstant} valor=Puntuacion |
+	//    {StringConstant} valor=STRING |
+	//    {SiNoConstant} valor=('S' | 'N')
+	//;
+	public AtomoElements getAtomoAccess() {
+		return pAtomo;
+	}
+	
+	public ParserRule getAtomoRule() {
+		return getAtomoAccess().getRule();
+	}
+	
+	//Puntuacion:
+	//    INT '/' INT
+	//;
+	public PuntuacionElements getPuntuacionAccess() {
+		return pPuntuacion;
+	}
+	
+	public ParserRule getPuntuacionRule() {
+		return getPuntuacionAccess().getRule();
 	}
 	
 	//Estado:

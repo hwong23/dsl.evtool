@@ -51,6 +51,15 @@ public interface EvaluacionFactory extends EFactory
   Comando createComando();
 
   /**
+   * Returns a new object of class '<em>Atomo</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Atomo</em>'.
+   * @generated
+   */
+  Atomo createAtomo();
+
+  /**
    * Returns a new object of class '<em>Estado</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -67,6 +76,33 @@ public interface EvaluacionFactory extends EFactory
    * @generated
    */
   Transicion createTransicion();
+
+  /**
+   * Returns a new object of class '<em>Int Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Constant</em>'.
+   * @generated
+   */
+  IntConstant createIntConstant();
+
+  /**
+   * Returns a new object of class '<em>String Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Constant</em>'.
+   * @generated
+   */
+  StringConstant createStringConstant();
+
+  /**
+   * Returns a new object of class '<em>Si No Constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Si No Constant</em>'.
+   * @generated
+   */
+  SiNoConstant createSiNoConstant();
 
   /**
    * Returns the package supported by this factory.

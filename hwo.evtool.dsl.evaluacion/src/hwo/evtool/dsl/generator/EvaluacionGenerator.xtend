@@ -9,6 +9,8 @@ import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import hwo.evtool.dsl.evaluacion.Estado
 import hwo.evtool.dsl.evaluacion.Comando
+import com.google.inject.Inject
+import org.eclipse.xtext.naming.IQualifiedNameProvider
 
 /**
  * Generates code from your model files on save.
@@ -16,16 +18,17 @@ import hwo.evtool.dsl.evaluacion.Comando
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class EvaluacionGenerator extends AbstractGenerator {
+	@Inject extension IQualifiedNameProvider
 
-	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-
-	for (e : resource.allContents.toIterable.filter(Estado)) {
-        fsa.generateFile (
-            "componentes/" + e.eResource.className + ".java",
-            e.compile
-        )
-    }
-}
+	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {	
+		for (e : resource.allContents.toIterable.filter(Estado)) {
+	        fsa.generateFile (
+				"componentes/" + e.eResource.className + ".java",
+	            // "componentes/" + e.eContainer.fullyQualifiedName.toString + ".java",
+	            e.compile
+	        )
+    	}
+	}
 
 	
 //	fsa.generateFile(resource.className + ".java", 
@@ -63,6 +66,13 @@ class EvaluacionGenerator extends AbstractGenerator {
 	
 		
 	protected def declareStrings(Comando c) '''
-		String[] «c.name» = {"«c.argumento»","«c.comentario»"}; 
+		«IF c.argumento.eClass.name.equals("IntConstant")»
+		Int[] «c.name» = {«c.argumento.valor»,"«c.comentario»"};
+		«ELSEIF c.argumento.eClass.name.equals("StringConstant")»
+		String[] «c.name» = {"«c.argumento.valor»","«c.comentario»"};
+		«ELSEIF c.argumento.eClass.name.equals("SiNoConstant")»
+		Bool[] «c.name» = {«c.argumento.valor»,"«c.comentario»"};
+		«ENDIF»
+		
 	'''
 }

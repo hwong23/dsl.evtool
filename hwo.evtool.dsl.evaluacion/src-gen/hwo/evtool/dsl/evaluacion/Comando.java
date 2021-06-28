@@ -48,26 +48,26 @@ public interface Comando extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Argumento</b></em>' attribute.
+   * Returns the value of the '<em><b>Argumento</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Argumento</em>' attribute.
-   * @see #setArgumento(String)
+   * @return the value of the '<em>Argumento</em>' containment reference.
+   * @see #setArgumento(Atomo)
    * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Argumento()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getArgumento();
+  Atomo getArgumento();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Argumento</em>' attribute.
+   * @param value the new value of the '<em>Argumento</em>' containment reference.
    * @see #getArgumento()
    * @generated
    */
-  void setArgumento(String value);
+  void setArgumento(Atomo value);
 
   /**
    * Returns the value of the '<em><b>Comentario</b></em>' attribute.

@@ -3,12 +3,16 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
+import hwo.evtool.dsl.evaluacion.Atomo;
 import hwo.evtool.dsl.evaluacion.Comando;
 import hwo.evtool.dsl.evaluacion.Estado;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evento;
+import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
+import hwo.evtool.dsl.evaluacion.SiNoConstant;
+import hwo.evtool.dsl.evaluacion.StringConstant;
 import hwo.evtool.dsl.evaluacion.Transicion;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -52,6 +56,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass atomoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass estadoEClass = null;
 
   /**
@@ -60,6 +71,27 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   private EClass transicionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intConstantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stringConstantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass siNoConstantEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -240,9 +272,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getComando_Argumento()
+  public EReference getComando_Argumento()
   {
-    return (EAttribute)comandoEClass.getEStructuralFeatures().get(1);
+    return (EReference)comandoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -254,6 +286,28 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
   public EAttribute getComando_Comentario()
   {
     return (EAttribute)comandoEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAtomo()
+  {
+    return atomoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAtomo_Valor()
+  {
+    return (EAttribute)atomoEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -339,6 +393,39 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
+  public EClass getIntConstant()
+  {
+    return intConstantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getStringConstant()
+  {
+    return stringConstantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSiNoConstant()
+  {
+    return siNoConstantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EvaluacionFactory getEvaluacionFactory()
   {
     return (EvaluacionFactory)getEFactoryInstance();
@@ -376,8 +463,11 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
 
     comandoEClass = createEClass(COMANDO);
     createEAttribute(comandoEClass, COMANDO__NAME);
-    createEAttribute(comandoEClass, COMANDO__ARGUMENTO);
+    createEReference(comandoEClass, COMANDO__ARGUMENTO);
     createEAttribute(comandoEClass, COMANDO__COMENTARIO);
+
+    atomoEClass = createEClass(ATOMO);
+    createEAttribute(atomoEClass, ATOMO__VALOR);
 
     estadoEClass = createEClass(ESTADO);
     createEAttribute(estadoEClass, ESTADO__NAME);
@@ -387,6 +477,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     transicionEClass = createEClass(TRANSICION);
     createEReference(transicionEClass, TRANSICION__EVENT);
     createEReference(transicionEClass, TRANSICION__STATE);
+
+    intConstantEClass = createEClass(INT_CONSTANT);
+
+    stringConstantEClass = createEClass(STRING_CONSTANT);
+
+    siNoConstantEClass = createEClass(SI_NO_CONSTANT);
   }
 
   /**
@@ -418,6 +514,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    intConstantEClass.getESuperTypes().add(this.getAtomo());
+    stringConstantEClass.getESuperTypes().add(this.getAtomo());
+    siNoConstantEClass.getESuperTypes().add(this.getAtomo());
 
     // Initialize classes and features; add operations and parameters
     initEClass(maquinaEstadosEClass, MaquinaEstados.class, "MaquinaEstados", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -432,8 +531,11 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
 
     initEClass(comandoEClass, Comando.class, "Comando", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getComando_Name(), ecorePackage.getEString(), "name", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getComando_Argumento(), ecorePackage.getEString(), "argumento", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComando_Argumento(), this.getAtomo(), null, "argumento", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getComando_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAtomo_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, Atomo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEstado_Name(), ecorePackage.getEString(), "name", null, 0, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -443,6 +545,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(transicionEClass, Transicion.class, "Transicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTransicion_Event(), this.getEvento(), null, "event", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransicion_State(), this.getEstado(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(intConstantEClass, IntConstant.class, "IntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(stringConstantEClass, StringConstant.class, "StringConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(siNoConstantEClass, SiNoConstant.class, "SiNoConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

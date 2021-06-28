@@ -31,6 +31,8 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, EvaluacionGrammarAccess grammarAccess) {
+			builder.put(grammarAccess.getAtomoAccess().getAlternatives(), "rule__Atomo__Alternatives");
+			builder.put(grammarAccess.getAtomoAccess().getValorAlternatives_2_1_0(), "rule__Atomo__ValorAlternatives_2_1_0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup(), "rule__MaquinaEstados__Group__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_1(), "rule__MaquinaEstados__Group_1__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_2(), "rule__MaquinaEstados__Group_2__0");
@@ -38,6 +40,10 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEventoAccess().getGroup(), "rule__Evento__Group__0");
 			builder.put(grammarAccess.getComandoAccess().getGroup(), "rule__Comando__Group__0");
 			builder.put(grammarAccess.getComandoAccess().getGroup_3(), "rule__Comando__Group_3__0");
+			builder.put(grammarAccess.getAtomoAccess().getGroup_0(), "rule__Atomo__Group_0__0");
+			builder.put(grammarAccess.getAtomoAccess().getGroup_1(), "rule__Atomo__Group_1__0");
+			builder.put(grammarAccess.getAtomoAccess().getGroup_2(), "rule__Atomo__Group_2__0");
+			builder.put(grammarAccess.getPuntuacionAccess().getGroup(), "rule__Puntuacion__Group__0");
 			builder.put(grammarAccess.getEstadoAccess().getGroup(), "rule__Estado__Group__0");
 			builder.put(grammarAccess.getEstadoAccess().getGroup_2(), "rule__Estado__Group_2__0");
 			builder.put(grammarAccess.getTransicionAccess().getGroup(), "rule__Transicion__Group__0");
@@ -50,6 +56,9 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getComandoAccess().getNameAssignment_0(), "rule__Comando__NameAssignment_0");
 			builder.put(grammarAccess.getComandoAccess().getArgumentoAssignment_2(), "rule__Comando__ArgumentoAssignment_2");
 			builder.put(grammarAccess.getComandoAccess().getComentarioAssignment_3_1(), "rule__Comando__ComentarioAssignment_3_1");
+			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_0_1(), "rule__Atomo__ValorAssignment_0_1");
+			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_1_1(), "rule__Atomo__ValorAssignment_1_1");
+			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_2_1(), "rule__Atomo__ValorAssignment_2_1");
 			builder.put(grammarAccess.getEstadoAccess().getNameAssignment_1(), "rule__Estado__NameAssignment_1");
 			builder.put(grammarAccess.getEstadoAccess().getActionsAssignment_2_2(), "rule__Estado__ActionsAssignment_2_2");
 			builder.put(grammarAccess.getEstadoAccess().getTransitionsAssignment_3(), "rule__Estado__TransitionsAssignment_3");

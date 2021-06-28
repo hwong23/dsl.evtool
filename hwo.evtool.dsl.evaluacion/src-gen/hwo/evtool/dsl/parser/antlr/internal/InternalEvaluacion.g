@@ -269,19 +269,20 @@ ruleComando returns [EObject current=null]
 		}
 		(
 			(
-				lv_argumento_2_0=RULE_STRING
 				{
-					newLeafNode(lv_argumento_2_0, grammarAccess.getComandoAccess().getArgumentoSTRINGTerminalRuleCall_2_0());
+					newCompositeNode(grammarAccess.getComandoAccess().getArgumentoAtomoParserRuleCall_2_0());
 				}
+				lv_argumento_2_0=ruleAtomo
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getComandoRule());
+						$current = createModelElementForParent(grammarAccess.getComandoRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"argumento",
 						lv_argumento_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"hwo.evtool.dsl.Evaluacion.Atomo");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
@@ -309,6 +310,156 @@ ruleComando returns [EObject current=null]
 				)
 			)
 		)?
+	)
+;
+
+// Entry rule entryRuleAtomo
+entryRuleAtomo returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAtomoRule()); }
+	iv_ruleAtomo=ruleAtomo
+	{ $current=$iv_ruleAtomo.current; }
+	EOF;
+
+// Rule Atomo
+ruleAtomo returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getAtomoAccess().getIntConstantAction_0_0(),
+						$current);
+				}
+			)
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getAtomoAccess().getValorPuntuacionParserRuleCall_0_1_0());
+					}
+					lv_valor_1_0=rulePuntuacion
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getAtomoRule());
+						}
+						set(
+							$current,
+							"valor",
+							lv_valor_1_0,
+							"hwo.evtool.dsl.Evaluacion.Puntuacion");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getAtomoAccess().getStringConstantAction_1_0(),
+						$current);
+				}
+			)
+			(
+				(
+					lv_valor_3_0=RULE_STRING
+					{
+						newLeafNode(lv_valor_3_0, grammarAccess.getAtomoAccess().getValorSTRINGTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAtomoRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"valor",
+							lv_valor_3_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getAtomoAccess().getSiNoConstantAction_2_0(),
+						$current);
+				}
+			)
+			(
+				(
+					(
+						lv_valor_5_1='S'
+						{
+							newLeafNode(lv_valor_5_1, grammarAccess.getAtomoAccess().getValorSKeyword_2_1_0_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAtomoRule());
+							}
+							setWithLastConsumed($current, "valor", lv_valor_5_1, null);
+						}
+						    |
+						lv_valor_5_2='N'
+						{
+							newLeafNode(lv_valor_5_2, grammarAccess.getAtomoAccess().getValorNKeyword_2_1_0_1());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getAtomoRule());
+							}
+							setWithLastConsumed($current, "valor", lv_valor_5_2, null);
+						}
+					)
+				)
+			)
+		)
+	)
+;
+
+// Entry rule entryRulePuntuacion
+entryRulePuntuacion returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getPuntuacionRule()); }
+	iv_rulePuntuacion=rulePuntuacion
+	{ $current=$iv_rulePuntuacion.current.getText(); }
+	EOF;
+
+// Rule Puntuacion
+rulePuntuacion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_INT_0=RULE_INT
+		{
+			$current.merge(this_INT_0);
+		}
+		{
+			newLeafNode(this_INT_0, grammarAccess.getPuntuacionAccess().getINTTerminalRuleCall_0());
+		}
+		kw='/'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getPuntuacionAccess().getSolidusKeyword_1());
+		}
+		this_INT_2=RULE_INT
+		{
+			$current.merge(this_INT_2);
+		}
+		{
+			newLeafNode(this_INT_2, grammarAccess.getPuntuacionAccess().getINTTerminalRuleCall_2());
+		}
 	)
 ;
 

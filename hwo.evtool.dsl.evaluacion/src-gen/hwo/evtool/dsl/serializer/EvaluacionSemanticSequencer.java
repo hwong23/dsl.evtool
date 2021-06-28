@@ -8,7 +8,10 @@ import hwo.evtool.dsl.evaluacion.Comando;
 import hwo.evtool.dsl.evaluacion.Estado;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evento;
+import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
+import hwo.evtool.dsl.evaluacion.SiNoConstant;
+import hwo.evtool.dsl.evaluacion.StringConstant;
 import hwo.evtool.dsl.evaluacion.Transicion;
 import hwo.evtool.dsl.services.EvaluacionGrammarAccess;
 import java.util.Set;
@@ -45,8 +48,17 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.EVENTO:
 				sequence_Evento(context, (Evento) semanticObject); 
 				return; 
+			case EvaluacionPackage.INT_CONSTANT:
+				sequence_Atomo(context, (IntConstant) semanticObject); 
+				return; 
 			case EvaluacionPackage.MAQUINA_ESTADOS:
 				sequence_MaquinaEstados(context, (MaquinaEstados) semanticObject); 
+				return; 
+			case EvaluacionPackage.SI_NO_CONSTANT:
+				sequence_Atomo(context, (SiNoConstant) semanticObject); 
+				return; 
+			case EvaluacionPackage.STRING_CONSTANT:
+				sequence_Atomo(context, (StringConstant) semanticObject); 
 				return; 
 			case EvaluacionPackage.TRANSICION:
 				sequence_Transicion(context, (Transicion) semanticObject); 
@@ -58,10 +70,58 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Atomo returns IntConstant
+	 *
+	 * Constraint:
+	 *     valor=Puntuacion
+	 */
+	protected void sequence_Atomo(ISerializationContext context, IntConstant semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtomoAccess().getValorPuntuacionParserRuleCall_0_1_0(), semanticObject.getValor());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Atomo returns SiNoConstant
+	 *
+	 * Constraint:
+	 *     (valor='S' | valor='N')
+	 */
+	protected void sequence_Atomo(ISerializationContext context, SiNoConstant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Atomo returns StringConstant
+	 *
+	 * Constraint:
+	 *     valor=STRING
+	 */
+	protected void sequence_Atomo(ISerializationContext context, StringConstant semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.ATOMO__VALOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAtomoAccess().getValorSTRINGTerminalRuleCall_1_1_0(), semanticObject.getValor());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Comando returns Comando
 	 *
 	 * Constraint:
-	 *     (name=ID argumento=STRING comentario=STRING?)
+	 *     (name=ID argumento=Atomo comentario=STRING?)
 	 */
 	protected void sequence_Comando(ISerializationContext context, Comando semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
