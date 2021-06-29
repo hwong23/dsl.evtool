@@ -1,18 +1,20 @@
 eventos
-	evaluar Code2
+	eEvaluar evento000
+	eFin evento001
 
 comandos 
 	EvaluarEquipo = 2 / 3 : "Compilado1" 
 	EvaluarPropuesta = "2.0" : "Comentario2"
 	cmdEvalC4 = N 
-
+	
 state 
 	Evaluado 
-	evaluar => Init 
-	
+
 state
 	Init actions {
 		EvaluarEquipo
 		EvaluarPropuesta
 	} 
-	evaluar => Evaluado 
+	eEvaluar => Evaluado 
+	
+

@@ -32,8 +32,10 @@ class EvaluacionGenerator extends AbstractGenerator {
 	
 	def CharSequence compile(Estado e) '''
 		package main;
-		import hwo.evtool.componenteEvaluacion.*; 
-		
+		import hwo.evtool.componenteEvaluacion.*;
+		import hwo.evtool.control.Control;
+		import hwo.evtool.evaluaciones.*;
+
 		public class «e.eResource.className» {
 			«FOR c : e.actions»
 				«c.declareStrings»
