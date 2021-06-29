@@ -27,23 +27,12 @@ class EvaluacionGenerator extends AbstractGenerator {
 	            e.compile
 	        )
     	}
-//		for (i : resource.allContents.toIterable.filter(IntConstant)) {
-//        	fsa.generateFile (
-//				"componentes/" +i.eClass.name + ".java",
-//            	i.compile
-//        	)
-//		}
 	}
 
-	def CharSequence compile(IntConstant e) '''
-		package hwo.evtool.dsl.evaluacion; 
-		
-		public class «e.eResource.className» {
-		}
-	'''
 	
 	def CharSequence compile(Estado e) '''
-		package hwo.evtool.dsl.evaluacion; 
+		package main;
+		import hwo.evtool.componenteEvaluacion.*; 
 		
 		public class «e.eResource.className» {
 			«FOR c : e.actions»
@@ -55,11 +44,28 @@ class EvaluacionGenerator extends AbstractGenerator {
 			}
 			
 			protected void run() {
+				Control cntrol = new Control ();
+				int i;
+				
 				«FOR c : e.actions»
 					«c.declareCommand»
 				«ENDFOR»
+				
+				i = 0;
+				«FOR c : e.actions»
+					«c.ponerComando»
+				«ENDFOR»
+				
+				i = 0;
+				«FOR c : e.actions»
+					«c.callCommand»
+				«ENDFOR»
 			}
 		}
+	'''
+		
+	protected def callCommand(Comando comando) '''
+		cntrol.llamarEvaluacion1(i++);
 	'''
 		
 	protected def className(Resource res) {
@@ -68,8 +74,14 @@ class EvaluacionGenerator extends AbstractGenerator {
 	}
 
 
+	protected def ponerComando(Comando c) '''
+		/* llamador */ cntrol.setComando(i++, cmpnt«c.name»);
+	'''	
+
 	protected def declareCommand(Comando c) '''
-		System.out.println("command:" + «c.name»[0] + " comentario:" + «c.name»[1]);
+		/* receptor */ «c.name» «c.name.toLowerCase» = new «c.name»();
+		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(«c.name.toLowerCase»);
+
 	'''
 	
 		

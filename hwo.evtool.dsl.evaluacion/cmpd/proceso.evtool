@@ -2,9 +2,9 @@ eventos
 	evaluar Code2
 
 comandos 
-	cmd_evaluarC1 = 2 / 3 : "Compilado1" 
-	cmd_evaluarC2 = "2.0" : "Comentario2"
-	cmd_evalC4 = N 
+	EvaluarEquipo = 2 / 3 : "Compilado1" 
+	EvaluarPropuesta = "2.0" : "Comentario2"
+	cmdEvalC4 = N 
 
 state 
 	Evaluado 
@@ -12,8 +12,7 @@ state
 	
 state
 	Init actions {
-		cmd_evaluarC1
-		cmd_evaluarC2
-		cmd_evalC4
+		EvaluarEquipo
+		EvaluarPropuesta
 	} 
 	evaluar => Evaluado 
