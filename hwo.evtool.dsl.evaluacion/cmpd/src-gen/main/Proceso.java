@@ -1,5 +1,7 @@
 package main;
-import hwo.evtool.componenteEvaluacion.*; 
+import hwo.evtool.componenteEvaluacion.*;
+import hwo.evtool.control.Control;
+import hwo.evtool.evaluaciones.*;
 
 public class Proceso {
 	String[] EvaluarEquipo = {"EvaluarEquipo","2","3","Compilado1","IntConstant"};
