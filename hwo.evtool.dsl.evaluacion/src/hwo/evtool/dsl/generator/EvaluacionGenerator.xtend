@@ -31,7 +31,6 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 	
 	def CharSequence compile(Estado e) '''
-	package main;
 	import hwo.evtool.componenteEvaluacion.*;
 	import hwo.evtool.control.Control;
 	import hwo.evtool.evaluaciones.*;
@@ -52,14 +51,14 @@ class EvaluacionGenerator extends AbstractGenerator {
 				«c.declareCommand»
 			«ENDFOR»
 			
+			«var i = 0»
 			«FOR c : e.actions»
-		        «var i = 0»
 				«c.ponerComando(i++)»
 			«ENDFOR»
 
+			«var j = 0»
 			«FOR c : e.actions»
-				«var i = 0»
-				«c.callCommand(i++)»
+				«c.callCommand(j++)»
 			«ENDFOR»
 		}
 	}
@@ -88,11 +87,11 @@ class EvaluacionGenerator extends AbstractGenerator {
 		
 	protected def declareStrings(Comando c) '''
 		«IF c.argumento.eClass.name.equals("IntConstant")»
-		String[] «c.name» = {"«c.name»","«(c.argumento as IntConstant).valor.nota»","«(c.argumento as IntConstant).valor.calificacion»","«c.comentario»","«c.argumento.eClass.name»"};
+		String[] str_«c.name» = {"«c.name»","«(c.argumento as IntConstant).valor.nota»","«(c.argumento as IntConstant).valor.calificacion»","«c.comentario»","«c.argumento.eClass.name»"};
 		«ELSEIF c.argumento.eClass.name.equals("StringConstant")»
-		String[] «c.name» = {"«c.name»","«(c.argumento as StringConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
+		String[] str_«c.name» = {"«c.name»","«(c.argumento as StringConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
 		«ELSEIF c.argumento.eClass.name.equals("SiNoConstant")»
-		String[] «c.name» = {"«c.name»","«(c.argumento as SiNoConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
+		String[] str_«c.name» = {"«c.name»","«(c.argumento as SiNoConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
 		«ENDIF»
 	'''
 }
