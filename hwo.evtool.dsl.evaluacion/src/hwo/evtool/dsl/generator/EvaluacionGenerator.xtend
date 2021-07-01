@@ -23,7 +23,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {	
 		for (e : resource.allContents.toIterable.filter(Estado)) {
 	        fsa.generateFile (
-				"componentes/" + e.eResource.className + ".java",
+				e.eResource.className + ".java",
 	            e.compile
 	        )
     	}
