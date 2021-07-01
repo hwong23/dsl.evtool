@@ -31,43 +31,42 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 	
 	def CharSequence compile(Estado e) '''
-		package main;
-		import hwo.evtool.componenteEvaluacion.*;
-		import hwo.evtool.control.Control;
-		import hwo.evtool.evaluaciones.*;
+	package main;
+	import hwo.evtool.componenteEvaluacion.*;
+	import hwo.evtool.control.Control;
+	import hwo.evtool.evaluaciones.*;
 
-		public class «e.eResource.className» {
+	public class «e.eResource.className» {
 			«FOR c : e.actions»
 				«c.declareStrings»
 			«ENDFOR»
-		
-			public static void main(String[] args) {
-				new «e.eResource.className»().run();
-			}
-			
-			protected void run() {
-				Control cntrol = new Control ();
-				int i;
-				
-				«FOR c : e.actions»
-					«c.declareCommand»
-				«ENDFOR»
-				
-				i = 0;
-				«FOR c : e.actions»
-					«c.ponerComando»
-				«ENDFOR»
-				
-				i = 0;
-				«FOR c : e.actions»
-					«c.callCommand»
-				«ENDFOR»
-			}
+	
+		public static void main(String[] args) {
+			new «e.eResource.className»().run();
 		}
+		
+		protected void run() {
+			Control cntrol = new Control ();
+			
+			«FOR c : e.actions»
+				«c.declareCommand»
+			«ENDFOR»
+			
+			«FOR c : e.actions»
+		        «var i = 0»
+				«c.ponerComando(i++)»
+			«ENDFOR»
+
+			«FOR c : e.actions»
+				«var i = 0»
+				«c.callCommand(i++)»
+			«ENDFOR»
+		}
+	}
 	'''
 		
-	protected def callCommand(Comando comando) '''
-		cntrol.llamarEvaluacion1(i++);
+	protected def callCommand(Comando comando, int i) '''
+		cntrol.llamarEvaluacion1(«i»);
 	'''
 		
 	protected def className(Resource res) {
@@ -76,8 +75,8 @@ class EvaluacionGenerator extends AbstractGenerator {
 	}
 
 
-	protected def ponerComando(Comando c) '''
-		/* llamador */ cntrol.setComando(i++, cmpnt«c.name»);
+	protected def ponerComando(Comando c, int i) '''
+		/* llamador */ cntrol.setComando(«i», cmpnt«c.name»);
 	'''	
 
 	protected def declareCommand(Comando c) '''
