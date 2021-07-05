@@ -79,7 +79,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	'''	
 
 	protected def declareCommand(Comando c) '''
-		/* receptor */ «c.name» «c.name.toLowerCase» = new «c.name»();
+		/* receptor */ «c.name» «c.name.toLowerCase» = new «c.name»(str_«c.name»);
 		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(«c.name.toLowerCase»);
 
 	'''
