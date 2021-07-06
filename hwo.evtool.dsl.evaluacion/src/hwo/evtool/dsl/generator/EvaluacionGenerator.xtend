@@ -84,14 +84,19 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 	'''
 	
-		
-	protected def declareStrings(Comando c) '''
-		«IF c.argumento.eClass.name.equals("IntConstant")»
-		String[] str_«c.name» = {"«c.name»","«(c.argumento as IntConstant).valor.nota»","«(c.argumento as IntConstant).valor.calificacion»","«c.comentario»","«c.argumento.eClass.name»"};
-		«ELSEIF c.argumento.eClass.name.equals("StringConstant")»
-		String[] str_«c.name» = {"«c.name»","«(c.argumento as StringConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
-		«ELSEIF c.argumento.eClass.name.equals("SiNoConstant")»
-		String[] str_«c.name» = {"«c.name»","«(c.argumento as SiNoConstant).valor»","«c.comentario»", "«c.argumento.eClass.name»"};
-		«ENDIF»
+	protected def declareStrings (Comando c) '''
+		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
 	'''
+	
+	protected def dispatch typeValue(IntConstant c) '''
+		«c.valor.nota»", "«c.valor.calificacion»'''
+	
+	protected def dispatch typeValue(StringConstant c) {
+		c.valor
+	}
+
+	protected def dispatch typeValue(SiNoConstant c) {
+		c.valor
+	}
 }
+
