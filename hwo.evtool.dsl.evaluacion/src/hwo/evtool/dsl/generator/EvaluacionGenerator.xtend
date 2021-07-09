@@ -32,8 +32,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	
 	def CharSequence compile(Estado e) '''
 	import hwo.evtool.componenteEvaluacion.*;
-	import hwo.evtool.control.Control;
-	import hwo.evtool.evaluaciones.*;
+	import hwo.evtool.ejecucion.Control;
 
 	public class «e.eResource.className» {
 			«FOR c : e.actions»
@@ -79,9 +78,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	'''	
 
 	protected def declareCommand(Comando c) '''
-		/* receptor */ «c.name» «c.name.toLowerCase» = new «c.name»(str_«c.name»);
-		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(«c.name.toLowerCase»);
-
+		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
 	'''
 	
 	protected def declareStrings (Comando c) '''
