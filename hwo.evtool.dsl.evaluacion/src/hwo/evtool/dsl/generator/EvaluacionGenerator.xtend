@@ -34,13 +34,13 @@ class EvaluacionGenerator extends AbstractGenerator {
 	import hwo.evtool.componenteEvaluacion.*;
 	import hwo.evtool.ejecucion.Control;
 
-	public class «e.eResource.className» {
+	public class «e.name» {
 			«FOR c : e.actions»
 				«c.declareStrings»
 			«ENDFOR»
 	
 		public static void main(String[] args) {
-			new «e.eResource.className»().run();
+			new «e.name»().run();
 		}
 		
 		protected void run() {
