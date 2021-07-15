@@ -51,12 +51,12 @@ public interface Transicion extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>State</em>' reference.
-   * @see #setState(Estado)
+   * @see #setState(Componente)
    * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getTransicion_State()
    * @model
    * @generated
    */
-  Estado getState();
+  Componente getState();
 
   /**
    * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Transicion#getState <em>State</em>}' reference.
@@ -66,6 +66,6 @@ public interface Transicion extends EObject
    * @see #getState()
    * @generated
    */
-  void setState(Estado value);
+  void setState(Componente value);
 
 } // Transicion

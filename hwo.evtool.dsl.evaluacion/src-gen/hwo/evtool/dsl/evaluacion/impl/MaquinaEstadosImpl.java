@@ -3,9 +3,9 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Comando;
-import hwo.evtool.dsl.evaluacion.Estado;
+import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Evento;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
 
@@ -70,7 +70,7 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected EList<Comando> commands;
+  protected EList<Evaluaciones> commands;
 
   /**
    * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
@@ -80,7 +80,7 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected EList<Estado> states;
+  protected EList<Componente> states;
 
   /**
    * <!-- begin-user-doc -->
@@ -139,11 +139,11 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    */
   @Override
-  public EList<Comando> getCommands()
+  public EList<Evaluaciones> getCommands()
   {
     if (commands == null)
     {
-      commands = new EObjectContainmentEList<Comando>(Comando.class, this, EvaluacionPackage.MAQUINA_ESTADOS__COMMANDS);
+      commands = new EObjectContainmentEList<Evaluaciones>(Evaluaciones.class, this, EvaluacionPackage.MAQUINA_ESTADOS__COMMANDS);
     }
     return commands;
   }
@@ -154,11 +154,11 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    */
   @Override
-  public EList<Estado> getStates()
+  public EList<Componente> getStates()
   {
     if (states == null)
     {
-      states = new EObjectContainmentEList<Estado>(Estado.class, this, EvaluacionPackage.MAQUINA_ESTADOS__STATES);
+      states = new EObjectContainmentEList<Componente>(Componente.class, this, EvaluacionPackage.MAQUINA_ESTADOS__STATES);
     }
     return states;
   }
@@ -226,11 +226,11 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
         return;
       case EvaluacionPackage.MAQUINA_ESTADOS__COMMANDS:
         getCommands().clear();
-        getCommands().addAll((Collection<? extends Comando>)newValue);
+        getCommands().addAll((Collection<? extends Evaluaciones>)newValue);
         return;
       case EvaluacionPackage.MAQUINA_ESTADOS__STATES:
         getStates().clear();
-        getStates().addAll((Collection<? extends Estado>)newValue);
+        getStates().addAll((Collection<? extends Componente>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

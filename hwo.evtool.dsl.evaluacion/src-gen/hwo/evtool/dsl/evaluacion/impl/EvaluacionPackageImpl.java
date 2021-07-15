@@ -4,10 +4,10 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.Atomo;
-import hwo.evtool.dsl.evaluacion.Comando;
-import hwo.evtool.dsl.evaluacion.Estado;
+import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Evento;
 import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
@@ -50,7 +50,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass comandoEClass = null;
+  private EClass evaluacionesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass estadoEClass = null;
+  private EClass componenteEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -258,9 +258,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getComando()
+  public EClass getEvaluaciones()
   {
-    return comandoEClass;
+    return evaluacionesEClass;
   }
 
   /**
@@ -269,9 +269,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getComando_Name()
+  public EAttribute getEvaluaciones_Name()
   {
-    return (EAttribute)comandoEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -280,9 +280,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getComando_Argumento()
+  public EReference getEvaluaciones_Argumento()
   {
-    return (EReference)comandoEClass.getEStructuralFeatures().get(1);
+    return (EReference)evaluacionesEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -291,9 +291,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getComando_Comentario()
+  public EAttribute getEvaluaciones_Comentario()
   {
-    return (EAttribute)comandoEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -346,9 +346,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getEstado()
+  public EClass getComponente()
   {
-    return estadoEClass;
+    return componenteEClass;
   }
 
   /**
@@ -357,9 +357,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getEstado_Name()
+  public EAttribute getComponente_Name()
   {
-    return (EAttribute)estadoEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)componenteEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -368,9 +368,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getEstado_Actions()
+  public EReference getComponente_Actions()
   {
-    return (EReference)estadoEClass.getEStructuralFeatures().get(1);
+    return (EReference)componenteEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -379,9 +379,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getEstado_Transitions()
+  public EReference getComponente_Transitions()
   {
-    return (EReference)estadoEClass.getEStructuralFeatures().get(2);
+    return (EReference)componenteEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -524,10 +524,10 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEAttribute(eventoEClass, EVENTO__NAME);
     createEAttribute(eventoEClass, EVENTO__CODE);
 
-    comandoEClass = createEClass(COMANDO);
-    createEAttribute(comandoEClass, COMANDO__NAME);
-    createEReference(comandoEClass, COMANDO__ARGUMENTO);
-    createEAttribute(comandoEClass, COMANDO__COMENTARIO);
+    evaluacionesEClass = createEClass(EVALUACIONES);
+    createEAttribute(evaluacionesEClass, EVALUACIONES__NAME);
+    createEReference(evaluacionesEClass, EVALUACIONES__ARGUMENTO);
+    createEAttribute(evaluacionesEClass, EVALUACIONES__COMENTARIO);
 
     atomoEClass = createEClass(ATOMO);
 
@@ -535,10 +535,10 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEAttribute(puntuacionEClass, PUNTUACION__NOTA);
     createEAttribute(puntuacionEClass, PUNTUACION__CALIFICACION);
 
-    estadoEClass = createEClass(ESTADO);
-    createEAttribute(estadoEClass, ESTADO__NAME);
-    createEReference(estadoEClass, ESTADO__ACTIONS);
-    createEReference(estadoEClass, ESTADO__TRANSITIONS);
+    componenteEClass = createEClass(COMPONENTE);
+    createEAttribute(componenteEClass, COMPONENTE__NAME);
+    createEReference(componenteEClass, COMPONENTE__ACTIONS);
+    createEReference(componenteEClass, COMPONENTE__TRANSITIONS);
 
     transicionEClass = createEClass(TRANSICION);
     createEReference(transicionEClass, TRANSICION__EVENT);
@@ -591,17 +591,17 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(maquinaEstadosEClass, MaquinaEstados.class, "MaquinaEstados", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMaquinaEstados_Events(), this.getEvento(), null, "events", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMaquinaEstados_ResetEvents(), this.getEvento(), null, "resetEvents", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMaquinaEstados_Commands(), this.getComando(), null, "commands", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMaquinaEstados_States(), this.getEstado(), null, "states", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMaquinaEstados_Commands(), this.getEvaluaciones(), null, "commands", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMaquinaEstados_States(), this.getComponente(), null, "states", null, 0, -1, MaquinaEstados.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventoEClass, Evento.class, "Evento", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvento_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvento_Code(), ecorePackage.getEString(), "code", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(comandoEClass, Comando.class, "Comando", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getComando_Name(), ecorePackage.getEString(), "name", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getComando_Argumento(), this.getAtomo(), null, "argumento", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getComando_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Comando.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(evaluacionesEClass, Evaluaciones.class, "Evaluaciones", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEvaluaciones_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluaciones_Argumento(), this.getAtomo(), null, "argumento", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvaluaciones_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -609,14 +609,14 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEAttribute(getPuntuacion_Nota(), ecorePackage.getEInt(), "nota", null, 0, 1, Puntuacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPuntuacion_Calificacion(), ecorePackage.getEInt(), "calificacion", null, 0, 1, Puntuacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(estadoEClass, Estado.class, "Estado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEstado_Name(), ecorePackage.getEString(), "name", null, 0, 1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEstado_Actions(), this.getComando(), null, "actions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEstado_Transitions(), this.getTransicion(), null, "transitions", null, 0, -1, Estado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(componenteEClass, Componente.class, "Componente", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComponente_Name(), ecorePackage.getEString(), "name", null, 0, 1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComponente_Actions(), this.getEvaluaciones(), null, "actions", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getComponente_Transitions(), this.getTransicion(), null, "transitions", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(transicionEClass, Transicion.class, "Transicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTransicion_Event(), this.getEvento(), null, "event", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTransicion_State(), this.getEstado(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTransicion_State(), this.getComponente(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intConstantEClass, IntConstant.class, "IntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getIntConstant_Valor(), this.getPuntuacion(), null, "valor", null, 0, 1, IntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -7,23 +7,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Comando</b></em>'.
+ * A representation of the model object '<em><b>Evaluaciones</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Comando#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Comando#getComentario <em>Comentario</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getArgumento <em>Argumento</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getComentario <em>Comentario</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones()
  * @model
  * @generated
  */
-public interface Comando extends EObject
+public interface Evaluaciones extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -31,14 +31,14 @@ public interface Comando extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Name()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -53,14 +53,14 @@ public interface Comando extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Argumento</em>' containment reference.
    * @see #setArgumento(Atomo)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Argumento()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones_Argumento()
    * @model containment="true"
    * @generated
    */
   Atomo getArgumento();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}' containment reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getArgumento <em>Argumento</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Argumento</em>' containment reference.
@@ -75,14 +75,14 @@ public interface Comando extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Comentario</em>' attribute.
    * @see #setComentario(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComando_Comentario()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones_Comentario()
    * @model
    * @generated
    */
   String getComentario();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Comando#getComentario <em>Comentario</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getComentario <em>Comentario</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Comentario</em>' attribute.
@@ -91,4 +91,4 @@ public interface Comando extends EObject
    */
   void setComentario(String value);
 
-} // Comando
+} // Evaluaciones

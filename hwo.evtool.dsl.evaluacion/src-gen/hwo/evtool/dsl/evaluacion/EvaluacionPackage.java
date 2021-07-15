@@ -150,14 +150,14 @@ public interface EvaluacionPackage extends EPackage
   int EVENTO_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ComandoImpl <em>Comando</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl <em>Evaluaciones</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.ComandoImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComando()
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluaciones()
    * @generated
    */
-  int COMANDO = 2;
+  int EVALUACIONES = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -166,7 +166,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMANDO__NAME = 0;
+  int EVALUACIONES__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Argumento</b></em>' containment reference.
@@ -175,7 +175,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMANDO__ARGUMENTO = 1;
+  int EVALUACIONES__ARGUMENTO = 1;
 
   /**
    * The feature id for the '<em><b>Comentario</b></em>' attribute.
@@ -184,16 +184,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMANDO__COMENTARIO = 2;
+  int EVALUACIONES__COMENTARIO = 2;
 
   /**
-   * The number of structural features of the '<em>Comando</em>' class.
+   * The number of structural features of the '<em>Evaluaciones</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMANDO_FEATURE_COUNT = 3;
+  int EVALUACIONES_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.AtomoImpl <em>Atomo</em>}' class.
@@ -252,14 +252,14 @@ public interface EvaluacionPackage extends EPackage
   int PUNTUACION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.ComponenteImpl <em>Componente</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.EstadoImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEstado()
+   * @see hwo.evtool.dsl.evaluacion.impl.ComponenteImpl
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComponente()
    * @generated
    */
-  int ESTADO = 5;
+  int COMPONENTE = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -268,7 +268,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ESTADO__NAME = 0;
+  int COMPONENTE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Actions</b></em>' reference list.
@@ -277,7 +277,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ESTADO__ACTIONS = 1;
+  int COMPONENTE__ACTIONS = 1;
 
   /**
    * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
@@ -286,16 +286,16 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ESTADO__TRANSITIONS = 2;
+  int COMPONENTE__TRANSITIONS = 2;
 
   /**
-   * The number of structural features of the '<em>Estado</em>' class.
+   * The number of structural features of the '<em>Componente</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ESTADO_FEATURE_COUNT = 3;
+  int COMPONENTE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.TransicionImpl <em>Transicion</em>}' class.
@@ -506,47 +506,47 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getEvento_Code();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Comando <em>Comando</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Evaluaciones <em>Evaluaciones</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Comando</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Comando
+   * @return the meta object for class '<em>Evaluaciones</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Evaluaciones
    * @generated
    */
-  EClass getComando();
+  EClass getEvaluaciones();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Comando#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Comando#getName()
-   * @see #getComando()
+   * @see hwo.evtool.dsl.evaluacion.Evaluaciones#getName()
+   * @see #getEvaluaciones()
    * @generated
    */
-  EAttribute getComando_Name();
+  EAttribute getEvaluaciones_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Comando#getArgumento <em>Argumento</em>}'.
+   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getArgumento <em>Argumento</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Argumento</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Comando#getArgumento()
-   * @see #getComando()
+   * @see hwo.evtool.dsl.evaluacion.Evaluaciones#getArgumento()
+   * @see #getEvaluaciones()
    * @generated
    */
-  EReference getComando_Argumento();
+  EReference getEvaluaciones_Argumento();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Comando#getComentario <em>Comentario</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getComentario <em>Comentario</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Comentario</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Comando#getComentario()
-   * @see #getComando()
+   * @see hwo.evtool.dsl.evaluacion.Evaluaciones#getComentario()
+   * @see #getEvaluaciones()
    * @generated
    */
-  EAttribute getComando_Comentario();
+  EAttribute getEvaluaciones_Comentario();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Atomo <em>Atomo</em>}'.
@@ -591,47 +591,47 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getPuntuacion_Calificacion();
 
   /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Estado <em>Estado</em>}'.
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Componente <em>Componente</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Estado</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Estado
+   * @return the meta object for class '<em>Componente</em>'.
+   * @see hwo.evtool.dsl.evaluacion.Componente
    * @generated
    */
-  EClass getEstado();
+  EClass getComponente();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Estado#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Componente#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Estado#getName()
-   * @see #getEstado()
+   * @see hwo.evtool.dsl.evaluacion.Componente#getName()
+   * @see #getComponente()
    * @generated
    */
-  EAttribute getEstado_Name();
+  EAttribute getComponente_Name();
 
   /**
-   * Returns the meta object for the reference list '{@link hwo.evtool.dsl.evaluacion.Estado#getActions <em>Actions</em>}'.
+   * Returns the meta object for the reference list '{@link hwo.evtool.dsl.evaluacion.Componente#getActions <em>Actions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the reference list '<em>Actions</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Estado#getActions()
-   * @see #getEstado()
+   * @see hwo.evtool.dsl.evaluacion.Componente#getActions()
+   * @see #getComponente()
    * @generated
    */
-  EReference getEstado_Actions();
+  EReference getComponente_Actions();
 
   /**
-   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.Estado#getTransitions <em>Transitions</em>}'.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evaluacion.Componente#getTransitions <em>Transitions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Transitions</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Estado#getTransitions()
-   * @see #getEstado()
+   * @see hwo.evtool.dsl.evaluacion.Componente#getTransitions()
+   * @see #getComponente()
    * @generated
    */
-  EReference getEstado_Transitions();
+  EReference getComponente_Transitions();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.Transicion <em>Transicion</em>}'.
@@ -820,14 +820,14 @@ public interface EvaluacionPackage extends EPackage
     EAttribute EVENTO__CODE = eINSTANCE.getEvento_Code();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ComandoImpl <em>Comando</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl <em>Evaluaciones</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.ComandoImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComando()
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEvaluaciones()
      * @generated
      */
-    EClass COMANDO = eINSTANCE.getComando();
+    EClass EVALUACIONES = eINSTANCE.getEvaluaciones();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -835,7 +835,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMANDO__NAME = eINSTANCE.getComando_Name();
+    EAttribute EVALUACIONES__NAME = eINSTANCE.getEvaluaciones_Name();
 
     /**
      * The meta object literal for the '<em><b>Argumento</b></em>' containment reference feature.
@@ -843,7 +843,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference COMANDO__ARGUMENTO = eINSTANCE.getComando_Argumento();
+    EReference EVALUACIONES__ARGUMENTO = eINSTANCE.getEvaluaciones_Argumento();
 
     /**
      * The meta object literal for the '<em><b>Comentario</b></em>' attribute feature.
@@ -851,7 +851,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMANDO__COMENTARIO = eINSTANCE.getComando_Comentario();
+    EAttribute EVALUACIONES__COMENTARIO = eINSTANCE.getEvaluaciones_Comentario();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.AtomoImpl <em>Atomo</em>}' class.
@@ -890,14 +890,14 @@ public interface EvaluacionPackage extends EPackage
     EAttribute PUNTUACION__CALIFICACION = eINSTANCE.getPuntuacion_Calificacion();
 
     /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl <em>Estado</em>}' class.
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.ComponenteImpl <em>Componente</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.EstadoImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getEstado()
+     * @see hwo.evtool.dsl.evaluacion.impl.ComponenteImpl
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getComponente()
      * @generated
      */
-    EClass ESTADO = eINSTANCE.getEstado();
+    EClass COMPONENTE = eINSTANCE.getComponente();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -905,7 +905,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ESTADO__NAME = eINSTANCE.getEstado_Name();
+    EAttribute COMPONENTE__NAME = eINSTANCE.getComponente_Name();
 
     /**
      * The meta object literal for the '<em><b>Actions</b></em>' reference list feature.
@@ -913,7 +913,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ESTADO__ACTIONS = eINSTANCE.getEstado_Actions();
+    EReference COMPONENTE__ACTIONS = eINSTANCE.getComponente_Actions();
 
     /**
      * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
@@ -921,7 +921,7 @@ public interface EvaluacionPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ESTADO__TRANSITIONS = eINSTANCE.getEstado_Transitions();
+    EReference COMPONENTE__TRANSITIONS = eINSTANCE.getComponente_Transitions();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.TransicionImpl <em>Transicion</em>}' class.

@@ -3,9 +3,9 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Comando;
-import hwo.evtool.dsl.evaluacion.Estado;
+import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Transicion;
 
 import java.util.Collection;
@@ -27,20 +27,20 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Estado</b></em>'.
+ * An implementation of the model object '<em><b>Componente</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl#getActions <em>Actions</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EstadoImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComponenteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComponenteImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ComponenteImpl#getTransitions <em>Transitions</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
+public class ComponenteImpl extends MinimalEObjectImpl.Container implements Componente
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -70,7 +70,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
    * @generated
    * @ordered
    */
-  protected EList<Comando> actions;
+  protected EList<Evaluaciones> actions;
 
   /**
    * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
@@ -87,7 +87,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EstadoImpl()
+  protected ComponenteImpl()
   {
     super();
   }
@@ -100,7 +100,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.ESTADO;
+    return EvaluacionPackage.Literals.COMPONENTE;
   }
 
   /**
@@ -125,7 +125,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ESTADO__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.COMPONENTE__NAME, oldName, name));
   }
 
   /**
@@ -134,11 +134,11 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
    * @generated
    */
   @Override
-  public EList<Comando> getActions()
+  public EList<Evaluaciones> getActions()
   {
     if (actions == null)
     {
-      actions = new EObjectResolvingEList<Comando>(Comando.class, this, EvaluacionPackage.ESTADO__ACTIONS);
+      actions = new EObjectResolvingEList<Evaluaciones>(Evaluaciones.class, this, EvaluacionPackage.COMPONENTE__ACTIONS);
     }
     return actions;
   }
@@ -153,7 +153,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   {
     if (transitions == null)
     {
-      transitions = new EObjectContainmentEList<Transicion>(Transicion.class, this, EvaluacionPackage.ESTADO__TRANSITIONS);
+      transitions = new EObjectContainmentEList<Transicion>(Transicion.class, this, EvaluacionPackage.COMPONENTE__TRANSITIONS);
     }
     return transitions;
   }
@@ -168,7 +168,7 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ESTADO__TRANSITIONS:
+      case EvaluacionPackage.COMPONENTE__TRANSITIONS:
         return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -184,11 +184,11 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ESTADO__NAME:
+      case EvaluacionPackage.COMPONENTE__NAME:
         return getName();
-      case EvaluacionPackage.ESTADO__ACTIONS:
+      case EvaluacionPackage.COMPONENTE__ACTIONS:
         return getActions();
-      case EvaluacionPackage.ESTADO__TRANSITIONS:
+      case EvaluacionPackage.COMPONENTE__TRANSITIONS:
         return getTransitions();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -205,14 +205,14 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ESTADO__NAME:
+      case EvaluacionPackage.COMPONENTE__NAME:
         setName((String)newValue);
         return;
-      case EvaluacionPackage.ESTADO__ACTIONS:
+      case EvaluacionPackage.COMPONENTE__ACTIONS:
         getActions().clear();
-        getActions().addAll((Collection<? extends Comando>)newValue);
+        getActions().addAll((Collection<? extends Evaluaciones>)newValue);
         return;
-      case EvaluacionPackage.ESTADO__TRANSITIONS:
+      case EvaluacionPackage.COMPONENTE__TRANSITIONS:
         getTransitions().clear();
         getTransitions().addAll((Collection<? extends Transicion>)newValue);
         return;
@@ -230,13 +230,13 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ESTADO__NAME:
+      case EvaluacionPackage.COMPONENTE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case EvaluacionPackage.ESTADO__ACTIONS:
+      case EvaluacionPackage.COMPONENTE__ACTIONS:
         getActions().clear();
         return;
-      case EvaluacionPackage.ESTADO__TRANSITIONS:
+      case EvaluacionPackage.COMPONENTE__TRANSITIONS:
         getTransitions().clear();
         return;
     }
@@ -253,11 +253,11 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
   {
     switch (featureID)
     {
-      case EvaluacionPackage.ESTADO__NAME:
+      case EvaluacionPackage.COMPONENTE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case EvaluacionPackage.ESTADO__ACTIONS:
+      case EvaluacionPackage.COMPONENTE__ACTIONS:
         return actions != null && !actions.isEmpty();
-      case EvaluacionPackage.ESTADO__TRANSITIONS:
+      case EvaluacionPackage.COMPONENTE__TRANSITIONS:
         return transitions != null && !transitions.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -280,4 +280,4 @@ public class EstadoImpl extends MinimalEObjectImpl.Container implements Estado
     return result.toString();
   }
 
-} //EstadoImpl
+} //ComponenteImpl

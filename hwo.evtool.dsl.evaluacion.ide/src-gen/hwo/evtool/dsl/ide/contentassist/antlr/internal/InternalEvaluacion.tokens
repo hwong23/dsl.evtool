@@ -5,10 +5,10 @@
 'N'=12
 'S'=11
 'actions'=20
-'comandos'=15
+'componente'=19
+'evaluaciones'=15
 'eventos'=13
 'resetEvents'=14
-'state'=19
 '{'=21
 '}'=22
 RULE_ANY_OTHER=10

@@ -54,7 +54,7 @@ public interface MaquinaEstados extends EObject
 
   /**
    * Returns the value of the '<em><b>Commands</b></em>' containment reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Comando}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Evaluaciones}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Commands</em>' containment reference list.
@@ -62,11 +62,11 @@ public interface MaquinaEstados extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Comando> getCommands();
+  EList<Evaluaciones> getCommands();
 
   /**
    * Returns the value of the '<em><b>States</b></em>' containment reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Estado}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Componente}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>States</em>' containment reference list.
@@ -74,6 +74,6 @@ public interface MaquinaEstados extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Estado> getStates();
+  EList<Componente> getStates();
 
 } // MaquinaEstados

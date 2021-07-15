@@ -38,13 +38,13 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final CrossReference cResetEventsEventoCrossReference_2_1_0 = (CrossReference)cResetEventsAssignment_2_1.eContents().get(0);
 		private final RuleCall cResetEventsEventoIDTerminalRuleCall_2_1_0_1 = (RuleCall)cResetEventsEventoCrossReference_2_1_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cComandosKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cEvaluacionesKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cCommandsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cCommandsComandoParserRuleCall_3_1_0 = (RuleCall)cCommandsAssignment_3_1.eContents().get(0);
+		private final RuleCall cCommandsEvaluacionesParserRuleCall_3_1_0 = (RuleCall)cCommandsAssignment_3_1.eContents().get(0);
 		private final Assignment cStatesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStatesEstadoParserRuleCall_4_0 = (RuleCall)cStatesAssignment_4.eContents().get(0);
+		private final RuleCall cStatesComponenteParserRuleCall_4_0 = (RuleCall)cStatesAssignment_4.eContents().get(0);
 		
-		//MaquinaEstados :
+		//MaquinaEstados:
 		//    {MaquinaEstados}
 		//    ('eventos'
 		//        events+=Evento+
@@ -52,10 +52,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//    ('resetEvents'
 		//        resetEvents+=[Evento]+
 		//    )?
-		//    ('comandos'
-		//        commands+=Comando+
+		//    ('evaluaciones'
+		//        commands+=Evaluaciones+
 		//    )?
-		//    states+=Estado*
+		//    states+=Componente*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -66,10 +66,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//('resetEvents'
 		//    resetEvents+=[Evento]+
 		//)?
-		//('comandos'
-		//    commands+=Comando+
+		//('evaluaciones'
+		//    commands+=Evaluaciones+
 		//)?
-		//states+=Estado*
+		//states+=Componente*
 		public Group getGroup() { return cGroup; }
 		
 		//{MaquinaEstados}
@@ -106,25 +106,25 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getResetEventsEventoIDTerminalRuleCall_2_1_0_1() { return cResetEventsEventoIDTerminalRuleCall_2_1_0_1; }
 		
-		//('comandos'
-		//    commands+=Comando+
+		//('evaluaciones'
+		//    commands+=Evaluaciones+
 		//)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'comandos'
-		public Keyword getComandosKeyword_3_0() { return cComandosKeyword_3_0; }
+		//'evaluaciones'
+		public Keyword getEvaluacionesKeyword_3_0() { return cEvaluacionesKeyword_3_0; }
 		
-		//commands+=Comando+
+		//commands+=Evaluaciones+
 		public Assignment getCommandsAssignment_3_1() { return cCommandsAssignment_3_1; }
 		
-		//Comando
-		public RuleCall getCommandsComandoParserRuleCall_3_1_0() { return cCommandsComandoParserRuleCall_3_1_0; }
+		//Evaluaciones
+		public RuleCall getCommandsEvaluacionesParserRuleCall_3_1_0() { return cCommandsEvaluacionesParserRuleCall_3_1_0; }
 		
-		//states+=Estado*
+		//states+=Componente*
 		public Assignment getStatesAssignment_4() { return cStatesAssignment_4; }
 		
-		//Estado
-		public RuleCall getStatesEstadoParserRuleCall_4_0() { return cStatesEstadoParserRuleCall_4_0; }
+		//Componente
+		public RuleCall getStatesComponenteParserRuleCall_4_0() { return cStatesComponenteParserRuleCall_4_0; }
 	}
 	public class EventoElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Evento");
@@ -154,8 +154,8 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getCodeIDTerminalRuleCall_1_0() { return cCodeIDTerminalRuleCall_1_0; }
 	}
-	public class ComandoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Comando");
+	public class EvaluacionesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Evaluaciones");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
@@ -167,7 +167,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Assignment cComentarioAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cComentarioSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cComentarioAssignment_3_1.eContents().get(0);
 		
-		//Comando:
+		//Evaluaciones:
 		//    name=ID '=' argumento=Atomo
 		//    (':' comentario=STRING)?
 		//;
@@ -308,36 +308,36 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//INT
 		public RuleCall getCalificacionINTTerminalRuleCall_2_0() { return cCalificacionINTTerminalRuleCall_2_0; }
 	}
-	public class EstadoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Estado");
+	public class ComponenteElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Componente");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cComponenteKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
 		private final Keyword cActionsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Assignment cActionsAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final CrossReference cActionsComandoCrossReference_2_2_0 = (CrossReference)cActionsAssignment_2_2.eContents().get(0);
-		private final RuleCall cActionsComandoIDTerminalRuleCall_2_2_0_1 = (RuleCall)cActionsComandoCrossReference_2_2_0.eContents().get(1);
+		private final CrossReference cActionsEvaluacionesCrossReference_2_2_0 = (CrossReference)cActionsAssignment_2_2.eContents().get(0);
+		private final RuleCall cActionsEvaluacionesIDTerminalRuleCall_2_2_0_1 = (RuleCall)cActionsEvaluacionesCrossReference_2_2_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
 		private final Assignment cTransitionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cTransitionsTransicionParserRuleCall_3_0 = (RuleCall)cTransitionsAssignment_3.eContents().get(0);
 		
-		//Estado:
-		//    'state' name=ID
-		//        ('actions' '{' actions+=[Comando]+ '}')?
+		//Componente:
+		//    'componente' name=ID
+		//        ('actions' '{' actions+=[Evaluaciones]+ '}')?
 		//        transitions+=Transicion*
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'state' name=ID
-		//    ('actions' '{' actions+=[Comando]+ '}')?
+		//'componente' name=ID
+		//    ('actions' '{' actions+=[Evaluaciones]+ '}')?
 		//    transitions+=Transicion*
 		public Group getGroup() { return cGroup; }
 		
-		//'state'
-		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
+		//'componente'
+		public Keyword getComponenteKeyword_0() { return cComponenteKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -345,7 +345,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//('actions' '{' actions+=[Comando]+ '}')?
+		//('actions' '{' actions+=[Evaluaciones]+ '}')?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//'actions'
@@ -354,14 +354,14 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2_1() { return cLeftCurlyBracketKeyword_2_1; }
 		
-		//actions+=[Comando]+
+		//actions+=[Evaluaciones]+
 		public Assignment getActionsAssignment_2_2() { return cActionsAssignment_2_2; }
 		
-		//[Comando]
-		public CrossReference getActionsComandoCrossReference_2_2_0() { return cActionsComandoCrossReference_2_2_0; }
+		//[Evaluaciones]
+		public CrossReference getActionsEvaluacionesCrossReference_2_2_0() { return cActionsEvaluacionesCrossReference_2_2_0; }
 		
 		//ID
-		public RuleCall getActionsComandoIDTerminalRuleCall_2_2_0_1() { return cActionsComandoIDTerminalRuleCall_2_2_0_1; }
+		public RuleCall getActionsEvaluacionesIDTerminalRuleCall_2_2_0_1() { return cActionsEvaluacionesIDTerminalRuleCall_2_2_0_1; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
@@ -380,15 +380,15 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cEventEventoIDTerminalRuleCall_0_0_1 = (RuleCall)cEventEventoCrossReference_0_0.eContents().get(1);
 		private final Keyword cEqualsSignGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cStateAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cStateEstadoCrossReference_2_0 = (CrossReference)cStateAssignment_2.eContents().get(0);
-		private final RuleCall cStateEstadoIDTerminalRuleCall_2_0_1 = (RuleCall)cStateEstadoCrossReference_2_0.eContents().get(1);
+		private final CrossReference cStateComponenteCrossReference_2_0 = (CrossReference)cStateAssignment_2.eContents().get(0);
+		private final RuleCall cStateComponenteIDTerminalRuleCall_2_0_1 = (RuleCall)cStateComponenteCrossReference_2_0.eContents().get(1);
 		
 		//Transicion:
-		//    event=[Evento] '=>' state=[Estado]
+		//    event=[Evento] '=>' state=[Componente]
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//event=[Evento] '=>' state=[Estado]
+		//event=[Evento] '=>' state=[Componente]
 		public Group getGroup() { return cGroup; }
 		
 		//event=[Evento]
@@ -403,23 +403,23 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'=>'
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
 		
-		//state=[Estado]
+		//state=[Componente]
 		public Assignment getStateAssignment_2() { return cStateAssignment_2; }
 		
-		//[Estado]
-		public CrossReference getStateEstadoCrossReference_2_0() { return cStateEstadoCrossReference_2_0; }
+		//[Componente]
+		public CrossReference getStateComponenteCrossReference_2_0() { return cStateComponenteCrossReference_2_0; }
 		
 		//ID
-		public RuleCall getStateEstadoIDTerminalRuleCall_2_0_1() { return cStateEstadoIDTerminalRuleCall_2_0_1; }
+		public RuleCall getStateComponenteIDTerminalRuleCall_2_0_1() { return cStateComponenteIDTerminalRuleCall_2_0_1; }
 	}
 	
 	
 	private final MaquinaEstadosElements pMaquinaEstados;
 	private final EventoElements pEvento;
-	private final ComandoElements pComando;
+	private final EvaluacionesElements pEvaluaciones;
 	private final AtomoElements pAtomo;
 	private final PuntuacionElements pPuntuacion;
-	private final EstadoElements pEstado;
+	private final ComponenteElements pComponente;
 	private final TransicionElements pTransicion;
 	
 	private final Grammar grammar;
@@ -433,10 +433,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.gaTerminals = gaTerminals;
 		this.pMaquinaEstados = new MaquinaEstadosElements();
 		this.pEvento = new EventoElements();
-		this.pComando = new ComandoElements();
+		this.pEvaluaciones = new EvaluacionesElements();
 		this.pAtomo = new AtomoElements();
 		this.pPuntuacion = new PuntuacionElements();
-		this.pEstado = new EstadoElements();
+		this.pComponente = new ComponenteElements();
 		this.pTransicion = new TransicionElements();
 	}
 	
@@ -467,7 +467,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 
 	
-	//MaquinaEstados :
+	//MaquinaEstados:
 	//    {MaquinaEstados}
 	//    ('eventos'
 	//        events+=Evento+
@@ -475,10 +475,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//    ('resetEvents'
 	//        resetEvents+=[Evento]+
 	//    )?
-	//    ('comandos'
-	//        commands+=Comando+
+	//    ('evaluaciones'
+	//        commands+=Evaluaciones+
 	//    )?
-	//    states+=Estado*
+	//    states+=Componente*
 	//;
 	public MaquinaEstadosElements getMaquinaEstadosAccess() {
 		return pMaquinaEstados;
@@ -499,16 +499,16 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getEventoAccess().getRule();
 	}
 	
-	//Comando:
+	//Evaluaciones:
 	//    name=ID '=' argumento=Atomo
 	//    (':' comentario=STRING)?
 	//;
-	public ComandoElements getComandoAccess() {
-		return pComando;
+	public EvaluacionesElements getEvaluacionesAccess() {
+		return pEvaluaciones;
 	}
 	
-	public ParserRule getComandoRule() {
-		return getComandoAccess().getRule();
+	public ParserRule getEvaluacionesRule() {
+		return getEvaluacionesAccess().getRule();
 	}
 	
 	//Atomo:
@@ -535,21 +535,21 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getPuntuacionAccess().getRule();
 	}
 	
-	//Estado:
-	//    'state' name=ID
-	//        ('actions' '{' actions+=[Comando]+ '}')?
+	//Componente:
+	//    'componente' name=ID
+	//        ('actions' '{' actions+=[Evaluaciones]+ '}')?
 	//        transitions+=Transicion*
 	//;
-	public EstadoElements getEstadoAccess() {
-		return pEstado;
+	public ComponenteElements getComponenteAccess() {
+		return pComponente;
 	}
 	
-	public ParserRule getEstadoRule() {
-		return getEstadoAccess().getRule();
+	public ParserRule getComponenteRule() {
+		return getComponenteAccess().getRule();
 	}
 	
 	//Transicion:
-	//    event=[Evento] '=>' state=[Estado]
+	//    event=[Evento] '=>' state=[Componente]
 	//;
 	public TransicionElements getTransicionAccess() {
 		return pTransicion;

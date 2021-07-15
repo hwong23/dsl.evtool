@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalEvaluacionParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'S'", "'N'", "'eventos'", "'resetEvents'", "'comandos'", "'='", "':'", "'/'", "'state'", "'actions'", "'{'", "'}'", "'=>'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'S'", "'N'", "'eventos'", "'resetEvents'", "'evaluaciones'", "'='", "':'", "'/'", "'componente'", "'actions'", "'{'", "'}'", "'=>'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -235,20 +235,20 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleEvento"
 
 
-    // $ANTLR start "entryRuleComando"
-    // InternalEvaluacion.g:103:1: entryRuleComando : ruleComando EOF ;
-    public final void entryRuleComando() throws RecognitionException {
+    // $ANTLR start "entryRuleEvaluaciones"
+    // InternalEvaluacion.g:103:1: entryRuleEvaluaciones : ruleEvaluaciones EOF ;
+    public final void entryRuleEvaluaciones() throws RecognitionException {
         try {
-            // InternalEvaluacion.g:104:1: ( ruleComando EOF )
-            // InternalEvaluacion.g:105:1: ruleComando EOF
+            // InternalEvaluacion.g:104:1: ( ruleEvaluaciones EOF )
+            // InternalEvaluacion.g:105:1: ruleEvaluaciones EOF
             {
-             before(grammarAccess.getComandoRule()); 
+             before(grammarAccess.getEvaluacionesRule()); 
             pushFollow(FOLLOW_1);
-            ruleComando();
+            ruleEvaluaciones();
 
             state._fsp--;
 
-             after(grammarAccess.getComandoRule()); 
+             after(grammarAccess.getEvaluacionesRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -262,35 +262,35 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleComando"
+    // $ANTLR end "entryRuleEvaluaciones"
 
 
-    // $ANTLR start "ruleComando"
-    // InternalEvaluacion.g:112:1: ruleComando : ( ( rule__Comando__Group__0 ) ) ;
-    public final void ruleComando() throws RecognitionException {
+    // $ANTLR start "ruleEvaluaciones"
+    // InternalEvaluacion.g:112:1: ruleEvaluaciones : ( ( rule__Evaluaciones__Group__0 ) ) ;
+    public final void ruleEvaluaciones() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:116:2: ( ( ( rule__Comando__Group__0 ) ) )
-            // InternalEvaluacion.g:117:2: ( ( rule__Comando__Group__0 ) )
+            // InternalEvaluacion.g:116:2: ( ( ( rule__Evaluaciones__Group__0 ) ) )
+            // InternalEvaluacion.g:117:2: ( ( rule__Evaluaciones__Group__0 ) )
             {
-            // InternalEvaluacion.g:117:2: ( ( rule__Comando__Group__0 ) )
-            // InternalEvaluacion.g:118:3: ( rule__Comando__Group__0 )
+            // InternalEvaluacion.g:117:2: ( ( rule__Evaluaciones__Group__0 ) )
+            // InternalEvaluacion.g:118:3: ( rule__Evaluaciones__Group__0 )
             {
-             before(grammarAccess.getComandoAccess().getGroup()); 
-            // InternalEvaluacion.g:119:3: ( rule__Comando__Group__0 )
-            // InternalEvaluacion.g:119:4: rule__Comando__Group__0
+             before(grammarAccess.getEvaluacionesAccess().getGroup()); 
+            // InternalEvaluacion.g:119:3: ( rule__Evaluaciones__Group__0 )
+            // InternalEvaluacion.g:119:4: rule__Evaluaciones__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Comando__Group__0();
+            rule__Evaluaciones__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getComandoAccess().getGroup()); 
+             after(grammarAccess.getEvaluacionesAccess().getGroup()); 
 
             }
 
@@ -309,7 +309,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleComando"
+    // $ANTLR end "ruleEvaluaciones"
 
 
     // $ANTLR start "entryRuleAtomo"
@@ -466,20 +466,20 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rulePuntuacion"
 
 
-    // $ANTLR start "entryRuleEstado"
-    // InternalEvaluacion.g:178:1: entryRuleEstado : ruleEstado EOF ;
-    public final void entryRuleEstado() throws RecognitionException {
+    // $ANTLR start "entryRuleComponente"
+    // InternalEvaluacion.g:178:1: entryRuleComponente : ruleComponente EOF ;
+    public final void entryRuleComponente() throws RecognitionException {
         try {
-            // InternalEvaluacion.g:179:1: ( ruleEstado EOF )
-            // InternalEvaluacion.g:180:1: ruleEstado EOF
+            // InternalEvaluacion.g:179:1: ( ruleComponente EOF )
+            // InternalEvaluacion.g:180:1: ruleComponente EOF
             {
-             before(grammarAccess.getEstadoRule()); 
+             before(grammarAccess.getComponenteRule()); 
             pushFollow(FOLLOW_1);
-            ruleEstado();
+            ruleComponente();
 
             state._fsp--;
 
-             after(grammarAccess.getEstadoRule()); 
+             after(grammarAccess.getComponenteRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -493,35 +493,35 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleEstado"
+    // $ANTLR end "entryRuleComponente"
 
 
-    // $ANTLR start "ruleEstado"
-    // InternalEvaluacion.g:187:1: ruleEstado : ( ( rule__Estado__Group__0 ) ) ;
-    public final void ruleEstado() throws RecognitionException {
+    // $ANTLR start "ruleComponente"
+    // InternalEvaluacion.g:187:1: ruleComponente : ( ( rule__Componente__Group__0 ) ) ;
+    public final void ruleComponente() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:191:2: ( ( ( rule__Estado__Group__0 ) ) )
-            // InternalEvaluacion.g:192:2: ( ( rule__Estado__Group__0 ) )
+            // InternalEvaluacion.g:191:2: ( ( ( rule__Componente__Group__0 ) ) )
+            // InternalEvaluacion.g:192:2: ( ( rule__Componente__Group__0 ) )
             {
-            // InternalEvaluacion.g:192:2: ( ( rule__Estado__Group__0 ) )
-            // InternalEvaluacion.g:193:3: ( rule__Estado__Group__0 )
+            // InternalEvaluacion.g:192:2: ( ( rule__Componente__Group__0 ) )
+            // InternalEvaluacion.g:193:3: ( rule__Componente__Group__0 )
             {
-             before(grammarAccess.getEstadoAccess().getGroup()); 
-            // InternalEvaluacion.g:194:3: ( rule__Estado__Group__0 )
-            // InternalEvaluacion.g:194:4: rule__Estado__Group__0
+             before(grammarAccess.getComponenteAccess().getGroup()); 
+            // InternalEvaluacion.g:194:3: ( rule__Componente__Group__0 )
+            // InternalEvaluacion.g:194:4: rule__Componente__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Estado__Group__0();
+            rule__Componente__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getEstadoAccess().getGroup()); 
+             after(grammarAccess.getComponenteAccess().getGroup()); 
 
             }
 
@@ -540,7 +540,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleEstado"
+    // $ANTLR end "ruleComponente"
 
 
     // $ANTLR start "entryRuleTransicion"
@@ -1713,21 +1713,21 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MaquinaEstados__Group_3__0__Impl"
-    // InternalEvaluacion.g:544:1: rule__MaquinaEstados__Group_3__0__Impl : ( 'comandos' ) ;
+    // InternalEvaluacion.g:544:1: rule__MaquinaEstados__Group_3__0__Impl : ( 'evaluaciones' ) ;
     public final void rule__MaquinaEstados__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:548:1: ( ( 'comandos' ) )
-            // InternalEvaluacion.g:549:1: ( 'comandos' )
+            // InternalEvaluacion.g:548:1: ( ( 'evaluaciones' ) )
+            // InternalEvaluacion.g:549:1: ( 'evaluaciones' )
             {
-            // InternalEvaluacion.g:549:1: ( 'comandos' )
-            // InternalEvaluacion.g:550:2: 'comandos'
+            // InternalEvaluacion.g:549:1: ( 'evaluaciones' )
+            // InternalEvaluacion.g:550:2: 'evaluaciones'
             {
-             before(grammarAccess.getMaquinaEstadosAccess().getComandosKeyword_3_0()); 
+             before(grammarAccess.getMaquinaEstadosAccess().getEvaluacionesKeyword_3_0()); 
             match(input,15,FOLLOW_2); 
-             after(grammarAccess.getMaquinaEstadosAccess().getComandosKeyword_3_0()); 
+             after(grammarAccess.getMaquinaEstadosAccess().getEvaluacionesKeyword_3_0()); 
 
             }
 
@@ -2037,23 +2037,23 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Evento__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Comando__Group__0"
-    // InternalEvaluacion.g:647:1: rule__Comando__Group__0 : rule__Comando__Group__0__Impl rule__Comando__Group__1 ;
-    public final void rule__Comando__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__0"
+    // InternalEvaluacion.g:647:1: rule__Evaluaciones__Group__0 : rule__Evaluaciones__Group__0__Impl rule__Evaluaciones__Group__1 ;
+    public final void rule__Evaluaciones__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:651:1: ( rule__Comando__Group__0__Impl rule__Comando__Group__1 )
-            // InternalEvaluacion.g:652:2: rule__Comando__Group__0__Impl rule__Comando__Group__1
+            // InternalEvaluacion.g:651:1: ( rule__Evaluaciones__Group__0__Impl rule__Evaluaciones__Group__1 )
+            // InternalEvaluacion.g:652:2: rule__Evaluaciones__Group__0__Impl rule__Evaluaciones__Group__1
             {
             pushFollow(FOLLOW_7);
-            rule__Comando__Group__0__Impl();
+            rule__Evaluaciones__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Comando__Group__1();
+            rule__Evaluaciones__Group__1();
 
             state._fsp--;
 
@@ -2072,35 +2072,35 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__0"
+    // $ANTLR end "rule__Evaluaciones__Group__0"
 
 
-    // $ANTLR start "rule__Comando__Group__0__Impl"
-    // InternalEvaluacion.g:659:1: rule__Comando__Group__0__Impl : ( ( rule__Comando__NameAssignment_0 ) ) ;
-    public final void rule__Comando__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__0__Impl"
+    // InternalEvaluacion.g:659:1: rule__Evaluaciones__Group__0__Impl : ( ( rule__Evaluaciones__NameAssignment_0 ) ) ;
+    public final void rule__Evaluaciones__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:663:1: ( ( ( rule__Comando__NameAssignment_0 ) ) )
-            // InternalEvaluacion.g:664:1: ( ( rule__Comando__NameAssignment_0 ) )
+            // InternalEvaluacion.g:663:1: ( ( ( rule__Evaluaciones__NameAssignment_0 ) ) )
+            // InternalEvaluacion.g:664:1: ( ( rule__Evaluaciones__NameAssignment_0 ) )
             {
-            // InternalEvaluacion.g:664:1: ( ( rule__Comando__NameAssignment_0 ) )
-            // InternalEvaluacion.g:665:2: ( rule__Comando__NameAssignment_0 )
+            // InternalEvaluacion.g:664:1: ( ( rule__Evaluaciones__NameAssignment_0 ) )
+            // InternalEvaluacion.g:665:2: ( rule__Evaluaciones__NameAssignment_0 )
             {
-             before(grammarAccess.getComandoAccess().getNameAssignment_0()); 
-            // InternalEvaluacion.g:666:2: ( rule__Comando__NameAssignment_0 )
-            // InternalEvaluacion.g:666:3: rule__Comando__NameAssignment_0
+             before(grammarAccess.getEvaluacionesAccess().getNameAssignment_0()); 
+            // InternalEvaluacion.g:666:2: ( rule__Evaluaciones__NameAssignment_0 )
+            // InternalEvaluacion.g:666:3: rule__Evaluaciones__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__Comando__NameAssignment_0();
+            rule__Evaluaciones__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getComandoAccess().getNameAssignment_0()); 
+             after(grammarAccess.getEvaluacionesAccess().getNameAssignment_0()); 
 
             }
 
@@ -2119,26 +2119,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__0__Impl"
+    // $ANTLR end "rule__Evaluaciones__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Comando__Group__1"
-    // InternalEvaluacion.g:674:1: rule__Comando__Group__1 : rule__Comando__Group__1__Impl rule__Comando__Group__2 ;
-    public final void rule__Comando__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__1"
+    // InternalEvaluacion.g:674:1: rule__Evaluaciones__Group__1 : rule__Evaluaciones__Group__1__Impl rule__Evaluaciones__Group__2 ;
+    public final void rule__Evaluaciones__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:678:1: ( rule__Comando__Group__1__Impl rule__Comando__Group__2 )
-            // InternalEvaluacion.g:679:2: rule__Comando__Group__1__Impl rule__Comando__Group__2
+            // InternalEvaluacion.g:678:1: ( rule__Evaluaciones__Group__1__Impl rule__Evaluaciones__Group__2 )
+            // InternalEvaluacion.g:679:2: rule__Evaluaciones__Group__1__Impl rule__Evaluaciones__Group__2
             {
             pushFollow(FOLLOW_8);
-            rule__Comando__Group__1__Impl();
+            rule__Evaluaciones__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Comando__Group__2();
+            rule__Evaluaciones__Group__2();
 
             state._fsp--;
 
@@ -2157,12 +2157,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__1"
+    // $ANTLR end "rule__Evaluaciones__Group__1"
 
 
-    // $ANTLR start "rule__Comando__Group__1__Impl"
-    // InternalEvaluacion.g:686:1: rule__Comando__Group__1__Impl : ( '=' ) ;
-    public final void rule__Comando__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__1__Impl"
+    // InternalEvaluacion.g:686:1: rule__Evaluaciones__Group__1__Impl : ( '=' ) ;
+    public final void rule__Evaluaciones__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2173,9 +2173,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:691:1: ( '=' )
             // InternalEvaluacion.g:692:2: '='
             {
-             before(grammarAccess.getComandoAccess().getEqualsSignKeyword_1()); 
+             before(grammarAccess.getEvaluacionesAccess().getEqualsSignKeyword_1()); 
             match(input,16,FOLLOW_2); 
-             after(grammarAccess.getComandoAccess().getEqualsSignKeyword_1()); 
+             after(grammarAccess.getEvaluacionesAccess().getEqualsSignKeyword_1()); 
 
             }
 
@@ -2194,26 +2194,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__1__Impl"
+    // $ANTLR end "rule__Evaluaciones__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Comando__Group__2"
-    // InternalEvaluacion.g:701:1: rule__Comando__Group__2 : rule__Comando__Group__2__Impl rule__Comando__Group__3 ;
-    public final void rule__Comando__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__2"
+    // InternalEvaluacion.g:701:1: rule__Evaluaciones__Group__2 : rule__Evaluaciones__Group__2__Impl rule__Evaluaciones__Group__3 ;
+    public final void rule__Evaluaciones__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:705:1: ( rule__Comando__Group__2__Impl rule__Comando__Group__3 )
-            // InternalEvaluacion.g:706:2: rule__Comando__Group__2__Impl rule__Comando__Group__3
+            // InternalEvaluacion.g:705:1: ( rule__Evaluaciones__Group__2__Impl rule__Evaluaciones__Group__3 )
+            // InternalEvaluacion.g:706:2: rule__Evaluaciones__Group__2__Impl rule__Evaluaciones__Group__3
             {
             pushFollow(FOLLOW_9);
-            rule__Comando__Group__2__Impl();
+            rule__Evaluaciones__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Comando__Group__3();
+            rule__Evaluaciones__Group__3();
 
             state._fsp--;
 
@@ -2232,35 +2232,35 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__2"
+    // $ANTLR end "rule__Evaluaciones__Group__2"
 
 
-    // $ANTLR start "rule__Comando__Group__2__Impl"
-    // InternalEvaluacion.g:713:1: rule__Comando__Group__2__Impl : ( ( rule__Comando__ArgumentoAssignment_2 ) ) ;
-    public final void rule__Comando__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__2__Impl"
+    // InternalEvaluacion.g:713:1: rule__Evaluaciones__Group__2__Impl : ( ( rule__Evaluaciones__ArgumentoAssignment_2 ) ) ;
+    public final void rule__Evaluaciones__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:717:1: ( ( ( rule__Comando__ArgumentoAssignment_2 ) ) )
-            // InternalEvaluacion.g:718:1: ( ( rule__Comando__ArgumentoAssignment_2 ) )
+            // InternalEvaluacion.g:717:1: ( ( ( rule__Evaluaciones__ArgumentoAssignment_2 ) ) )
+            // InternalEvaluacion.g:718:1: ( ( rule__Evaluaciones__ArgumentoAssignment_2 ) )
             {
-            // InternalEvaluacion.g:718:1: ( ( rule__Comando__ArgumentoAssignment_2 ) )
-            // InternalEvaluacion.g:719:2: ( rule__Comando__ArgumentoAssignment_2 )
+            // InternalEvaluacion.g:718:1: ( ( rule__Evaluaciones__ArgumentoAssignment_2 ) )
+            // InternalEvaluacion.g:719:2: ( rule__Evaluaciones__ArgumentoAssignment_2 )
             {
-             before(grammarAccess.getComandoAccess().getArgumentoAssignment_2()); 
-            // InternalEvaluacion.g:720:2: ( rule__Comando__ArgumentoAssignment_2 )
-            // InternalEvaluacion.g:720:3: rule__Comando__ArgumentoAssignment_2
+             before(grammarAccess.getEvaluacionesAccess().getArgumentoAssignment_2()); 
+            // InternalEvaluacion.g:720:2: ( rule__Evaluaciones__ArgumentoAssignment_2 )
+            // InternalEvaluacion.g:720:3: rule__Evaluaciones__ArgumentoAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Comando__ArgumentoAssignment_2();
+            rule__Evaluaciones__ArgumentoAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getComandoAccess().getArgumentoAssignment_2()); 
+             after(grammarAccess.getEvaluacionesAccess().getArgumentoAssignment_2()); 
 
             }
 
@@ -2279,21 +2279,21 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__2__Impl"
+    // $ANTLR end "rule__Evaluaciones__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Comando__Group__3"
-    // InternalEvaluacion.g:728:1: rule__Comando__Group__3 : rule__Comando__Group__3__Impl ;
-    public final void rule__Comando__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__3"
+    // InternalEvaluacion.g:728:1: rule__Evaluaciones__Group__3 : rule__Evaluaciones__Group__3__Impl ;
+    public final void rule__Evaluaciones__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:732:1: ( rule__Comando__Group__3__Impl )
-            // InternalEvaluacion.g:733:2: rule__Comando__Group__3__Impl
+            // InternalEvaluacion.g:732:1: ( rule__Evaluaciones__Group__3__Impl )
+            // InternalEvaluacion.g:733:2: rule__Evaluaciones__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Comando__Group__3__Impl();
+            rule__Evaluaciones__Group__3__Impl();
 
             state._fsp--;
 
@@ -2312,24 +2312,24 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__3"
+    // $ANTLR end "rule__Evaluaciones__Group__3"
 
 
-    // $ANTLR start "rule__Comando__Group__3__Impl"
-    // InternalEvaluacion.g:739:1: rule__Comando__Group__3__Impl : ( ( rule__Comando__Group_3__0 )? ) ;
-    public final void rule__Comando__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group__3__Impl"
+    // InternalEvaluacion.g:739:1: rule__Evaluaciones__Group__3__Impl : ( ( rule__Evaluaciones__Group_3__0 )? ) ;
+    public final void rule__Evaluaciones__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:743:1: ( ( ( rule__Comando__Group_3__0 )? ) )
-            // InternalEvaluacion.g:744:1: ( ( rule__Comando__Group_3__0 )? )
+            // InternalEvaluacion.g:743:1: ( ( ( rule__Evaluaciones__Group_3__0 )? ) )
+            // InternalEvaluacion.g:744:1: ( ( rule__Evaluaciones__Group_3__0 )? )
             {
-            // InternalEvaluacion.g:744:1: ( ( rule__Comando__Group_3__0 )? )
-            // InternalEvaluacion.g:745:2: ( rule__Comando__Group_3__0 )?
+            // InternalEvaluacion.g:744:1: ( ( rule__Evaluaciones__Group_3__0 )? )
+            // InternalEvaluacion.g:745:2: ( rule__Evaluaciones__Group_3__0 )?
             {
-             before(grammarAccess.getComandoAccess().getGroup_3()); 
-            // InternalEvaluacion.g:746:2: ( rule__Comando__Group_3__0 )?
+             before(grammarAccess.getEvaluacionesAccess().getGroup_3()); 
+            // InternalEvaluacion.g:746:2: ( rule__Evaluaciones__Group_3__0 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2338,10 +2338,10 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             }
             switch (alt10) {
                 case 1 :
-                    // InternalEvaluacion.g:746:3: rule__Comando__Group_3__0
+                    // InternalEvaluacion.g:746:3: rule__Evaluaciones__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Comando__Group_3__0();
+                    rule__Evaluaciones__Group_3__0();
 
                     state._fsp--;
 
@@ -2351,7 +2351,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getComandoAccess().getGroup_3()); 
+             after(grammarAccess.getEvaluacionesAccess().getGroup_3()); 
 
             }
 
@@ -2370,26 +2370,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group__3__Impl"
+    // $ANTLR end "rule__Evaluaciones__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Comando__Group_3__0"
-    // InternalEvaluacion.g:755:1: rule__Comando__Group_3__0 : rule__Comando__Group_3__0__Impl rule__Comando__Group_3__1 ;
-    public final void rule__Comando__Group_3__0() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group_3__0"
+    // InternalEvaluacion.g:755:1: rule__Evaluaciones__Group_3__0 : rule__Evaluaciones__Group_3__0__Impl rule__Evaluaciones__Group_3__1 ;
+    public final void rule__Evaluaciones__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:759:1: ( rule__Comando__Group_3__0__Impl rule__Comando__Group_3__1 )
-            // InternalEvaluacion.g:760:2: rule__Comando__Group_3__0__Impl rule__Comando__Group_3__1
+            // InternalEvaluacion.g:759:1: ( rule__Evaluaciones__Group_3__0__Impl rule__Evaluaciones__Group_3__1 )
+            // InternalEvaluacion.g:760:2: rule__Evaluaciones__Group_3__0__Impl rule__Evaluaciones__Group_3__1
             {
             pushFollow(FOLLOW_10);
-            rule__Comando__Group_3__0__Impl();
+            rule__Evaluaciones__Group_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Comando__Group_3__1();
+            rule__Evaluaciones__Group_3__1();
 
             state._fsp--;
 
@@ -2408,12 +2408,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group_3__0"
+    // $ANTLR end "rule__Evaluaciones__Group_3__0"
 
 
-    // $ANTLR start "rule__Comando__Group_3__0__Impl"
-    // InternalEvaluacion.g:767:1: rule__Comando__Group_3__0__Impl : ( ':' ) ;
-    public final void rule__Comando__Group_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group_3__0__Impl"
+    // InternalEvaluacion.g:767:1: rule__Evaluaciones__Group_3__0__Impl : ( ':' ) ;
+    public final void rule__Evaluaciones__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2424,9 +2424,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:772:1: ( ':' )
             // InternalEvaluacion.g:773:2: ':'
             {
-             before(grammarAccess.getComandoAccess().getColonKeyword_3_0()); 
+             before(grammarAccess.getEvaluacionesAccess().getColonKeyword_3_0()); 
             match(input,17,FOLLOW_2); 
-             after(grammarAccess.getComandoAccess().getColonKeyword_3_0()); 
+             after(grammarAccess.getEvaluacionesAccess().getColonKeyword_3_0()); 
 
             }
 
@@ -2445,21 +2445,21 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group_3__0__Impl"
+    // $ANTLR end "rule__Evaluaciones__Group_3__0__Impl"
 
 
-    // $ANTLR start "rule__Comando__Group_3__1"
-    // InternalEvaluacion.g:782:1: rule__Comando__Group_3__1 : rule__Comando__Group_3__1__Impl ;
-    public final void rule__Comando__Group_3__1() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group_3__1"
+    // InternalEvaluacion.g:782:1: rule__Evaluaciones__Group_3__1 : rule__Evaluaciones__Group_3__1__Impl ;
+    public final void rule__Evaluaciones__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:786:1: ( rule__Comando__Group_3__1__Impl )
-            // InternalEvaluacion.g:787:2: rule__Comando__Group_3__1__Impl
+            // InternalEvaluacion.g:786:1: ( rule__Evaluaciones__Group_3__1__Impl )
+            // InternalEvaluacion.g:787:2: rule__Evaluaciones__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Comando__Group_3__1__Impl();
+            rule__Evaluaciones__Group_3__1__Impl();
 
             state._fsp--;
 
@@ -2478,35 +2478,35 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group_3__1"
+    // $ANTLR end "rule__Evaluaciones__Group_3__1"
 
 
-    // $ANTLR start "rule__Comando__Group_3__1__Impl"
-    // InternalEvaluacion.g:793:1: rule__Comando__Group_3__1__Impl : ( ( rule__Comando__ComentarioAssignment_3_1 ) ) ;
-    public final void rule__Comando__Group_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__Group_3__1__Impl"
+    // InternalEvaluacion.g:793:1: rule__Evaluaciones__Group_3__1__Impl : ( ( rule__Evaluaciones__ComentarioAssignment_3_1 ) ) ;
+    public final void rule__Evaluaciones__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:797:1: ( ( ( rule__Comando__ComentarioAssignment_3_1 ) ) )
-            // InternalEvaluacion.g:798:1: ( ( rule__Comando__ComentarioAssignment_3_1 ) )
+            // InternalEvaluacion.g:797:1: ( ( ( rule__Evaluaciones__ComentarioAssignment_3_1 ) ) )
+            // InternalEvaluacion.g:798:1: ( ( rule__Evaluaciones__ComentarioAssignment_3_1 ) )
             {
-            // InternalEvaluacion.g:798:1: ( ( rule__Comando__ComentarioAssignment_3_1 ) )
-            // InternalEvaluacion.g:799:2: ( rule__Comando__ComentarioAssignment_3_1 )
+            // InternalEvaluacion.g:798:1: ( ( rule__Evaluaciones__ComentarioAssignment_3_1 ) )
+            // InternalEvaluacion.g:799:2: ( rule__Evaluaciones__ComentarioAssignment_3_1 )
             {
-             before(grammarAccess.getComandoAccess().getComentarioAssignment_3_1()); 
-            // InternalEvaluacion.g:800:2: ( rule__Comando__ComentarioAssignment_3_1 )
-            // InternalEvaluacion.g:800:3: rule__Comando__ComentarioAssignment_3_1
+             before(grammarAccess.getEvaluacionesAccess().getComentarioAssignment_3_1()); 
+            // InternalEvaluacion.g:800:2: ( rule__Evaluaciones__ComentarioAssignment_3_1 )
+            // InternalEvaluacion.g:800:3: rule__Evaluaciones__ComentarioAssignment_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__Comando__ComentarioAssignment_3_1();
+            rule__Evaluaciones__ComentarioAssignment_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getComandoAccess().getComentarioAssignment_3_1()); 
+             after(grammarAccess.getEvaluacionesAccess().getComentarioAssignment_3_1()); 
 
             }
 
@@ -2525,7 +2525,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__Group_3__1__Impl"
+    // $ANTLR end "rule__Evaluaciones__Group_3__1__Impl"
 
 
     // $ANTLR start "rule__Atomo__Group_0__0"
@@ -3233,23 +3233,23 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Puntuacion__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group__0"
-    // InternalEvaluacion.g:1052:1: rule__Estado__Group__0 : rule__Estado__Group__0__Impl rule__Estado__Group__1 ;
-    public final void rule__Estado__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__0"
+    // InternalEvaluacion.g:1052:1: rule__Componente__Group__0 : rule__Componente__Group__0__Impl rule__Componente__Group__1 ;
+    public final void rule__Componente__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1056:1: ( rule__Estado__Group__0__Impl rule__Estado__Group__1 )
-            // InternalEvaluacion.g:1057:2: rule__Estado__Group__0__Impl rule__Estado__Group__1
+            // InternalEvaluacion.g:1056:1: ( rule__Componente__Group__0__Impl rule__Componente__Group__1 )
+            // InternalEvaluacion.g:1057:2: rule__Componente__Group__0__Impl rule__Componente__Group__1
             {
             pushFollow(FOLLOW_5);
-            rule__Estado__Group__0__Impl();
+            rule__Componente__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Estado__Group__1();
+            rule__Componente__Group__1();
 
             state._fsp--;
 
@@ -3268,25 +3268,25 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__0"
+    // $ANTLR end "rule__Componente__Group__0"
 
 
-    // $ANTLR start "rule__Estado__Group__0__Impl"
-    // InternalEvaluacion.g:1064:1: rule__Estado__Group__0__Impl : ( 'state' ) ;
-    public final void rule__Estado__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__0__Impl"
+    // InternalEvaluacion.g:1064:1: rule__Componente__Group__0__Impl : ( 'componente' ) ;
+    public final void rule__Componente__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1068:1: ( ( 'state' ) )
-            // InternalEvaluacion.g:1069:1: ( 'state' )
+            // InternalEvaluacion.g:1068:1: ( ( 'componente' ) )
+            // InternalEvaluacion.g:1069:1: ( 'componente' )
             {
-            // InternalEvaluacion.g:1069:1: ( 'state' )
-            // InternalEvaluacion.g:1070:2: 'state'
+            // InternalEvaluacion.g:1069:1: ( 'componente' )
+            // InternalEvaluacion.g:1070:2: 'componente'
             {
-             before(grammarAccess.getEstadoAccess().getStateKeyword_0()); 
+             before(grammarAccess.getComponenteAccess().getComponenteKeyword_0()); 
             match(input,19,FOLLOW_2); 
-             after(grammarAccess.getEstadoAccess().getStateKeyword_0()); 
+             after(grammarAccess.getComponenteAccess().getComponenteKeyword_0()); 
 
             }
 
@@ -3305,26 +3305,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__0__Impl"
+    // $ANTLR end "rule__Componente__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group__1"
-    // InternalEvaluacion.g:1079:1: rule__Estado__Group__1 : rule__Estado__Group__1__Impl rule__Estado__Group__2 ;
-    public final void rule__Estado__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__1"
+    // InternalEvaluacion.g:1079:1: rule__Componente__Group__1 : rule__Componente__Group__1__Impl rule__Componente__Group__2 ;
+    public final void rule__Componente__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1083:1: ( rule__Estado__Group__1__Impl rule__Estado__Group__2 )
-            // InternalEvaluacion.g:1084:2: rule__Estado__Group__1__Impl rule__Estado__Group__2
+            // InternalEvaluacion.g:1083:1: ( rule__Componente__Group__1__Impl rule__Componente__Group__2 )
+            // InternalEvaluacion.g:1084:2: rule__Componente__Group__1__Impl rule__Componente__Group__2
             {
             pushFollow(FOLLOW_13);
-            rule__Estado__Group__1__Impl();
+            rule__Componente__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Estado__Group__2();
+            rule__Componente__Group__2();
 
             state._fsp--;
 
@@ -3343,35 +3343,35 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__1"
+    // $ANTLR end "rule__Componente__Group__1"
 
 
-    // $ANTLR start "rule__Estado__Group__1__Impl"
-    // InternalEvaluacion.g:1091:1: rule__Estado__Group__1__Impl : ( ( rule__Estado__NameAssignment_1 ) ) ;
-    public final void rule__Estado__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__1__Impl"
+    // InternalEvaluacion.g:1091:1: rule__Componente__Group__1__Impl : ( ( rule__Componente__NameAssignment_1 ) ) ;
+    public final void rule__Componente__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1095:1: ( ( ( rule__Estado__NameAssignment_1 ) ) )
-            // InternalEvaluacion.g:1096:1: ( ( rule__Estado__NameAssignment_1 ) )
+            // InternalEvaluacion.g:1095:1: ( ( ( rule__Componente__NameAssignment_1 ) ) )
+            // InternalEvaluacion.g:1096:1: ( ( rule__Componente__NameAssignment_1 ) )
             {
-            // InternalEvaluacion.g:1096:1: ( ( rule__Estado__NameAssignment_1 ) )
-            // InternalEvaluacion.g:1097:2: ( rule__Estado__NameAssignment_1 )
+            // InternalEvaluacion.g:1096:1: ( ( rule__Componente__NameAssignment_1 ) )
+            // InternalEvaluacion.g:1097:2: ( rule__Componente__NameAssignment_1 )
             {
-             before(grammarAccess.getEstadoAccess().getNameAssignment_1()); 
-            // InternalEvaluacion.g:1098:2: ( rule__Estado__NameAssignment_1 )
-            // InternalEvaluacion.g:1098:3: rule__Estado__NameAssignment_1
+             before(grammarAccess.getComponenteAccess().getNameAssignment_1()); 
+            // InternalEvaluacion.g:1098:2: ( rule__Componente__NameAssignment_1 )
+            // InternalEvaluacion.g:1098:3: rule__Componente__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Estado__NameAssignment_1();
+            rule__Componente__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getEstadoAccess().getNameAssignment_1()); 
+             after(grammarAccess.getComponenteAccess().getNameAssignment_1()); 
 
             }
 
@@ -3390,26 +3390,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__1__Impl"
+    // $ANTLR end "rule__Componente__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group__2"
-    // InternalEvaluacion.g:1106:1: rule__Estado__Group__2 : rule__Estado__Group__2__Impl rule__Estado__Group__3 ;
-    public final void rule__Estado__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__2"
+    // InternalEvaluacion.g:1106:1: rule__Componente__Group__2 : rule__Componente__Group__2__Impl rule__Componente__Group__3 ;
+    public final void rule__Componente__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1110:1: ( rule__Estado__Group__2__Impl rule__Estado__Group__3 )
-            // InternalEvaluacion.g:1111:2: rule__Estado__Group__2__Impl rule__Estado__Group__3
+            // InternalEvaluacion.g:1110:1: ( rule__Componente__Group__2__Impl rule__Componente__Group__3 )
+            // InternalEvaluacion.g:1111:2: rule__Componente__Group__2__Impl rule__Componente__Group__3
             {
             pushFollow(FOLLOW_13);
-            rule__Estado__Group__2__Impl();
+            rule__Componente__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Estado__Group__3();
+            rule__Componente__Group__3();
 
             state._fsp--;
 
@@ -3428,24 +3428,24 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__2"
+    // $ANTLR end "rule__Componente__Group__2"
 
 
-    // $ANTLR start "rule__Estado__Group__2__Impl"
-    // InternalEvaluacion.g:1118:1: rule__Estado__Group__2__Impl : ( ( rule__Estado__Group_2__0 )? ) ;
-    public final void rule__Estado__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__2__Impl"
+    // InternalEvaluacion.g:1118:1: rule__Componente__Group__2__Impl : ( ( rule__Componente__Group_2__0 )? ) ;
+    public final void rule__Componente__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1122:1: ( ( ( rule__Estado__Group_2__0 )? ) )
-            // InternalEvaluacion.g:1123:1: ( ( rule__Estado__Group_2__0 )? )
+            // InternalEvaluacion.g:1122:1: ( ( ( rule__Componente__Group_2__0 )? ) )
+            // InternalEvaluacion.g:1123:1: ( ( rule__Componente__Group_2__0 )? )
             {
-            // InternalEvaluacion.g:1123:1: ( ( rule__Estado__Group_2__0 )? )
-            // InternalEvaluacion.g:1124:2: ( rule__Estado__Group_2__0 )?
+            // InternalEvaluacion.g:1123:1: ( ( rule__Componente__Group_2__0 )? )
+            // InternalEvaluacion.g:1124:2: ( rule__Componente__Group_2__0 )?
             {
-             before(grammarAccess.getEstadoAccess().getGroup_2()); 
-            // InternalEvaluacion.g:1125:2: ( rule__Estado__Group_2__0 )?
+             before(grammarAccess.getComponenteAccess().getGroup_2()); 
+            // InternalEvaluacion.g:1125:2: ( rule__Componente__Group_2__0 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -3454,10 +3454,10 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             }
             switch (alt11) {
                 case 1 :
-                    // InternalEvaluacion.g:1125:3: rule__Estado__Group_2__0
+                    // InternalEvaluacion.g:1125:3: rule__Componente__Group_2__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Estado__Group_2__0();
+                    rule__Componente__Group_2__0();
 
                     state._fsp--;
 
@@ -3467,7 +3467,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getEstadoAccess().getGroup_2()); 
+             after(grammarAccess.getComponenteAccess().getGroup_2()); 
 
             }
 
@@ -3486,21 +3486,21 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__2__Impl"
+    // $ANTLR end "rule__Componente__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group__3"
-    // InternalEvaluacion.g:1133:1: rule__Estado__Group__3 : rule__Estado__Group__3__Impl ;
-    public final void rule__Estado__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__3"
+    // InternalEvaluacion.g:1133:1: rule__Componente__Group__3 : rule__Componente__Group__3__Impl ;
+    public final void rule__Componente__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1137:1: ( rule__Estado__Group__3__Impl )
-            // InternalEvaluacion.g:1138:2: rule__Estado__Group__3__Impl
+            // InternalEvaluacion.g:1137:1: ( rule__Componente__Group__3__Impl )
+            // InternalEvaluacion.g:1138:2: rule__Componente__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Estado__Group__3__Impl();
+            rule__Componente__Group__3__Impl();
 
             state._fsp--;
 
@@ -3519,24 +3519,24 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__3"
+    // $ANTLR end "rule__Componente__Group__3"
 
 
-    // $ANTLR start "rule__Estado__Group__3__Impl"
-    // InternalEvaluacion.g:1144:1: rule__Estado__Group__3__Impl : ( ( rule__Estado__TransitionsAssignment_3 )* ) ;
-    public final void rule__Estado__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group__3__Impl"
+    // InternalEvaluacion.g:1144:1: rule__Componente__Group__3__Impl : ( ( rule__Componente__TransitionsAssignment_3 )* ) ;
+    public final void rule__Componente__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1148:1: ( ( ( rule__Estado__TransitionsAssignment_3 )* ) )
-            // InternalEvaluacion.g:1149:1: ( ( rule__Estado__TransitionsAssignment_3 )* )
+            // InternalEvaluacion.g:1148:1: ( ( ( rule__Componente__TransitionsAssignment_3 )* ) )
+            // InternalEvaluacion.g:1149:1: ( ( rule__Componente__TransitionsAssignment_3 )* )
             {
-            // InternalEvaluacion.g:1149:1: ( ( rule__Estado__TransitionsAssignment_3 )* )
-            // InternalEvaluacion.g:1150:2: ( rule__Estado__TransitionsAssignment_3 )*
+            // InternalEvaluacion.g:1149:1: ( ( rule__Componente__TransitionsAssignment_3 )* )
+            // InternalEvaluacion.g:1150:2: ( rule__Componente__TransitionsAssignment_3 )*
             {
-             before(grammarAccess.getEstadoAccess().getTransitionsAssignment_3()); 
-            // InternalEvaluacion.g:1151:2: ( rule__Estado__TransitionsAssignment_3 )*
+             before(grammarAccess.getComponenteAccess().getTransitionsAssignment_3()); 
+            // InternalEvaluacion.g:1151:2: ( rule__Componente__TransitionsAssignment_3 )*
             loop12:
             do {
                 int alt12=2;
@@ -3549,10 +3549,10 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
                 switch (alt12) {
             	case 1 :
-            	    // InternalEvaluacion.g:1151:3: rule__Estado__TransitionsAssignment_3
+            	    // InternalEvaluacion.g:1151:3: rule__Componente__TransitionsAssignment_3
             	    {
             	    pushFollow(FOLLOW_6);
-            	    rule__Estado__TransitionsAssignment_3();
+            	    rule__Componente__TransitionsAssignment_3();
 
             	    state._fsp--;
 
@@ -3565,7 +3565,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-             after(grammarAccess.getEstadoAccess().getTransitionsAssignment_3()); 
+             after(grammarAccess.getComponenteAccess().getTransitionsAssignment_3()); 
 
             }
 
@@ -3584,26 +3584,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group__3__Impl"
+    // $ANTLR end "rule__Componente__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group_2__0"
-    // InternalEvaluacion.g:1160:1: rule__Estado__Group_2__0 : rule__Estado__Group_2__0__Impl rule__Estado__Group_2__1 ;
-    public final void rule__Estado__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__0"
+    // InternalEvaluacion.g:1160:1: rule__Componente__Group_2__0 : rule__Componente__Group_2__0__Impl rule__Componente__Group_2__1 ;
+    public final void rule__Componente__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1164:1: ( rule__Estado__Group_2__0__Impl rule__Estado__Group_2__1 )
-            // InternalEvaluacion.g:1165:2: rule__Estado__Group_2__0__Impl rule__Estado__Group_2__1
+            // InternalEvaluacion.g:1164:1: ( rule__Componente__Group_2__0__Impl rule__Componente__Group_2__1 )
+            // InternalEvaluacion.g:1165:2: rule__Componente__Group_2__0__Impl rule__Componente__Group_2__1
             {
             pushFollow(FOLLOW_14);
-            rule__Estado__Group_2__0__Impl();
+            rule__Componente__Group_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Estado__Group_2__1();
+            rule__Componente__Group_2__1();
 
             state._fsp--;
 
@@ -3622,12 +3622,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__0"
+    // $ANTLR end "rule__Componente__Group_2__0"
 
 
-    // $ANTLR start "rule__Estado__Group_2__0__Impl"
-    // InternalEvaluacion.g:1172:1: rule__Estado__Group_2__0__Impl : ( 'actions' ) ;
-    public final void rule__Estado__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__0__Impl"
+    // InternalEvaluacion.g:1172:1: rule__Componente__Group_2__0__Impl : ( 'actions' ) ;
+    public final void rule__Componente__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3638,9 +3638,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1177:1: ( 'actions' )
             // InternalEvaluacion.g:1178:2: 'actions'
             {
-             before(grammarAccess.getEstadoAccess().getActionsKeyword_2_0()); 
+             before(grammarAccess.getComponenteAccess().getActionsKeyword_2_0()); 
             match(input,20,FOLLOW_2); 
-             after(grammarAccess.getEstadoAccess().getActionsKeyword_2_0()); 
+             after(grammarAccess.getComponenteAccess().getActionsKeyword_2_0()); 
 
             }
 
@@ -3659,26 +3659,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__0__Impl"
+    // $ANTLR end "rule__Componente__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group_2__1"
-    // InternalEvaluacion.g:1187:1: rule__Estado__Group_2__1 : rule__Estado__Group_2__1__Impl rule__Estado__Group_2__2 ;
-    public final void rule__Estado__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__1"
+    // InternalEvaluacion.g:1187:1: rule__Componente__Group_2__1 : rule__Componente__Group_2__1__Impl rule__Componente__Group_2__2 ;
+    public final void rule__Componente__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1191:1: ( rule__Estado__Group_2__1__Impl rule__Estado__Group_2__2 )
-            // InternalEvaluacion.g:1192:2: rule__Estado__Group_2__1__Impl rule__Estado__Group_2__2
+            // InternalEvaluacion.g:1191:1: ( rule__Componente__Group_2__1__Impl rule__Componente__Group_2__2 )
+            // InternalEvaluacion.g:1192:2: rule__Componente__Group_2__1__Impl rule__Componente__Group_2__2
             {
             pushFollow(FOLLOW_5);
-            rule__Estado__Group_2__1__Impl();
+            rule__Componente__Group_2__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Estado__Group_2__2();
+            rule__Componente__Group_2__2();
 
             state._fsp--;
 
@@ -3697,12 +3697,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__1"
+    // $ANTLR end "rule__Componente__Group_2__1"
 
 
-    // $ANTLR start "rule__Estado__Group_2__1__Impl"
-    // InternalEvaluacion.g:1199:1: rule__Estado__Group_2__1__Impl : ( '{' ) ;
-    public final void rule__Estado__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__1__Impl"
+    // InternalEvaluacion.g:1199:1: rule__Componente__Group_2__1__Impl : ( '{' ) ;
+    public final void rule__Componente__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3713,9 +3713,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1204:1: ( '{' )
             // InternalEvaluacion.g:1205:2: '{'
             {
-             before(grammarAccess.getEstadoAccess().getLeftCurlyBracketKeyword_2_1()); 
+             before(grammarAccess.getComponenteAccess().getLeftCurlyBracketKeyword_2_1()); 
             match(input,21,FOLLOW_2); 
-             after(grammarAccess.getEstadoAccess().getLeftCurlyBracketKeyword_2_1()); 
+             after(grammarAccess.getComponenteAccess().getLeftCurlyBracketKeyword_2_1()); 
 
             }
 
@@ -3734,26 +3734,26 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__1__Impl"
+    // $ANTLR end "rule__Componente__Group_2__1__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group_2__2"
-    // InternalEvaluacion.g:1214:1: rule__Estado__Group_2__2 : rule__Estado__Group_2__2__Impl rule__Estado__Group_2__3 ;
-    public final void rule__Estado__Group_2__2() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__2"
+    // InternalEvaluacion.g:1214:1: rule__Componente__Group_2__2 : rule__Componente__Group_2__2__Impl rule__Componente__Group_2__3 ;
+    public final void rule__Componente__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1218:1: ( rule__Estado__Group_2__2__Impl rule__Estado__Group_2__3 )
-            // InternalEvaluacion.g:1219:2: rule__Estado__Group_2__2__Impl rule__Estado__Group_2__3
+            // InternalEvaluacion.g:1218:1: ( rule__Componente__Group_2__2__Impl rule__Componente__Group_2__3 )
+            // InternalEvaluacion.g:1219:2: rule__Componente__Group_2__2__Impl rule__Componente__Group_2__3
             {
             pushFollow(FOLLOW_15);
-            rule__Estado__Group_2__2__Impl();
+            rule__Componente__Group_2__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Estado__Group_2__3();
+            rule__Componente__Group_2__3();
 
             state._fsp--;
 
@@ -3772,46 +3772,46 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__2"
+    // $ANTLR end "rule__Componente__Group_2__2"
 
 
-    // $ANTLR start "rule__Estado__Group_2__2__Impl"
-    // InternalEvaluacion.g:1226:1: rule__Estado__Group_2__2__Impl : ( ( ( rule__Estado__ActionsAssignment_2_2 ) ) ( ( rule__Estado__ActionsAssignment_2_2 )* ) ) ;
-    public final void rule__Estado__Group_2__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__2__Impl"
+    // InternalEvaluacion.g:1226:1: rule__Componente__Group_2__2__Impl : ( ( ( rule__Componente__ActionsAssignment_2_2 ) ) ( ( rule__Componente__ActionsAssignment_2_2 )* ) ) ;
+    public final void rule__Componente__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1230:1: ( ( ( ( rule__Estado__ActionsAssignment_2_2 ) ) ( ( rule__Estado__ActionsAssignment_2_2 )* ) ) )
-            // InternalEvaluacion.g:1231:1: ( ( ( rule__Estado__ActionsAssignment_2_2 ) ) ( ( rule__Estado__ActionsAssignment_2_2 )* ) )
+            // InternalEvaluacion.g:1230:1: ( ( ( ( rule__Componente__ActionsAssignment_2_2 ) ) ( ( rule__Componente__ActionsAssignment_2_2 )* ) ) )
+            // InternalEvaluacion.g:1231:1: ( ( ( rule__Componente__ActionsAssignment_2_2 ) ) ( ( rule__Componente__ActionsAssignment_2_2 )* ) )
             {
-            // InternalEvaluacion.g:1231:1: ( ( ( rule__Estado__ActionsAssignment_2_2 ) ) ( ( rule__Estado__ActionsAssignment_2_2 )* ) )
-            // InternalEvaluacion.g:1232:2: ( ( rule__Estado__ActionsAssignment_2_2 ) ) ( ( rule__Estado__ActionsAssignment_2_2 )* )
+            // InternalEvaluacion.g:1231:1: ( ( ( rule__Componente__ActionsAssignment_2_2 ) ) ( ( rule__Componente__ActionsAssignment_2_2 )* ) )
+            // InternalEvaluacion.g:1232:2: ( ( rule__Componente__ActionsAssignment_2_2 ) ) ( ( rule__Componente__ActionsAssignment_2_2 )* )
             {
-            // InternalEvaluacion.g:1232:2: ( ( rule__Estado__ActionsAssignment_2_2 ) )
-            // InternalEvaluacion.g:1233:3: ( rule__Estado__ActionsAssignment_2_2 )
+            // InternalEvaluacion.g:1232:2: ( ( rule__Componente__ActionsAssignment_2_2 ) )
+            // InternalEvaluacion.g:1233:3: ( rule__Componente__ActionsAssignment_2_2 )
             {
-             before(grammarAccess.getEstadoAccess().getActionsAssignment_2_2()); 
-            // InternalEvaluacion.g:1234:3: ( rule__Estado__ActionsAssignment_2_2 )
-            // InternalEvaluacion.g:1234:4: rule__Estado__ActionsAssignment_2_2
+             before(grammarAccess.getComponenteAccess().getActionsAssignment_2_2()); 
+            // InternalEvaluacion.g:1234:3: ( rule__Componente__ActionsAssignment_2_2 )
+            // InternalEvaluacion.g:1234:4: rule__Componente__ActionsAssignment_2_2
             {
             pushFollow(FOLLOW_6);
-            rule__Estado__ActionsAssignment_2_2();
+            rule__Componente__ActionsAssignment_2_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getEstadoAccess().getActionsAssignment_2_2()); 
+             after(grammarAccess.getComponenteAccess().getActionsAssignment_2_2()); 
 
             }
 
-            // InternalEvaluacion.g:1237:2: ( ( rule__Estado__ActionsAssignment_2_2 )* )
-            // InternalEvaluacion.g:1238:3: ( rule__Estado__ActionsAssignment_2_2 )*
+            // InternalEvaluacion.g:1237:2: ( ( rule__Componente__ActionsAssignment_2_2 )* )
+            // InternalEvaluacion.g:1238:3: ( rule__Componente__ActionsAssignment_2_2 )*
             {
-             before(grammarAccess.getEstadoAccess().getActionsAssignment_2_2()); 
-            // InternalEvaluacion.g:1239:3: ( rule__Estado__ActionsAssignment_2_2 )*
+             before(grammarAccess.getComponenteAccess().getActionsAssignment_2_2()); 
+            // InternalEvaluacion.g:1239:3: ( rule__Componente__ActionsAssignment_2_2 )*
             loop13:
             do {
                 int alt13=2;
@@ -3824,10 +3824,10 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
                 switch (alt13) {
             	case 1 :
-            	    // InternalEvaluacion.g:1239:4: rule__Estado__ActionsAssignment_2_2
+            	    // InternalEvaluacion.g:1239:4: rule__Componente__ActionsAssignment_2_2
             	    {
             	    pushFollow(FOLLOW_6);
-            	    rule__Estado__ActionsAssignment_2_2();
+            	    rule__Componente__ActionsAssignment_2_2();
 
             	    state._fsp--;
 
@@ -3840,7 +3840,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-             after(grammarAccess.getEstadoAccess().getActionsAssignment_2_2()); 
+             after(grammarAccess.getComponenteAccess().getActionsAssignment_2_2()); 
 
             }
 
@@ -3862,21 +3862,21 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__2__Impl"
+    // $ANTLR end "rule__Componente__Group_2__2__Impl"
 
 
-    // $ANTLR start "rule__Estado__Group_2__3"
-    // InternalEvaluacion.g:1248:1: rule__Estado__Group_2__3 : rule__Estado__Group_2__3__Impl ;
-    public final void rule__Estado__Group_2__3() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__3"
+    // InternalEvaluacion.g:1248:1: rule__Componente__Group_2__3 : rule__Componente__Group_2__3__Impl ;
+    public final void rule__Componente__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1252:1: ( rule__Estado__Group_2__3__Impl )
-            // InternalEvaluacion.g:1253:2: rule__Estado__Group_2__3__Impl
+            // InternalEvaluacion.g:1252:1: ( rule__Componente__Group_2__3__Impl )
+            // InternalEvaluacion.g:1253:2: rule__Componente__Group_2__3__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Estado__Group_2__3__Impl();
+            rule__Componente__Group_2__3__Impl();
 
             state._fsp--;
 
@@ -3895,12 +3895,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__3"
+    // $ANTLR end "rule__Componente__Group_2__3"
 
 
-    // $ANTLR start "rule__Estado__Group_2__3__Impl"
-    // InternalEvaluacion.g:1259:1: rule__Estado__Group_2__3__Impl : ( '}' ) ;
-    public final void rule__Estado__Group_2__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Componente__Group_2__3__Impl"
+    // InternalEvaluacion.g:1259:1: rule__Componente__Group_2__3__Impl : ( '}' ) ;
+    public final void rule__Componente__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3911,9 +3911,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1264:1: ( '}' )
             // InternalEvaluacion.g:1265:2: '}'
             {
-             before(grammarAccess.getEstadoAccess().getRightCurlyBracketKeyword_2_3()); 
+             before(grammarAccess.getComponenteAccess().getRightCurlyBracketKeyword_2_3()); 
             match(input,22,FOLLOW_2); 
-             after(grammarAccess.getEstadoAccess().getRightCurlyBracketKeyword_2_3()); 
+             after(grammarAccess.getComponenteAccess().getRightCurlyBracketKeyword_2_3()); 
 
             }
 
@@ -3932,7 +3932,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__Group_2__3__Impl"
+    // $ANTLR end "rule__Componente__Group_2__3__Impl"
 
 
     // $ANTLR start "rule__Transicion__Group__0"
@@ -4262,25 +4262,25 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MaquinaEstados__CommandsAssignment_3_1"
-    // InternalEvaluacion.g:1390:1: rule__MaquinaEstados__CommandsAssignment_3_1 : ( ruleComando ) ;
+    // InternalEvaluacion.g:1390:1: rule__MaquinaEstados__CommandsAssignment_3_1 : ( ruleEvaluaciones ) ;
     public final void rule__MaquinaEstados__CommandsAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1394:1: ( ( ruleComando ) )
-            // InternalEvaluacion.g:1395:2: ( ruleComando )
+            // InternalEvaluacion.g:1394:1: ( ( ruleEvaluaciones ) )
+            // InternalEvaluacion.g:1395:2: ( ruleEvaluaciones )
             {
-            // InternalEvaluacion.g:1395:2: ( ruleComando )
-            // InternalEvaluacion.g:1396:3: ruleComando
+            // InternalEvaluacion.g:1395:2: ( ruleEvaluaciones )
+            // InternalEvaluacion.g:1396:3: ruleEvaluaciones
             {
-             before(grammarAccess.getMaquinaEstadosAccess().getCommandsComandoParserRuleCall_3_1_0()); 
+             before(grammarAccess.getMaquinaEstadosAccess().getCommandsEvaluacionesParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
-            ruleComando();
+            ruleEvaluaciones();
 
             state._fsp--;
 
-             after(grammarAccess.getMaquinaEstadosAccess().getCommandsComandoParserRuleCall_3_1_0()); 
+             after(grammarAccess.getMaquinaEstadosAccess().getCommandsEvaluacionesParserRuleCall_3_1_0()); 
 
             }
 
@@ -4303,25 +4303,25 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MaquinaEstados__StatesAssignment_4"
-    // InternalEvaluacion.g:1405:1: rule__MaquinaEstados__StatesAssignment_4 : ( ruleEstado ) ;
+    // InternalEvaluacion.g:1405:1: rule__MaquinaEstados__StatesAssignment_4 : ( ruleComponente ) ;
     public final void rule__MaquinaEstados__StatesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalEvaluacion.g:1409:1: ( ( ruleEstado ) )
-            // InternalEvaluacion.g:1410:2: ( ruleEstado )
+            // InternalEvaluacion.g:1409:1: ( ( ruleComponente ) )
+            // InternalEvaluacion.g:1410:2: ( ruleComponente )
             {
-            // InternalEvaluacion.g:1410:2: ( ruleEstado )
-            // InternalEvaluacion.g:1411:3: ruleEstado
+            // InternalEvaluacion.g:1410:2: ( ruleComponente )
+            // InternalEvaluacion.g:1411:3: ruleComponente
             {
-             before(grammarAccess.getMaquinaEstadosAccess().getStatesEstadoParserRuleCall_4_0()); 
+             before(grammarAccess.getMaquinaEstadosAccess().getStatesComponenteParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
-            ruleEstado();
+            ruleComponente();
 
             state._fsp--;
 
-             after(grammarAccess.getMaquinaEstadosAccess().getStatesEstadoParserRuleCall_4_0()); 
+             after(grammarAccess.getMaquinaEstadosAccess().getStatesComponenteParserRuleCall_4_0()); 
 
             }
 
@@ -4417,9 +4417,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Evento__CodeAssignment_1"
 
 
-    // $ANTLR start "rule__Comando__NameAssignment_0"
-    // InternalEvaluacion.g:1450:1: rule__Comando__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__Comando__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__NameAssignment_0"
+    // InternalEvaluacion.g:1450:1: rule__Evaluaciones__NameAssignment_0 : ( RULE_ID ) ;
+    public final void rule__Evaluaciones__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4430,9 +4430,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1455:2: ( RULE_ID )
             // InternalEvaluacion.g:1456:3: RULE_ID
             {
-             before(grammarAccess.getComandoAccess().getNameIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getEvaluacionesAccess().getNameIDTerminalRuleCall_0_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getComandoAccess().getNameIDTerminalRuleCall_0_0()); 
+             after(grammarAccess.getEvaluacionesAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
 
@@ -4451,12 +4451,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__NameAssignment_0"
+    // $ANTLR end "rule__Evaluaciones__NameAssignment_0"
 
 
-    // $ANTLR start "rule__Comando__ArgumentoAssignment_2"
-    // InternalEvaluacion.g:1465:1: rule__Comando__ArgumentoAssignment_2 : ( ruleAtomo ) ;
-    public final void rule__Comando__ArgumentoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__ArgumentoAssignment_2"
+    // InternalEvaluacion.g:1465:1: rule__Evaluaciones__ArgumentoAssignment_2 : ( ruleAtomo ) ;
+    public final void rule__Evaluaciones__ArgumentoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4467,13 +4467,13 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1470:2: ( ruleAtomo )
             // InternalEvaluacion.g:1471:3: ruleAtomo
             {
-             before(grammarAccess.getComandoAccess().getArgumentoAtomoParserRuleCall_2_0()); 
+             before(grammarAccess.getEvaluacionesAccess().getArgumentoAtomoParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
             ruleAtomo();
 
             state._fsp--;
 
-             after(grammarAccess.getComandoAccess().getArgumentoAtomoParserRuleCall_2_0()); 
+             after(grammarAccess.getEvaluacionesAccess().getArgumentoAtomoParserRuleCall_2_0()); 
 
             }
 
@@ -4492,12 +4492,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__ArgumentoAssignment_2"
+    // $ANTLR end "rule__Evaluaciones__ArgumentoAssignment_2"
 
 
-    // $ANTLR start "rule__Comando__ComentarioAssignment_3_1"
-    // InternalEvaluacion.g:1480:1: rule__Comando__ComentarioAssignment_3_1 : ( RULE_STRING ) ;
-    public final void rule__Comando__ComentarioAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Evaluaciones__ComentarioAssignment_3_1"
+    // InternalEvaluacion.g:1480:1: rule__Evaluaciones__ComentarioAssignment_3_1 : ( RULE_STRING ) ;
+    public final void rule__Evaluaciones__ComentarioAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4508,9 +4508,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1485:2: ( RULE_STRING )
             // InternalEvaluacion.g:1486:3: RULE_STRING
             {
-             before(grammarAccess.getComandoAccess().getComentarioSTRINGTerminalRuleCall_3_1_0()); 
+             before(grammarAccess.getEvaluacionesAccess().getComentarioSTRINGTerminalRuleCall_3_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getComandoAccess().getComentarioSTRINGTerminalRuleCall_3_1_0()); 
+             after(grammarAccess.getEvaluacionesAccess().getComentarioSTRINGTerminalRuleCall_3_1_0()); 
 
             }
 
@@ -4529,7 +4529,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Comando__ComentarioAssignment_3_1"
+    // $ANTLR end "rule__Evaluaciones__ComentarioAssignment_3_1"
 
 
     // $ANTLR start "rule__Atomo__ValorAssignment_0_1"
@@ -4731,9 +4731,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Puntuacion__CalificacionAssignment_2"
 
 
-    // $ANTLR start "rule__Estado__NameAssignment_1"
-    // InternalEvaluacion.g:1570:1: rule__Estado__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Estado__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Componente__NameAssignment_1"
+    // InternalEvaluacion.g:1570:1: rule__Componente__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Componente__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4744,9 +4744,9 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1575:2: ( RULE_ID )
             // InternalEvaluacion.g:1576:3: RULE_ID
             {
-             before(grammarAccess.getEstadoAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getComponenteAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getEstadoAccess().getNameIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getComponenteAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -4765,12 +4765,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__NameAssignment_1"
+    // $ANTLR end "rule__Componente__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Estado__ActionsAssignment_2_2"
-    // InternalEvaluacion.g:1585:1: rule__Estado__ActionsAssignment_2_2 : ( ( RULE_ID ) ) ;
-    public final void rule__Estado__ActionsAssignment_2_2() throws RecognitionException {
+    // $ANTLR start "rule__Componente__ActionsAssignment_2_2"
+    // InternalEvaluacion.g:1585:1: rule__Componente__ActionsAssignment_2_2 : ( ( RULE_ID ) ) ;
+    public final void rule__Componente__ActionsAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4781,17 +4781,17 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1590:2: ( ( RULE_ID ) )
             // InternalEvaluacion.g:1591:3: ( RULE_ID )
             {
-             before(grammarAccess.getEstadoAccess().getActionsComandoCrossReference_2_2_0()); 
+             before(grammarAccess.getComponenteAccess().getActionsEvaluacionesCrossReference_2_2_0()); 
             // InternalEvaluacion.g:1592:3: ( RULE_ID )
             // InternalEvaluacion.g:1593:4: RULE_ID
             {
-             before(grammarAccess.getEstadoAccess().getActionsComandoIDTerminalRuleCall_2_2_0_1()); 
+             before(grammarAccess.getComponenteAccess().getActionsEvaluacionesIDTerminalRuleCall_2_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getEstadoAccess().getActionsComandoIDTerminalRuleCall_2_2_0_1()); 
+             after(grammarAccess.getComponenteAccess().getActionsEvaluacionesIDTerminalRuleCall_2_2_0_1()); 
 
             }
 
-             after(grammarAccess.getEstadoAccess().getActionsComandoCrossReference_2_2_0()); 
+             after(grammarAccess.getComponenteAccess().getActionsEvaluacionesCrossReference_2_2_0()); 
 
             }
 
@@ -4810,12 +4810,12 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__ActionsAssignment_2_2"
+    // $ANTLR end "rule__Componente__ActionsAssignment_2_2"
 
 
-    // $ANTLR start "rule__Estado__TransitionsAssignment_3"
-    // InternalEvaluacion.g:1604:1: rule__Estado__TransitionsAssignment_3 : ( ruleTransicion ) ;
-    public final void rule__Estado__TransitionsAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Componente__TransitionsAssignment_3"
+    // InternalEvaluacion.g:1604:1: rule__Componente__TransitionsAssignment_3 : ( ruleTransicion ) ;
+    public final void rule__Componente__TransitionsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4826,13 +4826,13 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1609:2: ( ruleTransicion )
             // InternalEvaluacion.g:1610:3: ruleTransicion
             {
-             before(grammarAccess.getEstadoAccess().getTransitionsTransicionParserRuleCall_3_0()); 
+             before(grammarAccess.getComponenteAccess().getTransitionsTransicionParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
             ruleTransicion();
 
             state._fsp--;
 
-             after(grammarAccess.getEstadoAccess().getTransitionsTransicionParserRuleCall_3_0()); 
+             after(grammarAccess.getComponenteAccess().getTransitionsTransicionParserRuleCall_3_0()); 
 
             }
 
@@ -4851,7 +4851,7 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Estado__TransitionsAssignment_3"
+    // $ANTLR end "rule__Componente__TransitionsAssignment_3"
 
 
     // $ANTLR start "rule__Transicion__EventAssignment_0"
@@ -4912,17 +4912,17 @@ public class InternalEvaluacionParser extends AbstractInternalContentAssistParse
             // InternalEvaluacion.g:1643:2: ( ( RULE_ID ) )
             // InternalEvaluacion.g:1644:3: ( RULE_ID )
             {
-             before(grammarAccess.getTransicionAccess().getStateEstadoCrossReference_2_0()); 
+             before(grammarAccess.getTransicionAccess().getStateComponenteCrossReference_2_0()); 
             // InternalEvaluacion.g:1645:3: ( RULE_ID )
             // InternalEvaluacion.g:1646:4: RULE_ID
             {
-             before(grammarAccess.getTransicionAccess().getStateEstadoIDTerminalRuleCall_2_0_1()); 
+             before(grammarAccess.getTransicionAccess().getStateComponenteIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getTransicionAccess().getStateEstadoIDTerminalRuleCall_2_0_1()); 
+             after(grammarAccess.getTransicionAccess().getStateComponenteIDTerminalRuleCall_2_0_1()); 
 
             }
 
-             after(grammarAccess.getTransicionAccess().getStateEstadoCrossReference_2_0()); 
+             after(grammarAccess.getTransicionAccess().getStateComponenteCrossReference_2_0()); 
 
             }
 

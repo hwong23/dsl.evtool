@@ -42,13 +42,13 @@ public interface EvaluacionFactory extends EFactory
   Evento createEvento();
 
   /**
-   * Returns a new object of class '<em>Comando</em>'.
+   * Returns a new object of class '<em>Evaluaciones</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Comando</em>'.
+   * @return a new object of class '<em>Evaluaciones</em>'.
    * @generated
    */
-  Comando createComando();
+  Evaluaciones createEvaluaciones();
 
   /**
    * Returns a new object of class '<em>Atomo</em>'.
@@ -69,13 +69,13 @@ public interface EvaluacionFactory extends EFactory
   Puntuacion createPuntuacion();
 
   /**
-   * Returns a new object of class '<em>Estado</em>'.
+   * Returns a new object of class '<em>Componente</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Estado</em>'.
+   * @return a new object of class '<em>Componente</em>'.
    * @generated
    */
-  Estado createEstado();
+  Componente createComponente();
 
   /**
    * Returns a new object of class '<em>Transicion</em>'.

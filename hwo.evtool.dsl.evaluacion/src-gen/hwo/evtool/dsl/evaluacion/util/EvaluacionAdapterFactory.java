@@ -86,9 +86,9 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createEventoAdapter();
       }
       @Override
-      public Adapter caseComando(Comando object)
+      public Adapter caseEvaluaciones(Evaluaciones object)
       {
-        return createComandoAdapter();
+        return createEvaluacionesAdapter();
       }
       @Override
       public Adapter caseAtomo(Atomo object)
@@ -101,9 +101,9 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createPuntuacionAdapter();
       }
       @Override
-      public Adapter caseEstado(Estado object)
+      public Adapter caseComponente(Componente object)
       {
-        return createEstadoAdapter();
+        return createComponenteAdapter();
       }
       @Override
       public Adapter caseTransicion(Transicion object)
@@ -178,16 +178,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Comando <em>Comando</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Evaluaciones <em>Evaluaciones</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Comando
+   * @see hwo.evtool.dsl.evaluacion.Evaluaciones
    * @generated
    */
-  public Adapter createComandoAdapter()
+  public Adapter createEvaluacionesAdapter()
   {
     return null;
   }
@@ -223,16 +223,16 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Estado <em>Estado</em>}'.
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Componente <em>Componente</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Estado
+   * @see hwo.evtool.dsl.evaluacion.Componente
    * @generated
    */
-  public Adapter createEstadoAdapter()
+  public Adapter createComponenteAdapter()
   {
     return null;
   }

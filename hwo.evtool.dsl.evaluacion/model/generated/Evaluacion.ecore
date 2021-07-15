@@ -7,15 +7,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resetEvents" unique="false"
         upperBound="-1" eType="#//Evento"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1"
-        eType="#//Comando" containment="true"/>
+        eType="#//Evaluaciones" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
-        eType="#//Estado" containment="true"/>
+        eType="#//Componente" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Evento">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Comando">
+  <eClassifiers xsi:type="ecore:EClass" name="Evaluaciones">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="argumento" eType="#//Atomo"
         containment="true"/>
@@ -26,16 +26,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nota" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="calificacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Estado">
+  <eClassifiers xsi:type="ecore:EClass" name="Componente">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" unique="false"
-        upperBound="-1" eType="#//Comando"/>
+        upperBound="-1" eType="#//Evaluaciones"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
         eType="#//Transicion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transicion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Evento"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Estado"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Componente"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntConstant" eSuperTypes="#//Atomo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="#//Puntuacion"

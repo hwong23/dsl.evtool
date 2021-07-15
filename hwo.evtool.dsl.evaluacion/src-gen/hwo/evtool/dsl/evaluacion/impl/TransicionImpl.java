@@ -3,7 +3,7 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Estado;
+import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evento;
 import hwo.evtool.dsl.evaluacion.Transicion;
@@ -50,7 +50,7 @@ public class TransicionImpl extends MinimalEObjectImpl.Container implements Tran
    * @generated
    * @ordered
    */
-  protected Estado state;
+  protected Componente state;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,12 +124,12 @@ public class TransicionImpl extends MinimalEObjectImpl.Container implements Tran
    * @generated
    */
   @Override
-  public Estado getState()
+  public Componente getState()
   {
     if (state != null && state.eIsProxy())
     {
       InternalEObject oldState = (InternalEObject)state;
-      state = (Estado)eResolveProxy(oldState);
+      state = (Componente)eResolveProxy(oldState);
       if (state != oldState)
       {
         if (eNotificationRequired())
@@ -144,7 +144,7 @@ public class TransicionImpl extends MinimalEObjectImpl.Container implements Tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public Estado basicGetState()
+  public Componente basicGetState()
   {
     return state;
   }
@@ -155,9 +155,9 @@ public class TransicionImpl extends MinimalEObjectImpl.Container implements Tran
    * @generated
    */
   @Override
-  public void setState(Estado newState)
+  public void setState(Componente newState)
   {
-    Estado oldState = state;
+    Componente oldState = state;
     state = newState;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.TRANSICION__STATE, oldState, state));
@@ -197,7 +197,7 @@ public class TransicionImpl extends MinimalEObjectImpl.Container implements Tran
         setEvent((Evento)newValue);
         return;
       case EvaluacionPackage.TRANSICION__STATE:
-        setState((Estado)newValue);
+        setState((Componente)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -217,7 +217,7 @@ public class TransicionImpl extends MinimalEObjectImpl.Container implements Tran
         setEvent((Evento)null);
         return;
       case EvaluacionPackage.TRANSICION__STATE:
-        setState((Estado)null);
+        setState((Componente)null);
         return;
     }
     super.eUnset(featureID);

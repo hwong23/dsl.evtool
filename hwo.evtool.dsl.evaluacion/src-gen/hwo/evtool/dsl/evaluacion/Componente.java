@@ -9,23 +9,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Estado</b></em>'.
+ * A representation of the model object '<em><b>Componente</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Estado#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Estado#getActions <em>Actions</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Estado#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Componente#getName <em>Name</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Componente#getActions <em>Actions</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Componente#getTransitions <em>Transitions</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEstado()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponente()
  * @model
  * @generated
  */
-public interface Estado extends EObject
+public interface Componente extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -33,14 +33,14 @@ public interface Estado extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEstado_Name()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponente_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Estado#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Componente#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -51,15 +51,15 @@ public interface Estado extends EObject
 
   /**
    * Returns the value of the '<em><b>Actions</b></em>' reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Comando}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Evaluaciones}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Actions</em>' reference list.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEstado_Actions()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponente_Actions()
    * @model
    * @generated
    */
-  EList<Comando> getActions();
+  EList<Evaluaciones> getActions();
 
   /**
    * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.
@@ -67,10 +67,10 @@ public interface Estado extends EObject
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Transitions</em>' containment reference list.
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEstado_Transitions()
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getComponente_Transitions()
    * @model containment="true"
    * @generated
    */
   EList<Transicion> getTransitions();
 
-} // Estado
+} // Componente

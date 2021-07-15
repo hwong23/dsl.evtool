@@ -87,10 +87,10 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.COMANDO:
+      case EvaluacionPackage.EVALUACIONES:
       {
-        Comando comando = (Comando)theEObject;
-        T result = caseComando(comando);
+        Evaluaciones evaluaciones = (Evaluaciones)theEObject;
+        T result = caseEvaluaciones(evaluaciones);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -108,10 +108,10 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.ESTADO:
+      case EvaluacionPackage.COMPONENTE:
       {
-        Estado estado = (Estado)theEObject;
-        T result = caseEstado(estado);
+        Componente componente = (Componente)theEObject;
+        T result = caseComponente(componente);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -183,17 +183,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Comando</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Evaluaciones</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Comando</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Evaluaciones</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseComando(Comando object)
+  public T caseEvaluaciones(Evaluaciones object)
   {
     return null;
   }
@@ -231,17 +231,17 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Estado</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Componente</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Estado</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Componente</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEstado(Estado object)
+  public T caseComponente(Componente object)
   {
     return null;
   }

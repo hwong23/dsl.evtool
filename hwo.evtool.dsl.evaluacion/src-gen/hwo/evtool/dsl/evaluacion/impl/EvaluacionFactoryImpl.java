@@ -67,10 +67,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
     {
       case EvaluacionPackage.MAQUINA_ESTADOS: return createMaquinaEstados();
       case EvaluacionPackage.EVENTO: return createEvento();
-      case EvaluacionPackage.COMANDO: return createComando();
+      case EvaluacionPackage.EVALUACIONES: return createEvaluaciones();
       case EvaluacionPackage.ATOMO: return createAtomo();
       case EvaluacionPackage.PUNTUACION: return createPuntuacion();
-      case EvaluacionPackage.ESTADO: return createEstado();
+      case EvaluacionPackage.COMPONENTE: return createComponente();
       case EvaluacionPackage.TRANSICION: return createTransicion();
       case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
       case EvaluacionPackage.STRING_CONSTANT: return createStringConstant();
@@ -110,10 +110,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Comando createComando()
+  public Evaluaciones createEvaluaciones()
   {
-    ComandoImpl comando = new ComandoImpl();
-    return comando;
+    EvaluacionesImpl evaluaciones = new EvaluacionesImpl();
+    return evaluaciones;
   }
 
   /**
@@ -146,10 +146,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Estado createEstado()
+  public Componente createComponente()
   {
-    EstadoImpl estado = new EstadoImpl();
-    return estado;
+    ComponenteImpl componente = new ComponenteImpl();
+    return componente;
   }
 
   /**

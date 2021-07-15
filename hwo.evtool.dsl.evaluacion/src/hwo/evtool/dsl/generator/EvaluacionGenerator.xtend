@@ -7,11 +7,11 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import hwo.evtool.dsl.evaluacion.Estado
-import hwo.evtool.dsl.evaluacion.Comando
+import hwo.evtool.dsl.evaluacion.Componente
 import hwo.evtool.dsl.evaluacion.IntConstant
 import hwo.evtool.dsl.evaluacion.StringConstant
 import hwo.evtool.dsl.evaluacion.SiNoConstant
+import hwo.evtool.dsl.evaluacion.Evaluaciones
 
 /**
  * Generates code from your model files on save.
@@ -21,7 +21,7 @@ import hwo.evtool.dsl.evaluacion.SiNoConstant
 class EvaluacionGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {	
-		for (e : resource.allContents.toIterable.filter(Estado)) {
+		for (e : resource.allContents.toIterable.filter(Componente)) {
 	        fsa.generateFile (
 				e.eResource.className + ".java",
 	            e.compile
@@ -30,7 +30,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	}
 
 	
-	def CharSequence compile(Estado e) '''
+	def CharSequence compile(Componente e) '''
 	import hwo.evtool.componenteEvaluacion.*;
 	import hwo.evtool.ejecucion.Control;
 
@@ -63,7 +63,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	}
 	'''
 		
-	protected def callCommand(Comando comando, int i) '''
+	protected def callCommand(Evaluaciones comando, int i) '''
 		cntrol.llamarEvaluacion1(«i»);
 	'''
 		
@@ -73,15 +73,15 @@ class EvaluacionGenerator extends AbstractGenerator {
 	}
 
 
-	protected def ponerComando(Comando c, int i) '''
+	protected def ponerComando(Evaluaciones c, int i) '''
 		/* llamador */ cntrol.setComando(«i», cmpnt«c.name»);
 	'''	
 
-	protected def declareCommand(Comando c) '''
+	protected def declareCommand(Evaluaciones c) '''
 		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
 	'''
 	
-	protected def declareStrings (Comando c) '''
+	protected def declareStrings (Evaluaciones c) '''
 		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
 	'''
 	

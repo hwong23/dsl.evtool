@@ -4,9 +4,9 @@
 package hwo.evtool.dsl.serializer;
 
 import com.google.inject.Inject;
-import hwo.evtool.dsl.evaluacion.Comando;
-import hwo.evtool.dsl.evaluacion.Estado;
+import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Evento;
 import hwo.evtool.dsl.evaluacion.IntConstant;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
@@ -40,11 +40,11 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == EvaluacionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case EvaluacionPackage.COMANDO:
-				sequence_Comando(context, (Comando) semanticObject); 
+			case EvaluacionPackage.COMPONENTE:
+				sequence_Componente(context, (Componente) semanticObject); 
 				return; 
-			case EvaluacionPackage.ESTADO:
-				sequence_Estado(context, (Estado) semanticObject); 
+			case EvaluacionPackage.EVALUACIONES:
+				sequence_Evaluaciones(context, (Evaluaciones) semanticObject); 
 				return; 
 			case EvaluacionPackage.EVENTO:
 				sequence_Evento(context, (Evento) semanticObject); 
@@ -122,24 +122,24 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Comando returns Comando
+	 *     Componente returns Componente
 	 *
 	 * Constraint:
-	 *     (name=ID argumento=Atomo comentario=STRING?)
+	 *     (name=ID actions+=[Evaluaciones|ID]* transitions+=Transicion*)
 	 */
-	protected void sequence_Comando(ISerializationContext context, Comando semanticObject) {
+	protected void sequence_Componente(ISerializationContext context, Componente semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Estado returns Estado
+	 *     Evaluaciones returns Evaluaciones
 	 *
 	 * Constraint:
-	 *     (name=ID actions+=[Comando|ID]* transitions+=Transicion*)
+	 *     (name=ID argumento=Atomo comentario=STRING?)
 	 */
-	protected void sequence_Estado(ISerializationContext context, Estado semanticObject) {
+	protected void sequence_Evaluaciones(ISerializationContext context, Evaluaciones semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -170,7 +170,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     MaquinaEstados returns MaquinaEstados
 	 *
 	 * Constraint:
-	 *     (events+=Evento* resetEvents+=[Evento|ID]* commands+=Comando* states+=Estado*)
+	 *     (events+=Evento* resetEvents+=[Evento|ID]* commands+=Evaluaciones* states+=Componente*)
 	 */
 	protected void sequence_MaquinaEstados(ISerializationContext context, MaquinaEstados semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -203,7 +203,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Transicion returns Transicion
 	 *
 	 * Constraint:
-	 *     (event=[Evento|ID] state=[Estado|ID])
+	 *     (event=[Evento|ID] state=[Componente|ID])
 	 */
 	protected void sequence_Transicion(ISerializationContext context, Transicion semanticObject) {
 		if (errorAcceptor != null) {
@@ -214,7 +214,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getTransicionAccess().getEventEventoIDTerminalRuleCall_0_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.TRANSICION__EVENT, false));
-		feeder.accept(grammarAccess.getTransicionAccess().getStateEstadoIDTerminalRuleCall_2_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.TRANSICION__STATE, false));
+		feeder.accept(grammarAccess.getTransicionAccess().getStateComponenteIDTerminalRuleCall_2_0_1(), semanticObject.eGet(EvaluacionPackage.Literals.TRANSICION__STATE, false));
 		feeder.finish();
 	}
 	

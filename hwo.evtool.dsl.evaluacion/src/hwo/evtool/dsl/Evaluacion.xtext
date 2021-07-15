@@ -1,7 +1,7 @@
 grammar hwo.evtool.dsl.Evaluacion with org.eclipse.xtext.common.Terminals
 generate evaluacion "http://www.evtool.hwo/dsl/Evaluacion"
 
-MaquinaEstados :
+MaquinaEstados:
 	{MaquinaEstados}
 	('eventos'
 		events+=Evento+
@@ -9,17 +9,17 @@ MaquinaEstados :
 	('resetEvents'
 		resetEvents+=[Evento]+
 	)?
-	('comandos'
-		commands+=Comando+
+	('evaluaciones'
+		commands+=Evaluaciones+
 	)?
-	states+=Estado*
+	states+=Componente*
 ;
 
 Evento:
 	name=ID code=ID
 ;
 
-Comando:
+Evaluaciones:
 	name=ID '=' argumento=Atomo
 	(':' comentario=STRING)?
 ;
@@ -34,13 +34,13 @@ Puntuacion:
 	nota=INT '/' calificacion=INT
 ;
 
-Estado:
-	'state' name=ID
-		('actions' '{' actions+=[Comando]+ '}')?
+Componente:
+	'componente' name=ID
+		('actions' '{' actions+=[Evaluaciones]+ '}')?
 		transitions+=Transicion*
 ;
 
 Transicion:
-	event=[Evento] '=>' state=[Estado]
+	event=[Evento] '=>' state=[Componente]
 ;
 
