@@ -6,42 +6,42 @@ package hwo.evtool.dsl.evaluacion;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Int Constant</b></em>'.
+ * A representation of the model object '<em><b>Propt Constant</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.IntConstant#getValor <em>Valor</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.ProptConstant#getValor <em>Valor</em>}</li>
  * </ul>
  *
- * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getIntConstant()
+ * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getProptConstant()
  * @model
  * @generated
  */
-public interface IntConstant extends Atomo
+public interface ProptConstant extends Atomo
 {
   /**
    * Returns the value of the '<em><b>Valor</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Valor</em>' containment reference.
-   * @see #setValor(Puntuacion)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getIntConstant_Valor()
+   * @see #setValor(ItemPropuesta)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getProptConstant_Valor()
    * @model containment="true"
    * @generated
    */
-  Puntuacion getValor();
+  ItemPropuesta getValor();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.IntConstant#getValor <em>Valor</em>}' containment reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.ProptConstant#getValor <em>Valor</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Valor</em>' containment reference.
    * @see #getValor()
    * @generated
    */
-  void setValor(Puntuacion value);
+  void setValor(ItemPropuesta value);
 
-} // IntConstant
+} // ProptConstant

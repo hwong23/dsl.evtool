@@ -4,7 +4,7 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.Evento;
+import hwo.evtool.dsl.evaluacion.ItemPropuesta;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,66 +15,66 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Evento</b></em>'.
+ * An implementation of the model object '<em><b>Item Propuesta</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EventoImpl#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EventoImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ItemPropuestaImpl#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ItemPropuestaImpl#getCalificacion <em>Calificacion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
+public class ItemPropuestaImpl extends MinimalEObjectImpl.Container implements ItemPropuesta
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTipo()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String TIPO_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTipo()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String tipo = TIPO_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+   * The default value of the '{@link #getCalificacion() <em>Calificacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode()
+   * @see #getCalificacion()
    * @generated
    * @ordered
    */
-  protected static final String CODE_EDEFAULT = null;
+  protected static final String CALIFICACION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+   * The cached value of the '{@link #getCalificacion() <em>Calificacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode()
+   * @see #getCalificacion()
    * @generated
    * @ordered
    */
-  protected String code = CODE_EDEFAULT;
+  protected String calificacion = CALIFICACION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EventoImpl()
+  protected ItemPropuestaImpl()
   {
     super();
   }
@@ -87,7 +87,7 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.EVENTO;
+    return EvaluacionPackage.Literals.ITEM_PROPUESTA;
   }
 
   /**
@@ -96,9 +96,9 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public String getName()
+  public String getTipo()
   {
-    return name;
+    return tipo;
   }
 
   /**
@@ -107,12 +107,12 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setTipo(String newTipo)
   {
-    String oldName = name;
-    name = newName;
+    String oldTipo = tipo;
+    tipo = newTipo;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVENTO__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ITEM_PROPUESTA__TIPO, oldTipo, tipo));
   }
 
   /**
@@ -121,9 +121,9 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public String getCode()
+  public String getCalificacion()
   {
-    return code;
+    return calificacion;
   }
 
   /**
@@ -132,12 +132,12 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public void setCode(String newCode)
+  public void setCalificacion(String newCalificacion)
   {
-    String oldCode = code;
-    code = newCode;
+    String oldCalificacion = calificacion;
+    calificacion = newCalificacion;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVENTO__CODE, oldCode, code));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.ITEM_PROPUESTA__CALIFICACION, oldCalificacion, calificacion));
   }
 
   /**
@@ -150,10 +150,10 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        return getName();
-      case EvaluacionPackage.EVENTO__CODE:
-        return getCode();
+      case EvaluacionPackage.ITEM_PROPUESTA__TIPO:
+        return getTipo();
+      case EvaluacionPackage.ITEM_PROPUESTA__CALIFICACION:
+        return getCalificacion();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,11 +168,11 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        setName((String)newValue);
+      case EvaluacionPackage.ITEM_PROPUESTA__TIPO:
+        setTipo((String)newValue);
         return;
-      case EvaluacionPackage.EVENTO__CODE:
-        setCode((String)newValue);
+      case EvaluacionPackage.ITEM_PROPUESTA__CALIFICACION:
+        setCalificacion((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,11 +188,11 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        setName(NAME_EDEFAULT);
+      case EvaluacionPackage.ITEM_PROPUESTA__TIPO:
+        setTipo(TIPO_EDEFAULT);
         return;
-      case EvaluacionPackage.EVENTO__CODE:
-        setCode(CODE_EDEFAULT);
+      case EvaluacionPackage.ITEM_PROPUESTA__CALIFICACION:
+        setCalificacion(CALIFICACION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -208,10 +208,10 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case EvaluacionPackage.EVENTO__CODE:
-        return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+      case EvaluacionPackage.ITEM_PROPUESTA__TIPO:
+        return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
+      case EvaluacionPackage.ITEM_PROPUESTA__CALIFICACION:
+        return CALIFICACION_EDEFAULT == null ? calificacion != null : !CALIFICACION_EDEFAULT.equals(calificacion);
     }
     return super.eIsSet(featureID);
   }
@@ -227,12 +227,12 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", code: ");
-    result.append(code);
+    result.append(" (tipo: ");
+    result.append(tipo);
+    result.append(", calificacion: ");
+    result.append(calificacion);
     result.append(')');
     return result.toString();
   }
 
-} //EventoImpl
+} //ItemPropuestaImpl
