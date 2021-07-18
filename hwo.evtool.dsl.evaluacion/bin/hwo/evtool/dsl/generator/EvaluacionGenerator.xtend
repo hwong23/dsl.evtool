@@ -77,6 +77,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	'''	
 
 	protected def declareCommand(Evaluaciones c) '''
+		«c.argumento.class.typeName»
 		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
 	'''
 	
