@@ -3,17 +3,13 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Atomo;
 import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionFactory;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Evento;
-import hwo.evtool.dsl.evaluacion.IntConstant;
-import hwo.evtool.dsl.evaluacion.ItemPropuesta;
+import hwo.evtool.dsl.evaluacion.Expresion;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
-import hwo.evtool.dsl.evaluacion.ProptConstant;
-import hwo.evtool.dsl.evaluacion.Puntuacion;
 import hwo.evtool.dsl.evaluacion.Transicion;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -50,34 +46,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass evaluacionesEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass atomoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass itemPropuestaEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass puntuacionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass componenteEClass = null;
 
   /**
@@ -85,21 +53,21 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass evaluacionesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expresionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass transicionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intConstantEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass proptConstantEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -258,127 +226,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EClass getEvaluaciones()
-  {
-    return evaluacionesEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getEvaluaciones_Name()
-  {
-    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getEvaluaciones_Argumento()
-  {
-    return (EReference)evaluacionesEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getEvaluaciones_Comentario()
-  {
-    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getAtomo()
-  {
-    return atomoEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getItemPropuesta()
-  {
-    return itemPropuestaEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getItemPropuesta_Tipo()
-  {
-    return (EAttribute)itemPropuestaEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getItemPropuesta_Calificacion()
-  {
-    return (EAttribute)itemPropuestaEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getPuntuacion()
-  {
-    return puntuacionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPuntuacion_Nota()
-  {
-    return (EAttribute)puntuacionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPuntuacion_Calificacion()
-  {
-    return (EAttribute)puntuacionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getComponente()
   {
     return componenteEClass;
@@ -423,6 +270,72 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
+  public EClass getEvaluaciones()
+  {
+    return evaluacionesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEvaluaciones_Name()
+  {
+    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getEvaluaciones_Expresion()
+  {
+    return (EReference)evaluacionesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEvaluaciones_Comentario()
+  {
+    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getExpresion()
+  {
+    return expresionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getExpresion_Calificacion()
+  {
+    return (EReference)expresionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getTransicion()
   {
     return transicionEClass;
@@ -448,50 +361,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
   public EReference getTransicion_State()
   {
     return (EReference)transicionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getIntConstant()
-  {
-    return intConstantEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getIntConstant_Valor()
-  {
-    return (EReference)intConstantEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getProptConstant()
-  {
-    return proptConstantEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getProptConstant_Valor()
-  {
-    return (EReference)proptConstantEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -535,35 +404,22 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEAttribute(eventoEClass, EVENTO__NAME);
     createEAttribute(eventoEClass, EVENTO__CODE);
 
-    evaluacionesEClass = createEClass(EVALUACIONES);
-    createEAttribute(evaluacionesEClass, EVALUACIONES__NAME);
-    createEReference(evaluacionesEClass, EVALUACIONES__ARGUMENTO);
-    createEAttribute(evaluacionesEClass, EVALUACIONES__COMENTARIO);
-
-    atomoEClass = createEClass(ATOMO);
-
-    itemPropuestaEClass = createEClass(ITEM_PROPUESTA);
-    createEAttribute(itemPropuestaEClass, ITEM_PROPUESTA__TIPO);
-    createEAttribute(itemPropuestaEClass, ITEM_PROPUESTA__CALIFICACION);
-
-    puntuacionEClass = createEClass(PUNTUACION);
-    createEAttribute(puntuacionEClass, PUNTUACION__NOTA);
-    createEAttribute(puntuacionEClass, PUNTUACION__CALIFICACION);
-
     componenteEClass = createEClass(COMPONENTE);
     createEAttribute(componenteEClass, COMPONENTE__NAME);
     createEReference(componenteEClass, COMPONENTE__ACTIONS);
     createEReference(componenteEClass, COMPONENTE__TRANSITIONS);
 
+    evaluacionesEClass = createEClass(EVALUACIONES);
+    createEAttribute(evaluacionesEClass, EVALUACIONES__NAME);
+    createEReference(evaluacionesEClass, EVALUACIONES__EXPRESION);
+    createEAttribute(evaluacionesEClass, EVALUACIONES__COMENTARIO);
+
+    expresionEClass = createEClass(EXPRESION);
+    createEReference(expresionEClass, EXPRESION__CALIFICACION);
+
     transicionEClass = createEClass(TRANSICION);
     createEReference(transicionEClass, TRANSICION__EVENT);
     createEReference(transicionEClass, TRANSICION__STATE);
-
-    intConstantEClass = createEClass(INT_CONSTANT);
-    createEReference(intConstantEClass, INT_CONSTANT__VALOR);
-
-    proptConstantEClass = createEClass(PROPT_CONSTANT);
-    createEReference(proptConstantEClass, PROPT_CONSTANT__VALOR);
   }
 
   /**
@@ -595,8 +451,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    intConstantEClass.getESuperTypes().add(this.getAtomo());
-    proptConstantEClass.getESuperTypes().add(this.getAtomo());
 
     // Initialize classes and features; add operations and parameters
     initEClass(maquinaEstadosEClass, MaquinaEstados.class, "MaquinaEstados", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -609,35 +463,22 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEAttribute(getEvento_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvento_Code(), ecorePackage.getEString(), "code", null, 0, 1, Evento.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(evaluacionesEClass, Evaluaciones.class, "Evaluaciones", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEvaluaciones_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEvaluaciones_Argumento(), this.getAtomo(), null, "argumento", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEvaluaciones_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(atomoEClass, Atomo.class, "Atomo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(itemPropuestaEClass, ItemPropuesta.class, "ItemPropuesta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getItemPropuesta_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, ItemPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getItemPropuesta_Calificacion(), ecorePackage.getEString(), "calificacion", null, 0, 1, ItemPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(puntuacionEClass, Puntuacion.class, "Puntuacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPuntuacion_Nota(), ecorePackage.getEInt(), "nota", null, 0, 1, Puntuacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPuntuacion_Calificacion(), ecorePackage.getEInt(), "calificacion", null, 0, 1, Puntuacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(componenteEClass, Componente.class, "Componente", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getComponente_Name(), ecorePackage.getEString(), "name", null, 0, 1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponente_Actions(), this.getEvaluaciones(), null, "actions", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getComponente_Transitions(), this.getTransicion(), null, "transitions", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(evaluacionesEClass, Evaluaciones.class, "Evaluaciones", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEvaluaciones_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEvaluaciones_Expresion(), this.getExpresion(), null, "expresion", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvaluaciones_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expresionEClass, Expresion.class, "Expresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExpresion_Calificacion(), this.getExpresion(), null, "calificacion", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(transicionEClass, Transicion.class, "Transicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTransicion_Event(), this.getEvento(), null, "event", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTransicion_State(), this.getComponente(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intConstantEClass, IntConstant.class, "IntConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getIntConstant_Valor(), this.getPuntuacion(), null, "valor", null, 0, 1, IntConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(proptConstantEClass, ProptConstant.class, "ProptConstant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getProptConstant_Valor(), this.getItemPropuesta(), null, "valor", null, 0, 1, ProptConstant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

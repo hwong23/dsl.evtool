@@ -31,22 +31,24 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, EvaluacionGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getAtomoAccess().getAlternatives(), "rule__Atomo__Alternatives");
-			builder.put(grammarAccess.getItemPropuestaAccess().getTipoAlternatives_2_0(), "rule__ItemPropuesta__TipoAlternatives_2_0");
-			builder.put(grammarAccess.getItemPropuestaAccess().getCalificacionAlternatives_5_0(), "rule__ItemPropuesta__CalificacionAlternatives_5_0");
+			builder.put(grammarAccess.getExpresionAccess().getCalificacionAlternatives_2_0(), "rule__Expresion__CalificacionAlternatives_2_0");
+			builder.put(grammarAccess.getEvaluarPropuestaAccess().getAlternatives(), "rule__EvaluarPropuesta__Alternatives");
+			builder.put(grammarAccess.getTipoEvaluacionAccess().getAlternatives(), "rule__TipoEvaluacion__Alternatives");
+			builder.put(grammarAccess.getTipoEvaluarPropuestaAccess().getAlternatives(), "rule__TipoEvaluarPropuesta__Alternatives");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup(), "rule__MaquinaEstados__Group__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_1(), "rule__MaquinaEstados__Group_1__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_2(), "rule__MaquinaEstados__Group_2__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_3(), "rule__MaquinaEstados__Group_3__0");
 			builder.put(grammarAccess.getEventoAccess().getGroup(), "rule__Evento__Group__0");
-			builder.put(grammarAccess.getEvaluacionesAccess().getGroup(), "rule__Evaluaciones__Group__0");
-			builder.put(grammarAccess.getEvaluacionesAccess().getGroup_2(), "rule__Evaluaciones__Group_2__0");
-			builder.put(grammarAccess.getAtomoAccess().getGroup_0(), "rule__Atomo__Group_0__0");
-			builder.put(grammarAccess.getAtomoAccess().getGroup_1(), "rule__Atomo__Group_1__0");
-			builder.put(grammarAccess.getItemPropuestaAccess().getGroup(), "rule__ItemPropuesta__Group__0");
-			builder.put(grammarAccess.getPuntuacionAccess().getGroup(), "rule__Puntuacion__Group__0");
 			builder.put(grammarAccess.getComponenteAccess().getGroup(), "rule__Componente__Group__0");
 			builder.put(grammarAccess.getComponenteAccess().getGroup_2(), "rule__Componente__Group_2__0");
+			builder.put(grammarAccess.getEvaluacionesAccess().getGroup(), "rule__Evaluaciones__Group__0");
+			builder.put(grammarAccess.getEvaluacionesAccess().getGroup_3(), "rule__Evaluaciones__Group_3__0");
+			builder.put(grammarAccess.getExpresionAccess().getGroup(), "rule__Expresion__Group__0");
+			builder.put(grammarAccess.getEvaluarEquipoAccess().getGroup(), "rule__EvaluarEquipo__Group__0");
+			builder.put(grammarAccess.getEvaluarPropuestaAccess().getGroup_0(), "rule__EvaluarPropuesta__Group_0__0");
+			builder.put(grammarAccess.getEvaluarPropuestaAccess().getGroup_1(), "rule__EvaluarPropuesta__Group_1__0");
+			builder.put(grammarAccess.getEvaluarPropuestaAccess().getGroup_2(), "rule__EvaluarPropuesta__Group_2__0");
 			builder.put(grammarAccess.getTransicionAccess().getGroup(), "rule__Transicion__Group__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getEventsAssignment_1_1(), "rule__MaquinaEstados__EventsAssignment_1_1");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getResetEventsAssignment_2_1(), "rule__MaquinaEstados__ResetEventsAssignment_2_1");
@@ -54,18 +56,13 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getStatesAssignment_4(), "rule__MaquinaEstados__StatesAssignment_4");
 			builder.put(grammarAccess.getEventoAccess().getNameAssignment_0(), "rule__Evento__NameAssignment_0");
 			builder.put(grammarAccess.getEventoAccess().getCodeAssignment_1(), "rule__Evento__CodeAssignment_1");
-			builder.put(grammarAccess.getEvaluacionesAccess().getNameAssignment_0(), "rule__Evaluaciones__NameAssignment_0");
-			builder.put(grammarAccess.getEvaluacionesAccess().getArgumentoAssignment_1(), "rule__Evaluaciones__ArgumentoAssignment_1");
-			builder.put(grammarAccess.getEvaluacionesAccess().getComentarioAssignment_2_1(), "rule__Evaluaciones__ComentarioAssignment_2_1");
-			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_0_1(), "rule__Atomo__ValorAssignment_0_1");
-			builder.put(grammarAccess.getAtomoAccess().getValorAssignment_1_1(), "rule__Atomo__ValorAssignment_1_1");
-			builder.put(grammarAccess.getItemPropuestaAccess().getTipoAssignment_2(), "rule__ItemPropuesta__TipoAssignment_2");
-			builder.put(grammarAccess.getItemPropuestaAccess().getCalificacionAssignment_5(), "rule__ItemPropuesta__CalificacionAssignment_5");
-			builder.put(grammarAccess.getPuntuacionAccess().getNotaAssignment_0(), "rule__Puntuacion__NotaAssignment_0");
-			builder.put(grammarAccess.getPuntuacionAccess().getCalificacionAssignment_2(), "rule__Puntuacion__CalificacionAssignment_2");
 			builder.put(grammarAccess.getComponenteAccess().getNameAssignment_1(), "rule__Componente__NameAssignment_1");
 			builder.put(grammarAccess.getComponenteAccess().getActionsAssignment_2_2(), "rule__Componente__ActionsAssignment_2_2");
 			builder.put(grammarAccess.getComponenteAccess().getTransitionsAssignment_3(), "rule__Componente__TransitionsAssignment_3");
+			builder.put(grammarAccess.getEvaluacionesAccess().getNameAssignment_1(), "rule__Evaluaciones__NameAssignment_1");
+			builder.put(grammarAccess.getEvaluacionesAccess().getExpresionAssignment_2(), "rule__Evaluaciones__ExpresionAssignment_2");
+			builder.put(grammarAccess.getEvaluacionesAccess().getComentarioAssignment_3_1(), "rule__Evaluaciones__ComentarioAssignment_3_1");
+			builder.put(grammarAccess.getExpresionAccess().getCalificacionAssignment_2(), "rule__Expresion__CalificacionAssignment_2");
 			builder.put(grammarAccess.getTransicionAccess().getEventAssignment_0(), "rule__Transicion__EventAssignment_0");
 			builder.put(grammarAccess.getTransicionAccess().getStateAssignment_2(), "rule__Transicion__StateAssignment_2");
 		}

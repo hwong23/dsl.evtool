@@ -3,9 +3,9 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
-import hwo.evtool.dsl.evaluacion.Atomo;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evaluaciones;
+import hwo.evtool.dsl.evaluacion.Expresion;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl#getArgumento <em>Argumento</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl#getExpresion <em>Expresion</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EvaluacionesImpl#getComentario <em>Comentario</em>}</li>
  * </ul>
  *
@@ -54,14 +54,14 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getArgumento() <em>Argumento</em>}' containment reference.
+   * The cached value of the '{@link #getExpresion() <em>Expresion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArgumento()
+   * @see #getExpresion()
    * @generated
    * @ordered
    */
-  protected Atomo argumento;
+  protected Expresion expresion;
 
   /**
    * The default value of the '{@link #getComentario() <em>Comentario</em>}' attribute.
@@ -135,9 +135,9 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
    * @generated
    */
   @Override
-  public Atomo getArgumento()
+  public Expresion getExpresion()
   {
-    return argumento;
+    return expresion;
   }
 
   /**
@@ -145,13 +145,13 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetArgumento(Atomo newArgumento, NotificationChain msgs)
+  public NotificationChain basicSetExpresion(Expresion newExpresion, NotificationChain msgs)
   {
-    Atomo oldArgumento = argumento;
-    argumento = newArgumento;
+    Expresion oldExpresion = expresion;
+    expresion = newExpresion;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__ARGUMENTO, oldArgumento, newArgumento);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__EXPRESION, oldExpresion, newExpresion);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -163,20 +163,20 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
    * @generated
    */
   @Override
-  public void setArgumento(Atomo newArgumento)
+  public void setExpresion(Expresion newExpresion)
   {
-    if (newArgumento != argumento)
+    if (newExpresion != expresion)
     {
       NotificationChain msgs = null;
-      if (argumento != null)
-        msgs = ((InternalEObject)argumento).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EVALUACIONES__ARGUMENTO, null, msgs);
-      if (newArgumento != null)
-        msgs = ((InternalEObject)newArgumento).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EVALUACIONES__ARGUMENTO, null, msgs);
-      msgs = basicSetArgumento(newArgumento, msgs);
+      if (expresion != null)
+        msgs = ((InternalEObject)expresion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EVALUACIONES__EXPRESION, null, msgs);
+      if (newExpresion != null)
+        msgs = ((InternalEObject)newExpresion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EVALUACIONES__EXPRESION, null, msgs);
+      msgs = basicSetExpresion(newExpresion, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__ARGUMENTO, newArgumento, newArgumento));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__EXPRESION, newExpresion, newExpresion));
   }
 
   /**
@@ -214,8 +214,8 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACIONES__ARGUMENTO:
-        return basicSetArgumento(null, msgs);
+      case EvaluacionPackage.EVALUACIONES__EXPRESION:
+        return basicSetExpresion(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -232,8 +232,8 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
     {
       case EvaluacionPackage.EVALUACIONES__NAME:
         return getName();
-      case EvaluacionPackage.EVALUACIONES__ARGUMENTO:
-        return getArgumento();
+      case EvaluacionPackage.EVALUACIONES__EXPRESION:
+        return getExpresion();
       case EvaluacionPackage.EVALUACIONES__COMENTARIO:
         return getComentario();
     }
@@ -253,8 +253,8 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
       case EvaluacionPackage.EVALUACIONES__NAME:
         setName((String)newValue);
         return;
-      case EvaluacionPackage.EVALUACIONES__ARGUMENTO:
-        setArgumento((Atomo)newValue);
+      case EvaluacionPackage.EVALUACIONES__EXPRESION:
+        setExpresion((Expresion)newValue);
         return;
       case EvaluacionPackage.EVALUACIONES__COMENTARIO:
         setComentario((String)newValue);
@@ -276,8 +276,8 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
       case EvaluacionPackage.EVALUACIONES__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case EvaluacionPackage.EVALUACIONES__ARGUMENTO:
-        setArgumento((Atomo)null);
+      case EvaluacionPackage.EVALUACIONES__EXPRESION:
+        setExpresion((Expresion)null);
         return;
       case EvaluacionPackage.EVALUACIONES__COMENTARIO:
         setComentario(COMENTARIO_EDEFAULT);
@@ -298,8 +298,8 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
     {
       case EvaluacionPackage.EVALUACIONES__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case EvaluacionPackage.EVALUACIONES__ARGUMENTO:
-        return argumento != null;
+      case EvaluacionPackage.EVALUACIONES__EXPRESION:
+        return expresion != null;
       case EvaluacionPackage.EVALUACIONES__COMENTARIO:
         return COMENTARIO_EDEFAULT == null ? comentario != null : !COMENTARIO_EDEFAULT.equals(comentario);
     }

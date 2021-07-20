@@ -4,8 +4,7 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.IntConstant;
-import hwo.evtool.dsl.evaluacion.Puntuacion;
+import hwo.evtool.dsl.evaluacion.Expresion;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -14,38 +13,39 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Int Constant</b></em>'.
+ * An implementation of the model object '<em><b>Expresion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.IntConstantImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl#getCalificacion <em>Calificacion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntConstantImpl extends AtomoImpl implements IntConstant
+public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expresion
 {
   /**
-   * The cached value of the '{@link #getValor() <em>Valor</em>}' containment reference.
+   * The cached value of the '{@link #getCalificacion() <em>Calificacion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValor()
+   * @see #getCalificacion()
    * @generated
    * @ordered
    */
-  protected Puntuacion valor;
+  protected Expresion calificacion;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IntConstantImpl()
+  protected ExpresionImpl()
   {
     super();
   }
@@ -58,7 +58,7 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.INT_CONSTANT;
+    return EvaluacionPackage.Literals.EXPRESION;
   }
 
   /**
@@ -67,9 +67,9 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
    * @generated
    */
   @Override
-  public Puntuacion getValor()
+  public Expresion getCalificacion()
   {
-    return valor;
+    return calificacion;
   }
 
   /**
@@ -77,13 +77,13 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValor(Puntuacion newValor, NotificationChain msgs)
+  public NotificationChain basicSetCalificacion(Expresion newCalificacion, NotificationChain msgs)
   {
-    Puntuacion oldValor = valor;
-    valor = newValor;
+    Expresion oldCalificacion = calificacion;
+    calificacion = newCalificacion;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.INT_CONSTANT__VALOR, oldValor, newValor);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EXPRESION__CALIFICACION, oldCalificacion, newCalificacion);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -95,20 +95,20 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
    * @generated
    */
   @Override
-  public void setValor(Puntuacion newValor)
+  public void setCalificacion(Expresion newCalificacion)
   {
-    if (newValor != valor)
+    if (newCalificacion != calificacion)
     {
       NotificationChain msgs = null;
-      if (valor != null)
-        msgs = ((InternalEObject)valor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.INT_CONSTANT__VALOR, null, msgs);
-      if (newValor != null)
-        msgs = ((InternalEObject)newValor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.INT_CONSTANT__VALOR, null, msgs);
-      msgs = basicSetValor(newValor, msgs);
+      if (calificacion != null)
+        msgs = ((InternalEObject)calificacion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EXPRESION__CALIFICACION, null, msgs);
+      if (newCalificacion != null)
+        msgs = ((InternalEObject)newCalificacion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EXPRESION__CALIFICACION, null, msgs);
+      msgs = basicSetCalificacion(newCalificacion, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.INT_CONSTANT__VALOR, newValor, newValor));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EXPRESION__CALIFICACION, newCalificacion, newCalificacion));
   }
 
   /**
@@ -121,8 +121,8 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   {
     switch (featureID)
     {
-      case EvaluacionPackage.INT_CONSTANT__VALOR:
-        return basicSetValor(null, msgs);
+      case EvaluacionPackage.EXPRESION__CALIFICACION:
+        return basicSetCalificacion(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -137,8 +137,8 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   {
     switch (featureID)
     {
-      case EvaluacionPackage.INT_CONSTANT__VALOR:
-        return getValor();
+      case EvaluacionPackage.EXPRESION__CALIFICACION:
+        return getCalificacion();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -153,8 +153,8 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   {
     switch (featureID)
     {
-      case EvaluacionPackage.INT_CONSTANT__VALOR:
-        setValor((Puntuacion)newValue);
+      case EvaluacionPackage.EXPRESION__CALIFICACION:
+        setCalificacion((Expresion)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,8 +170,8 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   {
     switch (featureID)
     {
-      case EvaluacionPackage.INT_CONSTANT__VALOR:
-        setValor((Puntuacion)null);
+      case EvaluacionPackage.EXPRESION__CALIFICACION:
+        setCalificacion((Expresion)null);
         return;
     }
     super.eUnset(featureID);
@@ -187,10 +187,10 @@ public class IntConstantImpl extends AtomoImpl implements IntConstant
   {
     switch (featureID)
     {
-      case EvaluacionPackage.INT_CONSTANT__VALOR:
-        return valor != null;
+      case EvaluacionPackage.EXPRESION__CALIFICACION:
+        return calificacion != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //IntConstantImpl
+} //ExpresionImpl

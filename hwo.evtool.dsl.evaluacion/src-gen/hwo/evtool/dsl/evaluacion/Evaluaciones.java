@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getArgumento <em>Argumento</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getExpresion <em>Expresion</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getComentario <em>Comentario</em>}</li>
  * </ul>
  *
@@ -48,26 +48,26 @@ public interface Evaluaciones extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Argumento</b></em>' containment reference.
+   * Returns the value of the '<em><b>Expresion</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Argumento</em>' containment reference.
-   * @see #setArgumento(Atomo)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones_Argumento()
+   * @return the value of the '<em>Expresion</em>' containment reference.
+   * @see #setExpresion(Expresion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones_Expresion()
    * @model containment="true"
    * @generated
    */
-  Atomo getArgumento();
+  Expresion getExpresion();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getArgumento <em>Argumento</em>}' containment reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getExpresion <em>Expresion</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Argumento</em>' containment reference.
-   * @see #getArgumento()
+   * @param value the new value of the '<em>Expresion</em>' containment reference.
+   * @see #getExpresion()
    * @generated
    */
-  void setArgumento(Atomo value);
+  void setExpresion(Expresion value);
 
   /**
    * Returns the value of the '<em><b>Comentario</b></em>' attribute.

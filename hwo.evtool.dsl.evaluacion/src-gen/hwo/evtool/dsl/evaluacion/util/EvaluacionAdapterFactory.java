@@ -86,44 +86,24 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createEventoAdapter();
       }
       @Override
-      public Adapter caseEvaluaciones(Evaluaciones object)
-      {
-        return createEvaluacionesAdapter();
-      }
-      @Override
-      public Adapter caseAtomo(Atomo object)
-      {
-        return createAtomoAdapter();
-      }
-      @Override
-      public Adapter caseItemPropuesta(ItemPropuesta object)
-      {
-        return createItemPropuestaAdapter();
-      }
-      @Override
-      public Adapter casePuntuacion(Puntuacion object)
-      {
-        return createPuntuacionAdapter();
-      }
-      @Override
       public Adapter caseComponente(Componente object)
       {
         return createComponenteAdapter();
       }
       @Override
+      public Adapter caseEvaluaciones(Evaluaciones object)
+      {
+        return createEvaluacionesAdapter();
+      }
+      @Override
+      public Adapter caseExpresion(Expresion object)
+      {
+        return createExpresionAdapter();
+      }
+      @Override
       public Adapter caseTransicion(Transicion object)
       {
         return createTransicionAdapter();
-      }
-      @Override
-      public Adapter caseIntConstant(IntConstant object)
-      {
-        return createIntConstantAdapter();
-      }
-      @Override
-      public Adapter caseProptConstant(ProptConstant object)
-      {
-        return createProptConstantAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -178,66 +158,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Evaluaciones <em>Evaluaciones</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Evaluaciones
-   * @generated
-   */
-  public Adapter createEvaluacionesAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Atomo <em>Atomo</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Atomo
-   * @generated
-   */
-  public Adapter createAtomoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ItemPropuesta <em>Item Propuesta</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.ItemPropuesta
-   * @generated
-   */
-  public Adapter createItemPropuestaAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Puntuacion <em>Puntuacion</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.Puntuacion
-   * @generated
-   */
-  public Adapter createPuntuacionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Componente <em>Componente</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -253,6 +173,36 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Evaluaciones <em>Evaluaciones</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see hwo.evtool.dsl.evaluacion.Evaluaciones
+   * @generated
+   */
+  public Adapter createEvaluacionesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Expresion <em>Expresion</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see hwo.evtool.dsl.evaluacion.Expresion
+   * @generated
+   */
+  public Adapter createExpresionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.Transicion <em>Transicion</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -263,36 +213,6 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTransicionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.IntConstant <em>Int Constant</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.IntConstant
-   * @generated
-   */
-  public Adapter createIntConstantAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evaluacion.ProptConstant <em>Propt Constant</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see hwo.evtool.dsl.evaluacion.ProptConstant
-   * @generated
-   */
-  public Adapter createProptConstantAdapter()
   {
     return null;
   }

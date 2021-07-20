@@ -87,34 +87,6 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvaluacionPackage.EVALUACIONES:
-      {
-        Evaluaciones evaluaciones = (Evaluaciones)theEObject;
-        T result = caseEvaluaciones(evaluaciones);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EvaluacionPackage.ATOMO:
-      {
-        Atomo atomo = (Atomo)theEObject;
-        T result = caseAtomo(atomo);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EvaluacionPackage.ITEM_PROPUESTA:
-      {
-        ItemPropuesta itemPropuesta = (ItemPropuesta)theEObject;
-        T result = caseItemPropuesta(itemPropuesta);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EvaluacionPackage.PUNTUACION:
-      {
-        Puntuacion puntuacion = (Puntuacion)theEObject;
-        T result = casePuntuacion(puntuacion);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case EvaluacionPackage.COMPONENTE:
       {
         Componente componente = (Componente)theEObject;
@@ -122,26 +94,24 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EvaluacionPackage.EVALUACIONES:
+      {
+        Evaluaciones evaluaciones = (Evaluaciones)theEObject;
+        T result = caseEvaluaciones(evaluaciones);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvaluacionPackage.EXPRESION:
+      {
+        Expresion expresion = (Expresion)theEObject;
+        T result = caseExpresion(expresion);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EvaluacionPackage.TRANSICION:
       {
         Transicion transicion = (Transicion)theEObject;
         T result = caseTransicion(transicion);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EvaluacionPackage.INT_CONSTANT:
-      {
-        IntConstant intConstant = (IntConstant)theEObject;
-        T result = caseIntConstant(intConstant);
-        if (result == null) result = caseAtomo(intConstant);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EvaluacionPackage.PROPT_CONSTANT:
-      {
-        ProptConstant proptConstant = (ProptConstant)theEObject;
-        T result = caseProptConstant(proptConstant);
-        if (result == null) result = caseAtomo(proptConstant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -182,70 +152,6 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Evaluaciones</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Evaluaciones</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEvaluaciones(Evaluaciones object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Atomo</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Atomo</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAtomo(Atomo object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Item Propuesta</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Item Propuesta</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseItemPropuesta(ItemPropuesta object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Puntuacion</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Puntuacion</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePuntuacion(Puntuacion object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Componente</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -262,6 +168,38 @@ public class EvaluacionSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Evaluaciones</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Evaluaciones</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEvaluaciones(Evaluaciones object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expresion</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expresion</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpresion(Expresion object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Transicion</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -273,38 +211,6 @@ public class EvaluacionSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTransicion(Transicion object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Constant</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Constant</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseIntConstant(IntConstant object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Propt Constant</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Propt Constant</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseProptConstant(ProptConstant object)
   {
     return null;
   }

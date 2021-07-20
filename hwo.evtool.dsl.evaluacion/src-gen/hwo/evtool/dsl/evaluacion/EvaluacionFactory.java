@@ -42,42 +42,6 @@ public interface EvaluacionFactory extends EFactory
   Evento createEvento();
 
   /**
-   * Returns a new object of class '<em>Evaluaciones</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Evaluaciones</em>'.
-   * @generated
-   */
-  Evaluaciones createEvaluaciones();
-
-  /**
-   * Returns a new object of class '<em>Atomo</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Atomo</em>'.
-   * @generated
-   */
-  Atomo createAtomo();
-
-  /**
-   * Returns a new object of class '<em>Item Propuesta</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Item Propuesta</em>'.
-   * @generated
-   */
-  ItemPropuesta createItemPropuesta();
-
-  /**
-   * Returns a new object of class '<em>Puntuacion</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Puntuacion</em>'.
-   * @generated
-   */
-  Puntuacion createPuntuacion();
-
-  /**
    * Returns a new object of class '<em>Componente</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -87,6 +51,24 @@ public interface EvaluacionFactory extends EFactory
   Componente createComponente();
 
   /**
+   * Returns a new object of class '<em>Evaluaciones</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Evaluaciones</em>'.
+   * @generated
+   */
+  Evaluaciones createEvaluaciones();
+
+  /**
+   * Returns a new object of class '<em>Expresion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expresion</em>'.
+   * @generated
+   */
+  Expresion createExpresion();
+
+  /**
    * Returns a new object of class '<em>Transicion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -94,24 +76,6 @@ public interface EvaluacionFactory extends EFactory
    * @generated
    */
   Transicion createTransicion();
-
-  /**
-   * Returns a new object of class '<em>Int Constant</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Constant</em>'.
-   * @generated
-   */
-  IntConstant createIntConstant();
-
-  /**
-   * Returns a new object of class '<em>Propt Constant</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Propt Constant</em>'.
-   * @generated
-   */
-  ProptConstant createProptConstant();
 
   /**
    * Returns the package supported by this factory.

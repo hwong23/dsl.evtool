@@ -11,6 +11,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -18,17 +21,42 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class EvaluacionSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected EvaluacionGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_EvaluarPropuesta_AKeyword_0_1_or_BKeyword_2_1_or_MKeyword_1_1;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (EvaluacionGrammarAccess) access;
+		match_EvaluarPropuesta_AKeyword_0_1_or_BKeyword_2_1_or_MKeyword_1_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getEvaluarPropuestaAccess().getAKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getEvaluarPropuestaAccess().getBKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getEvaluarPropuestaAccess().getMKeyword_1_1()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getINTRule())
+			return getINTToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getTipoEvaluacionRule())
+			return getTipoEvaluacionToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal INT returns ecore::EInt: ('0'..'9')+;
+	 */
+	protected String getINTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
+	
+	/**
+	 * TipoEvaluacion:
+	 * 	TipoEvaluarPropuesta | TipoEvaluarEquipo 
+	 * ;
+	 */
+	protected String getTipoEvaluacionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "EvaluarProblema";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -36,8 +64,21 @@ public class EvaluacionSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if (match_EvaluarPropuesta_AKeyword_0_1_or_BKeyword_2_1_or_MKeyword_1_1.equals(syntax))
+				emit_EvaluarPropuesta_AKeyword_0_1_or_BKeyword_2_1_or_MKeyword_1_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     'A' | 'M' | 'B'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) (rule start)
+	 */
+	protected void emit_EvaluarPropuesta_AKeyword_0_1_or_BKeyword_2_1_or_MKeyword_1_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

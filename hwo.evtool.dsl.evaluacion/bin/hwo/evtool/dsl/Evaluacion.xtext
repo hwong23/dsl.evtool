@@ -19,31 +19,41 @@ Evento:
 	name=ID code=ID
 ;
 
-Evaluaciones:
-	name=ID argumento=Atomo
-	(':' comentario=STRING)?
-;
-
-Atomo:
-	{IntConstant} valor=Puntuacion |  
-	{ProptConstant} valor=ItemPropuesta
-;
-
-ItemPropuesta:
-	'tipo' ':' tipo=('problema'|'tecnica') 'calificacion' ':' calificacion=('A' | 'M' | 'B')
-;
-
-Puntuacion:
-	nota=INT '/' calificacion=INT
-;
-
 Componente:
 	'componente' name=ID
 		('actions' '{' actions+=[Evaluaciones]+ '}')?
 		transitions+=Transicion*
 ;
 
+Evaluaciones:
+	TipoEvaluacion name=ID expresion=Expresion
+	(':' comentario=STRING)?
+;
+
+Expresion:
+	'calificacion' ':' calificacion=(EvaluarPropuesta | EvaluarEquipo)
+;
+
+EvaluarEquipo returns Expresion:
+	{Expresion} INT 
+;
+
+EvaluarPropuesta returns Expresion:
+	({Expresion} 'A'|{Expresion} 'M'|{Expresion} 'B')
+;
+
+TipoEvaluacion:
+	TipoEvaluarPropuesta | TipoEvaluarEquipo 
+;
+
+TipoEvaluarEquipo:
+	'EvaluarArquitecto'
+;
+
+TipoEvaluarPropuesta:
+	'EvaluarProblema' | 'EvaluarTecnica'
+;
+
 Transicion:
 	event=[Evento] '=>' state=[Componente]
 ;
-

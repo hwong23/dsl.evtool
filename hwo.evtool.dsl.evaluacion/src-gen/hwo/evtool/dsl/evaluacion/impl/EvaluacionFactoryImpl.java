@@ -67,14 +67,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
     {
       case EvaluacionPackage.MAQUINA_ESTADOS: return createMaquinaEstados();
       case EvaluacionPackage.EVENTO: return createEvento();
-      case EvaluacionPackage.EVALUACIONES: return createEvaluaciones();
-      case EvaluacionPackage.ATOMO: return createAtomo();
-      case EvaluacionPackage.ITEM_PROPUESTA: return createItemPropuesta();
-      case EvaluacionPackage.PUNTUACION: return createPuntuacion();
       case EvaluacionPackage.COMPONENTE: return createComponente();
+      case EvaluacionPackage.EVALUACIONES: return createEvaluaciones();
+      case EvaluacionPackage.EXPRESION: return createExpresion();
       case EvaluacionPackage.TRANSICION: return createTransicion();
-      case EvaluacionPackage.INT_CONSTANT: return createIntConstant();
-      case EvaluacionPackage.PROPT_CONSTANT: return createProptConstant();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -110,54 +106,6 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Evaluaciones createEvaluaciones()
-  {
-    EvaluacionesImpl evaluaciones = new EvaluacionesImpl();
-    return evaluaciones;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Atomo createAtomo()
-  {
-    AtomoImpl atomo = new AtomoImpl();
-    return atomo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public ItemPropuesta createItemPropuesta()
-  {
-    ItemPropuestaImpl itemPropuesta = new ItemPropuestaImpl();
-    return itemPropuesta;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Puntuacion createPuntuacion()
-  {
-    PuntuacionImpl puntuacion = new PuntuacionImpl();
-    return puntuacion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Componente createComponente()
   {
     ComponenteImpl componente = new ComponenteImpl();
@@ -170,34 +118,34 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
+  public Evaluaciones createEvaluaciones()
+  {
+    EvaluacionesImpl evaluaciones = new EvaluacionesImpl();
+    return evaluaciones;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Expresion createExpresion()
+  {
+    ExpresionImpl expresion = new ExpresionImpl();
+    return expresion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Transicion createTransicion()
   {
     TransicionImpl transicion = new TransicionImpl();
     return transicion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IntConstant createIntConstant()
-  {
-    IntConstantImpl intConstant = new IntConstantImpl();
-    return intConstant;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public ProptConstant createProptConstant()
-  {
-    ProptConstantImpl proptConstant = new ProptConstantImpl();
-    return proptConstant;
   }
 
   /**
