@@ -3,78 +3,77 @@
  */
 package hwo.evtool.dsl.evaluacion.impl;
 
+import hwo.evtool.dsl.evaluacion.CalificarPropuesta;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.Evento;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Evento</b></em>'.
+ * An implementation of the model object '<em><b>Calificar Propuesta</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EventoImpl#getName <em>Name</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.EventoImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getNumerador <em>Numerador</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getDenominador <em>Denominador</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
+public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPropuesta
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNumerador()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final int NUMERADOR_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getNumerador()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected int numerador = NUMERADOR_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+   * The default value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode()
+   * @see #getDenominador()
    * @generated
    * @ordered
    */
-  protected static final String CODE_EDEFAULT = null;
+  protected static final int DENOMINADOR_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+   * The cached value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCode()
+   * @see #getDenominador()
    * @generated
    * @ordered
    */
-  protected String code = CODE_EDEFAULT;
+  protected int denominador = DENOMINADOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EventoImpl()
+  protected CalificarPropuestaImpl()
   {
     super();
   }
@@ -87,7 +86,7 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   @Override
   protected EClass eStaticClass()
   {
-    return EvaluacionPackage.Literals.EVENTO;
+    return EvaluacionPackage.Literals.CALIFICAR_PROPUESTA;
   }
 
   /**
@@ -96,9 +95,9 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public String getName()
+  public int getNumerador()
   {
-    return name;
+    return numerador;
   }
 
   /**
@@ -107,12 +106,12 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setNumerador(int newNumerador)
   {
-    String oldName = name;
-    name = newName;
+    int oldNumerador = numerador;
+    numerador = newNumerador;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVENTO__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR, oldNumerador, numerador));
   }
 
   /**
@@ -121,9 +120,9 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public String getCode()
+  public int getDenominador()
   {
-    return code;
+    return denominador;
   }
 
   /**
@@ -132,12 +131,12 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
    * @generated
    */
   @Override
-  public void setCode(String newCode)
+  public void setDenominador(int newDenominador)
   {
-    String oldCode = code;
-    code = newCode;
+    int oldDenominador = denominador;
+    denominador = newDenominador;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVENTO__CODE, oldCode, code));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR, oldDenominador, denominador));
   }
 
   /**
@@ -150,10 +149,10 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        return getName();
-      case EvaluacionPackage.EVENTO__CODE:
-        return getCode();
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
+        return getNumerador();
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
+        return getDenominador();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,11 +167,11 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        setName((String)newValue);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
+        setNumerador((Integer)newValue);
         return;
-      case EvaluacionPackage.EVENTO__CODE:
-        setCode((String)newValue);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
+        setDenominador((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,11 +187,11 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        setName(NAME_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
+        setNumerador(NUMERADOR_EDEFAULT);
         return;
-      case EvaluacionPackage.EVENTO__CODE:
-        setCode(CODE_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
+        setDenominador(DENOMINADOR_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -208,10 +207,10 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVENTO__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case EvaluacionPackage.EVENTO__CODE:
-        return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
+        return numerador != NUMERADOR_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
+        return denominador != DENOMINADOR_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -227,12 +226,12 @@ public class EventoImpl extends MinimalEObjectImpl.Container implements Evento
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", code: ");
-    result.append(code);
+    result.append(" (numerador: ");
+    result.append(numerador);
+    result.append(", denominador: ");
+    result.append(denominador);
     result.append(')');
     return result.toString();
   }
 
-} //EventoImpl
+} //CalificarPropuestaImpl

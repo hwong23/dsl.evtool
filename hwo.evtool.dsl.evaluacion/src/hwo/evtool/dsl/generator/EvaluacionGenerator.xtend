@@ -33,7 +33,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 	public class «e.name» {
 			«FOR c : e.actions»
-				«//c.declareStrings»
+				«c.declareStrings»
 			«ENDFOR»
 	
 		public static void main(String[] args) {
@@ -66,9 +66,9 @@ class EvaluacionGenerator extends AbstractGenerator {
 //		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
 //	'''
 //	
-//	protected def declareStrings (Evaluaciones c) '''
-//		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
-//	'''
+	protected def declareStrings (Evaluaciones c) '''
+		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
+	'''
 //	
 //	protected def dispatch typeValue(IntConstant c) '''
 //		«c.valor.nota»", "«c.valor.calificacion»'''

@@ -23,17 +23,36 @@
         eType="#//Transicion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Evaluaciones">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" eType="#//TipoEvaluacion"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" eType="#//Expresion"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="comentario" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Expresion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="calificacion" eType="#//Expresion"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transicion">
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Evento"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Componente"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expresion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="calificacion" eType="#//Expresion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comentario" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TipoEvaluacion"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="E_Calificacion">
+    <eLiterals name="alto" literal="A"/>
+    <eLiterals name="medio" value="1" literal="M"/>
+    <eLiterals name="bajo" value="2" literal="B"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalificarPropuesta" eSuperTypes="#//Expresion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numerador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="denominador" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalificarEquipo" eSuperTypes="#//Expresion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="puntuacion" eType="#//E_Calificacion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalificarOtros" eSuperTypes="#//Expresion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

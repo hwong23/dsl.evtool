@@ -26,34 +26,38 @@ Componente:
 ;
 
 Evaluaciones:
-	TipoEvaluacion name=ID expresion=Expresion
+	tipo=TipoEvaluacion name=ID expresion=Expresion
 	(':' comentario=STRING)?
 ;
 
+Transicion:
+	event=[Evento] '=>' state=[Componente]
+;
+
+
 Expresion:
-	'calificacion' ':' calificacion=(EvaluarPropuesta | EvaluarEquipo)
+	'calificacion' ':' calificacion=CalificarExpresion
+	(':' comentario=STRING)?
 ;
 
-EvaluarEquipo returns Expresion:
-	{Expresion} INT 
-;
-
-EvaluarPropuesta returns Expresion:
-	({Expresion} 'A'|{Expresion} 'M'|{Expresion} 'B')
+CalificarExpresion returns Expresion:
+	{CalificarPropuesta} numerador=INT '/' denominador=INT | 
+	{CalificarEquipo} puntuacion=E_Calificacion | 
+	{CalificarOtros} valor=INT 
 ;
 
 TipoEvaluacion:
 	TipoEvaluarPropuesta | TipoEvaluarEquipo 
 ;
 
-TipoEvaluarEquipo:
-	'EvaluarArquitecto'
+TipoEvaluarPropuesta returns TipoEvaluacion:
+	{TipoEvaluacion} ('EvaluarProblema'|'EvaluarTecnica'|'EvaluarOtros')
 ;
 
-TipoEvaluarPropuesta:
-	'EvaluarProblema' | 'EvaluarTecnica'
+TipoEvaluarEquipo returns TipoEvaluacion:
+	{TipoEvaluacion} ('EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion')  
 ;
 
-Transicion:
-	event=[Evento] '=>' state=[Componente]
+enum E_Calificacion:
+	alto = 'A' | medio = 'M' | bajo = 'B'
 ;
