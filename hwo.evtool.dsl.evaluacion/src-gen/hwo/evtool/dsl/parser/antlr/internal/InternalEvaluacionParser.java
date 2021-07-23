@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'eventos'", "'resetEvents'", "'evaluaciones'", "'componente'", "'actions'", "'{'", "'}'", "':'", "'=>'", "'calificacion'", "'/'", "'comentario'", "'EvaluarProblema'", "'EvaluarTecnica'", "'EvaluarOtros'", "'D'", "'EvaluarDirector'", "'EvaluarEducacion'", "'A'", "'M'", "'B'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'eventos'", "'resetEvents'", "'evaluaciones'", "'componente'", "'actions'", "'{'", "'}'", "':'", "'=>'", "'calificacion'", "'/'", "'EvaluarProblema'", "'EvaluarTecnica'", "'EvaluarOtros'", "'D'", "'EvaluarDirector'", "'EvaluarEducacion'", "'A'", "'M'", "'B'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -37,7 +37,6 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
-    public static final int T__31=31;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -328,7 +327,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                         int alt5=2;
                         int LA5_0 = input.LA(1);
 
-                        if ( ((LA5_0>=23 && LA5_0<=28)) ) {
+                        if ( ((LA5_0>=22 && LA5_0<=27)) ) {
                             alt5=1;
                         }
 
@@ -1190,7 +1189,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresion"
-    // InternalEvaluacion.g:476:1: ruleExpresion returns [EObject current=null] : ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) ) ;
+    // InternalEvaluacion.g:476:1: ruleExpresion returns [EObject current=null] : ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) ) ) ;
     public final EObject ruleExpresion() throws RecognitionException {
         EObject current = null;
 
@@ -1204,9 +1203,6 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         Token otherlv_11=null;
         Token otherlv_12=null;
         Token lv_valor_13_0=null;
-        Token otherlv_14=null;
-        Token otherlv_15=null;
-        Token lv_comentario_16_0=null;
         Enumerator lv_puntuacion_3_0 = null;
 
 
@@ -1214,59 +1210,59 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:482:2: ( ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) ) )
-            // InternalEvaluacion.g:483:2: ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) )
+            // InternalEvaluacion.g:482:2: ( ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) ) ) )
+            // InternalEvaluacion.g:483:2: ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) ) )
             {
-            // InternalEvaluacion.g:483:2: ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) )
-            int alt13=3;
-            int LA13_0 = input.LA(1);
+            // InternalEvaluacion.g:483:2: ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) ) )
+            int alt12=3;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA13_0==20) ) {
-                int LA13_1 = input.LA(2);
+            if ( (LA12_0==20) ) {
+                int LA12_1 = input.LA(2);
 
-                if ( (LA13_1==18) ) {
-                    int LA13_2 = input.LA(3);
+                if ( (LA12_1==18) ) {
+                    int LA12_2 = input.LA(3);
 
-                    if ( ((LA13_2>=29 && LA13_2<=31)) ) {
-                        alt13=1;
+                    if ( ((LA12_2>=28 && LA12_2<=30)) ) {
+                        alt12=1;
                     }
-                    else if ( (LA13_2==RULE_INT) ) {
-                        int LA13_4 = input.LA(4);
+                    else if ( (LA12_2==RULE_INT) ) {
+                        int LA12_4 = input.LA(4);
 
-                        if ( (LA13_4==EOF||LA13_4==14||LA13_4==18||(LA13_4>=22 && LA13_4<=28)) ) {
-                            alt13=3;
+                        if ( (LA12_4==EOF||LA12_4==14||LA12_4==18||(LA12_4>=22 && LA12_4<=27)) ) {
+                            alt12=3;
                         }
-                        else if ( (LA13_4==21) ) {
-                            alt13=2;
+                        else if ( (LA12_4==21) ) {
+                            alt12=2;
                         }
                         else {
                             NoViableAltException nvae =
-                                new NoViableAltException("", 13, 4, input);
+                                new NoViableAltException("", 12, 4, input);
 
                             throw nvae;
                         }
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 13, 2, input);
+                            new NoViableAltException("", 12, 2, input);
 
                         throw nvae;
                     }
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 13, 1, input);
+                        new NoViableAltException("", 12, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 12, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt12) {
                 case 1 :
                     // InternalEvaluacion.g:484:3: ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) )
                     {
@@ -1417,10 +1413,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:579:3: ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? )
+                    // InternalEvaluacion.g:579:3: ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) )
                     {
-                    // InternalEvaluacion.g:579:3: ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? )
-                    // InternalEvaluacion.g:580:4: () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )?
+                    // InternalEvaluacion.g:579:3: ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:580:4: () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) )
                     {
                     // InternalEvaluacion.g:580:4: ()
                     // InternalEvaluacion.g:581:5: 
@@ -1447,7 +1443,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     // InternalEvaluacion.g:596:5: (lv_valor_13_0= RULE_INT )
                     // InternalEvaluacion.g:597:6: lv_valor_13_0= RULE_INT
                     {
-                    lv_valor_13_0=(Token)match(input,RULE_INT,FOLLOW_21); 
+                    lv_valor_13_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
                     						newLeafNode(lv_valor_13_0, grammarAccess.getExpresionAccess().getValorINTTerminalRuleCall_2_3_0());
                     					
@@ -1464,57 +1460,6 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-
-                    }
-
-                    // InternalEvaluacion.g:613:4: (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )?
-                    int alt12=2;
-                    int LA12_0 = input.LA(1);
-
-                    if ( (LA12_0==22) ) {
-                        alt12=1;
-                    }
-                    switch (alt12) {
-                        case 1 :
-                            // InternalEvaluacion.g:614:5: otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) )
-                            {
-                            otherlv_14=(Token)match(input,22,FOLLOW_17); 
-
-                            					newLeafNode(otherlv_14, grammarAccess.getExpresionAccess().getComentarioKeyword_2_4_0());
-                            				
-                            otherlv_15=(Token)match(input,18,FOLLOW_15); 
-
-                            					newLeafNode(otherlv_15, grammarAccess.getExpresionAccess().getColonKeyword_2_4_1());
-                            				
-                            // InternalEvaluacion.g:622:5: ( (lv_comentario_16_0= RULE_STRING ) )
-                            // InternalEvaluacion.g:623:6: (lv_comentario_16_0= RULE_STRING )
-                            {
-                            // InternalEvaluacion.g:623:6: (lv_comentario_16_0= RULE_STRING )
-                            // InternalEvaluacion.g:624:7: lv_comentario_16_0= RULE_STRING
-                            {
-                            lv_comentario_16_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
-
-                            							newLeafNode(lv_comentario_16_0, grammarAccess.getExpresionAccess().getComentarioSTRINGTerminalRuleCall_2_4_2_0());
-                            						
-
-                            							if (current==null) {
-                            								current = createModelElement(grammarAccess.getExpresionRule());
-                            							}
-                            							setWithLastConsumed(
-                            								current,
-                            								"comentario",
-                            								lv_comentario_16_0,
-                            								"org.eclipse.xtext.common.Terminals.STRING");
-                            						
-
-                            }
-
-
-                            }
-
-
-                            }
-                            break;
 
                     }
 
@@ -1547,7 +1492,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipoEvaluacion"
-    // InternalEvaluacion.g:646:1: ruleTipoEvaluacion returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) ) ;
+    // InternalEvaluacion.g:618:1: ruleTipoEvaluacion returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) ) ;
     public final Enumerator ruleTipoEvaluacion() throws RecognitionException {
         Enumerator current = null;
 
@@ -1562,57 +1507,57 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:652:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) ) )
-            // InternalEvaluacion.g:653:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) )
+            // InternalEvaluacion.g:624:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) ) )
+            // InternalEvaluacion.g:625:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) )
             {
-            // InternalEvaluacion.g:653:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) )
-            int alt14=6;
+            // InternalEvaluacion.g:625:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) )
+            int alt13=6;
             switch ( input.LA(1) ) {
+            case 22:
+                {
+                alt13=1;
+                }
+                break;
             case 23:
                 {
-                alt14=1;
+                alt13=2;
                 }
                 break;
             case 24:
                 {
-                alt14=2;
+                alt13=3;
                 }
                 break;
             case 25:
                 {
-                alt14=3;
+                alt13=4;
                 }
                 break;
             case 26:
                 {
-                alt14=4;
+                alt13=5;
                 }
                 break;
             case 27:
                 {
-                alt14=5;
-                }
-                break;
-            case 28:
-                {
-                alt14=6;
+                alt13=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt14) {
+            switch (alt13) {
                 case 1 :
-                    // InternalEvaluacion.g:654:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:626:3: (enumLiteral_0= 'EvaluarProblema' )
                     {
-                    // InternalEvaluacion.g:654:3: (enumLiteral_0= 'EvaluarProblema' )
-                    // InternalEvaluacion.g:655:4: enumLiteral_0= 'EvaluarProblema'
+                    // InternalEvaluacion.g:626:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:627:4: enumLiteral_0= 'EvaluarProblema'
                     {
-                    enumLiteral_0=(Token)match(input,23,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,22,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarProblemaEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getTipoEvaluacionAccess().getEvaluarProblemaEnumLiteralDeclaration_0());
@@ -1624,12 +1569,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:662:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:634:3: (enumLiteral_1= 'EvaluarTecnica' )
                     {
-                    // InternalEvaluacion.g:662:3: (enumLiteral_1= 'EvaluarTecnica' )
-                    // InternalEvaluacion.g:663:4: enumLiteral_1= 'EvaluarTecnica'
+                    // InternalEvaluacion.g:634:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:635:4: enumLiteral_1= 'EvaluarTecnica'
                     {
-                    enumLiteral_1=(Token)match(input,24,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,23,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarTecnicaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getTipoEvaluacionAccess().getEvaluarTecnicaEnumLiteralDeclaration_1());
@@ -1641,12 +1586,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:670:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:642:3: (enumLiteral_2= 'EvaluarOtros' )
                     {
-                    // InternalEvaluacion.g:670:3: (enumLiteral_2= 'EvaluarOtros' )
-                    // InternalEvaluacion.g:671:4: enumLiteral_2= 'EvaluarOtros'
+                    // InternalEvaluacion.g:642:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:643:4: enumLiteral_2= 'EvaluarOtros'
                     {
-                    enumLiteral_2=(Token)match(input,25,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,24,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarOtrosEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getTipoEvaluacionAccess().getEvaluarOtrosEnumLiteralDeclaration_2());
@@ -1658,12 +1603,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalEvaluacion.g:678:3: (enumLiteral_3= 'D' )
+                    // InternalEvaluacion.g:650:3: (enumLiteral_3= 'D' )
                     {
-                    // InternalEvaluacion.g:678:3: (enumLiteral_3= 'D' )
-                    // InternalEvaluacion.g:679:4: enumLiteral_3= 'D'
+                    // InternalEvaluacion.g:650:3: (enumLiteral_3= 'D' )
+                    // InternalEvaluacion.g:651:4: enumLiteral_3= 'D'
                     {
-                    enumLiteral_3=(Token)match(input,26,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,25,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarArquitectoEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getTipoEvaluacionAccess().getEvaluarArquitectoEnumLiteralDeclaration_3());
@@ -1675,12 +1620,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalEvaluacion.g:686:3: (enumLiteral_4= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:658:3: (enumLiteral_4= 'EvaluarDirector' )
                     {
-                    // InternalEvaluacion.g:686:3: (enumLiteral_4= 'EvaluarDirector' )
-                    // InternalEvaluacion.g:687:4: enumLiteral_4= 'EvaluarDirector'
+                    // InternalEvaluacion.g:658:3: (enumLiteral_4= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:659:4: enumLiteral_4= 'EvaluarDirector'
                     {
-                    enumLiteral_4=(Token)match(input,27,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,26,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarDirectorEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getTipoEvaluacionAccess().getEvaluarDirectorEnumLiteralDeclaration_4());
@@ -1692,12 +1637,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalEvaluacion.g:694:3: (enumLiteral_5= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:666:3: (enumLiteral_5= 'EvaluarEducacion' )
                     {
-                    // InternalEvaluacion.g:694:3: (enumLiteral_5= 'EvaluarEducacion' )
-                    // InternalEvaluacion.g:695:4: enumLiteral_5= 'EvaluarEducacion'
+                    // InternalEvaluacion.g:666:3: (enumLiteral_5= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:667:4: enumLiteral_5= 'EvaluarEducacion'
                     {
-                    enumLiteral_5=(Token)match(input,28,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,27,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarEducacionEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getTipoEvaluacionAccess().getEvaluarEducacionEnumLiteralDeclaration_5());
@@ -1731,7 +1676,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleE_Calificacion"
-    // InternalEvaluacion.g:705:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
+    // InternalEvaluacion.g:677:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
     public final Enumerator ruleE_Calificacion() throws RecognitionException {
         Enumerator current = null;
 
@@ -1743,42 +1688,42 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:711:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
-            // InternalEvaluacion.g:712:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
+            // InternalEvaluacion.g:683:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
+            // InternalEvaluacion.g:684:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
             {
-            // InternalEvaluacion.g:712:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
-            int alt15=3;
+            // InternalEvaluacion.g:684:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
+            int alt14=3;
             switch ( input.LA(1) ) {
+            case 28:
+                {
+                alt14=1;
+                }
+                break;
             case 29:
                 {
-                alt15=1;
+                alt14=2;
                 }
                 break;
             case 30:
                 {
-                alt15=2;
-                }
-                break;
-            case 31:
-                {
-                alt15=3;
+                alt14=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt15) {
+            switch (alt14) {
                 case 1 :
-                    // InternalEvaluacion.g:713:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:685:3: (enumLiteral_0= 'A' )
                     {
-                    // InternalEvaluacion.g:713:3: (enumLiteral_0= 'A' )
-                    // InternalEvaluacion.g:714:4: enumLiteral_0= 'A'
+                    // InternalEvaluacion.g:685:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:686:4: enumLiteral_0= 'A'
                     {
-                    enumLiteral_0=(Token)match(input,29,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,28,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getAltoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getE_CalificacionAccess().getAltoEnumLiteralDeclaration_0());
@@ -1790,12 +1735,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:721:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:693:3: (enumLiteral_1= 'M' )
                     {
-                    // InternalEvaluacion.g:721:3: (enumLiteral_1= 'M' )
-                    // InternalEvaluacion.g:722:4: enumLiteral_1= 'M'
+                    // InternalEvaluacion.g:693:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:694:4: enumLiteral_1= 'M'
                     {
-                    enumLiteral_1=(Token)match(input,30,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,29,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getMedioEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getE_CalificacionAccess().getMedioEnumLiteralDeclaration_1());
@@ -1807,12 +1752,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:729:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:701:3: (enumLiteral_2= 'B' )
                     {
-                    // InternalEvaluacion.g:729:3: (enumLiteral_2= 'B' )
-                    // InternalEvaluacion.g:730:4: enumLiteral_2= 'B'
+                    // InternalEvaluacion.g:701:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:702:4: enumLiteral_2= 'B'
                     {
-                    enumLiteral_2=(Token)match(input,31,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,30,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2());
@@ -1854,8 +1799,8 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000007012L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000006012L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000001F800000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000001F804002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000000FC00000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000000FC04002L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004002L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008012L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010000L});
@@ -1866,9 +1811,8 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000000E0000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000070000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000400002L});
 
 }

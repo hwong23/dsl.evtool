@@ -610,34 +610,6 @@ ruleExpresion returns [EObject current=null]
 					}
 				)
 			)
-			(
-				otherlv_14='comentario'
-				{
-					newLeafNode(otherlv_14, grammarAccess.getExpresionAccess().getComentarioKeyword_2_4_0());
-				}
-				otherlv_15=':'
-				{
-					newLeafNode(otherlv_15, grammarAccess.getExpresionAccess().getColonKeyword_2_4_1());
-				}
-				(
-					(
-						lv_comentario_16_0=RULE_STRING
-						{
-							newLeafNode(lv_comentario_16_0, grammarAccess.getExpresionAccess().getComentarioSTRINGTerminalRuleCall_2_4_2_0());
-						}
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getExpresionRule());
-							}
-							setWithLastConsumed(
-								$current,
-								"comentario",
-								lv_comentario_16_0,
-								"org.eclipse.xtext.common.Terminals.STRING");
-						}
-					)
-				)
-			)?
 		)
 	)
 ;

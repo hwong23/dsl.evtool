@@ -23,7 +23,7 @@
         eType="#//Transicion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Evaluaciones">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoEvaluacion"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expresion" eType="#//Expresion"
         containment="true"/>
@@ -34,6 +34,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//Componente"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Expresion"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoEvaluacion">
+    <eLiterals name="EvaluarProblema" literal="EvaluarProblema"/>
+    <eLiterals name="EvaluarTecnica" value="1" literal="EvaluarTecnica"/>
+    <eLiterals name="EvaluarOtros" value="2" literal="EvaluarOtros"/>
+    <eLiterals name="EvaluarArquitecto" value="3" literal="D"/>
+    <eLiterals name="EvaluarDirector" value="4" literal="EvaluarDirector"/>
+    <eLiterals name="EvaluarEducacion" value="5" literal="EvaluarEducacion"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="E_Calificacion">
     <eLiterals name="alto" literal="A"/>
     <eLiterals name="medio" value="1" literal="M"/>
@@ -48,6 +56,5 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalificarOtros" eSuperTypes="#//Expresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comentario" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

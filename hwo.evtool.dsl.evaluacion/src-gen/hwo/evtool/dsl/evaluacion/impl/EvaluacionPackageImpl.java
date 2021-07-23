@@ -487,17 +487,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCalificarOtros_Comentario()
-  {
-    return (EAttribute)calificarOtrosEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EEnum getTipoEvaluacion()
   {
     return tipoEvaluacionEEnum;
@@ -581,7 +570,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
 
     calificarOtrosEClass = createEClass(CALIFICAR_OTROS);
     createEAttribute(calificarOtrosEClass, CALIFICAR_OTROS__VALOR);
-    createEAttribute(calificarOtrosEClass, CALIFICAR_OTROS__COMENTARIO);
 
     // Create enums
     tipoEvaluacionEEnum = createEEnum(TIPO_EVALUACION);
@@ -658,7 +646,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
 
     initEClass(calificarOtrosEClass, CalificarOtros.class, "CalificarOtros", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarOtros_Valor(), ecorePackage.getEInt(), "valor", null, 0, 1, CalificarOtros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalificarOtros_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, CalificarOtros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(tipoEvaluacionEEnum, TipoEvaluacion.class, "TipoEvaluacion");

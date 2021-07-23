@@ -338,24 +338,17 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Keyword cColonKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
 		private final Assignment cValorAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
 		private final RuleCall cValorINTTerminalRuleCall_2_3_0 = (RuleCall)cValorAssignment_2_3.eContents().get(0);
-		private final Group cGroup_2_4 = (Group)cGroup_2.eContents().get(4);
-		private final Keyword cComentarioKeyword_2_4_0 = (Keyword)cGroup_2_4.eContents().get(0);
-		private final Keyword cColonKeyword_2_4_1 = (Keyword)cGroup_2_4.eContents().get(1);
-		private final Assignment cComentarioAssignment_2_4_2 = (Assignment)cGroup_2_4.eContents().get(2);
-		private final RuleCall cComentarioSTRINGTerminalRuleCall_2_4_2_0 = (RuleCall)cComentarioAssignment_2_4_2.eContents().get(0);
 		
 		//Expresion:
 		//    {CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion |
 		//    {CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT |
 		//    {CalificarOtros} 'calificacion' ':' valor=INT
-		//    ('comentario' ':' comentario=STRING)?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion |
 		//{CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT |
 		//{CalificarOtros} 'calificacion' ':' valor=INT
-		//('comentario' ':' comentario=STRING)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//{CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion
@@ -404,7 +397,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		public RuleCall getDenominadorINTTerminalRuleCall_1_5_0() { return cDenominadorINTTerminalRuleCall_1_5_0; }
 		
 		//{CalificarOtros} 'calificacion' ':' valor=INT
-		//('comentario' ':' comentario=STRING)?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//{CalificarOtros}
@@ -421,21 +413,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		
 		//INT
 		public RuleCall getValorINTTerminalRuleCall_2_3_0() { return cValorINTTerminalRuleCall_2_3_0; }
-		
-		//('comentario' ':' comentario=STRING)?
-		public Group getGroup_2_4() { return cGroup_2_4; }
-		
-		//'comentario'
-		public Keyword getComentarioKeyword_2_4_0() { return cComentarioKeyword_2_4_0; }
-		
-		//':'
-		public Keyword getColonKeyword_2_4_1() { return cColonKeyword_2_4_1; }
-		
-		//comentario=STRING
-		public Assignment getComentarioAssignment_2_4_2() { return cComentarioAssignment_2_4_2; }
-		
-		//STRING
-		public RuleCall getComentarioSTRINGTerminalRuleCall_2_4_2_0() { return cComentarioSTRINGTerminalRuleCall_2_4_2_0; }
 	}
 	
 	public class TipoEvaluacionElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
@@ -672,7 +649,6 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//    {CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion |
 	//    {CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT |
 	//    {CalificarOtros} 'calificacion' ':' valor=INT
-	//    ('comentario' ':' comentario=STRING)?
 	//;
 	public ExpresionElements getExpresionAccess() {
 		return pExpresion;

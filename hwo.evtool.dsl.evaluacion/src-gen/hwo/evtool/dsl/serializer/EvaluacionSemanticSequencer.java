@@ -139,10 +139,16 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Expresion returns CalificarOtros
 	 *
 	 * Constraint:
-	 *     (valor=INT comentario=STRING?)
+	 *     valor=INT
 	 */
 	protected void sequence_Expresion(ISerializationContext context, CalificarOtros semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_OTROS__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_OTROS__VALOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpresionAccess().getValorINTTerminalRuleCall_2_3_0(), semanticObject.getValor());
+		feeder.finish();
 	}
 	
 	

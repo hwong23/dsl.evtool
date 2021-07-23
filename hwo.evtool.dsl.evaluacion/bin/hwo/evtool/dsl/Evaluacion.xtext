@@ -39,7 +39,6 @@ Expresion:
 	{CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion | 
 	{CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT | 
 	{CalificarOtros} 'calificacion' ':' valor=INT 
-	('comentario' ':' comentario=STRING)?
 ;
 
 enum TipoEvaluacion:

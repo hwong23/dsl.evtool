@@ -54,7 +54,6 @@
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CalificarOtros">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarOtros/valor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarOtros/comentario"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

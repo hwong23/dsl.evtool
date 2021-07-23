@@ -392,22 +392,13 @@ public interface EvaluacionPackage extends EPackage
   int CALIFICAR_OTROS__VALOR = EXPRESION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Comentario</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_OTROS__COMENTARIO = EXPRESION_FEATURE_COUNT + 1;
-
-  /**
    * The number of structural features of the '<em>Calificar Otros</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_OTROS_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
+  int CALIFICAR_OTROS_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}' enum.
@@ -730,17 +721,6 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getCalificarOtros_Valor();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getComentario <em>Comentario</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Comentario</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CalificarOtros#getComentario()
-   * @see #getCalificarOtros()
-   * @generated
-   */
-  EAttribute getCalificarOtros_Comentario();
-
-  /**
    * Returns the meta object for enum '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1024,14 +1004,6 @@ public interface EvaluacionPackage extends EPackage
      * @generated
      */
     EAttribute CALIFICAR_OTROS__VALOR = eINSTANCE.getCalificarOtros_Valor();
-
-    /**
-     * The meta object literal for the '<em><b>Comentario</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CALIFICAR_OTROS__COMENTARIO = eINSTANCE.getCalificarOtros_Comentario();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}' enum.
