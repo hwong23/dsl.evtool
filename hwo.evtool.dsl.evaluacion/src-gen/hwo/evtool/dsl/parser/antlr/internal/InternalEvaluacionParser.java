@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'eventos'", "'resetEvents'", "'evaluaciones'", "'componente'", "'actions'", "'{'", "'}'", "':'", "'=>'", "'calificacion'", "'/'", "'EvaluarProblema'", "'EvaluarTecnica'", "'EvaluarOtros'", "'EvaluarArquitecto'", "'EvaluarDirector'", "'EvaluarEducacion'", "'A'", "'M'", "'B'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'eventos'", "'resetEvents'", "'evaluaciones'", "'componente'", "'actions'", "'{'", "'}'", "':'", "'=>'", "'calificacion'", "'/'", "'comentario'", "'EvaluarProblema'", "'EvaluarTecnica'", "'EvaluarOtros'", "'D'", "'EvaluarDirector'", "'EvaluarEducacion'", "'A'", "'M'", "'B'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -37,6 +37,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
+    public static final int T__31=31;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -327,7 +328,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                         int alt5=2;
                         int LA5_0 = input.LA(1);
 
-                        if ( ((LA5_0>=22 && LA5_0<=27)) ) {
+                        if ( ((LA5_0>=23 && LA5_0<=28)) ) {
                             alt5=1;
                         }
 
@@ -857,7 +858,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         Token lv_name_1_0=null;
         Token otherlv_3=null;
         Token lv_comentario_4_0=null;
-        EObject lv_tipo_0_0 = null;
+        Enumerator lv_tipo_0_0 = null;
 
         EObject lv_expresion_2_0 = null;
 
@@ -879,7 +880,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
             // InternalEvaluacion.g:338:5: lv_tipo_0_0= ruleTipoEvaluacion
             {
 
-            					newCompositeNode(grammarAccess.getEvaluacionesAccess().getTipoTipoEvaluacionParserRuleCall_0_0());
+            					newCompositeNode(grammarAccess.getEvaluacionesAccess().getTipoTipoEvaluacionEnumRuleCall_0_0());
             				
             pushFollow(FOLLOW_3);
             lv_tipo_0_0=ruleTipoEvaluacion();
@@ -1189,105 +1190,136 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExpresion"
-    // InternalEvaluacion.g:476:1: ruleExpresion returns [EObject current=null] : (otherlv_0= 'calificacion' otherlv_1= ':' ( (lv_calificacion_2_0= ruleCalificarExpresion ) ) (otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) ) )? ) ;
+    // InternalEvaluacion.g:476:1: ruleExpresion returns [EObject current=null] : ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) ) ;
     public final EObject ruleExpresion() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
         Token otherlv_1=null;
-        Token otherlv_3=null;
-        Token lv_comentario_4_0=null;
-        EObject lv_calificacion_2_0 = null;
+        Token otherlv_2=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token lv_numerador_7_0=null;
+        Token otherlv_8=null;
+        Token lv_denominador_9_0=null;
+        Token otherlv_11=null;
+        Token otherlv_12=null;
+        Token lv_valor_13_0=null;
+        Token otherlv_14=null;
+        Token otherlv_15=null;
+        Token lv_comentario_16_0=null;
+        Enumerator lv_puntuacion_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:482:2: ( (otherlv_0= 'calificacion' otherlv_1= ':' ( (lv_calificacion_2_0= ruleCalificarExpresion ) ) (otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) ) )? ) )
-            // InternalEvaluacion.g:483:2: (otherlv_0= 'calificacion' otherlv_1= ':' ( (lv_calificacion_2_0= ruleCalificarExpresion ) ) (otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) ) )? )
+            // InternalEvaluacion.g:482:2: ( ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) ) )
+            // InternalEvaluacion.g:483:2: ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) )
             {
-            // InternalEvaluacion.g:483:2: (otherlv_0= 'calificacion' otherlv_1= ':' ( (lv_calificacion_2_0= ruleCalificarExpresion ) ) (otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) ) )? )
-            // InternalEvaluacion.g:484:3: otherlv_0= 'calificacion' otherlv_1= ':' ( (lv_calificacion_2_0= ruleCalificarExpresion ) ) (otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) ) )?
-            {
-            otherlv_0=(Token)match(input,20,FOLLOW_17); 
+            // InternalEvaluacion.g:483:2: ( ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) ) | ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) ) | ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? ) )
+            int alt13=3;
+            int LA13_0 = input.LA(1);
 
-            			newLeafNode(otherlv_0, grammarAccess.getExpresionAccess().getCalificacionKeyword_0());
-            		
-            otherlv_1=(Token)match(input,18,FOLLOW_18); 
+            if ( (LA13_0==20) ) {
+                int LA13_1 = input.LA(2);
 
-            			newLeafNode(otherlv_1, grammarAccess.getExpresionAccess().getColonKeyword_1());
-            		
-            // InternalEvaluacion.g:492:3: ( (lv_calificacion_2_0= ruleCalificarExpresion ) )
-            // InternalEvaluacion.g:493:4: (lv_calificacion_2_0= ruleCalificarExpresion )
-            {
-            // InternalEvaluacion.g:493:4: (lv_calificacion_2_0= ruleCalificarExpresion )
-            // InternalEvaluacion.g:494:5: lv_calificacion_2_0= ruleCalificarExpresion
-            {
+                if ( (LA13_1==18) ) {
+                    int LA13_2 = input.LA(3);
 
-            					newCompositeNode(grammarAccess.getExpresionAccess().getCalificacionCalificarExpresionParserRuleCall_2_0());
-            				
-            pushFollow(FOLLOW_14);
-            lv_calificacion_2_0=ruleCalificarExpresion();
+                    if ( ((LA13_2>=29 && LA13_2<=31)) ) {
+                        alt13=1;
+                    }
+                    else if ( (LA13_2==RULE_INT) ) {
+                        int LA13_4 = input.LA(4);
 
-            state._fsp--;
+                        if ( (LA13_4==EOF||LA13_4==14||LA13_4==18||(LA13_4>=22 && LA13_4<=28)) ) {
+                            alt13=3;
+                        }
+                        else if ( (LA13_4==21) ) {
+                            alt13=2;
+                        }
+                        else {
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 13, 4, input);
 
+                            throw nvae;
+                        }
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 13, 2, input);
 
-            					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getExpresionRule());
-            					}
-            					set(
-            						current,
-            						"calificacion",
-            						lv_calificacion_2_0,
-            						"hwo.evtool.dsl.Evaluacion.CalificarExpresion");
-            					afterParserOrEnumRuleCall();
-            				
+                        throw nvae;
+                    }
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 13, 1, input);
 
-            }
-
-
-            }
-
-            // InternalEvaluacion.g:511:3: (otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) ) )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
-
-            if ( (LA12_0==18) ) {
-                int LA12_1 = input.LA(2);
-
-                if ( (LA12_1==RULE_STRING) ) {
-                    alt12=1;
+                    throw nvae;
                 }
             }
-            switch (alt12) {
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 13, 0, input);
+
+                throw nvae;
+            }
+            switch (alt13) {
                 case 1 :
-                    // InternalEvaluacion.g:512:4: otherlv_3= ':' ( (lv_comentario_4_0= RULE_STRING ) )
+                    // InternalEvaluacion.g:484:3: ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) )
                     {
-                    otherlv_3=(Token)match(input,18,FOLLOW_15); 
+                    // InternalEvaluacion.g:484:3: ( () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) ) )
+                    // InternalEvaluacion.g:485:4: () otherlv_1= 'calificacion' otherlv_2= ':' ( (lv_puntuacion_3_0= ruleE_Calificacion ) )
+                    {
+                    // InternalEvaluacion.g:485:4: ()
+                    // InternalEvaluacion.g:486:5: 
+                    {
 
-                    				newLeafNode(otherlv_3, grammarAccess.getExpresionAccess().getColonKeyword_3_0());
+                    					current = forceCreateModelElement(
+                    						grammarAccess.getExpresionAccess().getCalificarPropuestaAction_0_0(),
+                    						current);
+                    				
+
+                    }
+
+                    otherlv_1=(Token)match(input,20,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_1, grammarAccess.getExpresionAccess().getCalificacionKeyword_0_1());
                     			
-                    // InternalEvaluacion.g:516:4: ( (lv_comentario_4_0= RULE_STRING ) )
-                    // InternalEvaluacion.g:517:5: (lv_comentario_4_0= RULE_STRING )
-                    {
-                    // InternalEvaluacion.g:517:5: (lv_comentario_4_0= RULE_STRING )
-                    // InternalEvaluacion.g:518:6: lv_comentario_4_0= RULE_STRING
-                    {
-                    lv_comentario_4_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+                    otherlv_2=(Token)match(input,18,FOLLOW_18); 
 
-                    						newLeafNode(lv_comentario_4_0, grammarAccess.getExpresionAccess().getComentarioSTRINGTerminalRuleCall_3_1_0());
+                    				newLeafNode(otherlv_2, grammarAccess.getExpresionAccess().getColonKeyword_0_2());
+                    			
+                    // InternalEvaluacion.g:500:4: ( (lv_puntuacion_3_0= ruleE_Calificacion ) )
+                    // InternalEvaluacion.g:501:5: (lv_puntuacion_3_0= ruleE_Calificacion )
+                    {
+                    // InternalEvaluacion.g:501:5: (lv_puntuacion_3_0= ruleE_Calificacion )
+                    // InternalEvaluacion.g:502:6: lv_puntuacion_3_0= ruleE_Calificacion
+                    {
+
+                    						newCompositeNode(grammarAccess.getExpresionAccess().getPuntuacionE_CalificacionEnumRuleCall_0_3_0());
                     					
+                    pushFollow(FOLLOW_2);
+                    lv_puntuacion_3_0=ruleE_Calificacion();
+
+                    state._fsp--;
+
 
                     						if (current==null) {
-                    							current = createModelElement(grammarAccess.getExpresionRule());
+                    							current = createModelElementForParent(grammarAccess.getExpresionRule());
                     						}
-                    						setWithLastConsumed(
+                    						set(
                     							current,
-                    							"comentario",
-                    							lv_comentario_4_0,
-                    							"org.eclipse.xtext.common.Terminals.STRING");
+                    							"puntuacion",
+                    							lv_puntuacion_3_0,
+                    							"hwo.evtool.dsl.Evaluacion.E_Calificacion");
+                    						afterParserOrEnumRuleCall();
                     					
+
+                    }
+
 
                     }
 
@@ -1297,9 +1329,201 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+                case 2 :
+                    // InternalEvaluacion.g:521:3: ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) )
+                    {
+                    // InternalEvaluacion.g:521:3: ( () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:522:4: () otherlv_5= 'calificacion' otherlv_6= ':' ( (lv_numerador_7_0= RULE_INT ) ) otherlv_8= '/' ( (lv_denominador_9_0= RULE_INT ) )
+                    {
+                    // InternalEvaluacion.g:522:4: ()
+                    // InternalEvaluacion.g:523:5: 
+                    {
 
-            }
+                    					current = forceCreateModelElement(
+                    						grammarAccess.getExpresionAccess().getCalificarEquipoAction_1_0(),
+                    						current);
+                    				
 
+                    }
+
+                    otherlv_5=(Token)match(input,20,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_5, grammarAccess.getExpresionAccess().getCalificacionKeyword_1_1());
+                    			
+                    otherlv_6=(Token)match(input,18,FOLLOW_19); 
+
+                    				newLeafNode(otherlv_6, grammarAccess.getExpresionAccess().getColonKeyword_1_2());
+                    			
+                    // InternalEvaluacion.g:537:4: ( (lv_numerador_7_0= RULE_INT ) )
+                    // InternalEvaluacion.g:538:5: (lv_numerador_7_0= RULE_INT )
+                    {
+                    // InternalEvaluacion.g:538:5: (lv_numerador_7_0= RULE_INT )
+                    // InternalEvaluacion.g:539:6: lv_numerador_7_0= RULE_INT
+                    {
+                    lv_numerador_7_0=(Token)match(input,RULE_INT,FOLLOW_20); 
+
+                    						newLeafNode(lv_numerador_7_0, grammarAccess.getExpresionAccess().getNumeradorINTTerminalRuleCall_1_3_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getExpresionRule());
+                    						}
+                    						setWithLastConsumed(
+                    							current,
+                    							"numerador",
+                    							lv_numerador_7_0,
+                    							"org.eclipse.xtext.common.Terminals.INT");
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_8=(Token)match(input,21,FOLLOW_19); 
+
+                    				newLeafNode(otherlv_8, grammarAccess.getExpresionAccess().getSolidusKeyword_1_4());
+                    			
+                    // InternalEvaluacion.g:559:4: ( (lv_denominador_9_0= RULE_INT ) )
+                    // InternalEvaluacion.g:560:5: (lv_denominador_9_0= RULE_INT )
+                    {
+                    // InternalEvaluacion.g:560:5: (lv_denominador_9_0= RULE_INT )
+                    // InternalEvaluacion.g:561:6: lv_denominador_9_0= RULE_INT
+                    {
+                    lv_denominador_9_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+                    						newLeafNode(lv_denominador_9_0, grammarAccess.getExpresionAccess().getDenominadorINTTerminalRuleCall_1_5_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getExpresionRule());
+                    						}
+                    						setWithLastConsumed(
+                    							current,
+                    							"denominador",
+                    							lv_denominador_9_0,
+                    							"org.eclipse.xtext.common.Terminals.INT");
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalEvaluacion.g:579:3: ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? )
+                    {
+                    // InternalEvaluacion.g:579:3: ( () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )? )
+                    // InternalEvaluacion.g:580:4: () otherlv_11= 'calificacion' otherlv_12= ':' ( (lv_valor_13_0= RULE_INT ) ) (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )?
+                    {
+                    // InternalEvaluacion.g:580:4: ()
+                    // InternalEvaluacion.g:581:5: 
+                    {
+
+                    					current = forceCreateModelElement(
+                    						grammarAccess.getExpresionAccess().getCalificarOtrosAction_2_0(),
+                    						current);
+                    				
+
+                    }
+
+                    otherlv_11=(Token)match(input,20,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_11, grammarAccess.getExpresionAccess().getCalificacionKeyword_2_1());
+                    			
+                    otherlv_12=(Token)match(input,18,FOLLOW_19); 
+
+                    				newLeafNode(otherlv_12, grammarAccess.getExpresionAccess().getColonKeyword_2_2());
+                    			
+                    // InternalEvaluacion.g:595:4: ( (lv_valor_13_0= RULE_INT ) )
+                    // InternalEvaluacion.g:596:5: (lv_valor_13_0= RULE_INT )
+                    {
+                    // InternalEvaluacion.g:596:5: (lv_valor_13_0= RULE_INT )
+                    // InternalEvaluacion.g:597:6: lv_valor_13_0= RULE_INT
+                    {
+                    lv_valor_13_0=(Token)match(input,RULE_INT,FOLLOW_21); 
+
+                    						newLeafNode(lv_valor_13_0, grammarAccess.getExpresionAccess().getValorINTTerminalRuleCall_2_3_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getExpresionRule());
+                    						}
+                    						setWithLastConsumed(
+                    							current,
+                    							"valor",
+                    							lv_valor_13_0,
+                    							"org.eclipse.xtext.common.Terminals.INT");
+                    					
+
+                    }
+
+
+                    }
+
+                    // InternalEvaluacion.g:613:4: (otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) ) )?
+                    int alt12=2;
+                    int LA12_0 = input.LA(1);
+
+                    if ( (LA12_0==22) ) {
+                        alt12=1;
+                    }
+                    switch (alt12) {
+                        case 1 :
+                            // InternalEvaluacion.g:614:5: otherlv_14= 'comentario' otherlv_15= ':' ( (lv_comentario_16_0= RULE_STRING ) )
+                            {
+                            otherlv_14=(Token)match(input,22,FOLLOW_17); 
+
+                            					newLeafNode(otherlv_14, grammarAccess.getExpresionAccess().getComentarioKeyword_2_4_0());
+                            				
+                            otherlv_15=(Token)match(input,18,FOLLOW_15); 
+
+                            					newLeafNode(otherlv_15, grammarAccess.getExpresionAccess().getColonKeyword_2_4_1());
+                            				
+                            // InternalEvaluacion.g:622:5: ( (lv_comentario_16_0= RULE_STRING ) )
+                            // InternalEvaluacion.g:623:6: (lv_comentario_16_0= RULE_STRING )
+                            {
+                            // InternalEvaluacion.g:623:6: (lv_comentario_16_0= RULE_STRING )
+                            // InternalEvaluacion.g:624:7: lv_comentario_16_0= RULE_STRING
+                            {
+                            lv_comentario_16_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+                            							newLeafNode(lv_comentario_16_0, grammarAccess.getExpresionAccess().getComentarioSTRINGTerminalRuleCall_2_4_2_0());
+                            						
+
+                            							if (current==null) {
+                            								current = createModelElement(grammarAccess.getExpresionRule());
+                            							}
+                            							setWithLastConsumed(
+                            								current,
+                            								"comentario",
+                            								lv_comentario_16_0,
+                            								"org.eclipse.xtext.common.Terminals.STRING");
+                            						
+
+                            }
+
+
+                            }
+
+
+                            }
+                            break;
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
@@ -1322,164 +1546,77 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleExpresion"
 
 
-    // $ANTLR start "entryRuleCalificarExpresion"
-    // InternalEvaluacion.g:539:1: entryRuleCalificarExpresion returns [EObject current=null] : iv_ruleCalificarExpresion= ruleCalificarExpresion EOF ;
-    public final EObject entryRuleCalificarExpresion() throws RecognitionException {
-        EObject current = null;
+    // $ANTLR start "ruleTipoEvaluacion"
+    // InternalEvaluacion.g:646:1: ruleTipoEvaluacion returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) ) ;
+    public final Enumerator ruleTipoEvaluacion() throws RecognitionException {
+        Enumerator current = null;
 
-        EObject iv_ruleCalificarExpresion = null;
-
-
-        try {
-            // InternalEvaluacion.g:539:59: (iv_ruleCalificarExpresion= ruleCalificarExpresion EOF )
-            // InternalEvaluacion.g:540:2: iv_ruleCalificarExpresion= ruleCalificarExpresion EOF
-            {
-             newCompositeNode(grammarAccess.getCalificarExpresionRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleCalificarExpresion=ruleCalificarExpresion();
-
-            state._fsp--;
-
-             current =iv_ruleCalificarExpresion; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleCalificarExpresion"
-
-
-    // $ANTLR start "ruleCalificarExpresion"
-    // InternalEvaluacion.g:546:1: ruleCalificarExpresion returns [EObject current=null] : ( ( () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) ) ) | ( () ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_valor_7_0= RULE_INT ) ) ) ) ;
-    public final EObject ruleCalificarExpresion() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_numerador_1_0=null;
-        Token otherlv_2=null;
-        Token lv_denominador_3_0=null;
-        Token lv_valor_7_0=null;
-        Enumerator lv_puntuacion_5_0 = null;
-
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
 
 
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:552:2: ( ( ( () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) ) ) | ( () ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_valor_7_0= RULE_INT ) ) ) ) )
-            // InternalEvaluacion.g:553:2: ( ( () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) ) ) | ( () ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_valor_7_0= RULE_INT ) ) ) )
+            // InternalEvaluacion.g:652:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) ) )
+            // InternalEvaluacion.g:653:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) )
             {
-            // InternalEvaluacion.g:553:2: ( ( () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) ) ) | ( () ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_valor_7_0= RULE_INT ) ) ) )
-            int alt13=3;
-            int LA13_0 = input.LA(1);
-
-            if ( (LA13_0==RULE_INT) ) {
-                int LA13_1 = input.LA(2);
-
-                if ( (LA13_1==EOF||LA13_1==14||LA13_1==18||(LA13_1>=22 && LA13_1<=27)) ) {
-                    alt13=3;
+            // InternalEvaluacion.g:653:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) | (enumLiteral_3= 'D' ) | (enumLiteral_4= 'EvaluarDirector' ) | (enumLiteral_5= 'EvaluarEducacion' ) )
+            int alt14=6;
+            switch ( input.LA(1) ) {
+            case 23:
+                {
+                alt14=1;
                 }
-                else if ( (LA13_1==21) ) {
-                    alt13=1;
+                break;
+            case 24:
+                {
+                alt14=2;
                 }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 13, 1, input);
-
-                    throw nvae;
+                break;
+            case 25:
+                {
+                alt14=3;
                 }
-            }
-            else if ( ((LA13_0>=28 && LA13_0<=30)) ) {
-                alt13=2;
-            }
-            else {
+                break;
+            case 26:
+                {
+                alt14=4;
+                }
+                break;
+            case 27:
+                {
+                alt14=5;
+                }
+                break;
+            case 28:
+                {
+                alt14=6;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+
+            switch (alt14) {
                 case 1 :
-                    // InternalEvaluacion.g:554:3: ( () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:654:3: (enumLiteral_0= 'EvaluarProblema' )
                     {
-                    // InternalEvaluacion.g:554:3: ( () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) ) )
-                    // InternalEvaluacion.g:555:4: () ( (lv_numerador_1_0= RULE_INT ) ) otherlv_2= '/' ( (lv_denominador_3_0= RULE_INT ) )
+                    // InternalEvaluacion.g:654:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:655:4: enumLiteral_0= 'EvaluarProblema'
                     {
-                    // InternalEvaluacion.g:555:4: ()
-                    // InternalEvaluacion.g:556:5: 
-                    {
+                    enumLiteral_0=(Token)match(input,23,FOLLOW_2); 
 
-                    					current = forceCreateModelElement(
-                    						grammarAccess.getCalificarExpresionAccess().getCalificarPropuestaAction_0_0(),
-                    						current);
-                    				
-
-                    }
-
-                    // InternalEvaluacion.g:562:4: ( (lv_numerador_1_0= RULE_INT ) )
-                    // InternalEvaluacion.g:563:5: (lv_numerador_1_0= RULE_INT )
-                    {
-                    // InternalEvaluacion.g:563:5: (lv_numerador_1_0= RULE_INT )
-                    // InternalEvaluacion.g:564:6: lv_numerador_1_0= RULE_INT
-                    {
-                    lv_numerador_1_0=(Token)match(input,RULE_INT,FOLLOW_19); 
-
-                    						newLeafNode(lv_numerador_1_0, grammarAccess.getCalificarExpresionAccess().getNumeradorINTTerminalRuleCall_0_1_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getCalificarExpresionRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"numerador",
-                    							lv_numerador_1_0,
-                    							"org.eclipse.xtext.common.Terminals.INT");
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_2=(Token)match(input,21,FOLLOW_20); 
-
-                    				newLeafNode(otherlv_2, grammarAccess.getCalificarExpresionAccess().getSolidusKeyword_0_2());
+                    				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarProblemaEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_0, grammarAccess.getTipoEvaluacionAccess().getEvaluarProblemaEnumLiteralDeclaration_0());
                     			
-                    // InternalEvaluacion.g:584:4: ( (lv_denominador_3_0= RULE_INT ) )
-                    // InternalEvaluacion.g:585:5: (lv_denominador_3_0= RULE_INT )
-                    {
-                    // InternalEvaluacion.g:585:5: (lv_denominador_3_0= RULE_INT )
-                    // InternalEvaluacion.g:586:6: lv_denominador_3_0= RULE_INT
-                    {
-                    lv_denominador_3_0=(Token)match(input,RULE_INT,FOLLOW_2); 
-
-                    						newLeafNode(lv_denominador_3_0, grammarAccess.getCalificarExpresionAccess().getDenominadorINTTerminalRuleCall_0_3_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getCalificarExpresionRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"denominador",
-                    							lv_denominador_3_0,
-                    							"org.eclipse.xtext.common.Terminals.INT");
-                    					
-
-                    }
-
-
-                    }
-
 
                     }
 
@@ -1487,53 +1624,16 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:604:3: ( () ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) )
+                    // InternalEvaluacion.g:662:3: (enumLiteral_1= 'EvaluarTecnica' )
                     {
-                    // InternalEvaluacion.g:604:3: ( () ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) )
-                    // InternalEvaluacion.g:605:4: () ( (lv_puntuacion_5_0= ruleE_Calificacion ) )
+                    // InternalEvaluacion.g:662:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:663:4: enumLiteral_1= 'EvaluarTecnica'
                     {
-                    // InternalEvaluacion.g:605:4: ()
-                    // InternalEvaluacion.g:606:5: 
-                    {
+                    enumLiteral_1=(Token)match(input,24,FOLLOW_2); 
 
-                    					current = forceCreateModelElement(
-                    						grammarAccess.getCalificarExpresionAccess().getCalificarEquipoAction_1_0(),
-                    						current);
-                    				
-
-                    }
-
-                    // InternalEvaluacion.g:612:4: ( (lv_puntuacion_5_0= ruleE_Calificacion ) )
-                    // InternalEvaluacion.g:613:5: (lv_puntuacion_5_0= ruleE_Calificacion )
-                    {
-                    // InternalEvaluacion.g:613:5: (lv_puntuacion_5_0= ruleE_Calificacion )
-                    // InternalEvaluacion.g:614:6: lv_puntuacion_5_0= ruleE_Calificacion
-                    {
-
-                    						newCompositeNode(grammarAccess.getCalificarExpresionAccess().getPuntuacionE_CalificacionEnumRuleCall_1_1_0());
-                    					
-                    pushFollow(FOLLOW_2);
-                    lv_puntuacion_5_0=ruleE_Calificacion();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getCalificarExpresionRule());
-                    						}
-                    						set(
-                    							current,
-                    							"puntuacion",
-                    							lv_puntuacion_5_0,
-                    							"hwo.evtool.dsl.Evaluacion.E_Calificacion");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
+                    				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarTecnicaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_1, grammarAccess.getTipoEvaluacionAccess().getEvaluarTecnicaEnumLiteralDeclaration_1());
+                    			
 
                     }
 
@@ -1541,179 +1641,70 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:633:3: ( () ( (lv_valor_7_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:670:3: (enumLiteral_2= 'EvaluarOtros' )
                     {
-                    // InternalEvaluacion.g:633:3: ( () ( (lv_valor_7_0= RULE_INT ) ) )
-                    // InternalEvaluacion.g:634:4: () ( (lv_valor_7_0= RULE_INT ) )
+                    // InternalEvaluacion.g:670:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:671:4: enumLiteral_2= 'EvaluarOtros'
                     {
-                    // InternalEvaluacion.g:634:4: ()
-                    // InternalEvaluacion.g:635:5: 
-                    {
+                    enumLiteral_2=(Token)match(input,25,FOLLOW_2); 
 
-                    					current = forceCreateModelElement(
-                    						grammarAccess.getCalificarExpresionAccess().getCalificarOtrosAction_2_0(),
-                    						current);
-                    				
-
-                    }
-
-                    // InternalEvaluacion.g:641:4: ( (lv_valor_7_0= RULE_INT ) )
-                    // InternalEvaluacion.g:642:5: (lv_valor_7_0= RULE_INT )
-                    {
-                    // InternalEvaluacion.g:642:5: (lv_valor_7_0= RULE_INT )
-                    // InternalEvaluacion.g:643:6: lv_valor_7_0= RULE_INT
-                    {
-                    lv_valor_7_0=(Token)match(input,RULE_INT,FOLLOW_2); 
-
-                    						newLeafNode(lv_valor_7_0, grammarAccess.getCalificarExpresionAccess().getValorINTTerminalRuleCall_2_1_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getCalificarExpresionRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"valor",
-                    							lv_valor_7_0,
-                    							"org.eclipse.xtext.common.Terminals.INT");
-                    					
-
-                    }
-
-
-                    }
-
+                    				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarOtrosEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_2, grammarAccess.getTipoEvaluacionAccess().getEvaluarOtrosEnumLiteralDeclaration_2());
+                    			
 
                     }
 
 
                     }
                     break;
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleCalificarExpresion"
-
-
-    // $ANTLR start "entryRuleTipoEvaluacion"
-    // InternalEvaluacion.g:664:1: entryRuleTipoEvaluacion returns [EObject current=null] : iv_ruleTipoEvaluacion= ruleTipoEvaluacion EOF ;
-    public final EObject entryRuleTipoEvaluacion() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleTipoEvaluacion = null;
-
-
-        try {
-            // InternalEvaluacion.g:664:55: (iv_ruleTipoEvaluacion= ruleTipoEvaluacion EOF )
-            // InternalEvaluacion.g:665:2: iv_ruleTipoEvaluacion= ruleTipoEvaluacion EOF
-            {
-             newCompositeNode(grammarAccess.getTipoEvaluacionRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleTipoEvaluacion=ruleTipoEvaluacion();
-
-            state._fsp--;
-
-             current =iv_ruleTipoEvaluacion; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleTipoEvaluacion"
-
-
-    // $ANTLR start "ruleTipoEvaluacion"
-    // InternalEvaluacion.g:671:1: ruleTipoEvaluacion returns [EObject current=null] : (this_TipoEvaluarPropuesta_0= ruleTipoEvaluarPropuesta | this_TipoEvaluarEquipo_1= ruleTipoEvaluarEquipo ) ;
-    public final EObject ruleTipoEvaluacion() throws RecognitionException {
-        EObject current = null;
-
-        EObject this_TipoEvaluarPropuesta_0 = null;
-
-        EObject this_TipoEvaluarEquipo_1 = null;
-
-
-
-        	enterRule();
-
-        try {
-            // InternalEvaluacion.g:677:2: ( (this_TipoEvaluarPropuesta_0= ruleTipoEvaluarPropuesta | this_TipoEvaluarEquipo_1= ruleTipoEvaluarEquipo ) )
-            // InternalEvaluacion.g:678:2: (this_TipoEvaluarPropuesta_0= ruleTipoEvaluarPropuesta | this_TipoEvaluarEquipo_1= ruleTipoEvaluarEquipo )
-            {
-            // InternalEvaluacion.g:678:2: (this_TipoEvaluarPropuesta_0= ruleTipoEvaluarPropuesta | this_TipoEvaluarEquipo_1= ruleTipoEvaluarEquipo )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
-
-            if ( ((LA14_0>=22 && LA14_0<=24)) ) {
-                alt14=1;
-            }
-            else if ( ((LA14_0>=25 && LA14_0<=27)) ) {
-                alt14=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
-
-                throw nvae;
-            }
-            switch (alt14) {
-                case 1 :
-                    // InternalEvaluacion.g:679:3: this_TipoEvaluarPropuesta_0= ruleTipoEvaluarPropuesta
+                case 4 :
+                    // InternalEvaluacion.g:678:3: (enumLiteral_3= 'D' )
                     {
+                    // InternalEvaluacion.g:678:3: (enumLiteral_3= 'D' )
+                    // InternalEvaluacion.g:679:4: enumLiteral_3= 'D'
+                    {
+                    enumLiteral_3=(Token)match(input,26,FOLLOW_2); 
 
-                    			newCompositeNode(grammarAccess.getTipoEvaluacionAccess().getTipoEvaluarPropuestaParserRuleCall_0());
-                    		
-                    pushFollow(FOLLOW_2);
-                    this_TipoEvaluarPropuesta_0=ruleTipoEvaluarPropuesta();
+                    				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarArquitectoEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_3, grammarAccess.getTipoEvaluacionAccess().getEvaluarArquitectoEnumLiteralDeclaration_3());
+                    			
 
-                    state._fsp--;
+                    }
 
-
-                    			current = this_TipoEvaluarPropuesta_0;
-                    			afterParserOrEnumRuleCall();
-                    		
 
                     }
                     break;
-                case 2 :
-                    // InternalEvaluacion.g:688:3: this_TipoEvaluarEquipo_1= ruleTipoEvaluarEquipo
+                case 5 :
+                    // InternalEvaluacion.g:686:3: (enumLiteral_4= 'EvaluarDirector' )
                     {
+                    // InternalEvaluacion.g:686:3: (enumLiteral_4= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:687:4: enumLiteral_4= 'EvaluarDirector'
+                    {
+                    enumLiteral_4=(Token)match(input,27,FOLLOW_2); 
 
-                    			newCompositeNode(grammarAccess.getTipoEvaluacionAccess().getTipoEvaluarEquipoParserRuleCall_1());
-                    		
-                    pushFollow(FOLLOW_2);
-                    this_TipoEvaluarEquipo_1=ruleTipoEvaluarEquipo();
+                    				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarDirectorEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_4, grammarAccess.getTipoEvaluacionAccess().getEvaluarDirectorEnumLiteralDeclaration_4());
+                    			
 
-                    state._fsp--;
+                    }
 
 
-                    			current = this_TipoEvaluarEquipo_1;
-                    			afterParserOrEnumRuleCall();
-                    		
+                    }
+                    break;
+                case 6 :
+                    // InternalEvaluacion.g:694:3: (enumLiteral_5= 'EvaluarEducacion' )
+                    {
+                    // InternalEvaluacion.g:694:3: (enumLiteral_5= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:695:4: enumLiteral_5= 'EvaluarEducacion'
+                    {
+                    enumLiteral_5=(Token)match(input,28,FOLLOW_2); 
+
+                    				current = grammarAccess.getTipoEvaluacionAccess().getEvaluarEducacionEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_5, grammarAccess.getTipoEvaluacionAccess().getEvaluarEducacionEnumLiteralDeclaration_5());
+                    			
+
+                    }
+
 
                     }
                     break;
@@ -1739,86 +1730,36 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleTipoEvaluacion"
 
 
-    // $ANTLR start "entryRuleTipoEvaluarPropuesta"
-    // InternalEvaluacion.g:700:1: entryRuleTipoEvaluarPropuesta returns [EObject current=null] : iv_ruleTipoEvaluarPropuesta= ruleTipoEvaluarPropuesta EOF ;
-    public final EObject entryRuleTipoEvaluarPropuesta() throws RecognitionException {
-        EObject current = null;
+    // $ANTLR start "ruleE_Calificacion"
+    // InternalEvaluacion.g:705:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
+    public final Enumerator ruleE_Calificacion() throws RecognitionException {
+        Enumerator current = null;
 
-        EObject iv_ruleTipoEvaluarPropuesta = null;
-
-
-        try {
-            // InternalEvaluacion.g:700:61: (iv_ruleTipoEvaluarPropuesta= ruleTipoEvaluarPropuesta EOF )
-            // InternalEvaluacion.g:701:2: iv_ruleTipoEvaluarPropuesta= ruleTipoEvaluarPropuesta EOF
-            {
-             newCompositeNode(grammarAccess.getTipoEvaluarPropuestaRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleTipoEvaluarPropuesta=ruleTipoEvaluarPropuesta();
-
-            state._fsp--;
-
-             current =iv_ruleTipoEvaluarPropuesta; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleTipoEvaluarPropuesta"
-
-
-    // $ANTLR start "ruleTipoEvaluarPropuesta"
-    // InternalEvaluacion.g:707:1: ruleTipoEvaluarPropuesta returns [EObject current=null] : ( () (otherlv_1= 'EvaluarProblema' | otherlv_2= 'EvaluarTecnica' | otherlv_3= 'EvaluarOtros' ) ) ;
-    public final EObject ruleTipoEvaluarPropuesta() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_3=null;
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
 
 
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:713:2: ( ( () (otherlv_1= 'EvaluarProblema' | otherlv_2= 'EvaluarTecnica' | otherlv_3= 'EvaluarOtros' ) ) )
-            // InternalEvaluacion.g:714:2: ( () (otherlv_1= 'EvaluarProblema' | otherlv_2= 'EvaluarTecnica' | otherlv_3= 'EvaluarOtros' ) )
+            // InternalEvaluacion.g:711:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
+            // InternalEvaluacion.g:712:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
             {
-            // InternalEvaluacion.g:714:2: ( () (otherlv_1= 'EvaluarProblema' | otherlv_2= 'EvaluarTecnica' | otherlv_3= 'EvaluarOtros' ) )
-            // InternalEvaluacion.g:715:3: () (otherlv_1= 'EvaluarProblema' | otherlv_2= 'EvaluarTecnica' | otherlv_3= 'EvaluarOtros' )
-            {
-            // InternalEvaluacion.g:715:3: ()
-            // InternalEvaluacion.g:716:4: 
-            {
-
-            				current = forceCreateModelElement(
-            					grammarAccess.getTipoEvaluarPropuestaAccess().getTipoEvaluacionAction_0(),
-            					current);
-            			
-
-            }
-
-            // InternalEvaluacion.g:722:3: (otherlv_1= 'EvaluarProblema' | otherlv_2= 'EvaluarTecnica' | otherlv_3= 'EvaluarOtros' )
+            // InternalEvaluacion.g:712:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
             int alt15=3;
             switch ( input.LA(1) ) {
-            case 22:
+            case 29:
                 {
                 alt15=1;
                 }
                 break;
-            case 23:
+            case 30:
                 {
                 alt15=2;
                 }
                 break;
-            case 24:
+            case 31:
                 {
                 alt15=3;
                 }
@@ -1832,256 +1773,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
             switch (alt15) {
                 case 1 :
-                    // InternalEvaluacion.g:723:4: otherlv_1= 'EvaluarProblema'
+                    // InternalEvaluacion.g:713:3: (enumLiteral_0= 'A' )
                     {
-                    otherlv_1=(Token)match(input,22,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_1, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarProblemaKeyword_1_0());
-                    			
-
-                    }
-                    break;
-                case 2 :
-                    // InternalEvaluacion.g:728:4: otherlv_2= 'EvaluarTecnica'
+                    // InternalEvaluacion.g:713:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:714:4: enumLiteral_0= 'A'
                     {
-                    otherlv_2=(Token)match(input,23,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_2, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarTecnicaKeyword_1_1());
-                    			
-
-                    }
-                    break;
-                case 3 :
-                    // InternalEvaluacion.g:733:4: otherlv_3= 'EvaluarOtros'
-                    {
-                    otherlv_3=(Token)match(input,24,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarOtrosKeyword_1_2());
-                    			
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleTipoEvaluarPropuesta"
-
-
-    // $ANTLR start "entryRuleTipoEvaluarEquipo"
-    // InternalEvaluacion.g:742:1: entryRuleTipoEvaluarEquipo returns [EObject current=null] : iv_ruleTipoEvaluarEquipo= ruleTipoEvaluarEquipo EOF ;
-    public final EObject entryRuleTipoEvaluarEquipo() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleTipoEvaluarEquipo = null;
-
-
-        try {
-            // InternalEvaluacion.g:742:58: (iv_ruleTipoEvaluarEquipo= ruleTipoEvaluarEquipo EOF )
-            // InternalEvaluacion.g:743:2: iv_ruleTipoEvaluarEquipo= ruleTipoEvaluarEquipo EOF
-            {
-             newCompositeNode(grammarAccess.getTipoEvaluarEquipoRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleTipoEvaluarEquipo=ruleTipoEvaluarEquipo();
-
-            state._fsp--;
-
-             current =iv_ruleTipoEvaluarEquipo; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleTipoEvaluarEquipo"
-
-
-    // $ANTLR start "ruleTipoEvaluarEquipo"
-    // InternalEvaluacion.g:749:1: ruleTipoEvaluarEquipo returns [EObject current=null] : ( () (otherlv_1= 'EvaluarArquitecto' | otherlv_2= 'EvaluarDirector' | otherlv_3= 'EvaluarEducacion' ) ) ;
-    public final EObject ruleTipoEvaluarEquipo() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_3=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalEvaluacion.g:755:2: ( ( () (otherlv_1= 'EvaluarArquitecto' | otherlv_2= 'EvaluarDirector' | otherlv_3= 'EvaluarEducacion' ) ) )
-            // InternalEvaluacion.g:756:2: ( () (otherlv_1= 'EvaluarArquitecto' | otherlv_2= 'EvaluarDirector' | otherlv_3= 'EvaluarEducacion' ) )
-            {
-            // InternalEvaluacion.g:756:2: ( () (otherlv_1= 'EvaluarArquitecto' | otherlv_2= 'EvaluarDirector' | otherlv_3= 'EvaluarEducacion' ) )
-            // InternalEvaluacion.g:757:3: () (otherlv_1= 'EvaluarArquitecto' | otherlv_2= 'EvaluarDirector' | otherlv_3= 'EvaluarEducacion' )
-            {
-            // InternalEvaluacion.g:757:3: ()
-            // InternalEvaluacion.g:758:4: 
-            {
-
-            				current = forceCreateModelElement(
-            					grammarAccess.getTipoEvaluarEquipoAccess().getTipoEvaluacionAction_0(),
-            					current);
-            			
-
-            }
-
-            // InternalEvaluacion.g:764:3: (otherlv_1= 'EvaluarArquitecto' | otherlv_2= 'EvaluarDirector' | otherlv_3= 'EvaluarEducacion' )
-            int alt16=3;
-            switch ( input.LA(1) ) {
-            case 25:
-                {
-                alt16=1;
-                }
-                break;
-            case 26:
-                {
-                alt16=2;
-                }
-                break;
-            case 27:
-                {
-                alt16=3;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 16, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt16) {
-                case 1 :
-                    // InternalEvaluacion.g:765:4: otherlv_1= 'EvaluarArquitecto'
-                    {
-                    otherlv_1=(Token)match(input,25,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_1, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarArquitectoKeyword_1_0());
-                    			
-
-                    }
-                    break;
-                case 2 :
-                    // InternalEvaluacion.g:770:4: otherlv_2= 'EvaluarDirector'
-                    {
-                    otherlv_2=(Token)match(input,26,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_2, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarDirectorKeyword_1_1());
-                    			
-
-                    }
-                    break;
-                case 3 :
-                    // InternalEvaluacion.g:775:4: otherlv_3= 'EvaluarEducacion'
-                    {
-                    otherlv_3=(Token)match(input,27,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarEducacionKeyword_1_2());
-                    			
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleTipoEvaluarEquipo"
-
-
-    // $ANTLR start "ruleE_Calificacion"
-    // InternalEvaluacion.g:784:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
-    public final Enumerator ruleE_Calificacion() throws RecognitionException {
-        Enumerator current = null;
-
-        Token enumLiteral_0=null;
-        Token enumLiteral_1=null;
-        Token enumLiteral_2=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalEvaluacion.g:790:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
-            // InternalEvaluacion.g:791:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
-            {
-            // InternalEvaluacion.g:791:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
-            int alt17=3;
-            switch ( input.LA(1) ) {
-            case 28:
-                {
-                alt17=1;
-                }
-                break;
-            case 29:
-                {
-                alt17=2;
-                }
-                break;
-            case 30:
-                {
-                alt17=3;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 17, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt17) {
-                case 1 :
-                    // InternalEvaluacion.g:792:3: (enumLiteral_0= 'A' )
-                    {
-                    // InternalEvaluacion.g:792:3: (enumLiteral_0= 'A' )
-                    // InternalEvaluacion.g:793:4: enumLiteral_0= 'A'
-                    {
-                    enumLiteral_0=(Token)match(input,28,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,29,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getAltoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getE_CalificacionAccess().getAltoEnumLiteralDeclaration_0());
@@ -2093,12 +1790,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:800:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:721:3: (enumLiteral_1= 'M' )
                     {
-                    // InternalEvaluacion.g:800:3: (enumLiteral_1= 'M' )
-                    // InternalEvaluacion.g:801:4: enumLiteral_1= 'M'
+                    // InternalEvaluacion.g:721:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:722:4: enumLiteral_1= 'M'
                     {
-                    enumLiteral_1=(Token)match(input,29,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,30,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getMedioEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getE_CalificacionAccess().getMedioEnumLiteralDeclaration_1());
@@ -2110,12 +1807,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:808:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:729:3: (enumLiteral_2= 'B' )
                     {
-                    // InternalEvaluacion.g:808:3: (enumLiteral_2= 'B' )
-                    // InternalEvaluacion.g:809:4: enumLiteral_2= 'B'
+                    // InternalEvaluacion.g:729:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:730:4: enumLiteral_2= 'B'
                     {
-                    enumLiteral_2=(Token)match(input,30,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,31,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2());
@@ -2157,8 +1854,8 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000007012L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000006012L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000000FC00000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000000FC04002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000001F800000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000001F804002L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004002L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008012L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010000L});
@@ -2169,8 +1866,9 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000070000040L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000000E0000000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000400002L});
 
 }

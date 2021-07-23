@@ -224,7 +224,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Evaluaciones");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTipoAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTipoTipoEvaluacionParserRuleCall_0_0 = (RuleCall)cTipoAssignment_0.eContents().get(0);
+		private final RuleCall cTipoTipoEvaluacionEnumRuleCall_0_0 = (RuleCall)cTipoAssignment_0.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cExpresionAssignment_2 = (Assignment)cGroup.eContents().get(2);
@@ -248,7 +248,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		public Assignment getTipoAssignment_0() { return cTipoAssignment_0; }
 		
 		//TipoEvaluacion
-		public RuleCall getTipoTipoEvaluacionParserRuleCall_0_0() { return cTipoTipoEvaluacionParserRuleCall_0_0; }
+		public RuleCall getTipoTipoEvaluacionEnumRuleCall_0_0() { return cTipoTipoEvaluacionEnumRuleCall_0_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -316,211 +316,198 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	public class ExpresionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.Expresion");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCalificacionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cCalificacionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCalificacionCalificarExpresionParserRuleCall_2_0 = (RuleCall)cCalificacionAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cColonKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cComentarioAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cComentarioSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cComentarioAssignment_3_1.eContents().get(0);
-		
-		//Expresion:
-		//    'calificacion' ':' calificacion=CalificarExpresion
-		//    (':' comentario=STRING)?
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'calificacion' ':' calificacion=CalificarExpresion
-		//(':' comentario=STRING)?
-		public Group getGroup() { return cGroup; }
-		
-		//'calificacion'
-		public Keyword getCalificacionKeyword_0() { return cCalificacionKeyword_0; }
-		
-		//':'
-		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
-		
-		//calificacion=CalificarExpresion
-		public Assignment getCalificacionAssignment_2() { return cCalificacionAssignment_2; }
-		
-		//CalificarExpresion
-		public RuleCall getCalificacionCalificarExpresionParserRuleCall_2_0() { return cCalificacionCalificarExpresionParserRuleCall_2_0; }
-		
-		//(':' comentario=STRING)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//':'
-		public Keyword getColonKeyword_3_0() { return cColonKeyword_3_0; }
-		
-		//comentario=STRING
-		public Assignment getComentarioAssignment_3_1() { return cComentarioAssignment_3_1; }
-		
-		//STRING
-		public RuleCall getComentarioSTRINGTerminalRuleCall_3_1_0() { return cComentarioSTRINGTerminalRuleCall_3_1_0; }
-	}
-	public class CalificarExpresionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.CalificarExpresion");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cCalificarPropuestaAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final Assignment cNumeradorAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cNumeradorINTTerminalRuleCall_0_1_0 = (RuleCall)cNumeradorAssignment_0_1.eContents().get(0);
-		private final Keyword cSolidusKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Assignment cDenominadorAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final RuleCall cDenominadorINTTerminalRuleCall_0_3_0 = (RuleCall)cDenominadorAssignment_0_3.eContents().get(0);
+		private final Keyword cCalificacionKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Keyword cColonKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Assignment cPuntuacionAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cPuntuacionE_CalificacionEnumRuleCall_0_3_0 = (RuleCall)cPuntuacionAssignment_0_3.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Action cCalificarEquipoAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cPuntuacionAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cPuntuacionE_CalificacionEnumRuleCall_1_1_0 = (RuleCall)cPuntuacionAssignment_1_1.eContents().get(0);
+		private final Keyword cCalificacionKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Keyword cColonKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Assignment cNumeradorAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cNumeradorINTTerminalRuleCall_1_3_0 = (RuleCall)cNumeradorAssignment_1_3.eContents().get(0);
+		private final Keyword cSolidusKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
+		private final Assignment cDenominadorAssignment_1_5 = (Assignment)cGroup_1.eContents().get(5);
+		private final RuleCall cDenominadorINTTerminalRuleCall_1_5_0 = (RuleCall)cDenominadorAssignment_1_5.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Action cCalificarOtrosAction_2_0 = (Action)cGroup_2.eContents().get(0);
-		private final Assignment cValorAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cValorINTTerminalRuleCall_2_1_0 = (RuleCall)cValorAssignment_2_1.eContents().get(0);
+		private final Keyword cCalificacionKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Keyword cColonKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cValorAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final RuleCall cValorINTTerminalRuleCall_2_3_0 = (RuleCall)cValorAssignment_2_3.eContents().get(0);
+		private final Group cGroup_2_4 = (Group)cGroup_2.eContents().get(4);
+		private final Keyword cComentarioKeyword_2_4_0 = (Keyword)cGroup_2_4.eContents().get(0);
+		private final Keyword cColonKeyword_2_4_1 = (Keyword)cGroup_2_4.eContents().get(1);
+		private final Assignment cComentarioAssignment_2_4_2 = (Assignment)cGroup_2_4.eContents().get(2);
+		private final RuleCall cComentarioSTRINGTerminalRuleCall_2_4_2_0 = (RuleCall)cComentarioAssignment_2_4_2.eContents().get(0);
 		
-		//CalificarExpresion returns Expresion:
-		//    {CalificarPropuesta} numerador=INT '/' denominador=INT |
-		//    {CalificarEquipo} puntuacion=E_Calificacion |
-		//    {CalificarOtros} valor=INT
+		//Expresion:
+		//    {CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion |
+		//    {CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT |
+		//    {CalificarOtros} 'calificacion' ':' valor=INT
+		//    ('comentario' ':' comentario=STRING)?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{CalificarPropuesta} numerador=INT '/' denominador=INT |
-		//{CalificarEquipo} puntuacion=E_Calificacion |
-		//{CalificarOtros} valor=INT
+		//{CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion |
+		//{CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT |
+		//{CalificarOtros} 'calificacion' ':' valor=INT
+		//('comentario' ':' comentario=STRING)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//{CalificarPropuesta} numerador=INT '/' denominador=INT
+		//{CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//{CalificarPropuesta}
 		public Action getCalificarPropuestaAction_0_0() { return cCalificarPropuestaAction_0_0; }
 		
-		//numerador=INT
-		public Assignment getNumeradorAssignment_0_1() { return cNumeradorAssignment_0_1; }
+		//'calificacion'
+		public Keyword getCalificacionKeyword_0_1() { return cCalificacionKeyword_0_1; }
 		
-		//INT
-		public RuleCall getNumeradorINTTerminalRuleCall_0_1_0() { return cNumeradorINTTerminalRuleCall_0_1_0; }
+		//':'
+		public Keyword getColonKeyword_0_2() { return cColonKeyword_0_2; }
 		
-		//'/'
-		public Keyword getSolidusKeyword_0_2() { return cSolidusKeyword_0_2; }
+		//puntuacion=E_Calificacion
+		public Assignment getPuntuacionAssignment_0_3() { return cPuntuacionAssignment_0_3; }
 		
-		//denominador=INT
-		public Assignment getDenominadorAssignment_0_3() { return cDenominadorAssignment_0_3; }
+		//E_Calificacion
+		public RuleCall getPuntuacionE_CalificacionEnumRuleCall_0_3_0() { return cPuntuacionE_CalificacionEnumRuleCall_0_3_0; }
 		
-		//INT
-		public RuleCall getDenominadorINTTerminalRuleCall_0_3_0() { return cDenominadorINTTerminalRuleCall_0_3_0; }
-		
-		//{CalificarEquipo} puntuacion=E_Calificacion
+		//{CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//{CalificarEquipo}
 		public Action getCalificarEquipoAction_1_0() { return cCalificarEquipoAction_1_0; }
 		
-		//puntuacion=E_Calificacion
-		public Assignment getPuntuacionAssignment_1_1() { return cPuntuacionAssignment_1_1; }
+		//'calificacion'
+		public Keyword getCalificacionKeyword_1_1() { return cCalificacionKeyword_1_1; }
 		
-		//E_Calificacion
-		public RuleCall getPuntuacionE_CalificacionEnumRuleCall_1_1_0() { return cPuntuacionE_CalificacionEnumRuleCall_1_1_0; }
+		//':'
+		public Keyword getColonKeyword_1_2() { return cColonKeyword_1_2; }
 		
-		//{CalificarOtros} valor=INT
+		//numerador=INT
+		public Assignment getNumeradorAssignment_1_3() { return cNumeradorAssignment_1_3; }
+		
+		//INT
+		public RuleCall getNumeradorINTTerminalRuleCall_1_3_0() { return cNumeradorINTTerminalRuleCall_1_3_0; }
+		
+		//'/'
+		public Keyword getSolidusKeyword_1_4() { return cSolidusKeyword_1_4; }
+		
+		//denominador=INT
+		public Assignment getDenominadorAssignment_1_5() { return cDenominadorAssignment_1_5; }
+		
+		//INT
+		public RuleCall getDenominadorINTTerminalRuleCall_1_5_0() { return cDenominadorINTTerminalRuleCall_1_5_0; }
+		
+		//{CalificarOtros} 'calificacion' ':' valor=INT
+		//('comentario' ':' comentario=STRING)?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//{CalificarOtros}
 		public Action getCalificarOtrosAction_2_0() { return cCalificarOtrosAction_2_0; }
 		
+		//'calificacion'
+		public Keyword getCalificacionKeyword_2_1() { return cCalificacionKeyword_2_1; }
+		
+		//':'
+		public Keyword getColonKeyword_2_2() { return cColonKeyword_2_2; }
+		
 		//valor=INT
-		public Assignment getValorAssignment_2_1() { return cValorAssignment_2_1; }
+		public Assignment getValorAssignment_2_3() { return cValorAssignment_2_3; }
 		
 		//INT
-		public RuleCall getValorINTTerminalRuleCall_2_1_0() { return cValorINTTerminalRuleCall_2_1_0; }
-	}
-	public class TipoEvaluacionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.TipoEvaluacion");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cTipoEvaluarPropuestaParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cTipoEvaluarEquipoParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		public RuleCall getValorINTTerminalRuleCall_2_3_0() { return cValorINTTerminalRuleCall_2_3_0; }
 		
-		//TipoEvaluacion:
-		//    TipoEvaluarPropuesta | TipoEvaluarEquipo
-		//;
-		@Override public ParserRule getRule() { return rule; }
+		//('comentario' ':' comentario=STRING)?
+		public Group getGroup_2_4() { return cGroup_2_4; }
 		
-		//TipoEvaluarPropuesta | TipoEvaluarEquipo
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//'comentario'
+		public Keyword getComentarioKeyword_2_4_0() { return cComentarioKeyword_2_4_0; }
 		
-		//TipoEvaluarPropuesta
-		public RuleCall getTipoEvaluarPropuestaParserRuleCall_0() { return cTipoEvaluarPropuestaParserRuleCall_0; }
+		//':'
+		public Keyword getColonKeyword_2_4_1() { return cColonKeyword_2_4_1; }
 		
-		//TipoEvaluarEquipo
-		public RuleCall getTipoEvaluarEquipoParserRuleCall_1() { return cTipoEvaluarEquipoParserRuleCall_1; }
-	}
-	public class TipoEvaluarPropuestaElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.TipoEvaluarPropuesta");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cTipoEvaluacionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Keyword cEvaluarProblemaKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
-		private final Keyword cEvaluarTecnicaKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
-		private final Keyword cEvaluarOtrosKeyword_1_2 = (Keyword)cAlternatives_1.eContents().get(2);
+		//comentario=STRING
+		public Assignment getComentarioAssignment_2_4_2() { return cComentarioAssignment_2_4_2; }
 		
-		//TipoEvaluarPropuesta returns TipoEvaluacion:
-		//    {TipoEvaluacion} ('EvaluarProblema'|'EvaluarTecnica'|'EvaluarOtros')
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{TipoEvaluacion} ('EvaluarProblema'|'EvaluarTecnica'|'EvaluarOtros')
-		public Group getGroup() { return cGroup; }
-		
-		//{TipoEvaluacion}
-		public Action getTipoEvaluacionAction_0() { return cTipoEvaluacionAction_0; }
-		
-		//('EvaluarProblema'|'EvaluarTecnica'|'EvaluarOtros')
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-		
-		//'EvaluarProblema'
-		public Keyword getEvaluarProblemaKeyword_1_0() { return cEvaluarProblemaKeyword_1_0; }
-		
-		//'EvaluarTecnica'
-		public Keyword getEvaluarTecnicaKeyword_1_1() { return cEvaluarTecnicaKeyword_1_1; }
-		
-		//'EvaluarOtros'
-		public Keyword getEvaluarOtrosKeyword_1_2() { return cEvaluarOtrosKeyword_1_2; }
-	}
-	public class TipoEvaluarEquipoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.TipoEvaluarEquipo");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cTipoEvaluacionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Keyword cEvaluarArquitectoKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
-		private final Keyword cEvaluarDirectorKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
-		private final Keyword cEvaluarEducacionKeyword_1_2 = (Keyword)cAlternatives_1.eContents().get(2);
-		
-		//TipoEvaluarEquipo returns TipoEvaluacion:
-		//    {TipoEvaluacion} ('EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion')
-		//;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{TipoEvaluacion} ('EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion')
-		public Group getGroup() { return cGroup; }
-		
-		//{TipoEvaluacion}
-		public Action getTipoEvaluacionAction_0() { return cTipoEvaluacionAction_0; }
-		
-		//('EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion')
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
-		
-		//'EvaluarArquitecto'
-		public Keyword getEvaluarArquitectoKeyword_1_0() { return cEvaluarArquitectoKeyword_1_0; }
-		
-		//'EvaluarDirector'
-		public Keyword getEvaluarDirectorKeyword_1_1() { return cEvaluarDirectorKeyword_1_1; }
-		
-		//'EvaluarEducacion'
-		public Keyword getEvaluarEducacionKeyword_1_2() { return cEvaluarEducacionKeyword_1_2; }
+		//STRING
+		public RuleCall getComentarioSTRINGTerminalRuleCall_2_4_2_0() { return cComentarioSTRINGTerminalRuleCall_2_4_2_0; }
 	}
 	
+	public class TipoEvaluacionElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.TipoEvaluacion");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cEvaluarProblemaEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cEvaluarProblemaEvaluarProblemaKeyword_0_0 = (Keyword)cEvaluarProblemaEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cEvaluarTecnicaEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cEvaluarTecnicaEvaluarTecnicaKeyword_1_0 = (Keyword)cEvaluarTecnicaEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cEvaluarOtrosEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cEvaluarOtrosEvaluarOtrosKeyword_2_0 = (Keyword)cEvaluarOtrosEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cEvaluarArquitectoEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cEvaluarArquitectoDKeyword_3_0 = (Keyword)cEvaluarArquitectoEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cEvaluarDirectorEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cEvaluarDirectorEvaluarDirectorKeyword_4_0 = (Keyword)cEvaluarDirectorEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cEvaluarEducacionEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cEvaluarEducacionEvaluarEducacionKeyword_5_0 = (Keyword)cEvaluarEducacionEnumLiteralDeclaration_5.eContents().get(0);
+		
+		//enum TipoEvaluacion:
+		//        EvaluarProblema = 'EvaluarProblema' |
+		//        EvaluarTecnica = 'EvaluarTecnica' |
+		//        EvaluarOtros = 'EvaluarOtros' |
+		//        EvaluarArquitecto = 'D' |
+		//        EvaluarDirector = 'EvaluarDirector' |
+		//        EvaluarEducacion = 'EvaluarEducacion'
+		//;
+		public EnumRule getRule() { return rule; }
+		
+		//EvaluarProblema = 'EvaluarProblema' |
+		//EvaluarTecnica = 'EvaluarTecnica' |
+		//EvaluarOtros = 'EvaluarOtros' |
+		//EvaluarArquitecto = 'D' |
+		//EvaluarDirector = 'EvaluarDirector' |
+		//EvaluarEducacion = 'EvaluarEducacion'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//EvaluarProblema = 'EvaluarProblema'
+		public EnumLiteralDeclaration getEvaluarProblemaEnumLiteralDeclaration_0() { return cEvaluarProblemaEnumLiteralDeclaration_0; }
+		
+		//'EvaluarProblema'
+		public Keyword getEvaluarProblemaEvaluarProblemaKeyword_0_0() { return cEvaluarProblemaEvaluarProblemaKeyword_0_0; }
+		
+		//EvaluarTecnica = 'EvaluarTecnica'
+		public EnumLiteralDeclaration getEvaluarTecnicaEnumLiteralDeclaration_1() { return cEvaluarTecnicaEnumLiteralDeclaration_1; }
+		
+		//'EvaluarTecnica'
+		public Keyword getEvaluarTecnicaEvaluarTecnicaKeyword_1_0() { return cEvaluarTecnicaEvaluarTecnicaKeyword_1_0; }
+		
+		//EvaluarOtros = 'EvaluarOtros'
+		public EnumLiteralDeclaration getEvaluarOtrosEnumLiteralDeclaration_2() { return cEvaluarOtrosEnumLiteralDeclaration_2; }
+		
+		//'EvaluarOtros'
+		public Keyword getEvaluarOtrosEvaluarOtrosKeyword_2_0() { return cEvaluarOtrosEvaluarOtrosKeyword_2_0; }
+		
+		//EvaluarArquitecto = 'D'
+		public EnumLiteralDeclaration getEvaluarArquitectoEnumLiteralDeclaration_3() { return cEvaluarArquitectoEnumLiteralDeclaration_3; }
+		
+		//'D'
+		public Keyword getEvaluarArquitectoDKeyword_3_0() { return cEvaluarArquitectoDKeyword_3_0; }
+		
+		//EvaluarDirector = 'EvaluarDirector'
+		public EnumLiteralDeclaration getEvaluarDirectorEnumLiteralDeclaration_4() { return cEvaluarDirectorEnumLiteralDeclaration_4; }
+		
+		//'EvaluarDirector'
+		public Keyword getEvaluarDirectorEvaluarDirectorKeyword_4_0() { return cEvaluarDirectorEvaluarDirectorKeyword_4_0; }
+		
+		//EvaluarEducacion = 'EvaluarEducacion'
+		public EnumLiteralDeclaration getEvaluarEducacionEnumLiteralDeclaration_5() { return cEvaluarEducacionEnumLiteralDeclaration_5; }
+		
+		//'EvaluarEducacion'
+		public Keyword getEvaluarEducacionEvaluarEducacionKeyword_5_0() { return cEvaluarEducacionEvaluarEducacionKeyword_5_0; }
+	}
 	public class E_CalificacionElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.Evaluacion.E_Calificacion");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -564,10 +551,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final EvaluacionesElements pEvaluaciones;
 	private final TransicionElements pTransicion;
 	private final ExpresionElements pExpresion;
-	private final CalificarExpresionElements pCalificarExpresion;
-	private final TipoEvaluacionElements pTipoEvaluacion;
-	private final TipoEvaluarPropuestaElements pTipoEvaluarPropuesta;
-	private final TipoEvaluarEquipoElements pTipoEvaluarEquipo;
+	private final TipoEvaluacionElements eTipoEvaluacion;
 	private final E_CalificacionElements eE_Calificacion;
 	
 	private final Grammar grammar;
@@ -585,10 +569,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.pEvaluaciones = new EvaluacionesElements();
 		this.pTransicion = new TransicionElements();
 		this.pExpresion = new ExpresionElements();
-		this.pCalificarExpresion = new CalificarExpresionElements();
-		this.pTipoEvaluacion = new TipoEvaluacionElements();
-		this.pTipoEvaluarPropuesta = new TipoEvaluarPropuestaElements();
-		this.pTipoEvaluarEquipo = new TipoEvaluarEquipoElements();
+		this.eTipoEvaluacion = new TipoEvaluacionElements();
 		this.eE_Calificacion = new E_CalificacionElements();
 	}
 	
@@ -688,8 +669,10 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Expresion:
-	//    'calificacion' ':' calificacion=CalificarExpresion
-	//    (':' comentario=STRING)?
+	//    {CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion |
+	//    {CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT |
+	//    {CalificarOtros} 'calificacion' ':' valor=INT
+	//    ('comentario' ':' comentario=STRING)?
 	//;
 	public ExpresionElements getExpresionAccess() {
 		return pExpresion;
@@ -699,50 +682,20 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		return getExpresionAccess().getRule();
 	}
 	
-	//CalificarExpresion returns Expresion:
-	//    {CalificarPropuesta} numerador=INT '/' denominador=INT |
-	//    {CalificarEquipo} puntuacion=E_Calificacion |
-	//    {CalificarOtros} valor=INT
-	//;
-	public CalificarExpresionElements getCalificarExpresionAccess() {
-		return pCalificarExpresion;
-	}
-	
-	public ParserRule getCalificarExpresionRule() {
-		return getCalificarExpresionAccess().getRule();
-	}
-	
-	//TipoEvaluacion:
-	//    TipoEvaluarPropuesta | TipoEvaluarEquipo
+	//enum TipoEvaluacion:
+	//        EvaluarProblema = 'EvaluarProblema' |
+	//        EvaluarTecnica = 'EvaluarTecnica' |
+	//        EvaluarOtros = 'EvaluarOtros' |
+	//        EvaluarArquitecto = 'D' |
+	//        EvaluarDirector = 'EvaluarDirector' |
+	//        EvaluarEducacion = 'EvaluarEducacion'
 	//;
 	public TipoEvaluacionElements getTipoEvaluacionAccess() {
-		return pTipoEvaluacion;
+		return eTipoEvaluacion;
 	}
 	
-	public ParserRule getTipoEvaluacionRule() {
+	public EnumRule getTipoEvaluacionRule() {
 		return getTipoEvaluacionAccess().getRule();
-	}
-	
-	//TipoEvaluarPropuesta returns TipoEvaluacion:
-	//    {TipoEvaluacion} ('EvaluarProblema'|'EvaluarTecnica'|'EvaluarOtros')
-	//;
-	public TipoEvaluarPropuestaElements getTipoEvaluarPropuestaAccess() {
-		return pTipoEvaluarPropuesta;
-	}
-	
-	public ParserRule getTipoEvaluarPropuestaRule() {
-		return getTipoEvaluarPropuestaAccess().getRule();
-	}
-	
-	//TipoEvaluarEquipo returns TipoEvaluacion:
-	//    {TipoEvaluacion} ('EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion')
-	//;
-	public TipoEvaluarEquipoElements getTipoEvaluarEquipoAccess() {
-		return pTipoEvaluarEquipo;
-	}
-	
-	public ParserRule getTipoEvaluarEquipoRule() {
-		return getTipoEvaluarEquipoAccess().getRule();
 	}
 	
 	//enum E_Calificacion:

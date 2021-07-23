@@ -36,26 +36,19 @@ Transicion:
 
 
 Expresion:
-	'calificacion' ':' calificacion=CalificarExpresion
-	(':' comentario=STRING)?
+	{CalificarPropuesta} 'calificacion' ':' puntuacion=E_Calificacion | 
+	{CalificarEquipo} 'calificacion' ':' numerador=INT '/' denominador=INT | 
+	{CalificarOtros} 'calificacion' ':' valor=INT 
+	('comentario' ':' comentario=STRING)?
 ;
 
-CalificarExpresion returns Expresion:
-	{CalificarPropuesta} numerador=INT '/' denominador=INT | 
-	{CalificarEquipo} puntuacion=E_Calificacion | 
-	{CalificarOtros} valor=INT 
-;
-
-TipoEvaluacion:
-	TipoEvaluarPropuesta | TipoEvaluarEquipo 
-;
-
-TipoEvaluarPropuesta returns TipoEvaluacion:
-	{TipoEvaluacion} ('EvaluarProblema'|'EvaluarTecnica'|'EvaluarOtros')
-;
-
-TipoEvaluarEquipo returns TipoEvaluacion:
-	{TipoEvaluacion} ('EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion')  
+enum TipoEvaluacion:
+		EvaluarProblema = 'EvaluarProblema' |
+		EvaluarTecnica = 'EvaluarTecnica' |
+		EvaluarOtros = 'EvaluarOtros' | 
+		EvaluarArquitecto = 'D' | 
+		EvaluarDirector = 'EvaluarDirector' | 
+		EvaluarEducacion = 'EvaluarEducacion' 
 ;
 
 enum E_Calificacion:

@@ -31,10 +31,8 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, EvaluacionGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getCalificarExpresionAccess().getAlternatives(), "rule__CalificarExpresion__Alternatives");
+			builder.put(grammarAccess.getExpresionAccess().getAlternatives(), "rule__Expresion__Alternatives");
 			builder.put(grammarAccess.getTipoEvaluacionAccess().getAlternatives(), "rule__TipoEvaluacion__Alternatives");
-			builder.put(grammarAccess.getTipoEvaluarPropuestaAccess().getAlternatives_1(), "rule__TipoEvaluarPropuesta__Alternatives_1");
-			builder.put(grammarAccess.getTipoEvaluarEquipoAccess().getAlternatives_1(), "rule__TipoEvaluarEquipo__Alternatives_1");
 			builder.put(grammarAccess.getE_CalificacionAccess().getAlternatives(), "rule__E_Calificacion__Alternatives");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup(), "rule__MaquinaEstados__Group__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_1(), "rule__MaquinaEstados__Group_1__0");
@@ -46,13 +44,10 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEvaluacionesAccess().getGroup(), "rule__Evaluaciones__Group__0");
 			builder.put(grammarAccess.getEvaluacionesAccess().getGroup_3(), "rule__Evaluaciones__Group_3__0");
 			builder.put(grammarAccess.getTransicionAccess().getGroup(), "rule__Transicion__Group__0");
-			builder.put(grammarAccess.getExpresionAccess().getGroup(), "rule__Expresion__Group__0");
-			builder.put(grammarAccess.getExpresionAccess().getGroup_3(), "rule__Expresion__Group_3__0");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getGroup_0(), "rule__CalificarExpresion__Group_0__0");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getGroup_1(), "rule__CalificarExpresion__Group_1__0");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getGroup_2(), "rule__CalificarExpresion__Group_2__0");
-			builder.put(grammarAccess.getTipoEvaluarPropuestaAccess().getGroup(), "rule__TipoEvaluarPropuesta__Group__0");
-			builder.put(grammarAccess.getTipoEvaluarEquipoAccess().getGroup(), "rule__TipoEvaluarEquipo__Group__0");
+			builder.put(grammarAccess.getExpresionAccess().getGroup_0(), "rule__Expresion__Group_0__0");
+			builder.put(grammarAccess.getExpresionAccess().getGroup_1(), "rule__Expresion__Group_1__0");
+			builder.put(grammarAccess.getExpresionAccess().getGroup_2(), "rule__Expresion__Group_2__0");
+			builder.put(grammarAccess.getExpresionAccess().getGroup_2_4(), "rule__Expresion__Group_2_4__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getEventsAssignment_1_1(), "rule__MaquinaEstados__EventsAssignment_1_1");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getResetEventsAssignment_2_1(), "rule__MaquinaEstados__ResetEventsAssignment_2_1");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getCommandsAssignment_3_1(), "rule__MaquinaEstados__CommandsAssignment_3_1");
@@ -68,12 +63,11 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEvaluacionesAccess().getComentarioAssignment_3_1(), "rule__Evaluaciones__ComentarioAssignment_3_1");
 			builder.put(grammarAccess.getTransicionAccess().getEventAssignment_0(), "rule__Transicion__EventAssignment_0");
 			builder.put(grammarAccess.getTransicionAccess().getStateAssignment_2(), "rule__Transicion__StateAssignment_2");
-			builder.put(grammarAccess.getExpresionAccess().getCalificacionAssignment_2(), "rule__Expresion__CalificacionAssignment_2");
-			builder.put(grammarAccess.getExpresionAccess().getComentarioAssignment_3_1(), "rule__Expresion__ComentarioAssignment_3_1");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getNumeradorAssignment_0_1(), "rule__CalificarExpresion__NumeradorAssignment_0_1");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getDenominadorAssignment_0_3(), "rule__CalificarExpresion__DenominadorAssignment_0_3");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getPuntuacionAssignment_1_1(), "rule__CalificarExpresion__PuntuacionAssignment_1_1");
-			builder.put(grammarAccess.getCalificarExpresionAccess().getValorAssignment_2_1(), "rule__CalificarExpresion__ValorAssignment_2_1");
+			builder.put(grammarAccess.getExpresionAccess().getPuntuacionAssignment_0_3(), "rule__Expresion__PuntuacionAssignment_0_3");
+			builder.put(grammarAccess.getExpresionAccess().getNumeradorAssignment_1_3(), "rule__Expresion__NumeradorAssignment_1_3");
+			builder.put(grammarAccess.getExpresionAccess().getDenominadorAssignment_1_5(), "rule__Expresion__DenominadorAssignment_1_5");
+			builder.put(grammarAccess.getExpresionAccess().getValorAssignment_2_3(), "rule__Expresion__ValorAssignment_2_3");
+			builder.put(grammarAccess.getExpresionAccess().getComentarioAssignment_2_4_2(), "rule__Expresion__ComentarioAssignment_2_4_2");
 		}
 	}
 	

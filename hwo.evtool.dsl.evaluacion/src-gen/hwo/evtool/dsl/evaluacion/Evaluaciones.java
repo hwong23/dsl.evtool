@@ -27,22 +27,25 @@ import org.eclipse.emf.ecore.EObject;
 public interface Evaluaciones extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
+   * Returns the value of the '<em><b>Tipo</b></em>' attribute.
+   * The literals are from the enumeration {@link hwo.evtool.dsl.evaluacion.TipoEvaluacion}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tipo</em>' containment reference.
+   * @return the value of the '<em>Tipo</em>' attribute.
+   * @see hwo.evtool.dsl.evaluacion.TipoEvaluacion
    * @see #setTipo(TipoEvaluacion)
    * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getEvaluaciones_Tipo()
-   * @model containment="true"
+   * @model
    * @generated
    */
   TipoEvaluacion getTipo();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getTipo <em>Tipo</em>}' containment reference.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getTipo <em>Tipo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Tipo</em>' containment reference.
+   * @param value the new value of the '<em>Tipo</em>' attribute.
+   * @see hwo.evtool.dsl.evaluacion.TipoEvaluacion
    * @see #getTipo()
    * @generated
    */

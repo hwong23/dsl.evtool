@@ -80,13 +80,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass tipoEvaluacionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass calificarPropuestaEClass = null;
 
   /**
@@ -102,6 +95,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   private EClass calificarOtrosEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum tipoEvaluacionEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -322,9 +322,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getEvaluaciones_Tipo()
+  public EAttribute getEvaluaciones_Tipo()
   {
-    return (EReference)evaluacionesEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)evaluacionesEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -410,39 +410,6 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EReference getExpresion_Calificacion()
-  {
-    return (EReference)expresionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getExpresion_Comentario()
-  {
-    return (EAttribute)expresionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getTipoEvaluacion()
-  {
-    return tipoEvaluacionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getCalificarPropuesta()
   {
     return calificarPropuestaEClass;
@@ -454,20 +421,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCalificarPropuesta_Numerador()
+  public EAttribute getCalificarPropuesta_Puntuacion()
   {
     return (EAttribute)calificarPropuestaEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getCalificarPropuesta_Denominador()
-  {
-    return (EAttribute)calificarPropuestaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -487,9 +443,20 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCalificarEquipo_Puntuacion()
+  public EAttribute getCalificarEquipo_Numerador()
   {
     return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCalificarEquipo_Denominador()
+  {
+    return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -512,6 +479,28 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
   public EAttribute getCalificarOtros_Valor()
   {
     return (EAttribute)calificarOtrosEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCalificarOtros_Comentario()
+  {
+    return (EAttribute)calificarOtrosEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EEnum getTipoEvaluacion()
+  {
+    return tipoEvaluacionEEnum;
   }
 
   /**
@@ -572,7 +561,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEReference(componenteEClass, COMPONENTE__TRANSITIONS);
 
     evaluacionesEClass = createEClass(EVALUACIONES);
-    createEReference(evaluacionesEClass, EVALUACIONES__TIPO);
+    createEAttribute(evaluacionesEClass, EVALUACIONES__TIPO);
     createEAttribute(evaluacionesEClass, EVALUACIONES__NAME);
     createEReference(evaluacionesEClass, EVALUACIONES__EXPRESION);
     createEAttribute(evaluacionesEClass, EVALUACIONES__COMENTARIO);
@@ -582,22 +571,20 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEReference(transicionEClass, TRANSICION__STATE);
 
     expresionEClass = createEClass(EXPRESION);
-    createEReference(expresionEClass, EXPRESION__CALIFICACION);
-    createEAttribute(expresionEClass, EXPRESION__COMENTARIO);
-
-    tipoEvaluacionEClass = createEClass(TIPO_EVALUACION);
 
     calificarPropuestaEClass = createEClass(CALIFICAR_PROPUESTA);
-    createEAttribute(calificarPropuestaEClass, CALIFICAR_PROPUESTA__NUMERADOR);
-    createEAttribute(calificarPropuestaEClass, CALIFICAR_PROPUESTA__DENOMINADOR);
+    createEAttribute(calificarPropuestaEClass, CALIFICAR_PROPUESTA__PUNTUACION);
 
     calificarEquipoEClass = createEClass(CALIFICAR_EQUIPO);
-    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__PUNTUACION);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__NUMERADOR);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__DENOMINADOR);
 
     calificarOtrosEClass = createEClass(CALIFICAR_OTROS);
     createEAttribute(calificarOtrosEClass, CALIFICAR_OTROS__VALOR);
+    createEAttribute(calificarOtrosEClass, CALIFICAR_OTROS__COMENTARIO);
 
     // Create enums
+    tipoEvaluacionEEnum = createEEnum(TIPO_EVALUACION);
     e_CalificacionEEnum = createEEnum(ECALIFICACION);
   }
 
@@ -651,7 +638,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEReference(getComponente_Transitions(), this.getTransicion(), null, "transitions", null, 0, -1, Componente.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(evaluacionesEClass, Evaluaciones.class, "Evaluaciones", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEvaluaciones_Tipo(), this.getTipoEvaluacion(), null, "tipo", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvaluaciones_Tipo(), this.getTipoEvaluacion(), "tipo", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluaciones_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEvaluaciones_Expresion(), this.getExpresion(), null, "expresion", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvaluaciones_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Evaluaciones.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -661,22 +648,27 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEReference(getTransicion_State(), this.getComponente(), null, "state", null, 0, 1, Transicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expresionEClass, Expresion.class, "Expresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExpresion_Calificacion(), this.getExpresion(), null, "calificacion", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExpresion_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, Expresion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(tipoEvaluacionEClass, TipoEvaluacion.class, "TipoEvaluacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(calificarPropuestaEClass, CalificarPropuesta.class, "CalificarPropuesta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCalificarPropuesta_Numerador(), ecorePackage.getEInt(), "numerador", null, 0, 1, CalificarPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalificarPropuesta_Denominador(), ecorePackage.getEInt(), "denominador", null, 0, 1, CalificarPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarPropuesta_Puntuacion(), this.getE_Calificacion(), "puntuacion", null, 0, 1, CalificarPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calificarEquipoEClass, CalificarEquipo.class, "CalificarEquipo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCalificarEquipo_Puntuacion(), this.getE_Calificacion(), "puntuacion", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_Numerador(), ecorePackage.getEInt(), "numerador", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_Denominador(), ecorePackage.getEInt(), "denominador", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calificarOtrosEClass, CalificarOtros.class, "CalificarOtros", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarOtros_Valor(), ecorePackage.getEInt(), "valor", null, 0, 1, CalificarOtros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarOtros_Comentario(), ecorePackage.getEString(), "comentario", null, 0, 1, CalificarOtros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
+    initEEnum(tipoEvaluacionEEnum, TipoEvaluacion.class, "TipoEvaluacion");
+    addEEnumLiteral(tipoEvaluacionEEnum, TipoEvaluacion.EVALUAR_PROBLEMA);
+    addEEnumLiteral(tipoEvaluacionEEnum, TipoEvaluacion.EVALUAR_TECNICA);
+    addEEnumLiteral(tipoEvaluacionEEnum, TipoEvaluacion.EVALUAR_OTROS);
+    addEEnumLiteral(tipoEvaluacionEEnum, TipoEvaluacion.EVALUAR_ARQUITECTO);
+    addEEnumLiteral(tipoEvaluacionEEnum, TipoEvaluacion.EVALUAR_DIRECTOR);
+    addEEnumLiteral(tipoEvaluacionEEnum, TipoEvaluacion.EVALUAR_EDUCACION);
+
     initEEnum(e_CalificacionEEnum, E_Calificacion.class, "E_Calificacion");
     addEEnumLiteral(e_CalificacionEEnum, E_Calificacion.ALTO);
     addEEnumLiteral(e_CalificacionEEnum, E_Calificacion.MEDIO);

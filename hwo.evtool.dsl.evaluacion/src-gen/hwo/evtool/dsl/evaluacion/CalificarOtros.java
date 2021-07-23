@@ -14,6 +14,7 @@ package hwo.evtool.dsl.evaluacion;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getValor <em>Valor</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getComentario <em>Comentario</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarOtros()
@@ -43,5 +44,27 @@ public interface CalificarOtros extends Expresion
    * @generated
    */
   void setValor(int value);
+
+  /**
+   * Returns the value of the '<em><b>Comentario</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Comentario</em>' attribute.
+   * @see #setComentario(String)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarOtros_Comentario()
+   * @model
+   * @generated
+   */
+  String getComentario();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getComentario <em>Comentario</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Comentario</em>' attribute.
+   * @see #getComentario()
+   * @generated
+   */
+  void setComentario(String value);
 
 } // CalificarOtros

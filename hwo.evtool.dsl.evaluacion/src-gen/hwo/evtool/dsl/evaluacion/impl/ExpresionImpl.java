@@ -6,61 +6,19 @@ package hwo.evtool.dsl.evaluacion.impl;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Expresion;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Expresion</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl#getCalificacion <em>Calificacion</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.ExpresionImpl#getComentario <em>Comentario</em>}</li>
- * </ul>
  *
  * @generated
  */
 public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expresion
 {
-  /**
-   * The cached value of the '{@link #getCalificacion() <em>Calificacion</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCalificacion()
-   * @generated
-   * @ordered
-   */
-  protected Expresion calificacion;
-
-  /**
-   * The default value of the '{@link #getComentario() <em>Comentario</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getComentario()
-   * @generated
-   * @ordered
-   */
-  protected static final String COMENTARIO_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getComentario() <em>Comentario</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getComentario()
-   * @generated
-   * @ordered
-   */
-  protected String comentario = COMENTARIO_EDEFAULT;
-
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -80,190 +38,6 @@ public class ExpresionImpl extends MinimalEObjectImpl.Container implements Expre
   protected EClass eStaticClass()
   {
     return EvaluacionPackage.Literals.EXPRESION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Expresion getCalificacion()
-  {
-    return calificacion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetCalificacion(Expresion newCalificacion, NotificationChain msgs)
-  {
-    Expresion oldCalificacion = calificacion;
-    calificacion = newCalificacion;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EXPRESION__CALIFICACION, oldCalificacion, newCalificacion);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setCalificacion(Expresion newCalificacion)
-  {
-    if (newCalificacion != calificacion)
-    {
-      NotificationChain msgs = null;
-      if (calificacion != null)
-        msgs = ((InternalEObject)calificacion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EXPRESION__CALIFICACION, null, msgs);
-      if (newCalificacion != null)
-        msgs = ((InternalEObject)newCalificacion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EXPRESION__CALIFICACION, null, msgs);
-      msgs = basicSetCalificacion(newCalificacion, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EXPRESION__CALIFICACION, newCalificacion, newCalificacion));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getComentario()
-  {
-    return comentario;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setComentario(String newComentario)
-  {
-    String oldComentario = comentario;
-    comentario = newComentario;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EXPRESION__COMENTARIO, oldComentario, comentario));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case EvaluacionPackage.EXPRESION__CALIFICACION:
-        return basicSetCalificacion(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object eGet(int featureID, boolean resolve, boolean coreType)
-  {
-    switch (featureID)
-    {
-      case EvaluacionPackage.EXPRESION__CALIFICACION:
-        return getCalificacion();
-      case EvaluacionPackage.EXPRESION__COMENTARIO:
-        return getComentario();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eSet(int featureID, Object newValue)
-  {
-    switch (featureID)
-    {
-      case EvaluacionPackage.EXPRESION__CALIFICACION:
-        setCalificacion((Expresion)newValue);
-        return;
-      case EvaluacionPackage.EXPRESION__COMENTARIO:
-        setComentario((String)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void eUnset(int featureID)
-  {
-    switch (featureID)
-    {
-      case EvaluacionPackage.EXPRESION__CALIFICACION:
-        setCalificacion((Expresion)null);
-        return;
-      case EvaluacionPackage.EXPRESION__COMENTARIO:
-        setComentario(COMENTARIO_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public boolean eIsSet(int featureID)
-  {
-    switch (featureID)
-    {
-      case EvaluacionPackage.EXPRESION__CALIFICACION:
-        return calificacion != null;
-      case EvaluacionPackage.EXPRESION__COMENTARIO:
-        return COMENTARIO_EDEFAULT == null ? comentario != null : !COMENTARIO_EDEFAULT.equals(comentario);
-    }
-    return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (comentario: ");
-    result.append(comentario);
-    result.append(')');
-    return result.toString();
   }
 
 } //ExpresionImpl

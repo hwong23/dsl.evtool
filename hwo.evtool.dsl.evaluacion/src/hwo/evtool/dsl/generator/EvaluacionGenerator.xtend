@@ -67,7 +67,6 @@ class EvaluacionGenerator extends AbstractGenerator {
 //	'''
 //	
 	protected def declareStrings (Evaluaciones c) '''
-		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
 	'''
 //	
 //	protected def dispatch typeValue(IntConstant c) '''
@@ -75,5 +74,9 @@ class EvaluacionGenerator extends AbstractGenerator {
 //	
 //	protected def dispatch typeValue(ProptConstant c) '''
 //		«c.valor.tipo»", "«c.valor.calificacion»'''
+
+
+// 		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
+
 }
 

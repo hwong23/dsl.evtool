@@ -78,15 +78,6 @@ public interface EvaluacionFactory extends EFactory
   Expresion createExpresion();
 
   /**
-   * Returns a new object of class '<em>Tipo Evaluacion</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tipo Evaluacion</em>'.
-   * @generated
-   */
-  TipoEvaluacion createTipoEvaluacion();
-
-  /**
    * Returns a new object of class '<em>Calificar Propuesta</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

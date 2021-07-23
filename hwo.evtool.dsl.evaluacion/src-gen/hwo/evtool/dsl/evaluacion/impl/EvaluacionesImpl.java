@@ -36,14 +36,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Evaluaciones
 {
   /**
-   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' containment reference.
+   * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getTipo()
    * @generated
    * @ordered
    */
-  protected TipoEvaluacion tipo;
+  protected static final TipoEvaluacion TIPO_EDEFAULT = TipoEvaluacion.EVALUAR_PROBLEMA;
+
+  /**
+   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected TipoEvaluacion tipo = TIPO_EDEFAULT;
 
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -132,38 +142,13 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTipo(TipoEvaluacion newTipo, NotificationChain msgs)
-  {
-    TipoEvaluacion oldTipo = tipo;
-    tipo = newTipo;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__TIPO, oldTipo, newTipo);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public void setTipo(TipoEvaluacion newTipo)
   {
-    if (newTipo != tipo)
-    {
-      NotificationChain msgs = null;
-      if (tipo != null)
-        msgs = ((InternalEObject)tipo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EVALUACIONES__TIPO, null, msgs);
-      if (newTipo != null)
-        msgs = ((InternalEObject)newTipo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvaluacionPackage.EVALUACIONES__TIPO, null, msgs);
-      msgs = basicSetTipo(newTipo, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__TIPO, newTipo, newTipo));
+    TipoEvaluacion oldTipo = tipo;
+    tipo = newTipo == null ? TIPO_EDEFAULT : newTipo;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.EVALUACIONES__TIPO, oldTipo, tipo));
   }
 
   /**
@@ -276,8 +261,6 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
   {
     switch (featureID)
     {
-      case EvaluacionPackage.EVALUACIONES__TIPO:
-        return basicSetTipo(null, msgs);
       case EvaluacionPackage.EVALUACIONES__EXPRESION:
         return basicSetExpresion(null, msgs);
     }
@@ -343,7 +326,7 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
     switch (featureID)
     {
       case EvaluacionPackage.EVALUACIONES__TIPO:
-        setTipo((TipoEvaluacion)null);
+        setTipo(TIPO_EDEFAULT);
         return;
       case EvaluacionPackage.EVALUACIONES__NAME:
         setName(NAME_EDEFAULT);
@@ -369,7 +352,7 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
     switch (featureID)
     {
       case EvaluacionPackage.EVALUACIONES__TIPO:
-        return tipo != null;
+        return tipo != TIPO_EDEFAULT;
       case EvaluacionPackage.EVALUACIONES__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EvaluacionPackage.EVALUACIONES__EXPRESION:
@@ -391,7 +374,9 @@ public class EvaluacionesImpl extends MinimalEObjectImpl.Container implements Ev
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
+    result.append(" (tipo: ");
+    result.append(tipo);
+    result.append(", name: ");
     result.append(name);
     result.append(", comentario: ");
     result.append(comentario);

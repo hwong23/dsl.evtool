@@ -10,13 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Expresion</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Expresion#getCalificacion <em>Calificacion</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.Expresion#getComentario <em>Comentario</em>}</li>
- * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getExpresion()
  * @model
@@ -24,48 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Expresion extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Calificacion</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Calificacion</em>' containment reference.
-   * @see #setCalificacion(Expresion)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getExpresion_Calificacion()
-   * @model containment="true"
-   * @generated
-   */
-  Expresion getCalificacion();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Expresion#getCalificacion <em>Calificacion</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Calificacion</em>' containment reference.
-   * @see #getCalificacion()
-   * @generated
-   */
-  void setCalificacion(Expresion value);
-
-  /**
-   * Returns the value of the '<em><b>Comentario</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Comentario</em>' attribute.
-   * @see #setComentario(String)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getExpresion_Comentario()
-   * @model
-   * @generated
-   */
-  String getComentario();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Expresion#getComentario <em>Comentario</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Comentario</em>' attribute.
-   * @see #getComentario()
-   * @generated
-   */
-  void setComentario(String value);
-
 } // Expresion

@@ -4,7 +4,6 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.CalificarEquipo;
-import hwo.evtool.dsl.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,7 +20,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl#getPuntuacion <em>Puntuacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl#getNumerador <em>Numerador</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl#getDenominador <em>Denominador</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +29,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquipo
 {
   /**
-   * The default value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
+   * The default value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPuntuacion()
+   * @see #getNumerador()
    * @generated
    * @ordered
    */
-  protected static final E_Calificacion PUNTUACION_EDEFAULT = E_Calificacion.ALTO;
+  protected static final int NUMERADOR_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
+   * The cached value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPuntuacion()
+   * @see #getNumerador()
    * @generated
    * @ordered
    */
-  protected E_Calificacion puntuacion = PUNTUACION_EDEFAULT;
+  protected int numerador = NUMERADOR_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDenominador()
+   * @generated
+   * @ordered
+   */
+  protected static final int DENOMINADOR_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDenominador()
+   * @generated
+   * @ordered
+   */
+  protected int denominador = DENOMINADOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,9 +95,9 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
    * @generated
    */
   @Override
-  public E_Calificacion getPuntuacion()
+  public int getNumerador()
   {
-    return puntuacion;
+    return numerador;
   }
 
   /**
@@ -86,12 +106,37 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
    * @generated
    */
   @Override
-  public void setPuntuacion(E_Calificacion newPuntuacion)
+  public void setNumerador(int newNumerador)
   {
-    E_Calificacion oldPuntuacion = puntuacion;
-    puntuacion = newPuntuacion == null ? PUNTUACION_EDEFAULT : newPuntuacion;
+    int oldNumerador = numerador;
+    numerador = newNumerador;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__PUNTUACION, oldPuntuacion, puntuacion));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR, oldNumerador, numerador));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int getDenominador()
+  {
+    return denominador;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDenominador(int newDenominador)
+  {
+    int oldDenominador = denominador;
+    denominador = newDenominador;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR, oldDenominador, denominador));
   }
 
   /**
@@ -104,8 +149,10 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_EQUIPO__PUNTUACION:
-        return getPuntuacion();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
+        return getNumerador();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
+        return getDenominador();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +167,11 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_EQUIPO__PUNTUACION:
-        setPuntuacion((E_Calificacion)newValue);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
+        setNumerador((Integer)newValue);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
+        setDenominador((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +187,11 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_EQUIPO__PUNTUACION:
-        setPuntuacion(PUNTUACION_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
+        setNumerador(NUMERADOR_EDEFAULT);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
+        setDenominador(DENOMINADOR_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +207,10 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_EQUIPO__PUNTUACION:
-        return puntuacion != PUNTUACION_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
+        return numerador != NUMERADOR_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
+        return denominador != DENOMINADOR_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -171,8 +226,10 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (puntuacion: ");
-    result.append(puntuacion);
+    result.append(" (numerador: ");
+    result.append(numerador);
+    result.append(", denominador: ");
+    result.append(denominador);
     result.append(')');
     return result.toString();
   }

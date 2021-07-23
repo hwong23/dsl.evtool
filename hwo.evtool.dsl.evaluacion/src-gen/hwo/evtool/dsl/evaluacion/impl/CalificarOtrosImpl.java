@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarOtrosImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarOtrosImpl#getComentario <em>Comentario</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,6 +47,26 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
    * @ordered
    */
   protected int valor = VALOR_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getComentario() <em>Comentario</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getComentario()
+   * @generated
+   * @ordered
+   */
+  protected static final String COMENTARIO_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getComentario() <em>Comentario</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getComentario()
+   * @generated
+   * @ordered
+   */
+  protected String comentario = COMENTARIO_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -99,12 +120,39 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
    * @generated
    */
   @Override
+  public String getComentario()
+  {
+    return comentario;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setComentario(String newComentario)
+  {
+    String oldComentario = comentario;
+    comentario = newComentario;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_OTROS__COMENTARIO, oldComentario, comentario));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         return getValor();
+      case EvaluacionPackage.CALIFICAR_OTROS__COMENTARIO:
+        return getComentario();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,6 +169,9 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
     {
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         setValor((Integer)newValue);
+        return;
+      case EvaluacionPackage.CALIFICAR_OTROS__COMENTARIO:
+        setComentario((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,6 +190,9 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         setValor(VALOR_EDEFAULT);
         return;
+      case EvaluacionPackage.CALIFICAR_OTROS__COMENTARIO:
+        setComentario(COMENTARIO_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -155,6 +209,8 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
     {
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         return valor != VALOR_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_OTROS__COMENTARIO:
+        return COMENTARIO_EDEFAULT == null ? comentario != null : !COMENTARIO_EDEFAULT.equals(comentario);
     }
     return super.eIsSet(featureID);
   }
@@ -172,6 +228,8 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (valor: ");
     result.append(valor);
+    result.append(", comentario: ");
+    result.append(comentario);
     result.append(')');
     return result.toString();
   }

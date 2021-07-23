@@ -4,6 +4,7 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.CalificarPropuesta;
+import hwo.evtool.dsl.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -20,8 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getNumerador <em>Numerador</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getDenominador <em>Denominador</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getPuntuacion <em>Puntuacion</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +29,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPropuesta
 {
   /**
-   * The default value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
+   * The default value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumerador()
+   * @see #getPuntuacion()
    * @generated
    * @ordered
    */
-  protected static final int NUMERADOR_EDEFAULT = 0;
+  protected static final E_Calificacion PUNTUACION_EDEFAULT = E_Calificacion.ALTO;
 
   /**
-   * The cached value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
+   * The cached value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumerador()
+   * @see #getPuntuacion()
    * @generated
    * @ordered
    */
-  protected int numerador = NUMERADOR_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDenominador()
-   * @generated
-   * @ordered
-   */
-  protected static final int DENOMINADOR_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDenominador()
-   * @generated
-   * @ordered
-   */
-  protected int denominador = DENOMINADOR_EDEFAULT;
+  protected E_Calificacion puntuacion = PUNTUACION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,9 +75,9 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
    * @generated
    */
   @Override
-  public int getNumerador()
+  public E_Calificacion getPuntuacion()
   {
-    return numerador;
+    return puntuacion;
   }
 
   /**
@@ -106,37 +86,12 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
    * @generated
    */
   @Override
-  public void setNumerador(int newNumerador)
+  public void setPuntuacion(E_Calificacion newPuntuacion)
   {
-    int oldNumerador = numerador;
-    numerador = newNumerador;
+    E_Calificacion oldPuntuacion = puntuacion;
+    puntuacion = newPuntuacion == null ? PUNTUACION_EDEFAULT : newPuntuacion;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR, oldNumerador, numerador));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int getDenominador()
-  {
-    return denominador;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setDenominador(int newDenominador)
-  {
-    int oldDenominador = denominador;
-    denominador = newDenominador;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR, oldDenominador, denominador));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION, oldPuntuacion, puntuacion));
   }
 
   /**
@@ -149,10 +104,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
-        return getNumerador();
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
-        return getDenominador();
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
+        return getPuntuacion();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -167,11 +120,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
-        setNumerador((Integer)newValue);
-        return;
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
-        setDenominador((Integer)newValue);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
+        setPuntuacion((E_Calificacion)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,11 +137,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
-        setNumerador(NUMERADOR_EDEFAULT);
-        return;
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
-        setDenominador(DENOMINADOR_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
+        setPuntuacion(PUNTUACION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -207,10 +154,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__NUMERADOR:
-        return numerador != NUMERADOR_EDEFAULT;
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__DENOMINADOR:
-        return denominador != DENOMINADOR_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
+        return puntuacion != PUNTUACION_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -226,10 +171,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (numerador: ");
-    result.append(numerador);
-    result.append(", denominador: ");
-    result.append(denominador);
+    result.append(" (puntuacion: ");
+    result.append(puntuacion);
     result.append(')');
     return result.toString();
   }

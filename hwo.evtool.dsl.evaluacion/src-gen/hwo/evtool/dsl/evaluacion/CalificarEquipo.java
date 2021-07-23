@@ -13,7 +13,8 @@ package hwo.evtool.dsl.evaluacion;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getPuntuacion <em>Puntuacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarEquipo()
@@ -23,28 +24,47 @@ package hwo.evtool.dsl.evaluacion;
 public interface CalificarEquipo extends Expresion
 {
   /**
-   * Returns the value of the '<em><b>Puntuacion</b></em>' attribute.
-   * The literals are from the enumeration {@link hwo.evtool.dsl.evaluacion.E_Calificacion}.
+   * Returns the value of the '<em><b>Numerador</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Puntuacion</em>' attribute.
-   * @see hwo.evtool.dsl.evaluacion.E_Calificacion
-   * @see #setPuntuacion(E_Calificacion)
-   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarEquipo_Puntuacion()
+   * @return the value of the '<em>Numerador</em>' attribute.
+   * @see #setNumerador(int)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarEquipo_Numerador()
    * @model
    * @generated
    */
-  E_Calificacion getPuntuacion();
+  int getNumerador();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getPuntuacion <em>Puntuacion</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Puntuacion</em>' attribute.
-   * @see hwo.evtool.dsl.evaluacion.E_Calificacion
-   * @see #getPuntuacion()
+   * @param value the new value of the '<em>Numerador</em>' attribute.
+   * @see #getNumerador()
    * @generated
    */
-  void setPuntuacion(E_Calificacion value);
+  void setNumerador(int value);
+
+  /**
+   * Returns the value of the '<em><b>Denominador</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Denominador</em>' attribute.
+   * @see #setDenominador(int)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarEquipo_Denominador()
+   * @model
+   * @generated
+   */
+  int getDenominador();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Denominador</em>' attribute.
+   * @see #getDenominador()
+   * @generated
+   */
+  void setDenominador(int value);
 
 } // CalificarEquipo

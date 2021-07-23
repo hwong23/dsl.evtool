@@ -3,7 +3,7 @@
 '=>'=28
 'A'=17
 'B'=19
-'EvaluarArquitecto'=14
+'D'=14
 'EvaluarDirector'=15
 'EvaluarEducacion'=16
 'EvaluarOtros'=13
@@ -12,6 +12,7 @@
 'M'=18
 'actions'=24
 'calificacion'=29
+'comentario'=31
 'componente'=23
 'evaluaciones'=22
 'eventos'=20
@@ -45,3 +46,4 @@ T__27=27
 T__28=28
 T__29=29
 T__30=30
+T__31=31

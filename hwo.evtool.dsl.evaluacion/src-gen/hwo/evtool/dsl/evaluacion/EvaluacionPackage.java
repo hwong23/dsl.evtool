@@ -207,7 +207,7 @@ public interface EvaluacionPackage extends EPackage
   int EVALUACIONES = 3;
 
   /**
-   * The feature id for the '<em><b>Tipo</b></em>' containment reference.
+   * The feature id for the '<em><b>Tipo</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -299,50 +299,13 @@ public interface EvaluacionPackage extends EPackage
   int EXPRESION = 5;
 
   /**
-   * The feature id for the '<em><b>Calificacion</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESION__CALIFICACION = 0;
-
-  /**
-   * The feature id for the '<em><b>Comentario</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESION__COMENTARIO = 1;
-
-  /**
    * The number of structural features of the '<em>Expresion</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESION_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.TipoEvaluacionImpl <em>Tipo Evaluacion</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see hwo.evtool.dsl.evaluacion.impl.TipoEvaluacionImpl
-   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTipoEvaluacion()
-   * @generated
-   */
-  int TIPO_EVALUACION = 6;
-
-  /**
-   * The number of structural features of the '<em>Tipo Evaluacion</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TIPO_EVALUACION_FEATURE_COUNT = 0;
+  int EXPRESION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl <em>Calificar Propuesta</em>}' class.
@@ -352,43 +315,16 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCalificarPropuesta()
    * @generated
    */
-  int CALIFICAR_PROPUESTA = 7;
+  int CALIFICAR_PROPUESTA = 6;
 
   /**
-   * The feature id for the '<em><b>Calificacion</b></em>' containment reference.
+   * The feature id for the '<em><b>Puntuacion</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_PROPUESTA__CALIFICACION = EXPRESION__CALIFICACION;
-
-  /**
-   * The feature id for the '<em><b>Comentario</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_PROPUESTA__COMENTARIO = EXPRESION__COMENTARIO;
-
-  /**
-   * The feature id for the '<em><b>Numerador</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_PROPUESTA__NUMERADOR = EXPRESION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Denominador</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_PROPUESTA__DENOMINADOR = EXPRESION_FEATURE_COUNT + 1;
+  int CALIFICAR_PROPUESTA__PUNTUACION = EXPRESION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Calificar Propuesta</em>' class.
@@ -397,7 +333,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIFICAR_PROPUESTA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
+  int CALIFICAR_PROPUESTA_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl <em>Calificar Equipo</em>}' class.
@@ -407,34 +343,25 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCalificarEquipo()
    * @generated
    */
-  int CALIFICAR_EQUIPO = 8;
+  int CALIFICAR_EQUIPO = 7;
 
   /**
-   * The feature id for the '<em><b>Calificacion</b></em>' containment reference.
+   * The feature id for the '<em><b>Numerador</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_EQUIPO__CALIFICACION = EXPRESION__CALIFICACION;
+  int CALIFICAR_EQUIPO__NUMERADOR = EXPRESION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Comentario</b></em>' attribute.
+   * The feature id for the '<em><b>Denominador</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_EQUIPO__COMENTARIO = EXPRESION__COMENTARIO;
-
-  /**
-   * The feature id for the '<em><b>Puntuacion</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_EQUIPO__PUNTUACION = EXPRESION_FEATURE_COUNT + 0;
+  int CALIFICAR_EQUIPO__DENOMINADOR = EXPRESION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Calificar Equipo</em>' class.
@@ -443,7 +370,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIFICAR_EQUIPO_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+  int CALIFICAR_EQUIPO_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.impl.CalificarOtrosImpl <em>Calificar Otros</em>}' class.
@@ -453,25 +380,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getCalificarOtros()
    * @generated
    */
-  int CALIFICAR_OTROS = 9;
-
-  /**
-   * The feature id for the '<em><b>Calificacion</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_OTROS__CALIFICACION = EXPRESION__CALIFICACION;
-
-  /**
-   * The feature id for the '<em><b>Comentario</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALIFICAR_OTROS__COMENTARIO = EXPRESION__COMENTARIO;
+  int CALIFICAR_OTROS = 8;
 
   /**
    * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -483,13 +392,32 @@ public interface EvaluacionPackage extends EPackage
   int CALIFICAR_OTROS__VALOR = EXPRESION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Comentario</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALIFICAR_OTROS__COMENTARIO = EXPRESION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Calificar Otros</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_OTROS_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 1;
+  int CALIFICAR_OTROS_FEATURE_COUNT = EXPRESION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see hwo.evtool.dsl.evaluacion.TipoEvaluacion
+   * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTipoEvaluacion()
+   * @generated
+   */
+  int TIPO_EVALUACION = 9;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evaluacion.E_Calificacion <em>ECalificacion</em>}' enum.
@@ -642,15 +570,15 @@ public interface EvaluacionPackage extends EPackage
   EClass getEvaluaciones();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getTipo <em>Tipo</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getTipo <em>Tipo</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tipo</em>'.
+   * @return the meta object for the attribute '<em>Tipo</em>'.
    * @see hwo.evtool.dsl.evaluacion.Evaluaciones#getTipo()
    * @see #getEvaluaciones()
    * @generated
    */
-  EReference getEvaluaciones_Tipo();
+  EAttribute getEvaluaciones_Tipo();
 
   /**
    * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Evaluaciones#getName <em>Name</em>}'.
@@ -728,38 +656,6 @@ public interface EvaluacionPackage extends EPackage
   EClass getExpresion();
 
   /**
-   * Returns the meta object for the containment reference '{@link hwo.evtool.dsl.evaluacion.Expresion#getCalificacion <em>Calificacion</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Calificacion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Expresion#getCalificacion()
-   * @see #getExpresion()
-   * @generated
-   */
-  EReference getExpresion_Calificacion();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.Expresion#getComentario <em>Comentario</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Comentario</em>'.
-   * @see hwo.evtool.dsl.evaluacion.Expresion#getComentario()
-   * @see #getExpresion()
-   * @generated
-   */
-  EAttribute getExpresion_Comentario();
-
-  /**
-   * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Tipo Evaluacion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.TipoEvaluacion
-   * @generated
-   */
-  EClass getTipoEvaluacion();
-
-  /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CalificarPropuesta <em>Calificar Propuesta</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -770,26 +666,15 @@ public interface EvaluacionPackage extends EPackage
   EClass getCalificarPropuesta();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarPropuesta#getNumerador <em>Numerador</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarPropuesta#getPuntuacion <em>Puntuacion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Numerador</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CalificarPropuesta#getNumerador()
+   * @return the meta object for the attribute '<em>Puntuacion</em>'.
+   * @see hwo.evtool.dsl.evaluacion.CalificarPropuesta#getPuntuacion()
    * @see #getCalificarPropuesta()
    * @generated
    */
-  EAttribute getCalificarPropuesta_Numerador();
-
-  /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarPropuesta#getDenominador <em>Denominador</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Denominador</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CalificarPropuesta#getDenominador()
-   * @see #getCalificarPropuesta()
-   * @generated
-   */
-  EAttribute getCalificarPropuesta_Denominador();
+  EAttribute getCalificarPropuesta_Puntuacion();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo <em>Calificar Equipo</em>}'.
@@ -802,15 +687,26 @@ public interface EvaluacionPackage extends EPackage
   EClass getCalificarEquipo();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getPuntuacion <em>Puntuacion</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Puntuacion</em>'.
-   * @see hwo.evtool.dsl.evaluacion.CalificarEquipo#getPuntuacion()
+   * @return the meta object for the attribute '<em>Numerador</em>'.
+   * @see hwo.evtool.dsl.evaluacion.CalificarEquipo#getNumerador()
    * @see #getCalificarEquipo()
    * @generated
    */
-  EAttribute getCalificarEquipo_Puntuacion();
+  EAttribute getCalificarEquipo_Numerador();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Denominador</em>'.
+   * @see hwo.evtool.dsl.evaluacion.CalificarEquipo#getDenominador()
+   * @see #getCalificarEquipo()
+   * @generated
+   */
+  EAttribute getCalificarEquipo_Denominador();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evaluacion.CalificarOtros <em>Calificar Otros</em>}'.
@@ -832,6 +728,27 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    */
   EAttribute getCalificarOtros_Valor();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getComentario <em>Comentario</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Comentario</em>'.
+   * @see hwo.evtool.dsl.evaluacion.CalificarOtros#getComentario()
+   * @see #getCalificarOtros()
+   * @generated
+   */
+  EAttribute getCalificarOtros_Comentario();
+
+  /**
+   * Returns the meta object for enum '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Tipo Evaluacion</em>'.
+   * @see hwo.evtool.dsl.evaluacion.TipoEvaluacion
+   * @generated
+   */
+  EEnum getTipoEvaluacion();
 
   /**
    * Returns the meta object for enum '{@link hwo.evtool.dsl.evaluacion.E_Calificacion <em>ECalificacion</em>}'.
@@ -979,12 +896,12 @@ public interface EvaluacionPackage extends EPackage
     EClass EVALUACIONES = eINSTANCE.getEvaluaciones();
 
     /**
-     * The meta object literal for the '<em><b>Tipo</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EVALUACIONES__TIPO = eINSTANCE.getEvaluaciones_Tipo();
+    EAttribute EVALUACIONES__TIPO = eINSTANCE.getEvaluaciones_Tipo();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1047,32 +964,6 @@ public interface EvaluacionPackage extends EPackage
     EClass EXPRESION = eINSTANCE.getExpresion();
 
     /**
-     * The meta object literal for the '<em><b>Calificacion</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXPRESION__CALIFICACION = eINSTANCE.getExpresion_Calificacion();
-
-    /**
-     * The meta object literal for the '<em><b>Comentario</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXPRESION__COMENTARIO = eINSTANCE.getExpresion_Comentario();
-
-    /**
-     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.TipoEvaluacionImpl <em>Tipo Evaluacion</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see hwo.evtool.dsl.evaluacion.impl.TipoEvaluacionImpl
-     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTipoEvaluacion()
-     * @generated
-     */
-    EClass TIPO_EVALUACION = eINSTANCE.getTipoEvaluacion();
-
-    /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl <em>Calificar Propuesta</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1083,20 +974,12 @@ public interface EvaluacionPackage extends EPackage
     EClass CALIFICAR_PROPUESTA = eINSTANCE.getCalificarPropuesta();
 
     /**
-     * The meta object literal for the '<em><b>Numerador</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Puntuacion</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALIFICAR_PROPUESTA__NUMERADOR = eINSTANCE.getCalificarPropuesta_Numerador();
-
-    /**
-     * The meta object literal for the '<em><b>Denominador</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CALIFICAR_PROPUESTA__DENOMINADOR = eINSTANCE.getCalificarPropuesta_Denominador();
+    EAttribute CALIFICAR_PROPUESTA__PUNTUACION = eINSTANCE.getCalificarPropuesta_Puntuacion();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl <em>Calificar Equipo</em>}' class.
@@ -1109,12 +992,20 @@ public interface EvaluacionPackage extends EPackage
     EClass CALIFICAR_EQUIPO = eINSTANCE.getCalificarEquipo();
 
     /**
-     * The meta object literal for the '<em><b>Puntuacion</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Numerador</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALIFICAR_EQUIPO__PUNTUACION = eINSTANCE.getCalificarEquipo_Puntuacion();
+    EAttribute CALIFICAR_EQUIPO__NUMERADOR = eINSTANCE.getCalificarEquipo_Numerador();
+
+    /**
+     * The meta object literal for the '<em><b>Denominador</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CALIFICAR_EQUIPO__DENOMINADOR = eINSTANCE.getCalificarEquipo_Denominador();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.impl.CalificarOtrosImpl <em>Calificar Otros</em>}' class.
@@ -1133,6 +1024,24 @@ public interface EvaluacionPackage extends EPackage
      * @generated
      */
     EAttribute CALIFICAR_OTROS__VALOR = eINSTANCE.getCalificarOtros_Valor();
+
+    /**
+     * The meta object literal for the '<em><b>Comentario</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CALIFICAR_OTROS__COMENTARIO = eINSTANCE.getCalificarOtros_Comentario();
+
+    /**
+     * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.TipoEvaluacion <em>Tipo Evaluacion</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evaluacion.TipoEvaluacion
+     * @see hwo.evtool.dsl.evaluacion.impl.EvaluacionPackageImpl#getTipoEvaluacion()
+     * @generated
+     */
+    EEnum TIPO_EVALUACION = eINSTANCE.getTipoEvaluacion();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evaluacion.E_Calificacion <em>ECalificacion</em>}' enum.

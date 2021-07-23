@@ -11,9 +11,7 @@ import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Evento;
-import hwo.evtool.dsl.evaluacion.Expresion;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
-import hwo.evtool.dsl.evaluacion.TipoEvaluacion;
 import hwo.evtool.dsl.evaluacion.Transicion;
 import hwo.evtool.dsl.services.EvaluacionGrammarAccess;
 import java.util.Set;
@@ -42,13 +40,13 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (epackage == EvaluacionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case EvaluacionPackage.CALIFICAR_EQUIPO:
-				sequence_CalificarExpresion(context, (CalificarEquipo) semanticObject); 
+				sequence_Expresion(context, (CalificarEquipo) semanticObject); 
 				return; 
 			case EvaluacionPackage.CALIFICAR_OTROS:
-				sequence_CalificarExpresion(context, (CalificarOtros) semanticObject); 
+				sequence_Expresion(context, (CalificarOtros) semanticObject); 
 				return; 
 			case EvaluacionPackage.CALIFICAR_PROPUESTA:
-				sequence_CalificarExpresion(context, (CalificarPropuesta) semanticObject); 
+				sequence_Expresion(context, (CalificarPropuesta) semanticObject); 
 				return; 
 			case EvaluacionPackage.COMPONENTE:
 				sequence_Componente(context, (Componente) semanticObject); 
@@ -59,14 +57,8 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case EvaluacionPackage.EVENTO:
 				sequence_Evento(context, (Evento) semanticObject); 
 				return; 
-			case EvaluacionPackage.EXPRESION:
-				sequence_Expresion(context, (Expresion) semanticObject); 
-				return; 
 			case EvaluacionPackage.MAQUINA_ESTADOS:
 				sequence_MaquinaEstados(context, (MaquinaEstados) semanticObject); 
-				return; 
-			case EvaluacionPackage.TIPO_EVALUACION:
-				sequence_TipoEvaluarEquipo_TipoEvaluarPropuesta(context, (TipoEvaluacion) semanticObject); 
 				return; 
 			case EvaluacionPackage.TRANSICION:
 				sequence_Transicion(context, (Transicion) semanticObject); 
@@ -75,63 +67,6 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
-	
-	/**
-	 * Contexts:
-	 *     CalificarExpresion returns CalificarEquipo
-	 *
-	 * Constraint:
-	 *     puntuacion=E_Calificacion
-	 */
-	protected void sequence_CalificarExpresion(ISerializationContext context, CalificarEquipo semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__PUNTUACION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__PUNTUACION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCalificarExpresionAccess().getPuntuacionE_CalificacionEnumRuleCall_1_1_0(), semanticObject.getPuntuacion());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     CalificarExpresion returns CalificarOtros
-	 *
-	 * Constraint:
-	 *     valor=INT
-	 */
-	protected void sequence_CalificarExpresion(ISerializationContext context, CalificarOtros semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_OTROS__VALOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_OTROS__VALOR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCalificarExpresionAccess().getValorINTTerminalRuleCall_2_1_0(), semanticObject.getValor());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     CalificarExpresion returns CalificarPropuesta
-	 *
-	 * Constraint:
-	 *     (numerador=INT denominador=INT)
-	 */
-	protected void sequence_CalificarExpresion(ISerializationContext context, CalificarPropuesta semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_PROPUESTA__NUMERADOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_PROPUESTA__NUMERADOR));
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_PROPUESTA__DENOMINADOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_PROPUESTA__DENOMINADOR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCalificarExpresionAccess().getNumeradorINTTerminalRuleCall_0_1_0(), semanticObject.getNumerador());
-		feeder.accept(grammarAccess.getCalificarExpresionAccess().getDenominadorINTTerminalRuleCall_0_3_0(), semanticObject.getDenominador());
-		feeder.finish();
-	}
-	
 	
 	/**
 	 * Contexts:
@@ -180,13 +115,52 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Expresion returns Expresion
+	 *     Expresion returns CalificarEquipo
 	 *
 	 * Constraint:
-	 *     (calificacion=CalificarExpresion comentario=STRING?)
+	 *     (numerador=INT denominador=INT)
 	 */
-	protected void sequence_Expresion(ISerializationContext context, Expresion semanticObject) {
+	protected void sequence_Expresion(ISerializationContext context, CalificarEquipo semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__NUMERADOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__NUMERADOR));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__DENOMINADOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__DENOMINADOR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpresionAccess().getNumeradorINTTerminalRuleCall_1_3_0(), semanticObject.getNumerador());
+		feeder.accept(grammarAccess.getExpresionAccess().getDenominadorINTTerminalRuleCall_1_5_0(), semanticObject.getDenominador());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Expresion returns CalificarOtros
+	 *
+	 * Constraint:
+	 *     (valor=INT comentario=STRING?)
+	 */
+	protected void sequence_Expresion(ISerializationContext context, CalificarOtros semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Expresion returns CalificarPropuesta
+	 *
+	 * Constraint:
+	 *     puntuacion=E_Calificacion
+	 */
+	protected void sequence_Expresion(ISerializationContext context, CalificarPropuesta semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_PROPUESTA__PUNTUACION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_PROPUESTA__PUNTUACION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getExpresionAccess().getPuntuacionE_CalificacionEnumRuleCall_0_3_0(), semanticObject.getPuntuacion());
+		feeder.finish();
 	}
 	
 	
@@ -198,20 +172,6 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (events+=Evento* resetEvents+=[Evento|ID]* commands+=Evaluaciones* states+=Componente*)
 	 */
 	protected void sequence_MaquinaEstados(ISerializationContext context, MaquinaEstados semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     TipoEvaluacion returns TipoEvaluacion
-	 *     TipoEvaluarPropuesta returns TipoEvaluacion
-	 *     TipoEvaluarEquipo returns TipoEvaluacion
-	 *
-	 * Constraint:
-	 *     {TipoEvaluacion}
-	 */
-	protected void sequence_TipoEvaluarEquipo_TipoEvaluarPropuesta(ISerializationContext context, TipoEvaluacion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

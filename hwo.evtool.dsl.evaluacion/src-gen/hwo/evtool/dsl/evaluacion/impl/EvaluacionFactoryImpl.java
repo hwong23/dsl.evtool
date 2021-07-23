@@ -72,7 +72,6 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.EVALUACIONES: return createEvaluaciones();
       case EvaluacionPackage.TRANSICION: return createTransicion();
       case EvaluacionPackage.EXPRESION: return createExpresion();
-      case EvaluacionPackage.TIPO_EVALUACION: return createTipoEvaluacion();
       case EvaluacionPackage.CALIFICAR_PROPUESTA: return createCalificarPropuesta();
       case EvaluacionPackage.CALIFICAR_EQUIPO: return createCalificarEquipo();
       case EvaluacionPackage.CALIFICAR_OTROS: return createCalificarOtros();
@@ -91,6 +90,8 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     switch (eDataType.getClassifierID())
     {
+      case EvaluacionPackage.TIPO_EVALUACION:
+        return createTipoEvaluacionFromString(eDataType, initialValue);
       case EvaluacionPackage.ECALIFICACION:
         return createE_CalificacionFromString(eDataType, initialValue);
       default:
@@ -108,6 +109,8 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     switch (eDataType.getClassifierID())
     {
+      case EvaluacionPackage.TIPO_EVALUACION:
+        return convertTipoEvaluacionToString(eDataType, instanceValue);
       case EvaluacionPackage.ECALIFICACION:
         return convertE_CalificacionToString(eDataType, instanceValue);
       default:
@@ -193,18 +196,6 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public TipoEvaluacion createTipoEvaluacion()
-  {
-    TipoEvaluacionImpl tipoEvaluacion = new TipoEvaluacionImpl();
-    return tipoEvaluacion;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public CalificarPropuesta createCalificarPropuesta()
   {
     CalificarPropuestaImpl calificarPropuesta = new CalificarPropuestaImpl();
@@ -233,6 +224,28 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     CalificarOtrosImpl calificarOtros = new CalificarOtrosImpl();
     return calificarOtros;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TipoEvaluacion createTipoEvaluacionFromString(EDataType eDataType, String initialValue)
+  {
+    TipoEvaluacion result = TipoEvaluacion.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTipoEvaluacionToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

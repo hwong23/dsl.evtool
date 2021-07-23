@@ -11,9 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -21,16 +18,10 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class EvaluacionSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected EvaluacionGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_TipoEvaluarEquipo_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2;
-	protected AbstractElementAlias match_TipoEvaluarEquipo_TipoEvaluarPropuesta_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2_or_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1;
-	protected AbstractElementAlias match_TipoEvaluarPropuesta_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (EvaluacionGrammarAccess) access;
-		match_TipoEvaluarEquipo_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarArquitectoKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarDirectorKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarEducacionKeyword_1_2()));
-		match_TipoEvaluarEquipo_TipoEvaluarPropuesta_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2_or_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarArquitectoKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarDirectorKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarEducacionKeyword_1_2()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarOtrosKeyword_1_2()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarProblemaKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarTecnicaKeyword_1_1()));
-		match_TipoEvaluarPropuesta_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarOtrosKeyword_1_2()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarProblemaKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarTecnicaKeyword_1_1()));
 	}
 	
 	@Override
@@ -45,54 +36,8 @@ public class EvaluacionSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_TipoEvaluarEquipo_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2.equals(syntax))
-				emit_TipoEvaluarEquipo_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TipoEvaluarEquipo_TipoEvaluarPropuesta_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2_or_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1.equals(syntax))
-				emit_TipoEvaluarEquipo_TipoEvaluarPropuesta_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2_or_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TipoEvaluarPropuesta_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1.equals(syntax))
-				emit_TipoEvaluarPropuesta_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'EvaluarArquitecto' | 'EvaluarDirector' | 'EvaluarEducacion'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_TipoEvaluarEquipo_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         'EvaluarProblema' | 
-	  *         'EvaluarTecnica' | 
-	  *         'EvaluarOtros' | 
-	  *         'EvaluarArquitecto' | 
-	  *         'EvaluarDirector' | 
-	  *         'EvaluarEducacion'
-	  *     )
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_TipoEvaluarEquipo_TipoEvaluarPropuesta_EvaluarArquitectoKeyword_1_0_or_EvaluarDirectorKeyword_1_1_or_EvaluarEducacionKeyword_1_2_or_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'EvaluarProblema' | 'EvaluarTecnica' | 'EvaluarOtros'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_TipoEvaluarPropuesta_EvaluarOtrosKeyword_1_2_or_EvaluarProblemaKeyword_1_0_or_EvaluarTecnicaKeyword_1_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

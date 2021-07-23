@@ -336,7 +336,7 @@ ruleEvaluaciones returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getEvaluacionesAccess().getTipoTipoEvaluacionParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getEvaluacionesAccess().getTipoTipoEvaluacionEnumRuleCall_0_0());
 				}
 				lv_tipo_0_0=ruleTipoEvaluacion
 				{
@@ -481,148 +481,36 @@ ruleExpresion returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='calificacion'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getExpresionAccess().getCalificacionKeyword_0());
-		}
-		otherlv_1=':'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getExpresionAccess().getColonKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getExpresionAccess().getCalificacionCalificarExpresionParserRuleCall_2_0());
-				}
-				lv_calificacion_2_0=ruleCalificarExpresion
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getExpresionRule());
-					}
-					set(
-						$current,
-						"calificacion",
-						lv_calificacion_2_0,
-						"hwo.evtool.dsl.Evaluacion.CalificarExpresion");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_3=':'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getExpresionAccess().getColonKeyword_3_0());
-			}
-			(
-				(
-					lv_comentario_4_0=RULE_STRING
-					{
-						newLeafNode(lv_comentario_4_0, grammarAccess.getExpresionAccess().getComentarioSTRINGTerminalRuleCall_3_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getExpresionRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"comentario",
-							lv_comentario_4_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
-					}
-				)
-			)
-		)?
-	)
-;
-
-// Entry rule entryRuleCalificarExpresion
-entryRuleCalificarExpresion returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getCalificarExpresionRule()); }
-	iv_ruleCalificarExpresion=ruleCalificarExpresion
-	{ $current=$iv_ruleCalificarExpresion.current; }
-	EOF;
-
-// Rule CalificarExpresion
-ruleCalificarExpresion returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
 		(
 			(
 				{
 					$current = forceCreateModelElement(
-						grammarAccess.getCalificarExpresionAccess().getCalificarPropuestaAction_0_0(),
+						grammarAccess.getExpresionAccess().getCalificarPropuestaAction_0_0(),
 						$current);
 				}
 			)
-			(
-				(
-					lv_numerador_1_0=RULE_INT
-					{
-						newLeafNode(lv_numerador_1_0, grammarAccess.getCalificarExpresionAccess().getNumeradorINTTerminalRuleCall_0_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getCalificarExpresionRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"numerador",
-							lv_numerador_1_0,
-							"org.eclipse.xtext.common.Terminals.INT");
-					}
-				)
-			)
-			otherlv_2='/'
+			otherlv_1='calificacion'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getCalificarExpresionAccess().getSolidusKeyword_0_2());
+				newLeafNode(otherlv_1, grammarAccess.getExpresionAccess().getCalificacionKeyword_0_1());
+			}
+			otherlv_2=':'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getExpresionAccess().getColonKeyword_0_2());
 			}
 			(
 				(
-					lv_denominador_3_0=RULE_INT
 					{
-						newLeafNode(lv_denominador_3_0, grammarAccess.getCalificarExpresionAccess().getDenominadorINTTerminalRuleCall_0_3_0());
+						newCompositeNode(grammarAccess.getExpresionAccess().getPuntuacionE_CalificacionEnumRuleCall_0_3_0());
 					}
+					lv_puntuacion_3_0=ruleE_Calificacion
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getCalificarExpresionRule());
-						}
-						setWithLastConsumed(
-							$current,
-							"denominador",
-							lv_denominador_3_0,
-							"org.eclipse.xtext.common.Terminals.INT");
-					}
-				)
-			)
-		)
-		    |
-		(
-			(
-				{
-					$current = forceCreateModelElement(
-						grammarAccess.getCalificarExpresionAccess().getCalificarEquipoAction_1_0(),
-						$current);
-				}
-			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getCalificarExpresionAccess().getPuntuacionE_CalificacionEnumRuleCall_1_1_0());
-					}
-					lv_puntuacion_5_0=ruleE_Calificacion
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getCalificarExpresionRule());
+							$current = createModelElementForParent(grammarAccess.getExpresionRule());
 						}
 						set(
 							$current,
 							"puntuacion",
-							lv_puntuacion_5_0,
+							lv_puntuacion_3_0,
 							"hwo.evtool.dsl.Evaluacion.E_Calificacion");
 						afterParserOrEnumRuleCall();
 					}
@@ -634,41 +522,128 @@ ruleCalificarExpresion returns [EObject current=null]
 			(
 				{
 					$current = forceCreateModelElement(
-						grammarAccess.getCalificarExpresionAccess().getCalificarOtrosAction_2_0(),
+						grammarAccess.getExpresionAccess().getCalificarEquipoAction_1_0(),
 						$current);
 				}
 			)
+			otherlv_5='calificacion'
+			{
+				newLeafNode(otherlv_5, grammarAccess.getExpresionAccess().getCalificacionKeyword_1_1());
+			}
+			otherlv_6=':'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getExpresionAccess().getColonKeyword_1_2());
+			}
 			(
 				(
-					lv_valor_7_0=RULE_INT
+					lv_numerador_7_0=RULE_INT
 					{
-						newLeafNode(lv_valor_7_0, grammarAccess.getCalificarExpresionAccess().getValorINTTerminalRuleCall_2_1_0());
+						newLeafNode(lv_numerador_7_0, grammarAccess.getExpresionAccess().getNumeradorINTTerminalRuleCall_1_3_0());
 					}
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getCalificarExpresionRule());
+							$current = createModelElement(grammarAccess.getExpresionRule());
 						}
 						setWithLastConsumed(
 							$current,
-							"valor",
-							lv_valor_7_0,
+							"numerador",
+							lv_numerador_7_0,
+							"org.eclipse.xtext.common.Terminals.INT");
+					}
+				)
+			)
+			otherlv_8='/'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getExpresionAccess().getSolidusKeyword_1_4());
+			}
+			(
+				(
+					lv_denominador_9_0=RULE_INT
+					{
+						newLeafNode(lv_denominador_9_0, grammarAccess.getExpresionAccess().getDenominadorINTTerminalRuleCall_1_5_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getExpresionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"denominador",
+							lv_denominador_9_0,
 							"org.eclipse.xtext.common.Terminals.INT");
 					}
 				)
 			)
 		)
+		    |
+		(
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getExpresionAccess().getCalificarOtrosAction_2_0(),
+						$current);
+				}
+			)
+			otherlv_11='calificacion'
+			{
+				newLeafNode(otherlv_11, grammarAccess.getExpresionAccess().getCalificacionKeyword_2_1());
+			}
+			otherlv_12=':'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getExpresionAccess().getColonKeyword_2_2());
+			}
+			(
+				(
+					lv_valor_13_0=RULE_INT
+					{
+						newLeafNode(lv_valor_13_0, grammarAccess.getExpresionAccess().getValorINTTerminalRuleCall_2_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getExpresionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"valor",
+							lv_valor_13_0,
+							"org.eclipse.xtext.common.Terminals.INT");
+					}
+				)
+			)
+			(
+				otherlv_14='comentario'
+				{
+					newLeafNode(otherlv_14, grammarAccess.getExpresionAccess().getComentarioKeyword_2_4_0());
+				}
+				otherlv_15=':'
+				{
+					newLeafNode(otherlv_15, grammarAccess.getExpresionAccess().getColonKeyword_2_4_1());
+				}
+				(
+					(
+						lv_comentario_16_0=RULE_STRING
+						{
+							newLeafNode(lv_comentario_16_0, grammarAccess.getExpresionAccess().getComentarioSTRINGTerminalRuleCall_2_4_2_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getExpresionRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"comentario",
+								lv_comentario_16_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
+				)
+			)?
+		)
 	)
 ;
-
-// Entry rule entryRuleTipoEvaluacion
-entryRuleTipoEvaluacion returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTipoEvaluacionRule()); }
-	iv_ruleTipoEvaluacion=ruleTipoEvaluacion
-	{ $current=$iv_ruleTipoEvaluacion.current; }
-	EOF;
 
 // Rule TipoEvaluacion
-ruleTipoEvaluacion returns [EObject current=null]
+ruleTipoEvaluacion returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -676,105 +651,51 @@ ruleTipoEvaluacion returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		{
-			newCompositeNode(grammarAccess.getTipoEvaluacionAccess().getTipoEvaluarPropuestaParserRuleCall_0());
-		}
-		this_TipoEvaluarPropuesta_0=ruleTipoEvaluarPropuesta
-		{
-			$current = $this_TipoEvaluarPropuesta_0.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			enumLiteral_0='EvaluarProblema'
+			{
+				$current = grammarAccess.getTipoEvaluacionAccess().getEvaluarProblemaEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getTipoEvaluacionAccess().getEvaluarProblemaEnumLiteralDeclaration_0());
+			}
+		)
 		    |
-		{
-			newCompositeNode(grammarAccess.getTipoEvaluacionAccess().getTipoEvaluarEquipoParserRuleCall_1());
-		}
-		this_TipoEvaluarEquipo_1=ruleTipoEvaluarEquipo
-		{
-			$current = $this_TipoEvaluarEquipo_1.current;
-			afterParserOrEnumRuleCall();
-		}
-	)
-;
-
-// Entry rule entryRuleTipoEvaluarPropuesta
-entryRuleTipoEvaluarPropuesta returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTipoEvaluarPropuestaRule()); }
-	iv_ruleTipoEvaluarPropuesta=ruleTipoEvaluarPropuesta
-	{ $current=$iv_ruleTipoEvaluarPropuesta.current; }
-	EOF;
-
-// Rule TipoEvaluarPropuesta
-ruleTipoEvaluarPropuesta returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
 		(
+			enumLiteral_1='EvaluarTecnica'
 			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTipoEvaluarPropuestaAccess().getTipoEvaluacionAction_0(),
-					$current);
+				$current = grammarAccess.getTipoEvaluacionAccess().getEvaluarTecnicaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getTipoEvaluacionAccess().getEvaluarTecnicaEnumLiteralDeclaration_1());
 			}
 		)
+		    |
 		(
-			otherlv_1='EvaluarProblema'
+			enumLiteral_2='EvaluarOtros'
 			{
-				newLeafNode(otherlv_1, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarProblemaKeyword_1_0());
-			}
-			    |
-			otherlv_2='EvaluarTecnica'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarTecnicaKeyword_1_1());
-			}
-			    |
-			otherlv_3='EvaluarOtros'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getTipoEvaluarPropuestaAccess().getEvaluarOtrosKeyword_1_2());
+				$current = grammarAccess.getTipoEvaluacionAccess().getEvaluarOtrosEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getTipoEvaluacionAccess().getEvaluarOtrosEnumLiteralDeclaration_2());
 			}
 		)
-	)
-;
-
-// Entry rule entryRuleTipoEvaluarEquipo
-entryRuleTipoEvaluarEquipo returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTipoEvaluarEquipoRule()); }
-	iv_ruleTipoEvaluarEquipo=ruleTipoEvaluarEquipo
-	{ $current=$iv_ruleTipoEvaluarEquipo.current; }
-	EOF;
-
-// Rule TipoEvaluarEquipo
-ruleTipoEvaluarEquipo returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
+		    |
 		(
+			enumLiteral_3='D'
 			{
-				$current = forceCreateModelElement(
-					grammarAccess.getTipoEvaluarEquipoAccess().getTipoEvaluacionAction_0(),
-					$current);
+				$current = grammarAccess.getTipoEvaluacionAccess().getEvaluarArquitectoEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getTipoEvaluacionAccess().getEvaluarArquitectoEnumLiteralDeclaration_3());
 			}
 		)
+		    |
 		(
-			otherlv_1='EvaluarArquitecto'
+			enumLiteral_4='EvaluarDirector'
 			{
-				newLeafNode(otherlv_1, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarArquitectoKeyword_1_0());
+				$current = grammarAccess.getTipoEvaluacionAccess().getEvaluarDirectorEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getTipoEvaluacionAccess().getEvaluarDirectorEnumLiteralDeclaration_4());
 			}
-			    |
-			otherlv_2='EvaluarDirector'
+		)
+		    |
+		(
+			enumLiteral_5='EvaluarEducacion'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarDirectorKeyword_1_1());
-			}
-			    |
-			otherlv_3='EvaluarEducacion'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getTipoEvaluarEquipoAccess().getEvaluarEducacionKeyword_1_2());
+				$current = grammarAccess.getTipoEvaluacionAccess().getEvaluarEducacionEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_5, grammarAccess.getTipoEvaluacionAccess().getEvaluarEducacionEnumLiteralDeclaration_5());
 			}
 		)
 	)
