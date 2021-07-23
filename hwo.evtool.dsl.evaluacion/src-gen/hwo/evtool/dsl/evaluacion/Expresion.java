@@ -10,6 +10,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Expresion</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Expresion#getTipo <em>Tipo</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.Expresion#getComentario <em>Comentario</em>}</li>
+ * </ul>
  *
  * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getExpresion()
  * @model
@@ -17,4 +24,48 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Expresion extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Tipo</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tipo</em>' containment reference.
+   * @see #setTipo(TipoEvaluacion)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getExpresion_Tipo()
+   * @model containment="true"
+   * @generated
+   */
+  TipoEvaluacion getTipo();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Expresion#getTipo <em>Tipo</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tipo</em>' containment reference.
+   * @see #getTipo()
+   * @generated
+   */
+  void setTipo(TipoEvaluacion value);
+
+  /**
+   * Returns the value of the '<em><b>Comentario</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Comentario</em>' attribute.
+   * @see #setComentario(String)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getExpresion_Comentario()
+   * @model
+   * @generated
+   */
+  String getComentario();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.Expresion#getComentario <em>Comentario</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Comentario</em>' attribute.
+   * @see #getComentario()
+   * @generated
+   */
+  void setComentario(String value);
+
 } // Expresion

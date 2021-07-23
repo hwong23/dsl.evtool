@@ -20,13 +20,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarOtrosImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarOtrosImpl#getValor <em>Valor</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
+public class CalificarOtrosImpl extends EvaluacionImpl implements CalificarOtros
 {
+  /**
+   * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected static final String TIPO_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected String tipo = TIPO_EDEFAULT;
+
   /**
    * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -74,6 +95,31 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
    * @generated
    */
   @Override
+  public String getTipo()
+  {
+    return tipo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTipo(String newTipo)
+  {
+    String oldTipo = tipo;
+    tipo = newTipo;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_OTROS__TIPO, oldTipo, tipo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public int getValor()
   {
     return valor;
@@ -103,6 +149,8 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_OTROS__TIPO:
+        return getTipo();
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         return getValor();
     }
@@ -119,6 +167,9 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_OTROS__TIPO:
+        setTipo((String)newValue);
+        return;
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         setValor((Integer)newValue);
         return;
@@ -136,6 +187,9 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_OTROS__TIPO:
+        setTipo(TIPO_EDEFAULT);
+        return;
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         setValor(VALOR_EDEFAULT);
         return;
@@ -153,6 +207,8 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_OTROS__TIPO:
+        return TIPO_EDEFAULT == null ? tipo != null : !TIPO_EDEFAULT.equals(tipo);
       case EvaluacionPackage.CALIFICAR_OTROS__VALOR:
         return valor != VALOR_EDEFAULT;
     }
@@ -170,7 +226,9 @@ public class CalificarOtrosImpl extends ExpresionImpl implements CalificarOtros
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (valor: ");
+    result.append(" (tipo: ");
+    result.append(tipo);
+    result.append(", valor: ");
     result.append(valor);
     result.append(')');
     return result.toString();

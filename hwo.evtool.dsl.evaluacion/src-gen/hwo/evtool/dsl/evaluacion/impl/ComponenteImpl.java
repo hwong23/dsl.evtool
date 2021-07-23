@@ -4,8 +4,8 @@
 package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.Componente;
+import hwo.evtool.dsl.evaluacion.Evaluacion;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Transicion;
 
 import java.util.Collection;
@@ -70,7 +70,7 @@ public class ComponenteImpl extends MinimalEObjectImpl.Container implements Comp
    * @generated
    * @ordered
    */
-  protected EList<Evaluaciones> actions;
+  protected EList<Evaluacion> actions;
 
   /**
    * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
@@ -134,11 +134,11 @@ public class ComponenteImpl extends MinimalEObjectImpl.Container implements Comp
    * @generated
    */
   @Override
-  public EList<Evaluaciones> getActions()
+  public EList<Evaluacion> getActions()
   {
     if (actions == null)
     {
-      actions = new EObjectResolvingEList<Evaluaciones>(Evaluaciones.class, this, EvaluacionPackage.COMPONENTE__ACTIONS);
+      actions = new EObjectResolvingEList<Evaluacion>(Evaluacion.class, this, EvaluacionPackage.COMPONENTE__ACTIONS);
     }
     return actions;
   }
@@ -210,7 +210,7 @@ public class ComponenteImpl extends MinimalEObjectImpl.Container implements Comp
         return;
       case EvaluacionPackage.COMPONENTE__ACTIONS:
         getActions().clear();
-        getActions().addAll((Collection<? extends Evaluaciones>)newValue);
+        getActions().addAll((Collection<? extends Evaluacion>)newValue);
         return;
       case EvaluacionPackage.COMPONENTE__TRANSITIONS:
         getTransitions().clear();

@@ -6,6 +6,7 @@ package hwo.evtool.dsl.evaluacion.impl;
 import hwo.evtool.dsl.evaluacion.CalificarPropuesta;
 import hwo.evtool.dsl.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.TipoPropuesta;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -21,13 +22,34 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarPropuestaImpl#getPuntuacion <em>Puntuacion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPropuesta
+public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarPropuesta
 {
+  /**
+   * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected static final TipoPropuesta TIPO_EDEFAULT = TipoPropuesta.EVALUAR_PROBLEMA;
+
+  /**
+   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected TipoPropuesta tipo = TIPO_EDEFAULT;
+
   /**
    * The default value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -75,6 +97,31 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
    * @generated
    */
   @Override
+  public TipoPropuesta getTipo()
+  {
+    return tipo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTipo(TipoPropuesta newTipo)
+  {
+    TipoPropuesta oldTipo = tipo;
+    tipo = newTipo == null ? TIPO_EDEFAULT : newTipo;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO, oldTipo, tipo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public E_Calificacion getPuntuacion()
   {
     return puntuacion;
@@ -104,6 +151,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
+        return getTipo();
       case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
         return getPuntuacion();
     }
@@ -120,6 +169,9 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
+        setTipo((TipoPropuesta)newValue);
+        return;
       case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
         setPuntuacion((E_Calificacion)newValue);
         return;
@@ -137,6 +189,9 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
+        setTipo(TIPO_EDEFAULT);
+        return;
       case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
         setPuntuacion(PUNTUACION_EDEFAULT);
         return;
@@ -154,6 +209,8 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
+        return tipo != TIPO_EDEFAULT;
       case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
         return puntuacion != PUNTUACION_EDEFAULT;
     }
@@ -171,7 +228,9 @@ public class CalificarPropuestaImpl extends ExpresionImpl implements CalificarPr
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (puntuacion: ");
+    result.append(" (tipo: ");
+    result.append(tipo);
+    result.append(", puntuacion: ");
     result.append(puntuacion);
     result.append(')');
     return result.toString();

@@ -5,8 +5,8 @@ package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.Componente;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
-import hwo.evtool.dsl.evaluacion.Evaluaciones;
 import hwo.evtool.dsl.evaluacion.Evento;
+import hwo.evtool.dsl.evaluacion.Expresion;
 import hwo.evtool.dsl.evaluacion.MaquinaEstados;
 
 import java.util.Collection;
@@ -70,7 +70,7 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    * @ordered
    */
-  protected EList<Evaluaciones> commands;
+  protected EList<Expresion> commands;
 
   /**
    * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
@@ -139,11 +139,11 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    */
   @Override
-  public EList<Evaluaciones> getCommands()
+  public EList<Expresion> getCommands()
   {
     if (commands == null)
     {
-      commands = new EObjectContainmentEList<Evaluaciones>(Evaluaciones.class, this, EvaluacionPackage.MAQUINA_ESTADOS__COMMANDS);
+      commands = new EObjectContainmentEList<Expresion>(Expresion.class, this, EvaluacionPackage.MAQUINA_ESTADOS__COMMANDS);
     }
     return commands;
   }
@@ -226,7 +226,7 @@ public class MaquinaEstadosImpl extends MinimalEObjectImpl.Container implements 
         return;
       case EvaluacionPackage.MAQUINA_ESTADOS__COMMANDS:
         getCommands().clear();
-        getCommands().addAll((Collection<? extends Evaluaciones>)newValue);
+        getCommands().addAll((Collection<? extends Expresion>)newValue);
         return;
       case EvaluacionPackage.MAQUINA_ESTADOS__STATES:
         getStates().clear();

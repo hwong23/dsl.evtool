@@ -3,13 +3,14 @@
 '=>'=28
 'A'=17
 'B'=19
-'D'=14
-'EvaluarDirector'=15
-'EvaluarEducacion'=16
-'EvaluarOtros'=13
-'EvaluarProblema'=11
-'EvaluarTecnica'=12
+'EvaluarArquitecto'=11
+'EvaluarDirector'=12
+'EvaluarEducacion'=13
+'EvaluarOtros'=16
+'EvaluarProblema'=14
+'EvaluarTecnica'=15
 'M'=18
+'Otros'=31
 'actions'=24
 'calificacion'=29
 'componente'=23
@@ -45,3 +46,4 @@ T__27=27
 T__28=28
 T__29=29
 T__30=30
+T__31=31

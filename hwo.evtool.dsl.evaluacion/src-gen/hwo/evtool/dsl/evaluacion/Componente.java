@@ -51,7 +51,7 @@ public interface Componente extends EObject
 
   /**
    * Returns the value of the '<em><b>Actions</b></em>' reference list.
-   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Evaluaciones}.
+   * The list contents are of type {@link hwo.evtool.dsl.evaluacion.Evaluacion}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Actions</em>' reference list.
@@ -59,7 +59,7 @@ public interface Componente extends EObject
    * @model
    * @generated
    */
-  EList<Evaluaciones> getActions();
+  EList<Evaluacion> getActions();
 
   /**
    * Returns the value of the '<em><b>Transitions</b></em>' containment reference list.

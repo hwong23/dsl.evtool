@@ -13,6 +13,7 @@ package hwo.evtool.dsl.evaluacion;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getTipo <em>Tipo</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getValor <em>Valor</em>}</li>
  * </ul>
  *
@@ -20,8 +21,30 @@ package hwo.evtool.dsl.evaluacion;
  * @model
  * @generated
  */
-public interface CalificarOtros extends Expresion
+public interface CalificarOtros extends Evaluacion
 {
+  /**
+   * Returns the value of the '<em><b>Tipo</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tipo</em>' attribute.
+   * @see #setTipo(String)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarOtros_Tipo()
+   * @model
+   * @generated
+   */
+  String getTipo();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CalificarOtros#getTipo <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tipo</em>' attribute.
+   * @see #getTipo()
+   * @generated
+   */
+  void setTipo(String value);
+
   /**
    * Returns the value of the '<em><b>Valor</b></em>' attribute.
    * <!-- begin-user-doc -->

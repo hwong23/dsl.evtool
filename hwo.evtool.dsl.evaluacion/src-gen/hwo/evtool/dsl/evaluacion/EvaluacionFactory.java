@@ -51,13 +51,22 @@ public interface EvaluacionFactory extends EFactory
   Componente createComponente();
 
   /**
-   * Returns a new object of class '<em>Evaluaciones</em>'.
+   * Returns a new object of class '<em>Expresion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Evaluaciones</em>'.
+   * @return a new object of class '<em>Expresion</em>'.
    * @generated
    */
-  Evaluaciones createEvaluaciones();
+  Expresion createExpresion();
+
+  /**
+   * Returns a new object of class '<em>Tipo Evaluacion</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tipo Evaluacion</em>'.
+   * @generated
+   */
+  TipoEvaluacion createTipoEvaluacion();
 
   /**
    * Returns a new object of class '<em>Transicion</em>'.
@@ -69,13 +78,13 @@ public interface EvaluacionFactory extends EFactory
   Transicion createTransicion();
 
   /**
-   * Returns a new object of class '<em>Expresion</em>'.
+   * Returns a new object of class '<em>Evaluacion</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expresion</em>'.
+   * @return a new object of class '<em>Evaluacion</em>'.
    * @generated
    */
-  Expresion createExpresion();
+  Evaluacion createEvaluacion();
 
   /**
    * Returns a new object of class '<em>Calificar Propuesta</em>'.

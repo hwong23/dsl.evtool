@@ -69,9 +69,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.MAQUINA_ESTADOS: return createMaquinaEstados();
       case EvaluacionPackage.EVENTO: return createEvento();
       case EvaluacionPackage.COMPONENTE: return createComponente();
-      case EvaluacionPackage.EVALUACIONES: return createEvaluaciones();
-      case EvaluacionPackage.TRANSICION: return createTransicion();
       case EvaluacionPackage.EXPRESION: return createExpresion();
+      case EvaluacionPackage.TIPO_EVALUACION: return createTipoEvaluacion();
+      case EvaluacionPackage.TRANSICION: return createTransicion();
+      case EvaluacionPackage.EVALUACION: return createEvaluacion();
       case EvaluacionPackage.CALIFICAR_PROPUESTA: return createCalificarPropuesta();
       case EvaluacionPackage.CALIFICAR_EQUIPO: return createCalificarEquipo();
       case EvaluacionPackage.CALIFICAR_OTROS: return createCalificarOtros();
@@ -90,8 +91,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     switch (eDataType.getClassifierID())
     {
-      case EvaluacionPackage.TIPO_EVALUACION:
-        return createTipoEvaluacionFromString(eDataType, initialValue);
+      case EvaluacionPackage.TIPO_EQUIPO:
+        return createTipoEquipoFromString(eDataType, initialValue);
+      case EvaluacionPackage.TIPO_PROPUESTA:
+        return createTipoPropuestaFromString(eDataType, initialValue);
       case EvaluacionPackage.ECALIFICACION:
         return createE_CalificacionFromString(eDataType, initialValue);
       default:
@@ -109,8 +112,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     switch (eDataType.getClassifierID())
     {
-      case EvaluacionPackage.TIPO_EVALUACION:
-        return convertTipoEvaluacionToString(eDataType, instanceValue);
+      case EvaluacionPackage.TIPO_EQUIPO:
+        return convertTipoEquipoToString(eDataType, instanceValue);
+      case EvaluacionPackage.TIPO_PROPUESTA:
+        return convertTipoPropuestaToString(eDataType, instanceValue);
       case EvaluacionPackage.ECALIFICACION:
         return convertE_CalificacionToString(eDataType, instanceValue);
       default:
@@ -160,10 +165,22 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Evaluaciones createEvaluaciones()
+  public Expresion createExpresion()
   {
-    EvaluacionesImpl evaluaciones = new EvaluacionesImpl();
-    return evaluaciones;
+    ExpresionImpl expresion = new ExpresionImpl();
+    return expresion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TipoEvaluacion createTipoEvaluacion()
+  {
+    TipoEvaluacionImpl tipoEvaluacion = new TipoEvaluacionImpl();
+    return tipoEvaluacion;
   }
 
   /**
@@ -184,10 +201,10 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   @Override
-  public Expresion createExpresion()
+  public Evaluacion createEvaluacion()
   {
-    ExpresionImpl expresion = new ExpresionImpl();
-    return expresion;
+    EvaluacionImpl evaluacion = new EvaluacionImpl();
+    return evaluacion;
   }
 
   /**
@@ -231,9 +248,9 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public TipoEvaluacion createTipoEvaluacionFromString(EDataType eDataType, String initialValue)
+  public TipoEquipo createTipoEquipoFromString(EDataType eDataType, String initialValue)
   {
-    TipoEvaluacion result = TipoEvaluacion.get(initialValue);
+    TipoEquipo result = TipoEquipo.get(initialValue);
     if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
     return result;
   }
@@ -243,7 +260,29 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertTipoEvaluacionToString(EDataType eDataType, Object instanceValue)
+  public String convertTipoEquipoToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TipoPropuesta createTipoPropuestaFromString(EDataType eDataType, String initialValue)
+  {
+    TipoPropuesta result = TipoPropuesta.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTipoPropuestaToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

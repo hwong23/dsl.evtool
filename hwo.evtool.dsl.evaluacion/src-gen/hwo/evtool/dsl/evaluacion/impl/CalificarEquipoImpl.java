@@ -5,6 +5,7 @@ package hwo.evtool.dsl.evaluacion.impl;
 
 import hwo.evtool.dsl.evaluacion.CalificarEquipo;
 import hwo.evtool.dsl.evaluacion.EvaluacionPackage;
+import hwo.evtool.dsl.evaluacion.TipoEquipo;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -20,14 +21,35 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl#getTipo <em>Tipo</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl#getNumerador <em>Numerador</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.impl.CalificarEquipoImpl#getDenominador <em>Denominador</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquipo
+public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEquipo
 {
+  /**
+   * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected static final TipoEquipo TIPO_EDEFAULT = TipoEquipo.EVALUAR_ARQUITECTO;
+
+  /**
+   * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTipo()
+   * @generated
+   * @ordered
+   */
+  protected TipoEquipo tipo = TIPO_EDEFAULT;
+
   /**
    * The default value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -95,6 +117,31 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
    * @generated
    */
   @Override
+  public TipoEquipo getTipo()
+  {
+    return tipo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setTipo(TipoEquipo newTipo)
+  {
+    TipoEquipo oldTipo = tipo;
+    tipo = newTipo == null ? TIPO_EDEFAULT : newTipo;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__TIPO, oldTipo, tipo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public int getNumerador()
   {
     return numerador;
@@ -149,6 +196,8 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
+        return getTipo();
       case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
         return getNumerador();
       case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
@@ -167,6 +216,9 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
+        setTipo((TipoEquipo)newValue);
+        return;
       case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
         setNumerador((Integer)newValue);
         return;
@@ -187,6 +239,9 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
+        setTipo(TIPO_EDEFAULT);
+        return;
       case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
         setNumerador(NUMERADOR_EDEFAULT);
         return;
@@ -207,6 +262,8 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
+        return tipo != TIPO_EDEFAULT;
       case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
         return numerador != NUMERADOR_EDEFAULT;
       case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
@@ -226,7 +283,9 @@ public class CalificarEquipoImpl extends ExpresionImpl implements CalificarEquip
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (numerador: ");
+    result.append(" (tipo: ");
+    result.append(tipo);
+    result.append(", numerador: ");
     result.append(numerador);
     result.append(", denominador: ");
     result.append(denominador);

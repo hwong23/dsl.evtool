@@ -13,6 +13,7 @@ package hwo.evtool.dsl.evaluacion;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getTipo <em>Tipo</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}</li>
  * </ul>
@@ -21,8 +22,33 @@ package hwo.evtool.dsl.evaluacion;
  * @model
  * @generated
  */
-public interface CalificarEquipo extends Expresion
+public interface CalificarEquipo extends Evaluacion
 {
+  /**
+   * Returns the value of the '<em><b>Tipo</b></em>' attribute.
+   * The literals are from the enumeration {@link hwo.evtool.dsl.evaluacion.TipoEquipo}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tipo</em>' attribute.
+   * @see hwo.evtool.dsl.evaluacion.TipoEquipo
+   * @see #setTipo(TipoEquipo)
+   * @see hwo.evtool.dsl.evaluacion.EvaluacionPackage#getCalificarEquipo_Tipo()
+   * @model
+   * @generated
+   */
+  TipoEquipo getTipo();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evaluacion.CalificarEquipo#getTipo <em>Tipo</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tipo</em>' attribute.
+   * @see hwo.evtool.dsl.evaluacion.TipoEquipo
+   * @see #getTipo()
+   * @generated
+   */
+  void setTipo(TipoEquipo value);
+
   /**
    * Returns the value of the '<em><b>Numerador</b></em>' attribute.
    * <!-- begin-user-doc -->
