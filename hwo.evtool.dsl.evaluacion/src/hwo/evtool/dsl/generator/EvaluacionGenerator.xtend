@@ -41,10 +41,15 @@ class EvaluacionGenerator extends AbstractGenerator {
 	
 		public static void main(String[] args) {
 			new «e.name»().run();
+			
 		}
 		
 		protected void run() {
 			Control cntrol = new Control ();
+			
+			«FOR c : e.actions»
+			«c.declareCommand»
+			«ENDFOR»
 			
 		}
 	}
@@ -63,16 +68,23 @@ class EvaluacionGenerator extends AbstractGenerator {
 //	protected def ponerComando(Evaluaciones c, int i) '''
 //		/* llamador */ cntrol.setComando(«i», cmpnt«c.name»);
 //	'''	
-//
-//	protected def declareCommand(Evaluaciones c) '''
-//		«c.argumento.class.typeName»
-//		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
-//	'''
-//	
-	protected def declareStrings (Evaluacion c) '''
-		String[] str_«c.name» = {"«c.name»","«typeValue(c)»","«c.eClass.name»"};
+
+	protected def declareCommand(Evaluacion c) '''
+		/* solicitd */ Cmpnnt_«c.eClass.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
 	'''
 	
+	protected def declareStrings (Evaluacion c) '''
+		String[] str_«c.name» = {"«c.name»","«stringValue(c)»","«c.eClass.name»"};
+	'''
+	protected def dispatch stringValue(CalificarPropuesta c) '''
+		«c.tipo»", "«c.puntuacion»'''
+	
+	protected def dispatch stringValue(CalificarEquipo c) '''
+		«c.tipo»", "«c.numerador»", "«c.denominador»'''
+
+	protected def dispatch stringValue(CalificarOtros c) '''
+			«c.tipo»", "«c.valor»'''
+
 	protected def dispatch typeValue(CalificarPropuesta c) '''
 		«c.tipo»", "«c.puntuacion»'''
 	
@@ -80,6 +92,5 @@ class EvaluacionGenerator extends AbstractGenerator {
 		«c.tipo»", "«c.numerador»", "«c.denominador»'''
 
 	protected def dispatch typeValue(CalificarOtros c) '''
-			«c.tipo»", "«c.valor»'''
-}
+			«c.tipo»", "«c.valor»'''}
 
