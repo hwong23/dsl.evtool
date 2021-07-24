@@ -57,7 +57,6 @@ enum TipoPropuesta:
 	EvaluarOtros = 'EvaluarOtros'
 ;
 
-
 enum E_Calificacion:
 	alto = 'A' | medio = 'M' | bajo = 'B'
 ;

@@ -8,7 +8,10 @@ import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import hwo.evtool.dsl.evaluacion.Componente
-import hwo.evtool.dsl.evaluacion.Evaluaciones
+import hwo.evtool.dsl.evaluacion.Evaluacion
+import hwo.evtool.dsl.evaluacion.CalificarPropuesta
+import hwo.evtool.dsl.evaluacion.CalificarEquipo
+import hwo.evtool.dsl.evaluacion.CalificarOtros
 
 /**
  * Generates code from your model files on save.
@@ -66,17 +69,17 @@ class EvaluacionGenerator extends AbstractGenerator {
 //		/* solicitd */ Cmpnnt_«c.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
 //	'''
 //	
-	protected def declareStrings (Evaluaciones c) '''
+	protected def declareStrings (Evaluacion c) '''
+		String[] str_«c.name» = {"«c.name»","«typeValue(c)»","«c.eClass.name»"};
 	'''
-//	
-//	protected def dispatch typeValue(IntConstant c) '''
-//		«c.valor.nota»", "«c.valor.calificacion»'''
-//	
-//	protected def dispatch typeValue(ProptConstant c) '''
-//		«c.valor.tipo»", "«c.valor.calificacion»'''
+	
+	protected def dispatch typeValue(CalificarPropuesta c) '''
+		«c.tipo»", "«c.puntuacion»'''
+	
+	protected def dispatch typeValue(CalificarEquipo c) '''
+		«c.tipo»", "«c.numerador»", "«c.denominador»'''
 
-
-// 		String[] str_«c.name» = {"«c.name»","«typeValue(c.argumento)»","«c.comentario»","«c.argumento.eClass.name»"};
-
+	protected def dispatch typeValue(CalificarOtros c) '''
+			«c.tipo»", "«c.valor»'''
 }
 
