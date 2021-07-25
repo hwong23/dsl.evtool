@@ -60,6 +60,8 @@ class EvaluacionGenerator extends AbstractGenerator {
 			«FOR c : e.actions»
 				«c.callCommand(j++)»
 			«ENDFOR»
+			
+			System.out.println("--- Total " + cntrol.getTotal());
 		}
 	}
 	'''
