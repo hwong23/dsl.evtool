@@ -36,7 +36,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 
 	public class «e.name» {
 			«FOR c : e.actions»
-				«c.declareStrings»
+			«c.declareStrings»
 			«ENDFOR»
 	
 		public static void main(String[] args) {
@@ -51,31 +51,36 @@ class EvaluacionGenerator extends AbstractGenerator {
 			«c.declareCommand»
 			«ENDFOR»
 			
+			«var i = 0»
+			«FOR c : e.actions»
+				«c.ponerComando(i++)»
+			«ENDFOR»
+
+			«var j = 0»
+			«FOR c : e.actions»
+				«c.callCommand(j++)»
+			«ENDFOR»
 		}
 	}
 	'''
 		
-//	protected def callCommand(Evaluaciones comando, int i) '''
-//		cntrol.llamarEvaluacion1(«i»);
-//	'''
-//		
-//	protected def className(Resource res) {
-//		var name = res.URI.lastSegment
-//		return name.substring(0, name.indexOf('.')).toFirstUpper
-//	}
-//
-//
-//	protected def ponerComando(Evaluaciones c, int i) '''
-//		/* llamador */ cntrol.setComando(«i», cmpnt«c.name»);
-//	'''	
+	protected def callCommand(Evaluacion comando, int i) '''
+		cntrol.llamarEvaluacion1(«i»);
+	'''
+		
+	protected def ponerComando(Evaluacion c, int i) '''
+		/* llamador */ cntrol.setComando(«i», cmpnt«c.name»);
+	'''	
 
 	protected def declareCommand(Evaluacion c) '''
-		/* solicitd */ Cmpnnt_«c.eClass.name» cmpnt«c.name» = new Cmpnnt_«c.name»(str_«c.name»);
+		«var tipo = typeValue(c)»
+		/* solicitd */ Cmpnnt_«tipo» cmpnt«c.name» = new Cmpnnt_«tipo»(str_«c.name»);
 	'''
 	
 	protected def declareStrings (Evaluacion c) '''
 		String[] str_«c.name» = {"«c.name»","«stringValue(c)»","«c.eClass.name»"};
 	'''
+	
 	protected def dispatch stringValue(CalificarPropuesta c) '''
 		«c.tipo»", "«c.puntuacion»'''
 	
@@ -83,14 +88,15 @@ class EvaluacionGenerator extends AbstractGenerator {
 		«c.tipo»", "«c.numerador»", "«c.denominador»'''
 
 	protected def dispatch stringValue(CalificarOtros c) '''
-			«c.tipo»", "«c.valor»'''
+		«c.tipo»", "«c.valor»'''
 
 	protected def dispatch typeValue(CalificarPropuesta c) '''
-		«c.tipo»", "«c.puntuacion»'''
+		«c.tipo»'''
 	
 	protected def dispatch typeValue(CalificarEquipo c) '''
-		«c.tipo»", "«c.numerador»", "«c.denominador»'''
+		«c.tipo»'''
 
 	protected def dispatch typeValue(CalificarOtros c) '''
-			«c.tipo»", "«c.valor»'''}
+		«c.tipo»'''
+	}
 
