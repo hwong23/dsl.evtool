@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: hwo.evtool.dsl.evalcn.ui.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: hwo.evtool.dsl.evalcn.ui.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202107270325
+Bundle-SymbolicName: hwo.evtool.dsl.evalcn.ui.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hwo.evtool.dsl.evalcn.ui,org.junit.jupiter.api;bundle-ve
+ rsion="[5.1.0,6.0.0)",org.eclipse.xtext.testing,org.eclipse.xtext.xbase
+ .testing,org.eclipse.xtext.xbase.junit,org.eclipse.core.runtime,org.ecl
+ ipse.xtext.ui.testing,org.eclipse.ui.workbench;resolution:=optional
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: hwo.evtool.dsl.evalcn.ui.tests;x-internal=true
+

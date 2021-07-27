@@ -1,0 +1,62 @@
+grammar hwo.evtool.dsl.evalcn.Evaluacion with org.eclipse.xtext.common.Terminals
+generate evaluacion "http://www.evtool.hwo/dsl/evalcn/Evaluacion"
+
+MaquinaEstados:
+	{MaquinaEstados}
+	('eventos'
+		events+=Evento+
+	)?
+	('resetEvents'
+		resetEvents+=[Evento]+
+	)?
+	('evaluaciones'
+		commands+=Expresion+
+	)?
+	states+=Componente*
+;
+
+Evento:
+	name=ID code=ID
+;
+
+Componente:
+	'componente' name=ID
+		('actions' '{' actions+=[Evaluacion]+ '}')?
+		transitions+=Transicion*
+;
+
+Expresion:
+	tipo=TipoEvaluacion
+	(':' comentario=STRING)?
+;
+
+TipoEvaluacion:
+	evaluacion=Evaluacion
+;
+
+Transicion:
+	event=[Evento] '=>' state=[Componente]
+;
+
+
+Evaluacion:
+	{CalificarPropuesta} tipo=TipoPropuesta name=ID 'calificacion' ':' puntuacion=E_Calificacion |
+	{CalificarEquipo} tipo=TipoEquipo name=ID 'calificacion' ':' numerador=INT '/' denominador=INT | 
+	{CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT  
+;
+
+enum TipoEquipo:
+	EvaluarArquitecto = 'EvaluarArquitecto' | 
+	EvaluarDirector = 'EvaluarDirector' | 
+	EvaluarEducacion = 'EvaluarEducacion' 
+;
+
+enum TipoPropuesta:
+	EvaluarProblema = 'EvaluarProblema' |
+	EvaluarTecnica = 'EvaluarTecnica' |
+	EvaluarOtros = 'EvaluarOtros'
+;
+
+enum E_Calificacion:
+	alto = 'A' | medio = 'M' | bajo = 'B'
+;

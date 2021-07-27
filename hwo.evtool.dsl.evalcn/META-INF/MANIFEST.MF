@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: hwo.evtool.dsl.evalcn
+Bundle-ManifestVersion: 2
+Bundle-Name: hwo.evtool.dsl.evalcn
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hwo.evtool.dsl.evalcn; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: hwo.evtool.dsl.evalcn.validation,
+ hwo.evtool.dsl.evalcn,
+ hwo.evtool.dsl.evalcn.parser.antlr,
+ hwo.evtool.dsl.evalcn.services,
+ hwo.evtool.dsl.evalcn.evaluacion.impl,
+ hwo.evtool.dsl.evalcn.evaluacion.util,
+ hwo.evtool.dsl.evalcn.scoping,
+ hwo.evtool.dsl.evalcn.evaluacion,
+ hwo.evtool.dsl.evalcn.generator,
+ hwo.evtool.dsl.evalcn.parser.antlr.internal,
+ hwo.evtool.dsl.evalcn.serializer
+Import-Package: org.apache.log4j

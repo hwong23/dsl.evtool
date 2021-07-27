@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: hwo.evtool.dsl.evalcn.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: hwo.evtool.dsl.evalcn.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202107270325
+Bundle-SymbolicName: hwo.evtool.dsl.evalcn.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hwo.evtool.dsl.evalcn,org.eclipse.xtext.ide,org.eclipse.
+ xtext.xbase.ide,org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: hwo.evtool.dsl.evalcn.ide.contentassist.antlr,hwo.evtool
+ .dsl.evalcn.ide.contentassist.antlr.internal
+

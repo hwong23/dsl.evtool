@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package
+			uri = "http://www.evtool.hwo/dsl/evalcn/Evaluacion"
+			class = "hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage"
+			genModel = "model/generated/Evaluacion.genmodel" />
+	</extension>
+</plugin>
