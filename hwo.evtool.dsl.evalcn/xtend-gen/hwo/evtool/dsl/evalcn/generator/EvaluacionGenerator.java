@@ -211,11 +211,14 @@ public class EvaluacionGenerator extends AbstractGenerator {
     TipoEquipo _tipo = c.getTipo();
     _builder.append(_tipo);
     _builder.append("\", \"");
-    int _numerador = c.getNumerador();
-    _builder.append(_numerador);
+    int _formacionVal = c.getFormacionVal();
+    _builder.append(_formacionVal);
     _builder.append("\", \"");
-    int _denominador = c.getDenominador();
-    _builder.append(_denominador);
+    int _experienciaVal = c.getExperienciaVal();
+    _builder.append(_experienciaVal);
+    _builder.append("\", \"");
+    int _certificacionVal = c.getCertificacionVal();
+    _builder.append(_certificacionVal);
     return _builder;
   }
   

@@ -89,7 +89,16 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Evaluacion returns CalificarEquipo
 	 *
 	 * Constraint:
-	 *     (tipo=TipoEquipo name=ID numerador=INT denominador=INT)
+	 *     (
+	 *         tipo=TipoEquipo 
+	 *         name=ID 
+	 *         formacion='formacion' 
+	 *         formacionVal=INT 
+	 *         experiencia='experiencia' 
+	 *         experienciaVal=INT 
+	 *         certificacion='certificacion' 
+	 *         certificacionVal=INT
+	 *     )
 	 */
 	protected void sequence_Evaluacion(ISerializationContext context, CalificarEquipo semanticObject) {
 		if (errorAcceptor != null) {
@@ -97,16 +106,28 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__TIPO));
 			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.EVALUACION__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.EVALUACION__NAME));
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__NUMERADOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__NUMERADOR));
-			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__DENOMINADOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__DENOMINADOR));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__FORMACION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__FORMACION));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__FORMACION_VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__FORMACION_VAL));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__EXPERIENCIA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__EXPERIENCIA));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__EXPERIENCIA_VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__EXPERIENCIA_VAL));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__CERTIFICACION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__CERTIFICACION));
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__CERTIFICACION_VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CALIFICAR_EQUIPO__CERTIFICACION_VAL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getEvaluacionAccess().getTipoTipoEquipoEnumRuleCall_1_1_0(), semanticObject.getTipo());
 		feeder.accept(grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_1_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getEvaluacionAccess().getNumeradorINTTerminalRuleCall_1_5_0(), semanticObject.getNumerador());
-		feeder.accept(grammarAccess.getEvaluacionAccess().getDenominadorINTTerminalRuleCall_1_7_0(), semanticObject.getDenominador());
+		feeder.accept(grammarAccess.getEvaluacionAccess().getFormacionFormacionKeyword_1_3_0(), semanticObject.getFormacion());
+		feeder.accept(grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_5_0(), semanticObject.getFormacionVal());
+		feeder.accept(grammarAccess.getEvaluacionAccess().getExperienciaExperienciaKeyword_1_6_0(), semanticObject.getExperiencia());
+		feeder.accept(grammarAccess.getEvaluacionAccess().getExperienciaValINTTerminalRuleCall_1_8_0(), semanticObject.getExperienciaVal());
+		feeder.accept(grammarAccess.getEvaluacionAccess().getCertificacionCertificacionKeyword_1_9_0(), semanticObject.getCertificacion());
+		feeder.accept(grammarAccess.getEvaluacionAccess().getCertificacionValINTTerminalRuleCall_1_11_0(), semanticObject.getCertificacionVal());
 		feeder.finish();
 	}
 	

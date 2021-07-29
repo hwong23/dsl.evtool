@@ -14,8 +14,12 @@ package hwo.evtool.dsl.evalcn.evaluacion;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getTipo <em>Tipo</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacion <em>Formacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacionVal <em>Formacion Val</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperiencia <em>Experiencia</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperienciaVal <em>Experiencia Val</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacion <em>Certificacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacionVal <em>Certificacion Val</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo()
@@ -50,47 +54,135 @@ public interface CalificarEquipo extends Evaluacion
   void setTipo(TipoEquipo value);
 
   /**
-   * Returns the value of the '<em><b>Numerador</b></em>' attribute.
+   * Returns the value of the '<em><b>Formacion</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Numerador</em>' attribute.
-   * @see #setNumerador(int)
-   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_Numerador()
+   * @return the value of the '<em>Formacion</em>' attribute.
+   * @see #setFormacion(String)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_Formacion()
    * @model
    * @generated
    */
-  int getNumerador();
+  String getFormacion();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacion <em>Formacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Numerador</em>' attribute.
-   * @see #getNumerador()
+   * @param value the new value of the '<em>Formacion</em>' attribute.
+   * @see #getFormacion()
    * @generated
    */
-  void setNumerador(int value);
+  void setFormacion(String value);
 
   /**
-   * Returns the value of the '<em><b>Denominador</b></em>' attribute.
+   * Returns the value of the '<em><b>Formacion Val</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Denominador</em>' attribute.
-   * @see #setDenominador(int)
-   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_Denominador()
+   * @return the value of the '<em>Formacion Val</em>' attribute.
+   * @see #setFormacionVal(int)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_FormacionVal()
    * @model
    * @generated
    */
-  int getDenominador();
+  int getFormacionVal();
 
   /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}' attribute.
+   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacionVal <em>Formacion Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Denominador</em>' attribute.
-   * @see #getDenominador()
+   * @param value the new value of the '<em>Formacion Val</em>' attribute.
+   * @see #getFormacionVal()
    * @generated
    */
-  void setDenominador(int value);
+  void setFormacionVal(int value);
+
+  /**
+   * Returns the value of the '<em><b>Experiencia</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Experiencia</em>' attribute.
+   * @see #setExperiencia(String)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_Experiencia()
+   * @model
+   * @generated
+   */
+  String getExperiencia();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperiencia <em>Experiencia</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Experiencia</em>' attribute.
+   * @see #getExperiencia()
+   * @generated
+   */
+  void setExperiencia(String value);
+
+  /**
+   * Returns the value of the '<em><b>Experiencia Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Experiencia Val</em>' attribute.
+   * @see #setExperienciaVal(int)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_ExperienciaVal()
+   * @model
+   * @generated
+   */
+  int getExperienciaVal();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperienciaVal <em>Experiencia Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Experiencia Val</em>' attribute.
+   * @see #getExperienciaVal()
+   * @generated
+   */
+  void setExperienciaVal(int value);
+
+  /**
+   * Returns the value of the '<em><b>Certificacion</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Certificacion</em>' attribute.
+   * @see #setCertificacion(String)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_Certificacion()
+   * @model
+   * @generated
+   */
+  String getCertificacion();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacion <em>Certificacion</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Certificacion</em>' attribute.
+   * @see #getCertificacion()
+   * @generated
+   */
+  void setCertificacion(String value);
+
+  /**
+   * Returns the value of the '<em><b>Certificacion Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Certificacion Val</em>' attribute.
+   * @see #setCertificacionVal(int)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_CertificacionVal()
+   * @model
+   * @generated
+   */
+  int getCertificacionVal();
+
+  /**
+   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacionVal <em>Certificacion Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Certificacion Val</em>' attribute.
+   * @see #getCertificacionVal()
+   * @generated
+   */
+  void setCertificacionVal(int value);
 
 } // CalificarEquipo

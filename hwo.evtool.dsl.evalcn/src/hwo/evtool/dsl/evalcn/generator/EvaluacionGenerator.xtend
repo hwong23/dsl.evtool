@@ -87,7 +87,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 		«c.tipo»", "«c.puntuacion»'''
 	
 	protected def dispatch stringValue(CalificarEquipo c) '''
-		«c.tipo»", "«c.numerador»", "«c.denominador»'''
+		«c.tipo»", "«c.formacionVal»", "«c.experienciaVal»", "«c.certificacionVal»'''
 
 	protected def dispatch stringValue(CalificarOtros c) '''
 		«c.tipo»", "«c.valor»'''

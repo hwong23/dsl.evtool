@@ -40,8 +40,12 @@ Transicion:
 
 
 Evaluacion:
-	{CalificarPropuesta} tipo=TipoPropuesta name=ID 'calificacion' ':' puntuacion=E_Calificacion |
-	{CalificarEquipo} tipo=TipoEquipo name=ID 'calificacion' ':' numerador=INT '/' denominador=INT | 
+	{CalificarPropuesta} tipo=TipoPropuesta name=ID 
+		'calificacion' ':' puntuacion=E_Calificacion |
+	{CalificarEquipo} tipo=TipoEquipo name=ID 
+		formacion='formacion' ':' formacionVal=INT 
+		experiencia='experiencia' ':' experienciaVal=INT 
+		certificacion='certificacion' ':' certificacionVal=INT | 
 	{CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT  
 ;
 

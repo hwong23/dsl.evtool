@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'eventos'", "'resetEvents'", "'evaluaciones'", "'componente'", "'actions'", "'{'", "'}'", "':'", "'=>'", "'calificacion'", "'/'", "'Otros'", "'EvaluarArquitecto'", "'EvaluarDirector'", "'EvaluarEducacion'", "'EvaluarProblema'", "'EvaluarTecnica'", "'EvaluarOtros'", "'A'", "'M'", "'B'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'eventos'", "'resetEvents'", "'evaluaciones'", "'componente'", "'actions'", "'{'", "'}'", "':'", "'=>'", "'calificacion'", "'formacion'", "'experiencia'", "'certificacion'", "'Otros'", "'EvaluarArquitecto'", "'EvaluarDirector'", "'EvaluarEducacion'", "'EvaluarProblema'", "'EvaluarTecnica'", "'EvaluarOtros'", "'A'", "'M'", "'B'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -32,12 +32,14 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
+    public static final int T__33=33;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
@@ -328,7 +330,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                         int alt5=2;
                         int LA5_0 = input.LA(1);
 
-                        if ( ((LA5_0>=22 && LA5_0<=28)) ) {
+                        if ( ((LA5_0>=24 && LA5_0<=30)) ) {
                             alt5=1;
                         }
 
@@ -1231,7 +1233,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvaluacion"
-    // InternalEvaluacion.g:475:1: ruleEvaluacion returns [EObject current=null] : ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) ) ) | ( () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) ) ) ) ;
+    // InternalEvaluacion.g:475:1: ruleEvaluacion returns [EObject current=null] : ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) ) ;
     public final EObject ruleEvaluacion() throws RecognitionException {
         EObject current = null;
 
@@ -1239,16 +1241,20 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_4=null;
         Token lv_name_8_0=null;
-        Token otherlv_9=null;
+        Token lv_formacion_9_0=null;
         Token otherlv_10=null;
-        Token lv_numerador_11_0=null;
-        Token otherlv_12=null;
-        Token lv_denominador_13_0=null;
-        Token lv_tipo_15_0=null;
-        Token lv_name_16_0=null;
-        Token otherlv_17=null;
-        Token otherlv_18=null;
-        Token lv_valor_19_0=null;
+        Token lv_formacionVal_11_0=null;
+        Token lv_experiencia_12_0=null;
+        Token otherlv_13=null;
+        Token lv_experienciaVal_14_0=null;
+        Token lv_certificacion_15_0=null;
+        Token otherlv_16=null;
+        Token lv_certificacionVal_17_0=null;
+        Token lv_tipo_19_0=null;
+        Token lv_name_20_0=null;
+        Token otherlv_21=null;
+        Token otherlv_22=null;
+        Token lv_valor_23_0=null;
         Enumerator lv_tipo_1_0 = null;
 
         Enumerator lv_puntuacion_5_0 = null;
@@ -1260,27 +1266,27 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:481:2: ( ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) ) ) | ( () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) ) ) ) )
-            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) ) ) | ( () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) ) ) )
+            // InternalEvaluacion.g:481:2: ( ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) ) )
+            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) )
             {
-            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) ) ) | ( () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) ) ) )
+            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) )
             int alt12=3;
             switch ( input.LA(1) ) {
-            case 26:
-            case 27:
             case 28:
+            case 29:
+            case 30:
                 {
                 alt12=1;
                 }
                 break;
-            case 23:
-            case 24:
             case 25:
+            case 26:
+            case 27:
                 {
                 alt12=2;
                 }
                 break;
-            case 22:
+            case 24:
                 {
                 alt12=3;
                 }
@@ -1413,10 +1419,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) )
                     {
-                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) ) )
-                    // InternalEvaluacion.g:558:4: () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) otherlv_9= 'calificacion' otherlv_10= ':' ( (lv_numerador_11_0= RULE_INT ) ) otherlv_12= '/' ( (lv_denominador_13_0= RULE_INT ) )
+                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:558:4: () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) )
                     {
                     // InternalEvaluacion.g:558:4: ()
                     // InternalEvaluacion.g:559:5: 
@@ -1466,7 +1472,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     // InternalEvaluacion.g:585:5: (lv_name_8_0= RULE_ID )
                     // InternalEvaluacion.g:586:6: lv_name_8_0= RULE_ID
                     {
-                    lv_name_8_0=(Token)match(input,RULE_ID,FOLLOW_16); 
+                    lv_name_8_0=(Token)match(input,RULE_ID,FOLLOW_19); 
 
                     						newLeafNode(lv_name_8_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_1_2_0());
                     					
@@ -1486,23 +1492,41 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,20,FOLLOW_17); 
+                    // InternalEvaluacion.g:602:4: ( (lv_formacion_9_0= 'formacion' ) )
+                    // InternalEvaluacion.g:603:5: (lv_formacion_9_0= 'formacion' )
+                    {
+                    // InternalEvaluacion.g:603:5: (lv_formacion_9_0= 'formacion' )
+                    // InternalEvaluacion.g:604:6: lv_formacion_9_0= 'formacion'
+                    {
+                    lv_formacion_9_0=(Token)match(input,21,FOLLOW_17); 
 
-                    				newLeafNode(otherlv_9, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_1_3());
-                    			
-                    otherlv_10=(Token)match(input,18,FOLLOW_19); 
+                    						newLeafNode(lv_formacion_9_0, grammarAccess.getEvaluacionAccess().getFormacionFormacionKeyword_1_3_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getEvaluacionRule());
+                    						}
+                    						setWithLastConsumed(current, "formacion", lv_formacion_9_0, "formacion");
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_10=(Token)match(input,18,FOLLOW_20); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getEvaluacionAccess().getColonKeyword_1_4());
                     			
-                    // InternalEvaluacion.g:610:4: ( (lv_numerador_11_0= RULE_INT ) )
-                    // InternalEvaluacion.g:611:5: (lv_numerador_11_0= RULE_INT )
+                    // InternalEvaluacion.g:620:4: ( (lv_formacionVal_11_0= RULE_INT ) )
+                    // InternalEvaluacion.g:621:5: (lv_formacionVal_11_0= RULE_INT )
                     {
-                    // InternalEvaluacion.g:611:5: (lv_numerador_11_0= RULE_INT )
-                    // InternalEvaluacion.g:612:6: lv_numerador_11_0= RULE_INT
+                    // InternalEvaluacion.g:621:5: (lv_formacionVal_11_0= RULE_INT )
+                    // InternalEvaluacion.g:622:6: lv_formacionVal_11_0= RULE_INT
                     {
-                    lv_numerador_11_0=(Token)match(input,RULE_INT,FOLLOW_20); 
+                    lv_formacionVal_11_0=(Token)match(input,RULE_INT,FOLLOW_21); 
 
-                    						newLeafNode(lv_numerador_11_0, grammarAccess.getEvaluacionAccess().getNumeradorINTTerminalRuleCall_1_5_0());
+                    						newLeafNode(lv_formacionVal_11_0, grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_5_0());
                     					
 
                     						if (current==null) {
@@ -1510,8 +1534,8 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     						}
                     						setWithLastConsumed(
                     							current,
-                    							"numerador",
-                    							lv_numerador_11_0,
+                    							"formacionVal",
+                    							lv_formacionVal_11_0,
                     							"org.eclipse.xtext.common.Terminals.INT");
                     					
 
@@ -1520,19 +1544,41 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,21,FOLLOW_19); 
+                    // InternalEvaluacion.g:638:4: ( (lv_experiencia_12_0= 'experiencia' ) )
+                    // InternalEvaluacion.g:639:5: (lv_experiencia_12_0= 'experiencia' )
+                    {
+                    // InternalEvaluacion.g:639:5: (lv_experiencia_12_0= 'experiencia' )
+                    // InternalEvaluacion.g:640:6: lv_experiencia_12_0= 'experiencia'
+                    {
+                    lv_experiencia_12_0=(Token)match(input,22,FOLLOW_17); 
 
-                    				newLeafNode(otherlv_12, grammarAccess.getEvaluacionAccess().getSolidusKeyword_1_6());
+                    						newLeafNode(lv_experiencia_12_0, grammarAccess.getEvaluacionAccess().getExperienciaExperienciaKeyword_1_6_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getEvaluacionRule());
+                    						}
+                    						setWithLastConsumed(current, "experiencia", lv_experiencia_12_0, "experiencia");
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_13=(Token)match(input,18,FOLLOW_20); 
+
+                    				newLeafNode(otherlv_13, grammarAccess.getEvaluacionAccess().getColonKeyword_1_7());
                     			
-                    // InternalEvaluacion.g:632:4: ( (lv_denominador_13_0= RULE_INT ) )
-                    // InternalEvaluacion.g:633:5: (lv_denominador_13_0= RULE_INT )
+                    // InternalEvaluacion.g:656:4: ( (lv_experienciaVal_14_0= RULE_INT ) )
+                    // InternalEvaluacion.g:657:5: (lv_experienciaVal_14_0= RULE_INT )
                     {
-                    // InternalEvaluacion.g:633:5: (lv_denominador_13_0= RULE_INT )
-                    // InternalEvaluacion.g:634:6: lv_denominador_13_0= RULE_INT
+                    // InternalEvaluacion.g:657:5: (lv_experienciaVal_14_0= RULE_INT )
+                    // InternalEvaluacion.g:658:6: lv_experienciaVal_14_0= RULE_INT
                     {
-                    lv_denominador_13_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+                    lv_experienciaVal_14_0=(Token)match(input,RULE_INT,FOLLOW_22); 
 
-                    						newLeafNode(lv_denominador_13_0, grammarAccess.getEvaluacionAccess().getDenominadorINTTerminalRuleCall_1_7_0());
+                    						newLeafNode(lv_experienciaVal_14_0, grammarAccess.getEvaluacionAccess().getExperienciaValINTTerminalRuleCall_1_8_0());
                     					
 
                     						if (current==null) {
@@ -1540,8 +1586,60 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     						}
                     						setWithLastConsumed(
                     							current,
-                    							"denominador",
-                    							lv_denominador_13_0,
+                    							"experienciaVal",
+                    							lv_experienciaVal_14_0,
+                    							"org.eclipse.xtext.common.Terminals.INT");
+                    					
+
+                    }
+
+
+                    }
+
+                    // InternalEvaluacion.g:674:4: ( (lv_certificacion_15_0= 'certificacion' ) )
+                    // InternalEvaluacion.g:675:5: (lv_certificacion_15_0= 'certificacion' )
+                    {
+                    // InternalEvaluacion.g:675:5: (lv_certificacion_15_0= 'certificacion' )
+                    // InternalEvaluacion.g:676:6: lv_certificacion_15_0= 'certificacion'
+                    {
+                    lv_certificacion_15_0=(Token)match(input,23,FOLLOW_17); 
+
+                    						newLeafNode(lv_certificacion_15_0, grammarAccess.getEvaluacionAccess().getCertificacionCertificacionKeyword_1_9_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getEvaluacionRule());
+                    						}
+                    						setWithLastConsumed(current, "certificacion", lv_certificacion_15_0, "certificacion");
+                    					
+
+                    }
+
+
+                    }
+
+                    otherlv_16=(Token)match(input,18,FOLLOW_20); 
+
+                    				newLeafNode(otherlv_16, grammarAccess.getEvaluacionAccess().getColonKeyword_1_10());
+                    			
+                    // InternalEvaluacion.g:692:4: ( (lv_certificacionVal_17_0= RULE_INT ) )
+                    // InternalEvaluacion.g:693:5: (lv_certificacionVal_17_0= RULE_INT )
+                    {
+                    // InternalEvaluacion.g:693:5: (lv_certificacionVal_17_0= RULE_INT )
+                    // InternalEvaluacion.g:694:6: lv_certificacionVal_17_0= RULE_INT
+                    {
+                    lv_certificacionVal_17_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+
+                    						newLeafNode(lv_certificacionVal_17_0, grammarAccess.getEvaluacionAccess().getCertificacionValINTTerminalRuleCall_1_11_0());
+                    					
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getEvaluacionRule());
+                    						}
+                    						setWithLastConsumed(
+                    							current,
+                    							"certificacionVal",
+                    							lv_certificacionVal_17_0,
                     							"org.eclipse.xtext.common.Terminals.INT");
                     					
 
@@ -1557,13 +1655,13 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:652:3: ( () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:712:3: ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) )
                     {
-                    // InternalEvaluacion.g:652:3: ( () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) ) )
-                    // InternalEvaluacion.g:653:4: () ( (lv_tipo_15_0= 'Otros' ) ) ( (lv_name_16_0= RULE_ID ) ) otherlv_17= 'calificacion' otherlv_18= ':' ( (lv_valor_19_0= RULE_INT ) )
+                    // InternalEvaluacion.g:712:3: ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:713:4: () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) )
                     {
-                    // InternalEvaluacion.g:653:4: ()
-                    // InternalEvaluacion.g:654:5: 
+                    // InternalEvaluacion.g:713:4: ()
+                    // InternalEvaluacion.g:714:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -1573,21 +1671,21 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalEvaluacion.g:660:4: ( (lv_tipo_15_0= 'Otros' ) )
-                    // InternalEvaluacion.g:661:5: (lv_tipo_15_0= 'Otros' )
+                    // InternalEvaluacion.g:720:4: ( (lv_tipo_19_0= 'Otros' ) )
+                    // InternalEvaluacion.g:721:5: (lv_tipo_19_0= 'Otros' )
                     {
-                    // InternalEvaluacion.g:661:5: (lv_tipo_15_0= 'Otros' )
-                    // InternalEvaluacion.g:662:6: lv_tipo_15_0= 'Otros'
+                    // InternalEvaluacion.g:721:5: (lv_tipo_19_0= 'Otros' )
+                    // InternalEvaluacion.g:722:6: lv_tipo_19_0= 'Otros'
                     {
-                    lv_tipo_15_0=(Token)match(input,22,FOLLOW_3); 
+                    lv_tipo_19_0=(Token)match(input,24,FOLLOW_3); 
 
-                    						newLeafNode(lv_tipo_15_0, grammarAccess.getEvaluacionAccess().getTipoOtrosKeyword_2_1_0());
+                    						newLeafNode(lv_tipo_19_0, grammarAccess.getEvaluacionAccess().getTipoOtrosKeyword_2_1_0());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getEvaluacionRule());
                     						}
-                    						setWithLastConsumed(current, "tipo", lv_tipo_15_0, "Otros");
+                    						setWithLastConsumed(current, "tipo", lv_tipo_19_0, "Otros");
                     					
 
                     }
@@ -1595,15 +1693,15 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalEvaluacion.g:674:4: ( (lv_name_16_0= RULE_ID ) )
-                    // InternalEvaluacion.g:675:5: (lv_name_16_0= RULE_ID )
+                    // InternalEvaluacion.g:734:4: ( (lv_name_20_0= RULE_ID ) )
+                    // InternalEvaluacion.g:735:5: (lv_name_20_0= RULE_ID )
                     {
-                    // InternalEvaluacion.g:675:5: (lv_name_16_0= RULE_ID )
-                    // InternalEvaluacion.g:676:6: lv_name_16_0= RULE_ID
+                    // InternalEvaluacion.g:735:5: (lv_name_20_0= RULE_ID )
+                    // InternalEvaluacion.g:736:6: lv_name_20_0= RULE_ID
                     {
-                    lv_name_16_0=(Token)match(input,RULE_ID,FOLLOW_16); 
+                    lv_name_20_0=(Token)match(input,RULE_ID,FOLLOW_16); 
 
-                    						newLeafNode(lv_name_16_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_2_2_0());
+                    						newLeafNode(lv_name_20_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_2_2_0());
                     					
 
                     						if (current==null) {
@@ -1612,7 +1710,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     						setWithLastConsumed(
                     							current,
                     							"name",
-                    							lv_name_16_0,
+                    							lv_name_20_0,
                     							"org.eclipse.xtext.common.Terminals.ID");
                     					
 
@@ -1621,23 +1719,23 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,20,FOLLOW_17); 
+                    otherlv_21=(Token)match(input,20,FOLLOW_17); 
 
-                    				newLeafNode(otherlv_17, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_2_3());
+                    				newLeafNode(otherlv_21, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_2_3());
                     			
-                    otherlv_18=(Token)match(input,18,FOLLOW_19); 
+                    otherlv_22=(Token)match(input,18,FOLLOW_20); 
 
-                    				newLeafNode(otherlv_18, grammarAccess.getEvaluacionAccess().getColonKeyword_2_4());
+                    				newLeafNode(otherlv_22, grammarAccess.getEvaluacionAccess().getColonKeyword_2_4());
                     			
-                    // InternalEvaluacion.g:700:4: ( (lv_valor_19_0= RULE_INT ) )
-                    // InternalEvaluacion.g:701:5: (lv_valor_19_0= RULE_INT )
+                    // InternalEvaluacion.g:760:4: ( (lv_valor_23_0= RULE_INT ) )
+                    // InternalEvaluacion.g:761:5: (lv_valor_23_0= RULE_INT )
                     {
-                    // InternalEvaluacion.g:701:5: (lv_valor_19_0= RULE_INT )
-                    // InternalEvaluacion.g:702:6: lv_valor_19_0= RULE_INT
+                    // InternalEvaluacion.g:761:5: (lv_valor_23_0= RULE_INT )
+                    // InternalEvaluacion.g:762:6: lv_valor_23_0= RULE_INT
                     {
-                    lv_valor_19_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+                    lv_valor_23_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-                    						newLeafNode(lv_valor_19_0, grammarAccess.getEvaluacionAccess().getValorINTTerminalRuleCall_2_5_0());
+                    						newLeafNode(lv_valor_23_0, grammarAccess.getEvaluacionAccess().getValorINTTerminalRuleCall_2_5_0());
                     					
 
                     						if (current==null) {
@@ -1646,7 +1744,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     						setWithLastConsumed(
                     							current,
                     							"valor",
-                    							lv_valor_19_0,
+                    							lv_valor_23_0,
                     							"org.eclipse.xtext.common.Terminals.INT");
                     					
 
@@ -1684,7 +1782,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipoEquipo"
-    // InternalEvaluacion.g:723:1: ruleTipoEquipo returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) ;
+    // InternalEvaluacion.g:783:1: ruleTipoEquipo returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) ;
     public final Enumerator ruleTipoEquipo() throws RecognitionException {
         Enumerator current = null;
 
@@ -1696,23 +1794,23 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:729:2: ( ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) )
-            // InternalEvaluacion.g:730:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
+            // InternalEvaluacion.g:789:2: ( ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) )
+            // InternalEvaluacion.g:790:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
             {
-            // InternalEvaluacion.g:730:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
+            // InternalEvaluacion.g:790:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
             int alt13=3;
             switch ( input.LA(1) ) {
-            case 23:
+            case 25:
                 {
                 alt13=1;
                 }
                 break;
-            case 24:
+            case 26:
                 {
                 alt13=2;
                 }
                 break;
-            case 25:
+            case 27:
                 {
                 alt13=3;
                 }
@@ -1726,12 +1824,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
             switch (alt13) {
                 case 1 :
-                    // InternalEvaluacion.g:731:3: (enumLiteral_0= 'EvaluarArquitecto' )
+                    // InternalEvaluacion.g:791:3: (enumLiteral_0= 'EvaluarArquitecto' )
                     {
-                    // InternalEvaluacion.g:731:3: (enumLiteral_0= 'EvaluarArquitecto' )
-                    // InternalEvaluacion.g:732:4: enumLiteral_0= 'EvaluarArquitecto'
+                    // InternalEvaluacion.g:791:3: (enumLiteral_0= 'EvaluarArquitecto' )
+                    // InternalEvaluacion.g:792:4: enumLiteral_0= 'EvaluarArquitecto'
                     {
-                    enumLiteral_0=(Token)match(input,23,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,25,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEquipoAccess().getEvaluarArquitectoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getTipoEquipoAccess().getEvaluarArquitectoEnumLiteralDeclaration_0());
@@ -1743,12 +1841,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:739:3: (enumLiteral_1= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:799:3: (enumLiteral_1= 'EvaluarDirector' )
                     {
-                    // InternalEvaluacion.g:739:3: (enumLiteral_1= 'EvaluarDirector' )
-                    // InternalEvaluacion.g:740:4: enumLiteral_1= 'EvaluarDirector'
+                    // InternalEvaluacion.g:799:3: (enumLiteral_1= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:800:4: enumLiteral_1= 'EvaluarDirector'
                     {
-                    enumLiteral_1=(Token)match(input,24,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,26,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEquipoAccess().getEvaluarDirectorEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getTipoEquipoAccess().getEvaluarDirectorEnumLiteralDeclaration_1());
@@ -1760,12 +1858,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:747:3: (enumLiteral_2= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:807:3: (enumLiteral_2= 'EvaluarEducacion' )
                     {
-                    // InternalEvaluacion.g:747:3: (enumLiteral_2= 'EvaluarEducacion' )
-                    // InternalEvaluacion.g:748:4: enumLiteral_2= 'EvaluarEducacion'
+                    // InternalEvaluacion.g:807:3: (enumLiteral_2= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:808:4: enumLiteral_2= 'EvaluarEducacion'
                     {
-                    enumLiteral_2=(Token)match(input,25,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,27,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoEquipoAccess().getEvaluarEducacionEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getTipoEquipoAccess().getEvaluarEducacionEnumLiteralDeclaration_2());
@@ -1799,7 +1897,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipoPropuesta"
-    // InternalEvaluacion.g:758:1: ruleTipoPropuesta returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) ;
+    // InternalEvaluacion.g:818:1: ruleTipoPropuesta returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) ;
     public final Enumerator ruleTipoPropuesta() throws RecognitionException {
         Enumerator current = null;
 
@@ -1811,23 +1909,23 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:764:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) )
-            // InternalEvaluacion.g:765:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
+            // InternalEvaluacion.g:824:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) )
+            // InternalEvaluacion.g:825:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
             {
-            // InternalEvaluacion.g:765:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
+            // InternalEvaluacion.g:825:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
             int alt14=3;
             switch ( input.LA(1) ) {
-            case 26:
+            case 28:
                 {
                 alt14=1;
                 }
                 break;
-            case 27:
+            case 29:
                 {
                 alt14=2;
                 }
                 break;
-            case 28:
+            case 30:
                 {
                 alt14=3;
                 }
@@ -1841,12 +1939,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
             switch (alt14) {
                 case 1 :
-                    // InternalEvaluacion.g:766:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:826:3: (enumLiteral_0= 'EvaluarProblema' )
                     {
-                    // InternalEvaluacion.g:766:3: (enumLiteral_0= 'EvaluarProblema' )
-                    // InternalEvaluacion.g:767:4: enumLiteral_0= 'EvaluarProblema'
+                    // InternalEvaluacion.g:826:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:827:4: enumLiteral_0= 'EvaluarProblema'
                     {
-                    enumLiteral_0=(Token)match(input,26,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,28,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoPropuestaAccess().getEvaluarProblemaEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getTipoPropuestaAccess().getEvaluarProblemaEnumLiteralDeclaration_0());
@@ -1858,12 +1956,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:774:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:834:3: (enumLiteral_1= 'EvaluarTecnica' )
                     {
-                    // InternalEvaluacion.g:774:3: (enumLiteral_1= 'EvaluarTecnica' )
-                    // InternalEvaluacion.g:775:4: enumLiteral_1= 'EvaluarTecnica'
+                    // InternalEvaluacion.g:834:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:835:4: enumLiteral_1= 'EvaluarTecnica'
                     {
-                    enumLiteral_1=(Token)match(input,27,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,29,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoPropuestaAccess().getEvaluarTecnicaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getTipoPropuestaAccess().getEvaluarTecnicaEnumLiteralDeclaration_1());
@@ -1875,12 +1973,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:782:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:842:3: (enumLiteral_2= 'EvaluarOtros' )
                     {
-                    // InternalEvaluacion.g:782:3: (enumLiteral_2= 'EvaluarOtros' )
-                    // InternalEvaluacion.g:783:4: enumLiteral_2= 'EvaluarOtros'
+                    // InternalEvaluacion.g:842:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:843:4: enumLiteral_2= 'EvaluarOtros'
                     {
-                    enumLiteral_2=(Token)match(input,28,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,30,FOLLOW_2); 
 
                     				current = grammarAccess.getTipoPropuestaAccess().getEvaluarOtrosEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getTipoPropuestaAccess().getEvaluarOtrosEnumLiteralDeclaration_2());
@@ -1914,7 +2012,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleE_Calificacion"
-    // InternalEvaluacion.g:793:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
+    // InternalEvaluacion.g:853:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
     public final Enumerator ruleE_Calificacion() throws RecognitionException {
         Enumerator current = null;
 
@@ -1926,23 +2024,23 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:799:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
-            // InternalEvaluacion.g:800:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
+            // InternalEvaluacion.g:859:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
+            // InternalEvaluacion.g:860:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
             {
-            // InternalEvaluacion.g:800:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
+            // InternalEvaluacion.g:860:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
             int alt15=3;
             switch ( input.LA(1) ) {
-            case 29:
+            case 31:
                 {
                 alt15=1;
                 }
                 break;
-            case 30:
+            case 32:
                 {
                 alt15=2;
                 }
                 break;
-            case 31:
+            case 33:
                 {
                 alt15=3;
                 }
@@ -1956,12 +2054,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
             switch (alt15) {
                 case 1 :
-                    // InternalEvaluacion.g:801:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:861:3: (enumLiteral_0= 'A' )
                     {
-                    // InternalEvaluacion.g:801:3: (enumLiteral_0= 'A' )
-                    // InternalEvaluacion.g:802:4: enumLiteral_0= 'A'
+                    // InternalEvaluacion.g:861:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:862:4: enumLiteral_0= 'A'
                     {
-                    enumLiteral_0=(Token)match(input,29,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,31,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getAltoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getE_CalificacionAccess().getAltoEnumLiteralDeclaration_0());
@@ -1973,12 +2071,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:809:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:869:3: (enumLiteral_1= 'M' )
                     {
-                    // InternalEvaluacion.g:809:3: (enumLiteral_1= 'M' )
-                    // InternalEvaluacion.g:810:4: enumLiteral_1= 'M'
+                    // InternalEvaluacion.g:869:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:870:4: enumLiteral_1= 'M'
                     {
-                    enumLiteral_1=(Token)match(input,30,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,32,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getMedioEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getE_CalificacionAccess().getMedioEnumLiteralDeclaration_1());
@@ -1990,12 +2088,12 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:817:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:877:3: (enumLiteral_2= 'B' )
                     {
-                    // InternalEvaluacion.g:817:3: (enumLiteral_2= 'B' )
-                    // InternalEvaluacion.g:818:4: enumLiteral_2= 'B'
+                    // InternalEvaluacion.g:877:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:878:4: enumLiteral_2= 'B'
                     {
-                    enumLiteral_2=(Token)match(input,31,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,33,FOLLOW_2); 
 
                     				current = grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2());
@@ -2037,8 +2135,8 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000007012L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000006012L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000001FC00000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000001FC04002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000007F000000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x000000007F004002L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004002L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008012L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010000L});
@@ -2049,8 +2147,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x00000000E0000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000380000000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000800000L});
 
 }

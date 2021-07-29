@@ -22,8 +22,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getTipo <em>Tipo</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getNumerador <em>Numerador</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getDenominador <em>Denominador</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getFormacion <em>Formacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getFormacionVal <em>Formacion Val</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getExperiencia <em>Experiencia</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getExperienciaVal <em>Experiencia Val</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getCertificacion <em>Certificacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl#getCertificacionVal <em>Certificacion Val</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,44 +55,124 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
   protected TipoEquipo tipo = TIPO_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
+   * The default value of the '{@link #getFormacion() <em>Formacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumerador()
+   * @see #getFormacion()
    * @generated
    * @ordered
    */
-  protected static final int NUMERADOR_EDEFAULT = 0;
+  protected static final String FORMACION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNumerador() <em>Numerador</em>}' attribute.
+   * The cached value of the '{@link #getFormacion() <em>Formacion</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumerador()
+   * @see #getFormacion()
    * @generated
    * @ordered
    */
-  protected int numerador = NUMERADOR_EDEFAULT;
+  protected String formacion = FORMACION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
+   * The default value of the '{@link #getFormacionVal() <em>Formacion Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDenominador()
+   * @see #getFormacionVal()
    * @generated
    * @ordered
    */
-  protected static final int DENOMINADOR_EDEFAULT = 0;
+  protected static final int FORMACION_VAL_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getDenominador() <em>Denominador</em>}' attribute.
+   * The cached value of the '{@link #getFormacionVal() <em>Formacion Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDenominador()
+   * @see #getFormacionVal()
    * @generated
    * @ordered
    */
-  protected int denominador = DENOMINADOR_EDEFAULT;
+  protected int formacionVal = FORMACION_VAL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getExperiencia() <em>Experiencia</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExperiencia()
+   * @generated
+   * @ordered
+   */
+  protected static final String EXPERIENCIA_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getExperiencia() <em>Experiencia</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExperiencia()
+   * @generated
+   * @ordered
+   */
+  protected String experiencia = EXPERIENCIA_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getExperienciaVal() <em>Experiencia Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExperienciaVal()
+   * @generated
+   * @ordered
+   */
+  protected static final int EXPERIENCIA_VAL_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getExperienciaVal() <em>Experiencia Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExperienciaVal()
+   * @generated
+   * @ordered
+   */
+  protected int experienciaVal = EXPERIENCIA_VAL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCertificacion() <em>Certificacion</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCertificacion()
+   * @generated
+   * @ordered
+   */
+  protected static final String CERTIFICACION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCertificacion() <em>Certificacion</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCertificacion()
+   * @generated
+   * @ordered
+   */
+  protected String certificacion = CERTIFICACION_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCertificacionVal() <em>Certificacion Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCertificacionVal()
+   * @generated
+   * @ordered
+   */
+  protected static final int CERTIFICACION_VAL_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getCertificacionVal() <em>Certificacion Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCertificacionVal()
+   * @generated
+   * @ordered
+   */
+  protected int certificacionVal = CERTIFICACION_VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,9 +226,9 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    */
   @Override
-  public int getNumerador()
+  public String getFormacion()
   {
-    return numerador;
+    return formacion;
   }
 
   /**
@@ -153,12 +237,12 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    */
   @Override
-  public void setNumerador(int newNumerador)
+  public void setFormacion(String newFormacion)
   {
-    int oldNumerador = numerador;
-    numerador = newNumerador;
+    String oldFormacion = formacion;
+    formacion = newFormacion;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR, oldNumerador, numerador));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION, oldFormacion, formacion));
   }
 
   /**
@@ -167,9 +251,9 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    */
   @Override
-  public int getDenominador()
+  public int getFormacionVal()
   {
-    return denominador;
+    return formacionVal;
   }
 
   /**
@@ -178,12 +262,112 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    */
   @Override
-  public void setDenominador(int newDenominador)
+  public void setFormacionVal(int newFormacionVal)
   {
-    int oldDenominador = denominador;
-    denominador = newDenominador;
+    int oldFormacionVal = formacionVal;
+    formacionVal = newFormacionVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR, oldDenominador, denominador));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL, oldFormacionVal, formacionVal));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getExperiencia()
+  {
+    return experiencia;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setExperiencia(String newExperiencia)
+  {
+    String oldExperiencia = experiencia;
+    experiencia = newExperiencia;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA, oldExperiencia, experiencia));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int getExperienciaVal()
+  {
+    return experienciaVal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setExperienciaVal(int newExperienciaVal)
+  {
+    int oldExperienciaVal = experienciaVal;
+    experienciaVal = newExperienciaVal;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA_VAL, oldExperienciaVal, experienciaVal));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getCertificacion()
+  {
+    return certificacion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCertificacion(String newCertificacion)
+  {
+    String oldCertificacion = certificacion;
+    certificacion = newCertificacion;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION, oldCertificacion, certificacion));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int getCertificacionVal()
+  {
+    return certificacionVal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCertificacionVal(int newCertificacionVal)
+  {
+    int oldCertificacionVal = certificacionVal;
+    certificacionVal = newCertificacionVal;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION_VAL, oldCertificacionVal, certificacionVal));
   }
 
   /**
@@ -198,10 +382,18 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
     {
       case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
         return getTipo();
-      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
-        return getNumerador();
-      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
-        return getDenominador();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION:
+        return getFormacion();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL:
+        return getFormacionVal();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA:
+        return getExperiencia();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA_VAL:
+        return getExperienciaVal();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION:
+        return getCertificacion();
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION_VAL:
+        return getCertificacionVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -219,11 +411,23 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
       case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
         setTipo((TipoEquipo)newValue);
         return;
-      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
-        setNumerador((Integer)newValue);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION:
+        setFormacion((String)newValue);
         return;
-      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
-        setDenominador((Integer)newValue);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL:
+        setFormacionVal((Integer)newValue);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA:
+        setExperiencia((String)newValue);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA_VAL:
+        setExperienciaVal((Integer)newValue);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION:
+        setCertificacion((String)newValue);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION_VAL:
+        setCertificacionVal((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -242,11 +446,23 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
       case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
         setTipo(TIPO_EDEFAULT);
         return;
-      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
-        setNumerador(NUMERADOR_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION:
+        setFormacion(FORMACION_EDEFAULT);
         return;
-      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
-        setDenominador(DENOMINADOR_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL:
+        setFormacionVal(FORMACION_VAL_EDEFAULT);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA:
+        setExperiencia(EXPERIENCIA_EDEFAULT);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA_VAL:
+        setExperienciaVal(EXPERIENCIA_VAL_EDEFAULT);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION:
+        setCertificacion(CERTIFICACION_EDEFAULT);
+        return;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION_VAL:
+        setCertificacionVal(CERTIFICACION_VAL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -264,10 +480,18 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
     {
       case EvaluacionPackage.CALIFICAR_EQUIPO__TIPO:
         return tipo != TIPO_EDEFAULT;
-      case EvaluacionPackage.CALIFICAR_EQUIPO__NUMERADOR:
-        return numerador != NUMERADOR_EDEFAULT;
-      case EvaluacionPackage.CALIFICAR_EQUIPO__DENOMINADOR:
-        return denominador != DENOMINADOR_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION:
+        return FORMACION_EDEFAULT == null ? formacion != null : !FORMACION_EDEFAULT.equals(formacion);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL:
+        return formacionVal != FORMACION_VAL_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA:
+        return EXPERIENCIA_EDEFAULT == null ? experiencia != null : !EXPERIENCIA_EDEFAULT.equals(experiencia);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA_VAL:
+        return experienciaVal != EXPERIENCIA_VAL_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION:
+        return CERTIFICACION_EDEFAULT == null ? certificacion != null : !CERTIFICACION_EDEFAULT.equals(certificacion);
+      case EvaluacionPackage.CALIFICAR_EQUIPO__CERTIFICACION_VAL:
+        return certificacionVal != CERTIFICACION_VAL_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -285,10 +509,18 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (tipo: ");
     result.append(tipo);
-    result.append(", numerador: ");
-    result.append(numerador);
-    result.append(", denominador: ");
-    result.append(denominador);
+    result.append(", formacion: ");
+    result.append(formacion);
+    result.append(", formacionVal: ");
+    result.append(formacionVal);
+    result.append(", experiencia: ");
+    result.append(experiencia);
+    result.append(", experienciaVal: ");
+    result.append(experienciaVal);
+    result.append(", certificacion: ");
+    result.append(certificacion);
+    result.append(", certificacionVal: ");
+    result.append(certificacionVal);
     result.append(')');
     return result.toString();
   }

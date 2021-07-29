@@ -599,19 +599,29 @@ ruleEvaluacion returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_9='calificacion'
-			{
-				newLeafNode(otherlv_9, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_1_3());
-			}
+			(
+				(
+					lv_formacion_9_0='formacion'
+					{
+						newLeafNode(lv_formacion_9_0, grammarAccess.getEvaluacionAccess().getFormacionFormacionKeyword_1_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getEvaluacionRule());
+						}
+						setWithLastConsumed($current, "formacion", lv_formacion_9_0, "formacion");
+					}
+				)
+			)
 			otherlv_10=':'
 			{
 				newLeafNode(otherlv_10, grammarAccess.getEvaluacionAccess().getColonKeyword_1_4());
 			}
 			(
 				(
-					lv_numerador_11_0=RULE_INT
+					lv_formacionVal_11_0=RULE_INT
 					{
-						newLeafNode(lv_numerador_11_0, grammarAccess.getEvaluacionAccess().getNumeradorINTTerminalRuleCall_1_5_0());
+						newLeafNode(lv_formacionVal_11_0, grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_5_0());
 					}
 					{
 						if ($current==null) {
@@ -619,21 +629,35 @@ ruleEvaluacion returns [EObject current=null]
 						}
 						setWithLastConsumed(
 							$current,
-							"numerador",
-							lv_numerador_11_0,
+							"formacionVal",
+							lv_formacionVal_11_0,
 							"org.eclipse.xtext.common.Terminals.INT");
 					}
 				)
 			)
-			otherlv_12='/'
+			(
+				(
+					lv_experiencia_12_0='experiencia'
+					{
+						newLeafNode(lv_experiencia_12_0, grammarAccess.getEvaluacionAccess().getExperienciaExperienciaKeyword_1_6_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getEvaluacionRule());
+						}
+						setWithLastConsumed($current, "experiencia", lv_experiencia_12_0, "experiencia");
+					}
+				)
+			)
+			otherlv_13=':'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getEvaluacionAccess().getSolidusKeyword_1_6());
+				newLeafNode(otherlv_13, grammarAccess.getEvaluacionAccess().getColonKeyword_1_7());
 			}
 			(
 				(
-					lv_denominador_13_0=RULE_INT
+					lv_experienciaVal_14_0=RULE_INT
 					{
-						newLeafNode(lv_denominador_13_0, grammarAccess.getEvaluacionAccess().getDenominadorINTTerminalRuleCall_1_7_0());
+						newLeafNode(lv_experienciaVal_14_0, grammarAccess.getEvaluacionAccess().getExperienciaValINTTerminalRuleCall_1_8_0());
 					}
 					{
 						if ($current==null) {
@@ -641,8 +665,44 @@ ruleEvaluacion returns [EObject current=null]
 						}
 						setWithLastConsumed(
 							$current,
-							"denominador",
-							lv_denominador_13_0,
+							"experienciaVal",
+							lv_experienciaVal_14_0,
+							"org.eclipse.xtext.common.Terminals.INT");
+					}
+				)
+			)
+			(
+				(
+					lv_certificacion_15_0='certificacion'
+					{
+						newLeafNode(lv_certificacion_15_0, grammarAccess.getEvaluacionAccess().getCertificacionCertificacionKeyword_1_9_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getEvaluacionRule());
+						}
+						setWithLastConsumed($current, "certificacion", lv_certificacion_15_0, "certificacion");
+					}
+				)
+			)
+			otherlv_16=':'
+			{
+				newLeafNode(otherlv_16, grammarAccess.getEvaluacionAccess().getColonKeyword_1_10());
+			}
+			(
+				(
+					lv_certificacionVal_17_0=RULE_INT
+					{
+						newLeafNode(lv_certificacionVal_17_0, grammarAccess.getEvaluacionAccess().getCertificacionValINTTerminalRuleCall_1_11_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getEvaluacionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"certificacionVal",
+							lv_certificacionVal_17_0,
 							"org.eclipse.xtext.common.Terminals.INT");
 					}
 				)
@@ -659,23 +719,23 @@ ruleEvaluacion returns [EObject current=null]
 			)
 			(
 				(
-					lv_tipo_15_0='Otros'
+					lv_tipo_19_0='Otros'
 					{
-						newLeafNode(lv_tipo_15_0, grammarAccess.getEvaluacionAccess().getTipoOtrosKeyword_2_1_0());
+						newLeafNode(lv_tipo_19_0, grammarAccess.getEvaluacionAccess().getTipoOtrosKeyword_2_1_0());
 					}
 					{
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getEvaluacionRule());
 						}
-						setWithLastConsumed($current, "tipo", lv_tipo_15_0, "Otros");
+						setWithLastConsumed($current, "tipo", lv_tipo_19_0, "Otros");
 					}
 				)
 			)
 			(
 				(
-					lv_name_16_0=RULE_ID
+					lv_name_20_0=RULE_ID
 					{
-						newLeafNode(lv_name_16_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_2_2_0());
+						newLeafNode(lv_name_20_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_2_2_0());
 					}
 					{
 						if ($current==null) {
@@ -684,24 +744,24 @@ ruleEvaluacion returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"name",
-							lv_name_16_0,
+							lv_name_20_0,
 							"org.eclipse.xtext.common.Terminals.ID");
 					}
 				)
 			)
-			otherlv_17='calificacion'
+			otherlv_21='calificacion'
 			{
-				newLeafNode(otherlv_17, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_2_3());
+				newLeafNode(otherlv_21, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_2_3());
 			}
-			otherlv_18=':'
+			otherlv_22=':'
 			{
-				newLeafNode(otherlv_18, grammarAccess.getEvaluacionAccess().getColonKeyword_2_4());
+				newLeafNode(otherlv_22, grammarAccess.getEvaluacionAccess().getColonKeyword_2_4());
 			}
 			(
 				(
-					lv_valor_19_0=RULE_INT
+					lv_valor_23_0=RULE_INT
 					{
-						newLeafNode(lv_valor_19_0, grammarAccess.getEvaluacionAccess().getValorINTTerminalRuleCall_2_5_0());
+						newLeafNode(lv_valor_23_0, grammarAccess.getEvaluacionAccess().getValorINTTerminalRuleCall_2_5_0());
 					}
 					{
 						if ($current==null) {
@@ -710,7 +770,7 @@ ruleEvaluacion returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"valor",
-							lv_valor_19_0,
+							lv_valor_23_0,
 							"org.eclipse.xtext.common.Terminals.INT");
 					}
 				)

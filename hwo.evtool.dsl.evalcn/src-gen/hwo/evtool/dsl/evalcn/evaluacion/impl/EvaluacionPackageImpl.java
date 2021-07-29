@@ -492,7 +492,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCalificarEquipo_Numerador()
+  public EAttribute getCalificarEquipo_Formacion()
   {
     return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(1);
   }
@@ -503,9 +503,53 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCalificarEquipo_Denominador()
+  public EAttribute getCalificarEquipo_FormacionVal()
   {
     return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCalificarEquipo_Experiencia()
+  {
+    return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCalificarEquipo_ExperienciaVal()
+  {
+    return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCalificarEquipo_Certificacion()
+  {
+    return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCalificarEquipo_CertificacionVal()
+  {
+    return (EAttribute)calificarEquipoEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -640,8 +684,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
 
     calificarEquipoEClass = createEClass(CALIFICAR_EQUIPO);
     createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__TIPO);
-    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__NUMERADOR);
-    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__DENOMINADOR);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__FORMACION);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__FORMACION_VAL);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__EXPERIENCIA);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__EXPERIENCIA_VAL);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__CERTIFICACION);
+    createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__CERTIFICACION_VAL);
 
     calificarOtrosEClass = createEClass(CALIFICAR_OTROS);
     createEAttribute(calificarOtrosEClass, CALIFICAR_OTROS__TIPO);
@@ -722,8 +770,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
 
     initEClass(calificarEquipoEClass, CalificarEquipo.class, "CalificarEquipo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarEquipo_Tipo(), this.getTipoEquipo(), "tipo", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalificarEquipo_Numerador(), ecorePackage.getEInt(), "numerador", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalificarEquipo_Denominador(), ecorePackage.getEInt(), "denominador", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_Formacion(), ecorePackage.getEString(), "formacion", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_FormacionVal(), ecorePackage.getEInt(), "formacionVal", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_Experiencia(), ecorePackage.getEString(), "experiencia", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_ExperienciaVal(), ecorePackage.getEInt(), "experienciaVal", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_Certificacion(), ecorePackage.getEString(), "certificacion", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_CertificacionVal(), ecorePackage.getEInt(), "certificacionVal", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calificarOtrosEClass, CalificarOtros.class, "CalificarOtros", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarOtros_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, CalificarOtros.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

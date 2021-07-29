@@ -56,8 +56,12 @@
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CalificarEquipo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/tipo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/numerador"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/denominador"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/formacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/formacionVal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/experiencia"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/experienciaVal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/certificacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarEquipo/certificacionVal"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CalificarOtros">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CalificarOtros/tipo"/>

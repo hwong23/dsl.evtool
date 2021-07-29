@@ -67,8 +67,12 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEvaluacionAccess().getPuntuacionAssignment_0_5(), "rule__Evaluacion__PuntuacionAssignment_0_5");
 			builder.put(grammarAccess.getEvaluacionAccess().getTipoAssignment_1_1(), "rule__Evaluacion__TipoAssignment_1_1");
 			builder.put(grammarAccess.getEvaluacionAccess().getNameAssignment_1_2(), "rule__Evaluacion__NameAssignment_1_2");
-			builder.put(grammarAccess.getEvaluacionAccess().getNumeradorAssignment_1_5(), "rule__Evaluacion__NumeradorAssignment_1_5");
-			builder.put(grammarAccess.getEvaluacionAccess().getDenominadorAssignment_1_7(), "rule__Evaluacion__DenominadorAssignment_1_7");
+			builder.put(grammarAccess.getEvaluacionAccess().getFormacionAssignment_1_3(), "rule__Evaluacion__FormacionAssignment_1_3");
+			builder.put(grammarAccess.getEvaluacionAccess().getFormacionValAssignment_1_5(), "rule__Evaluacion__FormacionValAssignment_1_5");
+			builder.put(grammarAccess.getEvaluacionAccess().getExperienciaAssignment_1_6(), "rule__Evaluacion__ExperienciaAssignment_1_6");
+			builder.put(grammarAccess.getEvaluacionAccess().getExperienciaValAssignment_1_8(), "rule__Evaluacion__ExperienciaValAssignment_1_8");
+			builder.put(grammarAccess.getEvaluacionAccess().getCertificacionAssignment_1_9(), "rule__Evaluacion__CertificacionAssignment_1_9");
+			builder.put(grammarAccess.getEvaluacionAccess().getCertificacionValAssignment_1_11(), "rule__Evaluacion__CertificacionValAssignment_1_11");
 			builder.put(grammarAccess.getEvaluacionAccess().getTipoAssignment_2_1(), "rule__Evaluacion__TipoAssignment_2_1");
 			builder.put(grammarAccess.getEvaluacionAccess().getNameAssignment_2_2(), "rule__Evaluacion__NameAssignment_2_2");
 			builder.put(grammarAccess.getEvaluacionAccess().getValorAssignment_2_5(), "rule__Evaluacion__ValorAssignment_2_5");

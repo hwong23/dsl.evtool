@@ -401,22 +401,58 @@ public interface EvaluacionPackage extends EPackage
   int CALIFICAR_EQUIPO__TIPO = EVALUACION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Numerador</b></em>' attribute.
+   * The feature id for the '<em><b>Formacion</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_EQUIPO__NUMERADOR = EVALUACION_FEATURE_COUNT + 1;
+  int CALIFICAR_EQUIPO__FORMACION = EVALUACION_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Denominador</b></em>' attribute.
+   * The feature id for the '<em><b>Formacion Val</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_EQUIPO__DENOMINADOR = EVALUACION_FEATURE_COUNT + 2;
+  int CALIFICAR_EQUIPO__FORMACION_VAL = EVALUACION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Experiencia</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALIFICAR_EQUIPO__EXPERIENCIA = EVALUACION_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Experiencia Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALIFICAR_EQUIPO__EXPERIENCIA_VAL = EVALUACION_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Certificacion</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALIFICAR_EQUIPO__CERTIFICACION = EVALUACION_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Certificacion Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CALIFICAR_EQUIPO__CERTIFICACION_VAL = EVALUACION_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Calificar Equipo</em>' class.
@@ -425,7 +461,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CALIFICAR_EQUIPO_FEATURE_COUNT = EVALUACION_FEATURE_COUNT + 3;
+  int CALIFICAR_EQUIPO_FEATURE_COUNT = EVALUACION_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarOtrosImpl <em>Calificar Otros</em>}' class.
@@ -793,26 +829,70 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getCalificarEquipo_Tipo();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getNumerador <em>Numerador</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacion <em>Formacion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Numerador</em>'.
-   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getNumerador()
+   * @return the meta object for the attribute '<em>Formacion</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacion()
    * @see #getCalificarEquipo()
    * @generated
    */
-  EAttribute getCalificarEquipo_Numerador();
+  EAttribute getCalificarEquipo_Formacion();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getDenominador <em>Denominador</em>}'.
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacionVal <em>Formacion Val</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Denominador</em>'.
-   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getDenominador()
+   * @return the meta object for the attribute '<em>Formacion Val</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacionVal()
    * @see #getCalificarEquipo()
    * @generated
    */
-  EAttribute getCalificarEquipo_Denominador();
+  EAttribute getCalificarEquipo_FormacionVal();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperiencia <em>Experiencia</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Experiencia</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperiencia()
+   * @see #getCalificarEquipo()
+   * @generated
+   */
+  EAttribute getCalificarEquipo_Experiencia();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperienciaVal <em>Experiencia Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Experiencia Val</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getExperienciaVal()
+   * @see #getCalificarEquipo()
+   * @generated
+   */
+  EAttribute getCalificarEquipo_ExperienciaVal();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacion <em>Certificacion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Certificacion</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacion()
+   * @see #getCalificarEquipo()
+   * @generated
+   */
+  EAttribute getCalificarEquipo_Certificacion();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacionVal <em>Certificacion Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Certificacion Val</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getCertificacionVal()
+   * @see #getCalificarEquipo()
+   * @generated
+   */
+  EAttribute getCalificarEquipo_CertificacionVal();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarOtros <em>Calificar Otros</em>}'.
@@ -1134,20 +1214,52 @@ public interface EvaluacionPackage extends EPackage
     EAttribute CALIFICAR_EQUIPO__TIPO = eINSTANCE.getCalificarEquipo_Tipo();
 
     /**
-     * The meta object literal for the '<em><b>Numerador</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Formacion</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALIFICAR_EQUIPO__NUMERADOR = eINSTANCE.getCalificarEquipo_Numerador();
+    EAttribute CALIFICAR_EQUIPO__FORMACION = eINSTANCE.getCalificarEquipo_Formacion();
 
     /**
-     * The meta object literal for the '<em><b>Denominador</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Formacion Val</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALIFICAR_EQUIPO__DENOMINADOR = eINSTANCE.getCalificarEquipo_Denominador();
+    EAttribute CALIFICAR_EQUIPO__FORMACION_VAL = eINSTANCE.getCalificarEquipo_FormacionVal();
+
+    /**
+     * The meta object literal for the '<em><b>Experiencia</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CALIFICAR_EQUIPO__EXPERIENCIA = eINSTANCE.getCalificarEquipo_Experiencia();
+
+    /**
+     * The meta object literal for the '<em><b>Experiencia Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CALIFICAR_EQUIPO__EXPERIENCIA_VAL = eINSTANCE.getCalificarEquipo_ExperienciaVal();
+
+    /**
+     * The meta object literal for the '<em><b>Certificacion</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CALIFICAR_EQUIPO__CERTIFICACION = eINSTANCE.getCalificarEquipo_Certificacion();
+
+    /**
+     * The meta object literal for the '<em><b>Certificacion Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CALIFICAR_EQUIPO__CERTIFICACION_VAL = eINSTANCE.getCalificarEquipo_CertificacionVal();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarOtrosImpl <em>Calificar Otros</em>}' class.
