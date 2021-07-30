@@ -1233,7 +1233,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvaluacion"
-    // InternalEvaluacion.g:475:1: ruleEvaluacion returns [EObject current=null] : ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) ) ;
+    // InternalEvaluacion.g:475:1: ruleEvaluacion returns [EObject current=null] : ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ) | ( () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) ) ) ) ;
     public final EObject ruleEvaluacion() throws RecognitionException {
         EObject current = null;
 
@@ -1241,20 +1241,20 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_4=null;
         Token lv_name_8_0=null;
-        Token lv_formacion_9_0=null;
-        Token otherlv_10=null;
-        Token lv_formacionVal_11_0=null;
-        Token lv_experiencia_12_0=null;
-        Token otherlv_13=null;
-        Token lv_experienciaVal_14_0=null;
-        Token lv_certificacion_15_0=null;
-        Token otherlv_16=null;
-        Token lv_certificacionVal_17_0=null;
-        Token lv_tipo_19_0=null;
-        Token lv_name_20_0=null;
-        Token otherlv_21=null;
+        Token lv_formacion_10_0=null;
+        Token otherlv_11=null;
+        Token lv_formacionVal_12_0=null;
+        Token lv_experiencia_13_0=null;
+        Token otherlv_14=null;
+        Token lv_experienciaVal_15_0=null;
+        Token lv_certificacion_16_0=null;
+        Token otherlv_17=null;
+        Token lv_certificacionVal_18_0=null;
+        Token lv_tipo_20_0=null;
+        Token lv_name_21_0=null;
         Token otherlv_22=null;
-        Token lv_valor_23_0=null;
+        Token otherlv_23=null;
+        Token lv_valor_24_0=null;
         Enumerator lv_tipo_1_0 = null;
 
         Enumerator lv_puntuacion_5_0 = null;
@@ -1266,39 +1266,39 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:481:2: ( ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) ) )
-            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) )
+            // InternalEvaluacion.g:481:2: ( ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ) | ( () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) ) ) ) )
+            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ) | ( () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) ) ) )
             {
-            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) ) | ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) ) )
-            int alt12=3;
+            // InternalEvaluacion.g:482:2: ( ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) ) | ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) ) | ( () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) ) ) )
+            int alt13=3;
             switch ( input.LA(1) ) {
             case 28:
             case 29:
             case 30:
                 {
-                alt12=1;
+                alt13=1;
                 }
                 break;
             case 25:
             case 26:
             case 27:
                 {
-                alt12=2;
+                alt13=2;
                 }
                 break;
             case 24:
                 {
-                alt12=3;
+                alt13=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 13, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
                     // InternalEvaluacion.g:483:3: ( () ( (lv_tipo_1_0= ruleTipoPropuesta ) ) ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'calificacion' otherlv_4= ':' ( (lv_puntuacion_5_0= ruleE_Calificacion ) ) )
                     {
@@ -1419,10 +1419,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) )
                     {
-                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) ) )
-                    // InternalEvaluacion.g:558:4: () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( (lv_formacion_9_0= 'formacion' ) ) otherlv_10= ':' ( (lv_formacionVal_11_0= RULE_INT ) ) ( (lv_experiencia_12_0= 'experiencia' ) ) otherlv_13= ':' ( (lv_experienciaVal_14_0= RULE_INT ) ) ( (lv_certificacion_15_0= 'certificacion' ) ) otherlv_16= ':' ( (lv_certificacionVal_17_0= RULE_INT ) )
+                    // InternalEvaluacion.g:557:3: ( () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) ) )
+                    // InternalEvaluacion.g:558:4: () ( (lv_tipo_7_0= ruleTipoEquipo ) ) ( (lv_name_8_0= RULE_ID ) ) ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) )
                     {
                     // InternalEvaluacion.g:558:4: ()
                     // InternalEvaluacion.g:559:5: 
@@ -1492,159 +1492,341 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalEvaluacion.g:602:4: ( (lv_formacion_9_0= 'formacion' ) )
-                    // InternalEvaluacion.g:603:5: (lv_formacion_9_0= 'formacion' )
+                    // InternalEvaluacion.g:602:4: ( ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) ) )
+                    // InternalEvaluacion.g:603:5: ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) )
                     {
-                    // InternalEvaluacion.g:603:5: (lv_formacion_9_0= 'formacion' )
-                    // InternalEvaluacion.g:604:6: lv_formacion_9_0= 'formacion'
+                    // InternalEvaluacion.g:603:5: ( ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?) )
+                    // InternalEvaluacion.g:604:6: ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?)
                     {
-                    lv_formacion_9_0=(Token)match(input,21,FOLLOW_17); 
-
-                    						newLeafNode(lv_formacion_9_0, grammarAccess.getEvaluacionAccess().getFormacionFormacionKeyword_1_3_0());
+                     
+                    					  getUnorderedGroupHelper().enter(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3());
                     					
+                    // InternalEvaluacion.g:607:6: ( ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?)
+                    // InternalEvaluacion.g:608:7: ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+ {...}?
+                    {
+                    // InternalEvaluacion.g:608:7: ( ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) ) | ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) ) )+
+                    int cnt12=0;
+                    loop12:
+                    do {
+                        int alt12=4;
+                        int LA12_0 = input.LA(1);
 
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getEvaluacionRule());
-                    						}
-                    						setWithLastConsumed(current, "formacion", lv_formacion_9_0, "formacion");
-                    					
+                        if ( LA12_0 == 21 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 0) ) {
+                            alt12=1;
+                        }
+                        else if ( LA12_0 == 22 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 1) ) {
+                            alt12=2;
+                        }
+                        else if ( LA12_0 == 23 && getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 2) ) {
+                            alt12=3;
+                        }
+
+
+                        switch (alt12) {
+                    	case 1 :
+                    	    // InternalEvaluacion.g:609:5: ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) )
+                    	    {
+                    	    // InternalEvaluacion.g:609:5: ({...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) ) )
+                    	    // InternalEvaluacion.g:610:6: {...}? => ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) )
+                    	    {
+                    	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 0) ) {
+                    	        throw new FailedPredicateException(input, "ruleEvaluacion", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 0)");
+                    	    }
+                    	    // InternalEvaluacion.g:610:110: ( ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) ) )
+                    	    // InternalEvaluacion.g:611:7: ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) )
+                    	    {
+
+                    	    							getUnorderedGroupHelper().select(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 0);
+                    	    						
+                    	    // InternalEvaluacion.g:614:10: ({...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) ) )
+                    	    // InternalEvaluacion.g:614:11: {...}? => ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) )
+                    	    {
+                    	    if ( !((true)) ) {
+                    	        throw new FailedPredicateException(input, "ruleEvaluacion", "true");
+                    	    }
+                    	    // InternalEvaluacion.g:614:20: ( ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) ) )
+                    	    // InternalEvaluacion.g:614:21: ( (lv_formacion_10_0= 'formacion' ) ) otherlv_11= ':' ( (lv_formacionVal_12_0= RULE_INT ) )
+                    	    {
+                    	    // InternalEvaluacion.g:614:21: ( (lv_formacion_10_0= 'formacion' ) )
+                    	    // InternalEvaluacion.g:615:11: (lv_formacion_10_0= 'formacion' )
+                    	    {
+                    	    // InternalEvaluacion.g:615:11: (lv_formacion_10_0= 'formacion' )
+                    	    // InternalEvaluacion.g:616:12: lv_formacion_10_0= 'formacion'
+                    	    {
+                    	    lv_formacion_10_0=(Token)match(input,21,FOLLOW_17); 
+
+                    	    												newLeafNode(lv_formacion_10_0, grammarAccess.getEvaluacionAccess().getFormacionFormacionKeyword_1_3_0_0_0());
+                    	    											
+
+                    	    												if (current==null) {
+                    	    													current = createModelElement(grammarAccess.getEvaluacionRule());
+                    	    												}
+                    	    												setWithLastConsumed(current, "formacion", lv_formacion_10_0, "formacion");
+                    	    											
+
+                    	    }
+
+
+                    	    }
+
+                    	    otherlv_11=(Token)match(input,18,FOLLOW_20); 
+
+                    	    										newLeafNode(otherlv_11, grammarAccess.getEvaluacionAccess().getColonKeyword_1_3_0_1());
+                    	    									
+                    	    // InternalEvaluacion.g:632:10: ( (lv_formacionVal_12_0= RULE_INT ) )
+                    	    // InternalEvaluacion.g:633:11: (lv_formacionVal_12_0= RULE_INT )
+                    	    {
+                    	    // InternalEvaluacion.g:633:11: (lv_formacionVal_12_0= RULE_INT )
+                    	    // InternalEvaluacion.g:634:12: lv_formacionVal_12_0= RULE_INT
+                    	    {
+                    	    lv_formacionVal_12_0=(Token)match(input,RULE_INT,FOLLOW_21); 
+
+                    	    												newLeafNode(lv_formacionVal_12_0, grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_3_0_2_0());
+                    	    											
+
+                    	    												if (current==null) {
+                    	    													current = createModelElement(grammarAccess.getEvaluacionRule());
+                    	    												}
+                    	    												setWithLastConsumed(
+                    	    													current,
+                    	    													"formacionVal",
+                    	    													lv_formacionVal_12_0,
+                    	    													"org.eclipse.xtext.common.Terminals.INT");
+                    	    											
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+
+                    	     
+                    	    							getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3());
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+                    	case 2 :
+                    	    // InternalEvaluacion.g:656:5: ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) )
+                    	    {
+                    	    // InternalEvaluacion.g:656:5: ({...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) ) )
+                    	    // InternalEvaluacion.g:657:6: {...}? => ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) )
+                    	    {
+                    	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 1) ) {
+                    	        throw new FailedPredicateException(input, "ruleEvaluacion", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 1)");
+                    	    }
+                    	    // InternalEvaluacion.g:657:110: ( ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) ) )
+                    	    // InternalEvaluacion.g:658:7: ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) )
+                    	    {
+
+                    	    							getUnorderedGroupHelper().select(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 1);
+                    	    						
+                    	    // InternalEvaluacion.g:661:10: ({...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) ) )
+                    	    // InternalEvaluacion.g:661:11: {...}? => ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) )
+                    	    {
+                    	    if ( !((true)) ) {
+                    	        throw new FailedPredicateException(input, "ruleEvaluacion", "true");
+                    	    }
+                    	    // InternalEvaluacion.g:661:20: ( ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) ) )
+                    	    // InternalEvaluacion.g:661:21: ( (lv_experiencia_13_0= 'experiencia' ) ) otherlv_14= ':' ( (lv_experienciaVal_15_0= RULE_INT ) )
+                    	    {
+                    	    // InternalEvaluacion.g:661:21: ( (lv_experiencia_13_0= 'experiencia' ) )
+                    	    // InternalEvaluacion.g:662:11: (lv_experiencia_13_0= 'experiencia' )
+                    	    {
+                    	    // InternalEvaluacion.g:662:11: (lv_experiencia_13_0= 'experiencia' )
+                    	    // InternalEvaluacion.g:663:12: lv_experiencia_13_0= 'experiencia'
+                    	    {
+                    	    lv_experiencia_13_0=(Token)match(input,22,FOLLOW_17); 
+
+                    	    												newLeafNode(lv_experiencia_13_0, grammarAccess.getEvaluacionAccess().getExperienciaExperienciaKeyword_1_3_1_0_0());
+                    	    											
+
+                    	    												if (current==null) {
+                    	    													current = createModelElement(grammarAccess.getEvaluacionRule());
+                    	    												}
+                    	    												setWithLastConsumed(current, "experiencia", lv_experiencia_13_0, "experiencia");
+                    	    											
+
+                    	    }
+
+
+                    	    }
+
+                    	    otherlv_14=(Token)match(input,18,FOLLOW_20); 
+
+                    	    										newLeafNode(otherlv_14, grammarAccess.getEvaluacionAccess().getColonKeyword_1_3_1_1());
+                    	    									
+                    	    // InternalEvaluacion.g:679:10: ( (lv_experienciaVal_15_0= RULE_INT ) )
+                    	    // InternalEvaluacion.g:680:11: (lv_experienciaVal_15_0= RULE_INT )
+                    	    {
+                    	    // InternalEvaluacion.g:680:11: (lv_experienciaVal_15_0= RULE_INT )
+                    	    // InternalEvaluacion.g:681:12: lv_experienciaVal_15_0= RULE_INT
+                    	    {
+                    	    lv_experienciaVal_15_0=(Token)match(input,RULE_INT,FOLLOW_21); 
+
+                    	    												newLeafNode(lv_experienciaVal_15_0, grammarAccess.getEvaluacionAccess().getExperienciaValINTTerminalRuleCall_1_3_1_2_0());
+                    	    											
+
+                    	    												if (current==null) {
+                    	    													current = createModelElement(grammarAccess.getEvaluacionRule());
+                    	    												}
+                    	    												setWithLastConsumed(
+                    	    													current,
+                    	    													"experienciaVal",
+                    	    													lv_experienciaVal_15_0,
+                    	    													"org.eclipse.xtext.common.Terminals.INT");
+                    	    											
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+
+                    	     
+                    	    							getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3());
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+                    	case 3 :
+                    	    // InternalEvaluacion.g:703:5: ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) )
+                    	    {
+                    	    // InternalEvaluacion.g:703:5: ({...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) ) )
+                    	    // InternalEvaluacion.g:704:6: {...}? => ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) )
+                    	    {
+                    	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 2) ) {
+                    	        throw new FailedPredicateException(input, "ruleEvaluacion", "getUnorderedGroupHelper().canSelect(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 2)");
+                    	    }
+                    	    // InternalEvaluacion.g:704:110: ( ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) ) )
+                    	    // InternalEvaluacion.g:705:7: ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) )
+                    	    {
+
+                    	    							getUnorderedGroupHelper().select(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), 2);
+                    	    						
+                    	    // InternalEvaluacion.g:708:10: ({...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) ) )
+                    	    // InternalEvaluacion.g:708:11: {...}? => ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) )
+                    	    {
+                    	    if ( !((true)) ) {
+                    	        throw new FailedPredicateException(input, "ruleEvaluacion", "true");
+                    	    }
+                    	    // InternalEvaluacion.g:708:20: ( ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) ) )
+                    	    // InternalEvaluacion.g:708:21: ( (lv_certificacion_16_0= 'certificacion' ) ) otherlv_17= ':' ( (lv_certificacionVal_18_0= RULE_INT ) )
+                    	    {
+                    	    // InternalEvaluacion.g:708:21: ( (lv_certificacion_16_0= 'certificacion' ) )
+                    	    // InternalEvaluacion.g:709:11: (lv_certificacion_16_0= 'certificacion' )
+                    	    {
+                    	    // InternalEvaluacion.g:709:11: (lv_certificacion_16_0= 'certificacion' )
+                    	    // InternalEvaluacion.g:710:12: lv_certificacion_16_0= 'certificacion'
+                    	    {
+                    	    lv_certificacion_16_0=(Token)match(input,23,FOLLOW_17); 
+
+                    	    												newLeafNode(lv_certificacion_16_0, grammarAccess.getEvaluacionAccess().getCertificacionCertificacionKeyword_1_3_2_0_0());
+                    	    											
+
+                    	    												if (current==null) {
+                    	    													current = createModelElement(grammarAccess.getEvaluacionRule());
+                    	    												}
+                    	    												setWithLastConsumed(current, "certificacion", lv_certificacion_16_0, "certificacion");
+                    	    											
+
+                    	    }
+
+
+                    	    }
+
+                    	    otherlv_17=(Token)match(input,18,FOLLOW_20); 
+
+                    	    										newLeafNode(otherlv_17, grammarAccess.getEvaluacionAccess().getColonKeyword_1_3_2_1());
+                    	    									
+                    	    // InternalEvaluacion.g:726:10: ( (lv_certificacionVal_18_0= RULE_INT ) )
+                    	    // InternalEvaluacion.g:727:11: (lv_certificacionVal_18_0= RULE_INT )
+                    	    {
+                    	    // InternalEvaluacion.g:727:11: (lv_certificacionVal_18_0= RULE_INT )
+                    	    // InternalEvaluacion.g:728:12: lv_certificacionVal_18_0= RULE_INT
+                    	    {
+                    	    lv_certificacionVal_18_0=(Token)match(input,RULE_INT,FOLLOW_21); 
+
+                    	    												newLeafNode(lv_certificacionVal_18_0, grammarAccess.getEvaluacionAccess().getCertificacionValINTTerminalRuleCall_1_3_2_2_0());
+                    	    											
+
+                    	    												if (current==null) {
+                    	    													current = createModelElement(grammarAccess.getEvaluacionRule());
+                    	    												}
+                    	    												setWithLastConsumed(
+                    	    													current,
+                    	    													"certificacionVal",
+                    	    													lv_certificacionVal_18_0,
+                    	    													"org.eclipse.xtext.common.Terminals.INT");
+                    	    											
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+
+                    	     
+                    	    							getUnorderedGroupHelper().returnFromSelection(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3());
+                    	    						
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt12 >= 1 ) break loop12;
+                                EarlyExitException eee =
+                                    new EarlyExitException(12, input);
+                                throw eee;
+                        }
+                        cnt12++;
+                    } while (true);
+
+                    if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3()) ) {
+                        throw new FailedPredicateException(input, "ruleEvaluacion", "getUnorderedGroupHelper().canLeave(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3())");
+                    }
 
                     }
 
 
                     }
 
-                    otherlv_10=(Token)match(input,18,FOLLOW_20); 
-
-                    				newLeafNode(otherlv_10, grammarAccess.getEvaluacionAccess().getColonKeyword_1_4());
-                    			
-                    // InternalEvaluacion.g:620:4: ( (lv_formacionVal_11_0= RULE_INT ) )
-                    // InternalEvaluacion.g:621:5: (lv_formacionVal_11_0= RULE_INT )
-                    {
-                    // InternalEvaluacion.g:621:5: (lv_formacionVal_11_0= RULE_INT )
-                    // InternalEvaluacion.g:622:6: lv_formacionVal_11_0= RULE_INT
-                    {
-                    lv_formacionVal_11_0=(Token)match(input,RULE_INT,FOLLOW_21); 
-
-                    						newLeafNode(lv_formacionVal_11_0, grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_5_0());
+                     
+                    					  getUnorderedGroupHelper().leave(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3());
                     					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getEvaluacionRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"formacionVal",
-                    							lv_formacionVal_11_0,
-                    							"org.eclipse.xtext.common.Terminals.INT");
-                    					
-
-                    }
-
-
-                    }
-
-                    // InternalEvaluacion.g:638:4: ( (lv_experiencia_12_0= 'experiencia' ) )
-                    // InternalEvaluacion.g:639:5: (lv_experiencia_12_0= 'experiencia' )
-                    {
-                    // InternalEvaluacion.g:639:5: (lv_experiencia_12_0= 'experiencia' )
-                    // InternalEvaluacion.g:640:6: lv_experiencia_12_0= 'experiencia'
-                    {
-                    lv_experiencia_12_0=(Token)match(input,22,FOLLOW_17); 
-
-                    						newLeafNode(lv_experiencia_12_0, grammarAccess.getEvaluacionAccess().getExperienciaExperienciaKeyword_1_6_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getEvaluacionRule());
-                    						}
-                    						setWithLastConsumed(current, "experiencia", lv_experiencia_12_0, "experiencia");
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_13=(Token)match(input,18,FOLLOW_20); 
-
-                    				newLeafNode(otherlv_13, grammarAccess.getEvaluacionAccess().getColonKeyword_1_7());
-                    			
-                    // InternalEvaluacion.g:656:4: ( (lv_experienciaVal_14_0= RULE_INT ) )
-                    // InternalEvaluacion.g:657:5: (lv_experienciaVal_14_0= RULE_INT )
-                    {
-                    // InternalEvaluacion.g:657:5: (lv_experienciaVal_14_0= RULE_INT )
-                    // InternalEvaluacion.g:658:6: lv_experienciaVal_14_0= RULE_INT
-                    {
-                    lv_experienciaVal_14_0=(Token)match(input,RULE_INT,FOLLOW_22); 
-
-                    						newLeafNode(lv_experienciaVal_14_0, grammarAccess.getEvaluacionAccess().getExperienciaValINTTerminalRuleCall_1_8_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getEvaluacionRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"experienciaVal",
-                    							lv_experienciaVal_14_0,
-                    							"org.eclipse.xtext.common.Terminals.INT");
-                    					
-
-                    }
-
-
-                    }
-
-                    // InternalEvaluacion.g:674:4: ( (lv_certificacion_15_0= 'certificacion' ) )
-                    // InternalEvaluacion.g:675:5: (lv_certificacion_15_0= 'certificacion' )
-                    {
-                    // InternalEvaluacion.g:675:5: (lv_certificacion_15_0= 'certificacion' )
-                    // InternalEvaluacion.g:676:6: lv_certificacion_15_0= 'certificacion'
-                    {
-                    lv_certificacion_15_0=(Token)match(input,23,FOLLOW_17); 
-
-                    						newLeafNode(lv_certificacion_15_0, grammarAccess.getEvaluacionAccess().getCertificacionCertificacionKeyword_1_9_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getEvaluacionRule());
-                    						}
-                    						setWithLastConsumed(current, "certificacion", lv_certificacion_15_0, "certificacion");
-                    					
-
-                    }
-
-
-                    }
-
-                    otherlv_16=(Token)match(input,18,FOLLOW_20); 
-
-                    				newLeafNode(otherlv_16, grammarAccess.getEvaluacionAccess().getColonKeyword_1_10());
-                    			
-                    // InternalEvaluacion.g:692:4: ( (lv_certificacionVal_17_0= RULE_INT ) )
-                    // InternalEvaluacion.g:693:5: (lv_certificacionVal_17_0= RULE_INT )
-                    {
-                    // InternalEvaluacion.g:693:5: (lv_certificacionVal_17_0= RULE_INT )
-                    // InternalEvaluacion.g:694:6: lv_certificacionVal_17_0= RULE_INT
-                    {
-                    lv_certificacionVal_17_0=(Token)match(input,RULE_INT,FOLLOW_2); 
-
-                    						newLeafNode(lv_certificacionVal_17_0, grammarAccess.getEvaluacionAccess().getCertificacionValINTTerminalRuleCall_1_11_0());
-                    					
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getEvaluacionRule());
-                    						}
-                    						setWithLastConsumed(
-                    							current,
-                    							"certificacionVal",
-                    							lv_certificacionVal_17_0,
-                    							"org.eclipse.xtext.common.Terminals.INT");
-                    					
-
-                    }
-
 
                     }
 
@@ -1655,13 +1837,13 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:712:3: ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:760:3: ( () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) ) )
                     {
-                    // InternalEvaluacion.g:712:3: ( () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) ) )
-                    // InternalEvaluacion.g:713:4: () ( (lv_tipo_19_0= 'Otros' ) ) ( (lv_name_20_0= RULE_ID ) ) otherlv_21= 'calificacion' otherlv_22= ':' ( (lv_valor_23_0= RULE_INT ) )
+                    // InternalEvaluacion.g:760:3: ( () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) ) )
+                    // InternalEvaluacion.g:761:4: () ( (lv_tipo_20_0= 'Otros' ) ) ( (lv_name_21_0= RULE_ID ) ) otherlv_22= 'calificacion' otherlv_23= ':' ( (lv_valor_24_0= RULE_INT ) )
                     {
-                    // InternalEvaluacion.g:713:4: ()
-                    // InternalEvaluacion.g:714:5: 
+                    // InternalEvaluacion.g:761:4: ()
+                    // InternalEvaluacion.g:762:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -1671,21 +1853,21 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalEvaluacion.g:720:4: ( (lv_tipo_19_0= 'Otros' ) )
-                    // InternalEvaluacion.g:721:5: (lv_tipo_19_0= 'Otros' )
+                    // InternalEvaluacion.g:768:4: ( (lv_tipo_20_0= 'Otros' ) )
+                    // InternalEvaluacion.g:769:5: (lv_tipo_20_0= 'Otros' )
                     {
-                    // InternalEvaluacion.g:721:5: (lv_tipo_19_0= 'Otros' )
-                    // InternalEvaluacion.g:722:6: lv_tipo_19_0= 'Otros'
+                    // InternalEvaluacion.g:769:5: (lv_tipo_20_0= 'Otros' )
+                    // InternalEvaluacion.g:770:6: lv_tipo_20_0= 'Otros'
                     {
-                    lv_tipo_19_0=(Token)match(input,24,FOLLOW_3); 
+                    lv_tipo_20_0=(Token)match(input,24,FOLLOW_3); 
 
-                    						newLeafNode(lv_tipo_19_0, grammarAccess.getEvaluacionAccess().getTipoOtrosKeyword_2_1_0());
+                    						newLeafNode(lv_tipo_20_0, grammarAccess.getEvaluacionAccess().getTipoOtrosKeyword_2_1_0());
                     					
 
                     						if (current==null) {
                     							current = createModelElement(grammarAccess.getEvaluacionRule());
                     						}
-                    						setWithLastConsumed(current, "tipo", lv_tipo_19_0, "Otros");
+                    						setWithLastConsumed(current, "tipo", lv_tipo_20_0, "Otros");
                     					
 
                     }
@@ -1693,15 +1875,15 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalEvaluacion.g:734:4: ( (lv_name_20_0= RULE_ID ) )
-                    // InternalEvaluacion.g:735:5: (lv_name_20_0= RULE_ID )
+                    // InternalEvaluacion.g:782:4: ( (lv_name_21_0= RULE_ID ) )
+                    // InternalEvaluacion.g:783:5: (lv_name_21_0= RULE_ID )
                     {
-                    // InternalEvaluacion.g:735:5: (lv_name_20_0= RULE_ID )
-                    // InternalEvaluacion.g:736:6: lv_name_20_0= RULE_ID
+                    // InternalEvaluacion.g:783:5: (lv_name_21_0= RULE_ID )
+                    // InternalEvaluacion.g:784:6: lv_name_21_0= RULE_ID
                     {
-                    lv_name_20_0=(Token)match(input,RULE_ID,FOLLOW_16); 
+                    lv_name_21_0=(Token)match(input,RULE_ID,FOLLOW_16); 
 
-                    						newLeafNode(lv_name_20_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_2_2_0());
+                    						newLeafNode(lv_name_21_0, grammarAccess.getEvaluacionAccess().getNameIDTerminalRuleCall_2_2_0());
                     					
 
                     						if (current==null) {
@@ -1710,7 +1892,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     						setWithLastConsumed(
                     							current,
                     							"name",
-                    							lv_name_20_0,
+                    							lv_name_21_0,
                     							"org.eclipse.xtext.common.Terminals.ID");
                     					
 
@@ -1719,23 +1901,23 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,20,FOLLOW_17); 
+                    otherlv_22=(Token)match(input,20,FOLLOW_17); 
 
-                    				newLeafNode(otherlv_21, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_2_3());
+                    				newLeafNode(otherlv_22, grammarAccess.getEvaluacionAccess().getCalificacionKeyword_2_3());
                     			
-                    otherlv_22=(Token)match(input,18,FOLLOW_20); 
+                    otherlv_23=(Token)match(input,18,FOLLOW_20); 
 
-                    				newLeafNode(otherlv_22, grammarAccess.getEvaluacionAccess().getColonKeyword_2_4());
+                    				newLeafNode(otherlv_23, grammarAccess.getEvaluacionAccess().getColonKeyword_2_4());
                     			
-                    // InternalEvaluacion.g:760:4: ( (lv_valor_23_0= RULE_INT ) )
-                    // InternalEvaluacion.g:761:5: (lv_valor_23_0= RULE_INT )
+                    // InternalEvaluacion.g:808:4: ( (lv_valor_24_0= RULE_INT ) )
+                    // InternalEvaluacion.g:809:5: (lv_valor_24_0= RULE_INT )
                     {
-                    // InternalEvaluacion.g:761:5: (lv_valor_23_0= RULE_INT )
-                    // InternalEvaluacion.g:762:6: lv_valor_23_0= RULE_INT
+                    // InternalEvaluacion.g:809:5: (lv_valor_24_0= RULE_INT )
+                    // InternalEvaluacion.g:810:6: lv_valor_24_0= RULE_INT
                     {
-                    lv_valor_23_0=(Token)match(input,RULE_INT,FOLLOW_2); 
+                    lv_valor_24_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-                    						newLeafNode(lv_valor_23_0, grammarAccess.getEvaluacionAccess().getValorINTTerminalRuleCall_2_5_0());
+                    						newLeafNode(lv_valor_24_0, grammarAccess.getEvaluacionAccess().getValorINTTerminalRuleCall_2_5_0());
                     					
 
                     						if (current==null) {
@@ -1744,7 +1926,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     						setWithLastConsumed(
                     							current,
                     							"valor",
-                    							lv_valor_23_0,
+                    							lv_valor_24_0,
                     							"org.eclipse.xtext.common.Terminals.INT");
                     					
 
@@ -1782,7 +1964,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipoEquipo"
-    // InternalEvaluacion.g:783:1: ruleTipoEquipo returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) ;
+    // InternalEvaluacion.g:831:1: ruleTipoEquipo returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) ;
     public final Enumerator ruleTipoEquipo() throws RecognitionException {
         Enumerator current = null;
 
@@ -1794,40 +1976,40 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:789:2: ( ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) )
-            // InternalEvaluacion.g:790:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
+            // InternalEvaluacion.g:837:2: ( ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) ) )
+            // InternalEvaluacion.g:838:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
             {
-            // InternalEvaluacion.g:790:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
-            int alt13=3;
+            // InternalEvaluacion.g:838:2: ( (enumLiteral_0= 'EvaluarArquitecto' ) | (enumLiteral_1= 'EvaluarDirector' ) | (enumLiteral_2= 'EvaluarEducacion' ) )
+            int alt14=3;
             switch ( input.LA(1) ) {
             case 25:
                 {
-                alt13=1;
+                alt14=1;
                 }
                 break;
             case 26:
                 {
-                alt13=2;
+                alt14=2;
                 }
                 break;
             case 27:
                 {
-                alt13=3;
+                alt14=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 14, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt14) {
                 case 1 :
-                    // InternalEvaluacion.g:791:3: (enumLiteral_0= 'EvaluarArquitecto' )
+                    // InternalEvaluacion.g:839:3: (enumLiteral_0= 'EvaluarArquitecto' )
                     {
-                    // InternalEvaluacion.g:791:3: (enumLiteral_0= 'EvaluarArquitecto' )
-                    // InternalEvaluacion.g:792:4: enumLiteral_0= 'EvaluarArquitecto'
+                    // InternalEvaluacion.g:839:3: (enumLiteral_0= 'EvaluarArquitecto' )
+                    // InternalEvaluacion.g:840:4: enumLiteral_0= 'EvaluarArquitecto'
                     {
                     enumLiteral_0=(Token)match(input,25,FOLLOW_2); 
 
@@ -1841,10 +2023,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:799:3: (enumLiteral_1= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:847:3: (enumLiteral_1= 'EvaluarDirector' )
                     {
-                    // InternalEvaluacion.g:799:3: (enumLiteral_1= 'EvaluarDirector' )
-                    // InternalEvaluacion.g:800:4: enumLiteral_1= 'EvaluarDirector'
+                    // InternalEvaluacion.g:847:3: (enumLiteral_1= 'EvaluarDirector' )
+                    // InternalEvaluacion.g:848:4: enumLiteral_1= 'EvaluarDirector'
                     {
                     enumLiteral_1=(Token)match(input,26,FOLLOW_2); 
 
@@ -1858,10 +2040,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:807:3: (enumLiteral_2= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:855:3: (enumLiteral_2= 'EvaluarEducacion' )
                     {
-                    // InternalEvaluacion.g:807:3: (enumLiteral_2= 'EvaluarEducacion' )
-                    // InternalEvaluacion.g:808:4: enumLiteral_2= 'EvaluarEducacion'
+                    // InternalEvaluacion.g:855:3: (enumLiteral_2= 'EvaluarEducacion' )
+                    // InternalEvaluacion.g:856:4: enumLiteral_2= 'EvaluarEducacion'
                     {
                     enumLiteral_2=(Token)match(input,27,FOLLOW_2); 
 
@@ -1897,7 +2079,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTipoPropuesta"
-    // InternalEvaluacion.g:818:1: ruleTipoPropuesta returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) ;
+    // InternalEvaluacion.g:866:1: ruleTipoPropuesta returns [Enumerator current=null] : ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) ;
     public final Enumerator ruleTipoPropuesta() throws RecognitionException {
         Enumerator current = null;
 
@@ -1909,40 +2091,40 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:824:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) )
-            // InternalEvaluacion.g:825:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
+            // InternalEvaluacion.g:872:2: ( ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) ) )
+            // InternalEvaluacion.g:873:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
             {
-            // InternalEvaluacion.g:825:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
-            int alt14=3;
+            // InternalEvaluacion.g:873:2: ( (enumLiteral_0= 'EvaluarProblema' ) | (enumLiteral_1= 'EvaluarTecnica' ) | (enumLiteral_2= 'EvaluarOtros' ) )
+            int alt15=3;
             switch ( input.LA(1) ) {
             case 28:
                 {
-                alt14=1;
+                alt15=1;
                 }
                 break;
             case 29:
                 {
-                alt14=2;
+                alt15=2;
                 }
                 break;
             case 30:
                 {
-                alt14=3;
+                alt15=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // InternalEvaluacion.g:826:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:874:3: (enumLiteral_0= 'EvaluarProblema' )
                     {
-                    // InternalEvaluacion.g:826:3: (enumLiteral_0= 'EvaluarProblema' )
-                    // InternalEvaluacion.g:827:4: enumLiteral_0= 'EvaluarProblema'
+                    // InternalEvaluacion.g:874:3: (enumLiteral_0= 'EvaluarProblema' )
+                    // InternalEvaluacion.g:875:4: enumLiteral_0= 'EvaluarProblema'
                     {
                     enumLiteral_0=(Token)match(input,28,FOLLOW_2); 
 
@@ -1956,10 +2138,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:834:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:882:3: (enumLiteral_1= 'EvaluarTecnica' )
                     {
-                    // InternalEvaluacion.g:834:3: (enumLiteral_1= 'EvaluarTecnica' )
-                    // InternalEvaluacion.g:835:4: enumLiteral_1= 'EvaluarTecnica'
+                    // InternalEvaluacion.g:882:3: (enumLiteral_1= 'EvaluarTecnica' )
+                    // InternalEvaluacion.g:883:4: enumLiteral_1= 'EvaluarTecnica'
                     {
                     enumLiteral_1=(Token)match(input,29,FOLLOW_2); 
 
@@ -1973,10 +2155,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:842:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:890:3: (enumLiteral_2= 'EvaluarOtros' )
                     {
-                    // InternalEvaluacion.g:842:3: (enumLiteral_2= 'EvaluarOtros' )
-                    // InternalEvaluacion.g:843:4: enumLiteral_2= 'EvaluarOtros'
+                    // InternalEvaluacion.g:890:3: (enumLiteral_2= 'EvaluarOtros' )
+                    // InternalEvaluacion.g:891:4: enumLiteral_2= 'EvaluarOtros'
                     {
                     enumLiteral_2=(Token)match(input,30,FOLLOW_2); 
 
@@ -2012,7 +2194,7 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleE_Calificacion"
-    // InternalEvaluacion.g:853:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
+    // InternalEvaluacion.g:901:1: ruleE_Calificacion returns [Enumerator current=null] : ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) ;
     public final Enumerator ruleE_Calificacion() throws RecognitionException {
         Enumerator current = null;
 
@@ -2024,40 +2206,40 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalEvaluacion.g:859:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
-            // InternalEvaluacion.g:860:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
+            // InternalEvaluacion.g:907:2: ( ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) ) )
+            // InternalEvaluacion.g:908:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
             {
-            // InternalEvaluacion.g:860:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
-            int alt15=3;
+            // InternalEvaluacion.g:908:2: ( (enumLiteral_0= 'A' ) | (enumLiteral_1= 'M' ) | (enumLiteral_2= 'B' ) )
+            int alt16=3;
             switch ( input.LA(1) ) {
             case 31:
                 {
-                alt15=1;
+                alt16=1;
                 }
                 break;
             case 32:
                 {
-                alt15=2;
+                alt16=2;
                 }
                 break;
             case 33:
                 {
-                alt15=3;
+                alt16=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // InternalEvaluacion.g:861:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:909:3: (enumLiteral_0= 'A' )
                     {
-                    // InternalEvaluacion.g:861:3: (enumLiteral_0= 'A' )
-                    // InternalEvaluacion.g:862:4: enumLiteral_0= 'A'
+                    // InternalEvaluacion.g:909:3: (enumLiteral_0= 'A' )
+                    // InternalEvaluacion.g:910:4: enumLiteral_0= 'A'
                     {
                     enumLiteral_0=(Token)match(input,31,FOLLOW_2); 
 
@@ -2071,10 +2253,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalEvaluacion.g:869:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:917:3: (enumLiteral_1= 'M' )
                     {
-                    // InternalEvaluacion.g:869:3: (enumLiteral_1= 'M' )
-                    // InternalEvaluacion.g:870:4: enumLiteral_1= 'M'
+                    // InternalEvaluacion.g:917:3: (enumLiteral_1= 'M' )
+                    // InternalEvaluacion.g:918:4: enumLiteral_1= 'M'
                     {
                     enumLiteral_1=(Token)match(input,32,FOLLOW_2); 
 
@@ -2088,10 +2270,10 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalEvaluacion.g:877:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:925:3: (enumLiteral_2= 'B' )
                     {
-                    // InternalEvaluacion.g:877:3: (enumLiteral_2= 'B' )
-                    // InternalEvaluacion.g:878:4: enumLiteral_2= 'B'
+                    // InternalEvaluacion.g:925:3: (enumLiteral_2= 'B' )
+                    // InternalEvaluacion.g:926:4: enumLiteral_2= 'B'
                     {
                     enumLiteral_2=(Token)match(input,33,FOLLOW_2); 
 
@@ -2148,9 +2330,8 @@ public class InternalEvaluacionParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000380000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000E00000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000000E00002L});
 
 }

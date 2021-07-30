@@ -101,4 +101,3 @@ class EvaluacionGenerator extends AbstractGenerator {
 	protected def dispatch typeValue(CalificarOtros c) '''
 		«c.tipo»'''
 	}
-

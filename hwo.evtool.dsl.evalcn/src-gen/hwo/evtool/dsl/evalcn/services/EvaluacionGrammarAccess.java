@@ -19,6 +19,7 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
+import org.eclipse.xtext.UnorderedGroup;
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 import org.eclipse.xtext.service.AbstractElementFinder;
 import org.eclipse.xtext.service.GrammarProvider;
@@ -333,21 +334,25 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cTipoTipoEquipoEnumRuleCall_1_1_0 = (RuleCall)cTipoAssignment_1_1.eContents().get(0);
 		private final Assignment cNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_1_2_0 = (RuleCall)cNameAssignment_1_2.eContents().get(0);
-		private final Assignment cFormacionAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final Keyword cFormacionFormacionKeyword_1_3_0 = (Keyword)cFormacionAssignment_1_3.eContents().get(0);
-		private final Keyword cColonKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
-		private final Assignment cFormacionValAssignment_1_5 = (Assignment)cGroup_1.eContents().get(5);
-		private final RuleCall cFormacionValINTTerminalRuleCall_1_5_0 = (RuleCall)cFormacionValAssignment_1_5.eContents().get(0);
-		private final Assignment cExperienciaAssignment_1_6 = (Assignment)cGroup_1.eContents().get(6);
-		private final Keyword cExperienciaExperienciaKeyword_1_6_0 = (Keyword)cExperienciaAssignment_1_6.eContents().get(0);
-		private final Keyword cColonKeyword_1_7 = (Keyword)cGroup_1.eContents().get(7);
-		private final Assignment cExperienciaValAssignment_1_8 = (Assignment)cGroup_1.eContents().get(8);
-		private final RuleCall cExperienciaValINTTerminalRuleCall_1_8_0 = (RuleCall)cExperienciaValAssignment_1_8.eContents().get(0);
-		private final Assignment cCertificacionAssignment_1_9 = (Assignment)cGroup_1.eContents().get(9);
-		private final Keyword cCertificacionCertificacionKeyword_1_9_0 = (Keyword)cCertificacionAssignment_1_9.eContents().get(0);
-		private final Keyword cColonKeyword_1_10 = (Keyword)cGroup_1.eContents().get(10);
-		private final Assignment cCertificacionValAssignment_1_11 = (Assignment)cGroup_1.eContents().get(11);
-		private final RuleCall cCertificacionValINTTerminalRuleCall_1_11_0 = (RuleCall)cCertificacionValAssignment_1_11.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_3 = (UnorderedGroup)cGroup_1.eContents().get(3);
+		private final Group cGroup_1_3_0 = (Group)cUnorderedGroup_1_3.eContents().get(0);
+		private final Assignment cFormacionAssignment_1_3_0_0 = (Assignment)cGroup_1_3_0.eContents().get(0);
+		private final Keyword cFormacionFormacionKeyword_1_3_0_0_0 = (Keyword)cFormacionAssignment_1_3_0_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_3_0_1 = (Keyword)cGroup_1_3_0.eContents().get(1);
+		private final Assignment cFormacionValAssignment_1_3_0_2 = (Assignment)cGroup_1_3_0.eContents().get(2);
+		private final RuleCall cFormacionValINTTerminalRuleCall_1_3_0_2_0 = (RuleCall)cFormacionValAssignment_1_3_0_2.eContents().get(0);
+		private final Group cGroup_1_3_1 = (Group)cUnorderedGroup_1_3.eContents().get(1);
+		private final Assignment cExperienciaAssignment_1_3_1_0 = (Assignment)cGroup_1_3_1.eContents().get(0);
+		private final Keyword cExperienciaExperienciaKeyword_1_3_1_0_0 = (Keyword)cExperienciaAssignment_1_3_1_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_3_1_1 = (Keyword)cGroup_1_3_1.eContents().get(1);
+		private final Assignment cExperienciaValAssignment_1_3_1_2 = (Assignment)cGroup_1_3_1.eContents().get(2);
+		private final RuleCall cExperienciaValINTTerminalRuleCall_1_3_1_2_0 = (RuleCall)cExperienciaValAssignment_1_3_1_2.eContents().get(0);
+		private final Group cGroup_1_3_2 = (Group)cUnorderedGroup_1_3.eContents().get(2);
+		private final Assignment cCertificacionAssignment_1_3_2_0 = (Assignment)cGroup_1_3_2.eContents().get(0);
+		private final Keyword cCertificacionCertificacionKeyword_1_3_2_0_0 = (Keyword)cCertificacionAssignment_1_3_2_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_3_2_1 = (Keyword)cGroup_1_3_2.eContents().get(1);
+		private final Assignment cCertificacionValAssignment_1_3_2_2 = (Assignment)cGroup_1_3_2.eContents().get(2);
+		private final RuleCall cCertificacionValINTTerminalRuleCall_1_3_2_2_0 = (RuleCall)cCertificacionValAssignment_1_3_2_2.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Action cCalificarOtrosAction_2_0 = (Action)cGroup_2.eContents().get(0);
 		private final Assignment cTipoAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
@@ -362,20 +367,22 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//Evaluacion:
 		//    {CalificarPropuesta} tipo=TipoPropuesta name=ID
 		//        'calificacion' ':' puntuacion=E_Calificacion |
-		//    {CalificarEquipo} tipo=TipoEquipo name=ID
-		//        formacion='formacion' ':' formacionVal=INT
-		//        experiencia='experiencia' ':' experienciaVal=INT
-		//        certificacion='certificacion' ':' certificacionVal=INT |
+		//    {CalificarEquipo} tipo=TipoEquipo name=ID (
+		//        formacion='formacion' ':' formacionVal=INT &
+		//        experiencia='experiencia' ':' experienciaVal=INT &
+		//        certificacion='certificacion' ':' certificacionVal=INT
+		//        ) |
 		//    {CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{CalificarPropuesta} tipo=TipoPropuesta name=ID
 		//    'calificacion' ':' puntuacion=E_Calificacion |
-		//{CalificarEquipo} tipo=TipoEquipo name=ID
-		//    formacion='formacion' ':' formacionVal=INT
-		//    experiencia='experiencia' ':' experienciaVal=INT
-		//    certificacion='certificacion' ':' certificacionVal=INT |
+		//{CalificarEquipo} tipo=TipoEquipo name=ID (
+		//    formacion='formacion' ':' formacionVal=INT &
+		//    experiencia='experiencia' ':' experienciaVal=INT &
+		//    certificacion='certificacion' ':' certificacionVal=INT
+		//    ) |
 		//{CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
@@ -410,10 +417,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//E_Calificacion
 		public RuleCall getPuntuacionE_CalificacionEnumRuleCall_0_5_0() { return cPuntuacionE_CalificacionEnumRuleCall_0_5_0; }
 		
-		//{CalificarEquipo} tipo=TipoEquipo name=ID
-		//    formacion='formacion' ':' formacionVal=INT
-		//    experiencia='experiencia' ':' experienciaVal=INT
+		//{CalificarEquipo} tipo=TipoEquipo name=ID (
+		//    formacion='formacion' ':' formacionVal=INT &
+		//    experiencia='experiencia' ':' experienciaVal=INT &
 		//    certificacion='certificacion' ':' certificacionVal=INT
+		//    )
 		public Group getGroup_1() { return cGroup_1; }
 		
 		//{CalificarEquipo}
@@ -431,50 +439,66 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_2_0() { return cNameIDTerminalRuleCall_1_2_0; }
 		
+		//(
+		//       formacion='formacion' ':' formacionVal=INT &
+		//       experiencia='experiencia' ':' experienciaVal=INT &
+		//       certificacion='certificacion' ':' certificacionVal=INT
+		//       )
+		public UnorderedGroup getUnorderedGroup_1_3() { return cUnorderedGroup_1_3; }
+		
+		//formacion='formacion' ':' formacionVal=INT
+		public Group getGroup_1_3_0() { return cGroup_1_3_0; }
+		
 		//formacion='formacion'
-		public Assignment getFormacionAssignment_1_3() { return cFormacionAssignment_1_3; }
+		public Assignment getFormacionAssignment_1_3_0_0() { return cFormacionAssignment_1_3_0_0; }
 		
 		//'formacion'
-		public Keyword getFormacionFormacionKeyword_1_3_0() { return cFormacionFormacionKeyword_1_3_0; }
+		public Keyword getFormacionFormacionKeyword_1_3_0_0_0() { return cFormacionFormacionKeyword_1_3_0_0_0; }
 		
 		//':'
-		public Keyword getColonKeyword_1_4() { return cColonKeyword_1_4; }
+		public Keyword getColonKeyword_1_3_0_1() { return cColonKeyword_1_3_0_1; }
 		
 		//formacionVal=INT
-		public Assignment getFormacionValAssignment_1_5() { return cFormacionValAssignment_1_5; }
+		public Assignment getFormacionValAssignment_1_3_0_2() { return cFormacionValAssignment_1_3_0_2; }
 		
 		//INT
-		public RuleCall getFormacionValINTTerminalRuleCall_1_5_0() { return cFormacionValINTTerminalRuleCall_1_5_0; }
+		public RuleCall getFormacionValINTTerminalRuleCall_1_3_0_2_0() { return cFormacionValINTTerminalRuleCall_1_3_0_2_0; }
+		
+		//experiencia='experiencia' ':' experienciaVal=INT
+		public Group getGroup_1_3_1() { return cGroup_1_3_1; }
 		
 		//experiencia='experiencia'
-		public Assignment getExperienciaAssignment_1_6() { return cExperienciaAssignment_1_6; }
+		public Assignment getExperienciaAssignment_1_3_1_0() { return cExperienciaAssignment_1_3_1_0; }
 		
 		//'experiencia'
-		public Keyword getExperienciaExperienciaKeyword_1_6_0() { return cExperienciaExperienciaKeyword_1_6_0; }
+		public Keyword getExperienciaExperienciaKeyword_1_3_1_0_0() { return cExperienciaExperienciaKeyword_1_3_1_0_0; }
 		
 		//':'
-		public Keyword getColonKeyword_1_7() { return cColonKeyword_1_7; }
+		public Keyword getColonKeyword_1_3_1_1() { return cColonKeyword_1_3_1_1; }
 		
 		//experienciaVal=INT
-		public Assignment getExperienciaValAssignment_1_8() { return cExperienciaValAssignment_1_8; }
+		public Assignment getExperienciaValAssignment_1_3_1_2() { return cExperienciaValAssignment_1_3_1_2; }
 		
 		//INT
-		public RuleCall getExperienciaValINTTerminalRuleCall_1_8_0() { return cExperienciaValINTTerminalRuleCall_1_8_0; }
+		public RuleCall getExperienciaValINTTerminalRuleCall_1_3_1_2_0() { return cExperienciaValINTTerminalRuleCall_1_3_1_2_0; }
+		
+		//certificacion='certificacion' ':' certificacionVal=INT
+		public Group getGroup_1_3_2() { return cGroup_1_3_2; }
 		
 		//certificacion='certificacion'
-		public Assignment getCertificacionAssignment_1_9() { return cCertificacionAssignment_1_9; }
+		public Assignment getCertificacionAssignment_1_3_2_0() { return cCertificacionAssignment_1_3_2_0; }
 		
 		//'certificacion'
-		public Keyword getCertificacionCertificacionKeyword_1_9_0() { return cCertificacionCertificacionKeyword_1_9_0; }
+		public Keyword getCertificacionCertificacionKeyword_1_3_2_0_0() { return cCertificacionCertificacionKeyword_1_3_2_0_0; }
 		
 		//':'
-		public Keyword getColonKeyword_1_10() { return cColonKeyword_1_10; }
+		public Keyword getColonKeyword_1_3_2_1() { return cColonKeyword_1_3_2_1; }
 		
 		//certificacionVal=INT
-		public Assignment getCertificacionValAssignment_1_11() { return cCertificacionValAssignment_1_11; }
+		public Assignment getCertificacionValAssignment_1_3_2_2() { return cCertificacionValAssignment_1_3_2_2; }
 		
 		//INT
-		public RuleCall getCertificacionValINTTerminalRuleCall_1_11_0() { return cCertificacionValINTTerminalRuleCall_1_11_0; }
+		public RuleCall getCertificacionValINTTerminalRuleCall_1_3_2_2_0() { return cCertificacionValINTTerminalRuleCall_1_3_2_2_0; }
 		
 		//{CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT
 		public Group getGroup_2() { return cGroup_2; }
@@ -765,10 +789,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//Evaluacion:
 	//    {CalificarPropuesta} tipo=TipoPropuesta name=ID
 	//        'calificacion' ':' puntuacion=E_Calificacion |
-	//    {CalificarEquipo} tipo=TipoEquipo name=ID
-	//        formacion='formacion' ':' formacionVal=INT
-	//        experiencia='experiencia' ':' experienciaVal=INT
-	//        certificacion='certificacion' ':' certificacionVal=INT |
+	//    {CalificarEquipo} tipo=TipoEquipo name=ID (
+	//        formacion='formacion' ':' formacionVal=INT &
+	//        experiencia='experiencia' ':' experienciaVal=INT &
+	//        certificacion='certificacion' ':' certificacionVal=INT
+	//        ) |
 	//    {CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT
 	//;
 	public EvaluacionElements getEvaluacionAccess() {
