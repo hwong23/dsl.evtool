@@ -80,11 +80,12 @@ class EvaluacionGenerator extends AbstractGenerator {
 	'''
 	
 	protected def declareStrings (Evaluacion c) '''
-		String[] str_«c.name» = {"«c.name»","«stringValue(c)»","«c.eClass.name»"};
+		String[] str_«c.name» = {"«c.name»", «stringValue(c)» "«c.eClass.name»"};
 	'''
 	
 	protected def dispatch stringValue(CalificarPropuesta c) '''
-		«c.tipo»", "«c.puntuacion»'''
+		«FOR cr : c.criterios»
+			"«cr.criterio»/:«cr.puntuacion»",«ENDFOR»'''
 	
 	protected def dispatch stringValue(CalificarEquipo c) '''
 		«c.tipo»", "«c.formacionVal»", "«c.experienciaVal»", "«c.certificacionVal»'''

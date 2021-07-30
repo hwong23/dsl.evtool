@@ -8,6 +8,8 @@ import hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarOtros;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.Componente;
+import hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta;
+import hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evalcn.evaluacion.Evaluacion;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoPropuesta;
@@ -184,10 +186,10 @@ public class EvaluacionGenerator extends AbstractGenerator {
     _builder.append(" = {\"");
     String _name_1 = c.getName();
     _builder.append(_name_1);
-    _builder.append("\",\"");
+    _builder.append("\", ");
     CharSequence _stringValue = this.stringValue(c);
     _builder.append(_stringValue);
-    _builder.append("\",\"");
+    _builder.append(" \"");
     String _name_2 = c.eClass().getName();
     _builder.append(_name_2);
     _builder.append("\"};");
@@ -196,8 +198,20 @@ public class EvaluacionGenerator extends AbstractGenerator {
   }
   
   protected CharSequence _stringValue(final CalificarPropuesta c) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field puntuacion is undefined for the type CalificarPropuesta");
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      EList<CriterioPropuesta> _criterios = c.getCriterios();
+      for(final CriterioPropuesta cr : _criterios) {
+        _builder.append("\"");
+        String _criterio = cr.getCriterio();
+        _builder.append(_criterio);
+        _builder.append("/:");
+        E_Calificacion _puntuacion = cr.getPuntuacion();
+        _builder.append(_puntuacion);
+        _builder.append("\",");
+      }
+    }
+    return _builder;
   }
   
   protected CharSequence _stringValue(final CalificarEquipo c) {

@@ -1288,7 +1288,7 @@ rule__Evaluacion__Group_0__3__Impl
 :
 (
 	{ before(grammarAccess.getEvaluacionAccess().getCriteriosAssignment_0_3()); }
-	(rule__Evaluacion__CriteriosAssignment_0_3)
+	(rule__Evaluacion__CriteriosAssignment_0_3)*
 	{ after(grammarAccess.getEvaluacionAccess().getCriteriosAssignment_0_3()); }
 )
 ;
@@ -1828,9 +1828,9 @@ rule__CriterioPropuesta__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getCriterioPropuestaAccess().getCalificacionKeyword_0()); }
-	'calificacion'
-	{ after(grammarAccess.getCriterioPropuestaAccess().getCalificacionKeyword_0()); }
+	{ before(grammarAccess.getCriterioPropuestaAccess().getCriterioKeyword_0()); }
+	'criterio'
+	{ after(grammarAccess.getCriterioPropuestaAccess().getCriterioKeyword_0()); }
 )
 ;
 finally {
@@ -1870,6 +1870,7 @@ rule__CriterioPropuesta__Group__2
 	}
 :
 	rule__CriterioPropuesta__Group__2__Impl
+	rule__CriterioPropuesta__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1881,9 +1882,89 @@ rule__CriterioPropuesta__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getCriterioPropuestaAccess().getPuntuacionAssignment_2()); }
-	(rule__CriterioPropuesta__PuntuacionAssignment_2)
-	{ after(grammarAccess.getCriterioPropuestaAccess().getPuntuacionAssignment_2()); }
+	{ before(grammarAccess.getCriterioPropuestaAccess().getCriterioAssignment_2()); }
+	(rule__CriterioPropuesta__CriterioAssignment_2)
+	{ after(grammarAccess.getCriterioPropuestaAccess().getCriterioAssignment_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__Group__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__CriterioPropuesta__Group__3__Impl
+	rule__CriterioPropuesta__Group__4
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__Group__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCriterioPropuestaAccess().getCalificacionKeyword_3()); }
+	'calificacion'
+	{ after(grammarAccess.getCriterioPropuestaAccess().getCalificacionKeyword_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__Group__4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__CriterioPropuesta__Group__4__Impl
+	rule__CriterioPropuesta__Group__5
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__Group__4__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCriterioPropuestaAccess().getColonKeyword_4()); }
+	':'
+	{ after(grammarAccess.getCriterioPropuestaAccess().getColonKeyword_4()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__Group__5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__CriterioPropuesta__Group__5__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__Group__5__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getCriterioPropuestaAccess().getPuntuacionAssignment_5()); }
+	(rule__CriterioPropuesta__PuntuacionAssignment_5)
+	{ after(grammarAccess.getCriterioPropuestaAccess().getPuntuacionAssignment_5()); }
 )
 ;
 finally {
@@ -2453,15 +2534,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__CriterioPropuesta__PuntuacionAssignment_2
+rule__CriterioPropuesta__CriterioAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_2_0()); }
+		{ before(grammarAccess.getCriterioPropuestaAccess().getCriterioSTRINGTerminalRuleCall_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getCriterioPropuestaAccess().getCriterioSTRINGTerminalRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__CriterioPropuesta__PuntuacionAssignment_5
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_5_0()); }
 		ruleE_Calificacion
-		{ after(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_2_0()); }
+		{ after(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_5_0()); }
 	)
 ;
 finally {

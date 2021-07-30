@@ -456,9 +456,20 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCriterioPropuesta_Puntuacion()
+  public EAttribute getCriterioPropuesta_Criterio()
   {
     return (EAttribute)criterioPropuestaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCriterioPropuesta_Puntuacion()
+  {
+    return (EAttribute)criterioPropuestaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -709,6 +720,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     createEAttribute(evaluacionEClass, EVALUACION__NAME);
 
     criterioPropuestaEClass = createEClass(CRITERIO_PROPUESTA);
+    createEAttribute(criterioPropuestaEClass, CRITERIO_PROPUESTA__CRITERIO);
     createEAttribute(criterioPropuestaEClass, CRITERIO_PROPUESTA__PUNTUACION);
 
     calificarPropuestaEClass = createEClass(CALIFICAR_PROPUESTA);
@@ -798,6 +810,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEAttribute(getEvaluacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(criterioPropuestaEClass, CriterioPropuesta.class, "CriterioPropuesta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCriterioPropuesta_Criterio(), ecorePackage.getEString(), "criterio", null, 0, 1, CriterioPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCriterioPropuesta_Puntuacion(), this.getE_Calificacion(), "puntuacion", null, 0, 1, CriterioPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calificarPropuestaEClass, CalificarPropuesta.class, "CalificarPropuesta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
