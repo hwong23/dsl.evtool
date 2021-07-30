@@ -3,6 +3,7 @@
  */
 package hwo.evtool.dsl.evalcn.evaluacion;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,7 +15,7 @@ package hwo.evtool.dsl.evalcn.evaluacion;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getTipo <em>Tipo</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getPuntuacion <em>Puntuacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getCriterios <em>Criterios</em>}</li>
  * </ul>
  *
  * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarPropuesta()
@@ -49,28 +50,15 @@ public interface CalificarPropuesta extends Evaluacion
   void setTipo(TipoPropuesta value);
 
   /**
-   * Returns the value of the '<em><b>Puntuacion</b></em>' attribute.
-   * The literals are from the enumeration {@link hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion}.
+   * Returns the value of the '<em><b>Criterios</b></em>' containment reference list.
+   * The list contents are of type {@link hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Puntuacion</em>' attribute.
-   * @see hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion
-   * @see #setPuntuacion(E_Calificacion)
-   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarPropuesta_Puntuacion()
-   * @model
+   * @return the value of the '<em>Criterios</em>' containment reference list.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarPropuesta_Criterios()
+   * @model containment="true"
    * @generated
    */
-  E_Calificacion getPuntuacion();
-
-  /**
-   * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getPuntuacion <em>Puntuacion</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Puntuacion</em>' attribute.
-   * @see hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion
-   * @see #getPuntuacion()
-   * @generated
-   */
-  void setPuntuacion(E_Calificacion value);
+  EList<CriterioPropuesta> getCriterios();
 
 } // CalificarPropuesta

@@ -39,6 +39,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Evaluacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CriterioPropuesta">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="puntuacion" eType="#//E_Calificacion"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoEquipo">
     <eLiterals name="EvaluarArquitecto" literal="EvaluarArquitecto"/>
     <eLiterals name="EvaluarDirector" value="1" literal="EvaluarDirector"/>
@@ -56,7 +59,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalificarPropuesta" eSuperTypes="#//Evaluacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoPropuesta"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="puntuacion" eType="#//E_Calificacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="criterios" upperBound="-1"
+        eType="#//CriterioPropuesta" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalificarEquipo" eSuperTypes="#//Evaluacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoEquipo"/>

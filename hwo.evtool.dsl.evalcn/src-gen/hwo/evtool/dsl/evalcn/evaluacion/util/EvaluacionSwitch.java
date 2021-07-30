@@ -122,6 +122,13 @@ public class EvaluacionSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EvaluacionPackage.CRITERIO_PROPUESTA:
+      {
+        CriterioPropuesta criterioPropuesta = (CriterioPropuesta)theEObject;
+        T result = caseCriterioPropuesta(criterioPropuesta);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EvaluacionPackage.CALIFICAR_PROPUESTA:
       {
         CalificarPropuesta calificarPropuesta = (CalificarPropuesta)theEObject;
@@ -258,6 +265,22 @@ public class EvaluacionSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEvaluacion(Evaluacion object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Criterio Propuesta</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Criterio Propuesta</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCriterioPropuesta(CriterioPropuesta object)
   {
     return null;
   }

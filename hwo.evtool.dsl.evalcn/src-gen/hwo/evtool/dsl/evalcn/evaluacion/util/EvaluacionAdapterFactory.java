@@ -111,6 +111,11 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
         return createEvaluacionAdapter();
       }
       @Override
+      public Adapter caseCriterioPropuesta(CriterioPropuesta object)
+      {
+        return createCriterioPropuestaAdapter();
+      }
+      @Override
       public Adapter caseCalificarPropuesta(CalificarPropuesta object)
       {
         return createCalificarPropuestaAdapter();
@@ -248,6 +253,21 @@ public class EvaluacionAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEvaluacionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta <em>Criterio Propuesta</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta
+   * @generated
+   */
+  public Adapter createCriterioPropuestaAdapter()
   {
     return null;
   }

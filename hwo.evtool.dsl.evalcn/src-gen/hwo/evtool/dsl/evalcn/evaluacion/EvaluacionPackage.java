@@ -327,6 +327,34 @@ public interface EvaluacionPackage extends EPackage
   int EVALUACION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CriterioPropuestaImpl <em>Criterio Propuesta</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see hwo.evtool.dsl.evalcn.evaluacion.impl.CriterioPropuestaImpl
+   * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getCriterioPropuesta()
+   * @generated
+   */
+  int CRITERIO_PROPUESTA = 7;
+
+  /**
+   * The feature id for the '<em><b>Puntuacion</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRITERIO_PROPUESTA__PUNTUACION = 0;
+
+  /**
+   * The number of structural features of the '<em>Criterio Propuesta</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRITERIO_PROPUESTA_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarPropuestaImpl <em>Calificar Propuesta</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -334,7 +362,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getCalificarPropuesta()
    * @generated
    */
-  int CALIFICAR_PROPUESTA = 7;
+  int CALIFICAR_PROPUESTA = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -355,13 +383,13 @@ public interface EvaluacionPackage extends EPackage
   int CALIFICAR_PROPUESTA__TIPO = EVALUACION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Puntuacion</b></em>' attribute.
+   * The feature id for the '<em><b>Criterios</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALIFICAR_PROPUESTA__PUNTUACION = EVALUACION_FEATURE_COUNT + 1;
+  int CALIFICAR_PROPUESTA__CRITERIOS = EVALUACION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Calificar Propuesta</em>' class.
@@ -380,7 +408,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getCalificarEquipo()
    * @generated
    */
-  int CALIFICAR_EQUIPO = 8;
+  int CALIFICAR_EQUIPO = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -471,7 +499,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getCalificarOtros()
    * @generated
    */
-  int CALIFICAR_OTROS = 9;
+  int CALIFICAR_OTROS = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -517,7 +545,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getTipoEquipo()
    * @generated
    */
-  int TIPO_EQUIPO = 10;
+  int TIPO_EQUIPO = 11;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.TipoPropuesta <em>Tipo Propuesta</em>}' enum.
@@ -527,7 +555,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getTipoPropuesta()
    * @generated
    */
-  int TIPO_PROPUESTA = 11;
+  int TIPO_PROPUESTA = 12;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion <em>ECalificacion</em>}' enum.
@@ -537,7 +565,7 @@ public interface EvaluacionPackage extends EPackage
    * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getE_Calificacion()
    * @generated
    */
-  int ECALIFICACION = 12;
+  int ECALIFICACION = 13;
 
 
   /**
@@ -776,6 +804,27 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getEvaluacion_Name();
 
   /**
+   * Returns the meta object for class '{@link hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta <em>Criterio Propuesta</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Criterio Propuesta</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta
+   * @generated
+   */
+  EClass getCriterioPropuesta();
+
+  /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta#getPuntuacion <em>Puntuacion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Puntuacion</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta#getPuntuacion()
+   * @see #getCriterioPropuesta()
+   * @generated
+   */
+  EAttribute getCriterioPropuesta_Puntuacion();
+
+  /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta <em>Calificar Propuesta</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -797,15 +846,15 @@ public interface EvaluacionPackage extends EPackage
   EAttribute getCalificarPropuesta_Tipo();
 
   /**
-   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getPuntuacion <em>Puntuacion</em>}'.
+   * Returns the meta object for the containment reference list '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getCriterios <em>Criterios</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Puntuacion</em>'.
-   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getPuntuacion()
+   * @return the meta object for the containment reference list '<em>Criterios</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta#getCriterios()
    * @see #getCalificarPropuesta()
    * @generated
    */
-  EAttribute getCalificarPropuesta_Puntuacion();
+  EReference getCalificarPropuesta_Criterios();
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo <em>Calificar Equipo</em>}'.
@@ -1170,6 +1219,24 @@ public interface EvaluacionPackage extends EPackage
     EAttribute EVALUACION__NAME = eINSTANCE.getEvaluacion_Name();
 
     /**
+     * The meta object literal for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CriterioPropuestaImpl <em>Criterio Propuesta</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evalcn.evaluacion.impl.CriterioPropuestaImpl
+     * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getCriterioPropuesta()
+     * @generated
+     */
+    EClass CRITERIO_PROPUESTA = eINSTANCE.getCriterioPropuesta();
+
+    /**
+     * The meta object literal for the '<em><b>Puntuacion</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CRITERIO_PROPUESTA__PUNTUACION = eINSTANCE.getCriterioPropuesta_Puntuacion();
+
+    /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarPropuestaImpl <em>Calificar Propuesta</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1188,12 +1255,12 @@ public interface EvaluacionPackage extends EPackage
     EAttribute CALIFICAR_PROPUESTA__TIPO = eINSTANCE.getCalificarPropuesta_Tipo();
 
     /**
-     * The meta object literal for the '<em><b>Puntuacion</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Criterios</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CALIFICAR_PROPUESTA__PUNTUACION = eINSTANCE.getCalificarPropuesta_Puntuacion();
+    EReference CALIFICAR_PROPUESTA__CRITERIOS = eINSTANCE.getCalificarPropuesta_Criterios();
 
     /**
      * The meta object literal for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarEquipoImpl <em>Calificar Equipo</em>}' class.

@@ -51,6 +51,7 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEvaluacionAccess().getGroup_1_3_1(), "rule__Evaluacion__Group_1_3_1__0");
 			builder.put(grammarAccess.getEvaluacionAccess().getGroup_1_3_2(), "rule__Evaluacion__Group_1_3_2__0");
 			builder.put(grammarAccess.getEvaluacionAccess().getGroup_2(), "rule__Evaluacion__Group_2__0");
+			builder.put(grammarAccess.getCriterioPropuestaAccess().getGroup(), "rule__CriterioPropuesta__Group__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getEventsAssignment_1_1(), "rule__MaquinaEstados__EventsAssignment_1_1");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getResetEventsAssignment_2_1(), "rule__MaquinaEstados__ResetEventsAssignment_2_1");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getCommandsAssignment_3_1(), "rule__MaquinaEstados__CommandsAssignment_3_1");
@@ -67,7 +68,7 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTransicionAccess().getStateAssignment_2(), "rule__Transicion__StateAssignment_2");
 			builder.put(grammarAccess.getEvaluacionAccess().getTipoAssignment_0_1(), "rule__Evaluacion__TipoAssignment_0_1");
 			builder.put(grammarAccess.getEvaluacionAccess().getNameAssignment_0_2(), "rule__Evaluacion__NameAssignment_0_2");
-			builder.put(grammarAccess.getEvaluacionAccess().getPuntuacionAssignment_0_5(), "rule__Evaluacion__PuntuacionAssignment_0_5");
+			builder.put(grammarAccess.getEvaluacionAccess().getCriteriosAssignment_0_3(), "rule__Evaluacion__CriteriosAssignment_0_3");
 			builder.put(grammarAccess.getEvaluacionAccess().getTipoAssignment_1_1(), "rule__Evaluacion__TipoAssignment_1_1");
 			builder.put(grammarAccess.getEvaluacionAccess().getNameAssignment_1_2(), "rule__Evaluacion__NameAssignment_1_2");
 			builder.put(grammarAccess.getEvaluacionAccess().getFormacionAssignment_1_3_0_0(), "rule__Evaluacion__FormacionAssignment_1_3_0_0");
@@ -79,6 +80,7 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEvaluacionAccess().getTipoAssignment_2_1(), "rule__Evaluacion__TipoAssignment_2_1");
 			builder.put(grammarAccess.getEvaluacionAccess().getNameAssignment_2_2(), "rule__Evaluacion__NameAssignment_2_2");
 			builder.put(grammarAccess.getEvaluacionAccess().getValorAssignment_2_5(), "rule__Evaluacion__ValorAssignment_2_5");
+			builder.put(grammarAccess.getCriterioPropuestaAccess().getPuntuacionAssignment_2(), "rule__CriterioPropuesta__PuntuacionAssignment_2");
 			builder.put(grammarAccess.getEvaluacionAccess().getUnorderedGroup_1_3(), "rule__Evaluacion__UnorderedGroup_1_3");
 		}
 	}

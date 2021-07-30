@@ -4,15 +4,24 @@
 package hwo.evtool.dsl.evalcn.evaluacion.impl;
 
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta;
-import hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion;
+import hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoPropuesta;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarPropuestaImpl#getTipo <em>Tipo</em>}</li>
- *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarPropuestaImpl#getPuntuacion <em>Puntuacion</em>}</li>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarPropuestaImpl#getCriterios <em>Criterios</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,24 +60,14 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
   protected TipoPropuesta tipo = TIPO_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
+   * The cached value of the '{@link #getCriterios() <em>Criterios</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPuntuacion()
+   * @see #getCriterios()
    * @generated
    * @ordered
    */
-  protected static final E_Calificacion PUNTUACION_EDEFAULT = E_Calificacion.ALTO;
-
-  /**
-   * The cached value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPuntuacion()
-   * @generated
-   * @ordered
-   */
-  protected E_Calificacion puntuacion = PUNTUACION_EDEFAULT;
+  protected EList<CriterioPropuesta> criterios;
 
   /**
    * <!-- begin-user-doc -->
@@ -122,9 +121,13 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
    * @generated
    */
   @Override
-  public E_Calificacion getPuntuacion()
+  public EList<CriterioPropuesta> getCriterios()
   {
-    return puntuacion;
+    if (criterios == null)
+    {
+      criterios = new EObjectContainmentEList<CriterioPropuesta>(CriterioPropuesta.class, this, EvaluacionPackage.CALIFICAR_PROPUESTA__CRITERIOS);
+    }
+    return criterios;
   }
 
   /**
@@ -133,12 +136,14 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
    * @generated
    */
   @Override
-  public void setPuntuacion(E_Calificacion newPuntuacion)
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    E_Calificacion oldPuntuacion = puntuacion;
-    puntuacion = newPuntuacion == null ? PUNTUACION_EDEFAULT : newPuntuacion;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION, oldPuntuacion, puntuacion));
+    switch (featureID)
+    {
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__CRITERIOS:
+        return ((InternalEList<?>)getCriterios()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -153,8 +158,8 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
     {
       case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
         return getTipo();
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
-        return getPuntuacion();
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__CRITERIOS:
+        return getCriterios();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -164,6 +169,7 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -172,8 +178,9 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
       case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
         setTipo((TipoPropuesta)newValue);
         return;
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
-        setPuntuacion((E_Calificacion)newValue);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__CRITERIOS:
+        getCriterios().clear();
+        getCriterios().addAll((Collection<? extends CriterioPropuesta>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -192,8 +199,8 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
       case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
         setTipo(TIPO_EDEFAULT);
         return;
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
-        setPuntuacion(PUNTUACION_EDEFAULT);
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__CRITERIOS:
+        getCriterios().clear();
         return;
     }
     super.eUnset(featureID);
@@ -211,8 +218,8 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
     {
       case EvaluacionPackage.CALIFICAR_PROPUESTA__TIPO:
         return tipo != TIPO_EDEFAULT;
-      case EvaluacionPackage.CALIFICAR_PROPUESTA__PUNTUACION:
-        return puntuacion != PUNTUACION_EDEFAULT;
+      case EvaluacionPackage.CALIFICAR_PROPUESTA__CRITERIOS:
+        return criterios != null && !criterios.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -230,8 +237,6 @@ public class CalificarPropuestaImpl extends EvaluacionImpl implements CalificarP
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (tipo: ");
     result.append(tipo);
-    result.append(", puntuacion: ");
-    result.append(puntuacion);
     result.append(')');
     return result.toString();
   }

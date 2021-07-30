@@ -73,6 +73,7 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
       case EvaluacionPackage.TIPO_EVALUACION: return createTipoEvaluacion();
       case EvaluacionPackage.TRANSICION: return createTransicion();
       case EvaluacionPackage.EVALUACION: return createEvaluacion();
+      case EvaluacionPackage.CRITERIO_PROPUESTA: return createCriterioPropuesta();
       case EvaluacionPackage.CALIFICAR_PROPUESTA: return createCalificarPropuesta();
       case EvaluacionPackage.CALIFICAR_EQUIPO: return createCalificarEquipo();
       case EvaluacionPackage.CALIFICAR_OTROS: return createCalificarOtros();
@@ -205,6 +206,18 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
   {
     EvaluacionImpl evaluacion = new EvaluacionImpl();
     return evaluacion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public CriterioPropuesta createCriterioPropuesta()
+  {
+    CriterioPropuestaImpl criterioPropuesta = new CriterioPropuestaImpl();
+    return criterioPropuesta;
   }
 
   /**

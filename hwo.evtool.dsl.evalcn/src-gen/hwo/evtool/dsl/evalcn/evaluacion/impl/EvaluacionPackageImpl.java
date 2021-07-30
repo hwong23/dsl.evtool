@@ -7,6 +7,7 @@ import hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarOtros;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.Componente;
+import hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evalcn.evaluacion.Evaluacion;
 import hwo.evtool.dsl.evalcn.evaluacion.EvaluacionFactory;
@@ -83,6 +84,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   private EClass evaluacionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass criterioPropuestaEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -437,6 +445,28 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
+  public EClass getCriterioPropuesta()
+  {
+    return criterioPropuestaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCriterioPropuesta_Puntuacion()
+  {
+    return (EAttribute)criterioPropuestaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getCalificarPropuesta()
   {
     return calificarPropuestaEClass;
@@ -459,9 +489,9 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
-  public EAttribute getCalificarPropuesta_Puntuacion()
+  public EReference getCalificarPropuesta_Criterios()
   {
-    return (EAttribute)calificarPropuestaEClass.getEStructuralFeatures().get(1);
+    return (EReference)calificarPropuestaEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -678,9 +708,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     evaluacionEClass = createEClass(EVALUACION);
     createEAttribute(evaluacionEClass, EVALUACION__NAME);
 
+    criterioPropuestaEClass = createEClass(CRITERIO_PROPUESTA);
+    createEAttribute(criterioPropuestaEClass, CRITERIO_PROPUESTA__PUNTUACION);
+
     calificarPropuestaEClass = createEClass(CALIFICAR_PROPUESTA);
     createEAttribute(calificarPropuestaEClass, CALIFICAR_PROPUESTA__TIPO);
-    createEAttribute(calificarPropuestaEClass, CALIFICAR_PROPUESTA__PUNTUACION);
+    createEReference(calificarPropuestaEClass, CALIFICAR_PROPUESTA__CRITERIOS);
 
     calificarEquipoEClass = createEClass(CALIFICAR_EQUIPO);
     createEAttribute(calificarEquipoEClass, CALIFICAR_EQUIPO__TIPO);
@@ -764,9 +797,12 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(evaluacionEClass, Evaluacion.class, "Evaluacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvaluacion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Evaluacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(criterioPropuestaEClass, CriterioPropuesta.class, "CriterioPropuesta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCriterioPropuesta_Puntuacion(), this.getE_Calificacion(), "puntuacion", null, 0, 1, CriterioPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(calificarPropuestaEClass, CalificarPropuesta.class, "CalificarPropuesta", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarPropuesta_Tipo(), this.getTipoPropuesta(), "tipo", null, 0, 1, CalificarPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalificarPropuesta_Puntuacion(), this.getE_Calificacion(), "puntuacion", null, 0, 1, CalificarPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCalificarPropuesta_Criterios(), this.getCriterioPropuesta(), null, "criterios", null, 0, -1, CalificarPropuesta.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calificarEquipoEClass, CalificarEquipo.class, "CalificarEquipo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarEquipo_Tipo(), this.getTipoEquipo(), "tipo", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

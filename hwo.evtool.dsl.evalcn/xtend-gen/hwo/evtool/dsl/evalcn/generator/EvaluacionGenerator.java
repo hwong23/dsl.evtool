@@ -8,7 +8,6 @@ import hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarOtros;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.Componente;
-import hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evalcn.evaluacion.Evaluacion;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoPropuesta;
@@ -197,13 +196,8 @@ public class EvaluacionGenerator extends AbstractGenerator {
   }
   
   protected CharSequence _stringValue(final CalificarPropuesta c) {
-    StringConcatenation _builder = new StringConcatenation();
-    TipoPropuesta _tipo = c.getTipo();
-    _builder.append(_tipo);
-    _builder.append("\", \"");
-    E_Calificacion _puntuacion = c.getPuntuacion();
-    _builder.append(_puntuacion);
-    return _builder;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field puntuacion is undefined for the type CalificarPropuesta");
   }
   
   protected CharSequence _stringValue(final CalificarEquipo c) {

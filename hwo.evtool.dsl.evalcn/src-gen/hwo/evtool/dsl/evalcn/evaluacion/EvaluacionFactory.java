@@ -87,6 +87,15 @@ public interface EvaluacionFactory extends EFactory
   Evaluacion createEvaluacion();
 
   /**
+   * Returns a new object of class '<em>Criterio Propuesta</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Criterio Propuesta</em>'.
+   * @generated
+   */
+  CriterioPropuesta createCriterioPropuesta();
+
+  /**
    * Returns a new object of class '<em>Calificar Propuesta</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
