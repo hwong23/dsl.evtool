@@ -93,15 +93,18 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     CriterioPropuesta returns CriterioPropuesta
 	 *
 	 * Constraint:
-	 *     puntuacion=E_Calificacion
+	 *     (criterio=STRING puntuacion=E_Calificacion)
 	 */
 	protected void sequence_CriterioPropuesta(ISerializationContext context, CriterioPropuesta semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO_PROPUESTA__CRITERIO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO_PROPUESTA__CRITERIO));
 			if (transientValues.isValueTransient(semanticObject, EvaluacionPackage.Literals.CRITERIO_PROPUESTA__PUNTUACION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, EvaluacionPackage.Literals.CRITERIO_PROPUESTA__PUNTUACION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_2_0(), semanticObject.getPuntuacion());
+		feeder.accept(grammarAccess.getCriterioPropuestaAccess().getCriterioSTRINGTerminalRuleCall_2_0(), semanticObject.getCriterio());
+		feeder.accept(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_5_0(), semanticObject.getPuntuacion());
 		feeder.finish();
 	}
 	
@@ -151,7 +154,7 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Evaluacion returns CalificarPropuesta
 	 *
 	 * Constraint:
-	 *     (tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta)
+	 *     (tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta*)
 	 */
 	protected void sequence_Evaluacion(ISerializationContext context, CalificarPropuesta semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -40,7 +40,7 @@ Transicion:
 
 
 Evaluacion:
-	{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta |
+	{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 	{CalificarEquipo} tipo=TipoEquipo name=ID ( 
 		formacion='formacion' ':' formacionVal=INT &
 		experiencia='experiencia' ':' experienciaVal=INT &  
@@ -50,7 +50,7 @@ Evaluacion:
 ;
 
 CriterioPropuesta:
-	'calificacion' ':' puntuacion=E_Calificacion	
+	'criterio' ':' criterio=STRING 'calificacion' ':' puntuacion=E_Calificacion	
 ;
 
 enum TipoEquipo:

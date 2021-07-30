@@ -363,7 +363,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cValorINTTerminalRuleCall_2_5_0 = (RuleCall)cValorAssignment_2_5.eContents().get(0);
 		
 		//Evaluacion:
-		//    {CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta |
+		//    {CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 		//    {CalificarEquipo} tipo=TipoEquipo name=ID (
 		//        formacion='formacion' ':' formacionVal=INT &
 		//        experiencia='experiencia' ':' experienciaVal=INT &
@@ -373,7 +373,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta |
+		//{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 		//{CalificarEquipo} tipo=TipoEquipo name=ID (
 		//    formacion='formacion' ':' formacionVal=INT &
 		//    experiencia='experiencia' ':' experienciaVal=INT &
@@ -382,7 +382,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//{CalificarOtros} tipo='Otros' name=ID 'calificacion' ':' valor=INT
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta
+		//{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta*
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//{CalificarPropuesta}
@@ -400,7 +400,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_0_2_0() { return cNameIDTerminalRuleCall_0_2_0; }
 		
-		//criterios+=CriterioPropuesta
+		//criterios+=CriterioPropuesta*
 		public Assignment getCriteriosAssignment_0_3() { return cCriteriosAssignment_0_3; }
 		
 		//CriterioPropuesta
@@ -522,30 +522,46 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	public class CriterioPropuestaElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.evalcn.Evaluacion.CriterioPropuesta");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCalificacionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cCriterioKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cPuntuacionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPuntuacionE_CalificacionEnumRuleCall_2_0 = (RuleCall)cPuntuacionAssignment_2.eContents().get(0);
+		private final Assignment cCriterioAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCriterioSTRINGTerminalRuleCall_2_0 = (RuleCall)cCriterioAssignment_2.eContents().get(0);
+		private final Keyword cCalificacionKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cColonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cPuntuacionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cPuntuacionE_CalificacionEnumRuleCall_5_0 = (RuleCall)cPuntuacionAssignment_5.eContents().get(0);
 		
 		//CriterioPropuesta:
-		//    'calificacion' ':' puntuacion=E_Calificacion
+		//    'criterio' ':' criterio=STRING 'calificacion' ':' puntuacion=E_Calificacion
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'calificacion' ':' puntuacion=E_Calificacion
+		//'criterio' ':' criterio=STRING 'calificacion' ':' puntuacion=E_Calificacion
 		public Group getGroup() { return cGroup; }
 		
-		//'calificacion'
-		public Keyword getCalificacionKeyword_0() { return cCalificacionKeyword_0; }
+		//'criterio'
+		public Keyword getCriterioKeyword_0() { return cCriterioKeyword_0; }
 		
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 		
+		//criterio=STRING
+		public Assignment getCriterioAssignment_2() { return cCriterioAssignment_2; }
+		
+		//STRING
+		public RuleCall getCriterioSTRINGTerminalRuleCall_2_0() { return cCriterioSTRINGTerminalRuleCall_2_0; }
+		
+		//'calificacion'
+		public Keyword getCalificacionKeyword_3() { return cCalificacionKeyword_3; }
+		
+		//':'
+		public Keyword getColonKeyword_4() { return cColonKeyword_4; }
+		
 		//puntuacion=E_Calificacion
-		public Assignment getPuntuacionAssignment_2() { return cPuntuacionAssignment_2; }
+		public Assignment getPuntuacionAssignment_5() { return cPuntuacionAssignment_5; }
 		
 		//E_Calificacion
-		public RuleCall getPuntuacionE_CalificacionEnumRuleCall_2_0() { return cPuntuacionE_CalificacionEnumRuleCall_2_0; }
+		public RuleCall getPuntuacionE_CalificacionEnumRuleCall_5_0() { return cPuntuacionE_CalificacionEnumRuleCall_5_0; }
 	}
 	
 	public class TipoEquipoElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
@@ -806,7 +822,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//Evaluacion:
-	//    {CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta |
+	//    {CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 	//    {CalificarEquipo} tipo=TipoEquipo name=ID (
 	//        formacion='formacion' ':' formacionVal=INT &
 	//        experiencia='experiencia' ':' experienciaVal=INT &
@@ -823,7 +839,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	}
 	
 	//CriterioPropuesta:
-	//    'calificacion' ':' puntuacion=E_Calificacion
+	//    'criterio' ':' criterio=STRING 'calificacion' ':' puntuacion=E_Calificacion
 	//;
 	public CriterioPropuestaElements getCriterioPropuestaAccess() {
 		return pCriterioPropuesta;

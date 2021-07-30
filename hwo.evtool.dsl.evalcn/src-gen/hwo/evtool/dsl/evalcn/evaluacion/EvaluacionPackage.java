@@ -337,13 +337,22 @@ public interface EvaluacionPackage extends EPackage
   int CRITERIO_PROPUESTA = 7;
 
   /**
+   * The feature id for the '<em><b>Criterio</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRITERIO_PROPUESTA__CRITERIO = 0;
+
+  /**
    * The feature id for the '<em><b>Puntuacion</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CRITERIO_PROPUESTA__PUNTUACION = 0;
+  int CRITERIO_PROPUESTA__PUNTUACION = 1;
 
   /**
    * The number of structural features of the '<em>Criterio Propuesta</em>' class.
@@ -352,7 +361,7 @@ public interface EvaluacionPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CRITERIO_PROPUESTA_FEATURE_COUNT = 1;
+  int CRITERIO_PROPUESTA_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CalificarPropuestaImpl <em>Calificar Propuesta</em>}' class.
@@ -814,6 +823,17 @@ public interface EvaluacionPackage extends EPackage
   EClass getCriterioPropuesta();
 
   /**
+   * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta#getCriterio <em>Criterio</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Criterio</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta#getCriterio()
+   * @see #getCriterioPropuesta()
+   * @generated
+   */
+  EAttribute getCriterioPropuesta_Criterio();
+
+  /**
    * Returns the meta object for the attribute '{@link hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta#getPuntuacion <em>Puntuacion</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1227,6 +1247,14 @@ public interface EvaluacionPackage extends EPackage
      * @generated
      */
     EClass CRITERIO_PROPUESTA = eINSTANCE.getCriterioPropuesta();
+
+    /**
+     * The meta object literal for the '<em><b>Criterio</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CRITERIO_PROPUESTA__CRITERIO = eINSTANCE.getCriterioPropuesta_Criterio();
 
     /**
      * The meta object literal for the '<em><b>Puntuacion</b></em>' attribute feature.

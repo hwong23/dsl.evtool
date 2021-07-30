@@ -51,6 +51,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//Evaluacion/name"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CriterioPropuesta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioPropuesta/criterio"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Evaluacion.ecore#//CriterioPropuesta/puntuacion"/>
     </genClasses>
     <genClasses ecoreClass="Evaluacion.ecore#//CalificarPropuesta">

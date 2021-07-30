@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CriterioPropuestaImpl#getCriterio <em>Criterio</em>}</li>
  *   <li>{@link hwo.evtool.dsl.evalcn.evaluacion.impl.CriterioPropuestaImpl#getPuntuacion <em>Puntuacion</em>}</li>
  * </ul>
  *
@@ -29,6 +30,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implements CriterioPropuesta
 {
+  /**
+   * The default value of the '{@link #getCriterio() <em>Criterio</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCriterio()
+   * @generated
+   * @ordered
+   */
+  protected static final String CRITERIO_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCriterio() <em>Criterio</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCriterio()
+   * @generated
+   * @ordered
+   */
+  protected String criterio = CRITERIO_EDEFAULT;
+
   /**
    * The default value of the '{@link #getPuntuacion() <em>Puntuacion</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -76,6 +97,31 @@ public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
+  public String getCriterio()
+  {
+    return criterio;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCriterio(String newCriterio)
+  {
+    String oldCriterio = criterio;
+    criterio = newCriterio;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CRITERIO_PROPUESTA__CRITERIO, oldCriterio, criterio));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public E_Calificacion getPuntuacion()
   {
     return puntuacion;
@@ -105,6 +151,8 @@ public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CRITERIO_PROPUESTA__CRITERIO:
+        return getCriterio();
       case EvaluacionPackage.CRITERIO_PROPUESTA__PUNTUACION:
         return getPuntuacion();
     }
@@ -121,6 +169,9 @@ public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CRITERIO_PROPUESTA__CRITERIO:
+        setCriterio((String)newValue);
+        return;
       case EvaluacionPackage.CRITERIO_PROPUESTA__PUNTUACION:
         setPuntuacion((E_Calificacion)newValue);
         return;
@@ -138,6 +189,9 @@ public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CRITERIO_PROPUESTA__CRITERIO:
+        setCriterio(CRITERIO_EDEFAULT);
+        return;
       case EvaluacionPackage.CRITERIO_PROPUESTA__PUNTUACION:
         setPuntuacion(PUNTUACION_EDEFAULT);
         return;
@@ -155,6 +209,8 @@ public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
+      case EvaluacionPackage.CRITERIO_PROPUESTA__CRITERIO:
+        return CRITERIO_EDEFAULT == null ? criterio != null : !CRITERIO_EDEFAULT.equals(criterio);
       case EvaluacionPackage.CRITERIO_PROPUESTA__PUNTUACION:
         return puntuacion != PUNTUACION_EDEFAULT;
     }
@@ -172,7 +228,9 @@ public class CriterioPropuestaImpl extends MinimalEObjectImpl.Container implemen
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (puntuacion: ");
+    result.append(" (criterio: ");
+    result.append(criterio);
+    result.append(", puntuacion: ");
     result.append(puntuacion);
     result.append(')');
     return result.toString();

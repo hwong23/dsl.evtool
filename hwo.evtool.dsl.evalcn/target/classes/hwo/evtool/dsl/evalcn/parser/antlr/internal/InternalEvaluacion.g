@@ -543,7 +543,7 @@ ruleEvaluacion returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
+			)*
 		)
 		    |
 		(
@@ -835,9 +835,9 @@ ruleCriterioPropuesta returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='calificacion'
+		otherlv_0='criterio'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCriterioPropuestaAccess().getCalificacionKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getCriterioPropuestaAccess().getCriterioKeyword_0());
 		}
 		otherlv_1=':'
 		{
@@ -845,10 +845,36 @@ ruleCriterioPropuesta returns [EObject current=null]
 		}
 		(
 			(
+				lv_criterio_2_0=RULE_STRING
 				{
-					newCompositeNode(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_2_0());
+					newLeafNode(lv_criterio_2_0, grammarAccess.getCriterioPropuestaAccess().getCriterioSTRINGTerminalRuleCall_2_0());
 				}
-				lv_puntuacion_2_0=ruleE_Calificacion
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getCriterioPropuestaRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"criterio",
+						lv_criterio_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='calificacion'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getCriterioPropuestaAccess().getCalificacionKeyword_3());
+		}
+		otherlv_4=':'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getCriterioPropuestaAccess().getColonKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getCriterioPropuestaAccess().getPuntuacionE_CalificacionEnumRuleCall_5_0());
+				}
+				lv_puntuacion_5_0=ruleE_Calificacion
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCriterioPropuestaRule());
@@ -856,7 +882,7 @@ ruleCriterioPropuesta returns [EObject current=null]
 					set(
 						$current,
 						"puntuacion",
-						lv_puntuacion_2_0,
+						lv_puntuacion_5_0,
 						"hwo.evtool.dsl.evalcn.Evaluacion.E_Calificacion");
 					afterParserOrEnumRuleCall();
 				}
