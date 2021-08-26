@@ -58,6 +58,11 @@
     <eLiterals name="medio" value="1" literal="M"/>
     <eLiterals name="bajo" value="2" literal="B"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoFormacion">
+    <eLiterals name="Especializacion" literal="Especializacion"/>
+    <eLiterals name="Maestria" value="1" literal="Maestria"/>
+    <eLiterals name="Doctorado" value="2" literal="Doctorado"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalificarPropuesta" eSuperTypes="#//Evaluacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoPropuesta"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="criterios" upperBound="-1"
@@ -66,7 +71,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="CalificarEquipo" eSuperTypes="#//Evaluacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoEquipo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formacionVal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formacionVal" eType="#//TipoFormacion"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="experiencia" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="experienciaVal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="certificacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

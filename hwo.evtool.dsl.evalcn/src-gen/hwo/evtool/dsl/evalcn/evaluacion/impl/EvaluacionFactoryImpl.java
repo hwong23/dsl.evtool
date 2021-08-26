@@ -98,6 +98,8 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
         return createTipoPropuestaFromString(eDataType, initialValue);
       case EvaluacionPackage.ECALIFICACION:
         return createE_CalificacionFromString(eDataType, initialValue);
+      case EvaluacionPackage.TIPO_FORMACION:
+        return createTipoFormacionFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -119,6 +121,8 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
         return convertTipoPropuestaToString(eDataType, instanceValue);
       case EvaluacionPackage.ECALIFICACION:
         return convertE_CalificacionToString(eDataType, instanceValue);
+      case EvaluacionPackage.TIPO_FORMACION:
+        return convertTipoFormacionToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -318,6 +322,28 @@ public class EvaluacionFactoryImpl extends EFactoryImpl implements EvaluacionFac
    * @generated
    */
   public String convertE_CalificacionToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TipoFormacion createTipoFormacionFromString(EDataType eDataType, String initialValue)
+  {
+    TipoFormacion result = TipoFormacion.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTipoFormacionToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

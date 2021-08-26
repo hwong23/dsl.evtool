@@ -35,6 +35,7 @@ public class EvaluacionParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getTipoEquipoAccess().getAlternatives(), "rule__TipoEquipo__Alternatives");
 			builder.put(grammarAccess.getTipoPropuestaAccess().getAlternatives(), "rule__TipoPropuesta__Alternatives");
 			builder.put(grammarAccess.getE_CalificacionAccess().getAlternatives(), "rule__E_Calificacion__Alternatives");
+			builder.put(grammarAccess.getTipoFormacionAccess().getAlternatives(), "rule__TipoFormacion__Alternatives");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup(), "rule__MaquinaEstados__Group__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_1(), "rule__MaquinaEstados__Group_1__0");
 			builder.put(grammarAccess.getMaquinaEstadosAccess().getGroup_2(), "rule__MaquinaEstados__Group_2__0");

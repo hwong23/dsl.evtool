@@ -21,6 +21,11 @@
       <genEnumLiterals ecoreEnumLiteral="Evaluacion.ecore#//E_Calificacion/medio"/>
       <genEnumLiterals ecoreEnumLiteral="Evaluacion.ecore#//E_Calificacion/bajo"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Evaluacion.ecore#//TipoFormacion">
+      <genEnumLiterals ecoreEnumLiteral="Evaluacion.ecore#//TipoFormacion/Especializacion"/>
+      <genEnumLiterals ecoreEnumLiteral="Evaluacion.ecore#//TipoFormacion/Maestria"/>
+      <genEnumLiterals ecoreEnumLiteral="Evaluacion.ecore#//TipoFormacion/Doctorado"/>
+    </genEnums>
     <genClasses ecoreClass="Evaluacion.ecore#//MaquinaEstados">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//MaquinaEstados/events"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Evaluacion.ecore#//MaquinaEstados/resetEvents"/>

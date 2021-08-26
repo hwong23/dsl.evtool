@@ -338,7 +338,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final Keyword cFormacionFormacionKeyword_1_3_0_0_0 = (Keyword)cFormacionAssignment_1_3_0_0.eContents().get(0);
 		private final Keyword cColonKeyword_1_3_0_1 = (Keyword)cGroup_1_3_0.eContents().get(1);
 		private final Assignment cFormacionValAssignment_1_3_0_2 = (Assignment)cGroup_1_3_0.eContents().get(2);
-		private final RuleCall cFormacionValINTTerminalRuleCall_1_3_0_2_0 = (RuleCall)cFormacionValAssignment_1_3_0_2.eContents().get(0);
+		private final RuleCall cFormacionValTipoFormacionEnumRuleCall_1_3_0_2_0 = (RuleCall)cFormacionValAssignment_1_3_0_2.eContents().get(0);
 		private final Group cGroup_1_3_1 = (Group)cUnorderedGroup_1_3.eContents().get(1);
 		private final Assignment cExperienciaAssignment_1_3_1_0 = (Assignment)cGroup_1_3_1.eContents().get(0);
 		private final Keyword cExperienciaExperienciaKeyword_1_3_1_0_0 = (Keyword)cExperienciaAssignment_1_3_1_0.eContents().get(0);
@@ -365,7 +365,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//Evaluacion:
 		//    {CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 		//    {CalificarEquipo} tipo=TipoEquipo name=ID (
-		//        formacion='formacion' ':' formacionVal=INT &
+		//        formacion='formacion' ':' formacionVal=TipoFormacion &
 		//        experiencia='experiencia' ':' experienciaVal=INT &
 		//        certificacion='certificacion' ':' certificacionVal=INT
 		//        ) |
@@ -375,7 +375,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		
 		//{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 		//{CalificarEquipo} tipo=TipoEquipo name=ID (
-		//    formacion='formacion' ':' formacionVal=INT &
+		//    formacion='formacion' ':' formacionVal=TipoFormacion &
 		//    experiencia='experiencia' ':' experienciaVal=INT &
 		//    certificacion='certificacion' ':' certificacionVal=INT
 		//    ) |
@@ -407,7 +407,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		public RuleCall getCriteriosCriterioPropuestaParserRuleCall_0_3_0() { return cCriteriosCriterioPropuestaParserRuleCall_0_3_0; }
 		
 		//{CalificarEquipo} tipo=TipoEquipo name=ID (
-		//    formacion='formacion' ':' formacionVal=INT &
+		//    formacion='formacion' ':' formacionVal=TipoFormacion &
 		//    experiencia='experiencia' ':' experienciaVal=INT &
 		//    certificacion='certificacion' ':' certificacionVal=INT
 		//    )
@@ -429,13 +429,13 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		public RuleCall getNameIDTerminalRuleCall_1_2_0() { return cNameIDTerminalRuleCall_1_2_0; }
 		
 		//(
-		//       formacion='formacion' ':' formacionVal=INT &
+		//       formacion='formacion' ':' formacionVal=TipoFormacion &
 		//       experiencia='experiencia' ':' experienciaVal=INT &
 		//       certificacion='certificacion' ':' certificacionVal=INT
 		//       )
 		public UnorderedGroup getUnorderedGroup_1_3() { return cUnorderedGroup_1_3; }
 		
-		//formacion='formacion' ':' formacionVal=INT
+		//formacion='formacion' ':' formacionVal=TipoFormacion
 		public Group getGroup_1_3_0() { return cGroup_1_3_0; }
 		
 		//formacion='formacion'
@@ -447,11 +447,11 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//':'
 		public Keyword getColonKeyword_1_3_0_1() { return cColonKeyword_1_3_0_1; }
 		
-		//formacionVal=INT
+		//formacionVal=TipoFormacion
 		public Assignment getFormacionValAssignment_1_3_0_2() { return cFormacionValAssignment_1_3_0_2; }
 		
-		//INT
-		public RuleCall getFormacionValINTTerminalRuleCall_1_3_0_2_0() { return cFormacionValINTTerminalRuleCall_1_3_0_2_0; }
+		//TipoFormacion
+		public RuleCall getFormacionValTipoFormacionEnumRuleCall_1_3_0_2_0() { return cFormacionValTipoFormacionEnumRuleCall_1_3_0_2_0; }
 		
 		//experiencia='experiencia' ':' experienciaVal=INT
 		public Group getGroup_1_3_1() { return cGroup_1_3_1; }
@@ -680,6 +680,46 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'B'
 		public Keyword getBajoBKeyword_2_0() { return cBajoBKeyword_2_0; }
 	}
+	public class TipoFormacionElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "hwo.evtool.dsl.evalcn.Evaluacion.TipoFormacion");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cEspecializacionEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cEspecializacionEspecializacionKeyword_0_0 = (Keyword)cEspecializacionEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cMaestriaEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cMaestriaMaestriaKeyword_1_0 = (Keyword)cMaestriaEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cDoctoradoEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cDoctoradoDoctoradoKeyword_2_0 = (Keyword)cDoctoradoEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum TipoFormacion:
+		//    Especializacion = 'Especializacion' |
+		//    Maestria = 'Maestria' |
+		//    Doctorado = 'Doctorado'
+		//;
+		public EnumRule getRule() { return rule; }
+		
+		//Especializacion = 'Especializacion' |
+		//Maestria = 'Maestria' |
+		//Doctorado = 'Doctorado'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Especializacion = 'Especializacion'
+		public EnumLiteralDeclaration getEspecializacionEnumLiteralDeclaration_0() { return cEspecializacionEnumLiteralDeclaration_0; }
+		
+		//'Especializacion'
+		public Keyword getEspecializacionEspecializacionKeyword_0_0() { return cEspecializacionEspecializacionKeyword_0_0; }
+		
+		//Maestria = 'Maestria'
+		public EnumLiteralDeclaration getMaestriaEnumLiteralDeclaration_1() { return cMaestriaEnumLiteralDeclaration_1; }
+		
+		//'Maestria'
+		public Keyword getMaestriaMaestriaKeyword_1_0() { return cMaestriaMaestriaKeyword_1_0; }
+		
+		//Doctorado = 'Doctorado'
+		public EnumLiteralDeclaration getDoctoradoEnumLiteralDeclaration_2() { return cDoctoradoEnumLiteralDeclaration_2; }
+		
+		//'Doctorado'
+		public Keyword getDoctoradoDoctoradoKeyword_2_0() { return cDoctoradoDoctoradoKeyword_2_0; }
+	}
 	
 	private final MaquinaEstadosElements pMaquinaEstados;
 	private final EventoElements pEvento;
@@ -692,6 +732,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final TipoEquipoElements eTipoEquipo;
 	private final TipoPropuestaElements eTipoPropuesta;
 	private final E_CalificacionElements eE_Calificacion;
+	private final TipoFormacionElements eTipoFormacion;
 	
 	private final Grammar grammar;
 	
@@ -713,6 +754,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.eTipoEquipo = new TipoEquipoElements();
 		this.eTipoPropuesta = new TipoPropuestaElements();
 		this.eE_Calificacion = new E_CalificacionElements();
+		this.eTipoFormacion = new TipoFormacionElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -824,7 +866,7 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//Evaluacion:
 	//    {CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 	//    {CalificarEquipo} tipo=TipoEquipo name=ID (
-	//        formacion='formacion' ':' formacionVal=INT &
+	//        formacion='formacion' ':' formacionVal=TipoFormacion &
 	//        experiencia='experiencia' ':' experienciaVal=INT &
 	//        certificacion='certificacion' ':' certificacionVal=INT
 	//        ) |
@@ -884,6 +926,19 @@ public class EvaluacionGrammarAccess extends AbstractElementFinder.AbstractGramm
 	
 	public EnumRule getE_CalificacionRule() {
 		return getE_CalificacionAccess().getRule();
+	}
+	
+	//enum TipoFormacion:
+	//    Especializacion = 'Especializacion' |
+	//    Maestria = 'Maestria' |
+	//    Doctorado = 'Doctorado'
+	//;
+	public TipoFormacionElements getTipoFormacionAccess() {
+		return eTipoFormacion;
+	}
+	
+	public EnumRule getTipoFormacionRule() {
+		return getTipoFormacionAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

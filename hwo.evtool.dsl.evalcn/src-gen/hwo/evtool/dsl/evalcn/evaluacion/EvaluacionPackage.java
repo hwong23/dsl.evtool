@@ -576,6 +576,16 @@ public interface EvaluacionPackage extends EPackage
    */
   int ECALIFICACION = 13;
 
+  /**
+   * The meta object id for the '{@link hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion <em>Tipo Formacion</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion
+   * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getTipoFormacion()
+   * @generated
+   */
+  int TIPO_FORMACION = 14;
+
 
   /**
    * Returns the meta object for class '{@link hwo.evtool.dsl.evalcn.evaluacion.MaquinaEstados <em>Maquina Estados</em>}'.
@@ -1026,6 +1036,16 @@ public interface EvaluacionPackage extends EPackage
   EEnum getE_Calificacion();
 
   /**
+   * Returns the meta object for enum '{@link hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion <em>Tipo Formacion</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Tipo Formacion</em>'.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion
+   * @generated
+   */
+  EEnum getTipoFormacion();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1411,6 +1431,16 @@ public interface EvaluacionPackage extends EPackage
      * @generated
      */
     EEnum ECALIFICACION = eINSTANCE.getE_Calificacion();
+
+    /**
+     * The meta object literal for the '{@link hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion <em>Tipo Formacion</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion
+     * @see hwo.evtool.dsl.evalcn.evaluacion.impl.EvaluacionPackageImpl#getTipoFormacion()
+     * @generated
+     */
+    EEnum TIPO_FORMACION = eINSTANCE.getTipoFormacion();
 
   }
 

@@ -12,6 +12,7 @@ import hwo.evtool.dsl.evalcn.evaluacion.CriterioPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.E_Calificacion;
 import hwo.evtool.dsl.evalcn.evaluacion.Evaluacion;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoEquipo;
+import hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoPropuesta;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
@@ -220,7 +221,7 @@ public class EvaluacionGenerator extends AbstractGenerator {
     TipoEquipo _tipo = c.getTipo();
     _builder.append(_tipo);
     _builder.append("\", \"");
-    int _formacionVal = c.getFormacionVal();
+    TipoFormacion _formacionVal = c.getFormacionVal();
     _builder.append(_formacionVal);
     _builder.append("\", \"");
     int _experienciaVal = c.getExperienciaVal();

@@ -297,6 +297,22 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Rule TipoFormacion
+ruleTipoFormacion
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getTipoFormacionAccess().getAlternatives()); }
+		(rule__TipoFormacion__Alternatives)
+		{ after(grammarAccess.getTipoFormacionAccess().getAlternatives()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Evaluacion__Alternatives
 	@init {
 		int stackSize = keepStackSize();
@@ -399,6 +415,33 @@ rule__E_Calificacion__Alternatives
 		{ before(grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2()); }
 		('B')
 		{ after(grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__TipoFormacion__Alternatives
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getTipoFormacionAccess().getEspecializacionEnumLiteralDeclaration_0()); }
+		('Especializacion')
+		{ after(grammarAccess.getTipoFormacionAccess().getEspecializacionEnumLiteralDeclaration_0()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getTipoFormacionAccess().getMaestriaEnumLiteralDeclaration_1()); }
+		('Maestria')
+		{ after(grammarAccess.getTipoFormacionAccess().getMaestriaEnumLiteralDeclaration_1()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getTipoFormacionAccess().getDoctoradoEnumLiteralDeclaration_2()); }
+		('Doctorado')
+		{ after(grammarAccess.getTipoFormacionAccess().getDoctoradoEnumLiteralDeclaration_2()); }
 	)
 ;
 finally {
@@ -2408,9 +2451,9 @@ rule__Evaluacion__FormacionValAssignment_1_3_0_2
 	}
 :
 	(
-		{ before(grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_3_0_2_0()); }
-		RULE_INT
-		{ after(grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_3_0_2_0()); }
+		{ before(grammarAccess.getEvaluacionAccess().getFormacionValTipoFormacionEnumRuleCall_1_3_0_2_0()); }
+		ruleTipoFormacion
+		{ after(grammarAccess.getEvaluacionAccess().getFormacionValTipoFormacionEnumRuleCall_1_3_0_2_0()); }
 	)
 ;
 finally {

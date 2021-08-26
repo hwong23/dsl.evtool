@@ -623,19 +623,20 @@ ruleEvaluacion returns [EObject current=null]
 									}
 									(
 										(
-											lv_formacionVal_10_0=RULE_INT
 											{
-												newLeafNode(lv_formacionVal_10_0, grammarAccess.getEvaluacionAccess().getFormacionValINTTerminalRuleCall_1_3_0_2_0());
+												newCompositeNode(grammarAccess.getEvaluacionAccess().getFormacionValTipoFormacionEnumRuleCall_1_3_0_2_0());
 											}
+											lv_formacionVal_10_0=ruleTipoFormacion
 											{
 												if ($current==null) {
-													$current = createModelElement(grammarAccess.getEvaluacionRule());
+													$current = createModelElementForParent(grammarAccess.getEvaluacionRule());
 												}
-												setWithLastConsumed(
+												set(
 													$current,
 													"formacionVal",
 													lv_formacionVal_10_0,
-													"org.eclipse.xtext.common.Terminals.INT");
+													"hwo.evtool.dsl.evalcn.Evaluacion.TipoFormacion");
+												afterParserOrEnumRuleCall();
 											}
 										)
 									)
@@ -991,6 +992,41 @@ ruleE_Calificacion returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_2, grammarAccess.getE_CalificacionAccess().getBajoEnumLiteralDeclaration_2());
+			}
+		)
+	)
+;
+
+// Rule TipoFormacion
+ruleTipoFormacion returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='Especializacion'
+			{
+				$current = grammarAccess.getTipoFormacionAccess().getEspecializacionEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getTipoFormacionAccess().getEspecializacionEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='Maestria'
+			{
+				$current = grammarAccess.getTipoFormacionAccess().getMaestriaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getTipoFormacionAccess().getMaestriaEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='Doctorado'
+			{
+				$current = grammarAccess.getTipoFormacionAccess().getDoctoradoEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getTipoFormacionAccess().getDoctoradoEnumLiteralDeclaration_2());
 			}
 		)
 	)

@@ -42,7 +42,7 @@ Transicion:
 Evaluacion:
 	{CalificarPropuesta} tipo=TipoPropuesta name=ID criterios+=CriterioPropuesta* |
 	{CalificarEquipo} tipo=TipoEquipo name=ID ( 
-		formacion='formacion' ':' formacionVal=INT &
+		formacion='formacion' ':' formacionVal=TipoFormacion &
 		experiencia='experiencia' ':' experienciaVal=INT &  
 		certificacion='certificacion' ':' certificacionVal=INT
 		) | 
@@ -67,4 +67,10 @@ enum TipoPropuesta:
 
 enum E_Calificacion:
 	alto = 'A' | medio = 'M' | bajo = 'B'
+;
+
+enum TipoFormacion:
+	Especializacion = 'Especializacion' |
+	Maestria = 'Maestria' |
+	Doctorado = 'Doctorado'
 ;

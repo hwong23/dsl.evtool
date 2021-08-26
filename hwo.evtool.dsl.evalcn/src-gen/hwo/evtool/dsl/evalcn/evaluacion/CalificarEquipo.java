@@ -77,25 +77,28 @@ public interface CalificarEquipo extends Evaluacion
 
   /**
    * Returns the value of the '<em><b>Formacion Val</b></em>' attribute.
+   * The literals are from the enumeration {@link hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Formacion Val</em>' attribute.
-   * @see #setFormacionVal(int)
+   * @see hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion
+   * @see #setFormacionVal(TipoFormacion)
    * @see hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage#getCalificarEquipo_FormacionVal()
    * @model
    * @generated
    */
-  int getFormacionVal();
+  TipoFormacion getFormacionVal();
 
   /**
    * Sets the value of the '{@link hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo#getFormacionVal <em>Formacion Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Formacion Val</em>' attribute.
+   * @see hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion
    * @see #getFormacionVal()
    * @generated
    */
-  void setFormacionVal(int value);
+  void setFormacionVal(TipoFormacion value);
 
   /**
    * Returns the value of the '<em><b>Experiencia</b></em>' attribute.

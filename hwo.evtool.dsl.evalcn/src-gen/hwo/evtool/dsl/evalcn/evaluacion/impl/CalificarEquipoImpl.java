@@ -6,6 +6,7 @@ package hwo.evtool.dsl.evalcn.evaluacion.impl;
 import hwo.evtool.dsl.evalcn.evaluacion.CalificarEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.EvaluacionPackage;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoEquipo;
+import hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -82,7 +83,7 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    * @ordered
    */
-  protected static final int FORMACION_VAL_EDEFAULT = 0;
+  protected static final TipoFormacion FORMACION_VAL_EDEFAULT = TipoFormacion.ESPECIALIZACION;
 
   /**
    * The cached value of the '{@link #getFormacionVal() <em>Formacion Val</em>}' attribute.
@@ -92,7 +93,7 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    * @ordered
    */
-  protected int formacionVal = FORMACION_VAL_EDEFAULT;
+  protected TipoFormacion formacionVal = FORMACION_VAL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getExperiencia() <em>Experiencia</em>}' attribute.
@@ -251,7 +252,7 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    */
   @Override
-  public int getFormacionVal()
+  public TipoFormacion getFormacionVal()
   {
     return formacionVal;
   }
@@ -262,10 +263,10 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
    * @generated
    */
   @Override
-  public void setFormacionVal(int newFormacionVal)
+  public void setFormacionVal(TipoFormacion newFormacionVal)
   {
-    int oldFormacionVal = formacionVal;
-    formacionVal = newFormacionVal;
+    TipoFormacion oldFormacionVal = formacionVal;
+    formacionVal = newFormacionVal == null ? FORMACION_VAL_EDEFAULT : newFormacionVal;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL, oldFormacionVal, formacionVal));
   }
@@ -415,7 +416,7 @@ public class CalificarEquipoImpl extends EvaluacionImpl implements CalificarEqui
         setFormacion((String)newValue);
         return;
       case EvaluacionPackage.CALIFICAR_EQUIPO__FORMACION_VAL:
-        setFormacionVal((Integer)newValue);
+        setFormacionVal((TipoFormacion)newValue);
         return;
       case EvaluacionPackage.CALIFICAR_EQUIPO__EXPERIENCIA:
         setExperiencia((String)newValue);

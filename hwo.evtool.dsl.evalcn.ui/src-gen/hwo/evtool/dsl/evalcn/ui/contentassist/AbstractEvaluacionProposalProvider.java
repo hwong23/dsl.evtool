@@ -136,4 +136,7 @@ public abstract class AbstractEvaluacionProposalProvider extends TerminalsPropos
 	public void complete_E_Calificacion(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
+	public void complete_TipoFormacion(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
 }

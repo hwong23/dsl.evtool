@@ -117,7 +117,11 @@ public class EvaluacionSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (
 	 *         tipo=TipoEquipo 
 	 *         name=ID 
-	 *         ((formacion='formacion' formacionVal=INT) | (experiencia='experiencia' experienciaVal=INT) | (certificacion='certificacion' certificacionVal=INT))+
+	 *         (
+	 *             (formacion='formacion' formacionVal=TipoFormacion) | 
+	 *             (experiencia='experiencia' experienciaVal=INT) | 
+	 *             (certificacion='certificacion' certificacionVal=INT)
+	 *         )+
 	 *     )
 	 */
 	protected void sequence_Evaluacion(ISerializationContext context, CalificarEquipo semanticObject) {

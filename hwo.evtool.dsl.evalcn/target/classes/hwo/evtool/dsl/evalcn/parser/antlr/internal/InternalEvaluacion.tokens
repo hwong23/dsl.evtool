@@ -2,6 +2,8 @@
 '=>'=19
 'A'=32
 'B'=34
+'Doctorado'=37
+'Especializacion'=35
 'EvaluarArquitecto'=26
 'EvaluarDirector'=27
 'EvaluarEducacion'=28
@@ -9,6 +11,7 @@
 'EvaluarProblema'=29
 'EvaluarTecnica'=30
 'M'=33
+'Maestria'=36
 'Otros'=23
 'actions'=15
 'calificacion'=24
@@ -53,3 +56,6 @@ T__31=31
 T__32=32
 T__33=33
 T__34=34
+T__35=35
+T__36=36
+T__37=37

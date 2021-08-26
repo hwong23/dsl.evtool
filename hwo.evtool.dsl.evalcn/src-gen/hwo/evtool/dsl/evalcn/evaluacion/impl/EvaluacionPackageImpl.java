@@ -17,6 +17,7 @@ import hwo.evtool.dsl.evalcn.evaluacion.Expresion;
 import hwo.evtool.dsl.evalcn.evaluacion.MaquinaEstados;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoEquipo;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoEvaluacion;
+import hwo.evtool.dsl.evalcn.evaluacion.TipoFormacion;
 import hwo.evtool.dsl.evalcn.evaluacion.TipoPropuesta;
 import hwo.evtool.dsl.evalcn.evaluacion.Transicion;
 
@@ -133,6 +134,13 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   private EEnum e_CalificacionEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum tipoFormacionEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -665,6 +673,17 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
    * @generated
    */
   @Override
+  public EEnum getTipoFormacion()
+  {
+    return tipoFormacionEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EvaluacionFactory getEvaluacionFactory()
   {
     return (EvaluacionFactory)getEFactoryInstance();
@@ -744,6 +763,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     tipoEquipoEEnum = createEEnum(TIPO_EQUIPO);
     tipoPropuestaEEnum = createEEnum(TIPO_PROPUESTA);
     e_CalificacionEEnum = createEEnum(ECALIFICACION);
+    tipoFormacionEEnum = createEEnum(TIPO_FORMACION);
   }
 
   /**
@@ -820,7 +840,7 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     initEClass(calificarEquipoEClass, CalificarEquipo.class, "CalificarEquipo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCalificarEquipo_Tipo(), this.getTipoEquipo(), "tipo", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCalificarEquipo_Formacion(), ecorePackage.getEString(), "formacion", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCalificarEquipo_FormacionVal(), ecorePackage.getEInt(), "formacionVal", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCalificarEquipo_FormacionVal(), this.getTipoFormacion(), "formacionVal", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCalificarEquipo_Experiencia(), ecorePackage.getEString(), "experiencia", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCalificarEquipo_ExperienciaVal(), ecorePackage.getEInt(), "experienciaVal", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCalificarEquipo_Certificacion(), ecorePackage.getEString(), "certificacion", null, 0, 1, CalificarEquipo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -845,6 +865,11 @@ public class EvaluacionPackageImpl extends EPackageImpl implements EvaluacionPac
     addEEnumLiteral(e_CalificacionEEnum, E_Calificacion.ALTO);
     addEEnumLiteral(e_CalificacionEEnum, E_Calificacion.MEDIO);
     addEEnumLiteral(e_CalificacionEEnum, E_Calificacion.BAJO);
+
+    initEEnum(tipoFormacionEEnum, TipoFormacion.class, "TipoFormacion");
+    addEEnumLiteral(tipoFormacionEEnum, TipoFormacion.ESPECIALIZACION);
+    addEEnumLiteral(tipoFormacionEEnum, TipoFormacion.MAESTRIA);
+    addEEnumLiteral(tipoFormacionEEnum, TipoFormacion.DOCTORADO);
 
     // Create resource
     createResource(eNS_URI);
