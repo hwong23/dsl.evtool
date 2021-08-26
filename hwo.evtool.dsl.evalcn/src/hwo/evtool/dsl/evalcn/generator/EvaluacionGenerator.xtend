@@ -67,7 +67,7 @@ class EvaluacionGenerator extends AbstractGenerator {
 	'''
 		
 	protected def callCommand(Evaluacion comando, int i) '''
-		cntrol.llamarEvaluacion1(«i»);
+		cntrol.llamarEvaluacion(«i»);
 	'''
 		
 	protected def ponerComando(Evaluacion c, int i) '''

@@ -141,7 +141,7 @@ public class EvaluacionGenerator extends AbstractGenerator {
   
   protected CharSequence callCommand(final Evaluacion comando, final int i) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("cntrol.llamarEvaluacion1(");
+    _builder.append("cntrol.llamarEvaluacion(");
     _builder.append(i);
     _builder.append(");");
     _builder.newLineIfNotEmpty();
