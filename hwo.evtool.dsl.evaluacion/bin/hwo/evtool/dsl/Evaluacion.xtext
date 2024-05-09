@@ -1,0 +1,46 @@
+grammar hwo.evtool.dsl.Evaluacion with org.eclipse.xtext.common.Terminals
+generate evaluacion "http://www.evtool.hwo/dsl/Evaluacion"
+
+MaquinaEstados:
+	{MaquinaEstados}
+	('eventos'
+		events+=Evento+
+	)?
+	('resetEvents'
+		resetEvents+=[Evento]+
+	)?
+	('evaluaciones'
+		commands+=Evaluaciones+
+	)?
+	states+=Componente*
+;
+
+Evento:
+	name=ID code=ID
+;
+
+Evaluaciones:
+	name=ID '=' argumento=Atomo
+	(':' comentario=STRING)?
+;
+
+Atomo:
+	{IntConstant} valor=Puntuacion |  
+	{StringConstant} valor=STRING |
+	{SiNoConstant} valor=('S' | 'N')  
+;
+
+Puntuacion:
+	nota=INT '/' calificacion=INT
+;
+
+Componente:
+	'componente' name=ID
+		('actions' '{' actions+=[Evaluaciones]+ '}')?
+		transitions+=Transicion*
+;
+
+Transicion:
+	event=[Evento] '=>' state=[Componente]
+;
+
